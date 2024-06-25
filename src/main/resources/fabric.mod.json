@@ -3,16 +3,16 @@
 	"id": "urban_decor",
 	"version": "${version}",
 	"name": "Urban Decor",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"description": "If you are reading this you can blame Yirmiri for not adding a description",
 	"authors": [
-		"Me!"
+		"aridoitsu, Yirmiri"
 	],
 	"contact": {
-		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
+		"homepage": "https://modrinth.com/mod/urban-decor",
+		"sources": "https://github.com/Yirmiri/Urban-Decor"
 	},
-	"license": "CC0-1.0",
-	"icon": "assets/urban_decor/icon.png",
+	"license": "All Rights Reserved",
+	"icon": "icon.png",
 	"environment": "*",
 	"entrypoints": {
 		"main": [
@@ -30,8 +30,5 @@
 		"minecraft": "~1.20.1",
 		"java": ">=17",
 		"fabric-api": "*"
-	},
-	"suggests": {
-		"another-mod": "*"
 	}
 }
