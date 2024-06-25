@@ -1,0 +1,36 @@
+{
+	"credit": "Made with Blockbench by Tellio-Ari",
+	"texture_size": [32, 32],
+	"textures": {
+		"0": "furniture:microwave",
+		"particle": "furniture:microwave"
+	},
+	"elements": [
+		{
+			"from": [2, 0, 8],
+			"to": [14, 8, 15],
+			"rotation": {"angle": 0, "axis": "y", "origin": [2, 0, 8]},
+			"faces": {
+				"north": {"uv": [0, 0, 6, 4], "texture": "#0"},
+				"east": {"uv": [6, 7, 9.5, 11], "texture": "#0"},
+				"south": {"uv": [0, 4, 6, 8], "texture": "#0"},
+				"west": {"uv": [0, 8, 3.5, 12], "texture": "#0"},
+				"up": {"uv": [12, 3.5, 6, 0], "texture": "#0"},
+				"down": {"uv": [12, 3.5, 6, 7], "texture": "#0"}
+			}
+		},
+		{
+			"from": [5, 1, 7.99],
+			"to": [13, 7, 7.99],
+			"rotation": {"angle": 0, "axis": "y", "origin": [5, 1, 8]},
+			"faces": {
+				"north": {"uv": [9.5, 7, 13.5, 10], "texture": "#0"},
+				"east": {"uv": [0, 0, 0, 3], "texture": "#0"},
+				"south": {"uv": [9.5, 10, 13.5, 13], "texture": "#0"},
+				"west": {"uv": [0, 0, 0, 3], "texture": "#0"},
+				"up": {"uv": [4, 0, 0, 0], "texture": "#0"},
+				"down": {"uv": [4, 0, 0, 0], "texture": "#0"}
+			}
+		}
+	]
+}
