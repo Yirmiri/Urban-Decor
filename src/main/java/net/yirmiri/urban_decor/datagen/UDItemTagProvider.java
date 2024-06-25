@@ -24,6 +24,7 @@ public class UDItemTagProvider extends FabricTagProvider.ItemTagProvider {
         getOrCreateTagBuilder(FURNISHINGS)
                 .add(RegisterBlocks.TRASH_CAN.asItem())
                 .add(RegisterBlocks.MICROWAVE.asItem())
+                .add(RegisterBlocks.SINK.asItem())
         ;
     }
 

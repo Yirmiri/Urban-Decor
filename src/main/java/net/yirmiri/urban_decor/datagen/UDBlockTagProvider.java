@@ -25,6 +25,7 @@ public class UDBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(RegisterBlocks.PORCELAIN_TILE_STAIRS)
                 .add(RegisterBlocks.PORCELAIN_TILE_SLAB)
                 .add(RegisterBlocks.MICROWAVE)
+                .add(RegisterBlocks.SINK)
         ;
     }
 

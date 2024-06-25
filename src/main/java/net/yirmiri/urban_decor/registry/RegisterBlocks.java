@@ -10,6 +10,7 @@ import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 import net.yirmiri.urban_decor.UrbanDecor;
 import net.yirmiri.urban_decor.block.MicrowaveBlock;
+import net.yirmiri.urban_decor.block.SinkBlock;
 import net.yirmiri.urban_decor.block.TrashCanBlock;
 import net.yirmiri.urban_decor.util.UDProperties;
 
@@ -23,6 +24,7 @@ public class RegisterBlocks {
     //DECOR
     public static final Block TRASH_CAN = register("trash_can", new TrashCanBlock(UDProperties.BlockP.TRASH_CAN), true);
     public static final Block MICROWAVE = register("microwave", new MicrowaveBlock(UDProperties.BlockP.MICROWAVE), true);
+    public static final Block SINK = register("sink", new SinkBlock(UDProperties.BlockP.SINK), true);
 
     private static Block register(String id, Block block, boolean registerItem) {
         if (registerItem) {

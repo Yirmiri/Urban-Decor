@@ -1,21 +1,78 @@
 {
   "variants": {
-    "facing=north": {
+    "facing=north,wall=false,open=false": {
       "model": "urban_decor:block/microwave",
       "uvlock": false
     },
-    "facing=south": {
+    "facing=south,wall=false,open=false": {
       "model": "urban_decor:block/microwave",
       "y": 180,
       "uvlock": false
     },
-    "facing=west": {
+    "facing=west,wall=false,open=false": {
       "model": "urban_decor:block/microwave",
       "y": 270,
       "uvlock": false
     },
-    "facing=east": {
+    "facing=east,wall=false,open=false": {
       "model": "urban_decor:block/microwave",
+      "y": 90,
+      "uvlock": false
+    },
+    "facing=north,wall=true,open=false": {
+      "model": "urban_decor:block/microwave_mounted",
+      "uvlock": false
+    },
+    "facing=south,wall=true,open=false": {
+      "model": "urban_decor:block/microwave_mounted",
+      "y": 180,
+      "uvlock": false
+    },
+    "facing=west,wall=true,open=false": {
+      "model": "urban_decor:block/microwave_mounted",
+      "y": 270,
+      "uvlock": false
+    },
+    "facing=east,wall=true,open=false": {
+      "model": "urban_decor:block/microwave_mounted",
+      "y": 90,
+      "uvlock": false
+    },
+    "facing=north,wall=true,open=true": {
+      "model": "urban_decor:block/microwave_mounted_open",
+      "uvlock": false
+    },
+    "facing=south,wall=true,open=true": {
+      "model": "urban_decor:block/microwave_mounted_open",
+      "y": 180,
+      "uvlock": false
+    },
+    "facing=west,wall=true,open=true": {
+      "model": "urban_decor:block/microwave_mounted_open",
+      "y": 270,
+      "uvlock": false
+    },
+    "facing=east,wall=true,open=true": {
+      "model": "urban_decor:block/microwave_mounted_open",
+      "y": 90,
+      "uvlock": false
+    },
+    "facing=north,wall=false,open=true": {
+      "model": "urban_decor:block/microwave_open",
+      "uvlock": false
+    },
+    "facing=south,wall=false,open=true": {
+      "model": "urban_decor:block/microwave_open",
+      "y": 180,
+      "uvlock": false
+    },
+    "facing=west,wall=false,open=true": {
+      "model": "urban_decor:block/microwave_open",
+      "y": 270,
+      "uvlock": false
+    },
+    "facing=east,wall=false,open=true": {
+      "model": "urban_decor:block/microwave_open",
       "y": 90,
       "uvlock": false
     }

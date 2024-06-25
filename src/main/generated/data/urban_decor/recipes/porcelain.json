@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "minecraft:clay_ball"
+    },
+    "@": {
+      "item": "minecraft:flint"
+    }
+  },
+  "pattern": [
+    "@#",
+    "##"
+  ],
+  "result": {
+    "count": 4,
+    "item": "urban_decor:porcelain"
+  },
+  "show_notification": true
+}

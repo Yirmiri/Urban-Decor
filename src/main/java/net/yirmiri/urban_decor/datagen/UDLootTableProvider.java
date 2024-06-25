@@ -16,5 +16,6 @@ public class UDLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(RegisterBlocks.PORCELAIN_TILE_SLAB);
         addDrop(RegisterBlocks.TRASH_CAN);
         addDrop(RegisterBlocks.MICROWAVE);
+        addDrop(RegisterBlocks.SINK);
     }
 }

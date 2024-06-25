@@ -16,8 +16,7 @@ public class TrashCanBlock extends AbstractWaterloggableHorizontalFacingBlock {
 
     @Override
     public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext ctx) {
-        switch (state.get(FACING)) {
-            default: return SHAPE;
-        }
+        state.get(FACING);
+        return SHAPE;
     }
 }

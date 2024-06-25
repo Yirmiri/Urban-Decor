@@ -2,7 +2,7 @@
 	"credit": "Made with Blockbench by Tellio-Ari",
 	"textures": {
 		"0": "urban_decor:shower",
-		"particle": "urban_decor:shower"
+		"particle": "urban_decor:shower_particle"
 	},
 	"elements": [
 		{

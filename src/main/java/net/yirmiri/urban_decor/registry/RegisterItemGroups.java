@@ -17,6 +17,7 @@ public class RegisterItemGroups {
                 entries.add(RegisterBlocks.PORCELAIN_TILES);
                 entries.add(RegisterBlocks.PORCELAIN_TILE_STAIRS);
                 entries.add(RegisterBlocks.PORCELAIN_TILE_SLAB);
+                entries.add(RegisterBlocks.SINK);
                 entries.add(RegisterBlocks.MICROWAVE);
                 entries.add(RegisterBlocks.TRASH_CAN);
             }).build());

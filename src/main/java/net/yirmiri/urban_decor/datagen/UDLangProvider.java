@@ -18,6 +18,7 @@ public class UDLangProvider extends FabricLanguageProvider {
         builder.add(RegisterBlocks.PORCELAIN_TILE_SLAB, "Porcelain Tile Slab");
         builder.add(RegisterBlocks.TRASH_CAN, "Trash Can");
         builder.add(RegisterBlocks.MICROWAVE, "Microwave");
+        builder.add(RegisterBlocks.SINK, "Sink");
 
         //ITEMS
         builder.add(RegisterItems.PORCELAIN, "Porcelain");
