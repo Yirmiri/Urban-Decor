@@ -12,11 +12,14 @@
 		"sources": "https://github.com/Yirmiri/Urban-Decor"
 	},
 	"license": "All Rights Reserved",
-	"icon": "icon.png",
+	"icon": "urban_decor_icon.png",
 	"environment": "*",
 	"entrypoints": {
 		"main": [
 			"net.yirmiri.urban_decor.UrbanDecor"
+		],
+		"client": [
+			"net.yirmiri.urban_decor.UrbanDecorClient"
 		],
 		"fabric-datagen": [
 			"net.yirmiri.urban_decor.UrbanDecorDataGenerator"

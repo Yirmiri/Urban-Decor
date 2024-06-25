@@ -1,8 +1,8 @@
 {
 	"credit": "Made with Blockbench by Tellio-Ari",
 	"textures": {
-		"0": "furniture:shower",
-		"particle": "furniture:shower"
+		"0": "urban_decor:shower",
+		"particle": "urban_decor:shower"
 	},
 	"elements": [
 		{

@@ -2,6 +2,9 @@ package net.yirmiri.urban_decor;
 
 import net.fabricmc.api.ModInitializer;
 
+import net.yirmiri.urban_decor.registry.RegisterBlocks;
+import net.yirmiri.urban_decor.registry.RegisterItemGroups;
+import net.yirmiri.urban_decor.registry.RegisterItems;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -12,6 +15,8 @@ public class UrbanDecor implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
-
+		RegisterBlocks.registerBlocks();
+		RegisterItems.registerItems();
+		RegisterItemGroups.registerItemGroups();
 	}
 }

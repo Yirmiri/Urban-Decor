@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "urban_decor:porcelain_tiles",
+    "urban_decor:porcelain_tile_stairs",
+    "urban_decor:porcelain_tile_slab",
+    "urban_decor:microwave"
+  ]
+}
