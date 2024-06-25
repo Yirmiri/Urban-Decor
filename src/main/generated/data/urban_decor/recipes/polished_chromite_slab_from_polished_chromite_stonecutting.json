@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 2,
+  "ingredient": {
+    "item": "urban_decor:polished_chromite"
+  },
+  "result": "urban_decor:polished_chromite_slab"
+}

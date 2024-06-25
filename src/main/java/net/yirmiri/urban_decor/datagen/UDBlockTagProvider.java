@@ -26,6 +26,17 @@ public class UDBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(RegisterBlocks.PORCELAIN_TILE_SLAB)
                 .add(RegisterBlocks.MICROWAVE)
                 .add(RegisterBlocks.SINK)
+                .add(RegisterBlocks.CHROMITE)
+                .add(RegisterBlocks.CHROMITE_STAIRS)
+                .add(RegisterBlocks.CHROMITE_SLAB)
+                .add(RegisterBlocks.CHROMITE_WALL)
+                .add(RegisterBlocks.POLISHED_CHROMITE)
+                .add(RegisterBlocks.POLISHED_CHROMITE_STAIRS)
+                .add(RegisterBlocks.POLISHED_CHROMITE_SLAB)
+        ;
+
+        getOrCreateTagBuilder(BlockTags.WALLS)
+                .add(RegisterBlocks.CHROMITE_WALL)
         ;
     }
 

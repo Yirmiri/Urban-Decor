@@ -5,6 +5,13 @@
     "urban_decor:porcelain_tile_stairs",
     "urban_decor:porcelain_tile_slab",
     "urban_decor:microwave",
-    "urban_decor:sink"
+    "urban_decor:sink",
+    "urban_decor:chromite",
+    "urban_decor:chromite_stairs",
+    "urban_decor:chromite_slab",
+    "urban_decor:chromite_wall",
+    "urban_decor:polished_chromite",
+    "urban_decor:polished_chromite_stairs",
+    "urban_decor:polished_chromite_slab"
   ]
 }

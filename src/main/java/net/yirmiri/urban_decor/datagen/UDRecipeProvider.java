@@ -47,6 +47,50 @@ public class UDRecipeProvider extends FabricRecipeProvider {
                 .pattern("##")
                 .criterion(hasItem(Items.CLAY_BALL), conditionsFromItem(Items.CLAY_BALL))
                 .offerTo(exporter, Identifier.of(UrbanDecor.MOD_ID, getRecipeName(RegisterItems.PORCELAIN)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, RegisterItems.STAINLESS_STEEL, 2)
+                .input('#', Items.COAL).input('@', Items.IRON_INGOT).input('$', RegisterBlocks.CHROMITE)
+                .pattern("#$")
+                .pattern("@$")
+                .criterion(hasItem(RegisterBlocks.CHROMITE), conditionsFromItem(RegisterBlocks.CHROMITE))
+                .offerTo(exporter, Identifier.of(UrbanDecor.MOD_ID, getRecipeName(RegisterItems.STAINLESS_STEEL)));
+
+        createStairsRecipe(RegisterBlocks.CHROMITE_STAIRS,
+                Ingredient.ofItems(RegisterBlocks.CHROMITE))
+                .criterion(hasItem(RegisterBlocks.CHROMITE), conditionsFromItem(RegisterBlocks.CHROMITE))
+                .offerTo(exporter, Identifier.of(UrbanDecor.MOD_ID, getRecipeName(RegisterBlocks.CHROMITE_STAIRS)));
+
+        createSlabRecipe(RecipeCategory.BUILDING_BLOCKS, RegisterBlocks.CHROMITE_SLAB,
+                Ingredient.ofItems(RegisterBlocks.CHROMITE))
+                .criterion(hasItem(RegisterBlocks.CHROMITE), conditionsFromItem(RegisterBlocks.CHROMITE))
+                .offerTo(exporter, Identifier.of(UrbanDecor.MOD_ID, getRecipeName(RegisterBlocks.CHROMITE_SLAB)));
+
+        getWallRecipe(RecipeCategory.BUILDING_BLOCKS, RegisterBlocks.CHROMITE_WALL,
+                Ingredient.ofItems(RegisterBlocks.CHROMITE))
+                .criterion(hasItem(RegisterBlocks.CHROMITE), conditionsFromItem(RegisterBlocks.CHROMITE))
+                .offerTo(exporter, Identifier.of(UrbanDecor.MOD_ID, getRecipeName(RegisterBlocks.CHROMITE_WALL)));
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, RegisterBlocks.CHROMITE_STAIRS, RegisterBlocks.CHROMITE, 1);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, RegisterBlocks.CHROMITE_SLAB, RegisterBlocks.CHROMITE, 2);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, RegisterBlocks.CHROMITE_WALL, RegisterBlocks.CHROMITE, 1);
+
+        createFourForFourWendysMealRecipe(RegisterBlocks.POLISHED_CHROMITE,
+                Ingredient.ofItems(RegisterBlocks.CHROMITE))
+                .criterion(hasItem(RegisterBlocks.CHROMITE), conditionsFromItem(RegisterBlocks.CHROMITE))
+                .offerTo(exporter, Identifier.of(UrbanDecor.MOD_ID, getRecipeName(RegisterBlocks.POLISHED_CHROMITE)));
+
+        createStairsRecipe(RegisterBlocks.POLISHED_CHROMITE_STAIRS,
+                Ingredient.ofItems(RegisterBlocks.POLISHED_CHROMITE))
+                .criterion(hasItem(RegisterBlocks.POLISHED_CHROMITE), conditionsFromItem(RegisterBlocks.POLISHED_CHROMITE))
+                .offerTo(exporter, Identifier.of(UrbanDecor.MOD_ID, getRecipeName(RegisterBlocks.POLISHED_CHROMITE_STAIRS)));
+
+        createSlabRecipe(RecipeCategory.BUILDING_BLOCKS, RegisterBlocks.POLISHED_CHROMITE_SLAB,
+                Ingredient.ofItems(RegisterBlocks.POLISHED_CHROMITE))
+                .criterion(hasItem(RegisterBlocks.POLISHED_CHROMITE), conditionsFromItem(RegisterBlocks.POLISHED_CHROMITE))
+                .offerTo(exporter, Identifier.of(UrbanDecor.MOD_ID, getRecipeName(RegisterBlocks.POLISHED_CHROMITE_SLAB)));
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, RegisterBlocks.POLISHED_CHROMITE_STAIRS, RegisterBlocks.POLISHED_CHROMITE, 1);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, RegisterBlocks.POLISHED_CHROMITE_SLAB, RegisterBlocks.POLISHED_CHROMITE, 2);
     }
 
     public static ShapedRecipeJsonBuilder createFourForFourWendysMealRecipe(ItemConvertible output, Ingredient input) {

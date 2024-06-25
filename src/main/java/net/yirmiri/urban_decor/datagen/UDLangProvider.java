@@ -19,9 +19,17 @@ public class UDLangProvider extends FabricLanguageProvider {
         builder.add(RegisterBlocks.TRASH_CAN, "Trash Can");
         builder.add(RegisterBlocks.MICROWAVE, "Microwave");
         builder.add(RegisterBlocks.SINK, "Sink");
+        builder.add(RegisterBlocks.CHROMITE, "Chromite");
+        builder.add(RegisterBlocks.CHROMITE_STAIRS, "Chromite Stairs");
+        builder.add(RegisterBlocks.CHROMITE_SLAB, "Chromite Slab");
+        builder.add(RegisterBlocks.CHROMITE_WALL, "Chromite Wall");
+        builder.add(RegisterBlocks.POLISHED_CHROMITE, "Polished Chromite");
+        builder.add(RegisterBlocks.POLISHED_CHROMITE_STAIRS, "Polished Chromite Stairs");
+        builder.add(RegisterBlocks.POLISHED_CHROMITE_SLAB, "Polished Chromite Slab");
 
         //ITEMS
         builder.add(RegisterItems.PORCELAIN, "Porcelain");
+        builder.add(RegisterItems.STAINLESS_STEEL, "Stainless Steel");
 
         //ITEM GROUPS
         builder.add("itemgroup.urban_decor", "Urban Decor");

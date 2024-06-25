@@ -12,6 +12,8 @@ public class UDProperties {
     public static class BlockP {
         //BLOCKS
         public static final Block.Settings PORCELAIN = FabricBlockSettings.copyOf(Blocks.STONE).mapColor(MapColor.WHITE).sounds(BlockSoundGroup.CALCITE).requiresTool();
+        public static final Block.Settings CHROMITE = FabricBlockSettings.copyOf(Blocks.GRANITE).mapColor(MapColor.GRAY);
+        public static final Block.Settings POLISHED_CHROMITE = FabricBlockSettings.copyOf(Blocks.POLISHED_GRANITE).mapColor(MapColor.GRAY);
 
         //DECOR
         public static final Block.Settings TRASH_CAN = FabricBlockSettings.copyOf(Blocks.WHITE_WOOL).strength(0.3F).mapColor(MapColor.GRAY).sounds(BlockSoundGroup.LANTERN).pistonBehavior(PistonBehavior.BLOCK);

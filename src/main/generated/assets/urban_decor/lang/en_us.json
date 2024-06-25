@@ -1,10 +1,18 @@
 {
+  "block.urban_decor.chromite": "Chromite",
+  "block.urban_decor.chromite_slab": "Chromite Slab",
+  "block.urban_decor.chromite_stairs": "Chromite Stairs",
+  "block.urban_decor.chromite_wall": "Chromite Wall",
   "block.urban_decor.microwave": "Microwave",
+  "block.urban_decor.polished_chromite": "Polished Chromite",
+  "block.urban_decor.polished_chromite_slab": "Polished Chromite Slab",
+  "block.urban_decor.polished_chromite_stairs": "Polished Chromite Stairs",
   "block.urban_decor.porcelain_tile_slab": "Porcelain Tile Slab",
   "block.urban_decor.porcelain_tile_stairs": "Porcelain Tile Stairs",
   "block.urban_decor.porcelain_tiles": "Porcelain Tiles",
   "block.urban_decor.sink": "Sink",
   "block.urban_decor.trash_can": "Trash Can",
   "item.urban_decor.porcelain": "Porcelain",
+  "item.urban_decor.stainless_steel": "Stainless Steel",
   "itemgroup.urban_decor": "Urban Decor"
 }

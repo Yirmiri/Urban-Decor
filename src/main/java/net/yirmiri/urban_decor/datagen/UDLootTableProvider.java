@@ -17,5 +17,12 @@ public class UDLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(RegisterBlocks.TRASH_CAN);
         addDrop(RegisterBlocks.MICROWAVE);
         addDrop(RegisterBlocks.SINK);
+        addDrop(RegisterBlocks.CHROMITE);
+        addDrop(RegisterBlocks.CHROMITE_STAIRS);
+        addDrop(RegisterBlocks.CHROMITE_SLAB);
+        addDrop(RegisterBlocks.CHROMITE_WALL);
+        addDrop(RegisterBlocks.POLISHED_CHROMITE);
+        addDrop(RegisterBlocks.POLISHED_CHROMITE_STAIRS);
+        addDrop(RegisterBlocks.POLISHED_CHROMITE_SLAB);
     }
 }

@@ -10,6 +10,7 @@ import net.yirmiri.urban_decor.util.UDProperties;
 public class RegisterItems {
     //MISC
     public static final Item PORCELAIN = register("porcelain", new Item(UDProperties.ItemP.GENERIC_ITEM));
+    public static final Item STAINLESS_STEEL = register("stainless_steel", new Item(UDProperties.ItemP.GENERIC_ITEM));
 
     private static Item register(String id, Item item) {
         return Registry.register(Registries.ITEM, Identifier.of(UrbanDecor.MOD_ID, id), item);

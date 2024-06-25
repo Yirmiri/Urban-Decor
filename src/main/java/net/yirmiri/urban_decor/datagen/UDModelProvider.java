@@ -18,10 +18,20 @@ public class UDModelProvider extends FabricModelProvider {
         BlockStateModelGenerator.BlockTexturePool porcelainTiles = generator.registerCubeAllModelTexturePool(RegisterBlocks.PORCELAIN_TILES);
         porcelainTiles.stairs(RegisterBlocks.PORCELAIN_TILE_STAIRS);
         porcelainTiles.slab(RegisterBlocks.PORCELAIN_TILE_SLAB);
+
+        BlockStateModelGenerator.BlockTexturePool chromite = generator.registerCubeAllModelTexturePool(RegisterBlocks.CHROMITE);
+        chromite.stairs(RegisterBlocks.CHROMITE_STAIRS);
+        chromite.slab(RegisterBlocks.CHROMITE_SLAB);
+        chromite.wall(RegisterBlocks.CHROMITE_WALL);
+
+        BlockStateModelGenerator.BlockTexturePool polishedChromite = generator.registerCubeAllModelTexturePool(RegisterBlocks.POLISHED_CHROMITE);
+        polishedChromite.stairs(RegisterBlocks.POLISHED_CHROMITE_STAIRS);
+        polishedChromite.slab(RegisterBlocks.POLISHED_CHROMITE_SLAB);
     }
 
     @Override
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
         itemModelGenerator.register(RegisterItems.PORCELAIN, Models.GENERATED);
+        itemModelGenerator.register(RegisterItems.STAINLESS_STEEL, Models.GENERATED);
     }
 }
