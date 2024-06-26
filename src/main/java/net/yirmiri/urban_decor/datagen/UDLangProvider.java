@@ -29,6 +29,7 @@ public class UDLangProvider extends FabricLanguageProvider {
         builder.add(RegisterBlocks.TOILET, "Toilet");
         builder.add(RegisterBlocks.WASHING_MACHINE, "Washing Machine");
         builder.add(RegisterBlocks.DRYER, "Dryer");
+        builder.add(RegisterBlocks.TOASTER, "Toaster");
 
         //ITEMS
         builder.add(RegisterItems.PORCELAIN, "Porcelain");

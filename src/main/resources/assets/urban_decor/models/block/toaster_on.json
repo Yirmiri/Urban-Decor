@@ -1,7 +1,8 @@
 {
 	"credit": "Made with Blockbench by Tellio-Ari",
 	"textures": {
-		"1": "furniture:toaster_on"
+		"1": "urban_decor:block/toaster_on",
+		"particle": "urban_decor:block/toaster_particle"
 	},
 	"elements": [
 		{
@@ -17,5 +18,6 @@
 				"down": {"uv": [0, 11, 10, 16], "texture": "#1"}
 			}
 		}
-	]
+	],
+	"display": {}
 }

@@ -28,6 +28,7 @@ public class UDItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(RegisterBlocks.TOILET.asItem())
                 .add(RegisterBlocks.WASHING_MACHINE.asItem())
                 .add(RegisterBlocks.DRYER.asItem())
+                .add(RegisterBlocks.TOASTER.asItem())
         ;
     }
 

@@ -35,6 +35,7 @@ public class RegisterItemGroups {
                 entries.add(RegisterBlocks.TOILET);
                 entries.add(RegisterBlocks.WASHING_MACHINE);
                 entries.add(RegisterBlocks.DRYER);
+                entries.add(RegisterBlocks.TOASTER);
                 entries.add(RegisterBlocks.MICROWAVE);
                 entries.add(RegisterBlocks.TRASH_CAN);
 

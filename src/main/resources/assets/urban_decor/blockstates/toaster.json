@@ -1,0 +1,42 @@
+{
+  "variants": {
+    "facing=north,lit=true": {
+      "model": "urban_decor:block/toaster_on",
+      "uvlock": false
+    },
+    "facing=south,lit=true": {
+      "model": "urban_decor:block/toaster_on",
+      "y": 180,
+      "uvlock": false
+    },
+    "facing=west,lit=true": {
+      "model": "urban_decor:block/toaster_on",
+      "y": 270,
+      "uvlock": false
+    },
+    "facing=east,lit=true": {
+      "model": "urban_decor:block/toaster_on",
+      "y": 90,
+      "uvlock": false
+    },
+    "facing=north,lit=false": {
+      "model": "urban_decor:block/toaster",
+      "uvlock": false
+    },
+    "facing=south,lit=false": {
+      "model": "urban_decor:block/toaster",
+      "y": 180,
+      "uvlock": false
+    },
+    "facing=west,lit=false": {
+      "model": "urban_decor:block/toaster",
+      "y": 270,
+      "uvlock": false
+    },
+    "facing=east,lit=false": {
+      "model": "urban_decor:block/toaster",
+      "y": 90,
+      "uvlock": false
+    }
+  }
+}
