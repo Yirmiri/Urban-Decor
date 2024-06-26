@@ -1,0 +1,22 @@
+{
+	"credit": "Made with Blockbench by Tellio-Ari",
+	"textures": {
+		"0": "furniture:toaster",
+		"particle": "furniture:toaster"
+	},
+	"elements": [
+		{
+			"from": [3, 0, 7],
+			"to": [13, 6, 12],
+			"rotation": {"angle": 0, "axis": "y", "origin": [3, 0, 7]},
+			"faces": {
+				"north": {"uv": [0, 5, 10, 11], "texture": "#0"},
+				"east": {"uv": [11, 10, 16, 16], "texture": "#0"},
+				"south": {"uv": [0, 5, 10, 11], "texture": "#0"},
+				"west": {"uv": [11, 0, 16, 6], "texture": "#0"},
+				"up": {"uv": [0, 0, 10, 5], "texture": "#0"},
+				"down": {"uv": [0, 11, 10, 16], "texture": "#0"}
+			}
+		}
+	]
+}
