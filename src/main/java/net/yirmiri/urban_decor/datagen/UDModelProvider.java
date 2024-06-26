@@ -33,5 +33,7 @@ public class UDModelProvider extends FabricModelProvider {
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
         itemModelGenerator.register(RegisterItems.PORCELAIN, Models.GENERATED);
         itemModelGenerator.register(RegisterItems.STAINLESS_STEEL, Models.GENERATED);
+        itemModelGenerator.register(RegisterBlocks.TRASH_CAN.asItem(), Models.GENERATED);
+        itemModelGenerator.register(RegisterBlocks.MICROWAVE.asItem(), Models.GENERATED);
     }
 }
