@@ -19,6 +19,7 @@ public class UDProperties {
         public static final Block.Settings TRASH_CAN = FabricBlockSettings.copyOf(Blocks.WHITE_WOOL).strength(0.3F).mapColor(MapColor.GRAY).sounds(BlockSoundGroup.LANTERN).pistonBehavior(PistonBehavior.BLOCK);
         public static final Block.Settings MICROWAVE = FabricBlockSettings.copyOf(Blocks.WHITE_WOOL).strength(1.0F).mapColor(MapColor.GRAY).sounds(BlockSoundGroup.LANTERN).pistonBehavior(PistonBehavior.BLOCK);
         public static final Block.Settings SINK = FabricBlockSettings.copyOf(Blocks.STONE).strength(1.0F).mapColor(MapColor.WHITE).sounds(BlockSoundGroup.CALCITE).requiresTool();
+        public static final Block.Settings TOILET = FabricBlockSettings.copyOf(Blocks.STONE).strength(1.0F).mapColor(MapColor.WHITE).sounds(BlockSoundGroup.CALCITE).requiresTool();
     }
 
     public static class ItemP {

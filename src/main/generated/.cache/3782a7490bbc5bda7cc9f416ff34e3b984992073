@@ -1,4 +1,4 @@
-// 1.20.1	2024-06-25T18:58:33.7149999	Urban Decor/Model Definitions
+// 1.20.1	2024-06-25T20:44:50.0360716	Urban Decor/Model Definitions
 f8b4f9b81cefae29da0752e96e98a3d5db0853f0 assets\urban_decor\blockstates\chromite_slab.json
 237373ad9aef44cab5ff105e748024c7958645da assets\urban_decor\models\item\chromite_slab.json
 3dfb9f214ed40edf08c395bad305bb0eb6f53919 assets\urban_decor\models\item\porcelain_tiles.json
@@ -37,8 +37,8 @@ fe5b9aa44e51b778a5101b8ef5e1f1234796d300 assets\urban_decor\models\block\chromit
 f82497e432ca298e37a1d26ef05ed04db14cec99 assets\urban_decor\blockstates\chromite_wall.json
 50859f2134d1d9c83b1b2722c58798e992052001 assets\urban_decor\models\block\chromite_slab.json
 d56341f6c02d4a573a260dd606b9dfa3f6e42387 assets\urban_decor\models\block\chromite_wall_inventory.json
-3466ed7fc518454b46e6faf33730b7192018204c assets\urban_decor\models\block\polished_chromite_stairs.json
 dc573d67278a9543a3b2f84dfae0378eacc252f4 assets\urban_decor\models\block\polished_chromite_slab_top.json
+3466ed7fc518454b46e6faf33730b7192018204c assets\urban_decor\models\block\polished_chromite_stairs.json
 aa06ca619137886b9a6174660567e2e090400a6f assets\urban_decor\models\block\polished_chromite_stairs_inner.json
 66dc91cd8a86a8c559bba7554e4049f17b4251bc assets\urban_decor\models\block\porcelain_tile_stairs.json
 c63484ad0d0dc5da9d183d01f0f7b8c66465fc0d assets\urban_decor\models\item\polished_chromite_slab.json

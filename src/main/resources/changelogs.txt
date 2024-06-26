@@ -10,6 +10,7 @@ Version Release v1.0.0 Fabric-1.20.1
 •   Added porcelain tiles & porcelain (crafted from flint and clay)
 •   Added chromite which can create stainless steel (an ingredient used for many recipes)
 •   Added sinks, can change states with an axe
+•   Added toilets, can be opened with the player's hand
 •   Added microwaves, can be opened with the player's hand or wall mounted using an axe
 •   Added trash cans
 
