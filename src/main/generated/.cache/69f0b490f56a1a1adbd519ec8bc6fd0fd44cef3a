@@ -1,8 +1,8 @@
-// 1.20.1	2024-06-25T16:14:30.6943637	Urban Decor/Block Loot Tables
+// 1.20.1	2024-06-25T18:58:33.7120079	Urban Decor/Block Loot Tables
 32edb027b240866b501ef5a903cdbe342f406102 data\urban_decor\loot_tables\blocks\sink.json
 34771a2dedbac2a419ba2d561000129ceb06af22 data\urban_decor\loot_tables\blocks\porcelain_tile_stairs.json
-683e8d4f13004d41dd82cdda8656c53877b1bf6c data\urban_decor\loot_tables\blocks\microwave.json
 f81c3adcdb8ec0473bef258e0e32b91ad37afab4 data\urban_decor\loot_tables\blocks\chromite.json
+683e8d4f13004d41dd82cdda8656c53877b1bf6c data\urban_decor\loot_tables\blocks\microwave.json
 c2aca8e8365a00dbf2e297b988f594b8316987b6 data\urban_decor\loot_tables\blocks\porcelain_tiles.json
 cae36c49f38f350b5979b4597984a5b43e08fdde data\urban_decor\loot_tables\blocks\chromite_stairs.json
 9875248106bf936d386230837d18968efd23b553 data\urban_decor\loot_tables\blocks\porcelain_tile_slab.json

@@ -1,0 +1,23 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "urban_decor:block/chromite_vertical_stairs",
+      "uvlock": true
+    },
+    "facing=south": {
+      "model": "urban_decor:block/chromite_vertical_stairs",
+      "y": 180,
+      "uvlock": true
+    },
+    "facing=west": {
+      "model": "urban_decor:block/chromite_vertical_stairs",
+      "y": 270,
+      "uvlock": true
+    },
+    "facing=east": {
+      "model": "urban_decor:block/chromite_vertical_stairs",
+      "y": 90,
+      "uvlock": true
+    }
+  }
+}

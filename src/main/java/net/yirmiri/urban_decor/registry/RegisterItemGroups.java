@@ -9,6 +9,8 @@ import net.minecraft.registry.Registry;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 import net.yirmiri.urban_decor.UrbanDecor;
+import net.yirmiri.urban_decor.compat.RegisterCompatRegistries;
+import net.yirmiri.urban_decor.compat.excessive_building.EBRegisterBlocks;
 
 public class RegisterItemGroups {
     public static ItemGroup URBAN_DECOR = Registry.register(Registries.ITEM_GROUP, Identifier.of(UrbanDecor.MOD_ID, "urban_decor"),
@@ -32,6 +34,12 @@ public class RegisterItemGroups {
                 entries.add(RegisterBlocks.SINK);
                 entries.add(RegisterBlocks.MICROWAVE);
                 entries.add(RegisterBlocks.TRASH_CAN);
+
+                if (RegisterCompatRegistries.excessive_building) {
+                    entries.add(EBRegisterBlocks.PORCELAIN_TILE_VERTICAL_STAIRS);
+                    entries.add(EBRegisterBlocks.CHROMITE_VERTICAL_STAIRS);
+                    entries.add(EBRegisterBlocks.POLISHED_CHROMITE_VERTICAL_STAIRS);
+                }
             }).build());
 
     public static void registerItemGroups() {
