@@ -41,7 +41,7 @@ public class ToasterBlock extends CampfireBlock implements Waterloggable {
     public ToasterBlock(boolean emitsParticles, int fireDamage, Settings settings) {
         super(emitsParticles, fireDamage, settings);
         this.fireDamage = fireDamage;
-        setDefaultState(getDefaultState().with(Properties.HORIZONTAL_FACING, Direction.NORTH).with(WATERLOGGED, false).with(LIT, Boolean.valueOf(false)));
+        setDefaultState(getDefaultState().with(LIT, false).with(Properties.HORIZONTAL_FACING, Direction.NORTH).with(WATERLOGGED, false));
     }
 
     @Override
