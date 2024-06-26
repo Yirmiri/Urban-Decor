@@ -4,6 +4,8 @@
     "urban_decor:trash_can",
     "urban_decor:microwave",
     "urban_decor:sink",
-    "urban_decor:toilet"
+    "urban_decor:toilet",
+    "urban_decor:washing_machine",
+    "urban_decor:dryer"
   ]
 }

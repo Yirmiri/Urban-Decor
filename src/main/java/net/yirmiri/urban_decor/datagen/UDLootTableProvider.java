@@ -24,5 +24,7 @@ public class UDLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(RegisterBlocks.POLISHED_CHROMITE);
         addDrop(RegisterBlocks.POLISHED_CHROMITE_STAIRS);
         addDrop(RegisterBlocks.POLISHED_CHROMITE_SLAB, slabDrops(RegisterBlocks.POLISHED_CHROMITE_SLAB));
+        addDrop(RegisterBlocks.WASHING_MACHINE);
+        addDrop(RegisterBlocks.DRYER);
     }
 }

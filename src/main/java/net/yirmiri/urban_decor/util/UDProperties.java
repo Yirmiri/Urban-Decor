@@ -20,6 +20,8 @@ public class UDProperties {
         public static final Block.Settings MICROWAVE = FabricBlockSettings.copyOf(Blocks.WHITE_WOOL).strength(1.0F).mapColor(MapColor.GRAY).sounds(BlockSoundGroup.LANTERN).pistonBehavior(PistonBehavior.BLOCK);
         public static final Block.Settings SINK = FabricBlockSettings.copyOf(Blocks.STONE).strength(1.0F).mapColor(MapColor.WHITE).sounds(BlockSoundGroup.CALCITE).requiresTool();
         public static final Block.Settings TOILET = FabricBlockSettings.copyOf(Blocks.STONE).strength(1.0F).mapColor(MapColor.WHITE).sounds(BlockSoundGroup.CALCITE).requiresTool();
+        public static final Block.Settings WASHING_MACHINE = FabricBlockSettings.copyOf(Blocks.STONE).strength(1.5F).mapColor(MapColor.WHITE).sounds(BlockSoundGroup.CALCITE).requiresTool();
+        public static final Block.Settings DRYER = FabricBlockSettings.copyOf(Blocks.STONE).strength(1.5F).mapColor(MapColor.WHITE).sounds(BlockSoundGroup.CALCITE).requiresTool();
     }
 
     public static class ItemP {

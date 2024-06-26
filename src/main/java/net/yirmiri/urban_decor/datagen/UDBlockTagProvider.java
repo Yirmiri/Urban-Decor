@@ -34,6 +34,8 @@ public class UDBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(RegisterBlocks.POLISHED_CHROMITE_STAIRS)
                 .add(RegisterBlocks.POLISHED_CHROMITE_SLAB)
                 .add(RegisterBlocks.TOILET)
+                .add(RegisterBlocks.WASHING_MACHINE)
+                .add(RegisterBlocks.DRYER)
         ;
 
         getOrCreateTagBuilder(BlockTags.WALLS)

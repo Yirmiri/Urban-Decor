@@ -27,6 +27,8 @@ public class UDLangProvider extends FabricLanguageProvider {
         builder.add(RegisterBlocks.POLISHED_CHROMITE_STAIRS, "Polished Chromite Stairs");
         builder.add(RegisterBlocks.POLISHED_CHROMITE_SLAB, "Polished Chromite Slab");
         builder.add(RegisterBlocks.TOILET, "Toilet");
+        builder.add(RegisterBlocks.WASHING_MACHINE, "Washing Machine");
+        builder.add(RegisterBlocks.DRYER, "Dryer");
 
         //ITEMS
         builder.add(RegisterItems.PORCELAIN, "Porcelain");

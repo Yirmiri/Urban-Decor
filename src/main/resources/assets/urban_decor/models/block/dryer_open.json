@@ -1,8 +1,8 @@
 {
 	"credit": "Made with Blockbench by Tellio-Ari",
 	"textures": {
-		"0": "furniture:dryer",
-		"particle": "furniture:dryer"
+		"0": "urban_decor:block/dryer",
+		"particle": "urban_decor:block/dryer"
 	},
 	"elements": [
 		{
@@ -44,5 +44,10 @@
 				"down": {"uv": [8.75, 7, 11.25, 7.25], "rotation": 270, "texture": "#0"}
 			}
 		}
-	]
+	],
+	"display": {
+		"head": {
+			"scale": [1.2, 1.2, 1.2]
+		}
+	}
 }
