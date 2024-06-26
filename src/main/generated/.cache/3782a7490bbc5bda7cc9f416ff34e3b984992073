@@ -1,10 +1,11 @@
-// 1.20.1	2024-06-26T14:22:48.3118457	Urban Decor/Model Definitions
+// 1.20.1	2024-06-26T15:34:42.7904589	Urban Decor/Model Definitions
 f8b4f9b81cefae29da0752e96e98a3d5db0853f0 assets\urban_decor\blockstates\chromite_slab.json
 237373ad9aef44cab5ff105e748024c7958645da assets\urban_decor\models\item\chromite_slab.json
 3dfb9f214ed40edf08c395bad305bb0eb6f53919 assets\urban_decor\models\item\porcelain_tiles.json
 7239500ab1739321bbb1b9301a7ea82de4feb181 assets\urban_decor\models\block\chromite.json
 fdbeda5fc14bed31cde4d2647b4005ff4d5d7f6c assets\urban_decor\models\item\microwave.json
 3e9e8b6a8f2615a7094b240c40db2745be12ca38 assets\urban_decor\models\block\polished_chromite.json
+174c382ce7122e7b88387892893cb4a4e8b578df assets\urban_decor\models\item\toaster.json
 e6dc54b5c6648412247e47a24485c7081efbcdf9 assets\urban_decor\models\block\porcelain_tile_stairs_inner.json
 a6f76c0dfdd446c483721f14c7a326e404db0697 assets\urban_decor\blockstates\porcelain_tile_slab.json
 5e9d4c5e36a94d6b33dd0edd2eb88f4a23ea4808 assets\urban_decor\models\item\porcelain_tile_slab.json
@@ -30,9 +31,9 @@ f32e7b33a41c8cec38f32696f531251f8a4c3f81 assets\urban_decor\models\item\chromite
 bf6e10c4edd1cae7c5da9202c345355417262019 assets\urban_decor\blockstates\polished_chromite.json
 d058a2c00e35e7fb7b839bfcd623e2886ef96d5d assets\urban_decor\models\block\chromite_stairs_inner.json
 1dff111f445b80b3d26c2d8192e77d361c484309 assets\urban_decor\blockstates\porcelain_tile_stairs.json
-65802fe4092c272d9fbc997ec672e9be053fe853 assets\urban_decor\models\item\stainless_steel.json
 fe5b9aa44e51b778a5101b8ef5e1f1234796d300 assets\urban_decor\models\block\chromite_wall_post.json
 73130087343f2807c28eaa10abafea65a2038d68 assets\urban_decor\models\block\chromite_stairs.json
+65802fe4092c272d9fbc997ec672e9be053fe853 assets\urban_decor\models\item\stainless_steel.json
 8730deb5e8f410fe01b73c4a3051686da33a5241 assets\urban_decor\models\item\polished_chromite_stairs.json
 0dfe4a201154a0ecfacee92587fe0ba72c363b70 assets\urban_decor\models\item\trash_can.json
 0fca955a83b9330ff1a27442c4f511a86ed25d92 assets\urban_decor\models\block\porcelain_tile_stairs_outer.json
