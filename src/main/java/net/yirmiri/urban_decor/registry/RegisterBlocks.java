@@ -36,6 +36,7 @@ public class RegisterBlocks {
     public static final Block TOILET = register("toilet", new ToiletBlock(UDProperties.BlockP.TOILET), true);
     public static final Block WASHING_MACHINE = register("washing_machine", new WashingMachineBlock(UDProperties.BlockP.WASHING_MACHINE), true);
     public static final Block DRYER = register("dryer", new DryerBlock(UDProperties.BlockP.DRYER), true);
+    public static final Block TOASTER = register("toaster", new ToasterBlock(false, 1, UDProperties.BlockP.TOASTER), true);
 
     private static Block register(String id, Block block, boolean registerItem) {
         if (registerItem) {

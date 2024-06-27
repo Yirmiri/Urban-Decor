@@ -13,6 +13,7 @@ Version Release v1.0.0 Fabric-1.20.1
 •   Added toilets, can be opened with the player's hand
 •   Added dryers, can be opened with the player's hand
 •   Added washing machines, can be opened with the player's hand
+•   Added toasters, can be used as a fancy campfire (only has two slots)
 •   Added microwaves, can be opened with the player's hand or wall mounted using an axe
 •   Added trash cans
 

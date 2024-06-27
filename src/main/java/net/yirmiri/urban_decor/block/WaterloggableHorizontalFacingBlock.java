@@ -17,11 +17,11 @@ import net.minecraft.util.math.Direction;
 import net.minecraft.world.WorldAccess;
 import org.jetbrains.annotations.Nullable;
 
-public abstract class AbstractWaterloggableHorizontalFacingBlock extends Block implements Waterloggable {
+public abstract class WaterloggableHorizontalFacingBlock extends Block implements Waterloggable {
     public static final DirectionProperty FACING = Properties.HORIZONTAL_FACING;
     public static final BooleanProperty WATERLOGGED = Properties.WATERLOGGED;
 
-    public AbstractWaterloggableHorizontalFacingBlock(Settings settings) {
+    public WaterloggableHorizontalFacingBlock(Settings settings) {
         super(settings);
         setDefaultState(getDefaultState().with(Properties.HORIZONTAL_FACING, Direction.NORTH).with(WATERLOGGED, false));
     }

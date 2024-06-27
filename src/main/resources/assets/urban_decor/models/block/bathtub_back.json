@@ -1,11 +1,11 @@
 {
 	"credit": "Made with Blockbench by Tellio-Ari",
 	"textures": {
-		"0": "furniture:bathtub_back_side",
-		"1": "furniture:bathtub_back_top",
-		"2": "furniture:bathtub_front",
-		"6": "furniture:bathtub_bottom_back",
-		"particle": "furniture:bathtub_back_side"
+		"0": "urban_decor:block/bathtub_back_side",
+		"1": "urban_decor:block/bathtub_back_top",
+		"2": "urban_decor:block/bathtub_front",
+		"6": "urban_decor:block/bathtub_bottom_back",
+		"particle": "urban_decor:block/bathtub_back_side"
 	},
 	"elements": [
 		{
@@ -59,5 +59,12 @@
 				"down": {"uv": [0, 0, 12, 2], "texture": "#missing"}
 			}
 		}
-	]
+	],
+	"display": {
+		"thirdperson_righthand": {
+			"rotation": [75, 45, 0],
+			"translation": [0, 2.5, 0],
+			"scale": [0.375, 0.375, 0.375]
+		}
+	}
 }

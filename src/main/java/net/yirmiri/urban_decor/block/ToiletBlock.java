@@ -4,8 +4,6 @@ import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.ShapeContext;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.item.ItemStack;
-import net.minecraft.registry.tag.ItemTags;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.state.StateManager;
@@ -24,7 +22,7 @@ import net.minecraft.world.World;
 
 import java.util.stream.Stream;
 
-public class ToiletBlock extends AbstractWaterloggableHorizontalFacingBlock {
+public class ToiletBlock extends WaterloggableHorizontalFacingBlock {
     public static final BooleanProperty OPEN = BooleanProperty.of("open");
 
     private static final VoxelShape SHAPE_NORTH = Stream.of(Block.createCuboidShape(3, 0, 5, 13, 5, 14), Block.createCuboidShape(3, 5, 2, 13, 7, 12), Block.createCuboidShape(3, 5, 12, 13, 16, 16)
@@ -53,8 +51,7 @@ public class ToiletBlock extends AbstractWaterloggableHorizontalFacingBlock {
 
     @Override
     public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
-        ItemStack stackHand = player.getStackInHand(hand);
-        if (stackHand.isEmpty()) {
+        if (player.getMainHandStack().isEmpty()) {
             world.setBlockState(pos, state.cycle(OPEN));
             if (state.get(OPEN)) {
                 world.playSound(pos.getX(), pos.getY(), pos.getZ(), SoundEvents.BLOCK_CHERRY_WOOD_DOOR_OPEN, SoundCategory.BLOCKS, 1.0F, 1.0F, false);

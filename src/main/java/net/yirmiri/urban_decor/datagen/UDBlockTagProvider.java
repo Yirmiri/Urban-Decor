@@ -36,10 +36,15 @@ public class UDBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(RegisterBlocks.TOILET)
                 .add(RegisterBlocks.WASHING_MACHINE)
                 .add(RegisterBlocks.DRYER)
+                .add(RegisterBlocks.TOASTER)
         ;
 
         getOrCreateTagBuilder(BlockTags.WALLS)
                 .add(RegisterBlocks.CHROMITE_WALL)
+        ;
+
+        getOrCreateTagBuilder(BlockTags.CAMPFIRES)
+                .add(RegisterBlocks.TOASTER)
         ;
     }
 

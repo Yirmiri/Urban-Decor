@@ -5,6 +5,7 @@ import net.fabricmc.api.ModInitializer;
 import net.fabricmc.loader.api.FabricLoader;
 import net.yirmiri.urban_decor.compat.RegisterCompatRegistries;
 import net.yirmiri.urban_decor.compat.RegisterPacks;
+import net.yirmiri.urban_decor.registry.RegisterBlockEntities;
 import net.yirmiri.urban_decor.registry.RegisterBlocks;
 import net.yirmiri.urban_decor.registry.RegisterItemGroups;
 import net.yirmiri.urban_decor.registry.RegisterItems;
@@ -23,6 +24,7 @@ public class UrbanDecor implements ModInitializer {
 		RegisterItemGroups.registerItemGroups();
 		RegisterPacks.registerPacks();
 		RegisterCompatRegistries.registerCompatRegistries();
+		RegisterBlockEntities.registerBlockEntities();
 	}
 
 	public static boolean isModLoaded(String id) {

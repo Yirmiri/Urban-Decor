@@ -20,7 +20,7 @@ import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
 
-public class MicrowaveBlock extends AbstractWaterloggableHorizontalFacingBlock {
+public class MicrowaveBlock extends WaterloggableHorizontalFacingBlock {
     public static final BooleanProperty OPEN = BooleanProperty.of("open");
     public static final BooleanProperty WALL = BooleanProperty.of("wall");
 
@@ -57,7 +57,7 @@ public class MicrowaveBlock extends AbstractWaterloggableHorizontalFacingBlock {
             world.setBlockState(pos, state.cycle(WALL));
             return ActionResult.SUCCESS;
 
-        } else if (stackHand.isEmpty()) {
+        } else if (player.getMainHandStack().isEmpty()) {
             world.setBlockState(pos, state.cycle(OPEN));
             if (state.get(OPEN)) {
                 world.playSound(pos.getX(), pos.getY(), pos.getZ(), SoundEvents.BLOCK_CHERRY_WOOD_DOOR_OPEN, SoundCategory.BLOCKS, 1.0F, 1.0F, false);

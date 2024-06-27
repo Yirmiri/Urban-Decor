@@ -13,7 +13,7 @@ public class UrbanDecorClient implements ClientModInitializer {
     public void onInitializeClient() {
         //CUTOUT
         BlockRenderLayerMap.INSTANCE.putBlock(RegisterBlocks.TRASH_CAN, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(RegisterBlocks.MICROWAVE, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(RegisterBlocks.WASHING_MACHINE, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(RegisterBlocks.MICROWAVE, RenderLayer.getTranslucent());
+        BlockRenderLayerMap.INSTANCE.putBlock(RegisterBlocks.WASHING_MACHINE, RenderLayer.getTranslucent());
     }
 }
