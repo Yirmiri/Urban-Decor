@@ -2,8 +2,8 @@
 	"credit": "Made with Blockbench by Tellio-Ari",
 	"texture_size": [32, 32],
 	"textures": {
-		"0": "furniture:fridge",
-		"particle": "furniture:fridge"
+		"0": "urban_decor:block/fridge",
+		"particle": "urban_decor:block/fridge"
 	},
 	"elements": [
 		{
@@ -85,6 +85,7 @@
 			}
 		}
 	],
+	"display": {},
 	"groups": [
 		0,
 		1,
@@ -92,6 +93,7 @@
 			"name": "door",
 			"origin": [14, 8, 4],
 			"color": 0,
+			"nbt": "{}",
 			"children": [2, 3, 4, 5]
 		}
 	]
