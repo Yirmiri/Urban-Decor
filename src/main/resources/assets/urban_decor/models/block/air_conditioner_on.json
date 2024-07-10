@@ -2,7 +2,7 @@
 	"credit": "Made with Blockbench by Tellio-Ari",
 	"texture_size": [64, 64],
 	"textures": {
-		"0": "urban_decor:block/air_conditioner",
+		"0": "urban_decor:block/air_conditioner_on",
 		"particle": "urban_decor:block/air_conditioner"
 	},
 	"elements": [

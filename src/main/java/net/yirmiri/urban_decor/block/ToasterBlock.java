@@ -79,9 +79,12 @@ public class ToasterBlock extends CampfireBlock implements Waterloggable {
         if (world.getBlockEntity(pos) instanceof ToasterBlockEntity toasterBlockEntity) {
             ItemStack itemStack = player.getStackInHand(hand);
             Optional<CampfireCookingRecipe> optional = toasterBlockEntity.getRecipeFor(itemStack);
+
             if (optional.isPresent() && state.get(LIT)) {
                 if (!world.isClient && toasterBlockEntity.addItem(player, player.getAbilities().creativeMode ? itemStack.copy() : itemStack, (optional.get()).getCookTime()))
-                    return ActionResult.CONSUME;
+                    player.swingHand(hand);
+                return ActionResult.CONSUME;
+
             } else if (player.getMainHandStack().isEmpty()) {
                 world.setBlockState(pos, state.cycle(LIT));
                 world.playSound(pos.getX(), pos.getY(), pos.getZ(), SoundEvents.BLOCK_LEVER_CLICK, SoundCategory.BLOCKS, 0.8F, 1.0F, false);

@@ -20,6 +20,10 @@ public class RegisterBlocks {
     public static final Block PORCELAIN_TILE_STAIRS = register("porcelain_tile_stairs", new StairsBlock(PORCELAIN_TILES.getDefaultState(), UDProperties.BlockP.PORCELAIN), true);
     public static final Block PORCELAIN_TILE_SLAB = register("porcelain_tile_slab", new SlabBlock(UDProperties.BlockP.PORCELAIN), true);
 
+    public static final Block DARK_PORCELAIN_TILES = register("dark_porcelain_tiles", new Block(UDProperties.BlockP.DARK_PORCELAIN), true);
+    public static final Block DARK_PORCELAIN_TILE_STAIRS = register("dark_porcelain_tile_stairs", new StairsBlock(DARK_PORCELAIN_TILES.getDefaultState(), UDProperties.BlockP.DARK_PORCELAIN), true);
+    public static final Block DARK_PORCELAIN_TILE_SLAB = register("dark_porcelain_tile_slab", new SlabBlock(UDProperties.BlockP.DARK_PORCELAIN), true);
+
     public static final Block CHROMITE = register("chromite", new Block(UDProperties.BlockP.CHROMITE), true);
     public static final Block CHROMITE_STAIRS = register("chromite_stairs", new StairsBlock(CHROMITE.getDefaultState(), UDProperties.BlockP.PORCELAIN), true);
     public static final Block CHROMITE_SLAB = register("chromite_slab", new SlabBlock(UDProperties.BlockP.CHROMITE), true);
@@ -37,6 +41,9 @@ public class RegisterBlocks {
     public static final Block WASHING_MACHINE = register("washing_machine", new WashingMachineBlock(UDProperties.BlockP.WASHING_MACHINE), true);
     public static final Block DRYER = register("dryer", new DryerBlock(UDProperties.BlockP.DRYER), true);
     public static final Block TOASTER = register("toaster", new ToasterBlock(false, 1, UDProperties.BlockP.TOASTER), true);
+
+    //MISC APPLIANCES
+    public static final Block AIR_CONDITIONER = register("air_conditioner", new AirConditionerBlock(UDProperties.BlockP.AIR_CONDITIONER), true);
 
     private static Block register(String id, Block block, boolean registerItem) {
         if (registerItem) {

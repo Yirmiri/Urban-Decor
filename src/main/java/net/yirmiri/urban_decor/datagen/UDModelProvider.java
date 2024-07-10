@@ -27,6 +27,10 @@ public class UDModelProvider extends FabricModelProvider {
         BlockStateModelGenerator.BlockTexturePool polishedChromite = generator.registerCubeAllModelTexturePool(RegisterBlocks.POLISHED_CHROMITE);
         polishedChromite.stairs(RegisterBlocks.POLISHED_CHROMITE_STAIRS);
         polishedChromite.slab(RegisterBlocks.POLISHED_CHROMITE_SLAB);
+
+        BlockStateModelGenerator.BlockTexturePool darkPorcelainTiles = generator.registerCubeAllModelTexturePool(RegisterBlocks.DARK_PORCELAIN_TILES);
+        darkPorcelainTiles.stairs(RegisterBlocks.DARK_PORCELAIN_TILE_STAIRS);
+        darkPorcelainTiles.slab(RegisterBlocks.DARK_PORCELAIN_TILE_SLAB);
     }
 
     @Override
@@ -36,5 +40,6 @@ public class UDModelProvider extends FabricModelProvider {
         itemModelGenerator.register(RegisterBlocks.TRASH_CAN.asItem(), Models.GENERATED);
         itemModelGenerator.register(RegisterBlocks.MICROWAVE.asItem(), Models.GENERATED);
         itemModelGenerator.register(RegisterBlocks.TOASTER.asItem(), Models.GENERATED);
+        itemModelGenerator.register(RegisterItems.DARK_PORCELAIN, Models.GENERATED);
     }
 }

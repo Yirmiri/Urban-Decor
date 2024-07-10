@@ -27,5 +27,9 @@ public class UDLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(RegisterBlocks.WASHING_MACHINE);
         addDrop(RegisterBlocks.DRYER);
         addDrop(RegisterBlocks.TOASTER);
+        addDrop(RegisterBlocks.AIR_CONDITIONER);
+        addDrop(RegisterBlocks.DARK_PORCELAIN_TILES);
+        addDrop(RegisterBlocks.DARK_PORCELAIN_TILE_STAIRS);
+        addDrop(RegisterBlocks.DARK_PORCELAIN_TILE_SLAB, slabDrops(RegisterBlocks.PORCELAIN_TILE_SLAB));
     }
 }

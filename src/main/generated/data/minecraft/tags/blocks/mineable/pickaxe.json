@@ -16,6 +16,10 @@
     "urban_decor:toilet",
     "urban_decor:washing_machine",
     "urban_decor:dryer",
-    "urban_decor:toaster"
+    "urban_decor:toaster",
+    "urban_decor:air_conditioner",
+    "urban_decor:dark_porcelain_tiles",
+    "urban_decor:dark_porcelain_tile_stairs",
+    "urban_decor:dark_porcelain_tile_slab"
   ]
 }

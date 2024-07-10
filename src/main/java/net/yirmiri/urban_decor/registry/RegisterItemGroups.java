@@ -39,6 +39,8 @@ public class RegisterItemGroups {
                 entries.add(RegisterBlocks.MICROWAVE);
                 entries.add(RegisterBlocks.TRASH_CAN);
 
+                entries.add(RegisterBlocks.AIR_CONDITIONER);
+
                 if (RegisterCompatRegistries.excessive_building) {
                     entries.add(EBRegisterBlocks.PORCELAIN_TILE_VERTICAL_STAIRS);
                     entries.add(EBRegisterBlocks.CHROMITE_VERTICAL_STAIRS);

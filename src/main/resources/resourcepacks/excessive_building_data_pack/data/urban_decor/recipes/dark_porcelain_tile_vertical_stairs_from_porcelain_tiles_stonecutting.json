@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "item": "urban_decor:dark_porcelain_tiles"
+  },
+  "result": "urban_decor:dark_porcelain_tile_vertical_stairs"
+}
