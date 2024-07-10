@@ -16,11 +16,16 @@ public class RegisterItemGroups {
     public static ItemGroup URBAN_DECOR = Registry.register(Registries.ITEM_GROUP, Identifier.of(UrbanDecor.MOD_ID, "urban_decor"),
             FabricItemGroup.builder().icon(() -> new ItemStack(Blocks.AIR)).displayName(Text.translatable("itemgroup.urban_decor")).entries((ctx, entries) -> {
                 entries.add(RegisterItems.PORCELAIN);
+                entries.add(RegisterItems.DARK_PORCELAIN);
                 entries.add(RegisterItems.STAINLESS_STEEL);
 
                 entries.add(RegisterBlocks.PORCELAIN_TILES);
                 entries.add(RegisterBlocks.PORCELAIN_TILE_STAIRS);
                 entries.add(RegisterBlocks.PORCELAIN_TILE_SLAB);
+
+                entries.add(RegisterBlocks.DARK_PORCELAIN_TILES);
+                entries.add(RegisterBlocks.DARK_PORCELAIN_TILE_STAIRS);
+                entries.add(RegisterBlocks.DARK_PORCELAIN_TILE_SLAB);
 
                 entries.add(RegisterBlocks.CHROMITE);
                 entries.add(RegisterBlocks.CHROMITE_STAIRS);
@@ -43,6 +48,7 @@ public class RegisterItemGroups {
 
                 if (RegisterCompatRegistries.excessive_building) {
                     entries.add(EBRegisterBlocks.PORCELAIN_TILE_VERTICAL_STAIRS);
+                    entries.add(EBRegisterBlocks.DARK_PORCELAIN_TILE_VERTICAL_STAIRS);
                     entries.add(EBRegisterBlocks.CHROMITE_VERTICAL_STAIRS);
                     entries.add(EBRegisterBlocks.POLISHED_CHROMITE_VERTICAL_STAIRS);
                 }

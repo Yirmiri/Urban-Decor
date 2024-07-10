@@ -40,6 +40,7 @@ public class UDLangProvider extends FabricLanguageProvider {
         //ITEMS
         builder.add(RegisterItems.PORCELAIN, "Porcelain");
         builder.add(RegisterItems.STAINLESS_STEEL, "Stainless Steel");
+        builder.add(RegisterItems.DARK_PORCELAIN, "Dark Porcelain");
 
         //ITEM GROUPS
         builder.add("itemgroup.urban_decor", "Urban Decor");

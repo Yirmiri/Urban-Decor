@@ -93,7 +93,6 @@ public class ToasterBlockEntity extends CampfireBlockEntity implements Clearable
         for (int i = 0; i < itemsBeingCooked.size(); i++) {
             ItemStack itemStack = itemsBeingCooked.get(i);
             if (itemStack.isEmpty()) {
-                world.playSound(pos.getX(), pos.getY(), pos.getZ(), SoundEvents.ENTITY_ITEM_FRAME_ADD_ITEM, SoundCategory.BLOCKS, 0.5F, 1.0F, false);
                 cookingTotalTimes[i] = cookTime;
                 cookingTimes[i] = 0;
                 itemsBeingCooked.set(i, stack.split(1));
