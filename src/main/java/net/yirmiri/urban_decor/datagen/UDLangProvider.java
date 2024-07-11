@@ -48,6 +48,13 @@ public class UDLangProvider extends FabricLanguageProvider {
         builder.add(RegisterBlocks.FRIDGE, "Fridge");
         builder.add(RegisterBlocks.FREEZER, "Freezer");
         builder.add(RegisterBlocks.TURBINE, "Turbine");
+        builder.add(RegisterBlocks.DARK_SINK, "Dark Sink");
+        builder.add(RegisterBlocks.DARK_TOILET, "Dark Toilet");
+        builder.add(RegisterBlocks.DARK_WASHING_MACHINE, "Dark Washing Machine");
+        builder.add(RegisterBlocks.DARK_DRYER, "Dark Dryer");
+        builder.add(RegisterBlocks.DARK_FRIDGE, "Dark Fridge");
+        builder.add(RegisterBlocks.DARK_FREEZER, "Dark Freezer");
+        builder.add(RegisterBlocks.DARK_OVEN, "Dark Oven");
 
         //ITEMS
         builder.add(RegisterItems.PORCELAIN, "Porcelain");

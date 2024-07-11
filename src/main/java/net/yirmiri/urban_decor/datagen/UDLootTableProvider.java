@@ -45,5 +45,13 @@ public class UDLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(RegisterBlocks.FRIDGE);
         addDrop(RegisterBlocks.FREEZER);
         addDrop(RegisterBlocks.TURBINE);
+        addDrop(RegisterBlocks.TOILET);
+        addDrop(RegisterBlocks.DARK_TOILET);
+        addDrop(RegisterBlocks.DARK_FRIDGE);
+        addDrop(RegisterBlocks.DARK_FREEZER);
+        addDrop(RegisterBlocks.DARK_OVEN);
+        addDrop(RegisterBlocks.DARK_WASHING_MACHINE);
+        addDrop(RegisterBlocks.DARK_DRYER);
+        addDrop(RegisterBlocks.DARK_SINK);
     }
 }

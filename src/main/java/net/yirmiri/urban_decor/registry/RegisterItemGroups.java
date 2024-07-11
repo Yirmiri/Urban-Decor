@@ -46,12 +46,19 @@ public class RegisterItemGroups {
 
                 entries.add(RegisterBlocks.FAUCET);
                 entries.add(RegisterBlocks.SINK);
+                entries.add(RegisterBlocks.DARK_SINK);
                 entries.add(RegisterBlocks.TOILET);
+                entries.add(RegisterBlocks.DARK_TOILET);
                 entries.add(RegisterBlocks.WASHING_MACHINE);
+                entries.add(RegisterBlocks.DARK_WASHING_MACHINE);
                 entries.add(RegisterBlocks.DRYER);
+                entries.add(RegisterBlocks.DARK_DRYER);
                 entries.add(RegisterBlocks.FRIDGE);
+                entries.add(RegisterBlocks.DARK_FRIDGE);
                 entries.add(RegisterBlocks.FREEZER);
+                entries.add(RegisterBlocks.DARK_FREEZER);
                 entries.add(RegisterBlocks.OVEN);
+                entries.add(RegisterBlocks.DARK_OVEN);
                 entries.add(RegisterBlocks.STOVE);
                 entries.add(RegisterBlocks.TOASTER);
                 entries.add(RegisterBlocks.MICROWAVE);

@@ -1,0 +1,42 @@
+{
+  "variants": {
+    "facing=north,bare=true": {
+      "model": "urban_decor:block/dark_sink_bare",
+      "uvlock": false
+    },
+    "facing=south,bare=true": {
+      "model": "urban_decor:block/dark_sink_bare",
+      "y": 180,
+      "uvlock": false
+    },
+    "facing=west,bare=true": {
+      "model": "urban_decor:block/dark_sink_bare",
+      "y": 270,
+      "uvlock": false
+    },
+    "facing=east,bare=true": {
+      "model": "urban_decor:block/dark_sink_bare",
+      "y": 90,
+      "uvlock": false
+    },
+    "facing=north,bare=false": {
+      "model": "urban_decor:block/dark_sink",
+      "uvlock": false
+    },
+    "facing=south,bare=false": {
+      "model": "urban_decor:block/dark_sink",
+      "y": 180,
+      "uvlock": false
+    },
+    "facing=west,bare=false": {
+      "model": "urban_decor:block/dark_sink",
+      "y": 270,
+      "uvlock": false
+    },
+    "facing=east,bare=false": {
+      "model": "urban_decor:block/dark_sink",
+      "y": 90,
+      "uvlock": false
+    }
+  }
+}

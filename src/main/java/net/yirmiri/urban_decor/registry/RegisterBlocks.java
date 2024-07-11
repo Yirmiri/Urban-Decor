@@ -53,6 +53,14 @@ public class RegisterBlocks {
     public static final Block FRIDGE = register("fridge", new FridgeBlock(UDProperties.BlockP.FRIDGE), true);
     public static final Block FREEZER = register("freezer", new FreezerBlock(UDProperties.BlockP.FREEZER), true);
 
+    public static final Block DARK_OVEN = register("dark_oven", new OvenBlock(UDProperties.BlockP.OVEN), true);
+    public static final Block DARK_FRIDGE = register("dark_fridge", new FridgeBlock(UDProperties.BlockP.FRIDGE), true);
+    public static final Block DARK_FREEZER = register("dark_freezer", new FreezerBlock(UDProperties.BlockP.FREEZER), true);
+    public static final Block DARK_SINK = register("dark_sink", new SinkBlock(UDProperties.BlockP.SINK), true);
+    public static final Block DARK_TOILET = register("dark_toilet", new ToiletBlock(UDProperties.BlockP.TOILET), true);
+    public static final Block DARK_WASHING_MACHINE = register("dark_washing_machine", new WashingMachineBlock(UDProperties.BlockP.WASHING_MACHINE), true);
+    public static final Block DARK_DRYER = register("dark_dryer", new DryerBlock(UDProperties.BlockP.DRYER), true);
+
     //MISC APPLIANCES
     public static final Block TOOLBOX = register("toolbox", new ToolboxBlock(UDProperties.BlockP.TOOLBOX), false);
     public static final Block AIR_CONDITIONER = register("air_conditioner", new AirConditionerBlock(UDProperties.BlockP.AIR_CONDITIONER), true);

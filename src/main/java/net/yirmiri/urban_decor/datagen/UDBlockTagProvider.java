@@ -54,6 +54,13 @@ public class UDBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(RegisterBlocks.FRIDGE)
                 .add(RegisterBlocks.FREEZER)
                 .add(RegisterBlocks.TURBINE)
+                .add(RegisterBlocks.DARK_DRYER)
+                .add(RegisterBlocks.DARK_FRIDGE)
+                .add(RegisterBlocks.DARK_FREEZER)
+                .add(RegisterBlocks.DARK_SINK)
+                .add(RegisterBlocks.DARK_TOILET)
+                .add(RegisterBlocks.DARK_WASHING_MACHINE)
+                .add(RegisterBlocks.DARK_OVEN)
         ;
 
         getOrCreateTagBuilder(BlockTags.WALLS)

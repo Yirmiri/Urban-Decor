@@ -1,0 +1,80 @@
+{
+  "variants": {
+    "facing=north,open=true,flipped=false": {
+      "model": "urban_decor:block/dark_fridge_open",
+      "uvlock": false
+    },
+    "facing=south,open=true,flipped=false": {
+      "model": "urban_decor:block/dark_fridge_open",
+      "y": 180,
+      "uvlock": false
+    },
+    "facing=west,open=true,flipped=false": {
+      "model": "urban_decor:block/dark_fridge_open",
+      "y": 270,
+      "uvlock": false
+    },
+    "facing=east,open=true,flipped=false": {
+      "model": "urban_decor:block/dark_fridge_open",
+      "y": 90,
+      "uvlock": false
+    },
+    "facing=north,open=false,flipped=false": {
+      "model": "urban_decor:block/dark_fridge",
+      "uvlock": false
+    },
+    "facing=south,open=false,flipped=false": {
+      "model": "urban_decor:block/dark_fridge",
+      "y": 180,
+      "uvlock": false
+    },
+    "facing=west,open=false,flipped=false": {
+      "model": "urban_decor:block/dark_fridge",
+      "y": 270,
+      "uvlock": false
+    },
+    "facing=east,open=false,flipped=false": {
+      "model": "urban_decor:block/dark_fridge",
+      "y": 90,
+      "uvlock": false
+    },
+    "facing=north,open=true,flipped=true": {
+      "model": "urban_decor:block/dark_fridge_flipped_open",
+      "uvlock": false
+    },
+    "facing=south,open=true,flipped=true": {
+      "model": "urban_decor:block/dark_fridge_flipped_open",
+      "y": 180,
+      "uvlock": false
+    },
+    "facing=west,open=true,flipped=true": {
+      "model": "urban_decor:block/dark_fridge_flipped_open",
+      "y": 270,
+      "uvlock": false
+    },
+    "facing=east,open=true,flipped=true": {
+      "model": "urban_decor:block/dark_fridge_flipped_open",
+      "y": 90,
+      "uvlock": false
+    },
+    "facing=north,open=false,flipped=true": {
+      "model": "urban_decor:block/dark_fridge_flipped",
+      "uvlock": false
+    },
+    "facing=south,open=false,flipped=true": {
+      "model": "urban_decor:block/dark_fridge_flipped",
+      "y": 180,
+      "uvlock": false
+    },
+    "facing=west,open=false,flipped=true": {
+      "model": "urban_decor:block/dark_fridge_flipped",
+      "y": 270,
+      "uvlock": false
+    },
+    "facing=east,open=false,flipped=true": {
+      "model": "urban_decor:block/dark_fridge_flipped",
+      "y": 90,
+      "uvlock": false
+    }
+  }
+}
