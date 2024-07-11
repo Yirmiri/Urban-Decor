@@ -15,8 +15,8 @@ import net.minecraft.world.BlockView;
 public class FaucetBlock extends AbstractDecorBlock {
     private static final VoxelShape SHAPE_NORTH = VoxelShapes.combineAndSimplify(Block.createCuboidShape(7, 8, 10, 9, 10, 18),
             Block.createCuboidShape(7, 6, 10, 9, 8, 12), BooleanBiFunction.OR);
-    private static final VoxelShape SHAPE_WEST = VoxelShapes.combineAndSimplify(Block.createCuboidShape(8, 8, 7, 16, 10, 9),
-            Block.createCuboidShape(8, 6, 7, 10, 8, 9), BooleanBiFunction.OR);
+    private static final VoxelShape SHAPE_WEST = VoxelShapes.combineAndSimplify(Block.createCuboidShape(10, 8, 7, 18, 10, 9),
+            Block.createCuboidShape(10, 6, 7, 12, 8, 9), BooleanBiFunction.OR);
     private static final VoxelShape SHAPE_EAST = VoxelShapes.combineAndSimplify(Block.createCuboidShape(-2, 8, 7, 6, 10, 9),
             Block.createCuboidShape(4, 6, 7, 6, 8, 9), BooleanBiFunction.OR);
     private static final VoxelShape SHAPE_SOUTH = VoxelShapes.combineAndSimplify(Block.createCuboidShape(7, 8, -2, 9, 10, 6),

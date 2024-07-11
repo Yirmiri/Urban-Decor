@@ -28,7 +28,7 @@ public class ToolboxBlock extends AbstractDecorBlock {
 
     public ToolboxBlock(Settings settings) {
         super(settings);
-        setDefaultState(getDefaultState().with(Properties.HORIZONTAL_FACING, Direction.NORTH).with(WATERLOGGED, false));
+        setDefaultState(getDefaultState().with(Properties.HORIZONTAL_FACING, Direction.NORTH).with(WATERLOGGED, false).with(OPEN, false));
     }
 
     @Override
