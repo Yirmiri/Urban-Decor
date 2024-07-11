@@ -29,6 +29,9 @@
     "urban_decor:checkered_porcelain_tile_stairs",
     "urban_decor:checkered_porcelain_tile_slab",
     "urban_decor:oven",
-    "urban_decor:radiator"
+    "urban_decor:radiator",
+    "urban_decor:stove",
+    "urban_decor:fridge",
+    "urban_decor:freezer"
   ]
 }

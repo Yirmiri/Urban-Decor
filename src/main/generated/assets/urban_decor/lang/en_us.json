@@ -13,6 +13,8 @@
   "block.urban_decor.desk_fan": "Desk Fan",
   "block.urban_decor.dryer": "Dryer",
   "block.urban_decor.faucet": "Faucet",
+  "block.urban_decor.freezer": "Freezer",
+  "block.urban_decor.fridge": "Fridge",
   "block.urban_decor.microwave": "Microwave",
   "block.urban_decor.oven": "Oven",
   "block.urban_decor.polished_chromite": "Polished Chromite",
@@ -24,6 +26,7 @@
   "block.urban_decor.radiator": "Radiator",
   "block.urban_decor.sink": "Sink",
   "block.urban_decor.stainless_steel_block": "Block of Stainless Steel",
+  "block.urban_decor.stove": "Stove",
   "block.urban_decor.toaster": "Toaster",
   "block.urban_decor.toilet": "Toilet",
   "block.urban_decor.toolbox": "Toolbox",
@@ -32,5 +35,6 @@
   "item.urban_decor.dark_porcelain": "Dark Porcelain",
   "item.urban_decor.porcelain": "Porcelain",
   "item.urban_decor.stainless_steel": "Stainless Steel",
+  "item.urban_decor.toolbox.desc": "Click on various appliances to change them! (placeholder text??, maybe)",
   "itemgroup.urban_decor": "Urban Decor"
 }

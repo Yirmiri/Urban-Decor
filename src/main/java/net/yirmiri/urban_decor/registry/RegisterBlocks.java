@@ -49,6 +49,9 @@ public class RegisterBlocks {
     public static final Block TOASTER = register("toaster", new ToasterBlock(false, 1, UDProperties.BlockP.TOASTER), true);
     public static final Block DESK_FAN = register("desk_fan", new DeskFanBlock(UDProperties.BlockP.DESK_FAN), true);
     public static final Block OVEN = register("oven", new OvenBlock(UDProperties.BlockP.OVEN), true);
+    public static final Block STOVE = register("stove", new StoveBlock(UDProperties.BlockP.STOVE), true);
+    public static final Block FRIDGE = register("fridge", new FridgeBlock(UDProperties.BlockP.FRIDGE), true);
+    public static final Block FREEZER = register("freezer", new FreezerBlock(UDProperties.BlockP.FREEZER), true);
 
     //MISC APPLIANCES
     public static final Block TOOLBOX = register("toolbox", new ToolboxBlock(UDProperties.BlockP.TOOLBOX), false);

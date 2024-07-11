@@ -1,4 +1,4 @@
-// 1.20.1	2024-07-11T06:27:10.3475363	Urban Decor/Model Definitions
+// 1.20.1	2024-07-11T07:10:07.2233523	Urban Decor/Model Definitions
 4257afed1e85194b01f1ce1dc1ee253afd6e23fe assets\urban_decor\blockstates\checkered_porcelain_tiles.json
 f8b4f9b81cefae29da0752e96e98a3d5db0853f0 assets\urban_decor\blockstates\chromite_slab.json
 237373ad9aef44cab5ff105e748024c7958645da assets\urban_decor\models\item\chromite_slab.json
@@ -8,8 +8,8 @@ fdbeda5fc14bed31cde4d2647b4005ff4d5d7f6c assets\urban_decor\models\item\microwav
 31170b0ee6dc28fc6d7289cabd1caa147a6c4d0d assets\urban_decor\models\item\stainless_steel_block.json
 63183e0436ce1772d9cc220cf7ad05e949bf81ea assets\urban_decor\blockstates\checkered_porcelain_tile_stairs.json
 e6dc54b5c6648412247e47a24485c7081efbcdf9 assets\urban_decor\models\block\porcelain_tile_stairs_inner.json
-a6f76c0dfdd446c483721f14c7a326e404db0697 assets\urban_decor\blockstates\porcelain_tile_slab.json
 a6f734627195479d79bb80362194f4f0514d8b67 assets\urban_decor\blockstates\dark_porcelain_tiles.json
+a6f76c0dfdd446c483721f14c7a326e404db0697 assets\urban_decor\blockstates\porcelain_tile_slab.json
 5e9d4c5e36a94d6b33dd0edd2eb88f4a23ea4808 assets\urban_decor\models\item\porcelain_tile_slab.json
 52a18ec1d1b9195147389cc7f2b701c820e83aa4 assets\urban_decor\models\block\porcelain_tiles.json
 efbc8ecfc5ee779c4d78a7dd1b871c37fc8623a2 assets\urban_decor\blockstates\polished_chromite_stairs.json
@@ -55,6 +55,7 @@ f2a5001d4d319cfc0b71afa4c08f12f7af4acdef assets\urban_decor\blockstates\dark_por
 ea5b44f4b17a15ea4e0c9df4994718df64cada33 assets\urban_decor\models\block\checkered_porcelain_tile_stairs.json
 31d881c010285339a1079e423e9e0256fdbae31a assets\urban_decor\models\item\checkered_porcelain_tile_slab.json
 780c7593b1e9323e7b0a26e9adc8be79308a1893 assets\urban_decor\blockstates\stainless_steel_block.json
+3d7a24a9be227378c13a82e69a26b3e7aba26dee assets\urban_decor\models\item\stove.json
 51f062ddb1dd53f6bc5964884d37ae4145e23b76 assets\urban_decor\models\item\porcelain_tile_stairs.json
 305783666f87817b782216d6542441590a39f146 assets\urban_decor\models\item\dark_porcelain.json
 0893e7a603f88a47e45a976ea6d283ba7e7b8eb7 assets\urban_decor\models\item\dark_porcelain_tiles.json

@@ -44,6 +44,9 @@ public class UDLangProvider extends FabricLanguageProvider {
         builder.add(RegisterBlocks.FAUCET, "Faucet");
         builder.add(RegisterBlocks.OVEN, "Oven");
         builder.add(RegisterBlocks.RADIATOR, "Radiator");
+        builder.add(RegisterBlocks.STOVE, "Stove");
+        builder.add(RegisterBlocks.FRIDGE, "Fridge");
+        builder.add(RegisterBlocks.FREEZER, "Freezer");
 
         //ITEMS
         builder.add(RegisterItems.PORCELAIN, "Porcelain");
@@ -53,5 +56,8 @@ public class UDLangProvider extends FabricLanguageProvider {
 
         //ITEM GROUPS
         builder.add("itemgroup.urban_decor", "Urban Decor");
+
+        //TOOLTIPS
+        builder.add("item.urban_decor.toolbox.desc", "Click on various appliances to change them! (placeholder text??, maybe)");
     }
 }

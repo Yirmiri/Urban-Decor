@@ -33,6 +33,9 @@ public class UDItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(RegisterBlocks.TOASTER.asItem())
                 .add(RegisterBlocks.DESK_FAN.asItem())
                 .add(RegisterBlocks.OVEN.asItem())
+                .add(RegisterBlocks.STOVE.asItem())
+                .add(RegisterBlocks.FRIDGE.asItem())
+                .add(RegisterBlocks.FREEZER.asItem())
         ;
 
             getOrCreateTagBuilder(TOOLBOXES)

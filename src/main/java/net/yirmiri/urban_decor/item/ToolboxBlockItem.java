@@ -1,10 +1,18 @@
 package net.yirmiri.urban_decor.item;
 
 import net.minecraft.block.Block;
+import net.minecraft.client.item.TooltipContext;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.ItemPlacementContext;
+import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemUsageContext;
+import net.minecraft.text.Text;
 import net.minecraft.util.ActionResult;
+import net.minecraft.util.Formatting;
+import net.minecraft.world.World;
+import org.jetbrains.annotations.Nullable;
+
+import java.util.List;
 
 public class ToolboxBlockItem extends BlockItem {
     public ToolboxBlockItem(Block block, Settings settings) {
@@ -23,5 +31,11 @@ public class ToolboxBlockItem extends BlockItem {
             }
         }
         return ActionResult.FAIL;
+    }
+
+    @Override
+    public void appendTooltip(ItemStack stack, @Nullable World world, List<net.minecraft.text.Text> tooltip, TooltipContext ctx) {
+        super.appendTooltip(stack, world, tooltip, ctx);
+        tooltip.add(Text.translatable("item.urban_decor.toolbox.desc").formatted(Formatting.GRAY));
     }
 }

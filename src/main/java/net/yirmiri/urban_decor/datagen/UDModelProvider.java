@@ -48,5 +48,6 @@ public class UDModelProvider extends FabricModelProvider {
         itemModelGenerator.register(RegisterBlocks.TOASTER.asItem(), Models.GENERATED);
         itemModelGenerator.register(RegisterItems.DARK_PORCELAIN, Models.GENERATED);
         itemModelGenerator.register(RegisterItems.TOOLBOX, Models.GENERATED);
+        itemModelGenerator.register(RegisterBlocks.STOVE.asItem(), Models.GENERATED);
     }
 }

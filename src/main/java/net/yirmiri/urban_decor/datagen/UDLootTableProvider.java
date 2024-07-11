@@ -41,5 +41,8 @@ public class UDLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(RegisterBlocks.STAINLESS_STEEL_BLOCK);
         addDrop(RegisterBlocks.OVEN);
         addDrop(RegisterBlocks.RADIATOR);
+        addDrop(RegisterBlocks.STOVE);
+        addDrop(RegisterBlocks.FRIDGE);
+        addDrop(RegisterBlocks.FREEZER);
     }
 }

@@ -1,8 +1,8 @@
 {
 	"credit": "Made with Blockbench by Tellio-Ari",
 	"textures": {
-		"0": "furniture:freezer",
-		"particle": "furniture:freezer"
+		"0": "urban_decor:block/freezer",
+		"particle": "urban_decor:block/freezer"
 	},
 	"elements": [
 		{
@@ -104,6 +104,7 @@
 			"name": "group",
 			"origin": [2, 13, 0],
 			"color": 0,
+			"nbt": "{}",
 			"children": [2, 3, 4, 5, 6]
 		}
 	]

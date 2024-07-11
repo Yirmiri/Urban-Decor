@@ -62,10 +62,7 @@ public class SinkBlock extends AbstractDecorBlock {
         ItemStack stackHand = player.getStackInHand(hand);
         if (stackHand.isIn(UDItemTagProvider.TOOLBOXES)) {
             world.setBlockState(pos, state.cycle(BARE));
-            if (!player.isCreative()) {
-                stackHand.damage(1, player, p -> p.sendToolBreakStatus(hand));
-            }
-            return ActionResult.SUCCESS;
+                return ActionResult.SUCCESS;
         }
         return ActionResult.PASS;
     }
