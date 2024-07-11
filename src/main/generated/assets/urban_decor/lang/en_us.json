@@ -1,5 +1,8 @@
 {
   "block.urban_decor.air_conditioner": "Air Conditioner",
+  "block.urban_decor.checkered_porcelain_tile_slab": "Checkered Porcelain Tile Slab",
+  "block.urban_decor.checkered_porcelain_tile_stairs": "Checkered Porcelain Tile Stairs",
+  "block.urban_decor.checkered_porcelain_tiles": "Checkered Porcelain Tiles",
   "block.urban_decor.chromite": "Chromite",
   "block.urban_decor.chromite_slab": "Chromite Slab",
   "block.urban_decor.chromite_stairs": "Chromite Stairs",
@@ -18,6 +21,7 @@
   "block.urban_decor.porcelain_tile_stairs": "Porcelain Tile Stairs",
   "block.urban_decor.porcelain_tiles": "Porcelain Tiles",
   "block.urban_decor.sink": "Sink",
+  "block.urban_decor.stainless_steel_block": "Block of Stainless Steel",
   "block.urban_decor.toaster": "Toaster",
   "block.urban_decor.toilet": "Toilet",
   "block.urban_decor.toolbox": "Toolbox",

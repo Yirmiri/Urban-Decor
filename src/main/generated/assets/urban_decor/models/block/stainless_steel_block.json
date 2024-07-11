@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "urban_decor:block/stainless_steel_block"
+  }
+}

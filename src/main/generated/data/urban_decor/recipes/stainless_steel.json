@@ -1,24 +1,13 @@
 {
-  "type": "minecraft:crafting_shaped",
+  "type": "minecraft:crafting_shapeless",
   "category": "misc",
-  "key": {
-    "#": {
-      "item": "minecraft:coal"
-    },
-    "$": {
-      "item": "urban_decor:chromite"
-    },
-    "@": {
-      "item": "minecraft:iron_ingot"
+  "ingredients": [
+    {
+      "item": "urban_decor:stainless_steel_block"
     }
-  },
-  "pattern": [
-    "#$",
-    "@$"
   ],
   "result": {
-    "count": 2,
+    "count": 9,
     "item": "urban_decor:stainless_steel"
-  },
-  "show_notification": true
+  }
 }

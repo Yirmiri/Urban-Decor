@@ -24,6 +24,10 @@ public class RegisterBlocks {
     public static final Block DARK_PORCELAIN_TILE_STAIRS = register("dark_porcelain_tile_stairs", new StairsBlock(DARK_PORCELAIN_TILES.getDefaultState(), UDProperties.BlockP.DARK_PORCELAIN), true);
     public static final Block DARK_PORCELAIN_TILE_SLAB = register("dark_porcelain_tile_slab", new SlabBlock(UDProperties.BlockP.DARK_PORCELAIN), true);
 
+    public static final Block CHECKERED_PORCELAIN_TILES = register("checkered_porcelain_tiles", new Block(UDProperties.BlockP.PORCELAIN), true);
+    public static final Block CHECKERED_PORCELAIN_TILE_STAIRS = register("checkered_porcelain_tile_stairs", new StairsBlock(CHECKERED_PORCELAIN_TILES.getDefaultState(), UDProperties.BlockP.PORCELAIN), true);
+    public static final Block CHECKERED_PORCELAIN_TILE_SLAB = register("checkered_porcelain_tile_slab", new SlabBlock(UDProperties.BlockP.PORCELAIN), true);
+
     public static final Block CHROMITE = register("chromite", new Block(UDProperties.BlockP.CHROMITE), true);
     public static final Block CHROMITE_STAIRS = register("chromite_stairs", new StairsBlock(CHROMITE.getDefaultState(), UDProperties.BlockP.PORCELAIN), true);
     public static final Block CHROMITE_SLAB = register("chromite_slab", new SlabBlock(UDProperties.BlockP.CHROMITE), true);
@@ -32,6 +36,8 @@ public class RegisterBlocks {
     public static final Block POLISHED_CHROMITE = register("polished_chromite", new Block(UDProperties.BlockP.POLISHED_CHROMITE), true);
     public static final Block POLISHED_CHROMITE_STAIRS = register("polished_chromite_stairs", new StairsBlock(POLISHED_CHROMITE.getDefaultState(), UDProperties.BlockP.PORCELAIN), true);
     public static final Block POLISHED_CHROMITE_SLAB = register("polished_chromite_slab", new SlabBlock(UDProperties.BlockP.POLISHED_CHROMITE), true);
+
+    public static final Block STAINLESS_STEEL_BLOCK = register("stainless_steel_block", new Block(UDProperties.BlockP.STAINLESS_STEEL), true);
 
     //DECOR
     public static final Block TRASH_CAN = register("trash_can", new TrashCanBlock(UDProperties.BlockP.TRASH_CAN), true);

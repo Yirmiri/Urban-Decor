@@ -19,6 +19,9 @@ public class UDLangProvider extends FabricLanguageProvider {
         builder.add(RegisterBlocks.DARK_PORCELAIN_TILES, "Dark Porcelain Tiles");
         builder.add(RegisterBlocks.DARK_PORCELAIN_TILE_STAIRS, "Dark Porcelain Tile Stairs");
         builder.add(RegisterBlocks.DARK_PORCELAIN_TILE_SLAB, "Dark Porcelain Tile Slab");
+        builder.add(RegisterBlocks.CHECKERED_PORCELAIN_TILES, "Checkered Porcelain Tiles");
+        builder.add(RegisterBlocks.CHECKERED_PORCELAIN_TILE_STAIRS, "Checkered Porcelain Tile Stairs");
+        builder.add(RegisterBlocks.CHECKERED_PORCELAIN_TILE_SLAB, "Checkered Porcelain Tile Slab");
         builder.add(RegisterBlocks.CHROMITE, "Chromite");
         builder.add(RegisterBlocks.CHROMITE_STAIRS, "Chromite Stairs");
         builder.add(RegisterBlocks.CHROMITE_SLAB, "Chromite Slab");
@@ -26,6 +29,7 @@ public class UDLangProvider extends FabricLanguageProvider {
         builder.add(RegisterBlocks.POLISHED_CHROMITE, "Polished Chromite");
         builder.add(RegisterBlocks.POLISHED_CHROMITE_STAIRS, "Polished Chromite Stairs");
         builder.add(RegisterBlocks.POLISHED_CHROMITE_SLAB, "Polished Chromite Slab");
+        builder.add(RegisterBlocks.STAINLESS_STEEL_BLOCK, "Block of Stainless Steel");
 
         //APPLIANCES
         builder.add(RegisterBlocks.TRASH_CAN, "Trash Can");

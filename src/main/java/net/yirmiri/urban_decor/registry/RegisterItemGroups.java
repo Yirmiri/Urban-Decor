@@ -27,6 +27,10 @@ public class RegisterItemGroups {
                 entries.add(RegisterBlocks.DARK_PORCELAIN_TILE_STAIRS);
                 entries.add(RegisterBlocks.DARK_PORCELAIN_TILE_SLAB);
 
+                entries.add(RegisterBlocks.CHECKERED_PORCELAIN_TILES);
+                entries.add(RegisterBlocks.CHECKERED_PORCELAIN_TILE_STAIRS);
+                entries.add(RegisterBlocks.CHECKERED_PORCELAIN_TILE_SLAB);
+
                 entries.add(RegisterBlocks.CHROMITE);
                 entries.add(RegisterBlocks.CHROMITE_STAIRS);
                 entries.add(RegisterBlocks.CHROMITE_SLAB);
@@ -35,6 +39,8 @@ public class RegisterItemGroups {
                 entries.add(RegisterBlocks.POLISHED_CHROMITE);
                 entries.add(RegisterBlocks.POLISHED_CHROMITE_STAIRS);
                 entries.add(RegisterBlocks.POLISHED_CHROMITE_SLAB);
+
+                entries.add(RegisterBlocks.STAINLESS_STEEL_BLOCK);
 
                 entries.add(RegisterItems.TOOLBOX);
 

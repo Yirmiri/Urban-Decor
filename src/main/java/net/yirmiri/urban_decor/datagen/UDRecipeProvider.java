@@ -23,7 +23,7 @@ public class UDRecipeProvider extends FabricRecipeProvider {
 
     @Override
     public void generate(Consumer<RecipeJsonProvider> exporter) {
-        createFourForOneRecipe(RegisterBlocks.PORCELAIN_TILES,
+        createTwoByTwoRecipe(RegisterBlocks.PORCELAIN_TILES, 1,
                 Ingredient.ofItems(RegisterItems.PORCELAIN))
                 .criterion(hasItem(RegisterItems.PORCELAIN), conditionsFromItem(RegisterItems.PORCELAIN))
                 .offerTo(exporter, Identifier.of(UrbanDecor.MOD_ID, getRecipeName(RegisterBlocks.PORCELAIN_TILES)));
@@ -53,7 +53,7 @@ public class UDRecipeProvider extends FabricRecipeProvider {
                 .pattern("#$")
                 .pattern("@$")
                 .criterion(hasItem(RegisterBlocks.CHROMITE), conditionsFromItem(RegisterBlocks.CHROMITE))
-                .offerTo(exporter, Identifier.of(UrbanDecor.MOD_ID, getRecipeName(RegisterItems.STAINLESS_STEEL)));
+                .offerTo(exporter, Identifier.of(UrbanDecor.MOD_ID, getRecipeName(RegisterItems.STAINLESS_STEEL) + "_from_chromite"));
 
         createStairsRecipe(RegisterBlocks.CHROMITE_STAIRS,
                 Ingredient.ofItems(RegisterBlocks.CHROMITE))
@@ -92,7 +92,7 @@ public class UDRecipeProvider extends FabricRecipeProvider {
         offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, RegisterBlocks.POLISHED_CHROMITE_STAIRS, RegisterBlocks.POLISHED_CHROMITE, 1);
         offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, RegisterBlocks.POLISHED_CHROMITE_SLAB, RegisterBlocks.POLISHED_CHROMITE, 2);
 
-        createFourForOneRecipe(RegisterBlocks.DARK_PORCELAIN_TILES,
+        createTwoByTwoRecipe(RegisterBlocks.DARK_PORCELAIN_TILES, 1,
                 Ingredient.ofItems(RegisterItems.DARK_PORCELAIN))
                 .criterion(hasItem(RegisterItems.DARK_PORCELAIN), conditionsFromItem(RegisterItems.DARK_PORCELAIN))
                 .offerTo(exporter, Identifier.of(UrbanDecor.MOD_ID, getRecipeName(RegisterBlocks.DARK_PORCELAIN_TILES)));
@@ -109,8 +109,39 @@ public class UDRecipeProvider extends FabricRecipeProvider {
 
         offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, RegisterBlocks.DARK_PORCELAIN_TILE_STAIRS, RegisterBlocks.DARK_PORCELAIN_TILES, 1);
         offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, RegisterBlocks.DARK_PORCELAIN_TILE_SLAB, RegisterBlocks.DARK_PORCELAIN_TILES, 2);
-    }
 
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, RegisterBlocks.CHECKERED_PORCELAIN_TILES, 1)
+                .input('#', RegisterItems.PORCELAIN).input('@', RegisterItems.DARK_PORCELAIN)
+                .pattern("@#")
+                .pattern("#@")
+                .criterion(hasItem(RegisterItems.PORCELAIN), conditionsFromItem(RegisterItems.PORCELAIN))
+                .criterion(hasItem(RegisterItems.DARK_PORCELAIN), conditionsFromItem(RegisterItems.DARK_PORCELAIN))
+                .offerTo(exporter, Identifier.of(UrbanDecor.MOD_ID, getRecipeName(RegisterBlocks.CHECKERED_PORCELAIN_TILES)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, RegisterBlocks.CHECKERED_PORCELAIN_TILES, 4)
+                .input('#', RegisterBlocks.PORCELAIN_TILES).input('@', RegisterBlocks.DARK_PORCELAIN_TILES)
+                .pattern("@#")
+                .pattern("#@")
+                .criterion(hasItem(RegisterBlocks.PORCELAIN_TILES), conditionsFromItem(RegisterBlocks.PORCELAIN_TILES))
+                .criterion(hasItem(RegisterBlocks.DARK_PORCELAIN_TILES), conditionsFromItem(RegisterBlocks.DARK_PORCELAIN_TILES))
+                .offerTo(exporter, Identifier.of(UrbanDecor.MOD_ID, getRecipeName(RegisterBlocks.CHECKERED_PORCELAIN_TILES) + "_from_blocks"));
+
+        createStairsRecipe(RegisterBlocks.CHECKERED_PORCELAIN_TILE_STAIRS,
+                Ingredient.ofItems(RegisterBlocks.CHECKERED_PORCELAIN_TILES))
+                .criterion(hasItem(RegisterBlocks.CHECKERED_PORCELAIN_TILES), conditionsFromItem(RegisterBlocks.CHECKERED_PORCELAIN_TILES))
+                .offerTo(exporter, Identifier.of(UrbanDecor.MOD_ID, getRecipeName(RegisterBlocks.CHECKERED_PORCELAIN_TILE_STAIRS)));
+
+        createSlabRecipe(RecipeCategory.BUILDING_BLOCKS, RegisterBlocks.CHECKERED_PORCELAIN_TILE_SLAB,
+                Ingredient.ofItems(RegisterBlocks.CHECKERED_PORCELAIN_TILES))
+                .criterion(hasItem(RegisterBlocks.CHECKERED_PORCELAIN_TILES), conditionsFromItem(RegisterBlocks.CHECKERED_PORCELAIN_TILES))
+                .offerTo(exporter, Identifier.of(UrbanDecor.MOD_ID, getRecipeName(RegisterBlocks.CHECKERED_PORCELAIN_TILE_SLAB)));
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, RegisterBlocks.CHECKERED_PORCELAIN_TILE_STAIRS, RegisterBlocks.CHECKERED_PORCELAIN_TILES, 1);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, RegisterBlocks.CHECKERED_PORCELAIN_TILE_SLAB, RegisterBlocks.CHECKERED_PORCELAIN_TILES, 2);
+
+        offerReversibleCompactingRecipes(exporter, RecipeCategory.MISC, RegisterItems.STAINLESS_STEEL, RecipeCategory.BUILDING_BLOCKS, RegisterBlocks.STAINLESS_STEEL_BLOCK);
+    }
+//yes this only exists so i can name it four for four wendys meal... there is no need for this recipe builder
     public static ShapedRecipeJsonBuilder createFourForFourWendysMealRecipe(ItemConvertible output, Ingredient input) {
         return ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, output, 4)
                 .input('#', input)
@@ -118,8 +149,8 @@ public class UDRecipeProvider extends FabricRecipeProvider {
                 .pattern("##");
     }
 
-    public static ShapedRecipeJsonBuilder createFourForOneRecipe(ItemConvertible output, Ingredient input) {
-        return ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, output, 1)
+    public static ShapedRecipeJsonBuilder createTwoByTwoRecipe(ItemConvertible output, int count, Ingredient input) {
+        return ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, output, count)
                 .input('#', input)
                 .pattern("##")
                 .pattern("##");

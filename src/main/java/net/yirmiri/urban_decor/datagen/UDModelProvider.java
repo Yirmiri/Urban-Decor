@@ -31,6 +31,12 @@ public class UDModelProvider extends FabricModelProvider {
         BlockStateModelGenerator.BlockTexturePool darkPorcelainTiles = generator.registerCubeAllModelTexturePool(RegisterBlocks.DARK_PORCELAIN_TILES);
         darkPorcelainTiles.stairs(RegisterBlocks.DARK_PORCELAIN_TILE_STAIRS);
         darkPorcelainTiles.slab(RegisterBlocks.DARK_PORCELAIN_TILE_SLAB);
+
+        BlockStateModelGenerator.BlockTexturePool checkeredPorcelainTiles = generator.registerCubeAllModelTexturePool(RegisterBlocks.CHECKERED_PORCELAIN_TILES);
+        checkeredPorcelainTiles.stairs(RegisterBlocks.CHECKERED_PORCELAIN_TILE_STAIRS);
+        checkeredPorcelainTiles.slab(RegisterBlocks.CHECKERED_PORCELAIN_TILE_SLAB);
+
+        generator.registerCubeAllModelTexturePool(RegisterBlocks.STAINLESS_STEEL_BLOCK);
     }
 
     @Override

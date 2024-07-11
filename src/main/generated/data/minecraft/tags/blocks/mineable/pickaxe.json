@@ -22,6 +22,11 @@
     "urban_decor:dark_porcelain_tile_stairs",
     "urban_decor:dark_porcelain_tile_slab",
     "urban_decor:desk_fan",
-    "urban_decor:toolbox"
+    "urban_decor:toolbox",
+    "urban_decor:faucet",
+    "urban_decor:stainless_steel_block",
+    "urban_decor:checkered_porcelain_tiles",
+    "urban_decor:checkered_porcelain_tile_stairs",
+    "urban_decor:checkered_porcelain_tile_slab"
   ]
 }

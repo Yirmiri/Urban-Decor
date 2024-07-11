@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "item": "urban_decor:checkered_porcelain_tiles"
+  },
+  "result": "urban_decor:checkered_porcelain_tile_stairs"
+}
