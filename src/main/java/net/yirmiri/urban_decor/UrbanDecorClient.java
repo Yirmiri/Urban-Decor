@@ -20,5 +20,6 @@ public class UrbanDecorClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(RegisterBlocks.DESK_FAN, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(RegisterBlocks.OVEN, RenderLayer.getCutoutMipped());
         BlockRenderLayerMap.INSTANCE.putBlock(RegisterBlocks.RADIATOR, RenderLayer.getCutoutMipped());
+        BlockRenderLayerMap.INSTANCE.putBlock(RegisterBlocks.STOVE, RenderLayer.getCutout());
     }
 }

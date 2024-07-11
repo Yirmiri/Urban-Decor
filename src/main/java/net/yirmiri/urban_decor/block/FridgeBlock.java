@@ -24,10 +24,7 @@ public class FridgeBlock extends AbstractDecorBlock {
     public static final BooleanProperty OPEN = BooleanProperty.of("open");
     public static final BooleanProperty FLIPPED = BooleanProperty.of("flipped");
 
-    private static final VoxelShape SHAPE_NORTH = Block.createCuboidShape(1, 0, 4, 15, 8, 12);
-    private static final VoxelShape SHAPE_EAST = Block.createCuboidShape(4, 0, 1, 12, 8, 15);
-    private static final VoxelShape SHAPE_WEST = Block.createCuboidShape(4, 0, 1, 12, 8, 15);
-    private static final VoxelShape SHAPE_SOUTH = Block.createCuboidShape(1, 0, 4, 15, 8, 12);
+    private static final VoxelShape SHAPE = Block.createCuboidShape(1, 0, 1, 15, 16, 15);
 
     public FridgeBlock(Settings settings) {
         super(settings);
@@ -36,12 +33,8 @@ public class FridgeBlock extends AbstractDecorBlock {
 
     @Override
     public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext ctx) {
-        return switch (state.get(FACING)) {
-            default -> SHAPE_NORTH;
-            case SOUTH -> SHAPE_SOUTH;
-            case WEST -> SHAPE_WEST;
-            case EAST -> SHAPE_EAST;
-        };
+        state.get(FACING);
+        return SHAPE;
     }
 
     @Override

@@ -6,6 +6,7 @@ import net.minecraft.item.BlockItem;
 import net.minecraft.item.ItemPlacementContext;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemUsageContext;
+import net.minecraft.screen.ScreenTexts;
 import net.minecraft.text.Text;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Formatting;
@@ -36,6 +37,8 @@ public class ToolboxBlockItem extends BlockItem {
     @Override
     public void appendTooltip(ItemStack stack, @Nullable World world, List<net.minecraft.text.Text> tooltip, TooltipContext ctx) {
         super.appendTooltip(stack, world, tooltip, ctx);
-        tooltip.add(Text.translatable("item.urban_decor.toolbox.desc").formatted(Formatting.GRAY));
+        tooltip.add(ScreenTexts.EMPTY);
+        tooltip.add(Text.translatable("item.urban_decor.toolbox.use").formatted(Formatting.GRAY));
+        tooltip.add(ScreenTexts.space().append(Text.translatable("item.urban_decor.toolbox.desc").formatted(Formatting.BLUE)));
     }
 }
