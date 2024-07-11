@@ -58,7 +58,7 @@ public class UDLangProvider extends FabricLanguageProvider {
         builder.add("itemgroup.urban_decor", "Urban Decor");
 
         //TOOLTIPS
-        builder.add("item.urban_decor.toolbox.use", "When Used on Blocks:)");
-        builder.add("item.urban_decor.toolbox.desc", "Changes The State of Some Blocks)");
+        builder.add("item.urban_decor.toolbox.use", "When Used on Blocks:");
+        builder.add("item.urban_decor.toolbox.desc", "Changes The State of Some Blocks");
     }
 }
