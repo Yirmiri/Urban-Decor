@@ -1,12 +1,13 @@
-// 1.20.1	2024-07-11T06:13:02.5604309	Urban Decor/Block Loot Tables
+// 1.20.1	2024-07-11T06:27:10.341552	Urban Decor/Block Loot Tables
 ff62329751bd2ea5d3ec7550f6d7b3e2eb88af2c data\urban_decor\loot_tables\blocks\desk_fan.json
 32edb027b240866b501ef5a903cdbe342f406102 data\urban_decor\loot_tables\blocks\sink.json
 f81c3adcdb8ec0473bef258e0e32b91ad37afab4 data\urban_decor\loot_tables\blocks\chromite.json
 683e8d4f13004d41dd82cdda8656c53877b1bf6c data\urban_decor\loot_tables\blocks\microwave.json
 c2aca8e8365a00dbf2e297b988f594b8316987b6 data\urban_decor\loot_tables\blocks\porcelain_tiles.json
+1c086606f838970f6e242a4acdde47f3110754f9 data\urban_decor\loot_tables\blocks\radiator.json
 cf2a570aa606417e653b8a263693b7a91fa807fb data\urban_decor\loot_tables\blocks\air_conditioner.json
-f962342dce3837de9fe7752d3b8640dae270bb9e data\urban_decor\loot_tables\blocks\toaster.json
 d08dbed5d8fc84151bb01fbe06fe77d4c2c906b4 data\urban_decor\loot_tables\blocks\checkered_porcelain_tile_stairs.json
+f962342dce3837de9fe7752d3b8640dae270bb9e data\urban_decor\loot_tables\blocks\toaster.json
 8123827d2245251cb742dd05574b0bc357fdb978 data\urban_decor\loot_tables\blocks\polished_chromite.json
 072af53aaf24aa0a895c7461eed90eafc7bba829 data\urban_decor\loot_tables\blocks\dark_porcelain_tiles.json
 c1262f56db76307829ae53f7ea1149004981c891 data\urban_decor\loot_tables\blocks\dark_porcelain_tile_stairs.json

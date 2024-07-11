@@ -49,6 +49,7 @@ public class UDBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(RegisterBlocks.CHECKERED_PORCELAIN_TILE_STAIRS)
                 .add(RegisterBlocks.CHECKERED_PORCELAIN_TILE_SLAB)
                 .add(RegisterBlocks.OVEN)
+                .add(RegisterBlocks.RADIATOR)
         ;
 
         getOrCreateTagBuilder(BlockTags.WALLS)

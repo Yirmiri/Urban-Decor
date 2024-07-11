@@ -56,6 +56,7 @@ public class RegisterItemGroups {
                 entries.add(RegisterBlocks.DESK_FAN);
 
                 entries.add(RegisterBlocks.AIR_CONDITIONER);
+                entries.add(RegisterBlocks.RADIATOR);
 
                 if (RegisterCompatRegistries.excessive_building) {
                     entries.add(EBRegisterBlocks.PORCELAIN_TILE_VERTICAL_STAIRS);

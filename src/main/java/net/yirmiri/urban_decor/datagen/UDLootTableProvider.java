@@ -40,5 +40,6 @@ public class UDLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(RegisterBlocks.CHECKERED_PORCELAIN_TILE_SLAB, slabDrops(RegisterBlocks.PORCELAIN_TILE_SLAB));
         addDrop(RegisterBlocks.STAINLESS_STEEL_BLOCK);
         addDrop(RegisterBlocks.OVEN);
+        addDrop(RegisterBlocks.RADIATOR);
     }
 }

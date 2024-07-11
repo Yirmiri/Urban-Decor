@@ -29,9 +29,10 @@ public class UDProperties {
         public static final Block.Settings OVEN = FabricBlockSettings.copyOf(Blocks.STONE).strength(1.5F).mapColor(MapColor.WHITE).sounds(BlockSoundGroup.CALCITE).requiresTool();
 
         //MISC APPLIANCES
-        public static final Block.Settings AIR_CONDITIONER = FabricBlockSettings.copyOf(Blocks.STONE).strength(1.0F).mapColor(MapColor.GRAY).sounds(BlockSoundGroup.LANTERN);
+        public static final Block.Settings AIR_CONDITIONER = FabricBlockSettings.copyOf(Blocks.STONE).strength(1.0F).mapColor(MapColor.GRAY).sounds(BlockSoundGroup.LANTERN).requiresTool();
         public static final Block.Settings TOOLBOX = FabricBlockSettings.copyOf(Blocks.WHITE_WOOL).strength(0.5F).mapColor(MapColor.RED).sounds(BlockSoundGroup.LANTERN);
         public static final Block.Settings FAUCET = FabricBlockSettings.copyOf(Blocks.WHITE_WOOL).strength(0.3F).mapColor(MapColor.GRAY).sounds(BlockSoundGroup.COPPER);
+        public static final Block.Settings RADIATOR = FabricBlockSettings.copyOf(Blocks.STONE).strength(1.0F).mapColor(MapColor.WHITE).sounds(BlockSoundGroup.COPPER).requiresTool();
     }
 
     public static class ItemP {
