@@ -42,6 +42,7 @@ public class UDLangProvider extends FabricLanguageProvider {
         builder.add(RegisterBlocks.AIR_CONDITIONER, "Air Conditioner");
         builder.add(RegisterBlocks.DESK_FAN, "Desk Fan");
         builder.add(RegisterBlocks.FAUCET, "Faucet");
+        builder.add(RegisterBlocks.OVEN, "Oven");
 
         //ITEMS
         builder.add(RegisterItems.PORCELAIN, "Porcelain");

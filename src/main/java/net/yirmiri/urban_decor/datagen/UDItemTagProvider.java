@@ -31,8 +31,8 @@ public class UDItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(RegisterBlocks.WASHING_MACHINE.asItem())
                 .add(RegisterBlocks.DRYER.asItem())
                 .add(RegisterBlocks.TOASTER.asItem())
-                .add(RegisterBlocks.AIR_CONDITIONER.asItem())
                 .add(RegisterBlocks.DESK_FAN.asItem())
+                .add(RegisterBlocks.OVEN.asItem())
         ;
 
             getOrCreateTagBuilder(TOOLBOXES)
