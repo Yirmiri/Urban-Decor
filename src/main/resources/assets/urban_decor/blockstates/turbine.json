@@ -1,0 +1,42 @@
+{
+  "variants": {
+    "facing=north,on=true": {
+      "model": "urban_decor:block/turbine_on",
+      "uvlock": false
+    },
+    "facing=south,on=true": {
+      "model": "urban_decor:block/turbine_on",
+      "y": 180,
+      "uvlock": false
+    },
+    "facing=west,on=true": {
+      "model": "urban_decor:block/turbine_on",
+      "y": 270,
+      "uvlock": false
+    },
+    "facing=east,on=true": {
+      "model": "urban_decor:block/turbine_on",
+      "y": 90,
+      "uvlock": false
+    },
+    "facing=north,on=false": {
+      "model": "urban_decor:block/turbine",
+      "uvlock": false
+    },
+    "facing=south,on=false": {
+      "model": "urban_decor:block/turbine",
+      "y": 180,
+      "uvlock": false
+    },
+    "facing=west,on=false": {
+      "model": "urban_decor:block/turbine",
+      "y": 270,
+      "uvlock": false
+    },
+    "facing=east,on=false": {
+      "model": "urban_decor:block/turbine",
+      "y": 90,
+      "uvlock": false
+    }
+  }
+}

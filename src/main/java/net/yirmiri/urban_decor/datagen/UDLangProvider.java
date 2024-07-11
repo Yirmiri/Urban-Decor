@@ -47,6 +47,7 @@ public class UDLangProvider extends FabricLanguageProvider {
         builder.add(RegisterBlocks.STOVE, "Stove");
         builder.add(RegisterBlocks.FRIDGE, "Fridge");
         builder.add(RegisterBlocks.FREEZER, "Freezer");
+        builder.add(RegisterBlocks.TURBINE, "Turbine");
 
         //ITEMS
         builder.add(RegisterItems.PORCELAIN, "Porcelain");

@@ -1,7 +1,7 @@
 {
 	"credit": "Made with Blockbench by Tellio-Ari",
 	"textures": {
-		"0": "urban_decor:block/turbine",
+		"0": "urban_decor:block/turbine_on",
 		"particle": "urban_decor:block/turbine"
 	},
 	"elements": [

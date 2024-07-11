@@ -58,6 +58,7 @@ public class RegisterItemGroups {
                 entries.add(RegisterBlocks.TRASH_CAN);
                 entries.add(RegisterBlocks.DESK_FAN);
 
+                entries.add(RegisterBlocks.TURBINE);
                 entries.add(RegisterBlocks.AIR_CONDITIONER);
                 entries.add(RegisterBlocks.RADIATOR);
 

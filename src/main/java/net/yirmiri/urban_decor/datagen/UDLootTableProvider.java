@@ -44,5 +44,6 @@ public class UDLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(RegisterBlocks.STOVE);
         addDrop(RegisterBlocks.FRIDGE);
         addDrop(RegisterBlocks.FREEZER);
+        addDrop(RegisterBlocks.TURBINE);
     }
 }

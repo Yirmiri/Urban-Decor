@@ -1,4 +1,4 @@
-// 1.20.1	2024-07-11T07:24:50.611497	Urban Decor/Block Loot Tables
+// 1.20.1	2024-07-11T07:38:44.8616251	Urban Decor/Block Loot Tables
 ff62329751bd2ea5d3ec7550f6d7b3e2eb88af2c data\urban_decor\loot_tables\blocks\desk_fan.json
 32edb027b240866b501ef5a903cdbe342f406102 data\urban_decor\loot_tables\blocks\sink.json
 f81c3adcdb8ec0473bef258e0e32b91ad37afab4 data\urban_decor\loot_tables\blocks\chromite.json
@@ -30,4 +30,5 @@ a932ae1aafec226286db4d0931defee0dfe08e15 data\urban_decor\loot_tables\blocks\too
 bcc97a64876804c9fcfaf6158ddec9efe820d710 data\urban_decor\loot_tables\blocks\trash_can.json
 d306a4d49b26c5afaa5710ae945fe70dcca68b6c data\urban_decor\loot_tables\blocks\polished_chromite_stairs.json
 721d661cc55a2d41145e905d11d7ed6c7e324542 data\urban_decor\loot_tables\blocks\washing_machine.json
+ffc13f81aea333d7bc9390967ffc0b2f46e86481 data\urban_decor\loot_tables\blocks\turbine.json
 c11bdf31ae00b728393198d473fc0b7f9c7c8ac4 data\urban_decor\loot_tables\blocks\chromite_wall.json

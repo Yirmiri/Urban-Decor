@@ -53,6 +53,7 @@ public class UDBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(RegisterBlocks.STOVE)
                 .add(RegisterBlocks.FRIDGE)
                 .add(RegisterBlocks.FREEZER)
+                .add(RegisterBlocks.TURBINE)
         ;
 
         getOrCreateTagBuilder(BlockTags.WALLS)

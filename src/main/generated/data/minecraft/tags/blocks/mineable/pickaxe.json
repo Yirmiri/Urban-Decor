@@ -32,6 +32,7 @@
     "urban_decor:radiator",
     "urban_decor:stove",
     "urban_decor:fridge",
-    "urban_decor:freezer"
+    "urban_decor:freezer",
+    "urban_decor:turbine"
   ]
 }
