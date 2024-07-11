@@ -19,6 +19,7 @@ import net.minecraft.util.math.Direction;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
+import net.yirmiri.urban_decor.datagen.UDItemTagProvider;
 
 public class MicrowaveBlock extends WaterloggableHorizontalFacingBlock {
     public static final BooleanProperty OPEN = BooleanProperty.of("open");
@@ -53,7 +54,7 @@ public class MicrowaveBlock extends WaterloggableHorizontalFacingBlock {
     @Override
     public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
         ItemStack stackHand = player.getStackInHand(hand);
-        if (stackHand.isIn(ItemTags.AXES)) {
+        if (stackHand.isIn(UDItemTagProvider.TOOLBOXES)) {
             world.setBlockState(pos, state.cycle(WALL));
             return ActionResult.SUCCESS;
 

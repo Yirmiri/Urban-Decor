@@ -3,6 +3,7 @@ package net.yirmiri.urban_decor.datagen;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootTableProvider;
 import net.yirmiri.urban_decor.registry.RegisterBlocks;
+import net.yirmiri.urban_decor.registry.RegisterItems;
 
 public class UDLootTableProvider extends FabricBlockLootTableProvider {
     public UDLootTableProvider(FabricDataOutput output) {
@@ -31,5 +32,7 @@ public class UDLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(RegisterBlocks.DARK_PORCELAIN_TILES);
         addDrop(RegisterBlocks.DARK_PORCELAIN_TILE_STAIRS);
         addDrop(RegisterBlocks.DARK_PORCELAIN_TILE_SLAB, slabDrops(RegisterBlocks.PORCELAIN_TILE_SLAB));
+        addDrop(RegisterBlocks.DESK_FAN);
+        addDrop(RegisterBlocks.TOOLBOX, RegisterItems.TOOLBOX);
     }
 }

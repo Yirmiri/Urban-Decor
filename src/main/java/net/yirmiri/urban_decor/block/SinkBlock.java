@@ -19,6 +19,7 @@ import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.util.shape.VoxelShapes;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
+import net.yirmiri.urban_decor.datagen.UDItemTagProvider;
 
 public class SinkBlock extends WaterloggableHorizontalFacingBlock {
     public static final BooleanProperty BARE = BooleanProperty.of("bare");
@@ -60,7 +61,7 @@ public class SinkBlock extends WaterloggableHorizontalFacingBlock {
     @Override
     public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
         ItemStack stackHand = player.getStackInHand(hand);
-        if (stackHand.isIn(ItemTags.AXES)) {
+        if (stackHand.isIn(UDItemTagProvider.TOOLBOXES)) {
             world.setBlockState(pos, state.cycle(BARE));
             if (!player.isCreative()) {
                 stackHand.damage(1, player, p -> p.sendToolBreakStatus(hand));

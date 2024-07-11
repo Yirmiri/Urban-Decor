@@ -41,9 +41,11 @@ public class RegisterBlocks {
     public static final Block WASHING_MACHINE = register("washing_machine", new WashingMachineBlock(UDProperties.BlockP.WASHING_MACHINE), true);
     public static final Block DRYER = register("dryer", new DryerBlock(UDProperties.BlockP.DRYER), true);
     public static final Block TOASTER = register("toaster", new ToasterBlock(false, 1, UDProperties.BlockP.TOASTER), true);
+    public static final Block DESK_FAN = register("desk_fan", new DeskFanBlock(UDProperties.BlockP.DESK_FAN), true);
 
     //MISC APPLIANCES
     public static final Block AIR_CONDITIONER = register("air_conditioner", new AirConditionerBlock(UDProperties.BlockP.AIR_CONDITIONER), true);
+    public static final Block TOOLBOX = register("toolbox", new ToolboxBlock(UDProperties.BlockP.TOOLBOX), false);
 
     private static Block register(String id, Block block, boolean registerItem) {
         if (registerItem) {

@@ -20,6 +20,8 @@
     "urban_decor:air_conditioner",
     "urban_decor:dark_porcelain_tiles",
     "urban_decor:dark_porcelain_tile_stairs",
-    "urban_decor:dark_porcelain_tile_slab"
+    "urban_decor:dark_porcelain_tile_slab",
+    "urban_decor:desk_fan",
+    "urban_decor:toolbox"
   ]
 }

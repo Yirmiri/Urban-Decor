@@ -1,4 +1,5 @@
-// 1.20.1	2024-07-10T03:38:22.638376	Urban Decor/Block Loot Tables
+// 1.20.1	2024-07-11T04:16:22.5766277	Urban Decor/Block Loot Tables
+ff62329751bd2ea5d3ec7550f6d7b3e2eb88af2c data\urban_decor\loot_tables\blocks\desk_fan.json
 32edb027b240866b501ef5a903cdbe342f406102 data\urban_decor\loot_tables\blocks\sink.json
 34771a2dedbac2a419ba2d561000129ceb06af22 data\urban_decor\loot_tables\blocks\porcelain_tile_stairs.json
 f81c3adcdb8ec0473bef258e0e32b91ad37afab4 data\urban_decor\loot_tables\blocks\chromite.json
@@ -6,8 +7,8 @@ f81c3adcdb8ec0473bef258e0e32b91ad37afab4 data\urban_decor\loot_tables\blocks\chr
 c2aca8e8365a00dbf2e297b988f594b8316987b6 data\urban_decor\loot_tables\blocks\porcelain_tiles.json
 cf2a570aa606417e653b8a263693b7a91fa807fb data\urban_decor\loot_tables\blocks\air_conditioner.json
 cae36c49f38f350b5979b4597984a5b43e08fdde data\urban_decor\loot_tables\blocks\chromite_stairs.json
-f962342dce3837de9fe7752d3b8640dae270bb9e data\urban_decor\loot_tables\blocks\toaster.json
 bae79bc372422891877e6c6d2a2414488994736a data\urban_decor\loot_tables\blocks\porcelain_tile_slab.json
+f962342dce3837de9fe7752d3b8640dae270bb9e data\urban_decor\loot_tables\blocks\toaster.json
 8123827d2245251cb742dd05574b0bc357fdb978 data\urban_decor\loot_tables\blocks\polished_chromite.json
 bae79bc372422891877e6c6d2a2414488994736a data\urban_decor\loot_tables\blocks\dark_porcelain_tile_slab.json
 072af53aaf24aa0a895c7461eed90eafc7bba829 data\urban_decor\loot_tables\blocks\dark_porcelain_tiles.json
@@ -15,6 +16,7 @@ bae79bc372422891877e6c6d2a2414488994736a data\urban_decor\loot_tables\blocks\dar
 0289985881abd0708d9a2f3e1c4b01abbd2085bc data\urban_decor\loot_tables\blocks\polished_chromite_slab.json
 c1262f56db76307829ae53f7ea1149004981c891 data\urban_decor\loot_tables\blocks\dark_porcelain_tile_stairs.json
 bcc97a64876804c9fcfaf6158ddec9efe820d710 data\urban_decor\loot_tables\blocks\trash_can.json
+a932ae1aafec226286db4d0931defee0dfe08e15 data\urban_decor\loot_tables\blocks\toolbox.json
 d306a4d49b26c5afaa5710ae945fe70dcca68b6c data\urban_decor\loot_tables\blocks\polished_chromite_stairs.json
 721d661cc55a2d41145e905d11d7ed6c7e324542 data\urban_decor\loot_tables\blocks\washing_machine.json
 3783922961e39fe7493f8481d720144c5c7d435c data\urban_decor\loot_tables\blocks\dryer.json

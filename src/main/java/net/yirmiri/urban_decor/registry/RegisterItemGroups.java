@@ -14,7 +14,7 @@ import net.yirmiri.urban_decor.compat.excessive_building.EBRegisterBlocks;
 
 public class RegisterItemGroups {
     public static ItemGroup URBAN_DECOR = Registry.register(Registries.ITEM_GROUP, Identifier.of(UrbanDecor.MOD_ID, "urban_decor"),
-            FabricItemGroup.builder().icon(() -> new ItemStack(Blocks.AIR)).displayName(Text.translatable("itemgroup.urban_decor")).entries((ctx, entries) -> {
+            FabricItemGroup.builder().icon(() -> new ItemStack(RegisterItems.TOOLBOX)).displayName(Text.translatable("itemgroup.urban_decor")).entries((ctx, entries) -> {
                 entries.add(RegisterItems.PORCELAIN);
                 entries.add(RegisterItems.DARK_PORCELAIN);
                 entries.add(RegisterItems.STAINLESS_STEEL);
@@ -36,6 +36,8 @@ public class RegisterItemGroups {
                 entries.add(RegisterBlocks.POLISHED_CHROMITE_STAIRS);
                 entries.add(RegisterBlocks.POLISHED_CHROMITE_SLAB);
 
+                entries.add(RegisterItems.TOOLBOX);
+
                 entries.add(RegisterBlocks.SINK);
                 entries.add(RegisterBlocks.TOILET);
                 entries.add(RegisterBlocks.WASHING_MACHINE);
@@ -43,6 +45,7 @@ public class RegisterItemGroups {
                 entries.add(RegisterBlocks.TOASTER);
                 entries.add(RegisterBlocks.MICROWAVE);
                 entries.add(RegisterBlocks.TRASH_CAN);
+                entries.add(RegisterBlocks.DESK_FAN);
 
                 entries.add(RegisterBlocks.AIR_CONDITIONER);
 

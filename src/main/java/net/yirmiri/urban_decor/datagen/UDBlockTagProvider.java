@@ -41,6 +41,8 @@ public class UDBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(RegisterBlocks.DARK_PORCELAIN_TILES)
                 .add(RegisterBlocks.DARK_PORCELAIN_TILE_STAIRS)
                 .add(RegisterBlocks.DARK_PORCELAIN_TILE_SLAB)
+                .add(RegisterBlocks.DESK_FAN)
+                .add(RegisterBlocks.TOOLBOX)
         ;
 
         getOrCreateTagBuilder(BlockTags.WALLS)
