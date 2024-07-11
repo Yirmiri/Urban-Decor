@@ -38,6 +38,7 @@ public class RegisterItemGroups {
 
                 entries.add(RegisterItems.TOOLBOX);
 
+                entries.add(RegisterBlocks.FAUCET);
                 entries.add(RegisterBlocks.SINK);
                 entries.add(RegisterBlocks.TOILET);
                 entries.add(RegisterBlocks.WASHING_MACHINE);

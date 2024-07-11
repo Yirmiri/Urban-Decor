@@ -34,5 +34,6 @@ public class UDLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(RegisterBlocks.DARK_PORCELAIN_TILE_SLAB, slabDrops(RegisterBlocks.PORCELAIN_TILE_SLAB));
         addDrop(RegisterBlocks.DESK_FAN);
         addDrop(RegisterBlocks.TOOLBOX, RegisterItems.TOOLBOX);
+        addDrop(RegisterBlocks.FAUCET);
     }
 }

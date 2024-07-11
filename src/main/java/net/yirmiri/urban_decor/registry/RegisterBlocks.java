@@ -44,8 +44,9 @@ public class RegisterBlocks {
     public static final Block DESK_FAN = register("desk_fan", new DeskFanBlock(UDProperties.BlockP.DESK_FAN), true);
 
     //MISC APPLIANCES
-    public static final Block AIR_CONDITIONER = register("air_conditioner", new AirConditionerBlock(UDProperties.BlockP.AIR_CONDITIONER), true);
     public static final Block TOOLBOX = register("toolbox", new ToolboxBlock(UDProperties.BlockP.TOOLBOX), false);
+    public static final Block AIR_CONDITIONER = register("air_conditioner", new AirConditionerBlock(UDProperties.BlockP.AIR_CONDITIONER), true);
+    public static final Block FAUCET = register("faucet", new FaucetBlock(UDProperties.BlockP.FAUCET), true);
 
     private static Block register(String id, Block block, boolean registerItem) {
         if (registerItem) {

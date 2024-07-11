@@ -11,7 +11,7 @@ import net.minecraft.util.math.Direction;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.world.BlockView;
 
-public class AirConditionerBlock extends WaterloggableHorizontalFacingBlock {
+public class AirConditionerBlock extends AbstractDecorBlock {
     public static final BooleanProperty ON = BooleanProperty.of("on");
 
     private static final VoxelShape SHAPE_NORTH = Block.createCuboidShape(2, 0, 4, 14, 10, 16);

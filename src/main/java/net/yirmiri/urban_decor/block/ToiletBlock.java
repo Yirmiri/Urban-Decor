@@ -22,7 +22,7 @@ import net.minecraft.world.World;
 
 import java.util.stream.Stream;
 
-public class ToiletBlock extends WaterloggableHorizontalFacingBlock {
+public class ToiletBlock extends AbstractDecorBlock {
     public static final BooleanProperty OPEN = BooleanProperty.of("open");
 
     private static final VoxelShape SHAPE_NORTH = Stream.of(Block.createCuboidShape(3, 0, 5, 13, 5, 14), Block.createCuboidShape(3, 5, 2, 13, 7, 12), Block.createCuboidShape(3, 5, 12, 13, 16, 16)
