@@ -1,0 +1,48 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_stainless_steel": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "urban_decor:stainless_steel"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_steel_pipe": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "urban_decor:steel_pipe"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "urban_decor:radiator"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_stainless_steel",
+      "has_steel_pipe",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "urban_decor:radiator"
+    ]
+  },
+  "sends_telemetry_event": false
+}

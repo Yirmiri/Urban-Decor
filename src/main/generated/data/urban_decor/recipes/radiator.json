@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "urban_decor:steel_pipe"
+    },
+    "@": {
+      "item": "urban_decor:stainless_steel"
+    },
+    "^": {
+      "item": "minecraft:magma_block"
+    }
+  },
+  "pattern": [
+    " # ",
+    "###",
+    "@^@"
+  ],
+  "result": {
+    "item": "urban_decor:radiator"
+  },
+  "show_notification": true
+}

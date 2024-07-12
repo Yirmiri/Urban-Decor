@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "urban_decor:porcelain"
+    },
+    "%": {
+      "item": "minecraft:packed_ice"
+    },
+    "@": {
+      "item": "urban_decor:stainless_steel"
+    }
+  },
+  "pattern": [
+    "##@",
+    "%%@",
+    "##@"
+  ],
+  "result": {
+    "item": "urban_decor:freezer"
+  },
+  "show_notification": true
+}

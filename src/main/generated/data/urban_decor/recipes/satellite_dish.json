@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "!": {
+      "item": "minecraft:amethyst_shard"
+    },
+    "@": {
+      "item": "urban_decor:stainless_steel"
+    }
+  },
+  "pattern": [
+    "@ !",
+    " @ ",
+    "@ @"
+  ],
+  "result": {
+    "item": "urban_decor:satellite_dish"
+  },
+  "show_notification": true
+}

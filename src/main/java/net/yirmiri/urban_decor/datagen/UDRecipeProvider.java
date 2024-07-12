@@ -3,6 +3,7 @@ package net.yirmiri.urban_decor.datagen;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
+import net.minecraft.block.Blocks;
 import net.minecraft.data.server.recipe.RecipeJsonProvider;
 import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
 import net.minecraft.item.ItemConvertible;
@@ -140,6 +141,236 @@ public class UDRecipeProvider extends FabricRecipeProvider {
         offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, RegisterBlocks.CHECKERED_PORCELAIN_TILE_SLAB, RegisterBlocks.CHECKERED_PORCELAIN_TILES, 2);
 
         offerReversibleCompactingRecipes(exporter, RecipeCategory.MISC, RegisterItems.STAINLESS_STEEL, RecipeCategory.BUILDING_BLOCKS, RegisterBlocks.STAINLESS_STEEL_BLOCK);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, RegisterItems.STEEL_PIPE, 2)
+                .input('#', RegisterItems.STAINLESS_STEEL)
+                .pattern("##")
+                .criterion(hasItem(RegisterItems.STAINLESS_STEEL), conditionsFromItem(RegisterItems.STAINLESS_STEEL))
+                .offerTo(exporter, Identifier.of(UrbanDecor.MOD_ID, getRecipeName(RegisterItems.STEEL_PIPE)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, RegisterItems.DARK_PORCELAIN, 2)
+                .input('#', RegisterItems.PORCELAIN).input('@', RegisterBlocks.CHROMITE)
+                .pattern("@#")
+                .pattern("#@")
+                .criterion(hasItem(RegisterItems.PORCELAIN), conditionsFromItem(RegisterItems.PORCELAIN))
+                .criterion(hasItem(RegisterBlocks.CHROMITE), conditionsFromItem(RegisterBlocks.CHROMITE))
+                .offerTo(exporter, Identifier.of(UrbanDecor.MOD_ID, getRecipeName(RegisterItems.DARK_PORCELAIN)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, RegisterBlocks.TOILET, 1)
+                .input('#', RegisterItems.PORCELAIN).input('@', RegisterItems.STEEL_PIPE)
+                .pattern("#  ")
+                .pattern("###")
+                .pattern("@@ ")
+                .criterion(hasItem(RegisterItems.PORCELAIN), conditionsFromItem(RegisterItems.PORCELAIN))
+                .criterion(hasItem(RegisterItems.STEEL_PIPE), conditionsFromItem(RegisterItems.STEEL_PIPE))
+                .offerTo(exporter, Identifier.of(UrbanDecor.MOD_ID, getRecipeName(RegisterBlocks.TOILET)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, RegisterBlocks.DARK_TOILET, 1)
+                .input('#', RegisterItems.DARK_PORCELAIN).input('@', RegisterItems.STEEL_PIPE)
+                .pattern("#  ")
+                .pattern("###")
+                .pattern("@@ ")
+                .criterion(hasItem(RegisterItems.DARK_PORCELAIN), conditionsFromItem(RegisterItems.DARK_PORCELAIN))
+                .criterion(hasItem(RegisterItems.STEEL_PIPE), conditionsFromItem(RegisterItems.STEEL_PIPE))
+                .offerTo(exporter, Identifier.of(UrbanDecor.MOD_ID, getRecipeName(RegisterBlocks.DARK_TOILET)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, RegisterBlocks.FAUCET, 1)
+                .input('#', RegisterItems.STEEL_PIPE)
+                .pattern("##")
+                .criterion(hasItem(RegisterItems.STEEL_PIPE), conditionsFromItem(RegisterItems.STEEL_PIPE))
+                .offerTo(exporter, Identifier.of(UrbanDecor.MOD_ID, getRecipeName(RegisterBlocks.FAUCET)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, RegisterBlocks.SINK, 1)
+                .input('#', RegisterItems.PORCELAIN).input('@', RegisterItems.STEEL_PIPE).input('%', RegisterItems.STAINLESS_STEEL)
+                .pattern(" @ ")
+                .pattern("#%#")
+                .pattern("#@#")
+                .criterion(hasItem(RegisterItems.PORCELAIN), conditionsFromItem(RegisterItems.PORCELAIN))
+                .criterion(hasItem(RegisterItems.STAINLESS_STEEL), conditionsFromItem(RegisterItems.STAINLESS_STEEL))
+                .criterion(hasItem(RegisterItems.STEEL_PIPE), conditionsFromItem(RegisterItems.STEEL_PIPE))
+                .offerTo(exporter, Identifier.of(UrbanDecor.MOD_ID, getRecipeName(RegisterBlocks.SINK)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, RegisterBlocks.DARK_SINK, 1)
+                .input('#', RegisterItems.DARK_PORCELAIN).input('@', RegisterItems.STEEL_PIPE).input('%', RegisterItems.STAINLESS_STEEL)
+                .pattern(" @ ")
+                .pattern("#%#")
+                .pattern("#@#")
+                .criterion(hasItem(RegisterItems.DARK_PORCELAIN), conditionsFromItem(RegisterItems.DARK_PORCELAIN))
+                .criterion(hasItem(RegisterItems.STAINLESS_STEEL), conditionsFromItem(RegisterItems.STAINLESS_STEEL))
+                .criterion(hasItem(RegisterItems.STEEL_PIPE), conditionsFromItem(RegisterItems.STEEL_PIPE))
+                .offerTo(exporter, Identifier.of(UrbanDecor.MOD_ID, getRecipeName(RegisterBlocks.DARK_SINK)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, RegisterBlocks.WASHING_MACHINE, 1)
+                .input('#', RegisterItems.PORCELAIN).input('@', RegisterItems.STEEL_PIPE).input('%', RegisterItems.STAINLESS_STEEL).input('&', UDItemTagProvider.GLASS)
+                .pattern("#&#")
+                .pattern("#%#")
+                .pattern("#@#")
+                .criterion(hasItem(RegisterItems.PORCELAIN), conditionsFromItem(RegisterItems.PORCELAIN))
+                .criterion(hasItem(RegisterItems.STAINLESS_STEEL), conditionsFromItem(RegisterItems.STAINLESS_STEEL))
+                .criterion(hasItem(RegisterItems.STEEL_PIPE), conditionsFromItem(RegisterItems.STEEL_PIPE))
+                .offerTo(exporter, Identifier.of(UrbanDecor.MOD_ID, getRecipeName(RegisterBlocks.WASHING_MACHINE)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, RegisterBlocks.DARK_WASHING_MACHINE, 1)
+                .input('#', RegisterItems.DARK_PORCELAIN).input('@', RegisterItems.STEEL_PIPE).input('%', RegisterItems.STAINLESS_STEEL).input('&', UDItemTagProvider.GLASS)
+                .pattern("#&#")
+                .pattern("#%#")
+                .pattern("#@#")
+                .criterion(hasItem(RegisterItems.DARK_PORCELAIN), conditionsFromItem(RegisterItems.DARK_PORCELAIN))
+                .criterion(hasItem(RegisterItems.STAINLESS_STEEL), conditionsFromItem(RegisterItems.STAINLESS_STEEL))
+                .criterion(hasItem(RegisterItems.STEEL_PIPE), conditionsFromItem(RegisterItems.STEEL_PIPE))
+                .offerTo(exporter, Identifier.of(UrbanDecor.MOD_ID, getRecipeName(RegisterBlocks.DARK_WASHING_MACHINE)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, RegisterBlocks.DRYER, 1)
+                .input('#', RegisterItems.PORCELAIN).input('@', RegisterItems.STEEL_PIPE).input('%', RegisterItems.STAINLESS_STEEL)
+                .pattern("###")
+                .pattern("% #")
+                .pattern("#@#")
+                .criterion(hasItem(RegisterItems.PORCELAIN), conditionsFromItem(RegisterItems.PORCELAIN))
+                .criterion(hasItem(RegisterItems.STAINLESS_STEEL), conditionsFromItem(RegisterItems.STAINLESS_STEEL))
+                .criterion(hasItem(RegisterItems.STEEL_PIPE), conditionsFromItem(RegisterItems.STEEL_PIPE))
+                .offerTo(exporter, Identifier.of(UrbanDecor.MOD_ID, getRecipeName(RegisterBlocks.DRYER)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, RegisterBlocks.DARK_DRYER, 1)
+                .input('#', RegisterItems.DARK_PORCELAIN).input('@', RegisterItems.STEEL_PIPE).input('%', RegisterItems.STAINLESS_STEEL)
+                .pattern("###")
+                .pattern("% #")
+                .pattern("#@#")
+                .criterion(hasItem(RegisterItems.DARK_PORCELAIN), conditionsFromItem(RegisterItems.DARK_PORCELAIN))
+                .criterion(hasItem(RegisterItems.STAINLESS_STEEL), conditionsFromItem(RegisterItems.STAINLESS_STEEL))
+                .criterion(hasItem(RegisterItems.STEEL_PIPE), conditionsFromItem(RegisterItems.STEEL_PIPE))
+                .offerTo(exporter, Identifier.of(UrbanDecor.MOD_ID, getRecipeName(RegisterBlocks.DARK_DRYER)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, RegisterBlocks.OVEN, 1)
+                .input('#', RegisterItems.PORCELAIN).input('@', RegisterItems.STAINLESS_STEEL).input('%', Items.REDSTONE).input('&', Items.SMOKER)
+                .pattern("@@@")
+                .pattern("#&#")
+                .pattern("#%#")
+                .criterion(hasItem(RegisterItems.PORCELAIN), conditionsFromItem(RegisterItems.PORCELAIN))
+                .criterion(hasItem(RegisterItems.STAINLESS_STEEL), conditionsFromItem(RegisterItems.STAINLESS_STEEL))
+                .offerTo(exporter, Identifier.of(UrbanDecor.MOD_ID, getRecipeName(RegisterBlocks.OVEN)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, RegisterBlocks.DARK_OVEN, 1)
+                .input('#', RegisterItems.DARK_PORCELAIN).input('@', RegisterItems.STAINLESS_STEEL).input('%', Items.REDSTONE).input('&', Items.SMOKER)
+                .pattern("@@@")
+                .pattern("#&#")
+                .pattern("#%#")
+                .criterion(hasItem(RegisterItems.DARK_PORCELAIN), conditionsFromItem(RegisterItems.DARK_PORCELAIN))
+                .criterion(hasItem(RegisterItems.STAINLESS_STEEL), conditionsFromItem(RegisterItems.STAINLESS_STEEL))
+                .offerTo(exporter, Identifier.of(UrbanDecor.MOD_ID, getRecipeName(RegisterBlocks.DARK_OVEN)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, RegisterBlocks.FRIDGE, 1)
+                .input('#', RegisterItems.PORCELAIN).input('@', RegisterItems.STAINLESS_STEEL).input('%', Items.PACKED_ICE)
+                .pattern("@@@")
+                .pattern("# #")
+                .pattern("#%#")
+                .criterion(hasItem(RegisterItems.PORCELAIN), conditionsFromItem(RegisterItems.PORCELAIN))
+                .criterion(hasItem(RegisterItems.STAINLESS_STEEL), conditionsFromItem(RegisterItems.STAINLESS_STEEL))
+                .offerTo(exporter, Identifier.of(UrbanDecor.MOD_ID, getRecipeName(RegisterBlocks.FRIDGE)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, RegisterBlocks.DARK_FRIDGE, 1)
+                .input('#', RegisterItems.DARK_PORCELAIN).input('@', RegisterItems.STAINLESS_STEEL).input('%', Items.PACKED_ICE)
+                .pattern("@@@")
+                .pattern("# #")
+                .pattern("#%#")
+                .criterion(hasItem(RegisterItems.DARK_PORCELAIN), conditionsFromItem(RegisterItems.DARK_PORCELAIN))
+                .criterion(hasItem(RegisterItems.STAINLESS_STEEL), conditionsFromItem(RegisterItems.STAINLESS_STEEL))
+                .offerTo(exporter, Identifier.of(UrbanDecor.MOD_ID, getRecipeName(RegisterBlocks.DARK_FRIDGE)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, RegisterBlocks.FREEZER, 1)
+                .input('#', RegisterItems.PORCELAIN).input('@', RegisterItems.STAINLESS_STEEL).input('%', Items.PACKED_ICE)
+                .pattern("##@")
+                .pattern("%%@")
+                .pattern("##@")
+                .criterion(hasItem(RegisterItems.PORCELAIN), conditionsFromItem(RegisterItems.PORCELAIN))
+                .criterion(hasItem(RegisterItems.STAINLESS_STEEL), conditionsFromItem(RegisterItems.STAINLESS_STEEL))
+                .offerTo(exporter, Identifier.of(UrbanDecor.MOD_ID, getRecipeName(RegisterBlocks.FREEZER)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, RegisterBlocks.DARK_FREEZER, 1)
+                .input('#', RegisterItems.DARK_PORCELAIN).input('@', RegisterItems.STAINLESS_STEEL).input('%', Items.PACKED_ICE)
+                .pattern("##@")
+                .pattern("%%@")
+                .pattern("##@")
+                .criterion(hasItem(RegisterItems.DARK_PORCELAIN), conditionsFromItem(RegisterItems.DARK_PORCELAIN))
+                .criterion(hasItem(RegisterItems.STAINLESS_STEEL), conditionsFromItem(RegisterItems.STAINLESS_STEEL))
+                .offerTo(exporter, Identifier.of(UrbanDecor.MOD_ID, getRecipeName(RegisterBlocks.DARK_FREEZER)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, RegisterItems.TOOLBOX, 1)
+                .input('@', RegisterItems.STAINLESS_STEEL)
+                .pattern("@@@")
+                .pattern("@ @")
+                .pattern("@@@")
+                .criterion(hasItem(RegisterItems.STAINLESS_STEEL), conditionsFromItem(RegisterItems.STAINLESS_STEEL))
+                .offerTo(exporter, Identifier.of(UrbanDecor.MOD_ID, getRecipeName(RegisterItems.TOOLBOX)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, RegisterBlocks.STOVE, 1)
+                .input('@', RegisterItems.STAINLESS_STEEL).input('#', Items.MAGMA_BLOCK)
+                .pattern("@#@")
+                .criterion(hasItem(RegisterItems.STAINLESS_STEEL), conditionsFromItem(RegisterItems.STAINLESS_STEEL))
+                .offerTo(exporter, Identifier.of(UrbanDecor.MOD_ID, getRecipeName(RegisterBlocks.STOVE)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, RegisterBlocks.TOASTER, 1)
+                .input('@', RegisterItems.STAINLESS_STEEL).input('#', Items.MAGMA_BLOCK).input('!', Items.REDSTONE)
+                .pattern("@!@")
+                .pattern("@#@")
+                .criterion(hasItem(RegisterItems.STAINLESS_STEEL), conditionsFromItem(RegisterItems.STAINLESS_STEEL))
+                .offerTo(exporter, Identifier.of(UrbanDecor.MOD_ID, getRecipeName(RegisterBlocks.TOASTER)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, RegisterBlocks.MICROWAVE, 1)
+                .input('@', RegisterItems.STAINLESS_STEEL).input('!', Items.REDSTONE)
+                .pattern("@!@")
+                .pattern("! !")
+                .pattern("@!@")
+                .criterion(hasItem(RegisterItems.STAINLESS_STEEL), conditionsFromItem(RegisterItems.STAINLESS_STEEL))
+                .offerTo(exporter, Identifier.of(UrbanDecor.MOD_ID, getRecipeName(RegisterBlocks.MICROWAVE)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, RegisterBlocks.TRASH_CAN, 1)
+                .input('@', RegisterItems.STAINLESS_STEEL)
+                .pattern("@ @")
+                .pattern(" @ ")
+                .criterion(hasItem(RegisterItems.STAINLESS_STEEL), conditionsFromItem(RegisterItems.STAINLESS_STEEL))
+                .offerTo(exporter, Identifier.of(UrbanDecor.MOD_ID, getRecipeName(RegisterBlocks.TRASH_CAN)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, RegisterBlocks.DESK_FAN, 1)
+                .input('@', RegisterItems.STAINLESS_STEEL).input('!', Items.REDSTONE)
+                .pattern(" @ ")
+                .pattern(" @ ")
+                .pattern("@!@")
+                .criterion(hasItem(RegisterItems.STAINLESS_STEEL), conditionsFromItem(RegisterItems.STAINLESS_STEEL))
+                .offerTo(exporter, Identifier.of(UrbanDecor.MOD_ID, getRecipeName(RegisterBlocks.DESK_FAN)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, RegisterBlocks.TURBINE, 1)
+                .input('@', RegisterItems.STAINLESS_STEEL).input('!', Items.REDSTONE)
+                .pattern("@@@")
+                .pattern(" @ ")
+                .pattern("@!@")
+                .criterion(hasItem(RegisterItems.STAINLESS_STEEL), conditionsFromItem(RegisterItems.STAINLESS_STEEL))
+                .offerTo(exporter, Identifier.of(UrbanDecor.MOD_ID, getRecipeName(RegisterBlocks.TURBINE)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, RegisterBlocks.AIR_CONDITIONER, 1)
+                .input('@', RegisterItems.STAINLESS_STEEL).input('#', RegisterItems.STEEL_PIPE).input('^', Items.PACKED_ICE)
+                .pattern("@ @")
+                .pattern("###")
+                .pattern("@^@")
+                .criterion(hasItem(RegisterItems.STAINLESS_STEEL), conditionsFromItem(RegisterItems.STAINLESS_STEEL))
+                .criterion(hasItem(RegisterItems.STEEL_PIPE), conditionsFromItem(RegisterItems.STEEL_PIPE))
+                .offerTo(exporter, Identifier.of(UrbanDecor.MOD_ID, getRecipeName(RegisterBlocks.AIR_CONDITIONER)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, RegisterBlocks.RADIATOR, 1)
+                .input('@', RegisterItems.STAINLESS_STEEL).input('#', RegisterItems.STEEL_PIPE).input('^', Items.MAGMA_BLOCK)
+                .pattern(" # ")
+                .pattern("###")
+                .pattern("@^@")
+                .criterion(hasItem(RegisterItems.STAINLESS_STEEL), conditionsFromItem(RegisterItems.STAINLESS_STEEL))
+                .criterion(hasItem(RegisterItems.STEEL_PIPE), conditionsFromItem(RegisterItems.STEEL_PIPE))
+                .offerTo(exporter, Identifier.of(UrbanDecor.MOD_ID, getRecipeName(RegisterBlocks.RADIATOR)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, RegisterBlocks.SATELLITE_DISH, 1)
+                .input('@', RegisterItems.STAINLESS_STEEL).input('!', Items.AMETHYST_SHARD)
+                .pattern("@ !")
+                .pattern(" @ ")
+                .pattern("@ @")
+                .criterion(hasItem(RegisterItems.STAINLESS_STEEL), conditionsFromItem(RegisterItems.STAINLESS_STEEL))
+                .offerTo(exporter, Identifier.of(UrbanDecor.MOD_ID, getRecipeName(RegisterBlocks.SATELLITE_DISH)));
     }
 //yes this only exists so i can name it four for four wendys meal... there is no need for this recipe builder
     public static ShapedRecipeJsonBuilder createFourForFourWendysMealRecipe(ItemConvertible output, Ingredient input) {

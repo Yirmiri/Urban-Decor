@@ -1,0 +1,61 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_porcelain": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "urban_decor:porcelain"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_stainless_steel": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "urban_decor:stainless_steel"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_steel_pipe": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "urban_decor:steel_pipe"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "urban_decor:washing_machine"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_porcelain",
+      "has_stainless_steel",
+      "has_steel_pipe",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "urban_decor:washing_machine"
+    ]
+  },
+  "sends_telemetry_event": false
+}

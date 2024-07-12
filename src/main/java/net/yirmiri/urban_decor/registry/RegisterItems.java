@@ -13,6 +13,7 @@ public class RegisterItems {
     public static final Item PORCELAIN = register("porcelain", new Item(UDProperties.ItemP.GENERIC_ITEM));
     public static final Item DARK_PORCELAIN = register("dark_porcelain", new Item(UDProperties.ItemP.GENERIC_ITEM));
     public static final Item STAINLESS_STEEL = register("stainless_steel", new Item(UDProperties.ItemP.GENERIC_ITEM));
+    public static final Item STEEL_PIPE = register("steel_pipe", new Item(UDProperties.ItemP.GENERIC_ITEM));
 
     //MISC
     public static final Item TOOLBOX = register("toolbox", new ToolboxBlockItem(RegisterBlocks.TOOLBOX, UDProperties.ItemP.TOOLBOX));

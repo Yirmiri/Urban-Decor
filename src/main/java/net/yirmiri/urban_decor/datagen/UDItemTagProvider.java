@@ -3,6 +3,7 @@ package net.yirmiri.urban_decor.datagen;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
 import net.minecraft.item.Item;
+import net.minecraft.item.Items;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.registry.tag.TagKey;
@@ -18,6 +19,7 @@ public class UDItemTagProvider extends FabricTagProvider.ItemTagProvider {
     public static final TagKey<Item> FURNISHINGS = create("furnishings");
     public static final TagKey<Item> TOOLBOXES = create("toolboxes");
     public static final TagKey<Item> TOWELS = create("towels");
+    public static final TagKey<Item> GLASS = create("glass");
 
     public UDItemTagProvider(FabricDataOutput output, CompletableFuture<RegistryWrapper.WrapperLookup> future) {
         super(output, future);
@@ -49,6 +51,27 @@ public class UDItemTagProvider extends FabricTagProvider.ItemTagProvider {
 
             getOrCreateTagBuilder(TOOLBOXES)
                 .add(RegisterItems.TOOLBOX)
+        ;
+
+        getOrCreateTagBuilder(GLASS)
+                .add(Items.GLASS)
+                .add(Items.TINTED_GLASS)
+                .add(Items.RED_STAINED_GLASS)
+                .add(Items.ORANGE_STAINED_GLASS)
+                .add(Items.YELLOW_STAINED_GLASS)
+                .add(Items.LIME_STAINED_GLASS)
+                .add(Items.GREEN_STAINED_GLASS)
+                .add(Items.BLUE_STAINED_GLASS)
+                .add(Items.CYAN_STAINED_GLASS)
+                .add(Items.LIGHT_BLUE_STAINED_GLASS)
+                .add(Items.PURPLE_STAINED_GLASS)
+                .add(Items.MAGENTA_STAINED_GLASS)
+                .add(Items.PINK_STAINED_GLASS)
+                .add(Items.WHITE_STAINED_GLASS)
+                .add(Items.LIGHT_GRAY_STAINED_GLASS)
+                .add(Items.GRAY_STAINED_GLASS)
+                .add(Items.BLACK_STAINED_GLASS)
+                .add(Items.BROWN_STAINED_GLASS)
         ;
 
         for (DyeColor colors : DyeColor.values()) {

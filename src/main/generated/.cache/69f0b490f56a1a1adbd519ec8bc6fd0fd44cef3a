@@ -1,4 +1,4 @@
-// 1.20.1	2024-07-12T02:54:03.1875197	Urban Decor/Block Loot Tables
+// 1.20.1	2024-07-12T04:06:50.4614373	Urban Decor/Block Loot Tables
 f81c3adcdb8ec0473bef258e0e32b91ad37afab4 data\urban_decor\loot_tables\blocks\chromite.json
 c2aca8e8365a00dbf2e297b988f594b8316987b6 data\urban_decor\loot_tables\blocks\porcelain_tiles.json
 5c373ccf844dfaf651b0abc1f8935114309d14c6 data\urban_decor\loot_tables\blocks\magenta_towel.json
@@ -23,8 +23,8 @@ cae36c49f38f350b5979b4597984a5b43e08fdde data\urban_decor\loot_tables\blocks\chr
 8f5993b5f1feb517689e47e8e5d13c9c4e573d07 data\urban_decor\loot_tables\blocks\chromite_slab.json
 b7d90d9d6a6a60674c5466062f50eaeeafcdf939 data\urban_decor\loot_tables\blocks\towel_bar.json
 bcc97a64876804c9fcfaf6158ddec9efe820d710 data\urban_decor\loot_tables\blocks\trash_can.json
-ffc13f81aea333d7bc9390967ffc0b2f46e86481 data\urban_decor\loot_tables\blocks\turbine.json
 721d661cc55a2d41145e905d11d7ed6c7e324542 data\urban_decor\loot_tables\blocks\washing_machine.json
+ffc13f81aea333d7bc9390967ffc0b2f46e86481 data\urban_decor\loot_tables\blocks\turbine.json
 ff62329751bd2ea5d3ec7550f6d7b3e2eb88af2c data\urban_decor\loot_tables\blocks\desk_fan.json
 32edb027b240866b501ef5a903cdbe342f406102 data\urban_decor\loot_tables\blocks\sink.json
 155ba3ac5629765416290824393bcce89f40e2b4 data\urban_decor\loot_tables\blocks\black_towel.json

@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "urban_decor:dark_porcelain"
+    },
+    "%": {
+      "item": "urban_decor:stainless_steel"
+    },
+    "&": {
+      "tag": "urban_decor:glass"
+    },
+    "@": {
+      "item": "urban_decor:steel_pipe"
+    }
+  },
+  "pattern": [
+    "#&#",
+    "#%#",
+    "#@#"
+  ],
+  "result": {
+    "item": "urban_decor:dark_washing_machine"
+  },
+  "show_notification": true
+}

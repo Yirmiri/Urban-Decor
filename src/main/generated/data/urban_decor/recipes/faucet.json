@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "urban_decor:steel_pipe"
+    }
+  },
+  "pattern": [
+    "##"
+  ],
+  "result": {
+    "item": "urban_decor:faucet"
+  },
+  "show_notification": true
+}

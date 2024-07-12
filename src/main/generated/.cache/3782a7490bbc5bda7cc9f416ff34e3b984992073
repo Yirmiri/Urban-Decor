@@ -1,4 +1,4 @@
-// 1.20.1	2024-07-12T02:54:03.1905119	Urban Decor/Model Definitions
+// 1.20.1	2024-07-12T04:06:50.4634313	Urban Decor/Model Definitions
 4257afed1e85194b01f1ce1dc1ee253afd6e23fe assets\urban_decor\blockstates\checkered_porcelain_tiles.json
 f8b4f9b81cefae29da0752e96e98a3d5db0853f0 assets\urban_decor\blockstates\chromite_slab.json
 237373ad9aef44cab5ff105e748024c7958645da assets\urban_decor\models\item\chromite_slab.json
@@ -7,6 +7,7 @@ fdbeda5fc14bed31cde4d2647b4005ff4d5d7f6c assets\urban_decor\models\item\microwav
 45ff1a75a51c12abdfad591b5f1ba3a363a43f43 assets\urban_decor\models\item\black_towel.json
 39297e8e674f6372429803e0e30ea9a7da9c6dbf assets\urban_decor\models\block\dark_porcelain_tile_stairs.json
 31170b0ee6dc28fc6d7289cabd1caa147a6c4d0d assets\urban_decor\models\item\stainless_steel_block.json
+28c3dc46c8a99949165f41a6112c90268f09f306 assets\urban_decor\models\item\steel_pipe.json
 63183e0436ce1772d9cc220cf7ad05e949bf81ea assets\urban_decor\blockstates\checkered_porcelain_tile_stairs.json
 e6dc54b5c6648412247e47a24485c7081efbcdf9 assets\urban_decor\models\block\porcelain_tile_stairs_inner.json
 a6f734627195479d79bb80362194f4f0514d8b67 assets\urban_decor\blockstates\dark_porcelain_tiles.json
