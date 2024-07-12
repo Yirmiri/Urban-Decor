@@ -1,17 +1,18 @@
 package net.yirmiri.urban_decor.registry;
 
-import net.minecraft.block.Block;
-import net.minecraft.block.SlabBlock;
-import net.minecraft.block.StairsBlock;
-import net.minecraft.block.WallBlock;
+import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
+import net.minecraft.block.*;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
+import net.minecraft.util.DyeColor;
 import net.minecraft.util.Identifier;
 import net.yirmiri.urban_decor.UrbanDecor;
 import net.yirmiri.urban_decor.block.*;
 import net.yirmiri.urban_decor.util.UDProperties;
+
+import java.util.HashMap;
 
 public class RegisterBlocks {
 
@@ -52,7 +53,6 @@ public class RegisterBlocks {
     public static final Block STOVE = register("stove", new StoveBlock(UDProperties.BlockP.STOVE), true);
     public static final Block FRIDGE = register("fridge", new FridgeBlock(UDProperties.BlockP.FRIDGE), true);
     public static final Block FREEZER = register("freezer", new FreezerBlock(UDProperties.BlockP.FREEZER), true);
-
     public static final Block DARK_OVEN = register("dark_oven", new OvenBlock(UDProperties.BlockP.OVEN), true);
     public static final Block DARK_FRIDGE = register("dark_fridge", new FridgeBlock(UDProperties.BlockP.FRIDGE), true);
     public static final Block DARK_FREEZER = register("dark_freezer", new FreezerBlock(UDProperties.BlockP.FREEZER), true);
@@ -67,6 +67,21 @@ public class RegisterBlocks {
     public static final Block FAUCET = register("faucet", new FaucetBlock(UDProperties.BlockP.FAUCET), true);
     public static final Block RADIATOR = register("radiator", new RadiatorBlock(UDProperties.BlockP.RADIATOR), true);
     public static final Block TURBINE = register("turbine", new TurbineBlock(UDProperties.BlockP.TURBINE), true);
+    public static final Block TOWEL_BAR = register("towel_bar", new TowelBarBlock(UDProperties.BlockP.TOWEL_BAR), true);
+
+    //TOWELS
+    public static final HashMap<DyeColor, Block> DYED_TOWELS = new HashMap<>();
+
+    static {
+        for (DyeColor colors : DyeColor.values()) {
+            DYED_TOWELS.put(colors, register(colors + "_towel", new TowelBlock(
+                    FabricBlockSettings.copyOf(Blocks.WHITE_CARPET).mapColor(colors)), true));
+        }
+    }
+
+    public static Block getDyedTowels(int colors){
+        return DYED_TOWELS.get(DyeColor.byId(colors));
+    }
 
     private static Block register(String id, Block block, boolean registerItem) {
         if (registerItem) {

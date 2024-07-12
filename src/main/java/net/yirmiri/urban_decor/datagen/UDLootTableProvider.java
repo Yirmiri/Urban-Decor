@@ -2,6 +2,7 @@ package net.yirmiri.urban_decor.datagen;
 
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootTableProvider;
+import net.minecraft.util.DyeColor;
 import net.yirmiri.urban_decor.registry.RegisterBlocks;
 import net.yirmiri.urban_decor.registry.RegisterItems;
 
@@ -53,5 +54,13 @@ public class UDLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(RegisterBlocks.DARK_WASHING_MACHINE);
         addDrop(RegisterBlocks.DARK_DRYER);
         addDrop(RegisterBlocks.DARK_SINK);
+        addDyedTowelsDrops();
+        addDrop(RegisterBlocks.TOWEL_BAR);
+    }
+
+    private void addDyedTowelsDrops() {
+        for (DyeColor colours : DyeColor.values()) {
+            addDrop(RegisterBlocks.getDyedTowels(colours.getId()));
+        }
     }
 }

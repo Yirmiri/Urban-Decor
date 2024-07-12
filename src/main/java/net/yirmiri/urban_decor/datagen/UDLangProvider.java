@@ -2,8 +2,10 @@ package net.yirmiri.urban_decor.datagen;
 
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricLanguageProvider;
+import net.minecraft.util.DyeColor;
 import net.yirmiri.urban_decor.registry.RegisterBlocks;
 import net.yirmiri.urban_decor.registry.RegisterItems;
+import org.apache.commons.lang3.StringUtils;
 
 public class UDLangProvider extends FabricLanguageProvider {
     public UDLangProvider(FabricDataOutput dataGenerator) {
@@ -12,6 +14,13 @@ public class UDLangProvider extends FabricLanguageProvider {
 
     @Override
     public void generateTranslations(TranslationBuilder builder) {
+        for (DyeColor colors : DyeColor.values()) {
+            String dyeString = StringUtils.capitalize(StringUtils.replace(StringUtils.replace(StringUtils.replace(colors.getName(),
+                    "_", " "), "gray", "Gray"), "blue", "Blue"));
+
+            builder.add(RegisterBlocks.getDyedTowels(colors.getId()), dyeString + " Towel");
+        }
+
         //BLOCKS
         builder.add(RegisterBlocks.PORCELAIN_TILES, "Porcelain Tiles");
         builder.add(RegisterBlocks.PORCELAIN_TILE_STAIRS, "Porcelain Tile Stairs");
@@ -55,6 +64,7 @@ public class UDLangProvider extends FabricLanguageProvider {
         builder.add(RegisterBlocks.DARK_FRIDGE, "Dark Fridge");
         builder.add(RegisterBlocks.DARK_FREEZER, "Dark Freezer");
         builder.add(RegisterBlocks.DARK_OVEN, "Dark Oven");
+        builder.add(RegisterBlocks.TOWEL_BAR, "Towel Bar");
 
         //ITEMS
         builder.add(RegisterItems.PORCELAIN, "Porcelain");

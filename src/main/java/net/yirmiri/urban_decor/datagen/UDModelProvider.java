@@ -5,6 +5,7 @@ import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
 import net.minecraft.data.client.BlockStateModelGenerator;
 import net.minecraft.data.client.ItemModelGenerator;
 import net.minecraft.data.client.Models;
+import net.minecraft.util.DyeColor;
 import net.yirmiri.urban_decor.registry.RegisterBlocks;
 import net.yirmiri.urban_decor.registry.RegisterItems;
 
@@ -49,5 +50,9 @@ public class UDModelProvider extends FabricModelProvider {
         itemModelGenerator.register(RegisterItems.DARK_PORCELAIN, Models.GENERATED);
         itemModelGenerator.register(RegisterItems.TOOLBOX, Models.GENERATED);
         itemModelGenerator.register(RegisterBlocks.STOVE.asItem(), Models.GENERATED);
+
+        for (DyeColor colors : DyeColor.values()) {
+            itemModelGenerator.register(RegisterBlocks.getDyedTowels(colors.getId()).asItem(), Models.GENERATED);
+        }
     }
 }

@@ -3,7 +3,7 @@
 	"textures": {
 		"0": "furniture:towel_bar",
 		"1": "furniture:towel_red",
-		"particle": "furniture:towel_bar"
+		"particle": "urban_decor:block/towel_bar_particle"
 	},
 	"elements": [
 		{

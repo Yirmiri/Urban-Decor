@@ -61,6 +61,7 @@ public class UDBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(RegisterBlocks.DARK_TOILET)
                 .add(RegisterBlocks.DARK_WASHING_MACHINE)
                 .add(RegisterBlocks.DARK_OVEN)
+                .add(RegisterBlocks.TOWEL_BAR)
         ;
 
         getOrCreateTagBuilder(BlockTags.WALLS)

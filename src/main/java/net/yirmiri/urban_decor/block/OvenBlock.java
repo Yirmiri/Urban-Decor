@@ -22,8 +22,8 @@ public class OvenBlock extends AbstractDecorBlock {
     public static final BooleanProperty OPEN = BooleanProperty.of("open");
 
     private static final VoxelShape SHAPE_NORTH = Block.createCuboidShape(0, 0, 2, 16, 16, 16);
-    private static final VoxelShape SHAPE_EAST = Block.createCuboidShape(2, 0, 0, 16, 16, 16);
-    private static final VoxelShape SHAPE_WEST = Block.createCuboidShape(0, 0, 0, 14, 16, 16);
+    private static final VoxelShape SHAPE_WEST = Block.createCuboidShape(2, 0, 0, 16, 16, 16);
+    private static final VoxelShape SHAPE_EAST = Block.createCuboidShape(0, 0, 0, 14, 16, 16);
     private static final VoxelShape SHAPE_SOUTH = Block.createCuboidShape(0, 0, 0, 16, 16, 14);
 
     public OvenBlock(Settings settings) {
