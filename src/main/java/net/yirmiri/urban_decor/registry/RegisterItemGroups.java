@@ -99,6 +99,7 @@ public class RegisterItemGroups {
                 if (RegisterCompatRegistries.excessive_building) {
                     entries.add(EBRegisterBlocks.PORCELAIN_TILE_VERTICAL_STAIRS);
                     entries.add(EBRegisterBlocks.DARK_PORCELAIN_TILE_VERTICAL_STAIRS);
+                    entries.add(EBRegisterBlocks.CHECKERED_PORCELAIN_TILE_VERTICAL_STAIRS);
                     entries.add(EBRegisterBlocks.CHROMITE_VERTICAL_STAIRS);
                     entries.add(EBRegisterBlocks.POLISHED_CHROMITE_VERTICAL_STAIRS);
                 }
