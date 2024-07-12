@@ -69,7 +69,12 @@ public class RegisterItemGroups {
                 entries.add(RegisterBlocks.MICROWAVE);
                 entries.add(RegisterBlocks.TRASH_CAN);
                 entries.add(RegisterBlocks.DESK_FAN);
+                entries.add(RegisterBlocks.TURBINE);
+                entries.add(RegisterBlocks.SATELLITE_DISH);
+                entries.add(RegisterBlocks.AIR_CONDITIONER);
+                entries.add(RegisterBlocks.RADIATOR);
 
+                entries.add(RegisterBlocks.TOWEL_BAR);
                 entries.add(RegisterBlocks.getDyedTowels(DyeColor.WHITE.getId()));
                 entries.add(RegisterBlocks.getDyedTowels(DyeColor.LIGHT_GRAY.getId()));
                 entries.add(RegisterBlocks.getDyedTowels(DyeColor.GRAY.getId()));
@@ -90,12 +95,6 @@ public class RegisterItemGroups {
 //                for (DyeColor colors : sortDyeColor) {
 //                    entries.add(RegisterBlocks.getDyedTowels(colors.getId()));
 //                }
-
-                entries.add(RegisterBlocks.TOWEL_BAR);
-                entries.add(RegisterBlocks.TURBINE);
-                entries.add(RegisterBlocks.SATELLITE_DISH);
-                entries.add(RegisterBlocks.AIR_CONDITIONER);
-                entries.add(RegisterBlocks.RADIATOR);
 
                 if (RegisterCompatRegistries.excessive_building) {
                     entries.add(EBRegisterBlocks.PORCELAIN_TILE_VERTICAL_STAIRS);
