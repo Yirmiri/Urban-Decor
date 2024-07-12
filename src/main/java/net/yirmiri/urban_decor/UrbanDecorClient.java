@@ -5,6 +5,7 @@ import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.minecraft.client.render.RenderLayer;
+import net.minecraft.util.DyeColor;
 import net.yirmiri.urban_decor.registry.RegisterBlocks;
 
 @Environment(EnvType.CLIENT)
@@ -23,5 +24,19 @@ public class UrbanDecorClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(RegisterBlocks.STOVE, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(RegisterBlocks.DARK_WASHING_MACHINE, RenderLayer.getTranslucent());
         BlockRenderLayerMap.INSTANCE.putBlock(RegisterBlocks.DARK_OVEN, RenderLayer.getCutoutMipped());
+        addTowelRenderLayer();
+        addTowelBarTowelRenderLayer();
+    }
+
+    private void addTowelRenderLayer() {
+        for (DyeColor colors : DyeColor.values()) {
+            BlockRenderLayerMap.INSTANCE.putBlock(RegisterBlocks.getDyedTowels(colors.getId()), RenderLayer.getCutout());
+        }
+    }
+
+    private void addTowelBarTowelRenderLayer() {
+        for (DyeColor colors : DyeColor.values()) {
+            BlockRenderLayerMap.INSTANCE.putBlock(RegisterBlocks.getTowelBarTowels(colors.getId()), RenderLayer.getCutout());
+        }
     }
 }

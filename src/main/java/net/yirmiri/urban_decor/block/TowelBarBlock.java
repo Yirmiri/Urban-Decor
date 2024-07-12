@@ -1,16 +1,27 @@
 package net.yirmiri.urban_decor.block;
 
-import net.minecraft.block.Block;
-import net.minecraft.block.BlockState;
-import net.minecraft.block.ShapeContext;
+import net.minecraft.block.*;
+import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
+import net.minecraft.registry.tag.ItemTags;
+import net.minecraft.sound.SoundCategory;
+import net.minecraft.sound.SoundEvents;
+import net.minecraft.stat.Stats;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.Properties;
+import net.minecraft.util.ActionResult;
+import net.minecraft.util.Hand;
 import net.minecraft.util.function.BooleanBiFunction;
+import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.util.shape.VoxelShapes;
 import net.minecraft.world.BlockView;
+import net.minecraft.world.World;
+import net.minecraft.world.event.GameEvent;
+import net.yirmiri.urban_decor.datagen.UDItemTagProvider;
 
 import java.util.stream.Stream;
 
@@ -52,7 +63,22 @@ public class TowelBarBlock extends AbstractDecorBlock {
     }
 
     @Override
-    protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
-        builder.add(FACING, WATERLOGGED);
+    public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
+        ItemStack itemStack = player.getStackInHand(hand);
+        Item item = itemStack.getItem();
+        if (itemStack.isIn(UDItemTagProvider.TOWELS)) {
+            Block block = Block.getBlockFromItem(item);
+            if (block instanceof TowelBlock) {
+                if (!player.isCreative()) {
+                    itemStack.decrement(1);
+                }
+                world.playSound(null, pos, SoundEvents.BLOCK_WOOL_PLACE, SoundCategory.BLOCKS, 1.0F, 1.0F);
+                world.setBlockState(pos, TowelBarTowelBlock.getTowelColors(block).with(FACING, state.get(FACING)));
+                world.emitGameEvent(player, GameEvent.BLOCK_CHANGE, pos);
+                player.incrementStat(Stats.USED.getOrCreateStat(item));
+                return ActionResult.SUCCESS;
+            }
+        }
+        return ActionResult.PASS;
     }
 }

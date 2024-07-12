@@ -6,6 +6,7 @@ import net.minecraft.item.Item;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.registry.tag.TagKey;
+import net.minecraft.util.DyeColor;
 import net.minecraft.util.Identifier;
 import net.yirmiri.urban_decor.UrbanDecor;
 import net.yirmiri.urban_decor.registry.RegisterBlocks;
@@ -16,6 +17,7 @@ import java.util.concurrent.CompletableFuture;
 public class UDItemTagProvider extends FabricTagProvider.ItemTagProvider {
     public static final TagKey<Item> FURNISHINGS = create("furnishings");
     public static final TagKey<Item> TOOLBOXES = create("toolboxes");
+    public static final TagKey<Item> TOWELS = create("towels");
 
     public UDItemTagProvider(FabricDataOutput output, CompletableFuture<RegistryWrapper.WrapperLookup> future) {
         super(output, future);
@@ -48,6 +50,10 @@ public class UDItemTagProvider extends FabricTagProvider.ItemTagProvider {
             getOrCreateTagBuilder(TOOLBOXES)
                 .add(RegisterItems.TOOLBOX)
         ;
+
+        for (DyeColor colors : DyeColor.values()) {
+            getOrCreateTagBuilder(TOWELS).add(RegisterBlocks.getDyedTowels(colors.getId()).asItem());
+        }
     }
 
     private static TagKey<Item> create(String id) {

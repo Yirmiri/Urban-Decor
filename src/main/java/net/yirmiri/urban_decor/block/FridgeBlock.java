@@ -19,6 +19,7 @@ import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
 import net.yirmiri.urban_decor.datagen.UDItemTagProvider;
+import net.yirmiri.urban_decor.registry.RegisterSounds;
 
 public class FridgeBlock extends AbstractDecorBlock {
     public static final BooleanProperty OPEN = BooleanProperty.of("open");
@@ -49,7 +50,7 @@ public class FridgeBlock extends AbstractDecorBlock {
             if (state.get(OPEN)) {
                 world.playSound(pos.getX(), pos.getY(), pos.getZ(), SoundEvents.BLOCK_CHERRY_WOOD_DOOR_CLOSE, SoundCategory.BLOCKS, 1.0F, 1.0F, false);
             } else if (!state.get(OPEN)) {
-                world.playSound(pos.getX(), pos.getY(), pos.getZ(), SoundEvents.BLOCK_CHERRY_WOOD_DOOR_OPEN, SoundCategory.BLOCKS, 1.0F, 1.0F, false);
+                world.playSound(pos.getX(), pos.getY(), pos.getZ(), RegisterSounds.FRIDGE_OPEN, SoundCategory.BLOCKS, 1.0F, 1.0F, false);
             }
             return ActionResult.SUCCESS;
         }

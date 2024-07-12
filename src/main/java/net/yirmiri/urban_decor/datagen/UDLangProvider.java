@@ -19,6 +19,7 @@ public class UDLangProvider extends FabricLanguageProvider {
                     "_", " "), "gray", "Gray"), "blue", "Blue"));
 
             builder.add(RegisterBlocks.getDyedTowels(colors.getId()), dyeString + " Towel");
+            builder.add(RegisterBlocks.getTowelBarTowels(colors.getId()), dyeString + " Towel Bar");
         }
 
         //BLOCKS
@@ -78,5 +79,8 @@ public class UDLangProvider extends FabricLanguageProvider {
         //TOOLTIPS
         builder.add("item.urban_decor.toolbox.use", "When Used on Blocks:");
         builder.add("item.urban_decor.toolbox.desc", "Changes The State of Some Blocks");
+
+        //SUBTITLES
+        builder.add("subtitles.block.fridge.open", "Fridge opens");
     }
 }

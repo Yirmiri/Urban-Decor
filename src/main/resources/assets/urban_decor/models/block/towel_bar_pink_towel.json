@@ -2,7 +2,7 @@
 	"credit": "Made with Blockbench by Tellio-Ari",
 	"textures": {
 		"0": "urban_decor:block/towel_bar",
-		"1": "urban_decor:block/towel_red",
+		"1": "urban_decor:block/towel_pink",
 		"particle": "urban_decor:block/towel_bar_particle"
 	},
 	"elements": [

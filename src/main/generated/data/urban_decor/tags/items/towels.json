@@ -1,0 +1,21 @@
+{
+  "replace": false,
+  "values": [
+    "urban_decor:white_towel",
+    "urban_decor:orange_towel",
+    "urban_decor:magenta_towel",
+    "urban_decor:light_blue_towel",
+    "urban_decor:yellow_towel",
+    "urban_decor:lime_towel",
+    "urban_decor:pink_towel",
+    "urban_decor:gray_towel",
+    "urban_decor:light_gray_towel",
+    "urban_decor:cyan_towel",
+    "urban_decor:purple_towel",
+    "urban_decor:blue_towel",
+    "urban_decor:brown_towel",
+    "urban_decor:green_towel",
+    "urban_decor:red_towel",
+    "urban_decor:black_towel"
+  ]
+}

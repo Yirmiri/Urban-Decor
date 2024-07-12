@@ -1,0 +1,8 @@
+{
+  "block.fridge.open": {
+    "subtitle": "subtitles.block.fridge.open",
+    "sounds": [
+      "urban_decor:generic/open1"
+    ]
+  }
+}

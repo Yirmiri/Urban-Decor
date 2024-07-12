@@ -2,6 +2,11 @@ package net.yirmiri.urban_decor.datagen;
 
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootTableProvider;
+import net.minecraft.block.Block;
+import net.minecraft.loot.LootPool;
+import net.minecraft.loot.LootTable;
+import net.minecraft.loot.entry.ItemEntry;
+import net.minecraft.loot.provider.number.ConstantLootNumberProvider;
 import net.minecraft.util.DyeColor;
 import net.yirmiri.urban_decor.registry.RegisterBlocks;
 import net.yirmiri.urban_decor.registry.RegisterItems;
@@ -56,11 +61,19 @@ public class UDLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(RegisterBlocks.DARK_SINK);
         addDyedTowelsDrops();
         addDrop(RegisterBlocks.TOWEL_BAR);
+        addTowelBarTowelDrops();
     }
 
     private void addDyedTowelsDrops() {
-        for (DyeColor colours : DyeColor.values()) {
-            addDrop(RegisterBlocks.getDyedTowels(colours.getId()));
+        for (DyeColor colors : DyeColor.values()) {
+            addDrop(RegisterBlocks.getDyedTowels(colors.getId()));
+        }
+    }
+
+    private void addTowelBarTowelDrops() {
+        for (DyeColor colors : DyeColor.values()) {
+            addDrop(RegisterBlocks.getDyedTowels(colors.getId()));
+            addDrop(RegisterBlocks.TOWEL_BAR);
         }
     }
 }
