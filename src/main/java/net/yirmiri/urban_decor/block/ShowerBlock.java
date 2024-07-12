@@ -15,10 +15,10 @@ import net.minecraft.world.BlockView;
 public class ShowerBlock extends AbstractDecorBlock {
     private static final VoxelShape SHAPE_NORTH = VoxelShapes.combineAndSimplify(Block.createCuboidShape(7, 8, 8, 9, 10, 18),
             Block.createCuboidShape(5, 6, 6, 11, 8, 12), BooleanBiFunction.OR);
-    private static final VoxelShape SHAPE_WEST = VoxelShapes.combineAndSimplify(Block.createCuboidShape(8, 8, 6, 18, 10, 8),
-            Block.createCuboidShape(6, 6, 4, 12, 8, 10), BooleanBiFunction.OR);
-    private static final VoxelShape SHAPE_EAST = VoxelShapes.combineAndSimplify(Block.createCuboidShape(-2, 8, 6, 8, 10, 8),
-            Block.createCuboidShape(4, 6, 4, 10, 8, 10), BooleanBiFunction.OR);
+    private static final VoxelShape SHAPE_WEST = VoxelShapes.combineAndSimplify(Block.createCuboidShape(8, 8, 7, 18, 10, 9),
+            Block.createCuboidShape(6, 6, 5, 12, 8, 11), BooleanBiFunction.OR);
+    private static final VoxelShape SHAPE_EAST = VoxelShapes.combineAndSimplify(Block.createCuboidShape(-2, 8, 7, 8, 10, 9),
+            Block.createCuboidShape(4, 6, 5, 10, 8, 11), BooleanBiFunction.OR);
     private static final VoxelShape SHAPE_SOUTH = VoxelShapes.combineAndSimplify(Block.createCuboidShape(7, 8, -2, 9, 10, 8),
             Block.createCuboidShape(5, 6, 4, 11, 8, 10), BooleanBiFunction.OR);
 
