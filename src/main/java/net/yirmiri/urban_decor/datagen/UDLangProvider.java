@@ -66,6 +66,8 @@ public class UDLangProvider extends FabricLanguageProvider {
         builder.add(RegisterBlocks.DARK_FREEZER, "Dark Freezer");
         builder.add(RegisterBlocks.DARK_OVEN, "Dark Oven");
         builder.add(RegisterBlocks.TOWEL_BAR, "Towel Bar");
+        builder.add(RegisterBlocks.SATELLITE_DISH, "Satellite Dish");
+        builder.add(RegisterBlocks.SHOWER, "Shower");
 
         //ITEMS
         builder.add(RegisterItems.PORCELAIN, "Porcelain");
@@ -79,6 +81,10 @@ public class UDLangProvider extends FabricLanguageProvider {
         //TOOLTIPS
         builder.add("item.urban_decor.toolbox.use", "When Used on Blocks:");
         builder.add("item.urban_decor.toolbox.desc", "Changes The State of Some Blocks");
+
+        //DAMAGE
+        builder.add("death.attack.urban_decor.toaster", "%1$s likes to play with toasters in the tub");
+        builder.add("death.attack.urban_decor.toaster.player", "%2$s toasted %1$s into a delight");
 
         //SUBTITLES
         builder.add("subtitles.block.fridge.open", "Fridge opens");

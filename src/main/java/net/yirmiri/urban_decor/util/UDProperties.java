@@ -38,6 +38,8 @@ public class UDProperties {
         public static final Block.Settings RADIATOR = FabricBlockSettings.copyOf(Blocks.STONE).strength(1.0F).mapColor(MapColor.WHITE).sounds(BlockSoundGroup.COPPER).requiresTool();
         public static final Block.Settings TURBINE = FabricBlockSettings.copyOf(Blocks.WHITE_WOOL).strength(0.5F).mapColor(MapColor.GRAY).sounds(BlockSoundGroup.COPPER);
         public static final Block.Settings TOWEL_BAR = FabricBlockSettings.copyOf(Blocks.WHITE_WOOL).strength(0.5F).mapColor(MapColor.GRAY).sounds(BlockSoundGroup.COPPER);
+        public static final Block.Settings SATELLITE_DISH = FabricBlockSettings.copyOf(Blocks.WHITE_WOOL).strength(0.5F).mapColor(MapColor.GRAY).sounds(BlockSoundGroup.COPPER);
+        public static final Block.Settings SHOWER = FabricBlockSettings.copyOf(Blocks.WHITE_WOOL).strength(0.3F).mapColor(MapColor.GRAY).sounds(BlockSoundGroup.COPPER);
     }
 
     public static class ItemP {

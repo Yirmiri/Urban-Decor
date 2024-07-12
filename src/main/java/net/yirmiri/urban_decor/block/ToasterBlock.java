@@ -26,6 +26,7 @@ import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
 import net.yirmiri.urban_decor.block.entity.ToasterBlockEntity;
 import net.yirmiri.urban_decor.registry.RegisterBlockEntities;
+import net.yirmiri.urban_decor.registry.RegisterDamageTypes;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.Optional;
@@ -56,6 +57,9 @@ public class ToasterBlock extends CampfireBlock implements Waterloggable {
 
     @Override
     public void onSteppedOn(World world, BlockPos pos, BlockState state, Entity entity) {
+        if (state.get(WATERLOGGED)) {
+            entity.damage(RegisterDamageTypes.of(entity.getWorld(), RegisterDamageTypes.TOASTER), 10);
+        }
         if (!entity.bypassesSteppingEffects() && entity instanceof LivingEntity && !EnchantmentHelper.hasFrostWalker((LivingEntity)entity)) {
             entity.damage(world.getDamageSources().hotFloor(), fireDamage);
         }

@@ -68,6 +68,8 @@ public class RegisterBlocks {
     public static final Block RADIATOR = register("radiator", new RadiatorBlock(UDProperties.BlockP.RADIATOR), true);
     public static final Block TURBINE = register("turbine", new TurbineBlock(UDProperties.BlockP.TURBINE), true);
     public static final Block TOWEL_BAR = register("towel_bar", new TowelBarBlock(UDProperties.BlockP.TOWEL_BAR), true);
+    public static final Block SATELLITE_DISH = register("satellite_dish", new SatelliteDishBlock(UDProperties.BlockP.SATELLITE_DISH), true);
+    public static final Block SHOWER = register("shower", new ShowerBlock(UDProperties.BlockP.SHOWER), true);
 
     //TOWELS
     public static final HashMap<DyeColor, Block> DYED_TOWELS = new HashMap<>();

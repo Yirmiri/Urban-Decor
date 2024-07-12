@@ -48,6 +48,7 @@ public class RegisterItemGroups {
 
                 entries.add(RegisterItems.TOOLBOX);
 
+                entries.add(RegisterBlocks.SHOWER);
                 entries.add(RegisterBlocks.FAUCET);
                 entries.add(RegisterBlocks.SINK);
                 entries.add(RegisterBlocks.DARK_SINK);
@@ -92,6 +93,7 @@ public class RegisterItemGroups {
 
                 entries.add(RegisterBlocks.TOWEL_BAR);
                 entries.add(RegisterBlocks.TURBINE);
+                entries.add(RegisterBlocks.SATELLITE_DISH);
                 entries.add(RegisterBlocks.AIR_CONDITIONER);
                 entries.add(RegisterBlocks.RADIATOR);
 

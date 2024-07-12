@@ -26,6 +26,7 @@ public class UrbanDecorClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(RegisterBlocks.DARK_OVEN, RenderLayer.getCutoutMipped());
         addTowelRenderLayer();
         addTowelBarTowelRenderLayer();
+        BlockRenderLayerMap.INSTANCE.putBlock(RegisterBlocks.SATELLITE_DISH, RenderLayer.getCutoutMipped());
     }
 
     private void addTowelRenderLayer() {

@@ -7,6 +7,7 @@ import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.registry.tag.BlockTags;
 import net.minecraft.registry.tag.TagKey;
+import net.minecraft.util.DyeColor;
 import net.minecraft.util.Identifier;
 import net.yirmiri.urban_decor.UrbanDecor;
 import net.yirmiri.urban_decor.registry.RegisterBlocks;
@@ -62,7 +63,13 @@ public class UDBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(RegisterBlocks.DARK_WASHING_MACHINE)
                 .add(RegisterBlocks.DARK_OVEN)
                 .add(RegisterBlocks.TOWEL_BAR)
+                .add(RegisterBlocks.SATELLITE_DISH)
+                .add(RegisterBlocks.SHOWER)
         ;
+
+        for (DyeColor colors : DyeColor.values()) {
+            getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE).add(RegisterBlocks.getTowelBarTowels(colors.getId()));
+        }
 
         getOrCreateTagBuilder(BlockTags.WALLS)
                 .add(RegisterBlocks.CHROMITE_WALL)

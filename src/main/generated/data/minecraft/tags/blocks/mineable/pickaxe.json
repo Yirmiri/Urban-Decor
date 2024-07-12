@@ -41,6 +41,24 @@
     "urban_decor:dark_toilet",
     "urban_decor:dark_washing_machine",
     "urban_decor:dark_oven",
-    "urban_decor:towel_bar"
+    "urban_decor:towel_bar",
+    "urban_decor:satellite_dish",
+    "urban_decor:shower",
+    "urban_decor:towel_bar_white_towel",
+    "urban_decor:towel_bar_orange_towel",
+    "urban_decor:towel_bar_magenta_towel",
+    "urban_decor:towel_bar_light_blue_towel",
+    "urban_decor:towel_bar_yellow_towel",
+    "urban_decor:towel_bar_lime_towel",
+    "urban_decor:towel_bar_pink_towel",
+    "urban_decor:towel_bar_gray_towel",
+    "urban_decor:towel_bar_light_gray_towel",
+    "urban_decor:towel_bar_cyan_towel",
+    "urban_decor:towel_bar_purple_towel",
+    "urban_decor:towel_bar_blue_towel",
+    "urban_decor:towel_bar_brown_towel",
+    "urban_decor:towel_bar_green_towel",
+    "urban_decor:towel_bar_red_towel",
+    "urban_decor:towel_bar_black_towel"
   ]
 }

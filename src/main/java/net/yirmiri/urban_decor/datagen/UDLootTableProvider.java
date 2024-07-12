@@ -62,6 +62,8 @@ public class UDLootTableProvider extends FabricBlockLootTableProvider {
         addDyedTowelsDrops();
         addDrop(RegisterBlocks.TOWEL_BAR);
         addTowelBarTowelDrops();
+        addDrop(RegisterBlocks.SATELLITE_DISH);
+        addDrop(RegisterBlocks.SHOWER);
     }
 
     private void addDyedTowelsDrops() {

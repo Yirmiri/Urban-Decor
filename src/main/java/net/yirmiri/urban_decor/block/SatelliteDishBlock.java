@@ -5,30 +5,30 @@ import net.minecraft.block.BlockState;
 import net.minecraft.block.ShapeContext;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
-import net.minecraft.sound.SoundCategory;
-import net.minecraft.sound.SoundEvents;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.BooleanProperty;
 import net.minecraft.state.property.Properties;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
+import net.minecraft.util.function.BooleanBiFunction;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
 import net.minecraft.util.shape.VoxelShape;
+import net.minecraft.util.shape.VoxelShapes;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
 import net.yirmiri.urban_decor.datagen.UDItemTagProvider;
 
-public class FridgeBlock extends AbstractDecorBlock {
-    public static final BooleanProperty OPEN = BooleanProperty.of("open");
-    public static final BooleanProperty FLIPPED = BooleanProperty.of("flipped");
+public class SatelliteDishBlock extends AbstractDecorBlock {
+    public static final BooleanProperty WALL = BooleanProperty.of("wall");
 
-    private static final VoxelShape SHAPE = Block.createCuboidShape(1, 0, 1, 15, 16, 15);
+    private static final VoxelShape SHAPE = VoxelShapes.combineAndSimplify(Block.createCuboidShape(1, 0, 1, 15, 13, 15),
+            Block.createCuboidShape(1, 13, 1, 15, 16, 15), BooleanBiFunction.OR);
 
-    public FridgeBlock(Settings settings) {
+    public SatelliteDishBlock(Settings settings) {
         super(settings);
-        setDefaultState(getDefaultState().with(Properties.HORIZONTAL_FACING, Direction.NORTH).with(WATERLOGGED, false).with(OPEN, false).with(FLIPPED, false));
+        setDefaultState(getDefaultState().with(Properties.HORIZONTAL_FACING, Direction.NORTH).with(WATERLOGGED, false).with(WALL, false));
     }
 
     @Override
@@ -41,16 +41,7 @@ public class FridgeBlock extends AbstractDecorBlock {
     public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
         ItemStack stackHand = player.getStackInHand(hand);
         if (stackHand.isIn(UDItemTagProvider.TOOLBOXES)) {
-            world.setBlockState(pos, state.cycle(FLIPPED));
-            return ActionResult.SUCCESS;
-            }
-        if (player.getMainHandStack().isEmpty()) {
-            world.setBlockState(pos, state.cycle(OPEN));
-            if (state.get(OPEN)) {
-                world.playSound(pos.getX(), pos.getY(), pos.getZ(), SoundEvents.BLOCK_CHERRY_WOOD_DOOR_CLOSE, SoundCategory.BLOCKS, 1.0F, 1.0F, false);
-            } else if (!state.get(OPEN)) {
-                world.playSound(pos.getX(), pos.getY(), pos.getZ(), SoundEvents.BLOCK_CHERRY_WOOD_DOOR_OPEN, SoundCategory.BLOCKS, 1.0F, 1.0F, false);
-            }
+            world.setBlockState(pos, state.cycle(WALL));
             return ActionResult.SUCCESS;
         }
         return ActionResult.PASS;
@@ -58,6 +49,6 @@ public class FridgeBlock extends AbstractDecorBlock {
 
     @Override
     protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
-        builder.add(FACING, WATERLOGGED, OPEN, FLIPPED);
+        builder.add(FACING, WATERLOGGED, WALL);
     }
 }
