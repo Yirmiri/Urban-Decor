@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "urban_decor:steel_pipe"
+    },
+    "@": {
+      "item": "urban_decor:stainless_steel"
+    }
+  },
+  "pattern": [
+    "@#"
+  ],
+  "result": {
+    "item": "urban_decor:shower"
+  },
+  "show_notification": true
+}

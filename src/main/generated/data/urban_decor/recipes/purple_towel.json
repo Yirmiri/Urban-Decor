@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "@": {
+      "item": "minecraft:purple_carpet"
+    }
+  },
+  "pattern": [
+    "@@"
+  ],
+  "result": {
+    "item": "urban_decor:purple_towel"
+  },
+  "show_notification": true
+}
