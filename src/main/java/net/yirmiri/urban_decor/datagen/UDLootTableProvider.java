@@ -4,13 +4,21 @@ import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootTableProvider;
 import net.minecraft.block.Block;
 import net.minecraft.block.DoorBlock;
+import net.minecraft.block.SlabBlock;
 import net.minecraft.block.enums.BedPart;
 import net.minecraft.block.enums.DoubleBlockHalf;
+import net.minecraft.block.enums.SlabType;
 import net.minecraft.loot.LootPool;
 import net.minecraft.loot.LootTable;
+import net.minecraft.loot.condition.BlockStatePropertyLootCondition;
 import net.minecraft.loot.entry.ItemEntry;
+import net.minecraft.loot.entry.LootPoolEntry;
+import net.minecraft.loot.function.SetCountLootFunction;
 import net.minecraft.loot.provider.number.ConstantLootNumberProvider;
+import net.minecraft.predicate.StatePredicate;
 import net.minecraft.util.DyeColor;
+import net.yirmiri.urban_decor.block.AbstractLongBlock;
+import net.yirmiri.urban_decor.block.BathtubBlock;
 import net.yirmiri.urban_decor.registry.RegisterBlocks;
 import net.yirmiri.urban_decor.registry.RegisterItems;
 
@@ -67,6 +75,8 @@ public class UDLootTableProvider extends FabricBlockLootTableProvider {
         addTowelBarTowelDrops();
         addDrop(RegisterBlocks.SATELLITE_DISH);
         addDrop(RegisterBlocks.SHOWER);
+        addDrop(RegisterBlocks.BATHTUB, longBlockDrops(RegisterBlocks.BATHTUB));
+        addDrop(RegisterBlocks.DARK_BATHTUB, longBlockDrops(RegisterBlocks.DARK_BATHTUB));
     }
 
     private void addDyedTowelsDrops() {
@@ -80,5 +90,9 @@ public class UDLootTableProvider extends FabricBlockLootTableProvider {
             addDrop(RegisterBlocks.getDyedTowels(colors.getId()));
             addDrop(RegisterBlocks.TOWEL_BAR);
         }
+    }
+
+    public LootTable.Builder longBlockDrops(Block block) {
+        return this.dropsWithProperty(block, AbstractLongBlock.PART, BedPart.FOOT);
     }
 }
