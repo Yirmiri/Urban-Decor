@@ -68,6 +68,8 @@ public class UDLangProvider extends FabricLanguageProvider {
         builder.add(RegisterBlocks.TOWEL_BAR, "Towel Bar");
         builder.add(RegisterBlocks.SATELLITE_DISH, "Satellite Dish");
         builder.add(RegisterBlocks.SHOWER, "Shower");
+        builder.add(RegisterBlocks.BATHTUB, "Bathtub");
+        builder.add(RegisterBlocks.DARK_BATHTUB, "Dark Bathtub");
 
         //ITEMS
         builder.add(RegisterItems.PORCELAIN, "Porcelain");

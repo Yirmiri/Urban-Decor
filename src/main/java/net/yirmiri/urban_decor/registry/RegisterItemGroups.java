@@ -50,6 +50,8 @@ public class RegisterItemGroups {
 
                 entries.add(RegisterBlocks.SHOWER);
                 entries.add(RegisterBlocks.FAUCET);
+                entries.add(RegisterBlocks.BATHTUB);
+                entries.add(RegisterBlocks.DARK_BATHTUB);
                 entries.add(RegisterBlocks.SINK);
                 entries.add(RegisterBlocks.DARK_SINK);
                 entries.add(RegisterBlocks.TOILET);

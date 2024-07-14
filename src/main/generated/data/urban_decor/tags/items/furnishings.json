@@ -19,6 +19,8 @@
     "urban_decor:dark_fridge",
     "urban_decor:dark_freezer",
     "urban_decor:dark_toilet",
-    "urban_decor:dark_washing_machine"
+    "urban_decor:dark_washing_machine",
+    "urban_decor:bathtub",
+    "urban_decor:dark_bathtub"
   ]
 }

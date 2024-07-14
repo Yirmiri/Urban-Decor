@@ -47,6 +47,8 @@ public class UDItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(RegisterBlocks.DARK_FREEZER.asItem())
                 .add(RegisterBlocks.DARK_TOILET.asItem())
                 .add(RegisterBlocks.DARK_WASHING_MACHINE.asItem())
+                .add(RegisterBlocks.BATHTUB.asItem())
+                .add(RegisterBlocks.DARK_BATHTUB.asItem())
         ;
 
             getOrCreateTagBuilder(TOOLBOXES)

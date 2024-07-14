@@ -1,11 +1,11 @@
 {
 	"credit": "Made with Blockbench by Tellio-Ari",
 	"textures": {
-		"0": "urban_decor:block/bathtub_back_side",
-		"1": "urban_decor:block/bathtub_back_top",
-		"2": "urban_decor:block/bathtub_front",
-		"6": "urban_decor:block/bathtub_bottom_back",
-		"particle": "urban_decor:block/bathtub_back_side"
+		"0": "urban_decor:block/dark_bathtub_back_side",
+		"1": "urban_decor:block/dark_bathtub_back_top",
+		"2": "urban_decor:block/dark_bathtub_front",
+		"6": "urban_decor:block/dark_bathtub_bottom_back",
+		"particle": "urban_decor:block/dark_bathtub_back_side"
 	},
 	"elements": [
 		{
@@ -66,13 +66,5 @@
 			"translation": [0, 2.5, 0],
 			"scale": [0.375, 0.375, 0.375]
 		}
-	},
-	"groups": [
-		{
-			"name": "VoxelShapes",
-			"origin": [8, 8, 8],
-			"color": 0,
-			"children": [0, 1, 2, 3]
-		}
-	]
+	}
 }

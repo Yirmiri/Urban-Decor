@@ -51,6 +51,8 @@ public class UDModelProvider extends FabricModelProvider {
         itemModelGenerator.register(RegisterItems.TOOLBOX, Models.GENERATED);
         itemModelGenerator.register(RegisterBlocks.STOVE.asItem(), Models.GENERATED);
         itemModelGenerator.register(RegisterItems.STEEL_PIPE, Models.GENERATED);
+        itemModelGenerator.register(RegisterBlocks.BATHTUB.asItem(), Models.GENERATED);
+        itemModelGenerator.register(RegisterBlocks.DARK_BATHTUB.asItem(), Models.GENERATED);
 
         for (DyeColor colors : DyeColor.values()) {
             itemModelGenerator.register(RegisterBlocks.getDyedTowels(colors.getId()).asItem(), Models.GENERATED);

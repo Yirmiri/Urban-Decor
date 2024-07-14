@@ -1,5 +1,6 @@
 {
   "block.urban_decor.air_conditioner": "Air Conditioner",
+  "block.urban_decor.bathtub": "Bathtub",
   "block.urban_decor.black_towel": "Black Towel",
   "block.urban_decor.blue_towel": "Blue Towel",
   "block.urban_decor.brown_towel": "Brown Towel",
@@ -11,6 +12,7 @@
   "block.urban_decor.chromite_stairs": "Chromite Stairs",
   "block.urban_decor.chromite_wall": "Chromite Wall",
   "block.urban_decor.cyan_towel": "Cyan Towel",
+  "block.urban_decor.dark_bathtub": "Dark Bathtub",
   "block.urban_decor.dark_dryer": "Dark Dryer",
   "block.urban_decor.dark_freezer": "Dark Freezer",
   "block.urban_decor.dark_fridge": "Dark Fridge",
