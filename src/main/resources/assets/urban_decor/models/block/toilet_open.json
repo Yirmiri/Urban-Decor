@@ -2,8 +2,8 @@
 	"credit": "Made with Blockbench by Tellio-Ari",
 	"texture_size": [64, 64],
 	"textures": {
-		"0": "urban_decor:block/toilet",
-		"particle": "urban_decor:block/toilet_particle"
+		"0": "furniture:toilet",
+		"particle": "furniture:toilet"
 	},
 	"elements": [
 		{
@@ -46,9 +46,9 @@
 			}
 		},
 		{
-			"from": [2.99, 6.99, 11.99],
-			"to": [13.01, 17.01, 13.01],
-			"rotation": {"angle": 0, "axis": "x", "origin": [8, 7, 12]},
+			"from": [2.99, 6.99, 10.99],
+			"to": [13.01, 17.01, 12.01],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 7, 11]},
 			"faces": {
 				"north": {"uv": [7.5, 2.5, 5, 5], "rotation": 180, "texture": "#0"},
 				"east": {"uv": [7.5, 7, 10, 7.25], "rotation": 270, "texture": "#0"},
