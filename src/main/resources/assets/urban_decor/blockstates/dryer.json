@@ -1,40 +1,78 @@
 {
   "variants": {
-    "facing=north,open=true": {
+    "facing=north,open=true,opaque=false": {
       "model": "urban_decor:block/dryer_open",
       "uvlock": false
     },
-    "facing=south,open=true": {
+    "facing=south,open=true,opaque=false": {
       "model": "urban_decor:block/dryer_open",
       "y": 180,
       "uvlock": false
     },
-    "facing=west,open=true": {
+    "facing=west,open=true,opaque=false": {
       "model": "urban_decor:block/dryer_open",
       "y": 270,
       "uvlock": false
     },
-    "facing=east,open=true": {
+    "facing=east,open=true,opaque=false": {
       "model": "urban_decor:block/dryer_open",
       "y": 90,
       "uvlock": false
     },
-    "facing=north,open=false": {
+    "facing=north,open=false,opaque=false": {
       "model": "urban_decor:block/dryer",
       "uvlock": false
     },
-    "facing=south,open=false": {
+    "facing=south,open=false,opaque=false": {
       "model": "urban_decor:block/dryer",
       "y": 180,
       "uvlock": false
     },
-    "facing=west,open=false": {
+    "facing=west,open=false,opaque=false": {
       "model": "urban_decor:block/dryer",
       "y": 270,
       "uvlock": false
     },
-    "facing=east,open=false": {
+    "facing=east,open=false,opaque=false": {
       "model": "urban_decor:block/dryer",
+      "y": 90,
+      "uvlock": false
+    },
+    "facing=north,open=true,opaque=true": {
+      "model": "urban_decor:block/dryer_opaque_open",
+      "uvlock": false
+    },
+    "facing=south,open=true,opaque=true": {
+      "model": "urban_decor:block/dryer_opaque_open",
+      "y": 180,
+      "uvlock": false
+    },
+    "facing=west,open=true,opaque=true": {
+      "model": "urban_decor:block/dryer_opaque_open",
+      "y": 270,
+      "uvlock": false
+    },
+    "facing=east,open=true,opaque=true": {
+      "model": "urban_decor:block/dryer_opaque_open",
+      "y": 90,
+      "uvlock": false
+    },
+    "facing=north,open=false,opaque=true": {
+      "model": "urban_decor:block/dryer_opaque",
+      "uvlock": false
+    },
+    "facing=south,open=false,opaque=true": {
+      "model": "urban_decor:block/dryer_opaque",
+      "y": 180,
+      "uvlock": false
+    },
+    "facing=west,open=false,opaque=true": {
+      "model": "urban_decor:block/dryer_opaque",
+      "y": 270,
+      "uvlock": false
+    },
+    "facing=east,open=false,opaque=true": {
+      "model": "urban_decor:block/dryer_opaque",
       "y": 90,
       "uvlock": false
     }

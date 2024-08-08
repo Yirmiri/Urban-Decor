@@ -4,6 +4,7 @@ import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.ShapeContext;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.item.ItemStack;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.state.StateManager;
@@ -19,11 +20,13 @@ import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.util.shape.VoxelShapes;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
+import net.yirmiri.urban_decor.datagen.UDItemTagProvider;
 
 import java.util.stream.Stream;
 
 public class ToiletBlock extends AbstractDecorBlock {
     public static final BooleanProperty OPEN = BooleanProperty.of("open");
+    public static final BooleanProperty ALT = BooleanProperty.of("alt");
 
     private static final VoxelShape SHAPE_NORTH = Stream.of(Block.createCuboidShape(3, 0, 5, 13, 5, 14), Block.createCuboidShape(3, 5, 2, 13, 7, 12), Block.createCuboidShape(3, 5, 12, 13, 16, 16)
     ).reduce((v1, v2) -> VoxelShapes.combineAndSimplify(v1, v2, BooleanBiFunction.OR)).get();
@@ -36,7 +39,7 @@ public class ToiletBlock extends AbstractDecorBlock {
 
     public ToiletBlock(Settings settings) {
         super(settings);
-        setDefaultState(getDefaultState().with(Properties.HORIZONTAL_FACING, Direction.NORTH).with(WATERLOGGED, false).with(OPEN, false));
+        setDefaultState(getDefaultState().with(Properties.HORIZONTAL_FACING, Direction.NORTH).with(WATERLOGGED, false).with(OPEN, false).with(ALT, false));
     }
 
     @Override
@@ -51,6 +54,7 @@ public class ToiletBlock extends AbstractDecorBlock {
 
     @Override
     public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
+        ItemStack stackHand = player.getStackInHand(hand);
         if (player.getMainHandStack().isEmpty()) {
             world.setBlockState(pos, state.cycle(OPEN));
             if (state.get(OPEN)) {
@@ -59,12 +63,15 @@ public class ToiletBlock extends AbstractDecorBlock {
                 world.playSound(pos.getX(), pos.getY(), pos.getZ(), SoundEvents.BLOCK_CHERRY_WOOD_DOOR_OPEN, SoundCategory.BLOCKS, 1.0F, 1.0F, false);
             }
             return ActionResult.SUCCESS;
+        } else if (stackHand.isIn(UDItemTagProvider.TOOLBOXES)) {
+            world.setBlockState(pos, state.cycle(ALT));
+            return ActionResult.SUCCESS;
         }
         return ActionResult.PASS;
     }
 
     @Override
     protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
-        builder.add(FACING, WATERLOGGED, OPEN);
+        builder.add(FACING, WATERLOGGED, OPEN, ALT);
     }
 }

@@ -1,8 +1,8 @@
 {
 	"credit": "Made with Blockbench by Tellio-Ari",
 	"textures": {
-		"0": "urban_decor:block/toilet",
-		"particle": "urban_decor:block/toilet"
+		"0": "urban_decor:block/dark_toilet",
+		"particle": "urban_decor:block/dark_toilet"
 	},
 	"elements": [
 		{

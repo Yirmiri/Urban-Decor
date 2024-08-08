@@ -1,10 +1,10 @@
 {
 	"credit": "Made with Blockbench by Tellio-Ari",
 	"textures": {
-		"0": "furniture:trash_can",
-		"1": "furniture:trash_can_trash",
-		"2": "furniture:trash_can_opaque",
-		"particle": "furniture:trash_can"
+		"0": "urban_decor:block/trash_can",
+		"1": "urban_decor:block/trash_can_trash",
+		"2": "urban_decor:block/trash_can_opaque",
+		"particle": "urban_decor:block/trash_can"
 	},
 	"elements": [
 		{

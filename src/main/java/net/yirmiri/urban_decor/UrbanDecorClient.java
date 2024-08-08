@@ -16,6 +16,7 @@ public class UrbanDecorClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(RegisterBlocks.TRASH_CAN, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(RegisterBlocks.MICROWAVE, RenderLayer.getTranslucent());
         BlockRenderLayerMap.INSTANCE.putBlock(RegisterBlocks.WASHING_MACHINE, RenderLayer.getTranslucent());
+        BlockRenderLayerMap.INSTANCE.putBlock(RegisterBlocks.DRYER, RenderLayer.getTranslucent());
         BlockRenderLayerMap.INSTANCE.putBlock(RegisterBlocks.AIR_CONDITIONER, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(RegisterBlocks.TOOLBOX, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(RegisterBlocks.DESK_FAN, RenderLayer.getCutout());
@@ -24,9 +25,13 @@ public class UrbanDecorClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(RegisterBlocks.STOVE, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(RegisterBlocks.DARK_WASHING_MACHINE, RenderLayer.getTranslucent());
         BlockRenderLayerMap.INSTANCE.putBlock(RegisterBlocks.DARK_OVEN, RenderLayer.getCutoutMipped());
+        BlockRenderLayerMap.INSTANCE.putBlock(RegisterBlocks.DARK_DRYER, RenderLayer.getTranslucent());
         addTowelRenderLayer();
         addTowelBarTowelRenderLayer();
         BlockRenderLayerMap.INSTANCE.putBlock(RegisterBlocks.SATELLITE_DISH, RenderLayer.getCutoutMipped());
+        BlockRenderLayerMap.INSTANCE.putBlock(RegisterBlocks.TOILET, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(RegisterBlocks.DARK_TOILET, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(RegisterBlocks.FAUCET, RenderLayer.getCutout());
     }
 
     private void addTowelRenderLayer() {

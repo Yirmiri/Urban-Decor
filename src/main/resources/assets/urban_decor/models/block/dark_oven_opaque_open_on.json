@@ -2,7 +2,7 @@
 	"credit": "Made with Blockbench by Tellio-Ari",
 	"texture_size": [64, 64],
 	"textures": {
-		"1": "urban_decor:block/oven_on"
+		"1": "urban_decor:block/dark_oven_on"
 	},
 	"elements": [
 		{
@@ -110,16 +110,16 @@
 			}
 		},
 		{
-			"from": [2, 3, 1],
-			"to": [14, 12, 3],
+			"from": [2, 2, -7],
+			"to": [14, 4, 2],
 			"rotation": {"angle": 0, "axis": "x", "origin": [8, 3, 2]},
 			"faces": {
-				"north": {"uv": [0, 13.5, 3, 15.75], "texture": "#1"},
-				"east": {"uv": [6.5, 13, 7, 15.25], "texture": "#1"},
-				"south": {"uv": [0, 13.5, 3, 15.75], "texture": "#1"},
-				"west": {"uv": [7, 13, 7.5, 15.25], "texture": "#1"},
-				"up": {"uv": [14.25, 13, 11.25, 12.5], "texture": "#1"},
-				"down": {"uv": [6.5, 13, 3.5, 13.5], "texture": "#1"}
+				"north": {"uv": [14.25, 13, 11.25, 12.5], "rotation": 180, "texture": "#1"},
+				"east": {"uv": [6.5, 13, 7, 15.25], "rotation": 90, "texture": "#1"},
+				"south": {"uv": [6.5, 13, 3.5, 13.5], "texture": "#1"},
+				"west": {"uv": [7, 13, 7.5, 15.25], "rotation": 270, "texture": "#1"},
+				"up": {"uv": [0, 13.5, 3, 15.75], "texture": "#1"},
+				"down": {"uv": [0, 13.5, 3, 15.75], "rotation": 180, "texture": "#1"}
 			}
 		}
 	]

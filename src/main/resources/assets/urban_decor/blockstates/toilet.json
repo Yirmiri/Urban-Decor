@@ -1,40 +1,78 @@
 {
   "variants": {
-    "facing=north,open=true": {
+    "facing=north,open=true,alt=false": {
       "model": "urban_decor:block/toilet_open",
       "uvlock": false
     },
-    "facing=south,open=true": {
+    "facing=south,open=true,alt=false": {
       "model": "urban_decor:block/toilet_open",
       "y": 180,
       "uvlock": false
     },
-    "facing=west,open=true": {
+    "facing=west,open=true,alt=false": {
       "model": "urban_decor:block/toilet_open",
       "y": 270,
       "uvlock": false
     },
-    "facing=east,open=true": {
+    "facing=east,open=true,alt=false": {
       "model": "urban_decor:block/toilet_open",
       "y": 90,
       "uvlock": false
     },
-    "facing=north,open=false": {
+    "facing=north,open=false,alt=false": {
       "model": "urban_decor:block/toilet",
       "uvlock": false
     },
-    "facing=south,open=false": {
+    "facing=south,open=false,alt=false": {
       "model": "urban_decor:block/toilet",
       "y": 180,
       "uvlock": false
     },
-    "facing=west,open=false": {
+    "facing=west,open=false,alt=false": {
       "model": "urban_decor:block/toilet",
       "y": 270,
       "uvlock": false
     },
-    "facing=east,open=false": {
+    "facing=east,open=false,alt=false": {
       "model": "urban_decor:block/toilet",
+      "y": 90,
+      "uvlock": false
+    },
+    "facing=north,open=true,alt=true": {
+      "model": "urban_decor:block/toilet_alt_open",
+      "uvlock": false
+    },
+    "facing=south,open=true,alt=true": {
+      "model": "urban_decor:block/toilet_alt_open",
+      "y": 180,
+      "uvlock": false
+    },
+    "facing=west,open=true,alt=true": {
+      "model": "urban_decor:block/toilet_alt_open",
+      "y": 270,
+      "uvlock": false
+    },
+    "facing=east,open=true,alt=true": {
+      "model": "urban_decor:block/toilet_alt_open",
+      "y": 90,
+      "uvlock": false
+    },
+    "facing=north,open=false,alt=true": {
+      "model": "urban_decor:block/toilet_alt",
+      "uvlock": false
+    },
+    "facing=south,open=false,alt=true": {
+      "model": "urban_decor:block/toilet_alt",
+      "y": 180,
+      "uvlock": false
+    },
+    "facing=west,open=false,alt=true": {
+      "model": "urban_decor:block/toilet_alt",
+      "y": 270,
+      "uvlock": false
+    },
+    "facing=east,open=false,alt=true": {
+      "model": "urban_decor:block/toilet_alt",
       "y": 90,
       "uvlock": false
     }

@@ -1,21 +1,21 @@
 {
 	"credit": "Made with Blockbench by Tellio-Ari",
 	"textures": {
-		"0": "urban_decor:block/washing_machine",
-		"particle": "urban_decor:block/washing_machine"
+		"0": "urban_decor:block/dark_washing_machine",
+		"particle": "urban_decor:block/dark_washing_machine"
 	},
 	"elements": [
 		{
-			"from": [3, 12, 12],
-			"to": [13, 22, 13],
+			"from": [3, 12, 2],
+			"to": [13, 13, 12],
 			"rotation": {"angle": 0, "axis": "x", "origin": [8, 12, 12]},
 			"faces": {
-				"north": {"uv": [12.75, 7.25, 15.25, 4.75], "rotation": 180, "texture": "#0"},
-				"east": {"uv": [8.75, 7, 9, 4.75], "texture": "#0"},
-				"south": {"uv": [12.75, 4.75, 15.25, 7.25], "texture": "#0"},
-				"west": {"uv": [11, 7.25, 11.25, 4.75], "texture": "#0"},
-				"up": {"uv": [11.25, 4.75, 8.75, 5], "rotation": 180, "texture": "#0"},
-				"down": {"uv": [8.75, 7.25, 11.25, 7], "texture": "#0"}
+				"north": {"uv": [11.25, 4.75, 8.75, 5], "texture": "#0"},
+				"east": {"uv": [8.75, 7, 9, 4.75], "rotation": 90, "texture": "#0"},
+				"south": {"uv": [8.75, 7.25, 11.25, 7], "texture": "#0"},
+				"west": {"uv": [11, 7.25, 11.25, 4.75], "rotation": 270, "texture": "#0"},
+				"up": {"uv": [12.75, 4.75, 15.25, 7.25], "texture": "#0"},
+				"down": {"uv": [12.75, 7.25, 15.25, 4.75], "texture": "#0"}
 			}
 		},
 		{
@@ -28,7 +28,7 @@
 				"south": {"uv": [12.25, 1, 15.75, 4], "texture": "#0"},
 				"west": {"uv": [8.25, 1, 11.75, 4], "texture": "#0"},
 				"up": {"uv": [0.25, 7.75, 3.75, 4.25], "texture": "#0"},
-				"down": {"uv": [4.25, 4.25, 7.75, 7.75], "texture": "#missing"}
+				"down": {"uv": [4.25, 4.25, 7.75, 7.75], "texture": "#0"}
 			}
 		},
 		{
@@ -44,5 +44,12 @@
 				"down": {"uv": [0, 0, 14, 14], "texture": "#missing"}
 			}
 		}
-	]
+	],
+	"display": {
+		"thirdperson_righthand": {
+			"rotation": [75, 45, 0],
+			"translation": [0, 2.5, 0],
+			"scale": [0.375, 0.375, 0.375]
+		}
+	}
 }

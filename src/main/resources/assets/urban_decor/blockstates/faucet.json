@@ -1,21 +1,40 @@
 {
   "variants": {
-    "facing=north": {
+    "facing=north,outdoor=false": {
       "model": "urban_decor:block/faucet",
       "uvlock": false
     },
-    "facing=south": {
+    "facing=south,outdoor=false": {
       "model": "urban_decor:block/faucet",
       "y": 180,
       "uvlock": false
     },
-    "facing=west": {
+    "facing=west,outdoor=false": {
       "model": "urban_decor:block/faucet",
       "y": 270,
       "uvlock": false
     },
-    "facing=east": {
+    "facing=east,outdoor=false": {
       "model": "urban_decor:block/faucet",
+      "y": 90,
+      "uvlock": false
+    },
+    "facing=north,outdoor=true": {
+      "model": "urban_decor:block/faucet_outdoor",
+      "uvlock": false
+    },
+    "facing=south,outdoor=true": {
+      "model": "urban_decor:block/faucet_outdoor",
+      "y": 180,
+      "uvlock": false
+    },
+    "facing=west,outdoor=true": {
+      "model": "urban_decor:block/faucet_outdoor",
+      "y": 270,
+      "uvlock": false
+    },
+    "facing=east,outdoor=true": {
+      "model": "urban_decor:block/faucet_outdoor",
       "y": 90,
       "uvlock": false
     }
