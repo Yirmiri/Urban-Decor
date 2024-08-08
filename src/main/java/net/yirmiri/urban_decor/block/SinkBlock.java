@@ -7,6 +7,7 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.BooleanProperty;
+import net.minecraft.state.property.IntProperty;
 import net.minecraft.state.property.Properties;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
@@ -21,7 +22,7 @@ import net.minecraft.world.World;
 import net.yirmiri.urban_decor.datagen.UDItemTagProvider;
 
 public class SinkBlock extends AbstractDecorBlock {
-    public static final BooleanProperty BARE = BooleanProperty.of("bare");
+    public static final IntProperty VARIANT = IntProperty.of("variant", 0, 2);
 
     private static final VoxelShape SHAPE_NORTH = VoxelShapes.combineAndSimplify(Block.createCuboidShape(2, 0, 4, 14, 12, 16),
             Block.createCuboidShape(0, 12, 1, 16, 14, 16), BooleanBiFunction.OR);
@@ -41,27 +42,34 @@ public class SinkBlock extends AbstractDecorBlock {
     private static final VoxelShape SHAPE_SOUTH_BARE = VoxelShapes.combineAndSimplify(Block.createCuboidShape(2, 8, 0, 14, 12, 12),
             Block.createCuboidShape(0, 12, 0, 16, 14, 15), BooleanBiFunction.OR);
 
+    private static final VoxelShape SHAPE_FULLSIZE = Block.createCuboidShape(0, 0, 0, 16, 14, 16);
+
     public SinkBlock(Settings settings) {
         super(settings);
-        setDefaultState(getDefaultState().with(Properties.HORIZONTAL_FACING, Direction.NORTH).with(WATERLOGGED, false).with(BARE, false));
+        setDefaultState(getDefaultState().with(Properties.HORIZONTAL_FACING, Direction.NORTH).with(WATERLOGGED, false).with(VARIANT, 0));
     }
 
     @Override
     public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext ctx) {
-        boolean bare = state.get(BARE);
-        return switch (state.get(FACING)) {
-            default -> bare ? SHAPE_NORTH_BARE : SHAPE_NORTH;
-            case SOUTH -> bare ? SHAPE_SOUTH_BARE : SHAPE_SOUTH;
-            case WEST -> bare ? SHAPE_WEST_BARE : SHAPE_WEST;
-            case EAST -> bare ? SHAPE_EAST_BARE : SHAPE_EAST;
-        };
+        int variant = state.get(VARIANT);
+        boolean fullsize = variant == 2;
+        if (fullsize) {
+            return SHAPE_FULLSIZE;
+        } else {
+            return switch (state.get(FACING)) {
+                default -> variant == 1 ? SHAPE_NORTH_BARE : SHAPE_NORTH;
+                case SOUTH -> variant == 1 ? SHAPE_SOUTH_BARE : SHAPE_SOUTH;
+                case WEST -> variant == 1 ? SHAPE_WEST_BARE : SHAPE_WEST;
+                case EAST -> variant == 1 ? SHAPE_EAST_BARE : SHAPE_EAST;
+            };
+        }
     }
 
     @Override
     public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
         ItemStack stackHand = player.getStackInHand(hand);
         if (stackHand.isIn(UDItemTagProvider.TOOLBOXES)) {
-            world.setBlockState(pos, state.cycle(BARE));
+            world.setBlockState(pos, state.cycle(VARIANT));
                 return ActionResult.SUCCESS;
         }
         return ActionResult.PASS;
@@ -69,6 +77,6 @@ public class SinkBlock extends AbstractDecorBlock {
 
     @Override
     protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
-        builder.add(FACING, WATERLOGGED, BARE);
+        builder.add(FACING, WATERLOGGED, VARIANT);
     }
 }

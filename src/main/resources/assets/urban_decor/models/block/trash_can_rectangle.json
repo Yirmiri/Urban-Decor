@@ -1,7 +1,6 @@
 {
 	"credit": "Made with Blockbench by Tellio-Ari",
 	"textures": {
-		"1": "urban_decor:block/trash_can_trash",
 		"3": "urban_decor:block/trash_can_rectangle",
 		"particle": "urban_decor:block/trash_can"
 	},
@@ -69,32 +68,6 @@
 				"west": {"uv": [0, 0, 0, 11], "texture": "#missing"},
 				"up": {"uv": [0, 0, 8, 0], "texture": "#missing"},
 				"down": {"uv": [0, 0, 8, 0], "texture": "#missing"}
-			}
-		},
-		{
-			"from": [4.1, 1.1, 4.1],
-			"to": [11.9, 8.9, 11.9],
-			"rotation": {"angle": 0, "axis": "y", "origin": [4, 1, 4]},
-			"faces": {
-				"north": {"uv": [0, 8, 8, 16], "texture": "#1"},
-				"east": {"uv": [0, 8, 8, 16], "texture": "#1"},
-				"south": {"uv": [0, 8, 8, 16], "texture": "#1"},
-				"west": {"uv": [0, 8, 8, 16], "texture": "#1"},
-				"up": {"uv": [0, 0, 8, 8], "texture": "#1"},
-				"down": {"uv": [0, 8, 8, 16], "texture": "#1"}
-			}
-		},
-		{
-			"from": [4, 9.25, 4],
-			"to": [12, 9.25, 12],
-			"rotation": {"angle": 0, "axis": "y", "origin": [4, 9.25, 4]},
-			"faces": {
-				"north": {"uv": [0, 0, 8, 0], "texture": "#missing"},
-				"east": {"uv": [0, 0, 8, 0], "texture": "#missing"},
-				"south": {"uv": [0, 0, 8, 0], "texture": "#missing"},
-				"west": {"uv": [0, 0, 8, 0], "texture": "#missing"},
-				"up": {"uv": [8, 0, 16, 8], "texture": "#1"},
-				"down": {"uv": [0, 0, 8, 8], "texture": "#missing"}
 			}
 		}
 	]

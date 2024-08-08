@@ -37,6 +37,15 @@ public class ToiletBlock extends AbstractDecorBlock {
     private static final VoxelShape SHAPE_SOUTH = Stream.of(Block.createCuboidShape(3, 0, 2, 13, 5, 11), Block.createCuboidShape(3, 5, 4, 13, 7, 14), Block.createCuboidShape(3, 5, 0, 13, 16, 4)
     ).reduce((v1, v2) -> VoxelShapes.combineAndSimplify(v1, v2, BooleanBiFunction.OR)).get();
 
+    private static final VoxelShape SHAPE_NORTH_ALT = Stream.of(Block.createCuboidShape(5, 0, 5, 11, 5, 14), Block.createCuboidShape(3, 5, 0, 13, 7, 10), Block.createCuboidShape(5, 5, 10, 11, 8, 14)
+    ).reduce((v1, v2) -> VoxelShapes.combineAndSimplify(v1, v2, BooleanBiFunction.OR)).get();
+    private static final VoxelShape SHAPE_EAST_ALT = Stream.of(Block.createCuboidShape(5, 0, 5, 14, 5, 11), Block.createCuboidShape(0, 5, 3, 10, 7, 13), Block.createCuboidShape(10, 5, 5, 14, 8, 11)
+    ).reduce((v1, v2) -> VoxelShapes.combineAndSimplify(v1, v2, BooleanBiFunction.OR)).get();
+    private static final VoxelShape SHAPE_WEST_ALT = Stream.of(Block.createCuboidShape(2, 0, 5, 11, 5, 11), Block.createCuboidShape(6, 5, 3, 16, 7, 13), Block.createCuboidShape(2, 5, 5, 6, 8, 11)
+    ).reduce((v1, v2) -> VoxelShapes.combineAndSimplify(v1, v2, BooleanBiFunction.OR)).get();
+    private static final VoxelShape SHAPE_SOUTH_ALT = Stream.of(Block.createCuboidShape(5, 0, 2, 11, 5, 11), Block.createCuboidShape(3, 5, 6, 13, 7, 16), Block.createCuboidShape(5, 5, 2, 11, 8, 6)
+    ).reduce((v1, v2) -> VoxelShapes.combineAndSimplify(v1, v2, BooleanBiFunction.OR)).get();
+
     public ToiletBlock(Settings settings) {
         super(settings);
         setDefaultState(getDefaultState().with(Properties.HORIZONTAL_FACING, Direction.NORTH).with(WATERLOGGED, false).with(OPEN, false).with(ALT, false));
@@ -44,11 +53,12 @@ public class ToiletBlock extends AbstractDecorBlock {
 
     @Override
     public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext ctx) {
+        boolean alt = state.get(ALT);
         return switch (state.get(FACING)) {
-            default -> SHAPE_NORTH;
-            case SOUTH -> SHAPE_SOUTH;
-            case WEST -> SHAPE_WEST;
-            case EAST -> SHAPE_EAST;
+            default -> alt ? SHAPE_NORTH_ALT : SHAPE_NORTH;
+            case SOUTH -> alt ? SHAPE_SOUTH_ALT : SHAPE_SOUTH;
+            case WEST -> alt ? SHAPE_WEST_ALT : SHAPE_WEST;
+            case EAST -> alt ? SHAPE_EAST_ALT : SHAPE_EAST;
         };
     }
 
