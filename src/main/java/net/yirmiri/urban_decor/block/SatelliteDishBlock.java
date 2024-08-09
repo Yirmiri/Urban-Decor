@@ -19,6 +19,7 @@ import net.minecraft.util.shape.VoxelShapes;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
 import net.yirmiri.urban_decor.datagen.UDItemTagProvider;
+import net.yirmiri.urban_decor.util.UDUtils;
 
 public class SatelliteDishBlock extends AbstractDecorBlock {
     public static final BooleanProperty WALL = BooleanProperty.of("wall");
@@ -42,6 +43,7 @@ public class SatelliteDishBlock extends AbstractDecorBlock {
         ItemStack stackHand = player.getStackInHand(hand);
         if (stackHand.isIn(UDItemTagProvider.TOOLBOXES)) {
             world.setBlockState(pos, state.cycle(WALL));
+            UDUtils.ToolboxUsed(world, pos);
             return ActionResult.SUCCESS;
         }
         return ActionResult.PASS;

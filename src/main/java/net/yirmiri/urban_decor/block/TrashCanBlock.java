@@ -17,6 +17,7 @@ import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
 import net.yirmiri.urban_decor.datagen.UDItemTagProvider;
+import net.yirmiri.urban_decor.util.UDUtils;
 
 public class TrashCanBlock extends AbstractDecorBlock {
     public static final IntProperty VARIANT = IntProperty.of("variant", 0, 2);
@@ -45,6 +46,7 @@ public class TrashCanBlock extends AbstractDecorBlock {
         ItemStack stackHand = player.getStackInHand(hand);
         if (stackHand.isIn(UDItemTagProvider.TOOLBOXES)) {
             world.setBlockState(pos, state.cycle(VARIANT));
+            UDUtils.ToolboxUsed(world, pos);
             return ActionResult.SUCCESS;
         }
         return ActionResult.PASS;

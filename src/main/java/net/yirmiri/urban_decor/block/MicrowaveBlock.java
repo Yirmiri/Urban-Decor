@@ -19,6 +19,7 @@ import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
 import net.yirmiri.urban_decor.datagen.UDItemTagProvider;
+import net.yirmiri.urban_decor.util.UDUtils;
 
 public class MicrowaveBlock extends AbstractDecorBlock {
     public static final BooleanProperty OPEN = BooleanProperty.of("open");
@@ -55,6 +56,7 @@ public class MicrowaveBlock extends AbstractDecorBlock {
         ItemStack stackHand = player.getStackInHand(hand);
         if (stackHand.isIn(UDItemTagProvider.TOOLBOXES)) {
             world.setBlockState(pos, state.cycle(WALL));
+            UDUtils.ToolboxUsed(world, pos);
             return ActionResult.SUCCESS;
 
         } else if (player.getMainHandStack().isEmpty()) {

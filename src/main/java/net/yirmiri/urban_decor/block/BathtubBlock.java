@@ -14,47 +14,15 @@ import net.minecraft.world.BlockView;
 import java.util.stream.Stream;
 
 public class BathtubBlock extends AbstractLongBlock {
-    private static final VoxelShape BACK_NORTH = Stream.of(
-            Block.createCuboidShape(0, 0, 0, 16, 3, 16),
-            Block.createCuboidShape(0, 3, 0, 2, 16, 16),
-            Block.createCuboidShape(14, 3, 0, 16, 16, 16),
-            Block.createCuboidShape(2, 3, 14, 14, 16, 16)).reduce((v1, v2) -> VoxelShapes.combineAndSimplify(v1, v2, BooleanBiFunction.OR)).get();
-    private static final VoxelShape BACK_EAST = Stream.of(
-            Block.createCuboidShape(0, 0, 0, 16, 3, 16),
-            Block.createCuboidShape(0, 3, 0, 16, 16, 2),
-            Block.createCuboidShape(0, 3, 14, 16, 16, 16),
-            Block.createCuboidShape(0, 3, 2, 2, 16, 14)).reduce((v1, v2) -> VoxelShapes.combineAndSimplify(v1, v2, BooleanBiFunction.OR)).get();
-    private static final VoxelShape BACK_WEST = Stream.of(
-            Block.createCuboidShape(0, 0, 0, 16, 3, 16),
-            Block.createCuboidShape(0, 3, 14, 16, 16, 16),
-            Block.createCuboidShape(0, 3, 0, 16, 16, 2),
-            Block.createCuboidShape(14, 3, 2, 16, 16, 14)).reduce((v1, v2) -> VoxelShapes.combineAndSimplify(v1, v2, BooleanBiFunction.OR)).get();
-    private static final VoxelShape BACK_SOUTH = Stream.of(
-            Block.createCuboidShape(0, 0, 0, 16, 3, 16),
-            Block.createCuboidShape(14, 3, 0, 16, 16, 16),
-            Block.createCuboidShape(0, 3, 0, 2, 16, 16),
-            Block.createCuboidShape(2, 3, 0, 14, 16, 2)).reduce((v1, v2) -> VoxelShapes.combineAndSimplify(v1, v2, BooleanBiFunction.OR)).get();
+    private static final VoxelShape BACK_NORTH = Stream.of(Block.createCuboidShape(0, 0, 0, 16, 3, 16), Block.createCuboidShape(0, 3, 0, 2, 16, 16), Block.createCuboidShape(14, 3, 0, 16, 16, 16), Block.createCuboidShape(2, 3, 14, 14, 16, 16)).reduce((v1, v2) -> VoxelShapes.combineAndSimplify(v1, v2, BooleanBiFunction.OR)).get();
+    private static final VoxelShape BACK_EAST = Stream.of(Block.createCuboidShape(0, 0, 0, 16, 3, 16), Block.createCuboidShape(0, 3, 0, 16, 16, 2), Block.createCuboidShape(0, 3, 14, 16, 16, 16), Block.createCuboidShape(0, 3, 2, 2, 16, 14)).reduce((v1, v2) -> VoxelShapes.combineAndSimplify(v1, v2, BooleanBiFunction.OR)).get();
+    private static final VoxelShape BACK_WEST = Stream.of(Block.createCuboidShape(0, 0, 0, 16, 3, 16), Block.createCuboidShape(0, 3, 14, 16, 16, 16), Block.createCuboidShape(0, 3, 0, 16, 16, 2), Block.createCuboidShape(14, 3, 2, 16, 16, 14)).reduce((v1, v2) -> VoxelShapes.combineAndSimplify(v1, v2, BooleanBiFunction.OR)).get();
+    private static final VoxelShape BACK_SOUTH = Stream.of(Block.createCuboidShape(0, 0, 0, 16, 3, 16), Block.createCuboidShape(14, 3, 0, 16, 16, 16), Block.createCuboidShape(0, 3, 0, 2, 16, 16), Block.createCuboidShape(2, 3, 0, 14, 16, 2)).reduce((v1, v2) -> VoxelShapes.combineAndSimplify(v1, v2, BooleanBiFunction.OR)).get();
 
-    private static final VoxelShape FRONT_NORTH = Stream.of(
-            Block.createCuboidShape(0, 0, 0, 16, 3, 16),
-            Block.createCuboidShape(0, 3, 0, 2, 16, 16),
-            Block.createCuboidShape(14, 3, 0, 16, 16, 16),
-            Block.createCuboidShape(2, 3, 0, 14, 16, 2)).reduce((v1, v2) -> VoxelShapes.combineAndSimplify(v1, v2, BooleanBiFunction.OR)).get();
-    private static final VoxelShape FRONT_EAST = Stream.of(
-            Block.createCuboidShape(0, 0, 0, 16, 3, 16),
-            Block.createCuboidShape(0, 3, 0, 16, 16, 2),
-            Block.createCuboidShape(0, 3, 14, 16, 16, 16),
-            Block.createCuboidShape(14, 3, 2, 16, 16, 14)).reduce((v1, v2) -> VoxelShapes.combineAndSimplify(v1, v2, BooleanBiFunction.OR)).get();
-    private static final VoxelShape FRONT_WEST = Stream.of(
-            Block.createCuboidShape(0, 0, 0, 16, 3, 16),
-            Block.createCuboidShape(0, 3, 14, 16, 16, 16),
-            Block.createCuboidShape(0, 3, 0, 16, 16, 2),
-            Block.createCuboidShape(0, 3, 2, 2, 16, 14)).reduce((v1, v2) -> VoxelShapes.combineAndSimplify(v1, v2, BooleanBiFunction.OR)).get();
-    private static final VoxelShape FRONT_SOUTH = Stream.of(
-            Block.createCuboidShape(0, 0, 0, 16, 3, 16),
-            Block.createCuboidShape(14, 3, 0, 16, 16, 16),
-            Block.createCuboidShape(0, 3, 0, 2, 16, 16),
-            Block.createCuboidShape(2, 3, 14, 14, 16, 16)).reduce((v1, v2) -> VoxelShapes.combineAndSimplify(v1, v2, BooleanBiFunction.OR)).get();
+    private static final VoxelShape FRONT_NORTH = Stream.of(Block.createCuboidShape(0, 0, 0, 16, 3, 16), Block.createCuboidShape(0, 3, 0, 2, 16, 16), Block.createCuboidShape(14, 3, 0, 16, 16, 16), Block.createCuboidShape(2, 3, 0, 14, 16, 2)).reduce((v1, v2) -> VoxelShapes.combineAndSimplify(v1, v2, BooleanBiFunction.OR)).get();
+    private static final VoxelShape FRONT_EAST = Stream.of(Block.createCuboidShape(0, 0, 0, 16, 3, 16), Block.createCuboidShape(0, 3, 0, 16, 16, 2), Block.createCuboidShape(0, 3, 14, 16, 16, 16), Block.createCuboidShape(14, 3, 2, 16, 16, 14)).reduce((v1, v2) -> VoxelShapes.combineAndSimplify(v1, v2, BooleanBiFunction.OR)).get();
+    private static final VoxelShape FRONT_WEST = Stream.of(Block.createCuboidShape(0, 0, 0, 16, 3, 16), Block.createCuboidShape(0, 3, 14, 16, 16, 16), Block.createCuboidShape(0, 3, 0, 16, 16, 2), Block.createCuboidShape(0, 3, 2, 2, 16, 14)).reduce((v1, v2) -> VoxelShapes.combineAndSimplify(v1, v2, BooleanBiFunction.OR)).get();
+    private static final VoxelShape FRONT_SOUTH = Stream.of(Block.createCuboidShape(0, 0, 0, 16, 3, 16), Block.createCuboidShape(14, 3, 0, 16, 16, 16), Block.createCuboidShape(0, 3, 0, 2, 16, 16), Block.createCuboidShape(2, 3, 14, 14, 16, 16)).reduce((v1, v2) -> VoxelShapes.combineAndSimplify(v1, v2, BooleanBiFunction.OR)).get();
 
     public BathtubBlock(Settings settings) {
         super(settings);

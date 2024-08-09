@@ -19,6 +19,7 @@ import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
 import net.yirmiri.urban_decor.datagen.UDItemTagProvider;
+import net.yirmiri.urban_decor.util.UDUtils;
 
 public class OvenBlock extends AbstractDecorBlock {
     public static final BooleanProperty OPEN = BooleanProperty.of("open");
@@ -57,6 +58,7 @@ public class OvenBlock extends AbstractDecorBlock {
             return ActionResult.SUCCESS;
         } else if (stackHand.isIn(UDItemTagProvider.TOOLBOXES)) {
             world.setBlockState(pos, state.cycle(OPAQUE));
+            UDUtils.ToolboxUsed(world, pos);
             return ActionResult.SUCCESS;
         }
         return ActionResult.PASS;

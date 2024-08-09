@@ -25,6 +25,7 @@ import net.yirmiri.urban_decor.datagen.UDItemTagProvider;
 import net.yirmiri.urban_decor.entity.ToiletEntity;
 import net.yirmiri.urban_decor.registry.RegisterEntities;
 import net.yirmiri.urban_decor.util.UDStats;
+import net.yirmiri.urban_decor.util.UDUtils;
 
 import java.util.stream.Stream;
 
@@ -90,6 +91,7 @@ public class ToiletBlock extends AbstractDecorBlock {
             return ActionResult.SUCCESS;
         } else if (stackHand.isIn(UDItemTagProvider.TOOLBOXES)) {
             world.setBlockState(pos, state.cycle(ALT));
+            UDUtils.ToolboxUsed(world, pos);
             return ActionResult.SUCCESS;
         }
         return ActionResult.PASS;

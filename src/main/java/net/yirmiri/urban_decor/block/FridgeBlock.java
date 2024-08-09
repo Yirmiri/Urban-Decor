@@ -19,6 +19,7 @@ import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
 import net.yirmiri.urban_decor.datagen.UDItemTagProvider;
+import net.yirmiri.urban_decor.util.UDUtils;
 
 public class FridgeBlock extends AbstractDecorBlock {
     public static final BooleanProperty OPEN = BooleanProperty.of("open");
@@ -42,8 +43,9 @@ public class FridgeBlock extends AbstractDecorBlock {
         ItemStack stackHand = player.getStackInHand(hand);
         if (stackHand.isIn(UDItemTagProvider.TOOLBOXES)) {
             world.setBlockState(pos, state.cycle(FLIPPED));
+            UDUtils.ToolboxUsed(world, pos);
             return ActionResult.SUCCESS;
-            }
+        }
         if (player.getMainHandStack().isEmpty()) {
             world.setBlockState(pos, state.cycle(OPEN));
             if (state.get(OPEN)) {

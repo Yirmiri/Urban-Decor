@@ -20,6 +20,7 @@ import net.minecraft.util.shape.VoxelShapes;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
 import net.yirmiri.urban_decor.datagen.UDItemTagProvider;
+import net.yirmiri.urban_decor.util.UDUtils;
 
 public class SinkBlock extends AbstractDecorBlock {
     public static final IntProperty VARIANT = IntProperty.of("variant", 0, 2);
@@ -70,7 +71,8 @@ public class SinkBlock extends AbstractDecorBlock {
         ItemStack stackHand = player.getStackInHand(hand);
         if (stackHand.isIn(UDItemTagProvider.TOOLBOXES)) {
             world.setBlockState(pos, state.cycle(VARIANT));
-                return ActionResult.SUCCESS;
+            UDUtils.ToolboxUsed(world, pos);
+            return ActionResult.SUCCESS;
         }
         return ActionResult.PASS;
     }

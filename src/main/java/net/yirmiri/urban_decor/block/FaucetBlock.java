@@ -21,6 +21,7 @@ import net.minecraft.util.shape.VoxelShapes;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
 import net.yirmiri.urban_decor.datagen.UDItemTagProvider;
+import net.yirmiri.urban_decor.util.UDUtils;
 
 public class FaucetBlock extends AbstractDecorBlock {
     public static final BooleanProperty OUTDOOR = BooleanProperty.of("outdoor");
@@ -44,6 +45,7 @@ public class FaucetBlock extends AbstractDecorBlock {
         ItemStack stackHand = player.getStackInHand(hand);
         if (stackHand.isIn(UDItemTagProvider.TOOLBOXES)) {
             world.setBlockState(pos, state.cycle(OUTDOOR));
+            UDUtils.ToolboxUsed(world, pos);
             return ActionResult.SUCCESS;
         }
         return ActionResult.PASS;
