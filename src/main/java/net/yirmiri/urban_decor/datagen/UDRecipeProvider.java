@@ -601,11 +601,4 @@ public class UDRecipeProvider extends FabricRecipeProvider {
                 .pattern("##")
                 .pattern("##");
     }
-
-    public static ShapedRecipeJsonBuilder createTowelBlockRecipe(ItemConvertible output, Block input) {
-        return ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, output, 4)
-                .input('#', input)
-                .pattern("##")
-                .pattern("##");
-    }
 }
