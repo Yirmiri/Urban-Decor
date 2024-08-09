@@ -8,6 +8,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.BooleanProperty;
 import net.minecraft.state.property.Properties;
+import net.minecraft.text.Text;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
 import net.minecraft.util.function.BooleanBiFunction;
@@ -54,6 +55,7 @@ public class ShowerBlock extends AbstractDecorBlock {
         if (stackHand.isIn(UDItemTagProvider.TOOLBOXES)) {
             world.setBlockState(pos, state.cycle(ALT));
             UDUtils.ToolboxUsed(world, pos);
+            player.sendMessage(Text.translatable("toolbox.shower.variant_" + state.get(ALT)), true);
             return ActionResult.SUCCESS;
         }
         return ActionResult.PASS;

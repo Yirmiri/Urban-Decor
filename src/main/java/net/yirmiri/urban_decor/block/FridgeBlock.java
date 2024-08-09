@@ -10,6 +10,7 @@ import net.minecraft.sound.SoundEvents;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.BooleanProperty;
 import net.minecraft.state.property.Properties;
+import net.minecraft.text.Text;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
 import net.minecraft.util.hit.BlockHitResult;
@@ -44,6 +45,7 @@ public class FridgeBlock extends AbstractDecorBlock {
         if (stackHand.isIn(UDItemTagProvider.TOOLBOXES)) {
             world.setBlockState(pos, state.cycle(FLIPPED));
             UDUtils.ToolboxUsed(world, pos);
+            player.sendMessage(Text.translatable("toolbox.fridge.variant_" + state.get(FLIPPED)), true);
             return ActionResult.SUCCESS;
         }
         if (player.getMainHandStack().isEmpty()) {

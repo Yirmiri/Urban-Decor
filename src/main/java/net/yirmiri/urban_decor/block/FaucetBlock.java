@@ -10,6 +10,7 @@ import net.minecraft.sound.SoundEvents;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.BooleanProperty;
 import net.minecraft.state.property.Properties;
+import net.minecraft.text.Text;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
 import net.minecraft.util.function.BooleanBiFunction;
@@ -46,6 +47,7 @@ public class FaucetBlock extends AbstractDecorBlock {
         if (stackHand.isIn(UDItemTagProvider.TOOLBOXES)) {
             world.setBlockState(pos, state.cycle(OUTDOOR));
             UDUtils.ToolboxUsed(world, pos);
+            player.sendMessage(Text.translatable("toolbox.faucet.variant_" + state.get(OUTDOOR)), true);
             return ActionResult.SUCCESS;
         }
         return ActionResult.PASS;

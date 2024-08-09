@@ -9,6 +9,7 @@ import net.minecraft.state.StateManager;
 import net.minecraft.state.property.BooleanProperty;
 import net.minecraft.state.property.IntProperty;
 import net.minecraft.state.property.Properties;
+import net.minecraft.text.Text;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
 import net.minecraft.util.function.BooleanBiFunction;
@@ -72,6 +73,7 @@ public class SinkBlock extends AbstractDecorBlock {
         if (stackHand.isIn(UDItemTagProvider.TOOLBOXES)) {
             world.setBlockState(pos, state.cycle(VARIANT));
             UDUtils.ToolboxUsed(world, pos);
+            player.sendMessage(Text.translatable("toolbox.sink.variant_" + state.get(VARIANT)), true);
             return ActionResult.SUCCESS;
         }
         return ActionResult.PASS;

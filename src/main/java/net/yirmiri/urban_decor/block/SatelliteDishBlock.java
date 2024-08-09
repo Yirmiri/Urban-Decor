@@ -8,6 +8,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.BooleanProperty;
 import net.minecraft.state.property.Properties;
+import net.minecraft.text.Text;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
 import net.minecraft.util.function.BooleanBiFunction;
@@ -44,6 +45,7 @@ public class SatelliteDishBlock extends AbstractDecorBlock {
         if (stackHand.isIn(UDItemTagProvider.TOOLBOXES)) {
             world.setBlockState(pos, state.cycle(WALL));
             UDUtils.ToolboxUsed(world, pos);
+            player.sendMessage(Text.translatable("toolbox.satellite_dish.variant_" + state.get(WALL)), true);
             return ActionResult.SUCCESS;
         }
         return ActionResult.PASS;
