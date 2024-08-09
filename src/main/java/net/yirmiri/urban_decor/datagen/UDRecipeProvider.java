@@ -3,6 +3,7 @@ package net.yirmiri.urban_decor.datagen;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
+import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.data.server.recipe.RecipeJsonProvider;
 import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
@@ -481,6 +482,102 @@ public class UDRecipeProvider extends FabricRecipeProvider {
                 .pattern("@@")
                 .criterion(hasItem(Blocks.BROWN_CARPET), conditionsFromItem(Blocks.BROWN_CARPET))
                 .offerTo(exporter, Identifier.of(UrbanDecor.MOD_ID, getRecipeName(RegisterBlocks.getDyedTowels(DyeColor.BROWN.getId()))));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, RegisterBlocks.getDyedTowelBlocks(DyeColor.WHITE.getId()), 2)
+                .input('@', Blocks.WHITE_WOOL)
+                .pattern("@@")
+                .criterion(hasItem(Blocks.WHITE_WOOL), conditionsFromItem(Blocks.WHITE_WOOL))
+                .offerTo(exporter, Identifier.of(UrbanDecor.MOD_ID, getRecipeName(RegisterBlocks.getDyedTowelBlocks(DyeColor.WHITE.getId()))));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, RegisterBlocks.getDyedTowelBlocks(DyeColor.LIGHT_GRAY.getId()), 2)
+                .input('@', Blocks.LIGHT_GRAY_WOOL)
+                .pattern("@@")
+                .criterion(hasItem(Blocks.LIGHT_GRAY_WOOL), conditionsFromItem(Blocks.LIGHT_GRAY_WOOL))
+                .offerTo(exporter, Identifier.of(UrbanDecor.MOD_ID, getRecipeName(RegisterBlocks.getDyedTowelBlocks(DyeColor.LIGHT_GRAY.getId()))));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, RegisterBlocks.getDyedTowelBlocks(DyeColor.GRAY.getId()), 2)
+                .input('@', Blocks.GRAY_WOOL)
+                .pattern("@@")
+                .criterion(hasItem(Blocks.GRAY_WOOL), conditionsFromItem(Blocks.GRAY_WOOL))
+                .offerTo(exporter, Identifier.of(UrbanDecor.MOD_ID, getRecipeName(RegisterBlocks.getDyedTowelBlocks(DyeColor.GRAY.getId()))));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, RegisterBlocks.getDyedTowelBlocks(DyeColor.BLACK.getId()), 2)
+                .input('@', Blocks.BLACK_WOOL)
+                .pattern("@@")
+                .criterion(hasItem(Blocks.BLACK_WOOL), conditionsFromItem(Blocks.BLACK_WOOL))
+                .offerTo(exporter, Identifier.of(UrbanDecor.MOD_ID, getRecipeName(RegisterBlocks.getDyedTowelBlocks(DyeColor.BLACK.getId()))));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, RegisterBlocks.getDyedTowelBlocks(DyeColor.RED.getId()), 2)
+                .input('@', Blocks.RED_WOOL)
+                .pattern("@@")
+                .criterion(hasItem(Blocks.RED_WOOL), conditionsFromItem(Blocks.RED_WOOL))
+                .offerTo(exporter, Identifier.of(UrbanDecor.MOD_ID, getRecipeName(RegisterBlocks.getDyedTowelBlocks(DyeColor.RED.getId()))));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, RegisterBlocks.getDyedTowelBlocks(DyeColor.ORANGE.getId()), 2)
+                .input('@', Blocks.ORANGE_WOOL)
+                .pattern("@@")
+                .criterion(hasItem(Blocks.ORANGE_WOOL), conditionsFromItem(Blocks.ORANGE_WOOL))
+                .offerTo(exporter, Identifier.of(UrbanDecor.MOD_ID, getRecipeName(RegisterBlocks.getDyedTowelBlocks(DyeColor.ORANGE.getId()))));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, RegisterBlocks.getDyedTowelBlocks(DyeColor.YELLOW.getId()), 2)
+                .input('@', Blocks.YELLOW_WOOL)
+                .pattern("@@")
+                .criterion(hasItem(Blocks.YELLOW_WOOL), conditionsFromItem(Blocks.YELLOW_WOOL))
+                .offerTo(exporter, Identifier.of(UrbanDecor.MOD_ID, getRecipeName(RegisterBlocks.getDyedTowelBlocks(DyeColor.YELLOW.getId()))));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, RegisterBlocks.getDyedTowelBlocks(DyeColor.LIME.getId()), 2)
+                .input('@', Blocks.LIME_WOOL)
+                .pattern("@@")
+                .criterion(hasItem(Blocks.LIME_WOOL), conditionsFromItem(Blocks.LIME_WOOL))
+                .offerTo(exporter, Identifier.of(UrbanDecor.MOD_ID, getRecipeName(RegisterBlocks.getDyedTowelBlocks(DyeColor.LIME.getId()))));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, RegisterBlocks.getDyedTowelBlocks(DyeColor.GREEN.getId()), 2)
+                .input('@', Blocks.GREEN_WOOL)
+                .pattern("@@")
+                .criterion(hasItem(Blocks.GREEN_WOOL), conditionsFromItem(Blocks.GREEN_WOOL))
+                .offerTo(exporter, Identifier.of(UrbanDecor.MOD_ID, getRecipeName(RegisterBlocks.getDyedTowelBlocks(DyeColor.GREEN.getId()))));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, RegisterBlocks.getDyedTowelBlocks(DyeColor.CYAN.getId()), 2)
+                .input('@', Blocks.CYAN_WOOL)
+                .pattern("@@")
+                .criterion(hasItem(Blocks.CYAN_WOOL), conditionsFromItem(Blocks.CYAN_WOOL))
+                .offerTo(exporter, Identifier.of(UrbanDecor.MOD_ID, getRecipeName(RegisterBlocks.getDyedTowelBlocks(DyeColor.CYAN.getId()))));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, RegisterBlocks.getDyedTowelBlocks(DyeColor.LIGHT_BLUE.getId()), 2)
+                .input('@', Blocks.LIGHT_BLUE_WOOL)
+                .pattern("@@")
+                .criterion(hasItem(Blocks.LIGHT_BLUE_WOOL), conditionsFromItem(Blocks.LIGHT_BLUE_WOOL))
+                .offerTo(exporter, Identifier.of(UrbanDecor.MOD_ID, getRecipeName(RegisterBlocks.getDyedTowelBlocks(DyeColor.LIGHT_BLUE.getId()))));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, RegisterBlocks.getDyedTowelBlocks(DyeColor.BLUE.getId()), 2)
+                .input('@', Blocks.BLUE_WOOL)
+                .pattern("@@")
+                .criterion(hasItem(Blocks.BLUE_WOOL), conditionsFromItem(Blocks.BLUE_WOOL))
+                .offerTo(exporter, Identifier.of(UrbanDecor.MOD_ID, getRecipeName(RegisterBlocks.getDyedTowelBlocks(DyeColor.BLUE.getId()))));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, RegisterBlocks.getDyedTowelBlocks(DyeColor.PURPLE.getId()), 2)
+                .input('@', Blocks.PURPLE_WOOL)
+                .pattern("@@")
+                .criterion(hasItem(Blocks.PURPLE_WOOL), conditionsFromItem(Blocks.PURPLE_WOOL))
+                .offerTo(exporter, Identifier.of(UrbanDecor.MOD_ID, getRecipeName(RegisterBlocks.getDyedTowelBlocks(DyeColor.PURPLE.getId()))));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, RegisterBlocks.getDyedTowelBlocks(DyeColor.MAGENTA.getId()), 2)
+                .input('@', Blocks.MAGENTA_WOOL)
+                .pattern("@@")
+                .criterion(hasItem(Blocks.MAGENTA_WOOL), conditionsFromItem(Blocks.MAGENTA_WOOL))
+                .offerTo(exporter, Identifier.of(UrbanDecor.MOD_ID, getRecipeName(RegisterBlocks.getDyedTowelBlocks(DyeColor.MAGENTA.getId()))));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, RegisterBlocks.getDyedTowelBlocks(DyeColor.PINK.getId()), 2)
+                .input('@', Blocks.PINK_WOOL)
+                .pattern("@@")
+                .criterion(hasItem(Blocks.PINK_WOOL), conditionsFromItem(Blocks.PINK_WOOL))
+                .offerTo(exporter, Identifier.of(UrbanDecor.MOD_ID, getRecipeName(RegisterBlocks.getDyedTowelBlocks(DyeColor.PINK.getId()))));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, RegisterBlocks.getDyedTowelBlocks(DyeColor.BROWN.getId()), 2)
+                .input('@', Blocks.BROWN_WOOL)
+                .pattern("@@")
+                .criterion(hasItem(Blocks.BROWN_WOOL), conditionsFromItem(Blocks.BROWN_WOOL))
+                .offerTo(exporter, Identifier.of(UrbanDecor.MOD_ID, getRecipeName(RegisterBlocks.getDyedTowelBlocks(DyeColor.BROWN.getId()))));
     }
 //yes this only exists so i can name it four for four wendys meal... there is no need for this recipe builder
     public static ShapedRecipeJsonBuilder createFourForFourWendysMealRecipe(ItemConvertible output, Ingredient input) {
@@ -492,6 +589,13 @@ public class UDRecipeProvider extends FabricRecipeProvider {
 
     public static ShapedRecipeJsonBuilder createTwoByTwoRecipe(ItemConvertible output, int count, Ingredient input) {
         return ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, output, count)
+                .input('#', input)
+                .pattern("##")
+                .pattern("##");
+    }
+
+    public static ShapedRecipeJsonBuilder createTowelBlockRecipe(ItemConvertible output, Block input) {
+        return ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, output, 4)
                 .input('#', input)
                 .pattern("##")
                 .pattern("##");

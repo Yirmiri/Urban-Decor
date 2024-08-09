@@ -38,6 +38,10 @@ public class UDModelProvider extends FabricModelProvider {
         checkeredPorcelainTiles.slab(RegisterBlocks.CHECKERED_PORCELAIN_TILE_SLAB);
 
         generator.registerCubeAllModelTexturePool(RegisterBlocks.STAINLESS_STEEL_BLOCK);
+
+        for (DyeColor colors : DyeColor.values()) {
+            generator.registerCubeAllModelTexturePool(RegisterBlocks.getDyedTowelBlocks(colors.getId()));
+        }
     }
 
     @Override

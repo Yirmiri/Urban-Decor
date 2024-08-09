@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "@": {
+      "item": "minecraft:light_blue_wool"
+    }
+  },
+  "pattern": [
+    "@@"
+  ],
+  "result": {
+    "count": 2,
+    "item": "urban_decor:light_blue_towel_block"
+  },
+  "show_notification": true
+}

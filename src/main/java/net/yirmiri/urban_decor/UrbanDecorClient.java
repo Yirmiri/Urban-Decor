@@ -48,7 +48,7 @@ public class UrbanDecorClient implements ClientModInitializer {
 
     private void addTowelBarTowelRenderLayer() {
         for (DyeColor colors : DyeColor.values()) {
-            BlockRenderLayerMap.INSTANCE.putBlock(RegisterBlocks.getTowelBarTowels(colors.getId()), RenderLayer.getCutout());
+            BlockRenderLayerMap.INSTANCE.putBlock(RegisterBlocks.getDyedTowelBarTowels(colors.getId()), RenderLayer.getCutout());
         }
     }
 }

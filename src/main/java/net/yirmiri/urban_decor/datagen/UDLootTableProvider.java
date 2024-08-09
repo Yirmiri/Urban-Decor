@@ -77,6 +77,13 @@ public class UDLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(RegisterBlocks.SHOWER);
         addDrop(RegisterBlocks.BATHTUB, longBlockDrops(RegisterBlocks.BATHTUB));
         addDrop(RegisterBlocks.DARK_BATHTUB, longBlockDrops(RegisterBlocks.DARK_BATHTUB));
+        addDyedTowelBlockDrops();
+    }
+
+    private void addDyedTowelBlockDrops() {
+        for (DyeColor colors : DyeColor.values()) {
+            addDrop(RegisterBlocks.getDyedTowelBlocks(colors.getId()));
+        }
     }
 
     private void addDyedTowelsDrops() {

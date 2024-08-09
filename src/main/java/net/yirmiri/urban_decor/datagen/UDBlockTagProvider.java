@@ -3,7 +3,6 @@ package net.yirmiri.urban_decor.datagen;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
 import net.minecraft.block.Block;
-import net.minecraft.item.Item;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.registry.tag.BlockTags;
@@ -78,7 +77,7 @@ public class UDBlockTagProvider extends FabricTagProvider.BlockTagProvider {
         ;
 
         for (DyeColor colors : DyeColor.values()) {
-            getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE).add(RegisterBlocks.getTowelBarTowels(colors.getId()));
+            getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE).add(RegisterBlocks.getDyedTowelBarTowels(colors.getId()));
         }
 
         getOrCreateTagBuilder(BlockTags.WALLS)
@@ -88,6 +87,10 @@ public class UDBlockTagProvider extends FabricTagProvider.BlockTagProvider {
         getOrCreateTagBuilder(BlockTags.CAMPFIRES)
                 .add(RegisterBlocks.TOASTER)
         ;
+
+        for (DyeColor colors : DyeColor.values()) {
+            getOrCreateTagBuilder(BlockTags.WOOL).add(RegisterBlocks.getDyedTowelBlocks(colors.getId()));
+        }
     }
 
     private static TagKey<Block> create(String id) {

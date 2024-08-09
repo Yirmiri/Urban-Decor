@@ -15,8 +15,6 @@ import net.yirmiri.urban_decor.compat.excessive_building.EBRegisterBlocks;
 import java.util.ArrayList;
 
 public class RegisterItemGroups {
-    public static ArrayList<DyeColor> sortDyeColor = new ArrayList<DyeColor>();
-
     public static ItemGroup URBAN_DECOR = Registry.register(Registries.ITEM_GROUP, Identifier.of(UrbanDecor.MOD_ID, "urban_decor"),
             FabricItemGroup.builder().icon(() -> new ItemStack(RegisterItems.TOOLBOX)).displayName(Text.translatable("itemgroup.urban_decor")).entries((ctx, entries) -> {
                 entries.add(RegisterItems.PORCELAIN);
@@ -77,6 +75,23 @@ public class RegisterItemGroups {
                 entries.add(RegisterBlocks.RADIATOR);
 
                 entries.add(RegisterBlocks.TOWEL_BAR);
+                entries.add(RegisterBlocks.getDyedTowelBlocks(DyeColor.WHITE.getId()));
+                entries.add(RegisterBlocks.getDyedTowelBlocks(DyeColor.LIGHT_GRAY.getId()));
+                entries.add(RegisterBlocks.getDyedTowelBlocks(DyeColor.GRAY.getId()));
+                entries.add(RegisterBlocks.getDyedTowelBlocks(DyeColor.BLACK.getId()));
+                entries.add(RegisterBlocks.getDyedTowelBlocks(DyeColor.BROWN.getId()));
+                entries.add(RegisterBlocks.getDyedTowelBlocks(DyeColor.RED.getId()));
+                entries.add(RegisterBlocks.getDyedTowelBlocks(DyeColor.ORANGE.getId()));
+                entries.add(RegisterBlocks.getDyedTowelBlocks(DyeColor.YELLOW.getId()));
+                entries.add(RegisterBlocks.getDyedTowelBlocks(DyeColor.LIME.getId()));
+                entries.add(RegisterBlocks.getDyedTowelBlocks(DyeColor.GREEN.getId()));
+                entries.add(RegisterBlocks.getDyedTowelBlocks(DyeColor.CYAN.getId()));
+                entries.add(RegisterBlocks.getDyedTowelBlocks(DyeColor.LIGHT_BLUE.getId()));
+                entries.add(RegisterBlocks.getDyedTowelBlocks(DyeColor.BLUE.getId()));
+                entries.add(RegisterBlocks.getDyedTowelBlocks(DyeColor.PURPLE.getId()));
+                entries.add(RegisterBlocks.getDyedTowelBlocks(DyeColor.MAGENTA.getId()));
+                entries.add(RegisterBlocks.getDyedTowelBlocks(DyeColor.PINK.getId()));
+                
                 entries.add(RegisterBlocks.getDyedTowels(DyeColor.WHITE.getId()));
                 entries.add(RegisterBlocks.getDyedTowels(DyeColor.LIGHT_GRAY.getId()));
                 entries.add(RegisterBlocks.getDyedTowels(DyeColor.GRAY.getId()));
@@ -94,10 +109,6 @@ public class RegisterItemGroups {
                 entries.add(RegisterBlocks.getDyedTowels(DyeColor.MAGENTA.getId()));
                 entries.add(RegisterBlocks.getDyedTowels(DyeColor.PINK.getId()));
 
-//                for (DyeColor colors : sortDyeColor) {
-//                    entries.add(RegisterBlocks.getDyedTowels(colors.getId()));
-//                }
-
                 if (RegisterCompatRegistries.excessive_building) {
                     entries.add(EBRegisterBlocks.PORCELAIN_TILE_VERTICAL_STAIRS);
                     entries.add(EBRegisterBlocks.DARK_PORCELAIN_TILE_VERTICAL_STAIRS);
@@ -107,16 +118,6 @@ public class RegisterItemGroups {
                 }
             }).build());
 
-//    public static void sortDyeColors() {
-//        sortDyeColor.add(DyeColor.PINK); sortDyeColor.add(DyeColor.MAGENTA); sortDyeColor.add(DyeColor.PURPLE);
-//        sortDyeColor.add(DyeColor.BLUE); sortDyeColor.add(DyeColor.LIGHT_BLUE); sortDyeColor.add(DyeColor.CYAN);
-//        sortDyeColor.add(DyeColor.GREEN); sortDyeColor.add(DyeColor.LIME); sortDyeColor.add(DyeColor.YELLOW);
-//        sortDyeColor.add(DyeColor.ORANGE); sortDyeColor.add(DyeColor.RED); sortDyeColor.add(DyeColor.BROWN);
-//        sortDyeColor.add(DyeColor.BLACK); sortDyeColor.add(DyeColor.GRAY); sortDyeColor.add(DyeColor.LIGHT_GRAY);
-//        sortDyeColor.add(DyeColor.WHITE);
-//    }
-
     public static void loadItemGroups() {
-        //sortDyeColors();
     }
 }

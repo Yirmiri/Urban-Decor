@@ -76,6 +76,7 @@ public class RegisterBlocks {
     //TOWELS
     public static final HashMap<DyeColor, Block> DYED_TOWELS = new HashMap<>();
     public static final HashMap<DyeColor, Block> DYED_TOWEL_BARS = new HashMap<>();
+    public static final HashMap<DyeColor, Block> DYED_TOWEL_BLOCKS = new HashMap<>();
 
     static {
         for (DyeColor colors : DyeColor.values()) {
@@ -87,14 +88,23 @@ public class RegisterBlocks {
             DYED_TOWEL_BARS.put(colors, register("towel_bar_" + colors + "_towel", new TowelBarTowelBlock(RegisterBlocks.getDyedTowels(colors.getId()),
                     UDProperties.BlockP.TOWEL_BAR), false));
         }
+
+        for (DyeColor colors : DyeColor.values()) {
+            DYED_TOWEL_BLOCKS.put(colors, register(colors + "_towel_block", new Block(
+                    FabricBlockSettings.copyOf(Blocks.WHITE_WOOL).mapColor(colors)), true));
+        }
     }
 
     public static Block getDyedTowels(int colors){
         return DYED_TOWELS.get(DyeColor.byId(colors));
     }
 
-    public static Block getTowelBarTowels(int colors){
+    public static Block getDyedTowelBarTowels(int colors){
         return DYED_TOWEL_BARS.get(DyeColor.byId(colors));
+    }
+
+    public static Block getDyedTowelBlocks(int colors){
+        return DYED_TOWEL_BLOCKS.get(DyeColor.byId(colors));
     }
 
     private static Block register(String id, Block block, boolean registerItem) {
