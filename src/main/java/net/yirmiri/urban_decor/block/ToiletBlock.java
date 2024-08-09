@@ -21,10 +21,13 @@ import net.minecraft.util.shape.VoxelShapes;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
 import net.yirmiri.urban_decor.datagen.UDItemTagProvider;
+import net.yirmiri.urban_decor.entity.ToiletEntity;
+import net.yirmiri.urban_decor.registry.RegisterEntities;
 
 import java.util.stream.Stream;
 
 public class ToiletBlock extends AbstractDecorBlock {
+    public static final BooleanProperty OCCUPIED = Properties.OCCUPIED;
     public static final BooleanProperty OPEN = BooleanProperty.of("open");
     public static final BooleanProperty ALT = BooleanProperty.of("alt");
 
@@ -48,7 +51,7 @@ public class ToiletBlock extends AbstractDecorBlock {
 
     public ToiletBlock(Settings settings) {
         super(settings);
-        setDefaultState(getDefaultState().with(Properties.HORIZONTAL_FACING, Direction.NORTH).with(WATERLOGGED, false).with(OPEN, false).with(ALT, false));
+        setDefaultState(getDefaultState().with(OCCUPIED, false).with(Properties.HORIZONTAL_FACING, Direction.NORTH).with(WATERLOGGED, false).with(OPEN, false).with(ALT, false));
     }
 
     @Override
@@ -66,11 +69,19 @@ public class ToiletBlock extends AbstractDecorBlock {
     public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
         ItemStack stackHand = player.getStackInHand(hand);
         if (player.getMainHandStack().isEmpty()) {
-            world.setBlockState(pos, state.cycle(OPEN));
-            if (state.get(OPEN)) {
-                world.playSound(pos.getX(), pos.getY(), pos.getZ(), SoundEvents.BLOCK_CHERRY_WOOD_DOOR_CLOSE, SoundCategory.BLOCKS, 1.0F, 1.0F, false);
-            } else if (!state.get(OPEN)) {
-                world.playSound(pos.getX(), pos.getY(), pos.getZ(), SoundEvents.BLOCK_CHERRY_WOOD_DOOR_OPEN, SoundCategory.BLOCKS, 1.0F, 1.0F, false);
+            if (player.isSneaking()) {
+                world.setBlockState(pos, state.cycle(OPEN));
+                if (state.get(OPEN)) {
+                    world.playSound(pos.getX(), pos.getY(), pos.getZ(), SoundEvents.BLOCK_CHERRY_WOOD_DOOR_CLOSE, SoundCategory.BLOCKS, 1.0F, 1.0F, false);
+                } else if (!state.get(OPEN)) {
+                    world.playSound(pos.getX(), pos.getY(), pos.getZ(), SoundEvents.BLOCK_CHERRY_WOOD_DOOR_OPEN, SoundCategory.BLOCKS, 1.0F, 1.0F, false);
+                }
+            } else if (!player.isSneaking() && !state.get(OCCUPIED) && !world.isClient) {
+                ToiletEntity toiletEntity = RegisterEntities.TOILET.create(world);
+                toiletEntity.setPos(pos.getX() + 0.5D, pos.getY() + 0.15D, pos.getZ() + 0.5D);
+                world.spawnEntity(toiletEntity);
+                world.setBlockState(pos, state.with(OCCUPIED, true));
+                player.startRiding(toiletEntity);
             }
             return ActionResult.SUCCESS;
         } else if (stackHand.isIn(UDItemTagProvider.TOOLBOXES)) {
@@ -82,6 +93,6 @@ public class ToiletBlock extends AbstractDecorBlock {
 
     @Override
     protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
-        builder.add(FACING, WATERLOGGED, OPEN, ALT);
+        builder.add(FACING, WATERLOGGED, OPEN, ALT, OCCUPIED);
     }
 }

@@ -25,6 +25,7 @@ public class UrbanDecor implements ModInitializer {
 		RegisterBlockEntities.registerBlockEntities();
 		RegisterSounds.registerSounds();
 		UDRegistries.registerRegistries();
+		RegisterEntities.registerEntities();
 	}
 
 	public static boolean isModLoaded(String id) {

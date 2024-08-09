@@ -4,9 +4,12 @@ import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
+import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
 import net.minecraft.client.render.RenderLayer;
 import net.minecraft.util.DyeColor;
 import net.yirmiri.urban_decor.registry.RegisterBlocks;
+import net.yirmiri.urban_decor.registry.RegisterEntities;
+import net.yirmiri.urban_decor.entity.renderer.InvisibleEntityRenderer;
 
 @Environment(EnvType.CLIENT)
 public class UrbanDecorClient implements ClientModInitializer {
@@ -32,6 +35,9 @@ public class UrbanDecorClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(RegisterBlocks.TOILET, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(RegisterBlocks.DARK_TOILET, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(RegisterBlocks.FAUCET, RenderLayer.getCutout());
+
+        //ENTITY
+        EntityRendererRegistry.register(RegisterEntities.TOILET, InvisibleEntityRenderer::new);
     }
 
     private void addTowelRenderLayer() {

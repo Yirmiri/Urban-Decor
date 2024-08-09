@@ -3,6 +3,7 @@ package net.yirmiri.urban_decor.datagen;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
 import net.minecraft.block.Block;
+import net.minecraft.item.Item;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.registry.tag.BlockTags;
@@ -15,12 +16,19 @@ import net.yirmiri.urban_decor.registry.RegisterBlocks;
 import java.util.concurrent.CompletableFuture;
 
 public class UDBlockTagProvider extends FabricTagProvider.BlockTagProvider {
+    public static final TagKey<Block> TOILETS = create("toilets");
+
     public UDBlockTagProvider(FabricDataOutput output, CompletableFuture<RegistryWrapper.WrapperLookup> future) {
         super(output, future);
     }
 
     @Override
     protected void configure(RegistryWrapper.WrapperLookup arg) {
+        getOrCreateTagBuilder(TOILETS)
+                .add(RegisterBlocks.TOILET)
+                .add(RegisterBlocks.DARK_TOILET)
+        ;
+
         getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE)
                 .add(RegisterBlocks.PORCELAIN_TILES)
                 .add(RegisterBlocks.PORCELAIN_TILE_STAIRS)
