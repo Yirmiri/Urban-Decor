@@ -39,9 +39,9 @@ public class ToiletBlock extends AbstractDecorBlock {
 
     private static final VoxelShape SHAPE_NORTH_ALT = Stream.of(Block.createCuboidShape(5, 0, 5, 11, 5, 14), Block.createCuboidShape(3, 5, 0, 13, 7, 10), Block.createCuboidShape(5, 5, 10, 11, 8, 14)
     ).reduce((v1, v2) -> VoxelShapes.combineAndSimplify(v1, v2, BooleanBiFunction.OR)).get();
-    private static final VoxelShape SHAPE_EAST_ALT = Stream.of(Block.createCuboidShape(5, 0, 5, 14, 5, 11), Block.createCuboidShape(0, 5, 3, 10, 7, 13), Block.createCuboidShape(10, 5, 5, 14, 8, 11)
+    private static final VoxelShape SHAPE_WEST_ALT = Stream.of(Block.createCuboidShape(5, 0, 5, 14, 5, 11), Block.createCuboidShape(0, 5, 3, 10, 7, 13), Block.createCuboidShape(10, 5, 5, 14, 8, 11)
     ).reduce((v1, v2) -> VoxelShapes.combineAndSimplify(v1, v2, BooleanBiFunction.OR)).get();
-    private static final VoxelShape SHAPE_WEST_ALT = Stream.of(Block.createCuboidShape(2, 0, 5, 11, 5, 11), Block.createCuboidShape(6, 5, 3, 16, 7, 13), Block.createCuboidShape(2, 5, 5, 6, 8, 11)
+    private static final VoxelShape SHAPE_EAST_ALT = Stream.of(Block.createCuboidShape(2, 0, 5, 11, 5, 11), Block.createCuboidShape(6, 5, 3, 16, 7, 13), Block.createCuboidShape(2, 5, 5, 6, 8, 11)
     ).reduce((v1, v2) -> VoxelShapes.combineAndSimplify(v1, v2, BooleanBiFunction.OR)).get();
     private static final VoxelShape SHAPE_SOUTH_ALT = Stream.of(Block.createCuboidShape(5, 0, 2, 11, 5, 11), Block.createCuboidShape(3, 5, 6, 13, 7, 16), Block.createCuboidShape(5, 5, 2, 11, 8, 6)
     ).reduce((v1, v2) -> VoxelShapes.combineAndSimplify(v1, v2, BooleanBiFunction.OR)).get();
