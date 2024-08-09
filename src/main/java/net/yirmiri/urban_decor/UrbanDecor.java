@@ -7,6 +7,7 @@ import net.yirmiri.urban_decor.compat.RegisterCompatRegistries;
 import net.yirmiri.urban_decor.compat.RegisterPacks;
 import net.yirmiri.urban_decor.registry.*;
 import net.yirmiri.urban_decor.util.UDRegistries;
+import net.yirmiri.urban_decor.util.UDStats;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -17,15 +18,16 @@ public class UrbanDecor implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
-		RegisterBlocks.registerBlocks();
-		RegisterItems.registerItems();
-		RegisterItemGroups.registerItemGroups();
-		RegisterPacks.registerPacks();
-		RegisterCompatRegistries.registerCompatRegistries();
-		RegisterBlockEntities.registerBlockEntities();
-		RegisterSounds.registerSounds();
-		UDRegistries.registerRegistries();
-		RegisterEntities.registerEntities();
+		RegisterBlocks.loadBlocks();
+		RegisterItems.loadItems();
+		RegisterItemGroups.loadItemGroups();
+		RegisterPacks.loadPacks();
+		RegisterCompatRegistries.loadCompatRegistries();
+		RegisterBlockEntities.loadBlockEntities();
+		RegisterSounds.loadSounds();
+		UDRegistries.loadRegistries();
+		RegisterEntities.loadEntities();
+		UDStats.loadStats();
 	}
 
 	public static boolean isModLoaded(String id) {

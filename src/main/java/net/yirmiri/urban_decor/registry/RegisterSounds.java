@@ -14,6 +14,6 @@ public class RegisterSounds {
         return Registry.register(Registries.SOUND_EVENT, Identifier.of(UrbanDecor.MOD_ID, id), SoundEvent.of(Identifier.of(UrbanDecor.MOD_ID, id)));
     }
 
-    public static void registerSounds() {
+    public static void loadSounds() {
     }
 }

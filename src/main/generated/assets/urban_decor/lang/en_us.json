@@ -79,6 +79,7 @@
   "block.urban_decor.yellow_towel": "Yellow Towel",
   "death.attack.urban_decor.toaster": "%1$s likes to play with toasters in the tub",
   "death.attack.urban_decor.toaster.player": "%2$s toasted %1$s into a delight",
+  "entity.urban_decor.toilet": "Toilet",
   "item.urban_decor.dark_porcelain": "Dark Porcelain",
   "item.urban_decor.porcelain": "Porcelain",
   "item.urban_decor.stainless_steel": "Stainless Steel",
@@ -86,5 +87,6 @@
   "item.urban_decor.toolbox.desc": "Changes The State of Some Blocks",
   "item.urban_decor.toolbox.use": "When Used on Blocks:",
   "itemgroup.urban_decor": "Urban Decor",
-  "subtitles.block.fridge.open": "Fridge opens"
+  "subtitles.block.fridge.open": "Fridge opens",
+  "urban_decor.times_sat": "Times Sat Down"
 }

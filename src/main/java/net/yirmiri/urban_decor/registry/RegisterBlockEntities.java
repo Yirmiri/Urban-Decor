@@ -12,6 +12,6 @@ public class RegisterBlockEntities {
     public static final BlockEntityType<ToasterBlockEntity> TOASTER = Registry.register(Registries.BLOCK_ENTITY_TYPE,
             Identifier.of(UrbanDecor.MOD_ID, "toaster"), FabricBlockEntityTypeBuilder.create(ToasterBlockEntity::new, RegisterBlocks.TOASTER).build());
 
-    public static void registerBlockEntities() {
+    public static void loadBlockEntities() {
     }
 }

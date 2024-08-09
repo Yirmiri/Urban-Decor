@@ -8,7 +8,7 @@ import net.yirmiri.urban_decor.worldgen.UDFeatures;
 
 public class UDRegistries {
 
-    public static void registerRegistries() {
+    public static void loadRegistries() {
         registerBiomeModifications();
     }
 

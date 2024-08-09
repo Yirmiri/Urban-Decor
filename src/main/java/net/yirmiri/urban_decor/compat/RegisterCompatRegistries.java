@@ -6,7 +6,7 @@ import net.yirmiri.urban_decor.compat.excessive_building.EBRegisterBlocks;
 public class RegisterCompatRegistries {
     public static final boolean excessive_building;
 
-    public static void registerCompatRegistries() {
+    public static void loadCompatRegistries() {
         if (excessive_building) EBRegisterBlocks.ebRegisterBlocks();
     }
 

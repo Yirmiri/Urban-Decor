@@ -116,7 +116,7 @@ public class RegisterItemGroups {
 //        sortDyeColor.add(DyeColor.WHITE);
 //    }
 
-    public static void registerItemGroups() {
+    public static void loadItemGroups() {
         //sortDyeColors();
     }
 }

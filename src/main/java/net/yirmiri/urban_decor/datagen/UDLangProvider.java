@@ -4,7 +4,9 @@ import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricLanguageProvider;
 import net.minecraft.util.DyeColor;
 import net.yirmiri.urban_decor.registry.RegisterBlocks;
+import net.yirmiri.urban_decor.registry.RegisterEntities;
 import net.yirmiri.urban_decor.registry.RegisterItems;
+import net.yirmiri.urban_decor.util.UDStats;
 import org.apache.commons.lang3.StringUtils;
 
 public class UDLangProvider extends FabricLanguageProvider {
@@ -77,6 +79,12 @@ public class UDLangProvider extends FabricLanguageProvider {
         builder.add(RegisterItems.DARK_PORCELAIN, "Dark Porcelain");
         builder.add(RegisterItems.TOOLBOX, "Toolbox");
         builder.add(RegisterItems.STEEL_PIPE, "Steel Pipe");
+
+        //STATS
+        builder.add(UDStats.TIMES_SAT, "Times Sat Down");
+
+        //ENTITIES
+        builder.add(RegisterEntities.TOILET, "Toilet");
 
         //ITEM GROUPS
         builder.add("itemgroup.urban_decor", "Urban Decor");

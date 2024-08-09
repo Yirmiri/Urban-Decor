@@ -22,6 +22,6 @@ public class RegisterItems {
         return Registry.register(Registries.ITEM, Identifier.of(UrbanDecor.MOD_ID, id), item);
     }
 
-    public static void registerItems() {
+    public static void loadItems() {
     }
 }

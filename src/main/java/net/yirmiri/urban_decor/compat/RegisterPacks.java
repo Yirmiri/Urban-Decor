@@ -23,7 +23,7 @@ public class RegisterPacks {
         );
     }
 
-    public static void registerPacks() {
+    public static void loadPacks() {
         Optional<ModContainer> container = FabricLoader.getInstance().getModContainer(UrbanDecor.MOD_ID);
         if (container.isPresent()) {
             if (UrbanDecor.isModLoaded("excessive_building")) {
