@@ -2,17 +2,17 @@ package net.yirmiri.urban_decor.block.entity;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
+import net.minecraft.block.CampfireBlock;
 import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.block.entity.CampfireBlockEntity;
 import net.minecraft.entity.Entity;
-import net.minecraft.inventory.Inventory;
-import net.minecraft.inventory.SimpleInventory;
+import net.minecraft.entity.LivingEntity;
 import net.minecraft.item.ItemStack;
+import net.minecraft.particle.ParticleTypes;
 import net.minecraft.recipe.CampfireCookingRecipe;
 import net.minecraft.recipe.RecipeManager;
 import net.minecraft.recipe.RecipeType;
-import net.minecraft.sound.SoundCategory;
-import net.minecraft.sound.SoundEvents;
+import net.minecraft.recipe.input.SingleStackRecipeInput;
 import net.minecraft.util.Clearable;
 import net.minecraft.util.ItemScatterer;
 import net.minecraft.util.collection.DefaultedList;
@@ -27,13 +27,17 @@ import net.yirmiri.urban_decor.registry.RegisterBlockEntities;
 import org.jetbrains.annotations.Nullable;
 
 public class ToasterBlockEntity extends CampfireBlockEntity implements Clearable {
-    private final DefaultedList<ItemStack> itemsBeingCooked = DefaultedList.ofSize(2, ItemStack.EMPTY);
-    private final int[] cookingTimes = new int[2];
-    private final int[] cookingTotalTimes = new int[2];
-    private final RecipeManager.MatchGetter<Inventory, CampfireCookingRecipe> matchGetter = RecipeManager.createCachedMatchGetter(RecipeType.CAMPFIRE_COOKING);
+    private final DefaultedList<ItemStack> itemsBeingCooked;
+    private final int[] cookingTimes;
+    private final int[] cookingTotalTimes;
+    private final RecipeManager.MatchGetter<SingleStackRecipeInput, CampfireCookingRecipe> matchGetter;
 
     public ToasterBlockEntity(BlockPos pos, BlockState state) {
         super(pos, state);
+        this.itemsBeingCooked = DefaultedList.ofSize(2, ItemStack.EMPTY);
+        this.cookingTimes = new int[2];
+        this.cookingTotalTimes = new int[2];
+        this.matchGetter = RecipeManager.createCachedMatchGetter(RecipeType.CAMPFIRE_COOKING);
     }
 
     @Override
@@ -44,21 +48,20 @@ public class ToasterBlockEntity extends CampfireBlockEntity implements Clearable
     public static void litServerTick(World world, BlockPos pos, BlockState state, ToasterBlockEntity toaster) {
         boolean bl = false;
 
-        for (int i = 0; i < toaster.itemsBeingCooked.size(); i++) {
+        for(int i = 0; i < toaster.itemsBeingCooked.size(); ++i) {
             ItemStack itemStack = toaster.itemsBeingCooked.get(i);
             if (!itemStack.isEmpty()) {
                 bl = true;
-                toaster.cookingTimes[i]++;
+                int var10002 = toaster.cookingTimes[i]++;
                 if (toaster.cookingTimes[i] >= toaster.cookingTotalTimes[i]) {
-                    Inventory inventory = new SimpleInventory(itemStack);
-                    ItemStack itemStack2 = toaster.matchGetter
-                            .getFirstMatch(inventory, world)
-                            .map(recipe -> recipe.craft(inventory, world.getRegistryManager()))
-                            .orElse(itemStack);
+                    SingleStackRecipeInput singleStackRecipeInput = new SingleStackRecipeInput(itemStack);
+                    ItemStack itemStack2 = toaster.matchGetter.getFirstMatch(singleStackRecipeInput, world).map((recipe) -> {
+                        return (recipe.value()).craft(singleStackRecipeInput, world.getRegistryManager());
+                    }).orElse(itemStack);
                     if (itemStack2.isItemEnabled(world.getEnabledFeatures())) {
                         ItemScatterer.spawn(world, pos.getX(), pos.getY(), pos.getZ(), itemStack2);
                         toaster.itemsBeingCooked.set(i, ItemStack.EMPTY);
-                        world.updateListeners(pos, state, state, Block.NOTIFY_ALL);
+                        world.updateListeners(pos, state, state, 3);
                         world.emitGameEvent(GameEvent.BLOCK_CHANGE, pos, GameEvent.Emitter.of(state));
                     }
                 }
@@ -89,15 +92,15 @@ public class ToasterBlockEntity extends CampfireBlockEntity implements Clearable
         }
     }
 
-    public boolean addItem(@Nullable Entity user, ItemStack stack, int cookTime) {
-        for (int i = 0; i < itemsBeingCooked.size(); i++) {
-            ItemStack itemStack = itemsBeingCooked.get(i);
+    public boolean addItem(@Nullable LivingEntity user, ItemStack stack, int cookTime) {
+        for(int i = 0; i < this.itemsBeingCooked.size(); ++i) {
+            ItemStack itemStack = this.itemsBeingCooked.get(i);
             if (itemStack.isEmpty()) {
-                cookingTotalTimes[i] = cookTime;
-                cookingTimes[i] = 0;
-                itemsBeingCooked.set(i, stack.split(1));
-                world.emitGameEvent(GameEvent.BLOCK_CHANGE, getPos(), GameEvent.Emitter.of(user, getCachedState()));
-                updateListeners();
+                this.cookingTotalTimes[i] = cookTime;
+                this.cookingTimes[i] = 0;
+                this.itemsBeingCooked.set(i, stack.splitUnlessCreative(1, user));
+                this.world.emitGameEvent(GameEvent.BLOCK_CHANGE, this.getPos(), GameEvent.Emitter.of(user, this.getCachedState()));
+                this.updateListeners();
                 return true;
             }
         }
@@ -110,16 +113,6 @@ public class ToasterBlockEntity extends CampfireBlockEntity implements Clearable
     }
 
     public static void clientTick(World world, BlockPos pos, BlockState state, ToasterBlockEntity toaster) {
-        Random random = world.random;
-        int i = (state.get(ToasterBlock.FACING)).getHorizontal();
-        for (int j = 0; j < toaster.itemsBeingCooked.size(); j++) {
-            if (!toaster.itemsBeingCooked.get(j).isEmpty() && random.nextFloat() < 0.2F) {
-                Direction direction = Direction.fromHorizontal(Math.floorMod(j + i, 4));
-                float f = 0.3125F;
-                double d = pos.getX() + 0.5 - (direction.getOffsetX() * 0.3125F) + (direction.rotateYClockwise().getOffsetX() * 0.3125F);
-                double e = pos.getY() + 0.5;
-                double g = pos.getZ() + 0.5 - (direction.getOffsetZ() * 0.3125F) + (direction.rotateYClockwise().getOffsetZ() * 0.3125F);
-            }
-        }
+
     }
 }

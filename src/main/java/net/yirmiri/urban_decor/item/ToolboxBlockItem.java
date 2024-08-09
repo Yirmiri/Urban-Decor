@@ -1,17 +1,12 @@
 package net.yirmiri.urban_decor.item;
 
 import net.minecraft.block.Block;
-import net.minecraft.client.item.TooltipContext;
-import net.minecraft.item.BlockItem;
-import net.minecraft.item.ItemPlacementContext;
-import net.minecraft.item.ItemStack;
-import net.minecraft.item.ItemUsageContext;
+import net.minecraft.item.*;
+import net.minecraft.item.tooltip.TooltipType;
 import net.minecraft.screen.ScreenTexts;
 import net.minecraft.text.Text;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Formatting;
-import net.minecraft.world.World;
-import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
 
@@ -35,8 +30,8 @@ public class ToolboxBlockItem extends BlockItem {
     }
 
     @Override
-    public void appendTooltip(ItemStack stack, @Nullable World world, List<net.minecraft.text.Text> tooltip, TooltipContext ctx) {
-        super.appendTooltip(stack, world, tooltip, ctx);
+    public void appendTooltip(ItemStack stack, Item.TooltipContext ctx, List<Text> tooltip, TooltipType options) {
+        super.appendTooltip(stack, ctx, tooltip, options);
         tooltip.add(ScreenTexts.EMPTY);
         tooltip.add(Text.translatable("item.urban_decor.toolbox.use").formatted(Formatting.GRAY));
         tooltip.add(ScreenTexts.space().append(Text.translatable("item.urban_decor.toolbox.desc").formatted(Formatting.BLUE)));

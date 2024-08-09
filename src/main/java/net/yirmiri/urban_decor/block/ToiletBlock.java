@@ -14,6 +14,7 @@ import net.minecraft.state.property.Properties;
 import net.minecraft.text.Text;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
+import net.minecraft.util.ItemActionResult;
 import net.minecraft.util.function.BooleanBiFunction;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
@@ -71,7 +72,7 @@ public class ToiletBlock extends AbstractDecorBlock {
     }
 
     @Override
-    public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
+    public ItemActionResult onUseWithItem(ItemStack stack, BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
         ItemStack stackHand = player.getStackInHand(hand);
         if (player.getMainHandStack().isEmpty()) {
             if (player.isSneaking()) {
@@ -89,14 +90,14 @@ public class ToiletBlock extends AbstractDecorBlock {
                 player.startRiding(toiletEntity);
                 player.incrementStat(UDStats.TIMES_SAT);
             }
-            return ActionResult.SUCCESS;
+            return ItemActionResult.SUCCESS;
         } else if (stackHand.isIn(UDItemTagProvider.TOOLBOXES)) {
             world.setBlockState(pos, state.cycle(ALT));
             UDUtils.ToolboxUsed(world, pos);
             player.sendMessage(Text.translatable("toolbox.toilet.variant_" + state.get(ALT)), true);
-            return ActionResult.SUCCESS;
+            return ItemActionResult.SUCCESS;
         }
-        return ActionResult.PASS;
+        return ItemActionResult.PASS_TO_DEFAULT_BLOCK_INTERACTION;
     }
 
     @Override

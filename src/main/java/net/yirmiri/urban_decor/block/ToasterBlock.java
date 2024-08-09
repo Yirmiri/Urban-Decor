@@ -4,12 +4,14 @@ import net.minecraft.block.*;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.block.entity.BlockEntityTicker;
 import net.minecraft.block.entity.BlockEntityType;
+import net.minecraft.block.entity.CampfireBlockEntity;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.recipe.CampfireCookingRecipe;
+import net.minecraft.recipe.RecipeEntry;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.state.StateManager;
@@ -17,6 +19,7 @@ import net.minecraft.state.property.BooleanProperty;
 import net.minecraft.state.property.Properties;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
+import net.minecraft.util.ItemActionResult;
 import net.minecraft.util.ItemScatterer;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
@@ -60,7 +63,7 @@ public class ToasterBlock extends CampfireBlock implements Waterloggable {
         if (state.get(WATERLOGGED) && state.get(LIT)) {
             entity.damage(RegisterDamageTypes.of(entity.getWorld(), RegisterDamageTypes.TOASTER), 10);
         }
-        if (!entity.bypassesSteppingEffects() && entity instanceof LivingEntity && !EnchantmentHelper.hasFrostWalker((LivingEntity)entity)) {
+        if (!entity.bypassesSteppingEffects() && entity instanceof LivingEntity) {
             entity.damage(world.getDamageSources().hotFloor(), fireDamage);
         }
 
@@ -79,23 +82,23 @@ public class ToasterBlock extends CampfireBlock implements Waterloggable {
     }
 
     @Override
-    public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
+    public ItemActionResult onUseWithItem(ItemStack stack, BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
         if (world.getBlockEntity(pos) instanceof ToasterBlockEntity toasterBlockEntity) {
             ItemStack itemStack = player.getStackInHand(hand);
-            Optional<CampfireCookingRecipe> optional = toasterBlockEntity.getRecipeFor(itemStack);
+            Optional<RecipeEntry<CampfireCookingRecipe>> optional = toasterBlockEntity.getRecipeFor(itemStack);
 
             if (optional.isPresent() && state.get(LIT)) {
-                if (!world.isClient && toasterBlockEntity.addItem(player, player.getAbilities().creativeMode ? itemStack.copy() : itemStack, (optional.get()).getCookTime()))
+                if (!world.isClient && toasterBlockEntity.addItem(player, player.getAbilities().creativeMode ? itemStack.copy() : itemStack, (optional.get()).value().getCookingTime()))
                     world.playSound(pos.getX(), pos.getY(), pos.getZ(), SoundEvents.ENTITY_ITEM_FRAME_ADD_ITEM, SoundCategory.BLOCKS, 0.5F, 1.0F, false);
-                return ActionResult.CONSUME;
+                return ItemActionResult.CONSUME;
 
             } else if (player.getMainHandStack().isEmpty()) {
                 world.setBlockState(pos, state.cycle(LIT));
                 world.playSound(pos.getX(), pos.getY(), pos.getZ(), SoundEvents.BLOCK_LEVER_CLICK, SoundCategory.BLOCKS, 0.8F, 1.0F, false);
-                return ActionResult.SUCCESS;
+                return ItemActionResult.SUCCESS;
             }
         }
-        return ActionResult.PASS;
+        return ItemActionResult.PASS_TO_DEFAULT_BLOCK_INTERACTION;
     }
 
     @Override
@@ -108,14 +111,12 @@ public class ToasterBlock extends CampfireBlock implements Waterloggable {
         return new ToasterBlockEntity(pos, state);
     }
 
-    @Nullable @Override
+    @Override @Nullable
     public <T extends BlockEntity> BlockEntityTicker<T> getTicker(World world, BlockState state, BlockEntityType<T> type) {
         if (world.isClient) {
-            return state.get(LIT) ? checkType(type, RegisterBlockEntities.TOASTER, ToasterBlockEntity::clientTick) : null;
+            return state.get(LIT) ? validateTicker(type, RegisterBlockEntities.TOASTER, ToasterBlockEntity::clientTick) : null;
         } else {
-            return state.get(LIT)
-                    ? checkType(type, RegisterBlockEntities.TOASTER, ToasterBlockEntity::litServerTick)
-                    : checkType(type, RegisterBlockEntities.TOASTER, ToasterBlockEntity::unlitServerTick);
+            return state.get(LIT) ? validateTicker(type, RegisterBlockEntities.TOASTER, ToasterBlockEntity::litServerTick) : validateTicker(type, RegisterBlockEntities.TOASTER, ToasterBlockEntity::unlitServerTick);
         }
     }
 }

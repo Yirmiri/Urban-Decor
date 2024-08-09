@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "#": {
+      "item": "urban_decor:porcelain"
+    },
+    "@": {
+      "item": "urban_decor:dark_porcelain"
+    }
+  },
+  "pattern": [
+    "@#",
+    "#@"
+  ],
+  "result": {
+    "count": 1,
+    "id": "urban_decor:checkered_porcelain_tiles"
+  }
+}

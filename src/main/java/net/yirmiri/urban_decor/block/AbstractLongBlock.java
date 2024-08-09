@@ -5,7 +5,6 @@ import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.enums.BedPart;
 import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.ai.pathing.NavigationType;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemPlacementContext;
 import net.minecraft.item.ItemStack;
@@ -14,7 +13,6 @@ import net.minecraft.state.property.Properties;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
 import net.minecraft.util.math.MathHelper;
-import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
 import net.minecraft.world.WorldAccess;
 import net.minecraft.world.WorldEvents;
@@ -41,7 +39,7 @@ public abstract class AbstractLongBlock extends AbstractDecorBlock {
     }
 
     @Override
-    public void onBreak(World world, BlockPos pos, BlockState state, PlayerEntity player) {
+    public BlockState onBreak(World world, BlockPos pos, BlockState state, PlayerEntity player) {
         if (!world.isClient && player.isCreative()) {
             BedPart bedPart = state.get(PART);
             if (bedPart == BedPart.FOOT) {
@@ -54,7 +52,7 @@ public abstract class AbstractLongBlock extends AbstractDecorBlock {
             }
         }
 
-        super.onBreak(world, pos, state, player);
+        return super.onBreak(world, pos, state, player);
     }
 
     @Nullable @Override
@@ -83,8 +81,8 @@ public abstract class AbstractLongBlock extends AbstractDecorBlock {
         return MathHelper.hashCode(blockPos.getX(), pos.getY(), blockPos.getZ());
     }
 
-    @Override
-    public boolean canPathfindThrough(BlockState state, BlockView world, BlockPos pos, NavigationType type) {
-        return false;
-    }
+//    @Override
+//    public boolean canPathfindThrough(BlockState state, BlockView world, BlockPos pos, NavigationType type) {
+//        return false;
+//    }
 }

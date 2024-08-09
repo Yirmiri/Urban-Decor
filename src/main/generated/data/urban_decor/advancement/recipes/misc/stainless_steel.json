@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_stainless_steel_block": {
+      "conditions": {
+        "items": [
+          {
+            "items": "urban_decor:stainless_steel_block"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:stainless_steel"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_stainless_steel_block"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:stainless_steel"
+    ]
+  }
+}

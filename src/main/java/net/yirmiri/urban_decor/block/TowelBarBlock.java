@@ -12,6 +12,7 @@ import net.minecraft.state.StateManager;
 import net.minecraft.state.property.Properties;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
+import net.minecraft.util.ItemActionResult;
 import net.minecraft.util.function.BooleanBiFunction;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
@@ -63,7 +64,7 @@ public class TowelBarBlock extends AbstractDecorBlock {
     }
 
     @Override
-    public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
+    public ItemActionResult onUseWithItem(ItemStack stack, BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
         ItemStack itemStack = player.getStackInHand(hand);
         Item item = itemStack.getItem();
         if (itemStack.isIn(UDItemTagProvider.TOWELS)) {
@@ -76,9 +77,9 @@ public class TowelBarBlock extends AbstractDecorBlock {
                 world.setBlockState(pos, TowelBarTowelBlock.getTowelColors(block).with(FACING, state.get(FACING)));
                 world.emitGameEvent(player, GameEvent.BLOCK_CHANGE, pos);
                 player.incrementStat(Stats.USED.getOrCreateStat(item));
-                return ActionResult.SUCCESS;
+                return ItemActionResult.SUCCESS;
             }
         }
-        return ActionResult.PASS;
+        return ItemActionResult.PASS_TO_DEFAULT_BLOCK_INTERACTION;
     }
 }

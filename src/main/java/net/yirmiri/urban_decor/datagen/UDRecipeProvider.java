@@ -3,29 +3,29 @@ package net.yirmiri.urban_decor.datagen;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
-import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
-import net.minecraft.data.server.recipe.RecipeJsonProvider;
+import net.minecraft.data.server.recipe.RecipeExporter;
 import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
 import net.minecraft.item.ItemConvertible;
 import net.minecraft.item.Items;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.recipe.book.RecipeCategory;
+import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.util.DyeColor;
 import net.minecraft.util.Identifier;
 import net.yirmiri.urban_decor.UrbanDecor;
 import net.yirmiri.urban_decor.registry.RegisterBlocks;
 import net.yirmiri.urban_decor.registry.RegisterItems;
 
-import java.util.function.Consumer;
+import java.util.concurrent.CompletableFuture;
 
 public class UDRecipeProvider extends FabricRecipeProvider {
-    public UDRecipeProvider(FabricDataOutput output) {
-        super(output);
+    public UDRecipeProvider(FabricDataOutput output, CompletableFuture<RegistryWrapper.WrapperLookup> future) {
+        super(output, future);
     }
 
     @Override
-    public void generate(Consumer<RecipeJsonProvider> exporter) {
+    public void generate(RecipeExporter exporter) {
         createTwoByTwoRecipe(RegisterBlocks.PORCELAIN_TILES, 1,
                 Ingredient.ofItems(RegisterItems.PORCELAIN))
                 .criterion(hasItem(RegisterItems.PORCELAIN), conditionsFromItem(RegisterItems.PORCELAIN))

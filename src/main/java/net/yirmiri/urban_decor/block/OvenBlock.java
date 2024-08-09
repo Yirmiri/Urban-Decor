@@ -11,8 +11,8 @@ import net.minecraft.state.StateManager;
 import net.minecraft.state.property.BooleanProperty;
 import net.minecraft.state.property.Properties;
 import net.minecraft.text.Text;
-import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
+import net.minecraft.util.ItemActionResult;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
@@ -47,7 +47,7 @@ public class OvenBlock extends AbstractDecorBlock {
     }
 
     @Override
-    public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
+    public ItemActionResult onUseWithItem(ItemStack stack, BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
         ItemStack stackHand = player.getStackInHand(hand);
         if (player.getMainHandStack().isEmpty()) {
             world.setBlockState(pos, state.cycle(OPEN));
@@ -56,14 +56,14 @@ public class OvenBlock extends AbstractDecorBlock {
             } else if (!state.get(OPEN)) {
                 world.playSound(pos.getX(), pos.getY(), pos.getZ(), SoundEvents.BLOCK_CHERRY_WOOD_DOOR_OPEN, SoundCategory.BLOCKS, 1.0F, 1.0F, false);
             }
-            return ActionResult.SUCCESS;
+            return ItemActionResult.SUCCESS;
         } else if (stackHand.isIn(UDItemTagProvider.TOOLBOXES)) {
             world.setBlockState(pos, state.cycle(OPAQUE));
             UDUtils.ToolboxUsed(world, pos);
             player.sendMessage(Text.translatable("toolbox.oven.variant_" + state.get(OPAQUE)), true);
-            return ActionResult.SUCCESS;
+            return ItemActionResult.SUCCESS;
         }
-        return ActionResult.PASS;
+        return ItemActionResult.PASS_TO_DEFAULT_BLOCK_INTERACTION;
     }
 
     @Override

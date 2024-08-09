@@ -16,15 +16,18 @@ import net.minecraft.loot.entry.LootPoolEntry;
 import net.minecraft.loot.function.SetCountLootFunction;
 import net.minecraft.loot.provider.number.ConstantLootNumberProvider;
 import net.minecraft.predicate.StatePredicate;
+import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.util.DyeColor;
 import net.yirmiri.urban_decor.block.AbstractLongBlock;
 import net.yirmiri.urban_decor.block.BathtubBlock;
 import net.yirmiri.urban_decor.registry.RegisterBlocks;
 import net.yirmiri.urban_decor.registry.RegisterItems;
 
+import java.util.concurrent.CompletableFuture;
+
 public class UDLootTableProvider extends FabricBlockLootTableProvider {
-    public UDLootTableProvider(FabricDataOutput output) {
-        super(output);
+    public UDLootTableProvider(FabricDataOutput output, CompletableFuture<RegistryWrapper.WrapperLookup> lookup) {
+        super(output, lookup);
     }
 
     @Override

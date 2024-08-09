@@ -8,10 +8,12 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.state.StateManager;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
+import net.minecraft.util.ItemActionResult;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
+import net.minecraft.world.WorldView;
 import net.yirmiri.urban_decor.registry.RegisterBlocks;
 
 import java.util.Map;
@@ -27,12 +29,12 @@ public class TowelBarTowelBlock extends TowelBarBlock {
     }
 
     @Override
-    public ItemStack getPickStack(BlockView world, BlockPos pos, BlockState state) {
+    public ItemStack getPickStack(WorldView world, BlockPos pos, BlockState state) {
         return new ItemStack(RegisterBlocks.TOWEL_BAR);
     }
 
     @Override
-    public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
+    public ItemActionResult onUseWithItem(ItemStack stack, BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
         ItemStack itemStack = player.getStackInHand(hand);
         ItemStack towel = new ItemStack(this.towel);
         if (!player.isCreative()) {
@@ -43,9 +45,9 @@ public class TowelBarTowelBlock extends TowelBarBlock {
             }
 
             world.setBlockState(pos, RegisterBlocks.TOWEL_BAR.getDefaultState().with(FACING, state.get(FACING)), Block.NOTIFY_ALL);
-            return ActionResult.SUCCESS;
+            return ItemActionResult.SUCCESS;
         }
-        return ActionResult.PASS;
+        return ItemActionResult.PASS_TO_DEFAULT_BLOCK_INTERACTION;
     }
 
     public static BlockState getTowelColors(Block towel) {

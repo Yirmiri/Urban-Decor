@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_checkered_porcelain_tiles": {
+      "conditions": {
+        "items": [
+          {
+            "items": "urban_decor:checkered_porcelain_tiles"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:checkered_porcelain_tile_stairs_from_checkered_porcelain_tiles_stonecutting"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_checkered_porcelain_tiles"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:checkered_porcelain_tile_stairs_from_checkered_porcelain_tiles_stonecutting"
+    ]
+  }
+}

@@ -3,6 +3,7 @@ package net.yirmiri.urban_decor.entity;
 import net.minecraft.block.BlockState;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
+import net.minecraft.entity.data.DataTracker;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.world.World;
 import net.yirmiri.urban_decor.block.ToiletBlock;
@@ -32,7 +33,7 @@ public class ToiletEntity extends Entity {
     }
 
     @Override
-    protected void initDataTracker() {
+    protected void initDataTracker(DataTracker.Builder builder) {
 
     }
 

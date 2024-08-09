@@ -2,6 +2,7 @@ package net.yirmiri.urban_decor.datagen;
 
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricLanguageProvider;
+import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.util.DyeColor;
 import net.yirmiri.urban_decor.registry.RegisterBlocks;
 import net.yirmiri.urban_decor.registry.RegisterEntities;
@@ -9,121 +10,125 @@ import net.yirmiri.urban_decor.registry.RegisterItems;
 import net.yirmiri.urban_decor.util.UDStats;
 import org.apache.commons.lang3.StringUtils;
 
+import java.util.concurrent.CompletableFuture;
+
 public class UDLangProvider extends FabricLanguageProvider {
-    public UDLangProvider(FabricDataOutput dataGenerator) {
-        super(dataGenerator, "en_us");
+    public UDLangProvider(FabricDataOutput dataGenerator, CompletableFuture<RegistryWrapper.WrapperLookup> lookup) {
+        super(dataGenerator, "en_us", lookup);
     }
 
     @Override
-    public void generateTranslations(TranslationBuilder builder) {
+    public void generateTranslations(RegistryWrapper.WrapperLookup lookup, TranslationBuilder build) {
         for (DyeColor colors : DyeColor.values()) {
             String dyeString = StringUtils.capitalize(StringUtils.replace(StringUtils.replace(StringUtils.replace(colors.getName(),
                     "_", " "), "gray", "Gray"), "blue", "Blue"));
 
-            builder.add(RegisterBlocks.getDyedTowels(colors.getId()), dyeString + " Towel");
-            builder.add(RegisterBlocks.getDyedTowelBarTowels(colors.getId()), dyeString + " Towel Bar");
-            builder.add(RegisterBlocks.getDyedTowelBlocks(colors.getId()), dyeString + " Towel Block");
+            build.add(RegisterBlocks.getDyedTowels(colors.getId()), dyeString + " Towel");
+            build.add(RegisterBlocks.getDyedTowelBarTowels(colors.getId()), dyeString + " Towel Bar");
+            build.add(RegisterBlocks.getDyedTowelBlocks(colors.getId()), dyeString + " Towel Block");
         }
 
         //BLOCKS
-        builder.add(RegisterBlocks.PORCELAIN_TILES, "Porcelain Tiles");
-        builder.add(RegisterBlocks.PORCELAIN_TILE_STAIRS, "Porcelain Tile Stairs");
-        builder.add(RegisterBlocks.PORCELAIN_TILE_SLAB, "Porcelain Tile Slab");
-        builder.add(RegisterBlocks.DARK_PORCELAIN_TILES, "Dark Porcelain Tiles");
-        builder.add(RegisterBlocks.DARK_PORCELAIN_TILE_STAIRS, "Dark Porcelain Tile Stairs");
-        builder.add(RegisterBlocks.DARK_PORCELAIN_TILE_SLAB, "Dark Porcelain Tile Slab");
-        builder.add(RegisterBlocks.CHECKERED_PORCELAIN_TILES, "Checkered Porcelain Tiles");
-        builder.add(RegisterBlocks.CHECKERED_PORCELAIN_TILE_STAIRS, "Checkered Porcelain Tile Stairs");
-        builder.add(RegisterBlocks.CHECKERED_PORCELAIN_TILE_SLAB, "Checkered Porcelain Tile Slab");
-        builder.add(RegisterBlocks.CHROMITE, "Chromite");
-        builder.add(RegisterBlocks.CHROMITE_STAIRS, "Chromite Stairs");
-        builder.add(RegisterBlocks.CHROMITE_SLAB, "Chromite Slab");
-        builder.add(RegisterBlocks.CHROMITE_WALL, "Chromite Wall");
-        builder.add(RegisterBlocks.POLISHED_CHROMITE, "Polished Chromite");
-        builder.add(RegisterBlocks.POLISHED_CHROMITE_STAIRS, "Polished Chromite Stairs");
-        builder.add(RegisterBlocks.POLISHED_CHROMITE_SLAB, "Polished Chromite Slab");
-        builder.add(RegisterBlocks.STAINLESS_STEEL_BLOCK, "Block of Stainless Steel");
+        build.add(RegisterBlocks.PORCELAIN_TILES, "Porcelain Tiles");
+        build.add(RegisterBlocks.PORCELAIN_TILE_STAIRS, "Porcelain Tile Stairs");
+        build.add(RegisterBlocks.PORCELAIN_TILE_SLAB, "Porcelain Tile Slab");
+        build.add(RegisterBlocks.DARK_PORCELAIN_TILES, "Dark Porcelain Tiles");
+        build.add(RegisterBlocks.DARK_PORCELAIN_TILE_STAIRS, "Dark Porcelain Tile Stairs");
+        build.add(RegisterBlocks.DARK_PORCELAIN_TILE_SLAB, "Dark Porcelain Tile Slab");
+        build.add(RegisterBlocks.CHECKERED_PORCELAIN_TILES, "Checkered Porcelain Tiles");
+        build.add(RegisterBlocks.CHECKERED_PORCELAIN_TILE_STAIRS, "Checkered Porcelain Tile Stairs");
+        build.add(RegisterBlocks.CHECKERED_PORCELAIN_TILE_SLAB, "Checkered Porcelain Tile Slab");
+        build.add(RegisterBlocks.CHROMITE, "Chromite");
+        build.add(RegisterBlocks.CHROMITE_STAIRS, "Chromite Stairs");
+        build.add(RegisterBlocks.CHROMITE_SLAB, "Chromite Slab");
+        build.add(RegisterBlocks.CHROMITE_WALL, "Chromite Wall");
+        build.add(RegisterBlocks.POLISHED_CHROMITE, "Polished Chromite");
+        build.add(RegisterBlocks.POLISHED_CHROMITE_STAIRS, "Polished Chromite Stairs");
+        build.add(RegisterBlocks.POLISHED_CHROMITE_SLAB, "Polished Chromite Slab");
+        build.add(RegisterBlocks.STAINLESS_STEEL_BLOCK, "Block of Stainless Steel");
 
         //APPLIANCES
-        builder.add(RegisterBlocks.TRASH_CAN, "Trash Can");
-        builder.add(RegisterBlocks.MICROWAVE, "Microwave");
-        builder.add(RegisterBlocks.SINK, "Sink");
-        builder.add(RegisterBlocks.TOILET, "Toilet");
-        builder.add(RegisterBlocks.WASHING_MACHINE, "Washing Machine");
-        builder.add(RegisterBlocks.DRYER, "Dryer");
-        builder.add(RegisterBlocks.TOASTER, "Toaster");
-        builder.add(RegisterBlocks.AIR_CONDITIONER, "Air Conditioner");
-        builder.add(RegisterBlocks.DESK_FAN, "Desk Fan");
-        builder.add(RegisterBlocks.FAUCET, "Faucet");
-        builder.add(RegisterBlocks.OVEN, "Oven");
-        builder.add(RegisterBlocks.RADIATOR, "Radiator");
-        builder.add(RegisterBlocks.STOVE, "Stove");
-        builder.add(RegisterBlocks.FRIDGE, "Fridge");
-        builder.add(RegisterBlocks.FREEZER, "Freezer");
-        builder.add(RegisterBlocks.TURBINE, "Turbine");
-        builder.add(RegisterBlocks.DARK_SINK, "Dark Sink");
-        builder.add(RegisterBlocks.DARK_TOILET, "Dark Toilet");
-        builder.add(RegisterBlocks.DARK_WASHING_MACHINE, "Dark Washing Machine");
-        builder.add(RegisterBlocks.DARK_DRYER, "Dark Dryer");
-        builder.add(RegisterBlocks.DARK_FRIDGE, "Dark Fridge");
-        builder.add(RegisterBlocks.DARK_FREEZER, "Dark Freezer");
-        builder.add(RegisterBlocks.DARK_OVEN, "Dark Oven");
-        builder.add(RegisterBlocks.TOWEL_BAR, "Towel Bar");
-        builder.add(RegisterBlocks.SATELLITE_DISH, "Satellite Dish");
-        builder.add(RegisterBlocks.SHOWER, "Shower");
-        builder.add(RegisterBlocks.BATHTUB, "Bathtub");
-        builder.add(RegisterBlocks.DARK_BATHTUB, "Dark Bathtub");
-        builder.add(RegisterBlocks.RIGID_GLASS, "Rigid Glass");
+        build.add(RegisterBlocks.TRASH_CAN, "Trash Can");
+        build.add(RegisterBlocks.MICROWAVE, "Microwave");
+        build.add(RegisterBlocks.SINK, "Sink");
+        build.add(RegisterBlocks.TOILET, "Toilet");
+        build.add(RegisterBlocks.WASHING_MACHINE, "Washing Machine");
+        build.add(RegisterBlocks.DRYER, "Dryer");
+        build.add(RegisterBlocks.TOASTER, "Toaster");
+        build.add(RegisterBlocks.AIR_CONDITIONER, "Air Conditioner");
+        build.add(RegisterBlocks.DESK_FAN, "Desk Fan");
+        build.add(RegisterBlocks.FAUCET, "Faucet");
+        build.add(RegisterBlocks.OVEN, "Oven");
+        build.add(RegisterBlocks.RADIATOR, "Radiator");
+        build.add(RegisterBlocks.STOVE, "Stove");
+        build.add(RegisterBlocks.FRIDGE, "Fridge");
+        build.add(RegisterBlocks.FREEZER, "Freezer");
+        build.add(RegisterBlocks.TURBINE, "Turbine");
+        build.add(RegisterBlocks.DARK_SINK, "Dark Sink");
+        build.add(RegisterBlocks.DARK_TOILET, "Dark Toilet");
+        build.add(RegisterBlocks.DARK_WASHING_MACHINE, "Dark Washing Machine");
+        build.add(RegisterBlocks.DARK_DRYER, "Dark Dryer");
+        build.add(RegisterBlocks.DARK_FRIDGE, "Dark Fridge");
+        build.add(RegisterBlocks.DARK_FREEZER, "Dark Freezer");
+        build.add(RegisterBlocks.DARK_OVEN, "Dark Oven");
+        build.add(RegisterBlocks.TOWEL_BAR, "Towel Bar");
+        build.add(RegisterBlocks.SATELLITE_DISH, "Satellite Dish");
+        build.add(RegisterBlocks.SHOWER, "Shower");
+        build.add(RegisterBlocks.BATHTUB, "Bathtub");
+        build.add(RegisterBlocks.DARK_BATHTUB, "Dark Bathtub");
+        build.add(RegisterBlocks.RIGID_GLASS, "Rigid Glass");
 
         //ITEMS
-        builder.add(RegisterItems.PORCELAIN, "Porcelain");
-        builder.add(RegisterItems.STAINLESS_STEEL, "Stainless Steel");
-        builder.add(RegisterItems.DARK_PORCELAIN, "Dark Porcelain");
-        builder.add(RegisterItems.TOOLBOX, "Toolbox");
-        builder.add(RegisterItems.STEEL_PIPE, "Steel Pipe");
+        build.add(RegisterItems.PORCELAIN, "Porcelain");
+        build.add(RegisterItems.STAINLESS_STEEL, "Stainless Steel");
+        build.add(RegisterItems.DARK_PORCELAIN, "Dark Porcelain");
+        build.add(RegisterItems.TOOLBOX, "Toolbox");
+        build.add(RegisterItems.STEEL_PIPE, "Steel Pipe");
 
         //STATS
-        builder.add(UDStats.TIMES_SAT, "Times Sat Down");
+        build.add(UDStats.TIMES_SAT, "Times Sat Down");
 
         //ENTITIES
-        builder.add(RegisterEntities.TOILET, "Toilet");
+        build.add(RegisterEntities.TOILET, "Toilet");
 
         //ITEM GROUPS
-        builder.add("itemgroup.urban_decor", "Urban Decor");
+        build.add("itemgroup.urban_decor", "Urban Decor");
 
         //TOOLTIPS
-        builder.add("item.urban_decor.toolbox.use", "When Used on Blocks:");
-        builder.add("item.urban_decor.toolbox.desc", "Changes the State of Some Blocks");
+        build.add("item.urban_decor.toolbox.use", "When Used on Blocks:");
+        build.add("item.urban_decor.toolbox.desc", "Changes the State of Some Blocks");
 
         //TOOLBOX
-        builder.add("toolbox.dryer.variant_true", "Variant: Transparent");
-        builder.add("toolbox.dryer.variant_false", "Variant: Opaque");
-        builder.add("toolbox.faucet.variant_true", "Variant: Indoor");
-        builder.add("toolbox.faucet.variant_false", "Variant: Outdoor");
-        builder.add("toolbox.fridge.variant_true", "Variant: Default");
-        builder.add("toolbox.fridge.variant_false", "Variant: Flipped");
-        builder.add("toolbox.oven.variant_true", "Variant: Transparent");
-        builder.add("toolbox.oven.variant_false", "Variant: Opaque");
-        builder.add("toolbox.satellite_dish.variant_true", "Variant: Grounded");
-        builder.add("toolbox.satellite_dish.variant_false", "Variant: Wall Mounted");
-        builder.add("toolbox.shower.variant_true", "Variant: Flat");
-        builder.add("toolbox.shower.variant_false", "Variant: Cylindrical");
-        builder.add("toolbox.sink.variant_2", "Variant: Default");
-        builder.add("toolbox.sink.variant_0", "Variant: Bare");
-        builder.add("toolbox.sink.variant_1", "Variant: Fullsize");
-        builder.add("toolbox.toilet.variant_true", "Variant: Tank");
-        builder.add("toolbox.toilet.variant_false", "Variant: Commercial");
-        builder.add("toolbox.trash_can.variant_2", "Variant: Mesh");
-        builder.add("toolbox.trash_can.variant_0", "Variant: Solid");
-        builder.add("toolbox.trash_can.variant_1", "Variant: Rectangular");
-        builder.add("toolbox.washing_machine.variant_true", "Variant: Transparent");
-        builder.add("toolbox.washing_machine.variant_false", "Variant: Opaque");
+        build.add("toolbox.dryer.variant_true", "Variant: Transparent");
+        build.add("toolbox.dryer.variant_false", "Variant: Opaque");
+        build.add("toolbox.faucet.variant_true", "Variant: Indoor");
+        build.add("toolbox.faucet.variant_false", "Variant: Outdoor");
+        build.add("toolbox.fridge.variant_true", "Variant: Default");
+        build.add("toolbox.fridge.variant_false", "Variant: Flipped");
+        build.add("toolbox.oven.variant_true", "Variant: Transparent");
+        build.add("toolbox.oven.variant_false", "Variant: Opaque");
+        build.add("toolbox.satellite_dish.variant_true", "Variant: Grounded");
+        build.add("toolbox.satellite_dish.variant_false", "Variant: Wall Mounted");
+        build.add("toolbox.shower.variant_true", "Variant: Flat");
+        build.add("toolbox.shower.variant_false", "Variant: Cylindrical");
+        build.add("toolbox.sink.variant_2", "Variant: Default");
+        build.add("toolbox.sink.variant_0", "Variant: Bare");
+        build.add("toolbox.sink.variant_1", "Variant: Fullsize");
+        build.add("toolbox.toilet.variant_true", "Variant: Tank");
+        build.add("toolbox.toilet.variant_false", "Variant: Commercial");
+        build.add("toolbox.trash_can.variant_2", "Variant: Mesh");
+        build.add("toolbox.trash_can.variant_0", "Variant: Solid");
+        build.add("toolbox.trash_can.variant_1", "Variant: Rectangular");
+        build.add("toolbox.washing_machine.variant_true", "Variant: Transparent");
+        build.add("toolbox.washing_machine.variant_false", "Variant: Opaque");
+        build.add("toolbox.microwave.variant_true", "Variant: Grounded");
+        build.add("toolbox.microwave.variant_false", "Variant: Wall Mounted");
 
         //DAMAGE
-        builder.add("death.attack.urban_decor.toaster", "%1$s likes to play with toasters in the tub");
-        builder.add("death.attack.urban_decor.toaster.player", "%2$s toasted %1$s into a delight");
+        build.add("death.attack.urban_decor.toaster", "%1$s likes to play with toasters in the tub");
+        build.add("death.attack.urban_decor.toaster.player", "%2$s toasted %1$s into a delight");
 
         //SUBTITLES
-        builder.add("subtitles.block.fridge.open", "Fridge opens");
+        build.add("subtitles.block.fridge.open", "Fridge opens");
     }
 }

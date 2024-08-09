@@ -5,7 +5,7 @@
 	"name": "Urban Decor",
 	"description": "If you are reading this you can blame Yirmiri for not adding a description",
 	"authors": [
-		"aridoitsu, Yirmiri"
+		"Yirmiri, tellioari"
 	],
 	"contact": {
 		"homepage": "https://modrinth.com/mod/urban-decor",
@@ -29,9 +29,9 @@
 		"urban_decor.mixins.json"
 	],
 	"depends": {
-		"fabricloader": ">=0.15.11",
-		"minecraft": "~1.20.1",
-		"java": ">=17",
+		"fabricloader": ">=0.16.0",
+		"minecraft": "~1.21",
+		"java": ">=21",
 		"fabric-api": "*"
 	}
 }

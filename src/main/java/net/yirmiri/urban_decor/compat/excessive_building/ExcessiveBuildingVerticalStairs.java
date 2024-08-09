@@ -25,6 +25,7 @@ import java.util.stream.Stream;
 
 //This only exists to not use Excessive Building as a dependency
 //Original code from https://github.com/Yirmiri/Excessive-Building/blob/main/src/main/java/net/yirmiri/excessive_building/block/VerticalStairsBlock.java
+//why did i put this comment here i own this mod bruh
 public class ExcessiveBuildingVerticalStairs extends Block implements Waterloggable {
     public static final DirectionProperty FACING = Properties.HORIZONTAL_FACING;
     public static final BooleanProperty WATERLOGGED = Properties.WATERLOGGED;
