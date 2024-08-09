@@ -43,6 +43,7 @@ public class RegisterItemGroups {
                 entries.add(RegisterBlocks.POLISHED_CHROMITE_SLAB);
 
                 entries.add(RegisterBlocks.STAINLESS_STEEL_BLOCK);
+                entries.add(RegisterBlocks.RIGID_GLASS);
 
                 entries.add(RegisterItems.TOOLBOX);
 

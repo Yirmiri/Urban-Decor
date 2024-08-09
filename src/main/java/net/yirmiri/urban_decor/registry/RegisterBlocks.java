@@ -39,6 +39,7 @@ public class RegisterBlocks {
     public static final Block POLISHED_CHROMITE_SLAB = register("polished_chromite_slab", new SlabBlock(UDProperties.BlockP.POLISHED_CHROMITE), true);
 
     public static final Block STAINLESS_STEEL_BLOCK = register("stainless_steel_block", new Block(UDProperties.BlockP.STAINLESS_STEEL), true);
+    public static final Block RIGID_GLASS = register("rigid_glass", new RigidGlassBlock(UDProperties.BlockP.RIGID_GLASS), true);
 
     //DECOR
     public static final Block TRASH_CAN = register("trash_can", new TrashCanBlock(UDProperties.BlockP.TRASH_CAN), true);

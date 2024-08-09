@@ -74,6 +74,7 @@ public class UDBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(RegisterBlocks.SHOWER)
                 .add(RegisterBlocks.BATHTUB)
                 .add(RegisterBlocks.DARK_BATHTUB)
+                .add(RegisterBlocks.RIGID_GLASS)
         ;
 
         for (DyeColor colors : DyeColor.values()) {

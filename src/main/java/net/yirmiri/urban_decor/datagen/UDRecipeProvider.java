@@ -578,6 +578,14 @@ public class UDRecipeProvider extends FabricRecipeProvider {
                 .pattern("@@")
                 .criterion(hasItem(Blocks.BROWN_WOOL), conditionsFromItem(Blocks.BROWN_WOOL))
                 .offerTo(exporter, Identifier.of(UrbanDecor.MOD_ID, getRecipeName(RegisterBlocks.getDyedTowelBlocks(DyeColor.BROWN.getId()))));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, RegisterBlocks.RIGID_GLASS, 3)
+                .input('#', RegisterItems.STAINLESS_STEEL).input('@', Items.GLASS_PANE)
+                .pattern("#@#")
+                .pattern("#@#")
+                .pattern("#@#")
+                .criterion(hasItem(RegisterItems.STAINLESS_STEEL), conditionsFromItem(RegisterItems.STAINLESS_STEEL))
+                .offerTo(exporter, Identifier.of(UrbanDecor.MOD_ID, getRecipeName(RegisterBlocks.RIGID_GLASS)));
     }
 //yes this only exists so i can name it four for four wendys meal... there is no need for this recipe builder
     public static ShapedRecipeJsonBuilder createFourForFourWendysMealRecipe(ItemConvertible output, Ingredient input) {

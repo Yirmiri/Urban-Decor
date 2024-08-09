@@ -1,6 +1,6 @@
-// 1.20.1	2024-08-09T08:22:25.3705071	Urban Decor/Tags for minecraft:block
+// 1.20.1	2024-08-09T08:43:38.7088074	Urban Decor/Tags for minecraft:block
 ad9450f6b5a2953700236655ae1bcf0d408d00c8 data\minecraft\tags\blocks\campfires.json
-43e469def73c801da208ea36901cf01cd62b92b3 data\minecraft\tags\blocks\mineable\pickaxe.json
+330da5e00ea23bb40fc8c85b8be29dc5eac56be0 data\minecraft\tags\blocks\mineable\pickaxe.json
 b470da8eaa96ac910797680a419a083280bd5cbf data\urban_decor\tags\blocks\toilets.json
 113e5ea8fe66e2ed0937b72ebb1f075a13694140 data\minecraft\tags\blocks\walls.json
 81f15f79c612278a665d2476315160bf5df998d3 data\minecraft\tags\blocks\wool.json

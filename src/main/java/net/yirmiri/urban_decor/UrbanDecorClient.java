@@ -35,6 +35,7 @@ public class UrbanDecorClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(RegisterBlocks.TOILET, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(RegisterBlocks.DARK_TOILET, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(RegisterBlocks.FAUCET, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(RegisterBlocks.RIGID_GLASS, RenderLayer.getCutout());
 
         //ENTITY
         EntityRendererRegistry.register(RegisterEntities.TOILET, InvisibleEntityRenderer::new);

@@ -11,16 +11,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "conditions": [
-            {
-              "block": "urban_decor:bathtub",
-              "condition": "minecraft:block_state_property",
-              "properties": {
-                "part": "head"
-              }
-            }
-          ],
-          "name": "urban_decor:bathtub"
+          "name": "urban_decor:rigid_glass"
         }
       ],
       "rolls": 1.0

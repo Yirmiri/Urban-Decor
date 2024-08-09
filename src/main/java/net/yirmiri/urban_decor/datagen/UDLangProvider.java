@@ -73,6 +73,7 @@ public class UDLangProvider extends FabricLanguageProvider {
         builder.add(RegisterBlocks.SHOWER, "Shower");
         builder.add(RegisterBlocks.BATHTUB, "Bathtub");
         builder.add(RegisterBlocks.DARK_BATHTUB, "Dark Bathtub");
+        builder.add(RegisterBlocks.RIGID_GLASS, "Rigid Glass");
 
         //ITEMS
         builder.add(RegisterItems.PORCELAIN, "Porcelain");

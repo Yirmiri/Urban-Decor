@@ -1,6 +1,6 @@
-// 1.20.1	2024-08-09T08:22:25.3904532	Urban Decor/Recipes
-7ca4525ea46adc0522dc70bbc1d739089e266a6c data\urban_decor\advancements\recipes\decorations\blue_towel.json
+// 1.20.1	2024-08-09T08:43:38.7207757	Urban Decor/Recipes
 2cca97bb51a90b13c8d999669404f99a592b6d28 data\urban_decor\recipes\magenta_towel.json
+7ca4525ea46adc0522dc70bbc1d739089e266a6c data\urban_decor\advancements\recipes\decorations\blue_towel.json
 b521db37d67fe9f9986c729cd5fa4164ab59ed0e data\urban_decor\recipes\chromite_wall_from_chromite_stonecutting.json
 ea4d6034941ff0bf3973ab9c5b9af1b0b3c7c0d4 data\urban_decor\recipes\checkered_porcelain_tiles.json
 3ceac8f919dada11034044aa134fde0353505892 data\urban_decor\recipes\toilet.json
@@ -60,6 +60,7 @@ c1011886167c7c74708c2898d4e17cf092a9e072 data\urban_decor\advancements\recipes\d
 127fd9825a1d72d1967f9e0189aca13cf8db5029 data\urban_decor\recipes\dark_porcelain_tile_slab.json
 f0c6ed6d4dd431533e41007aa261c5cde05365ec data\urban_decor\advancements\recipes\building_blocks\stainless_steel_block.json
 7d6e0d47f98c3f5cc5a9338757573632e0c87e7d data\urban_decor\advancements\recipes\building_blocks\checkered_porcelain_tiles.json
+314af67e122a8f4c152a794d8bf0399e31fa990e data\urban_decor\recipes\rigid_glass.json
 c1c66c1c8d33f701651b0aa342eba7fc34e97cd3 data\urban_decor\recipes\dark_oven.json
 389a3db6b031f1bbe1d23225fcbc00f247747673 data\urban_decor\advancements\recipes\decorations\brown_towel_block.json
 fb3253c3df1574b7c44c5dc5cb821dc34f788f11 data\urban_decor\advancements\recipes\decorations\dark_fridge.json
@@ -180,6 +181,7 @@ fb124471b073ec29c26bb8a7e40289125a8a6aac data\urban_decor\advancements\recipes\b
 28795c815223b3e881513dee8d7342f6ba179add data\urban_decor\advancements\recipes\decorations\yellow_towel_block.json
 22563cfe6b4bee7c36e62a3e5480abc02ef86f92 data\urban_decor\recipes\stainless_steel_from_chromite.json
 7e80d4a0091573044d67dd21814eecb673d54560 data\urban_decor\recipes\green_towel_block.json
+7060bbb11b835f22be183ec57d83cbc9a15c061d data\urban_decor\advancements\recipes\decorations\rigid_glass.json
 e872ce6c89c36d3e957efdb1d80127da1ee917d6 data\urban_decor\recipes\porcelain_tiles.json
 df8977ee46bcc33b8f6b91f41b93067d581ed542 data\urban_decor\advancements\recipes\decorations\sink.json
 4a1df7237ace4586f9f9440df519063f9fcba216 data\urban_decor\recipes\dark_washing_machine.json

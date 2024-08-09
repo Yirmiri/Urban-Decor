@@ -78,6 +78,7 @@ public class UDLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(RegisterBlocks.BATHTUB, longBlockDrops(RegisterBlocks.BATHTUB));
         addDrop(RegisterBlocks.DARK_BATHTUB, longBlockDrops(RegisterBlocks.DARK_BATHTUB));
         addDyedTowelBlockDrops();
+        addDrop(RegisterBlocks.RIGID_GLASS);
     }
 
     private void addDyedTowelBlockDrops() {
@@ -100,6 +101,6 @@ public class UDLootTableProvider extends FabricBlockLootTableProvider {
     }
 
     public LootTable.Builder longBlockDrops(Block block) {
-        return this.dropsWithProperty(block, AbstractLongBlock.PART, BedPart.FOOT);
+        return this.dropsWithProperty(block, AbstractLongBlock.PART, BedPart.HEAD);
     }
 }
