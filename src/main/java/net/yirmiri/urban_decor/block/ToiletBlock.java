@@ -7,12 +7,10 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
-import net.minecraft.stat.Stats;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.BooleanProperty;
 import net.minecraft.state.property.Properties;
 import net.minecraft.text.Text;
-import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
 import net.minecraft.util.ItemActionResult;
 import net.minecraft.util.function.BooleanBiFunction;
@@ -31,7 +29,6 @@ import net.yirmiri.urban_decor.util.UDUtils;
 
 import java.util.stream.Stream;
 
-@SuppressWarnings("deprecation")
 public class ToiletBlock extends AbstractDecorBlock {
     public static final BooleanProperty OCCUPIED = Properties.OCCUPIED;
     public static final BooleanProperty OPEN = BooleanProperty.of("open");
@@ -84,11 +81,12 @@ public class ToiletBlock extends AbstractDecorBlock {
                 }
             } else if (!player.isSneaking() && !state.get(OCCUPIED) && !world.isClient) {
                 ToiletEntity toiletEntity = RegisterEntities.TOILET.create(world);
+                assert toiletEntity != null;
                 toiletEntity.setPos(pos.getX() + 0.5D, pos.getY() + 0.15D, pos.getZ() + 0.5D);
                 world.spawnEntity(toiletEntity);
                 world.setBlockState(pos, state.with(OCCUPIED, true));
-                player.startRiding(toiletEntity);
                 player.incrementStat(UDStats.TIMES_SAT);
+                player.startRiding(toiletEntity);
             }
             return ItemActionResult.SUCCESS;
         } else if (stackHand.isIn(UDItemTagProvider.TOOLBOXES)) {
