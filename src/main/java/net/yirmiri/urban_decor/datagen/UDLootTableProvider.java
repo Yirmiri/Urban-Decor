@@ -2,24 +2,17 @@ package net.yirmiri.urban_decor.datagen;
 
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootTableProvider;
-import net.minecraft.block.Block;
-import net.minecraft.block.DoorBlock;
-import net.minecraft.block.SlabBlock;
+import net.minecraft.block.*;
 import net.minecraft.block.enums.BedPart;
-import net.minecraft.block.enums.DoubleBlockHalf;
-import net.minecraft.block.enums.SlabType;
+import net.minecraft.item.ItemConvertible;
 import net.minecraft.loot.LootPool;
 import net.minecraft.loot.LootTable;
-import net.minecraft.loot.condition.BlockStatePropertyLootCondition;
 import net.minecraft.loot.entry.ItemEntry;
-import net.minecraft.loot.entry.LootPoolEntry;
-import net.minecraft.loot.function.SetCountLootFunction;
 import net.minecraft.loot.provider.number.ConstantLootNumberProvider;
-import net.minecraft.predicate.StatePredicate;
 import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.util.DyeColor;
 import net.yirmiri.urban_decor.block.AbstractLongBlock;
-import net.yirmiri.urban_decor.block.BathtubBlock;
+import net.yirmiri.urban_decor.block.TowelBarTowelBlock;
 import net.yirmiri.urban_decor.registry.RegisterBlocks;
 import net.yirmiri.urban_decor.registry.RegisterItems;
 
@@ -75,13 +68,13 @@ public class UDLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(RegisterBlocks.DARK_SINK);
         addDyedTowelsDrops();
         addDrop(RegisterBlocks.TOWEL_BAR);
-        addTowelBarTowelDrops();
         addDrop(RegisterBlocks.SATELLITE_DISH);
         addDrop(RegisterBlocks.SHOWER);
         addDrop(RegisterBlocks.BATHTUB, longBlockDrops(RegisterBlocks.BATHTUB));
         addDrop(RegisterBlocks.DARK_BATHTUB, longBlockDrops(RegisterBlocks.DARK_BATHTUB));
         addDyedTowelBlockDrops();
         addDrop(RegisterBlocks.RIGID_GLASS);
+        //addDyedTowelBarTowelDrops();
     }
 
     private void addDyedTowelBlockDrops() {
@@ -96,14 +89,23 @@ public class UDLootTableProvider extends FabricBlockLootTableProvider {
         }
     }
 
-    private void addTowelBarTowelDrops() {
-        for (DyeColor colors : DyeColor.values()) {
-            addDrop(RegisterBlocks.getDyedTowels(colors.getId()));
-            addDrop(RegisterBlocks.TOWEL_BAR);
-        }
+//    private void addDyedTowelBarTowelDrops() {
+//        for (DyeColor colors : DyeColor.values()) {
+//            addTowelBarTowelDrops(RegisterBlocks.getDyedTowels(colors.getId()));
+//        }
+//    }
+
+//    public void addTowelBarTowelDrops(Block block) {
+//        addDrop(block, (towelBar) -> towelBarTowelDrops(((TowelBarTowelBlock)towelBar).getContent()));
+//    }
+
+    public final LootTable.Builder towelBarTowelDrops(ItemConvertible drop) {
+        return LootTable.builder().pool(addSurvivesExplosionCondition(RegisterBlocks.TOWEL_BAR, LootPool.builder().rolls(ConstantLootNumberProvider.create(1.0F))
+                .with(ItemEntry.builder(RegisterBlocks.TOWEL_BAR)))).pool(addSurvivesExplosionCondition(drop, LootPool.builder()
+                .rolls(ConstantLootNumberProvider.create(1.0F)).with(ItemEntry.builder(drop))));
     }
 
     public LootTable.Builder longBlockDrops(Block block) {
-        return this.dropsWithProperty(block, AbstractLongBlock.PART, BedPart.HEAD);
+        return dropsWithProperty(block, AbstractLongBlock.PART, BedPart.HEAD);
     }
 }

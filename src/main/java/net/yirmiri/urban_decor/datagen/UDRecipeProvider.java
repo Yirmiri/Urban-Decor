@@ -26,23 +26,23 @@ public class UDRecipeProvider extends FabricRecipeProvider {
 
     @Override
     public void generate(RecipeExporter exporter) {
-        createTwoByTwoRecipe(RegisterBlocks.PORCELAIN_TILES, 1,
+        createTwoByTwoRecipe(RegisterBlocks.PORCELAIN_BLOCK, 1,
                 Ingredient.ofItems(RegisterItems.PORCELAIN))
                 .criterion(hasItem(RegisterItems.PORCELAIN), conditionsFromItem(RegisterItems.PORCELAIN))
-                .offerTo(exporter, Identifier.of(UrbanDecor.MOD_ID, getRecipeName(RegisterBlocks.PORCELAIN_TILES)));
+                .offerTo(exporter, Identifier.of(UrbanDecor.MOD_ID, getRecipeName(RegisterBlocks.PORCELAIN_BLOCK)));
 
-        createStairsRecipe(RegisterBlocks.PORCELAIN_TILE_STAIRS,
-                Ingredient.ofItems(RegisterBlocks.PORCELAIN_TILES))
-                .criterion(hasItem(RegisterBlocks.PORCELAIN_TILES), conditionsFromItem(RegisterBlocks.PORCELAIN_TILES))
-                .offerTo(exporter, Identifier.of(UrbanDecor.MOD_ID, getRecipeName(RegisterBlocks.PORCELAIN_TILE_STAIRS)));
+        createStairsRecipe(RegisterBlocks.PORCELAIN_STAIRS,
+                Ingredient.ofItems(RegisterBlocks.PORCELAIN_BLOCK))
+                .criterion(hasItem(RegisterBlocks.PORCELAIN_BLOCK), conditionsFromItem(RegisterBlocks.PORCELAIN_BLOCK))
+                .offerTo(exporter, Identifier.of(UrbanDecor.MOD_ID, getRecipeName(RegisterBlocks.PORCELAIN_STAIRS)));
 
-        createSlabRecipe(RecipeCategory.BUILDING_BLOCKS, RegisterBlocks.PORCELAIN_TILE_SLAB,
-                Ingredient.ofItems(RegisterBlocks.PORCELAIN_TILES))
-                .criterion(hasItem(RegisterBlocks.PORCELAIN_TILES), conditionsFromItem(RegisterBlocks.PORCELAIN_TILES))
-                .offerTo(exporter, Identifier.of(UrbanDecor.MOD_ID, getRecipeName(RegisterBlocks.PORCELAIN_TILE_SLAB)));
+        createSlabRecipe(RecipeCategory.BUILDING_BLOCKS, RegisterBlocks.PORCELAIN_SLAB,
+                Ingredient.ofItems(RegisterBlocks.PORCELAIN_BLOCK))
+                .criterion(hasItem(RegisterBlocks.PORCELAIN_BLOCK), conditionsFromItem(RegisterBlocks.PORCELAIN_BLOCK))
+                .offerTo(exporter, Identifier.of(UrbanDecor.MOD_ID, getRecipeName(RegisterBlocks.PORCELAIN_SLAB)));
 
-        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, RegisterBlocks.PORCELAIN_TILE_STAIRS, RegisterBlocks.PORCELAIN_TILES, 1);
-        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, RegisterBlocks.PORCELAIN_TILE_SLAB, RegisterBlocks.PORCELAIN_TILES, 2);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, RegisterBlocks.PORCELAIN_STAIRS, RegisterBlocks.PORCELAIN_BLOCK, 1);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, RegisterBlocks.PORCELAIN_SLAB, RegisterBlocks.PORCELAIN_BLOCK, 2);
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, RegisterItems.PORCELAIN, 4)
                 .input('#', Items.CLAY_BALL).input('@', Items.FLINT)
@@ -95,23 +95,23 @@ public class UDRecipeProvider extends FabricRecipeProvider {
         offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, RegisterBlocks.POLISHED_CHROMITE_STAIRS, RegisterBlocks.POLISHED_CHROMITE, 1);
         offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, RegisterBlocks.POLISHED_CHROMITE_SLAB, RegisterBlocks.POLISHED_CHROMITE, 2);
 
-        createTwoByTwoRecipe(RegisterBlocks.DARK_PORCELAIN_TILES, 1,
+        createTwoByTwoRecipe(RegisterBlocks.DARK_PORCELAIN_BLOCK, 1,
                 Ingredient.ofItems(RegisterItems.DARK_PORCELAIN))
                 .criterion(hasItem(RegisterItems.DARK_PORCELAIN), conditionsFromItem(RegisterItems.DARK_PORCELAIN))
-                .offerTo(exporter, Identifier.of(UrbanDecor.MOD_ID, getRecipeName(RegisterBlocks.DARK_PORCELAIN_TILES)));
+                .offerTo(exporter, Identifier.of(UrbanDecor.MOD_ID, getRecipeName(RegisterBlocks.DARK_PORCELAIN_BLOCK)));
 
         createStairsRecipe(RegisterBlocks.DARK_PORCELAIN_TILE_STAIRS,
-                Ingredient.ofItems(RegisterBlocks.DARK_PORCELAIN_TILES))
-                .criterion(hasItem(RegisterBlocks.DARK_PORCELAIN_TILES), conditionsFromItem(RegisterBlocks.DARK_PORCELAIN_TILES))
+                Ingredient.ofItems(RegisterBlocks.DARK_PORCELAIN_BLOCK))
+                .criterion(hasItem(RegisterBlocks.DARK_PORCELAIN_BLOCK), conditionsFromItem(RegisterBlocks.DARK_PORCELAIN_BLOCK))
                 .offerTo(exporter, Identifier.of(UrbanDecor.MOD_ID, getRecipeName(RegisterBlocks.DARK_PORCELAIN_TILE_STAIRS)));
 
         createSlabRecipe(RecipeCategory.BUILDING_BLOCKS, RegisterBlocks.DARK_PORCELAIN_TILE_SLAB,
-                Ingredient.ofItems(RegisterBlocks.DARK_PORCELAIN_TILES))
-                .criterion(hasItem(RegisterBlocks.DARK_PORCELAIN_TILES), conditionsFromItem(RegisterBlocks.DARK_PORCELAIN_TILES))
+                Ingredient.ofItems(RegisterBlocks.DARK_PORCELAIN_BLOCK))
+                .criterion(hasItem(RegisterBlocks.DARK_PORCELAIN_BLOCK), conditionsFromItem(RegisterBlocks.DARK_PORCELAIN_BLOCK))
                 .offerTo(exporter, Identifier.of(UrbanDecor.MOD_ID, getRecipeName(RegisterBlocks.DARK_PORCELAIN_TILE_SLAB)));
 
-        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, RegisterBlocks.DARK_PORCELAIN_TILE_STAIRS, RegisterBlocks.DARK_PORCELAIN_TILES, 1);
-        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, RegisterBlocks.DARK_PORCELAIN_TILE_SLAB, RegisterBlocks.DARK_PORCELAIN_TILES, 2);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, RegisterBlocks.DARK_PORCELAIN_TILE_STAIRS, RegisterBlocks.DARK_PORCELAIN_BLOCK, 1);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, RegisterBlocks.DARK_PORCELAIN_TILE_SLAB, RegisterBlocks.DARK_PORCELAIN_BLOCK, 2);
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, RegisterBlocks.CHECKERED_PORCELAIN_TILES, 1)
                 .input('#', RegisterItems.PORCELAIN).input('@', RegisterItems.DARK_PORCELAIN)
@@ -586,6 +586,96 @@ public class UDRecipeProvider extends FabricRecipeProvider {
                 .pattern("#@#")
                 .criterion(hasItem(RegisterItems.STAINLESS_STEEL), conditionsFromItem(RegisterItems.STAINLESS_STEEL))
                 .offerTo(exporter, Identifier.of(UrbanDecor.MOD_ID, getRecipeName(RegisterBlocks.RIGID_GLASS)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, RegisterBlocks.BATHTUB, 1)
+                .input('@', RegisterItems.PORCELAIN)
+                .pattern("@ @")
+                .pattern("@@@")
+                .criterion(hasItem(RegisterItems.PORCELAIN), conditionsFromItem(RegisterItems.PORCELAIN))
+                .offerTo(exporter, Identifier.of(UrbanDecor.MOD_ID, getRecipeName(RegisterBlocks.BATHTUB)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, RegisterBlocks.DARK_BATHTUB, 1)
+                .input('@', RegisterItems.DARK_PORCELAIN)
+                .pattern("@ @")
+                .pattern("@@@")
+                .criterion(hasItem(RegisterItems.DARK_PORCELAIN), conditionsFromItem(RegisterItems.DARK_PORCELAIN))
+                .offerTo(exporter, Identifier.of(UrbanDecor.MOD_ID, getRecipeName(RegisterBlocks.DARK_BATHTUB)));
+
+        createTwoByTwoRecipe(RegisterBlocks.PORCELAIN_TILES, 4,
+                Ingredient.ofItems(RegisterBlocks.PORCELAIN_BLOCK))
+                .criterion(hasItem(RegisterBlocks.PORCELAIN_BLOCK), conditionsFromItem(RegisterBlocks.PORCELAIN_BLOCK))
+                .offerTo(exporter, Identifier.of(UrbanDecor.MOD_ID, getRecipeName(RegisterBlocks.PORCELAIN_TILES)));
+
+        createStairsRecipe(RegisterBlocks.PORCELAIN_TILE_STAIRS,
+                Ingredient.ofItems(RegisterBlocks.PORCELAIN_TILES))
+                .criterion(hasItem(RegisterBlocks.PORCELAIN_TILES), conditionsFromItem(RegisterBlocks.PORCELAIN_TILES))
+                .offerTo(exporter, Identifier.of(UrbanDecor.MOD_ID, getRecipeName(RegisterBlocks.PORCELAIN_TILE_STAIRS)));
+
+        createSlabRecipe(RecipeCategory.BUILDING_BLOCKS, RegisterBlocks.PORCELAIN_TILE_SLAB,
+                Ingredient.ofItems(RegisterBlocks.PORCELAIN_TILES))
+                .criterion(hasItem(RegisterBlocks.PORCELAIN_TILES), conditionsFromItem(RegisterBlocks.PORCELAIN_TILES))
+                .offerTo(exporter, Identifier.of(UrbanDecor.MOD_ID, getRecipeName(RegisterBlocks.PORCELAIN_TILE_SLAB)));
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, RegisterBlocks.PORCELAIN_TILES, RegisterBlocks.PORCELAIN_BLOCK, 1);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, RegisterBlocks.PORCELAIN_TILE_STAIRS, RegisterBlocks.PORCELAIN_TILES, 1);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, RegisterBlocks.PORCELAIN_TILE_SLAB, RegisterBlocks.PORCELAIN_TILES, 2);
+
+        createTwoByTwoRecipe(RegisterBlocks.PORCELAIN_BRICKS, 4,
+                Ingredient.ofItems(RegisterBlocks.PORCELAIN_TILES))
+                .criterion(hasItem(RegisterBlocks.PORCELAIN_TILES), conditionsFromItem(RegisterBlocks.PORCELAIN_TILES))
+                .offerTo(exporter, Identifier.of(UrbanDecor.MOD_ID, getRecipeName(RegisterBlocks.PORCELAIN_BRICKS)));
+
+        createStairsRecipe(RegisterBlocks.PORCELAIN_BRICK_STAIRS,
+                Ingredient.ofItems(RegisterBlocks.PORCELAIN_BRICKS))
+                .criterion(hasItem(RegisterBlocks.PORCELAIN_BRICKS), conditionsFromItem(RegisterBlocks.PORCELAIN_BRICKS))
+                .offerTo(exporter, Identifier.of(UrbanDecor.MOD_ID, getRecipeName(RegisterBlocks.PORCELAIN_BRICK_STAIRS)));
+
+        createSlabRecipe(RecipeCategory.BUILDING_BLOCKS, RegisterBlocks.PORCELAIN_BRICK_SLAB,
+                Ingredient.ofItems(RegisterBlocks.PORCELAIN_BRICKS))
+                .criterion(hasItem(RegisterBlocks.PORCELAIN_BRICKS), conditionsFromItem(RegisterBlocks.PORCELAIN_BRICKS))
+                .offerTo(exporter, Identifier.of(UrbanDecor.MOD_ID, getRecipeName(RegisterBlocks.PORCELAIN_BRICK_SLAB)));
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, RegisterBlocks.PORCELAIN_BRICKS, RegisterBlocks.PORCELAIN_TILES, 1);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, RegisterBlocks.PORCELAIN_BRICK_STAIRS, RegisterBlocks.PORCELAIN_BRICKS, 1);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, RegisterBlocks.PORCELAIN_BRICK_SLAB, RegisterBlocks.PORCELAIN_BRICKS, 2);
+
+        createTwoByTwoRecipe(RegisterBlocks.DARK_PORCELAIN_TILES, 4,
+                Ingredient.ofItems(RegisterBlocks.DARK_PORCELAIN_BLOCK))
+                .criterion(hasItem(RegisterBlocks.DARK_PORCELAIN_BLOCK), conditionsFromItem(RegisterBlocks.DARK_PORCELAIN_BLOCK))
+                .offerTo(exporter, Identifier.of(UrbanDecor.MOD_ID, getRecipeName(RegisterBlocks.DARK_PORCELAIN_TILES)));
+
+        createStairsRecipe(RegisterBlocks.DARK_PORCELAIN_TILE_STAIRS,
+                Ingredient.ofItems(RegisterBlocks.DARK_PORCELAIN_TILES))
+                .criterion(hasItem(RegisterBlocks.DARK_PORCELAIN_TILES), conditionsFromItem(RegisterBlocks.DARK_PORCELAIN_TILES))
+                .offerTo(exporter, Identifier.of(UrbanDecor.MOD_ID, getRecipeName(RegisterBlocks.DARK_PORCELAIN_TILE_STAIRS)));
+
+        createSlabRecipe(RecipeCategory.BUILDING_BLOCKS, RegisterBlocks.DARK_PORCELAIN_TILE_SLAB,
+                Ingredient.ofItems(RegisterBlocks.DARK_PORCELAIN_TILES))
+                .criterion(hasItem(RegisterBlocks.DARK_PORCELAIN_TILES), conditionsFromItem(RegisterBlocks.DARK_PORCELAIN_TILES))
+                .offerTo(exporter, Identifier.of(UrbanDecor.MOD_ID, getRecipeName(RegisterBlocks.DARK_PORCELAIN_TILE_SLAB)));
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, RegisterBlocks.DARK_PORCELAIN_TILES, RegisterBlocks.DARK_PORCELAIN_BLOCK, 1);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, RegisterBlocks.DARK_PORCELAIN_TILE_STAIRS, RegisterBlocks.DARK_PORCELAIN_TILES, 1);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, RegisterBlocks.DARK_PORCELAIN_TILE_SLAB, RegisterBlocks.DARK_PORCELAIN_TILES, 2);
+
+        createTwoByTwoRecipe(RegisterBlocks.DARK_PORCELAIN_BRICKS, 4,
+                Ingredient.ofItems(RegisterBlocks.DARK_PORCELAIN_TILES))
+                .criterion(hasItem(RegisterBlocks.DARK_PORCELAIN_TILES), conditionsFromItem(RegisterBlocks.DARK_PORCELAIN_TILES))
+                .offerTo(exporter, Identifier.of(UrbanDecor.MOD_ID, getRecipeName(RegisterBlocks.DARK_PORCELAIN_BRICKS)));
+
+        createStairsRecipe(RegisterBlocks.DARK_PORCELAIN_BRICK_STAIRS,
+                Ingredient.ofItems(RegisterBlocks.DARK_PORCELAIN_BRICKS))
+                .criterion(hasItem(RegisterBlocks.DARK_PORCELAIN_BRICKS), conditionsFromItem(RegisterBlocks.DARK_PORCELAIN_BRICKS))
+                .offerTo(exporter, Identifier.of(UrbanDecor.MOD_ID, getRecipeName(RegisterBlocks.DARK_PORCELAIN_BRICK_STAIRS)));
+
+        createSlabRecipe(RecipeCategory.BUILDING_BLOCKS, RegisterBlocks.DARK_PORCELAIN_BRICK_SLAB,
+                Ingredient.ofItems(RegisterBlocks.DARK_PORCELAIN_BRICKS))
+                .criterion(hasItem(RegisterBlocks.DARK_PORCELAIN_BRICKS), conditionsFromItem(RegisterBlocks.DARK_PORCELAIN_BRICKS))
+                .offerTo(exporter, Identifier.of(UrbanDecor.MOD_ID, getRecipeName(RegisterBlocks.DARK_PORCELAIN_BRICK_SLAB)));
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, RegisterBlocks.DARK_PORCELAIN_BRICKS, RegisterBlocks.DARK_PORCELAIN_TILES, 1);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, RegisterBlocks.DARK_PORCELAIN_BRICK_STAIRS, RegisterBlocks.DARK_PORCELAIN_BRICKS, 1);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, RegisterBlocks.DARK_PORCELAIN_BRICK_SLAB, RegisterBlocks.DARK_PORCELAIN_BRICKS, 2);
     }
 //yes this only exists so i can name it four for four wendys meal... there is no need for this recipe builder
     public static ShapedRecipeJsonBuilder createFourForFourWendysMealRecipe(ItemConvertible output, Ingredient input) {

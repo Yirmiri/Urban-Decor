@@ -111,6 +111,8 @@
   "toolbox.faucet.variant_true": "Variant: Indoor",
   "toolbox.fridge.variant_false": "Variant: Flipped",
   "toolbox.fridge.variant_true": "Variant: Default",
+  "toolbox.microwave.variant_false": "Variant: Wall Mounted",
+  "toolbox.microwave.variant_true": "Variant: Grounded",
   "toolbox.oven.variant_false": "Variant: Opaque",
   "toolbox.oven.variant_true": "Variant: Transparent",
   "toolbox.satellite_dish.variant_false": "Variant: Wall Mounted",

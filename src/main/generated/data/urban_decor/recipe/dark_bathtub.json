@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "@": {
+      "item": "urban_decor:dark_porcelain"
+    }
+  },
+  "pattern": [
+    "@ @",
+    "@@@"
+  ],
+  "result": {
+    "count": 1,
+    "id": "urban_decor:dark_bathtub"
+  }
+}

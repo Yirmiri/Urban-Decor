@@ -12,8 +12,6 @@ import net.yirmiri.urban_decor.UrbanDecor;
 import net.yirmiri.urban_decor.compat.RegisterCompatRegistries;
 import net.yirmiri.urban_decor.compat.excessive_building.EBRegisterBlocks;
 
-import java.util.ArrayList;
-
 public class RegisterItemGroups {
     public static ItemGroup URBAN_DECOR = Registry.register(Registries.ITEM_GROUP, Identifier.of(UrbanDecor.MOD_ID, "urban_decor"),
             FabricItemGroup.builder().icon(() -> new ItemStack(RegisterItems.TOOLBOX)).displayName(Text.translatable("itemgroup.urban_decor")).entries((ctx, entries) -> {
@@ -21,13 +19,25 @@ public class RegisterItemGroups {
                 entries.add(RegisterItems.DARK_PORCELAIN);
                 entries.add(RegisterItems.STAINLESS_STEEL);
 
+                entries.add(RegisterBlocks.PORCELAIN_BLOCK);
+                entries.add(RegisterBlocks.PORCELAIN_STAIRS);
+                entries.add(RegisterBlocks.PORCELAIN_SLAB);
                 entries.add(RegisterBlocks.PORCELAIN_TILES);
                 entries.add(RegisterBlocks.PORCELAIN_TILE_STAIRS);
                 entries.add(RegisterBlocks.PORCELAIN_TILE_SLAB);
+                entries.add(RegisterBlocks.PORCELAIN_BRICKS);
+                entries.add(RegisterBlocks.PORCELAIN_BRICK_STAIRS);
+                entries.add(RegisterBlocks.PORCELAIN_BRICK_SLAB);
 
+                entries.add(RegisterBlocks.DARK_PORCELAIN_BLOCK);
+                entries.add(RegisterBlocks.DARK_PORCELAIN_STAIRS);
+                entries.add(RegisterBlocks.DARK_PORCELAIN_SLAB);
                 entries.add(RegisterBlocks.DARK_PORCELAIN_TILES);
                 entries.add(RegisterBlocks.DARK_PORCELAIN_TILE_STAIRS);
                 entries.add(RegisterBlocks.DARK_PORCELAIN_TILE_SLAB);
+                entries.add(RegisterBlocks.DARK_PORCELAIN_BRICKS);
+                entries.add(RegisterBlocks.DARK_PORCELAIN_BRICK_STAIRS);
+                entries.add(RegisterBlocks.DARK_PORCELAIN_BRICK_SLAB);
 
                 entries.add(RegisterBlocks.CHECKERED_PORCELAIN_TILES);
                 entries.add(RegisterBlocks.CHECKERED_PORCELAIN_TILE_STAIRS);
