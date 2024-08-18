@@ -1,6 +1,12 @@
 {
   "replace": false,
   "values": [
+    "urban_decor:dark_porcelain_block",
+    "urban_decor:dark_porcelain_stairs",
+    "urban_decor:dark_porcelain_slab",
+    "urban_decor:porcelain_block",
+    "urban_decor:porcelain_stairs",
+    "urban_decor:porcelain_slab",
     "urban_decor:porcelain_tiles",
     "urban_decor:porcelain_tile_stairs",
     "urban_decor:porcelain_tile_slab",

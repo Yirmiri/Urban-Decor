@@ -21,9 +21,17 @@ public class RegisterItemGroups {
                 entries.add(RegisterItems.DARK_PORCELAIN);
                 entries.add(RegisterItems.STAINLESS_STEEL);
 
+                entries.add(RegisterBlocks.PORCELAIN_BLOCK);
+                entries.add(RegisterBlocks.PORCELAIN_STAIRS);
+                entries.add(RegisterBlocks.PORCELAIN_SLAB);
+
                 entries.add(RegisterBlocks.PORCELAIN_TILES);
                 entries.add(RegisterBlocks.PORCELAIN_TILE_STAIRS);
                 entries.add(RegisterBlocks.PORCELAIN_TILE_SLAB);
+
+                entries.add(RegisterBlocks.DARK_PORCELAIN_BLOCK);
+                entries.add(RegisterBlocks.DARK_PORCELAIN_STAIRS);
+                entries.add(RegisterBlocks.DARK_PORCELAIN_SLAB);
 
                 entries.add(RegisterBlocks.DARK_PORCELAIN_TILES);
                 entries.add(RegisterBlocks.DARK_PORCELAIN_TILE_STAIRS);

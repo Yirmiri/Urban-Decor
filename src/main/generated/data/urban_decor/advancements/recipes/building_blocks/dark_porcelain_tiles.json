@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_dark_porcelain": {
+    "has_dark_porcelain_block": {
       "conditions": {
         "items": [
           {
             "items": [
-              "urban_decor:dark_porcelain"
+              "urban_decor:dark_porcelain_block"
             ]
           }
         ]
@@ -22,7 +22,7 @@
   },
   "requirements": [
     [
-      "has_dark_porcelain",
+      "has_dark_porcelain_block",
       "has_the_recipe"
     ]
   ],

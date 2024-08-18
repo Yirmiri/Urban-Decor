@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_porcelain": {
+    "has_porcelain_block": {
       "conditions": {
         "items": [
           {
             "items": [
-              "urban_decor:porcelain"
+              "urban_decor:porcelain_block"
             ]
           }
         ]
@@ -22,7 +22,7 @@
   },
   "requirements": [
     [
-      "has_porcelain",
+      "has_porcelain_block",
       "has_the_recipe"
     ]
   ],

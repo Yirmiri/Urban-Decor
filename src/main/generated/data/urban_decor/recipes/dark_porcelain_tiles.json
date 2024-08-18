@@ -3,7 +3,7 @@
   "category": "building",
   "key": {
     "#": {
-      "item": "urban_decor:dark_porcelain"
+      "item": "urban_decor:dark_porcelain_block"
     }
   },
   "pattern": [
@@ -11,6 +11,7 @@
     "##"
   ],
   "result": {
+    "count": 4,
     "item": "urban_decor:dark_porcelain_tiles"
   },
   "show_notification": true

@@ -29,6 +29,12 @@ public class UDBlockTagProvider extends FabricTagProvider.BlockTagProvider {
         ;
 
         getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE)
+                .add(RegisterBlocks.DARK_PORCELAIN_BLOCK)
+                .add(RegisterBlocks.DARK_PORCELAIN_STAIRS)
+                .add(RegisterBlocks.DARK_PORCELAIN_SLAB)
+                .add(RegisterBlocks.PORCELAIN_BLOCK)
+                .add(RegisterBlocks.PORCELAIN_STAIRS)
+                .add(RegisterBlocks.PORCELAIN_SLAB)
                 .add(RegisterBlocks.PORCELAIN_TILES)
                 .add(RegisterBlocks.PORCELAIN_TILE_STAIRS)
                 .add(RegisterBlocks.PORCELAIN_TILE_SLAB)

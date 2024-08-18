@@ -42,6 +42,14 @@ public class UDModelProvider extends FabricModelProvider {
         for (DyeColor colors : DyeColor.values()) {
             generator.registerCubeAllModelTexturePool(RegisterBlocks.getDyedTowelBlocks(colors.getId()));
         }
+
+        BlockStateModelGenerator.BlockTexturePool porcelain = generator.registerCubeAllModelTexturePool(RegisterBlocks.PORCELAIN_BLOCK);
+        porcelain.stairs(RegisterBlocks.PORCELAIN_STAIRS);
+        porcelain.slab(RegisterBlocks.PORCELAIN_SLAB);
+
+        BlockStateModelGenerator.BlockTexturePool darkPorcelain = generator.registerCubeAllModelTexturePool(RegisterBlocks.DARK_PORCELAIN_BLOCK);
+        darkPorcelain.stairs(RegisterBlocks.DARK_PORCELAIN_STAIRS);
+        darkPorcelain.slab(RegisterBlocks.DARK_PORCELAIN_SLAB);
     }
 
     @Override
