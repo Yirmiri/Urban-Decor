@@ -125,6 +125,10 @@ public class UDLangProvider extends FabricLanguageProvider {
         builder.add("toolbox.trash_can.variant_1", "Variant: Rectangular");
         builder.add("toolbox.washing_machine.variant_true", "Variant: Transparent");
         builder.add("toolbox.washing_machine.variant_false", "Variant: Opaque");
+        builder.add("toolbox.microwave.variant_true", "Variant: Grounded");
+        builder.add("toolbox.microwave.variant_false", "Variant: Wall Mounted");
+        builder.add("toolbox.picture_frame.variant_true", "Variant: Grounded");
+        builder.add("toolbox.picture_frame.variant_false", "Variant: Wall Mounted");
 
         //DAMAGE
         builder.add("death.attack.urban_decor.toaster", "%1$s likes to play with toasters in the tub");

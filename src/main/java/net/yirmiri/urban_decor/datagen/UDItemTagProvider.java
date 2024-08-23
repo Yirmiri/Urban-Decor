@@ -20,6 +20,7 @@ public class UDItemTagProvider extends FabricTagProvider.ItemTagProvider {
     public static final TagKey<Item> TOOLBOXES = create("toolboxes");
     public static final TagKey<Item> TOWELS = create("towels");
     public static final TagKey<Item> GLASS = create("glass");
+    public static final TagKey<Item> DYES = create("dyes");
 
     public UDItemTagProvider(FabricDataOutput output, CompletableFuture<RegistryWrapper.WrapperLookup> future) {
         super(output, future);
@@ -49,6 +50,25 @@ public class UDItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(RegisterBlocks.DARK_WASHING_MACHINE.asItem())
                 .add(RegisterBlocks.BATHTUB.asItem())
                 .add(RegisterBlocks.DARK_BATHTUB.asItem())
+        ;
+
+        getOrCreateTagBuilder(DYES)
+                .add(Items.RED_DYE)
+                .add(Items.ORANGE_DYE)
+                .add(Items.YELLOW_DYE)
+                .add(Items.LIME_DYE)
+                .add(Items.GREEN_DYE)
+                .add(Items.CYAN_DYE)
+                .add(Items.LIGHT_BLUE_DYE)
+                .add(Items.BLUE_DYE)
+                .add(Items.PURPLE_DYE)
+                .add(Items.MAGENTA_DYE)
+                .add(Items.PINK_DYE)
+                .add(Items.WHITE_DYE)
+                .add(Items.LIGHT_GRAY_DYE)
+                .add(Items.GRAY_DYE)
+                .add(Items.BLACK_DYE)
+                .add(Items.BROWN_DYE)
         ;
 
             getOrCreateTagBuilder(TOOLBOXES)

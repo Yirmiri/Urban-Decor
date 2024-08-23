@@ -21,6 +21,7 @@ import net.minecraft.util.shape.VoxelShapes;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
 import net.minecraft.world.event.GameEvent;
+import net.yirmiri.urban_decor.UrbanDecor;
 import net.yirmiri.urban_decor.datagen.UDItemTagProvider;
 
 import java.util.stream.Stream;
@@ -64,13 +65,13 @@ public class TowelBarBlock extends AbstractDecorBlock {
 
     @Override
     public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
-        ItemStack itemStack = player.getStackInHand(hand);
-        Item item = itemStack.getItem();
-        if (itemStack.isIn(UDItemTagProvider.TOWELS)) {
+        ItemStack stackHand = player.getStackInHand(hand);
+        Item item = stackHand.getItem();
+        if (stackHand.isIn(UDItemTagProvider.TOWELS)) {
             Block block = Block.getBlockFromItem(item);
             if (block instanceof TowelBlock) {
                 if (!player.isCreative()) {
-                    itemStack.decrement(1);
+                    stackHand.decrement(1);
                 }
                 world.playSound(null, pos, SoundEvents.BLOCK_WOOL_PLACE, SoundCategory.BLOCKS, 1.0F, 1.0F);
                 world.setBlockState(pos, TowelBarTowelBlock.getTowelColors(block).with(FACING, state.get(FACING)));
