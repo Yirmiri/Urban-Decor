@@ -12,14 +12,13 @@ import net.yirmiri.urban_decor.UrbanDecor;
 import net.yirmiri.urban_decor.compat.RegisterCompatRegistries;
 import net.yirmiri.urban_decor.compat.excessive_building.EBRegisterBlocks;
 
-import java.util.ArrayList;
-
 public class RegisterItemGroups {
     public static ItemGroup URBAN_DECOR = Registry.register(Registries.ITEM_GROUP, Identifier.of(UrbanDecor.MOD_ID, "urban_decor"),
             FabricItemGroup.builder().icon(() -> new ItemStack(RegisterItems.TOOLBOX)).displayName(Text.translatable("itemgroup.urban_decor")).entries((ctx, entries) -> {
                 entries.add(RegisterItems.PORCELAIN);
                 entries.add(RegisterItems.DARK_PORCELAIN);
-                entries.add(RegisterItems.STAINLESS_STEEL);
+                entries.add(RegisterItems.STAINLESS_STEEL_INGOT);
+                entries.add(RegisterItems.STAINLESS_STEEL_NUGGET);
 
                 entries.add(RegisterBlocks.PORCELAIN_BLOCK);
                 entries.add(RegisterBlocks.PORCELAIN_STAIRS);

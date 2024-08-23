@@ -83,10 +83,11 @@ public class UDLangProvider extends FabricLanguageProvider {
 
         //ITEMS
         builder.add(RegisterItems.PORCELAIN, "Porcelain");
-        builder.add(RegisterItems.STAINLESS_STEEL, "Stainless Steel");
+        builder.add(RegisterItems.STAINLESS_STEEL_INGOT, "Stainless Steel Ingot");
         builder.add(RegisterItems.DARK_PORCELAIN, "Dark Porcelain");
         builder.add(RegisterItems.TOOLBOX, "Toolbox");
         builder.add(RegisterItems.STEEL_PIPE, "Steel Pipe");
+        builder.add(RegisterItems.STAINLESS_STEEL_NUGGET, "Stainless Steel Nugget");
 
         //STATS
         builder.add(UDStats.TIMES_SAT, "Times Sat Down");

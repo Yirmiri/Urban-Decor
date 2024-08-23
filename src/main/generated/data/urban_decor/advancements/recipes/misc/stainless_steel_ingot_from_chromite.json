@@ -15,7 +15,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "urban_decor:stainless_steel_from_chromite"
+        "recipe": "urban_decor:stainless_steel_ingot_from_chromite"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -28,7 +28,7 @@
   ],
   "rewards": {
     "recipes": [
-      "urban_decor:stainless_steel_from_chromite"
+      "urban_decor:stainless_steel_ingot_from_chromite"
     ]
   },
   "sends_telemetry_event": false

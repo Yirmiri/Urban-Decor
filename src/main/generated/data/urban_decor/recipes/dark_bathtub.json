@@ -3,17 +3,19 @@
   "category": "misc",
   "key": {
     "#": {
-      "item": "urban_decor:steel_pipe"
+      "item": "urban_decor:dark_porcelain"
     },
     "@": {
-      "item": "urban_decor:stainless_steel_ingot"
+      "item": "urban_decor:dark_porcelain_block"
     }
   },
   "pattern": [
-    "@#"
+    "# #",
+    "# #",
+    "@@@"
   ],
   "result": {
-    "item": "urban_decor:shower"
+    "item": "urban_decor:dark_bathtub"
   },
   "show_notification": true
 }

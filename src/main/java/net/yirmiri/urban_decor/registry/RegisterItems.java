@@ -9,10 +9,11 @@ import net.yirmiri.urban_decor.item.ToolboxBlockItem;
 import net.yirmiri.urban_decor.util.UDProperties;
 
 public class RegisterItems {
-    //INGREDIENT
+    //INGREDIENTS
     public static final Item PORCELAIN = register("porcelain", new Item(UDProperties.ItemP.GENERIC_ITEM));
     public static final Item DARK_PORCELAIN = register("dark_porcelain", new Item(UDProperties.ItemP.GENERIC_ITEM));
-    public static final Item STAINLESS_STEEL = register("stainless_steel", new Item(UDProperties.ItemP.GENERIC_ITEM));
+    public static final Item STAINLESS_STEEL_INGOT = register("stainless_steel_ingot", new Item(UDProperties.ItemP.GENERIC_ITEM));
+    public static final Item STAINLESS_STEEL_NUGGET = register("stainless_steel_nugget", new Item(UDProperties.ItemP.GENERIC_ITEM));
     public static final Item STEEL_PIPE = register("steel_pipe", new Item(UDProperties.ItemP.GENERIC_ITEM));
 
     //MISC

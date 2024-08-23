@@ -53,21 +53,28 @@ public class UDModelProvider extends FabricModelProvider {
     }
 
     @Override
-    public void generateItemModels(ItemModelGenerator itemModelGenerator) {
-        itemModelGenerator.register(RegisterItems.PORCELAIN, Models.GENERATED);
-        itemModelGenerator.register(RegisterItems.STAINLESS_STEEL, Models.GENERATED);
-        itemModelGenerator.register(RegisterBlocks.TRASH_CAN.asItem(), Models.GENERATED);
-        itemModelGenerator.register(RegisterBlocks.MICROWAVE.asItem(), Models.GENERATED);
-        itemModelGenerator.register(RegisterBlocks.TOASTER.asItem(), Models.GENERATED);
-        itemModelGenerator.register(RegisterItems.DARK_PORCELAIN, Models.GENERATED);
-        itemModelGenerator.register(RegisterItems.TOOLBOX, Models.GENERATED);
-        itemModelGenerator.register(RegisterBlocks.STOVE.asItem(), Models.GENERATED);
-        itemModelGenerator.register(RegisterItems.STEEL_PIPE, Models.GENERATED);
-        itemModelGenerator.register(RegisterBlocks.BATHTUB.asItem(), Models.GENERATED);
-        itemModelGenerator.register(RegisterBlocks.DARK_BATHTUB.asItem(), Models.GENERATED);
+    public void generateItemModels(ItemModelGenerator generator) {
+        generator.register(RegisterItems.PORCELAIN, Models.GENERATED);
+        generator.register(RegisterItems.STAINLESS_STEEL_INGOT, Models.GENERATED);
+        generator.register(RegisterBlocks.TRASH_CAN.asItem(), Models.GENERATED);
+        generator.register(RegisterBlocks.MICROWAVE.asItem(), Models.GENERATED);
+        generator.register(RegisterBlocks.TOASTER.asItem(), Models.GENERATED);
+        generator.register(RegisterItems.DARK_PORCELAIN, Models.GENERATED);
+        generator.register(RegisterItems.TOOLBOX, Models.GENERATED);
+        generator.register(RegisterBlocks.STOVE.asItem(), Models.GENERATED);
+        generator.register(RegisterItems.STEEL_PIPE, Models.GENERATED);
+        generator.register(RegisterBlocks.BATHTUB.asItem(), Models.GENERATED);
+        generator.register(RegisterBlocks.DARK_BATHTUB.asItem(), Models.GENERATED);
+        generator.register(RegisterBlocks.FAUCET.asItem(), Models.GENERATED);
+        generator.register(RegisterBlocks.SHOWER.asItem(), Models.GENERATED);
+        generator.register(RegisterBlocks.DESK_FAN.asItem(), Models.GENERATED);
+        generator.register(RegisterBlocks.SATELLITE_DISH.asItem(), Models.GENERATED);
+        generator.register(RegisterBlocks.TOWEL_BAR.asItem(), Models.GENERATED);
+        generator.register(RegisterBlocks.TURBINE.asItem(), Models.GENERATED);
+        generator.register(RegisterItems.STAINLESS_STEEL_NUGGET, Models.GENERATED);
 
         for (DyeColor colors : DyeColor.values()) {
-            itemModelGenerator.register(RegisterBlocks.getDyedTowels(colors.getId()).asItem(), Models.GENERATED);
+            generator.register(RegisterBlocks.getDyedTowels(colors.getId()).asItem(), Models.GENERATED);
         }
     }
 }

@@ -6,7 +6,7 @@
       "item": "urban_decor:steel_pipe"
     },
     "@": {
-      "item": "urban_decor:stainless_steel"
+      "item": "urban_decor:stainless_steel_ingot"
     },
     "^": {
       "item": "minecraft:magma_block"

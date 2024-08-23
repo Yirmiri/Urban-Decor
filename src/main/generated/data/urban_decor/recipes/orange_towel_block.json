@@ -7,10 +7,11 @@
     }
   },
   "pattern": [
+    "@@",
     "@@"
   ],
   "result": {
-    "count": 2,
+    "count": 4,
     "item": "urban_decor:orange_towel_block"
   },
   "show_notification": true

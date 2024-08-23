@@ -52,12 +52,12 @@ public class UDRecipeProvider extends FabricRecipeProvider {
                 .criterion(hasItem(Items.CLAY_BALL), conditionsFromItem(Items.CLAY_BALL))
                 .offerTo(exporter, Identifier.of(UrbanDecor.MOD_ID, getRecipeName(RegisterItems.PORCELAIN)));
 
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, RegisterItems.STAINLESS_STEEL, 2)
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, RegisterItems.STAINLESS_STEEL_INGOT, 2)
                 .input('#', Items.COAL).input('@', Items.IRON_INGOT).input('$', RegisterBlocks.CHROMITE)
                 .pattern("#$")
                 .pattern("@$")
                 .criterion(hasItem(RegisterBlocks.CHROMITE), conditionsFromItem(RegisterBlocks.CHROMITE))
-                .offerTo(exporter, Identifier.of(UrbanDecor.MOD_ID, getRecipeName(RegisterItems.STAINLESS_STEEL) + "_from_chromite"));
+                .offerTo(exporter, Identifier.of(UrbanDecor.MOD_ID, getRecipeName(RegisterItems.STAINLESS_STEEL_INGOT) + "_from_chromite"));
 
         createStairsRecipe(RegisterBlocks.CHROMITE_STAIRS,
                 Ingredient.ofItems(RegisterBlocks.CHROMITE))
@@ -144,12 +144,12 @@ public class UDRecipeProvider extends FabricRecipeProvider {
         offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, RegisterBlocks.CHECKERED_PORCELAIN_TILE_STAIRS, RegisterBlocks.CHECKERED_PORCELAIN_TILES, 1);
         offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, RegisterBlocks.CHECKERED_PORCELAIN_TILE_SLAB, RegisterBlocks.CHECKERED_PORCELAIN_TILES, 2);
 
-        offerReversibleCompactingRecipes(exporter, RecipeCategory.MISC, RegisterItems.STAINLESS_STEEL, RecipeCategory.BUILDING_BLOCKS, RegisterBlocks.STAINLESS_STEEL_BLOCK);
+        offerReversibleCompactingRecipes(exporter, RecipeCategory.MISC, RegisterItems.STAINLESS_STEEL_INGOT, RecipeCategory.BUILDING_BLOCKS, RegisterBlocks.STAINLESS_STEEL_BLOCK);
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, RegisterItems.STEEL_PIPE, 2)
-                .input('#', RegisterItems.STAINLESS_STEEL)
+                .input('#', RegisterItems.STAINLESS_STEEL_INGOT)
                 .pattern("##")
-                .criterion(hasItem(RegisterItems.STAINLESS_STEEL), conditionsFromItem(RegisterItems.STAINLESS_STEEL))
+                .criterion(hasItem(RegisterItems.STAINLESS_STEEL_INGOT), conditionsFromItem(RegisterItems.STAINLESS_STEEL_INGOT))
                 .offerTo(exporter, Identifier.of(UrbanDecor.MOD_ID, getRecipeName(RegisterItems.STEEL_PIPE)));
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, RegisterItems.DARK_PORCELAIN, 2)
@@ -185,208 +185,208 @@ public class UDRecipeProvider extends FabricRecipeProvider {
                 .offerTo(exporter, Identifier.of(UrbanDecor.MOD_ID, getRecipeName(RegisterBlocks.FAUCET)));
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, RegisterBlocks.SINK, 1)
-                .input('#', RegisterItems.PORCELAIN).input('@', RegisterItems.STEEL_PIPE).input('%', RegisterItems.STAINLESS_STEEL)
+                .input('#', RegisterItems.PORCELAIN).input('@', RegisterItems.STEEL_PIPE).input('%', RegisterItems.STAINLESS_STEEL_INGOT)
                 .pattern(" @ ")
                 .pattern("#%#")
                 .pattern("#@#")
                 .criterion(hasItem(RegisterItems.PORCELAIN), conditionsFromItem(RegisterItems.PORCELAIN))
-                .criterion(hasItem(RegisterItems.STAINLESS_STEEL), conditionsFromItem(RegisterItems.STAINLESS_STEEL))
+                .criterion(hasItem(RegisterItems.STAINLESS_STEEL_INGOT), conditionsFromItem(RegisterItems.STAINLESS_STEEL_INGOT))
                 .criterion(hasItem(RegisterItems.STEEL_PIPE), conditionsFromItem(RegisterItems.STEEL_PIPE))
                 .offerTo(exporter, Identifier.of(UrbanDecor.MOD_ID, getRecipeName(RegisterBlocks.SINK)));
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, RegisterBlocks.DARK_SINK, 1)
-                .input('#', RegisterItems.DARK_PORCELAIN).input('@', RegisterItems.STEEL_PIPE).input('%', RegisterItems.STAINLESS_STEEL)
+                .input('#', RegisterItems.DARK_PORCELAIN).input('@', RegisterItems.STEEL_PIPE).input('%', RegisterItems.STAINLESS_STEEL_INGOT)
                 .pattern(" @ ")
                 .pattern("#%#")
                 .pattern("#@#")
                 .criterion(hasItem(RegisterItems.DARK_PORCELAIN), conditionsFromItem(RegisterItems.DARK_PORCELAIN))
-                .criterion(hasItem(RegisterItems.STAINLESS_STEEL), conditionsFromItem(RegisterItems.STAINLESS_STEEL))
+                .criterion(hasItem(RegisterItems.STAINLESS_STEEL_INGOT), conditionsFromItem(RegisterItems.STAINLESS_STEEL_INGOT))
                 .criterion(hasItem(RegisterItems.STEEL_PIPE), conditionsFromItem(RegisterItems.STEEL_PIPE))
                 .offerTo(exporter, Identifier.of(UrbanDecor.MOD_ID, getRecipeName(RegisterBlocks.DARK_SINK)));
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, RegisterBlocks.WASHING_MACHINE, 1)
-                .input('#', RegisterItems.PORCELAIN).input('@', RegisterItems.STEEL_PIPE).input('%', RegisterItems.STAINLESS_STEEL).input('&', UDItemTagProvider.GLASS)
+                .input('#', RegisterItems.PORCELAIN).input('@', RegisterItems.STEEL_PIPE).input('%', RegisterItems.STAINLESS_STEEL_INGOT).input('&', UDItemTagProvider.GLASS)
                 .pattern("#&#")
                 .pattern("#%#")
                 .pattern("#@#")
                 .criterion(hasItem(RegisterItems.PORCELAIN), conditionsFromItem(RegisterItems.PORCELAIN))
-                .criterion(hasItem(RegisterItems.STAINLESS_STEEL), conditionsFromItem(RegisterItems.STAINLESS_STEEL))
+                .criterion(hasItem(RegisterItems.STAINLESS_STEEL_INGOT), conditionsFromItem(RegisterItems.STAINLESS_STEEL_INGOT))
                 .criterion(hasItem(RegisterItems.STEEL_PIPE), conditionsFromItem(RegisterItems.STEEL_PIPE))
                 .offerTo(exporter, Identifier.of(UrbanDecor.MOD_ID, getRecipeName(RegisterBlocks.WASHING_MACHINE)));
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, RegisterBlocks.DARK_WASHING_MACHINE, 1)
-                .input('#', RegisterItems.DARK_PORCELAIN).input('@', RegisterItems.STEEL_PIPE).input('%', RegisterItems.STAINLESS_STEEL).input('&', UDItemTagProvider.GLASS)
+                .input('#', RegisterItems.DARK_PORCELAIN).input('@', RegisterItems.STEEL_PIPE).input('%', RegisterItems.STAINLESS_STEEL_INGOT).input('&', UDItemTagProvider.GLASS)
                 .pattern("#&#")
                 .pattern("#%#")
                 .pattern("#@#")
                 .criterion(hasItem(RegisterItems.DARK_PORCELAIN), conditionsFromItem(RegisterItems.DARK_PORCELAIN))
-                .criterion(hasItem(RegisterItems.STAINLESS_STEEL), conditionsFromItem(RegisterItems.STAINLESS_STEEL))
+                .criterion(hasItem(RegisterItems.STAINLESS_STEEL_INGOT), conditionsFromItem(RegisterItems.STAINLESS_STEEL_INGOT))
                 .criterion(hasItem(RegisterItems.STEEL_PIPE), conditionsFromItem(RegisterItems.STEEL_PIPE))
                 .offerTo(exporter, Identifier.of(UrbanDecor.MOD_ID, getRecipeName(RegisterBlocks.DARK_WASHING_MACHINE)));
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, RegisterBlocks.DRYER, 1)
-                .input('#', RegisterItems.PORCELAIN).input('@', RegisterItems.STEEL_PIPE).input('%', RegisterItems.STAINLESS_STEEL)
+                .input('#', RegisterItems.PORCELAIN).input('@', RegisterItems.STEEL_PIPE).input('%', RegisterItems.STAINLESS_STEEL_INGOT)
                 .pattern("###")
                 .pattern("% #")
                 .pattern("#@#")
                 .criterion(hasItem(RegisterItems.PORCELAIN), conditionsFromItem(RegisterItems.PORCELAIN))
-                .criterion(hasItem(RegisterItems.STAINLESS_STEEL), conditionsFromItem(RegisterItems.STAINLESS_STEEL))
+                .criterion(hasItem(RegisterItems.STAINLESS_STEEL_INGOT), conditionsFromItem(RegisterItems.STAINLESS_STEEL_INGOT))
                 .criterion(hasItem(RegisterItems.STEEL_PIPE), conditionsFromItem(RegisterItems.STEEL_PIPE))
                 .offerTo(exporter, Identifier.of(UrbanDecor.MOD_ID, getRecipeName(RegisterBlocks.DRYER)));
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, RegisterBlocks.DARK_DRYER, 1)
-                .input('#', RegisterItems.DARK_PORCELAIN).input('@', RegisterItems.STEEL_PIPE).input('%', RegisterItems.STAINLESS_STEEL)
+                .input('#', RegisterItems.DARK_PORCELAIN).input('@', RegisterItems.STEEL_PIPE).input('%', RegisterItems.STAINLESS_STEEL_INGOT)
                 .pattern("###")
                 .pattern("% #")
                 .pattern("#@#")
                 .criterion(hasItem(RegisterItems.DARK_PORCELAIN), conditionsFromItem(RegisterItems.DARK_PORCELAIN))
-                .criterion(hasItem(RegisterItems.STAINLESS_STEEL), conditionsFromItem(RegisterItems.STAINLESS_STEEL))
+                .criterion(hasItem(RegisterItems.STAINLESS_STEEL_INGOT), conditionsFromItem(RegisterItems.STAINLESS_STEEL_INGOT))
                 .criterion(hasItem(RegisterItems.STEEL_PIPE), conditionsFromItem(RegisterItems.STEEL_PIPE))
                 .offerTo(exporter, Identifier.of(UrbanDecor.MOD_ID, getRecipeName(RegisterBlocks.DARK_DRYER)));
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, RegisterBlocks.OVEN, 1)
-                .input('#', RegisterItems.PORCELAIN).input('@', RegisterItems.STAINLESS_STEEL).input('%', Items.REDSTONE).input('&', Items.SMOKER)
+                .input('#', RegisterItems.PORCELAIN).input('@', RegisterItems.STAINLESS_STEEL_INGOT).input('%', Items.REDSTONE).input('&', Items.SMOKER)
                 .pattern("@@@")
                 .pattern("#&#")
                 .pattern("#%#")
                 .criterion(hasItem(RegisterItems.PORCELAIN), conditionsFromItem(RegisterItems.PORCELAIN))
-                .criterion(hasItem(RegisterItems.STAINLESS_STEEL), conditionsFromItem(RegisterItems.STAINLESS_STEEL))
+                .criterion(hasItem(RegisterItems.STAINLESS_STEEL_INGOT), conditionsFromItem(RegisterItems.STAINLESS_STEEL_INGOT))
                 .offerTo(exporter, Identifier.of(UrbanDecor.MOD_ID, getRecipeName(RegisterBlocks.OVEN)));
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, RegisterBlocks.DARK_OVEN, 1)
-                .input('#', RegisterItems.DARK_PORCELAIN).input('@', RegisterItems.STAINLESS_STEEL).input('%', Items.REDSTONE).input('&', Items.SMOKER)
+                .input('#', RegisterItems.DARK_PORCELAIN).input('@', RegisterItems.STAINLESS_STEEL_INGOT).input('%', Items.REDSTONE).input('&', Items.SMOKER)
                 .pattern("@@@")
                 .pattern("#&#")
                 .pattern("#%#")
                 .criterion(hasItem(RegisterItems.DARK_PORCELAIN), conditionsFromItem(RegisterItems.DARK_PORCELAIN))
-                .criterion(hasItem(RegisterItems.STAINLESS_STEEL), conditionsFromItem(RegisterItems.STAINLESS_STEEL))
+                .criterion(hasItem(RegisterItems.STAINLESS_STEEL_INGOT), conditionsFromItem(RegisterItems.STAINLESS_STEEL_INGOT))
                 .offerTo(exporter, Identifier.of(UrbanDecor.MOD_ID, getRecipeName(RegisterBlocks.DARK_OVEN)));
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, RegisterBlocks.FRIDGE, 1)
-                .input('#', RegisterItems.PORCELAIN).input('@', RegisterItems.STAINLESS_STEEL).input('%', Items.PACKED_ICE)
+                .input('#', RegisterItems.PORCELAIN).input('@', RegisterItems.STAINLESS_STEEL_INGOT).input('%', Items.PACKED_ICE)
                 .pattern("@@@")
                 .pattern("# #")
                 .pattern("#%#")
                 .criterion(hasItem(RegisterItems.PORCELAIN), conditionsFromItem(RegisterItems.PORCELAIN))
-                .criterion(hasItem(RegisterItems.STAINLESS_STEEL), conditionsFromItem(RegisterItems.STAINLESS_STEEL))
+                .criterion(hasItem(RegisterItems.STAINLESS_STEEL_INGOT), conditionsFromItem(RegisterItems.STAINLESS_STEEL_INGOT))
                 .offerTo(exporter, Identifier.of(UrbanDecor.MOD_ID, getRecipeName(RegisterBlocks.FRIDGE)));
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, RegisterBlocks.DARK_FRIDGE, 1)
-                .input('#', RegisterItems.DARK_PORCELAIN).input('@', RegisterItems.STAINLESS_STEEL).input('%', Items.PACKED_ICE)
+                .input('#', RegisterItems.DARK_PORCELAIN).input('@', RegisterItems.STAINLESS_STEEL_INGOT).input('%', Items.PACKED_ICE)
                 .pattern("@@@")
                 .pattern("# #")
                 .pattern("#%#")
                 .criterion(hasItem(RegisterItems.DARK_PORCELAIN), conditionsFromItem(RegisterItems.DARK_PORCELAIN))
-                .criterion(hasItem(RegisterItems.STAINLESS_STEEL), conditionsFromItem(RegisterItems.STAINLESS_STEEL))
+                .criterion(hasItem(RegisterItems.STAINLESS_STEEL_INGOT), conditionsFromItem(RegisterItems.STAINLESS_STEEL_INGOT))
                 .offerTo(exporter, Identifier.of(UrbanDecor.MOD_ID, getRecipeName(RegisterBlocks.DARK_FRIDGE)));
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, RegisterBlocks.FREEZER, 1)
-                .input('#', RegisterItems.PORCELAIN).input('@', RegisterItems.STAINLESS_STEEL).input('%', Items.PACKED_ICE)
+                .input('#', RegisterItems.PORCELAIN).input('@', RegisterItems.STAINLESS_STEEL_INGOT).input('%', Items.PACKED_ICE)
                 .pattern("##@")
                 .pattern("%%@")
                 .pattern("##@")
                 .criterion(hasItem(RegisterItems.PORCELAIN), conditionsFromItem(RegisterItems.PORCELAIN))
-                .criterion(hasItem(RegisterItems.STAINLESS_STEEL), conditionsFromItem(RegisterItems.STAINLESS_STEEL))
+                .criterion(hasItem(RegisterItems.STAINLESS_STEEL_INGOT), conditionsFromItem(RegisterItems.STAINLESS_STEEL_INGOT))
                 .offerTo(exporter, Identifier.of(UrbanDecor.MOD_ID, getRecipeName(RegisterBlocks.FREEZER)));
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, RegisterBlocks.DARK_FREEZER, 1)
-                .input('#', RegisterItems.DARK_PORCELAIN).input('@', RegisterItems.STAINLESS_STEEL).input('%', Items.PACKED_ICE)
+                .input('#', RegisterItems.DARK_PORCELAIN).input('@', RegisterItems.STAINLESS_STEEL_INGOT).input('%', Items.PACKED_ICE)
                 .pattern("##@")
                 .pattern("%%@")
                 .pattern("##@")
                 .criterion(hasItem(RegisterItems.DARK_PORCELAIN), conditionsFromItem(RegisterItems.DARK_PORCELAIN))
-                .criterion(hasItem(RegisterItems.STAINLESS_STEEL), conditionsFromItem(RegisterItems.STAINLESS_STEEL))
+                .criterion(hasItem(RegisterItems.STAINLESS_STEEL_INGOT), conditionsFromItem(RegisterItems.STAINLESS_STEEL_INGOT))
                 .offerTo(exporter, Identifier.of(UrbanDecor.MOD_ID, getRecipeName(RegisterBlocks.DARK_FREEZER)));
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, RegisterItems.TOOLBOX, 1)
-                .input('@', RegisterItems.STAINLESS_STEEL)
+                .input('@', RegisterItems.STAINLESS_STEEL_INGOT)
                 .pattern("@@@")
                 .pattern("@ @")
                 .pattern("@@@")
-                .criterion(hasItem(RegisterItems.STAINLESS_STEEL), conditionsFromItem(RegisterItems.STAINLESS_STEEL))
+                .criterion(hasItem(RegisterItems.STAINLESS_STEEL_INGOT), conditionsFromItem(RegisterItems.STAINLESS_STEEL_INGOT))
                 .offerTo(exporter, Identifier.of(UrbanDecor.MOD_ID, getRecipeName(RegisterItems.TOOLBOX)));
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, RegisterBlocks.STOVE, 1)
-                .input('@', RegisterItems.STAINLESS_STEEL).input('#', Items.MAGMA_BLOCK)
+                .input('@', RegisterItems.STAINLESS_STEEL_INGOT).input('#', Items.MAGMA_BLOCK)
                 .pattern("@#@")
-                .criterion(hasItem(RegisterItems.STAINLESS_STEEL), conditionsFromItem(RegisterItems.STAINLESS_STEEL))
+                .criterion(hasItem(RegisterItems.STAINLESS_STEEL_INGOT), conditionsFromItem(RegisterItems.STAINLESS_STEEL_INGOT))
                 .offerTo(exporter, Identifier.of(UrbanDecor.MOD_ID, getRecipeName(RegisterBlocks.STOVE)));
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, RegisterBlocks.TOASTER, 1)
-                .input('@', RegisterItems.STAINLESS_STEEL).input('#', Items.MAGMA_BLOCK).input('!', Items.REDSTONE)
+                .input('@', RegisterItems.STAINLESS_STEEL_INGOT).input('#', Items.MAGMA_BLOCK).input('!', Items.REDSTONE)
                 .pattern("@!@")
                 .pattern("@#@")
-                .criterion(hasItem(RegisterItems.STAINLESS_STEEL), conditionsFromItem(RegisterItems.STAINLESS_STEEL))
+                .criterion(hasItem(RegisterItems.STAINLESS_STEEL_INGOT), conditionsFromItem(RegisterItems.STAINLESS_STEEL_INGOT))
                 .offerTo(exporter, Identifier.of(UrbanDecor.MOD_ID, getRecipeName(RegisterBlocks.TOASTER)));
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, RegisterBlocks.MICROWAVE, 1)
-                .input('@', RegisterItems.STAINLESS_STEEL).input('!', Items.REDSTONE)
+                .input('@', RegisterItems.STAINLESS_STEEL_INGOT).input('!', Items.REDSTONE)
                 .pattern("@!@")
                 .pattern("! !")
                 .pattern("@!@")
-                .criterion(hasItem(RegisterItems.STAINLESS_STEEL), conditionsFromItem(RegisterItems.STAINLESS_STEEL))
+                .criterion(hasItem(RegisterItems.STAINLESS_STEEL_INGOT), conditionsFromItem(RegisterItems.STAINLESS_STEEL_INGOT))
                 .offerTo(exporter, Identifier.of(UrbanDecor.MOD_ID, getRecipeName(RegisterBlocks.MICROWAVE)));
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, RegisterBlocks.TRASH_CAN, 1)
-                .input('@', RegisterItems.STAINLESS_STEEL)
+                .input('@', RegisterItems.STAINLESS_STEEL_INGOT)
                 .pattern("@ @")
                 .pattern(" @ ")
-                .criterion(hasItem(RegisterItems.STAINLESS_STEEL), conditionsFromItem(RegisterItems.STAINLESS_STEEL))
+                .criterion(hasItem(RegisterItems.STAINLESS_STEEL_INGOT), conditionsFromItem(RegisterItems.STAINLESS_STEEL_INGOT))
                 .offerTo(exporter, Identifier.of(UrbanDecor.MOD_ID, getRecipeName(RegisterBlocks.TRASH_CAN)));
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, RegisterBlocks.DESK_FAN, 1)
-                .input('@', RegisterItems.STAINLESS_STEEL).input('!', Items.REDSTONE)
+                .input('@', RegisterItems.STAINLESS_STEEL_INGOT).input('!', Items.REDSTONE)
                 .pattern(" @ ")
                 .pattern(" @ ")
                 .pattern("@!@")
-                .criterion(hasItem(RegisterItems.STAINLESS_STEEL), conditionsFromItem(RegisterItems.STAINLESS_STEEL))
+                .criterion(hasItem(RegisterItems.STAINLESS_STEEL_INGOT), conditionsFromItem(RegisterItems.STAINLESS_STEEL_INGOT))
                 .offerTo(exporter, Identifier.of(UrbanDecor.MOD_ID, getRecipeName(RegisterBlocks.DESK_FAN)));
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, RegisterBlocks.TURBINE, 1)
-                .input('@', RegisterItems.STAINLESS_STEEL).input('!', Items.REDSTONE)
+                .input('@', RegisterItems.STAINLESS_STEEL_INGOT).input('!', Items.REDSTONE)
                 .pattern("@@@")
                 .pattern(" @ ")
                 .pattern("@!@")
-                .criterion(hasItem(RegisterItems.STAINLESS_STEEL), conditionsFromItem(RegisterItems.STAINLESS_STEEL))
+                .criterion(hasItem(RegisterItems.STAINLESS_STEEL_INGOT), conditionsFromItem(RegisterItems.STAINLESS_STEEL_INGOT))
                 .offerTo(exporter, Identifier.of(UrbanDecor.MOD_ID, getRecipeName(RegisterBlocks.TURBINE)));
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, RegisterBlocks.AIR_CONDITIONER, 1)
-                .input('@', RegisterItems.STAINLESS_STEEL).input('#', RegisterItems.STEEL_PIPE).input('^', Items.PACKED_ICE)
+                .input('@', RegisterItems.STAINLESS_STEEL_INGOT).input('#', RegisterItems.STEEL_PIPE).input('^', Items.PACKED_ICE)
                 .pattern("@ @")
                 .pattern("###")
                 .pattern("@^@")
-                .criterion(hasItem(RegisterItems.STAINLESS_STEEL), conditionsFromItem(RegisterItems.STAINLESS_STEEL))
+                .criterion(hasItem(RegisterItems.STAINLESS_STEEL_INGOT), conditionsFromItem(RegisterItems.STAINLESS_STEEL_INGOT))
                 .criterion(hasItem(RegisterItems.STEEL_PIPE), conditionsFromItem(RegisterItems.STEEL_PIPE))
                 .offerTo(exporter, Identifier.of(UrbanDecor.MOD_ID, getRecipeName(RegisterBlocks.AIR_CONDITIONER)));
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, RegisterBlocks.RADIATOR, 1)
-                .input('@', RegisterItems.STAINLESS_STEEL).input('#', RegisterItems.STEEL_PIPE).input('^', Items.MAGMA_BLOCK)
+                .input('@', RegisterItems.STAINLESS_STEEL_INGOT).input('#', RegisterItems.STEEL_PIPE).input('^', Items.MAGMA_BLOCK)
                 .pattern(" # ")
                 .pattern("###")
                 .pattern("@^@")
-                .criterion(hasItem(RegisterItems.STAINLESS_STEEL), conditionsFromItem(RegisterItems.STAINLESS_STEEL))
+                .criterion(hasItem(RegisterItems.STAINLESS_STEEL_INGOT), conditionsFromItem(RegisterItems.STAINLESS_STEEL_INGOT))
                 .criterion(hasItem(RegisterItems.STEEL_PIPE), conditionsFromItem(RegisterItems.STEEL_PIPE))
                 .offerTo(exporter, Identifier.of(UrbanDecor.MOD_ID, getRecipeName(RegisterBlocks.RADIATOR)));
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, RegisterBlocks.SATELLITE_DISH, 1)
-                .input('@', RegisterItems.STAINLESS_STEEL).input('!', Items.AMETHYST_SHARD)
+                .input('@', RegisterItems.STAINLESS_STEEL_INGOT).input('!', Items.AMETHYST_SHARD)
                 .pattern("@ !")
                 .pattern(" @ ")
                 .pattern("@ @")
-                .criterion(hasItem(RegisterItems.STAINLESS_STEEL), conditionsFromItem(RegisterItems.STAINLESS_STEEL))
+                .criterion(hasItem(RegisterItems.STAINLESS_STEEL_INGOT), conditionsFromItem(RegisterItems.STAINLESS_STEEL_INGOT))
                 .offerTo(exporter, Identifier.of(UrbanDecor.MOD_ID, getRecipeName(RegisterBlocks.SATELLITE_DISH)));
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, RegisterBlocks.SHOWER, 1)
-                .input('@', RegisterItems.STAINLESS_STEEL).input('#', RegisterItems.STEEL_PIPE)
+                .input('@', RegisterItems.STAINLESS_STEEL_INGOT).input('#', RegisterItems.STEEL_PIPE)
                 .pattern("@#")
-                .criterion(hasItem(RegisterItems.STAINLESS_STEEL), conditionsFromItem(RegisterItems.STAINLESS_STEEL))
+                .criterion(hasItem(RegisterItems.STAINLESS_STEEL_INGOT), conditionsFromItem(RegisterItems.STAINLESS_STEEL_INGOT))
                 .criterion(hasItem(RegisterItems.STEEL_PIPE), conditionsFromItem(RegisterItems.STEEL_PIPE))
                 .offerTo(exporter, Identifier.of(UrbanDecor.MOD_ID, getRecipeName(RegisterBlocks.SHOWER)));
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, RegisterBlocks.TOWEL_BAR, 1)
-                .input('@', RegisterItems.STAINLESS_STEEL)
+                .input('@', RegisterItems.STAINLESS_STEEL_INGOT)
                 .pattern("@@@")
-                .criterion(hasItem(RegisterItems.STAINLESS_STEEL), conditionsFromItem(RegisterItems.STAINLESS_STEEL))
+                .criterion(hasItem(RegisterItems.STAINLESS_STEEL_INGOT), conditionsFromItem(RegisterItems.STAINLESS_STEEL_INGOT))
                 .offerTo(exporter, Identifier.of(UrbanDecor.MOD_ID, getRecipeName(RegisterBlocks.TOWEL_BAR)));
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, RegisterBlocks.getDyedTowels(DyeColor.WHITE.getId()), 1)
@@ -485,108 +485,124 @@ public class UDRecipeProvider extends FabricRecipeProvider {
                 .criterion(hasItem(Blocks.BROWN_CARPET), conditionsFromItem(Blocks.BROWN_CARPET))
                 .offerTo(exporter, Identifier.of(UrbanDecor.MOD_ID, getRecipeName(RegisterBlocks.getDyedTowels(DyeColor.BROWN.getId()))));
 
-        ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, RegisterBlocks.getDyedTowelBlocks(DyeColor.WHITE.getId()), 2)
+        ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, RegisterBlocks.getDyedTowelBlocks(DyeColor.WHITE.getId()), 4)
                 .input('@', Blocks.WHITE_WOOL)
+                .pattern("@@")
                 .pattern("@@")
                 .criterion(hasItem(Blocks.WHITE_WOOL), conditionsFromItem(Blocks.WHITE_WOOL))
                 .offerTo(exporter, Identifier.of(UrbanDecor.MOD_ID, getRecipeName(RegisterBlocks.getDyedTowelBlocks(DyeColor.WHITE.getId()))));
 
-        ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, RegisterBlocks.getDyedTowelBlocks(DyeColor.LIGHT_GRAY.getId()), 2)
+        ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, RegisterBlocks.getDyedTowelBlocks(DyeColor.LIGHT_GRAY.getId()), 4)
                 .input('@', Blocks.LIGHT_GRAY_WOOL)
+                .pattern("@@")
                 .pattern("@@")
                 .criterion(hasItem(Blocks.LIGHT_GRAY_WOOL), conditionsFromItem(Blocks.LIGHT_GRAY_WOOL))
                 .offerTo(exporter, Identifier.of(UrbanDecor.MOD_ID, getRecipeName(RegisterBlocks.getDyedTowelBlocks(DyeColor.LIGHT_GRAY.getId()))));
 
-        ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, RegisterBlocks.getDyedTowelBlocks(DyeColor.GRAY.getId()), 2)
+        ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, RegisterBlocks.getDyedTowelBlocks(DyeColor.GRAY.getId()), 4)
                 .input('@', Blocks.GRAY_WOOL)
+                .pattern("@@")
                 .pattern("@@")
                 .criterion(hasItem(Blocks.GRAY_WOOL), conditionsFromItem(Blocks.GRAY_WOOL))
                 .offerTo(exporter, Identifier.of(UrbanDecor.MOD_ID, getRecipeName(RegisterBlocks.getDyedTowelBlocks(DyeColor.GRAY.getId()))));
 
-        ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, RegisterBlocks.getDyedTowelBlocks(DyeColor.BLACK.getId()), 2)
+        ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, RegisterBlocks.getDyedTowelBlocks(DyeColor.BLACK.getId()), 4)
                 .input('@', Blocks.BLACK_WOOL)
+                .pattern("@@")
                 .pattern("@@")
                 .criterion(hasItem(Blocks.BLACK_WOOL), conditionsFromItem(Blocks.BLACK_WOOL))
                 .offerTo(exporter, Identifier.of(UrbanDecor.MOD_ID, getRecipeName(RegisterBlocks.getDyedTowelBlocks(DyeColor.BLACK.getId()))));
 
-        ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, RegisterBlocks.getDyedTowelBlocks(DyeColor.RED.getId()), 2)
+        ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, RegisterBlocks.getDyedTowelBlocks(DyeColor.RED.getId()), 4)
                 .input('@', Blocks.RED_WOOL)
+                .pattern("@@")
                 .pattern("@@")
                 .criterion(hasItem(Blocks.RED_WOOL), conditionsFromItem(Blocks.RED_WOOL))
                 .offerTo(exporter, Identifier.of(UrbanDecor.MOD_ID, getRecipeName(RegisterBlocks.getDyedTowelBlocks(DyeColor.RED.getId()))));
 
-        ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, RegisterBlocks.getDyedTowelBlocks(DyeColor.ORANGE.getId()), 2)
+        ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, RegisterBlocks.getDyedTowelBlocks(DyeColor.ORANGE.getId()), 4)
                 .input('@', Blocks.ORANGE_WOOL)
+                .pattern("@@")
                 .pattern("@@")
                 .criterion(hasItem(Blocks.ORANGE_WOOL), conditionsFromItem(Blocks.ORANGE_WOOL))
                 .offerTo(exporter, Identifier.of(UrbanDecor.MOD_ID, getRecipeName(RegisterBlocks.getDyedTowelBlocks(DyeColor.ORANGE.getId()))));
 
-        ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, RegisterBlocks.getDyedTowelBlocks(DyeColor.YELLOW.getId()), 2)
+        ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, RegisterBlocks.getDyedTowelBlocks(DyeColor.YELLOW.getId()), 4)
                 .input('@', Blocks.YELLOW_WOOL)
+                .pattern("@@")
                 .pattern("@@")
                 .criterion(hasItem(Blocks.YELLOW_WOOL), conditionsFromItem(Blocks.YELLOW_WOOL))
                 .offerTo(exporter, Identifier.of(UrbanDecor.MOD_ID, getRecipeName(RegisterBlocks.getDyedTowelBlocks(DyeColor.YELLOW.getId()))));
 
-        ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, RegisterBlocks.getDyedTowelBlocks(DyeColor.LIME.getId()), 2)
+        ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, RegisterBlocks.getDyedTowelBlocks(DyeColor.LIME.getId()), 4)
                 .input('@', Blocks.LIME_WOOL)
+                .pattern("@@")
                 .pattern("@@")
                 .criterion(hasItem(Blocks.LIME_WOOL), conditionsFromItem(Blocks.LIME_WOOL))
                 .offerTo(exporter, Identifier.of(UrbanDecor.MOD_ID, getRecipeName(RegisterBlocks.getDyedTowelBlocks(DyeColor.LIME.getId()))));
 
-        ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, RegisterBlocks.getDyedTowelBlocks(DyeColor.GREEN.getId()), 2)
+        ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, RegisterBlocks.getDyedTowelBlocks(DyeColor.GREEN.getId()), 4)
                 .input('@', Blocks.GREEN_WOOL)
+                .pattern("@@")
                 .pattern("@@")
                 .criterion(hasItem(Blocks.GREEN_WOOL), conditionsFromItem(Blocks.GREEN_WOOL))
                 .offerTo(exporter, Identifier.of(UrbanDecor.MOD_ID, getRecipeName(RegisterBlocks.getDyedTowelBlocks(DyeColor.GREEN.getId()))));
 
-        ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, RegisterBlocks.getDyedTowelBlocks(DyeColor.CYAN.getId()), 2)
+        ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, RegisterBlocks.getDyedTowelBlocks(DyeColor.CYAN.getId()), 4)
                 .input('@', Blocks.CYAN_WOOL)
+                .pattern("@@")
                 .pattern("@@")
                 .criterion(hasItem(Blocks.CYAN_WOOL), conditionsFromItem(Blocks.CYAN_WOOL))
                 .offerTo(exporter, Identifier.of(UrbanDecor.MOD_ID, getRecipeName(RegisterBlocks.getDyedTowelBlocks(DyeColor.CYAN.getId()))));
 
-        ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, RegisterBlocks.getDyedTowelBlocks(DyeColor.LIGHT_BLUE.getId()), 2)
+        ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, RegisterBlocks.getDyedTowelBlocks(DyeColor.LIGHT_BLUE.getId()), 4)
                 .input('@', Blocks.LIGHT_BLUE_WOOL)
+                .pattern("@@")
                 .pattern("@@")
                 .criterion(hasItem(Blocks.LIGHT_BLUE_WOOL), conditionsFromItem(Blocks.LIGHT_BLUE_WOOL))
                 .offerTo(exporter, Identifier.of(UrbanDecor.MOD_ID, getRecipeName(RegisterBlocks.getDyedTowelBlocks(DyeColor.LIGHT_BLUE.getId()))));
 
-        ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, RegisterBlocks.getDyedTowelBlocks(DyeColor.BLUE.getId()), 2)
+        ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, RegisterBlocks.getDyedTowelBlocks(DyeColor.BLUE.getId()), 4)
                 .input('@', Blocks.BLUE_WOOL)
+                .pattern("@@")
                 .pattern("@@")
                 .criterion(hasItem(Blocks.BLUE_WOOL), conditionsFromItem(Blocks.BLUE_WOOL))
                 .offerTo(exporter, Identifier.of(UrbanDecor.MOD_ID, getRecipeName(RegisterBlocks.getDyedTowelBlocks(DyeColor.BLUE.getId()))));
 
-        ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, RegisterBlocks.getDyedTowelBlocks(DyeColor.PURPLE.getId()), 2)
+        ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, RegisterBlocks.getDyedTowelBlocks(DyeColor.PURPLE.getId()), 4)
                 .input('@', Blocks.PURPLE_WOOL)
+                .pattern("@@")
                 .pattern("@@")
                 .criterion(hasItem(Blocks.PURPLE_WOOL), conditionsFromItem(Blocks.PURPLE_WOOL))
                 .offerTo(exporter, Identifier.of(UrbanDecor.MOD_ID, getRecipeName(RegisterBlocks.getDyedTowelBlocks(DyeColor.PURPLE.getId()))));
 
-        ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, RegisterBlocks.getDyedTowelBlocks(DyeColor.MAGENTA.getId()), 2)
+        ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, RegisterBlocks.getDyedTowelBlocks(DyeColor.MAGENTA.getId()), 4)
                 .input('@', Blocks.MAGENTA_WOOL)
+                .pattern("@@")
                 .pattern("@@")
                 .criterion(hasItem(Blocks.MAGENTA_WOOL), conditionsFromItem(Blocks.MAGENTA_WOOL))
                 .offerTo(exporter, Identifier.of(UrbanDecor.MOD_ID, getRecipeName(RegisterBlocks.getDyedTowelBlocks(DyeColor.MAGENTA.getId()))));
 
-        ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, RegisterBlocks.getDyedTowelBlocks(DyeColor.PINK.getId()), 2)
+        ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, RegisterBlocks.getDyedTowelBlocks(DyeColor.PINK.getId()), 4)
                 .input('@', Blocks.PINK_WOOL)
+                .pattern("@@")
                 .pattern("@@")
                 .criterion(hasItem(Blocks.PINK_WOOL), conditionsFromItem(Blocks.PINK_WOOL))
                 .offerTo(exporter, Identifier.of(UrbanDecor.MOD_ID, getRecipeName(RegisterBlocks.getDyedTowelBlocks(DyeColor.PINK.getId()))));
 
-        ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, RegisterBlocks.getDyedTowelBlocks(DyeColor.BROWN.getId()), 2)
+        ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, RegisterBlocks.getDyedTowelBlocks(DyeColor.BROWN.getId()), 4)
                 .input('@', Blocks.BROWN_WOOL)
+                .pattern("@@")
                 .pattern("@@")
                 .criterion(hasItem(Blocks.BROWN_WOOL), conditionsFromItem(Blocks.BROWN_WOOL))
                 .offerTo(exporter, Identifier.of(UrbanDecor.MOD_ID, getRecipeName(RegisterBlocks.getDyedTowelBlocks(DyeColor.BROWN.getId()))));
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, RegisterBlocks.RIGID_GLASS, 3)
-                .input('#', RegisterItems.STAINLESS_STEEL).input('@', Items.GLASS_PANE)
+                .input('#', RegisterItems.STAINLESS_STEEL_INGOT).input('@', Items.GLASS_PANE)
                 .pattern("#@#")
                 .pattern("#@#")
                 .pattern("#@#")
-                .criterion(hasItem(RegisterItems.STAINLESS_STEEL), conditionsFromItem(RegisterItems.STAINLESS_STEEL))
+                .criterion(hasItem(RegisterItems.STAINLESS_STEEL_INGOT), conditionsFromItem(RegisterItems.STAINLESS_STEEL_INGOT))
                 .offerTo(exporter, Identifier.of(UrbanDecor.MOD_ID, getRecipeName(RegisterBlocks.RIGID_GLASS)));
 
         createTwoByTwoRecipe(RegisterBlocks.PORCELAIN_TILES, 4,
@@ -624,6 +640,22 @@ public class UDRecipeProvider extends FabricRecipeProvider {
 
         offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, RegisterBlocks.DARK_PORCELAIN_STAIRS, RegisterBlocks.DARK_PORCELAIN_BLOCK, 1);
         offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, RegisterBlocks.DARK_PORCELAIN_SLAB, RegisterBlocks.DARK_PORCELAIN_BLOCK, 2);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, RegisterBlocks.BATHTUB, 1)
+                .input('#', RegisterItems.PORCELAIN).input('@', RegisterBlocks.PORCELAIN_BLOCK)
+                .pattern("# #")
+                .pattern("# #")
+                .pattern("@@@")
+                .criterion(hasItem(RegisterItems.PORCELAIN), conditionsFromItem(RegisterItems.PORCELAIN))
+                .offerTo(exporter, Identifier.of(UrbanDecor.MOD_ID, getRecipeName(RegisterBlocks.BATHTUB)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, RegisterBlocks.DARK_BATHTUB, 1)
+                .input('#', RegisterItems.DARK_PORCELAIN).input('@', RegisterBlocks.DARK_PORCELAIN_BLOCK)
+                .pattern("# #")
+                .pattern("# #")
+                .pattern("@@@")
+                .criterion(hasItem(RegisterItems.DARK_PORCELAIN), conditionsFromItem(RegisterItems.DARK_PORCELAIN))
+                .offerTo(exporter, Identifier.of(UrbanDecor.MOD_ID, getRecipeName(RegisterBlocks.DARK_BATHTUB)));
     }
 //yes this only exists so i can name it four for four wendys meal... there is no need for this recipe builder
     public static ShapedRecipeJsonBuilder createFourForFourWendysMealRecipe(ItemConvertible output, Ingredient input) {

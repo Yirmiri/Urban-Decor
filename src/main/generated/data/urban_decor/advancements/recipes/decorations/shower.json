@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_stainless_steel": {
+    "has_stainless_steel_ingot": {
       "conditions": {
         "items": [
           {
             "items": [
-              "urban_decor:stainless_steel"
+              "urban_decor:stainless_steel_ingot"
             ]
           }
         ]
@@ -34,7 +34,7 @@
   },
   "requirements": [
     [
-      "has_stainless_steel",
+      "has_stainless_steel_ingot",
       "has_steel_pipe",
       "has_the_recipe"
     ]

@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_stainless_steel_block": {
+    "has_dark_porcelain": {
       "conditions": {
         "items": [
           {
             "items": [
-              "urban_decor:stainless_steel_block"
+              "urban_decor:dark_porcelain"
             ]
           }
         ]
@@ -15,20 +15,20 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:stainless_steel"
+        "recipe": "urban_decor:dark_bathtub"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_stainless_steel_block",
+      "has_dark_porcelain",
       "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "minecraft:stainless_steel"
+      "urban_decor:dark_bathtub"
     ]
   },
   "sends_telemetry_event": false
