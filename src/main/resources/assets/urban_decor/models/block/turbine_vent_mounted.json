@@ -1,0 +1,35 @@
+{
+	"credit": "Made with Blockbench by Tellio-Ari",
+	"textures": {
+		"0": "furniture:turbine_vent",
+		"particle": "furniture:turbine_vent"
+	},
+	"elements": [
+		{
+			"from": [3, 8, 16],
+			"to": [13, 16, 16],
+			"rotation": {"angle": 0, "axis": "x", "origin": [3, 8, 16]},
+			"faces": {
+				"north": {"uv": [0, 8, 10, 16], "rotation": 180, "texture": "#0"},
+				"east": {"uv": [0, 0, 8, 0], "rotation": 90, "texture": "#missing"},
+				"south": {"uv": [0, 8, 10, 16], "texture": "#0"},
+				"west": {"uv": [0, 0, 8, 0], "rotation": 270, "texture": "#missing"},
+				"up": {"uv": [0, 0, 10, 0], "texture": "#missing"},
+				"down": {"uv": [0, 0, 10, 0], "rotation": 180, "texture": "#missing"}
+			}
+		},
+		{
+			"from": [4, 9, 10],
+			"to": [12, 15, 16],
+			"rotation": {"angle": 0, "axis": "x", "origin": [4, 9, 16]},
+			"faces": {
+				"north": {"uv": [1, 9, 9, 15], "rotation": 180, "texture": "#0"},
+				"east": {"uv": [16, 0, 10, 6], "rotation": 90, "texture": "#0"},
+				"south": {"uv": [0, 0, 8, 6], "texture": "#missing"},
+				"west": {"uv": [10, 0, 16, 6], "rotation": 270, "texture": "#0"},
+				"up": {"uv": [10, 8, 16, 16], "rotation": 90, "texture": "#0"},
+				"down": {"uv": [0, 0, 8, 6], "rotation": 180, "texture": "#0"}
+			}
+		}
+	]
+}
