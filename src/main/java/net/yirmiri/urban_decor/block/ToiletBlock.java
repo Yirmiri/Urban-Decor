@@ -81,15 +81,16 @@ public class ToiletBlock extends AbstractDecorBlock {
                 } else if (!state.get(OPEN)) {
                     world.playSound(pos.getX(), pos.getY(), pos.getZ(), SoundEvents.BLOCK_CHERRY_WOOD_DOOR_OPEN, SoundCategory.BLOCKS, 1.0F, 1.0F, false);
                 }
-//            } else if (!player.isSneaking() && !state.get(OCCUPIED) && !world.isClient) {
+            }
+//            else if (!player.isSneaking() && !state.get(OCCUPIED) && !world.isClient) {
 //                ToiletEntity toiletEntity = RegisterEntities.TOILET.create(world);
 //                toiletEntity.setPos(pos.getX() + 0.5D, pos.getY() + 0.15D, pos.getZ() + 0.5D);
 //                world.spawnEntity(toiletEntity);
 //                world.setBlockState(pos, state.with(OCCUPIED, true));
 //                player.startRiding(toiletEntity);
 //                player.incrementStat(UDStats.TIMES_SAT);
-            } //TODO: Finish toilet sitting functionality
-//            return ActionResult.SUCCESS;
+//            }
+            return ActionResult.SUCCESS;
         } else if (stackHand.isIn(UDItemTagProvider.TOOLBOXES)) {
             world.setBlockState(pos, state.cycle(ALT));
             UDUtils.ToolboxUsed(world, pos);
