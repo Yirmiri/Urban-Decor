@@ -21,6 +21,7 @@ public class UDItemTagProvider extends FabricTagProvider.ItemTagProvider {
     public static final TagKey<Item> TOWELS = create("towels");
     public static final TagKey<Item> GLASS = create("glass");
     public static final TagKey<Item> DYES = create("dyes");
+    public static final TagKey<Item> TOOLBOXABLE = create("toolboxable");
 
     public UDItemTagProvider(FabricDataOutput output, CompletableFuture<RegistryWrapper.WrapperLookup> future) {
         super(output, future);
@@ -50,6 +51,30 @@ public class UDItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(RegisterBlocks.DARK_WASHING_MACHINE.asItem())
                 .add(RegisterBlocks.BATHTUB.asItem())
                 .add(RegisterBlocks.DARK_BATHTUB.asItem())
+        ;
+
+        getOrCreateTagBuilder(TOOLBOXABLE)
+                .add(RegisterBlocks.TRASH_CAN.asItem())
+                .add(RegisterBlocks.MICROWAVE.asItem())
+                .add(RegisterBlocks.SINK.asItem())
+                .add(RegisterBlocks.TOILET.asItem())
+                .add(RegisterBlocks.WASHING_MACHINE.asItem())
+                .add(RegisterBlocks.DRYER.asItem())
+                .add(RegisterBlocks.TOASTER.asItem())
+                .add(RegisterBlocks.OVEN.asItem())
+                .add(RegisterBlocks.STOVE.asItem())
+                .add(RegisterBlocks.FRIDGE.asItem())
+                .add(RegisterBlocks.FREEZER.asItem())
+                .add(RegisterBlocks.DARK_DRYER.asItem())
+                .add(RegisterBlocks.DARK_OVEN.asItem())
+                .add(RegisterBlocks.DARK_SINK.asItem())
+                .add(RegisterBlocks.DARK_FRIDGE.asItem())
+                .add(RegisterBlocks.DARK_FREEZER.asItem())
+                .add(RegisterBlocks.DARK_TOILET.asItem())
+                .add(RegisterBlocks.DARK_WASHING_MACHINE.asItem())
+                .add(RegisterBlocks.SATELLITE_DISH.asItem())
+                .add(RegisterBlocks.SHOWER.asItem())
+                .add(RegisterBlocks.FAUCET.asItem())
         ;
 
         getOrCreateTagBuilder(DYES)

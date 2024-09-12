@@ -108,7 +108,7 @@
   "item.urban_decor.stainless_steel_ingot": "Stainless Steel Ingot",
   "item.urban_decor.stainless_steel_nugget": "Stainless Steel Nugget",
   "item.urban_decor.steel_pipe": "Steel Pipe",
-  "item.urban_decor.toolbox.desc": "Changes the State of Some Blocks",
+  "item.urban_decor.toolbox.desc": "Can Change Variants of Specific Blocks",
   "item.urban_decor.toolbox.use": "When Used on Blocks:",
   "itemgroup.urban_decor": "Urban Decor",
   "subtitles.block.fridge.open": "Fridge opens",
@@ -118,8 +118,12 @@
   "toolbox.faucet.variant_true": "Variant: Indoor",
   "toolbox.fridge.variant_false": "Variant: Flipped",
   "toolbox.fridge.variant_true": "Variant: Default",
+  "toolbox.microwave.variant_false": "Variant: Wall Mounted",
+  "toolbox.microwave.variant_true": "Variant: Grounded",
   "toolbox.oven.variant_false": "Variant: Opaque",
   "toolbox.oven.variant_true": "Variant: Transparent",
+  "toolbox.picture_frame.variant_false": "Variant: Wall Mounted",
+  "toolbox.picture_frame.variant_true": "Variant: Grounded",
   "toolbox.satellite_dish.variant_false": "Variant: Wall Mounted",
   "toolbox.satellite_dish.variant_true": "Variant: Grounded",
   "toolbox.shower.variant_false": "Variant: Cylindrical",
@@ -134,5 +138,6 @@
   "toolbox.trash_can.variant_2": "Variant: Mesh",
   "toolbox.washing_machine.variant_false": "Variant: Opaque",
   "toolbox.washing_machine.variant_true": "Variant: Transparent",
+  "tooltip.urban_decor.toolboxable": "Has toolbox variants",
   "urban_decor.times_sat": "Times Sat Down"
 }

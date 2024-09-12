@@ -70,7 +70,6 @@ public class UDModelProvider extends FabricModelProvider {
         generator.register(RegisterBlocks.DESK_FAN.asItem(), Models.GENERATED);
         generator.register(RegisterBlocks.SATELLITE_DISH.asItem(), Models.GENERATED);
         generator.register(RegisterBlocks.TOWEL_BAR.asItem(), Models.GENERATED);
-        generator.register(RegisterBlocks.TURBINE.asItem(), Models.GENERATED);
         generator.register(RegisterItems.STAINLESS_STEEL_NUGGET, Models.GENERATED);
 
         for (DyeColor colors : DyeColor.values()) {

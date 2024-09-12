@@ -100,7 +100,8 @@ public class UDLangProvider extends FabricLanguageProvider {
 
         //TOOLTIPS
         builder.add("item.urban_decor.toolbox.use", "When Used on Blocks:");
-        builder.add("item.urban_decor.toolbox.desc", "Changes the State of Some Blocks");
+        builder.add("item.urban_decor.toolbox.desc", "Can Change Variants of Specific Blocks");
+        builder.add("tooltip.urban_decor.toolboxable", "Has toolbox variants");
 
         //TOOLBOX
         builder.add("toolbox.dryer.variant_true", "Variant: Transparent");

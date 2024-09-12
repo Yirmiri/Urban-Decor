@@ -53,31 +53,17 @@ public class PictureFrameBlock extends AbstractDecorBlock {
         };
     }
 
-//    @Override
-//    public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
-//        ItemStack stackHand = player.getStackInHand(hand);
-//        Item item = stackHand.getItem();
-//        if (stackHand.isIn(UDItemTagProvider.TOOLBOXES)) {
-//            world.setBlockState(pos, state.cycle(WALL));
-//            UDUtils.ToolboxUsed(world, pos);
-//            player.sendMessage(Text.translatable("toolbox.picture_frame.variant_" + state.get(WALL)), true);
-//            return ActionResult.SUCCESS;
-//
-//        } else if (player.getMainHandStack().isIn(UDItemTagProvider.DYES)) {
-//            if (item instanceof DyeItem) {
-//                if (!player.isCreative()) {
-//                    stackHand.decrement(1);
-//                }
-//                world.playSound(null, pos, SoundEvents.BLOCK_WOOL_PLACE, SoundCategory.BLOCKS, 1.0F, 1.0F);
-//                world.setBlockState(pos, TowelBarTowelBlock.getTowelColors(item).with(FACING, state.get(FACING)));
-//                world.emitGameEvent(player, GameEvent.BLOCK_CHANGE, pos);
-//                player.incrementStat(Stats.USED.getOrCreateStat(item));
-//                return ActionResult.SUCCESS;
-//            }
-//            return ActionResult.SUCCESS;
-//        }
-//        return ActionResult.PASS;
-//    }
+    @Override
+    public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
+        ItemStack stackHand = player.getStackInHand(hand);
+        if (stackHand.isIn(UDItemTagProvider.TOOLBOXES)) {
+            world.setBlockState(pos, state.cycle(WALL));
+            UDUtils.ToolboxUsed(world, pos);
+            player.sendMessage(Text.translatable("toolbox.picture_frame.variant_" + state.get(WALL)), true);
+            return ActionResult.SUCCESS;
+        }
+        return ActionResult.PASS;
+    }
 
     @Override
     protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
