@@ -29,27 +29,23 @@ public class UrbanDecorClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(RegisterBlocks.DARK_WASHING_MACHINE, RenderLayer.getTranslucent());
         BlockRenderLayerMap.INSTANCE.putBlock(RegisterBlocks.DARK_OVEN, RenderLayer.getCutoutMipped());
         BlockRenderLayerMap.INSTANCE.putBlock(RegisterBlocks.DARK_DRYER, RenderLayer.getTranslucent());
-        addTowelRenderLayer();
-        addTowelBarTowelRenderLayer();
+        addDyedCutouts();
         BlockRenderLayerMap.INSTANCE.putBlock(RegisterBlocks.SATELLITE_DISH, RenderLayer.getCutoutMipped());
         BlockRenderLayerMap.INSTANCE.putBlock(RegisterBlocks.TOILET, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(RegisterBlocks.DARK_TOILET, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(RegisterBlocks.FAUCET, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(RegisterBlocks.RIGID_GLASS, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(RegisterBlocks.PICTURE_FRAME, RenderLayer.getCutout());
 
         //ENTITY
         EntityRendererRegistry.register(RegisterEntities.TOILET, InvisibleEntityRenderer::new);
     }
 
-    private void addTowelRenderLayer() {
+    private void addDyedCutouts() {
         for (DyeColor colors : DyeColor.values()) {
             BlockRenderLayerMap.INSTANCE.putBlock(RegisterBlocks.getDyedTowels(colors.getId()), RenderLayer.getCutout());
-        }
-    }
-
-    private void addTowelBarTowelRenderLayer() {
-        for (DyeColor colors : DyeColor.values()) {
             BlockRenderLayerMap.INSTANCE.putBlock(RegisterBlocks.getDyedTowelBarTowels(colors.getId()), RenderLayer.getCutout());
+            BlockRenderLayerMap.INSTANCE.putBlock(RegisterBlocks.getDyedPictureFrames(colors.getId()), RenderLayer.getCutout());
         }
     }
 }

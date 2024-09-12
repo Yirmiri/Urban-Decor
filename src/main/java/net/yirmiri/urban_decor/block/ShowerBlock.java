@@ -54,7 +54,7 @@ public class ShowerBlock extends AbstractDecorBlock {
         ItemStack stackHand = player.getStackInHand(hand);
         if (stackHand.isIn(UDItemTagProvider.TOOLBOXES)) {
             world.setBlockState(pos, state.cycle(ALT));
-            UDUtils.ToolboxUsed(world, pos);
+            UDUtils.toolboxUsed(world, pos);
             player.sendMessage(Text.translatable("toolbox.shower.variant_" + state.get(ALT)), true);
             return ActionResult.SUCCESS;
         }

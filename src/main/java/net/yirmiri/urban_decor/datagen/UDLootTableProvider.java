@@ -73,6 +73,8 @@ public class UDLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(RegisterBlocks.DARK_PORCELAIN_BLOCK);
         addDrop(RegisterBlocks.DARK_PORCELAIN_STAIRS);
         addDrop(RegisterBlocks.DARK_PORCELAIN_SLAB, slabDrops(RegisterBlocks.DARK_PORCELAIN_SLAB));
+        addDyedPictureFrameDrops();
+        addDrop(RegisterBlocks.PICTURE_FRAME);
     }
 
     private void addDyedTowelBlockDrops() {
@@ -91,6 +93,12 @@ public class UDLootTableProvider extends FabricBlockLootTableProvider {
         for (DyeColor colors : DyeColor.values()) {
             addDrop(RegisterBlocks.getDyedTowels(colors.getId()));
             addDrop(RegisterBlocks.TOWEL_BAR);
+        }
+    }
+
+    private void addDyedPictureFrameDrops() {
+        for (DyeColor colors : DyeColor.values()) {
+            addDrop(RegisterBlocks.getDyedPictureFrames(colors.getId()));
         }
     }
 

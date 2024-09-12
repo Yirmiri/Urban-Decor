@@ -117,6 +117,24 @@ public class RegisterItemGroups {
                 entries.add(RegisterBlocks.getDyedTowels(DyeColor.MAGENTA.getId()));
                 entries.add(RegisterBlocks.getDyedTowels(DyeColor.PINK.getId()));
 
+                entries.add(RegisterBlocks.PICTURE_FRAME);
+                entries.add(RegisterBlocks.getDyedPictureFrames(DyeColor.WHITE.getId()));
+                entries.add(RegisterBlocks.getDyedPictureFrames(DyeColor.LIGHT_GRAY.getId()));
+                entries.add(RegisterBlocks.getDyedPictureFrames(DyeColor.GRAY.getId()));
+                entries.add(RegisterBlocks.getDyedPictureFrames(DyeColor.BLACK.getId()));
+                entries.add(RegisterBlocks.getDyedPictureFrames(DyeColor.BROWN.getId()));
+                entries.add(RegisterBlocks.getDyedPictureFrames(DyeColor.RED.getId()));
+                entries.add(RegisterBlocks.getDyedPictureFrames(DyeColor.ORANGE.getId()));
+                entries.add(RegisterBlocks.getDyedPictureFrames(DyeColor.YELLOW.getId()));
+                entries.add(RegisterBlocks.getDyedPictureFrames(DyeColor.LIME.getId()));
+                entries.add(RegisterBlocks.getDyedPictureFrames(DyeColor.GREEN.getId()));
+                entries.add(RegisterBlocks.getDyedPictureFrames(DyeColor.CYAN.getId()));
+                entries.add(RegisterBlocks.getDyedPictureFrames(DyeColor.LIGHT_BLUE.getId()));
+                entries.add(RegisterBlocks.getDyedPictureFrames(DyeColor.BLUE.getId()));
+                entries.add(RegisterBlocks.getDyedPictureFrames(DyeColor.PURPLE.getId()));
+                entries.add(RegisterBlocks.getDyedPictureFrames(DyeColor.MAGENTA.getId()));
+                entries.add(RegisterBlocks.getDyedPictureFrames(DyeColor.PINK.getId()));
+
                 if (RegisterCompatRegistries.excessive_building) {
                     entries.add(EBRegisterBlocks.PORCELAIN_TILE_VERTICAL_STAIRS);
                     entries.add(EBRegisterBlocks.DARK_PORCELAIN_TILE_VERTICAL_STAIRS);

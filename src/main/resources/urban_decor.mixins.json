@@ -8,6 +8,8 @@
     "defaultRequire": 1
   },
   "client": [
-    "ItemMixin"
+    "AbstractClientPlayerMixin",
+    "ItemMixin",
+    "PlayerListEntryMixin"
   ]
 }

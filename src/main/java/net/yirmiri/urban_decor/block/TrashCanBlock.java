@@ -47,7 +47,7 @@ public class TrashCanBlock extends AbstractDecorBlock {
         ItemStack stackHand = player.getStackInHand(hand);
         if (stackHand.isIn(UDItemTagProvider.TOOLBOXES)) {
             world.setBlockState(pos, state.cycle(VARIANT));
-            UDUtils.ToolboxUsed(world, pos);
+            UDUtils.toolboxUsed(world, pos);
             player.sendMessage(Text.translatable("toolbox.trash_can.variant_" + state.get(VARIANT)), true);
             return ActionResult.SUCCESS;
         }

@@ -6,6 +6,8 @@ import net.minecraft.item.Item;
 import net.minecraft.item.Items;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.RegistryWrapper;
+import net.minecraft.registry.tag.BlockTags;
+import net.minecraft.registry.tag.ItemTags;
 import net.minecraft.registry.tag.TagKey;
 import net.minecraft.util.DyeColor;
 import net.minecraft.util.Identifier;
@@ -51,7 +53,12 @@ public class UDItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(RegisterBlocks.DARK_WASHING_MACHINE.asItem())
                 .add(RegisterBlocks.BATHTUB.asItem())
                 .add(RegisterBlocks.DARK_BATHTUB.asItem())
+                .add(RegisterBlocks.PICTURE_FRAME.asItem())
         ;
+
+        for (DyeColor colors : DyeColor.values()) {
+            getOrCreateTagBuilder(FURNISHINGS).add(RegisterBlocks.getDyedPictureFrames(colors.getId()).asItem());
+        }
 
         getOrCreateTagBuilder(TOOLBOXABLE)
                 .add(RegisterBlocks.TRASH_CAN.asItem())
@@ -75,7 +82,12 @@ public class UDItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(RegisterBlocks.SATELLITE_DISH.asItem())
                 .add(RegisterBlocks.SHOWER.asItem())
                 .add(RegisterBlocks.FAUCET.asItem())
+                .add(RegisterBlocks.PICTURE_FRAME.asItem())
         ;
+
+        for (DyeColor colors : DyeColor.values()) {
+            getOrCreateTagBuilder(TOOLBOXABLE).add(RegisterBlocks.getDyedPictureFrames(colors.getId()).asItem());
+        }
 
         getOrCreateTagBuilder(DYES)
                 .add(Items.RED_DYE)

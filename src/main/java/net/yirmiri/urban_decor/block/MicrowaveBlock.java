@@ -57,7 +57,7 @@ public class MicrowaveBlock extends AbstractDecorBlock {
         ItemStack stackHand = player.getStackInHand(hand);
         if (stackHand.isIn(UDItemTagProvider.TOOLBOXES)) {
             world.setBlockState(pos, state.cycle(WALL));
-            UDUtils.ToolboxUsed(world, pos);
+            UDUtils.toolboxUsed(world, pos);
             player.sendMessage(Text.translatable("toolbox.microwave.variant_" + state.get(WALL)), true);
             return ActionResult.SUCCESS;
 

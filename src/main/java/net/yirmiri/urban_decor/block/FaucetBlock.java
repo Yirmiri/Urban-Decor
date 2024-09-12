@@ -5,8 +5,6 @@ import net.minecraft.block.BlockState;
 import net.minecraft.block.ShapeContext;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
-import net.minecraft.sound.SoundCategory;
-import net.minecraft.sound.SoundEvents;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.BooleanProperty;
 import net.minecraft.state.property.Properties;
@@ -46,7 +44,7 @@ public class FaucetBlock extends AbstractDecorBlock {
         ItemStack stackHand = player.getStackInHand(hand);
         if (stackHand.isIn(UDItemTagProvider.TOOLBOXES)) {
             world.setBlockState(pos, state.cycle(OUTDOOR));
-            UDUtils.ToolboxUsed(world, pos);
+            UDUtils.toolboxUsed(world, pos);
             player.sendMessage(Text.translatable("toolbox.faucet.variant_" + state.get(OUTDOOR)), true);
             return ActionResult.SUCCESS;
         }

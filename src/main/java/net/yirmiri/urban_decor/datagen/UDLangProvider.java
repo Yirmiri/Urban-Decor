@@ -23,6 +23,7 @@ public class UDLangProvider extends FabricLanguageProvider {
             builder.add(RegisterBlocks.getDyedTowels(colors.getId()), dyeString + " Towel");
             builder.add(RegisterBlocks.getDyedTowelBarTowels(colors.getId()), dyeString + " Towel Bar");
             builder.add(RegisterBlocks.getDyedTowelBlocks(colors.getId()), dyeString + " Towel Block");
+            builder.add(RegisterBlocks.getDyedPictureFrames(colors.getId()), dyeString + " Picture Frame");
         }
 
         //BLOCKS
@@ -80,6 +81,7 @@ public class UDLangProvider extends FabricLanguageProvider {
         builder.add(RegisterBlocks.BATHTUB, "Bathtub");
         builder.add(RegisterBlocks.DARK_BATHTUB, "Dark Bathtub");
         builder.add(RegisterBlocks.RIGID_GLASS, "Rigid Glass");
+        builder.add(RegisterBlocks.PICTURE_FRAME, "Picture Frame");
 
         //ITEMS
         builder.add(RegisterItems.PORCELAIN, "Porcelain");

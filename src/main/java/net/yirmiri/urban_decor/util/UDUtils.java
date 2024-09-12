@@ -7,7 +7,7 @@ import net.minecraft.world.World;
 
 public class UDUtils {
 
-    public static void ToolboxUsed(World world, BlockPos pos) {
+    public static void toolboxUsed(World world, BlockPos pos) {
         world.playSound(pos.getX(), pos.getY(), pos.getZ(), SoundEvents.BLOCK_GRINDSTONE_USE, SoundCategory.BLOCKS, 0.5F, 1.0F, false);
     }
 }

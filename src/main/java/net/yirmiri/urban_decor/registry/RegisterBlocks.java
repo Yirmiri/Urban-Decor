@@ -82,25 +82,26 @@ public class RegisterBlocks {
     public static final Block SATELLITE_DISH = register("satellite_dish", new SatelliteDishBlock(UDProperties.BlockP.SATELLITE_DISH), true);
     public static final Block SHOWER = register("shower", new ShowerBlock(UDProperties.BlockP.SHOWER), true);
 
-    //TOWELS
+    //DYED BLOCKS
     public static final HashMap<DyeColor, Block> DYED_TOWELS = new HashMap<>();
     public static final HashMap<DyeColor, Block> DYED_TOWEL_BARS = new HashMap<>();
     public static final HashMap<DyeColor, Block> DYED_TOWEL_BLOCKS = new HashMap<>();
+    public static final HashMap<DyeColor, Block> DYED_PICTURE_FRAMES = new HashMap<>();
+    public static final Block PICTURE_FRAME = register("picture_frame", new PictureFrameBlock(UDProperties.BlockP.PICTURE_FRAME), true);
 
     static {
         for (DyeColor colors : DyeColor.values()) {
             DYED_TOWELS.put(colors, register(colors + "_towel", new TowelBlock(
                     FabricBlockSettings.copyOf(Blocks.WHITE_CARPET).mapColor(colors)), true));
-        }
 
-        for (DyeColor colors : DyeColor.values()) {
             DYED_TOWEL_BARS.put(colors, register("towel_bar_" + colors + "_towel", new TowelBarTowelBlock(RegisterBlocks.getDyedTowels(colors.getId()),
                     UDProperties.BlockP.TOWEL_BAR), false));
-        }
 
-        for (DyeColor colors : DyeColor.values()) {
             DYED_TOWEL_BLOCKS.put(colors, register(colors + "_towel_block", new Block(
                     FabricBlockSettings.copyOf(Blocks.WHITE_WOOL).mapColor(colors)), true));
+
+            DYED_PICTURE_FRAMES.put(colors, register(colors + "_picture_frame", new PictureFrameBlock(
+                    UDProperties.BlockP.PICTURE_FRAME.mapColor(colors)), true));
         }
     }
 
@@ -114,6 +115,10 @@ public class RegisterBlocks {
 
     public static Block getDyedTowelBlocks(int colors){
         return DYED_TOWEL_BLOCKS.get(DyeColor.byId(colors));
+    }
+
+    public static Block getDyedPictureFrames(int colors){
+        return DYED_PICTURE_FRAMES.get(DyeColor.byId(colors));
     }
 
     private static Block register(String id, Block block, boolean registerItem) {

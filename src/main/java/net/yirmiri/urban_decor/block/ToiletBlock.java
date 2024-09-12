@@ -7,7 +7,6 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
-import net.minecraft.stat.Stats;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.BooleanProperty;
 import net.minecraft.state.property.Properties;
@@ -23,9 +22,6 @@ import net.minecraft.util.shape.VoxelShapes;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
 import net.yirmiri.urban_decor.datagen.UDItemTagProvider;
-import net.yirmiri.urban_decor.entity.ToiletEntity;
-import net.yirmiri.urban_decor.registry.RegisterEntities;
-import net.yirmiri.urban_decor.util.UDStats;
 import net.yirmiri.urban_decor.util.UDUtils;
 
 import java.util.stream.Stream;
@@ -93,7 +89,7 @@ public class ToiletBlock extends AbstractDecorBlock {
             return ActionResult.SUCCESS;
         } else if (stackHand.isIn(UDItemTagProvider.TOOLBOXES)) {
             world.setBlockState(pos, state.cycle(ALT));
-            UDUtils.ToolboxUsed(world, pos);
+            UDUtils.toolboxUsed(world, pos);
             player.sendMessage(Text.translatable("toolbox.toilet.variant_" + state.get(ALT)), true);
             return ActionResult.SUCCESS;
         }

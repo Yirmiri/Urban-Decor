@@ -55,7 +55,7 @@ public class DryerBlock extends AbstractDecorBlock {
             return ActionResult.SUCCESS;
         } else if (stackHand.isIn(UDItemTagProvider.TOOLBOXES)) {
             world.setBlockState(pos, state.cycle(OPAQUE));
-            UDUtils.ToolboxUsed(world, pos);
+            UDUtils.toolboxUsed(world, pos);
             player.sendMessage(Text.translatable("toolbox.dryer.variant_" + state.get(OPAQUE)), true);
             return ActionResult.SUCCESS;
         }

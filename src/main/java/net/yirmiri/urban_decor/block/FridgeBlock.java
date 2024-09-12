@@ -44,7 +44,7 @@ public class FridgeBlock extends AbstractDecorBlock {
         ItemStack stackHand = player.getStackInHand(hand);
         if (stackHand.isIn(UDItemTagProvider.TOOLBOXES)) {
             world.setBlockState(pos, state.cycle(FLIPPED));
-            UDUtils.ToolboxUsed(world, pos);
+            UDUtils.toolboxUsed(world, pos);
             player.sendMessage(Text.translatable("toolbox.fridge.variant_" + state.get(FLIPPED)), true);
             return ActionResult.SUCCESS;
         }

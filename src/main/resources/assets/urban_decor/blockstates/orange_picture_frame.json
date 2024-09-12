@@ -1,0 +1,42 @@
+{
+  "variants": {
+    "facing=north,wall=true": {
+      "model": "urban_decor:block/orange_picture_frame_mounted",
+      "uvlock": false
+    },
+    "facing=south,wall=true": {
+      "model": "urban_decor:block/orange_picture_frame_mounted",
+      "y": 180,
+      "uvlock": false
+    },
+    "facing=west,wall=true": {
+      "model": "urban_decor:block/orange_picture_frame_mounted",
+      "y": 270,
+      "uvlock": false
+    },
+    "facing=east,wall=true": {
+      "model": "urban_decor:block/orange_picture_frame_mounted",
+      "y": 90,
+      "uvlock": false
+    },
+    "facing=north,wall=false": {
+      "model": "urban_decor:block/orange_picture_frame",
+      "uvlock": false
+    },
+    "facing=south,wall=false": {
+      "model": "urban_decor:block/orange_picture_frame",
+      "y": 180,
+      "uvlock": false
+    },
+    "facing=west,wall=false": {
+      "model": "urban_decor:block/orange_picture_frame",
+      "y": 270,
+      "uvlock": false
+    },
+    "facing=east,wall=false": {
+      "model": "urban_decor:block/orange_picture_frame",
+      "y": 90,
+      "uvlock": false
+    }
+  }
+}

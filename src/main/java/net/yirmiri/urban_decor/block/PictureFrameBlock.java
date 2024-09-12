@@ -4,15 +4,9 @@ import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.ShapeContext;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.item.DyeItem;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.sound.SoundCategory;
-import net.minecraft.sound.SoundEvents;
-import net.minecraft.stat.Stats;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.BooleanProperty;
-import net.minecraft.state.property.IntProperty;
 import net.minecraft.state.property.Properties;
 import net.minecraft.text.Text;
 import net.minecraft.util.ActionResult;
@@ -23,7 +17,6 @@ import net.minecraft.util.math.Direction;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
-import net.minecraft.world.event.GameEvent;
 import net.yirmiri.urban_decor.datagen.UDItemTagProvider;
 import net.yirmiri.urban_decor.util.UDUtils;
 
@@ -33,8 +26,8 @@ public class PictureFrameBlock extends AbstractDecorBlock {
     private static final VoxelShape SHAPE = Block.createCuboidShape(5, 0, 5, 11, 6, 11);
 
     private static final VoxelShape SHAPE_NORTH_WALL = Block.createCuboidShape(3, 2, 13.75, 13, 14, 15.75);
-    private static final VoxelShape SHAPE_EAST_WALL = Block.createCuboidShape(14, 2, 2.75, 16, 14, 12.75);
-    private static final VoxelShape SHAPE_WEST_WALL = Block.createCuboidShape(0, 2, 2.75, 2, 14, 12.75);
+    private static final VoxelShape SHAPE_WEST_WALL = Block.createCuboidShape(14, 2, 2.75, 16, 14, 12.75);
+    private static final VoxelShape SHAPE_EAST_WALL = Block.createCuboidShape(0, 2, 2.75, 2, 14, 12.75);
     private static final VoxelShape SHAPE_SOUTH_WALL = Block.createCuboidShape(3, 2, -0.25, 13, 14, 1.75);
 
     public PictureFrameBlock(Settings settings) {
@@ -58,7 +51,7 @@ public class PictureFrameBlock extends AbstractDecorBlock {
         ItemStack stackHand = player.getStackInHand(hand);
         if (stackHand.isIn(UDItemTagProvider.TOOLBOXES)) {
             world.setBlockState(pos, state.cycle(WALL));
-            UDUtils.ToolboxUsed(world, pos);
+            UDUtils.toolboxUsed(world, pos);
             player.sendMessage(Text.translatable("toolbox.picture_frame.variant_" + state.get(WALL)), true);
             return ActionResult.SUCCESS;
         }
