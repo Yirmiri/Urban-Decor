@@ -99,6 +99,7 @@ public class UDLangProvider extends FabricLanguageProvider {
         //STATS
         builder.add(UDStats.TIMES_SAT, "Times Sat Down");
         builder.add(UDStats.OPEN_CUPBOARD, "Cupboards Opened");
+        builder.add(UDStats.USE_FAUCET, "Faucets Used");
 
         //ENTITIES
         builder.add(UDEntities.TOILET, "Toilet");

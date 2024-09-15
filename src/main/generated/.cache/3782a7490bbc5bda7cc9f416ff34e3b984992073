@@ -1,4 +1,4 @@
-// 1.20.1	2024-09-15T01:26:50.6233812	Urban Decor/Model Definitions
+// 1.20.1	2024-09-15T02:47:51.2238779	Urban Decor/Model Definitions
 b00910c505ac410a8c177f6f544bf64bad758864 assets\urban_decor\models\item\desk_fan.json
 03e42f9fca785fb5226e5f08ea88e97aa62dce1b assets\urban_decor\models\item\checkered_porcelain_tiles.json
 0dfe4a201154a0ecfacee92587fe0ba72c363b70 assets\urban_decor\models\item\trash_can.json
@@ -97,8 +97,8 @@ c29bd1406e9374cc8ad691008fc14f30487cd6e9 assets\urban_decor\models\item\blue_tow
 0088a217d48facf6b2c5c318e005d54e18c1e8b1 assets\urban_decor\models\block\dark_porcelain_tile_slab.json
 972d75ecbf111db9116ec1e8a80b0137524a87ba assets\urban_decor\models\item\light_blue_towel_block.json
 41fc637442090e7217b885e93e478770b22e7cc5 assets\urban_decor\models\item\yellow_towel.json
-c817b72e597604f5df9ab0a62450031520c6259f assets\urban_decor\models\item\brown_towel_block.json
 ea5b44f4b17a15ea4e0c9df4994718df64cada33 assets\urban_decor\models\block\checkered_porcelain_tile_stairs.json
+c817b72e597604f5df9ab0a62450031520c6259f assets\urban_decor\models\item\brown_towel_block.json
 d9aba09133103bdcd55d46d6f923dcddfaa9add2 assets\urban_decor\models\item\black_towel_block.json
 a9c9dd8d63d9ad060ee0d191f2cccea0a1a87037 assets\urban_decor\models\item\red_towel.json
 63183e0436ce1772d9cc220cf7ad05e949bf81ea assets\urban_decor\blockstates\checkered_porcelain_tile_stairs.json

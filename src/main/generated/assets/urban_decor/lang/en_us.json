@@ -175,5 +175,6 @@
   "tooltip.urban_decor.toolboxable": "Has toolbox variants",
   "tooltip.urban_decor.wrappable": "Can be wrapped",
   "urban_decor.open_cupboard": "Cupboards Opened",
-  "urban_decor.times_sat": "Times Sat Down"
+  "urban_decor.times_sat": "Times Sat Down",
+  "urban_decor.use_faucet": "Faucets Used"
 }

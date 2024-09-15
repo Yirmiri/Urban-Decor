@@ -10,6 +10,7 @@ import net.yirmiri.urban_decor.UrbanDecor;
 public class UDStats {
     public static final Identifier TIMES_SAT = register("times_sat", StatFormatter.DEFAULT);
     public static final Identifier OPEN_CUPBOARD = register("open_cupboard", StatFormatter.DEFAULT);
+    public static final Identifier USE_FAUCET = register("use_faucet", StatFormatter.DEFAULT);
     //public static final Identifier APPLIANCES_TOOLBOXED = register("appliances_toolboxed", StatFormatter.DEFAULT);
 
     private static Identifier register(String id, StatFormatter formatter) {

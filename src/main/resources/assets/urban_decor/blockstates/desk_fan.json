@@ -1,21 +1,40 @@
 {
   "variants": {
-    "facing=north": {
+    "facing=north,on=false": {
       "model": "urban_decor:block/desk_fan",
       "uvlock": false
     },
-    "facing=south": {
+    "facing=south,on=false": {
       "model": "urban_decor:block/desk_fan",
       "y": 180,
       "uvlock": false
     },
-    "facing=west": {
+    "facing=west,on=false": {
       "model": "urban_decor:block/desk_fan",
       "y": 270,
       "uvlock": false
     },
-    "facing=east": {
+    "facing=east,on=false": {
       "model": "urban_decor:block/desk_fan",
+      "y": 90,
+      "uvlock": false
+    },
+    "facing=north,on=true": {
+      "model": "urban_decor:block/desk_fan_on",
+      "uvlock": false
+    },
+    "facing=south,on=true": {
+      "model": "urban_decor:block/desk_fan_on",
+      "y": 180,
+      "uvlock": false
+    },
+    "facing=west,on=true": {
+      "model": "urban_decor:block/desk_fan_on",
+      "y": 270,
+      "uvlock": false
+    },
+    "facing=east,on=true": {
+      "model": "urban_decor:block/desk_fan_on",
       "y": 90,
       "uvlock": false
     }

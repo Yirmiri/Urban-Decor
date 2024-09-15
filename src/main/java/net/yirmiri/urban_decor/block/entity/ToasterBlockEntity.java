@@ -11,6 +11,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.recipe.CampfireCookingRecipe;
 import net.minecraft.recipe.RecipeManager;
 import net.minecraft.recipe.RecipeType;
+import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.Clearable;
 import net.minecraft.util.ItemScatterer;
 import net.minecraft.util.collection.DefaultedList;
@@ -97,6 +98,9 @@ public class ToasterBlockEntity extends CampfireBlockEntity implements Clearable
                 world.emitGameEvent(GameEvent.BLOCK_CHANGE, getPos(), GameEvent.Emitter.of(user, getCachedState()));
                 updateListeners();
                 return true;
+            }
+            if (user != null) {
+                user.playSound(SoundEvents.ENTITY_ITEM_FRAME_ADD_ITEM, 1.0F, 1.0F);
             }
         }
         return false;
