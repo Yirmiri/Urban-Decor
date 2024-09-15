@@ -712,7 +712,7 @@ public class UDRecipeProvider extends FabricRecipeProvider {
 
     public static ShapedRecipeJsonBuilder createPictureFrameRecipe(ItemConvertible output, DyeColor color) {
         return ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, output, 1)
-                .input('#', ItemTags.PLANKS).input('@', DyeItem.byColor(color))
+                .input('#', Items.STICK).input('@', DyeItem.byColor(color))
                 .pattern("###")
                 .pattern("#@#")
                 .pattern("###");
@@ -720,7 +720,7 @@ public class UDRecipeProvider extends FabricRecipeProvider {
 
     public static ShapedRecipeJsonBuilder createBasePictureFrameRecipe(ItemConvertible output, Item item) {
         return ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, output, 1)
-                .input('#', ItemTags.PLANKS).input('@', item)
+                .input('#', Items.STICK).input('@', item)
                 .pattern("###")
                 .pattern("#@#")
                 .pattern("###");

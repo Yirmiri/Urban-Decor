@@ -3,7 +3,7 @@
   "category": "misc",
   "key": {
     "#": {
-      "tag": "minecraft:planks"
+      "item": "minecraft:stick"
     },
     "@": {
       "item": "minecraft:orange_dye"
