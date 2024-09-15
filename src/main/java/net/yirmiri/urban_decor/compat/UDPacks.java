@@ -10,7 +10,7 @@ import net.yirmiri.urban_decor.UrbanDecor;
 
 import java.util.Optional;
 
-public class RegisterPacks {
+public class UDPacks {
     private static void registerBuiltinResourcePack(ModContainer container, String id) {
         ResourceManagerHelper.registerBuiltinResourcePack(
                 Identifier.of(UrbanDecor.MOD_ID, id + "_resource_pack"), container, Text.translatable("pack." + UrbanDecor.MOD_ID + "." + id + "_compat"), ResourcePackActivationType.ALWAYS_ENABLED

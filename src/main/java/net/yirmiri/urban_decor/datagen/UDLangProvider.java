@@ -3,9 +3,9 @@ package net.yirmiri.urban_decor.datagen;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricLanguageProvider;
 import net.minecraft.util.DyeColor;
-import net.yirmiri.urban_decor.registry.RegisterBlocks;
-import net.yirmiri.urban_decor.registry.RegisterEntities;
-import net.yirmiri.urban_decor.registry.RegisterItems;
+import net.yirmiri.urban_decor.registry.UDBlocks;
+import net.yirmiri.urban_decor.registry.UDEntities;
+import net.yirmiri.urban_decor.registry.UDItems;
 import net.yirmiri.urban_decor.util.UDStats;
 import org.apache.commons.lang3.StringUtils;
 
@@ -20,84 +20,84 @@ public class UDLangProvider extends FabricLanguageProvider {
             String dyeString = StringUtils.capitalize(StringUtils.replace(StringUtils.replace(StringUtils.replace(colors.getName(),
                     "_", " "), "gray", "Gray"), "blue", "Blue"));
 
-            builder.add(RegisterBlocks.getDyedTowels(colors.getId()), dyeString + " Towel");
-            builder.add(RegisterBlocks.getDyedTowelBarTowels(colors.getId()), dyeString + " Towel Bar");
-            builder.add(RegisterBlocks.getDyedTowelBlocks(colors.getId()), dyeString + " Towel Block");
-            builder.add(RegisterBlocks.getDyedPictureFrames(colors.getId()), dyeString + " Picture Frame");
+            builder.add(UDBlocks.getDyedTowels(colors.getId()), dyeString + " Towel");
+            builder.add(UDBlocks.getDyedTowelBarTowels(colors.getId()), dyeString + " Towel Bar");
+            builder.add(UDBlocks.getDyedTowelBlocks(colors.getId()), dyeString + " Towel Block");
+            builder.add(UDBlocks.getDyedPictureFrames(colors.getId()), dyeString + " Picture Frame");
         }
 
         //BLOCKS
-        builder.add(RegisterBlocks.PORCELAIN_TILES, "Porcelain Tiles");
-        builder.add(RegisterBlocks.PORCELAIN_TILE_STAIRS, "Porcelain Tile Stairs");
-        builder.add(RegisterBlocks.PORCELAIN_TILE_SLAB, "Porcelain Tile Slab");
-        builder.add(RegisterBlocks.DARK_PORCELAIN_TILES, "Dark Porcelain Tiles");
-        builder.add(RegisterBlocks.DARK_PORCELAIN_TILE_STAIRS, "Dark Porcelain Tile Stairs");
-        builder.add(RegisterBlocks.DARK_PORCELAIN_TILE_SLAB, "Dark Porcelain Tile Slab");
-        builder.add(RegisterBlocks.CHECKERED_PORCELAIN_TILES, "Checkered Porcelain Tiles");
-        builder.add(RegisterBlocks.CHECKERED_PORCELAIN_TILE_STAIRS, "Checkered Porcelain Tile Stairs");
-        builder.add(RegisterBlocks.CHECKERED_PORCELAIN_TILE_SLAB, "Checkered Porcelain Tile Slab");
-        builder.add(RegisterBlocks.CHROMITE, "Chromite");
-        builder.add(RegisterBlocks.CHROMITE_STAIRS, "Chromite Stairs");
-        builder.add(RegisterBlocks.CHROMITE_SLAB, "Chromite Slab");
-        builder.add(RegisterBlocks.CHROMITE_WALL, "Chromite Wall");
-        builder.add(RegisterBlocks.POLISHED_CHROMITE, "Polished Chromite");
-        builder.add(RegisterBlocks.POLISHED_CHROMITE_STAIRS, "Polished Chromite Stairs");
-        builder.add(RegisterBlocks.POLISHED_CHROMITE_SLAB, "Polished Chromite Slab");
-        builder.add(RegisterBlocks.STAINLESS_STEEL_BLOCK, "Block of Stainless Steel");
-        builder.add(RegisterBlocks.PORCELAIN_BLOCK, "Porcelain Block");
-        builder.add(RegisterBlocks.PORCELAIN_STAIRS, "Porcelain Stairs");
-        builder.add(RegisterBlocks.PORCELAIN_SLAB, "Porcelain Slab");
-        builder.add(RegisterBlocks.DARK_PORCELAIN_BLOCK, "Dark Porcelain Block");
-        builder.add(RegisterBlocks.DARK_PORCELAIN_STAIRS, "Dark Porcelain Stairs");
-        builder.add(RegisterBlocks.DARK_PORCELAIN_SLAB, "Dark Porcelain Slab");
+        builder.add(UDBlocks.PORCELAIN_TILES, "Porcelain Tiles");
+        builder.add(UDBlocks.PORCELAIN_TILE_STAIRS, "Porcelain Tile Stairs");
+        builder.add(UDBlocks.PORCELAIN_TILE_SLAB, "Porcelain Tile Slab");
+        builder.add(UDBlocks.DARK_PORCELAIN_TILES, "Dark Porcelain Tiles");
+        builder.add(UDBlocks.DARK_PORCELAIN_TILE_STAIRS, "Dark Porcelain Tile Stairs");
+        builder.add(UDBlocks.DARK_PORCELAIN_TILE_SLAB, "Dark Porcelain Tile Slab");
+        builder.add(UDBlocks.CHECKERED_PORCELAIN_TILES, "Checkered Porcelain Tiles");
+        builder.add(UDBlocks.CHECKERED_PORCELAIN_TILE_STAIRS, "Checkered Porcelain Tile Stairs");
+        builder.add(UDBlocks.CHECKERED_PORCELAIN_TILE_SLAB, "Checkered Porcelain Tile Slab");
+        builder.add(UDBlocks.CHROMITE, "Chromite");
+        builder.add(UDBlocks.CHROMITE_STAIRS, "Chromite Stairs");
+        builder.add(UDBlocks.CHROMITE_SLAB, "Chromite Slab");
+        builder.add(UDBlocks.CHROMITE_WALL, "Chromite Wall");
+        builder.add(UDBlocks.POLISHED_CHROMITE, "Polished Chromite");
+        builder.add(UDBlocks.POLISHED_CHROMITE_STAIRS, "Polished Chromite Stairs");
+        builder.add(UDBlocks.POLISHED_CHROMITE_SLAB, "Polished Chromite Slab");
+        builder.add(UDBlocks.STAINLESS_STEEL_BLOCK, "Block of Stainless Steel");
+        builder.add(UDBlocks.PORCELAIN_BLOCK, "Porcelain Block");
+        builder.add(UDBlocks.PORCELAIN_STAIRS, "Porcelain Stairs");
+        builder.add(UDBlocks.PORCELAIN_SLAB, "Porcelain Slab");
+        builder.add(UDBlocks.DARK_PORCELAIN_BLOCK, "Dark Porcelain Block");
+        builder.add(UDBlocks.DARK_PORCELAIN_STAIRS, "Dark Porcelain Stairs");
+        builder.add(UDBlocks.DARK_PORCELAIN_SLAB, "Dark Porcelain Slab");
 
         //APPLIANCES
-        builder.add(RegisterBlocks.TRASH_CAN, "Trash Can");
-        builder.add(RegisterBlocks.MICROWAVE, "Microwave");
-        builder.add(RegisterBlocks.SINK, "Sink");
-        builder.add(RegisterBlocks.TOILET, "Toilet");
-        builder.add(RegisterBlocks.WASHING_MACHINE, "Washing Machine");
-        builder.add(RegisterBlocks.DRYER, "Dryer");
-        builder.add(RegisterBlocks.TOASTER, "Toaster");
-        builder.add(RegisterBlocks.AIR_CONDITIONER, "Air Conditioner");
-        builder.add(RegisterBlocks.DESK_FAN, "Desk Fan");
-        builder.add(RegisterBlocks.FAUCET, "Faucet");
-        builder.add(RegisterBlocks.OVEN, "Oven");
-        builder.add(RegisterBlocks.RADIATOR, "Radiator");
-        builder.add(RegisterBlocks.STOVE, "Stove");
-        builder.add(RegisterBlocks.FRIDGE, "Fridge");
-        builder.add(RegisterBlocks.FREEZER, "Freezer");
-        builder.add(RegisterBlocks.TURBINE, "Turbine");
-        builder.add(RegisterBlocks.DARK_SINK, "Dark Sink");
-        builder.add(RegisterBlocks.DARK_TOILET, "Dark Toilet");
-        builder.add(RegisterBlocks.DARK_WASHING_MACHINE, "Dark Washing Machine");
-        builder.add(RegisterBlocks.DARK_DRYER, "Dark Dryer");
-        builder.add(RegisterBlocks.DARK_FRIDGE, "Dark Fridge");
-        builder.add(RegisterBlocks.DARK_FREEZER, "Dark Freezer");
-        builder.add(RegisterBlocks.DARK_OVEN, "Dark Oven");
-        builder.add(RegisterBlocks.TOWEL_BAR, "Towel Bar");
-        builder.add(RegisterBlocks.SATELLITE_DISH, "Satellite Dish");
-        builder.add(RegisterBlocks.SHOWER, "Shower");
-        builder.add(RegisterBlocks.BATHTUB, "Bathtub");
-        builder.add(RegisterBlocks.DARK_BATHTUB, "Dark Bathtub");
-        builder.add(RegisterBlocks.RIGID_GLASS, "Rigid Glass");
-        builder.add(RegisterBlocks.PICTURE_FRAME, "Picture Frame");
-        builder.add(RegisterBlocks.CUPBOARD, "Cupboard");
-        builder.add(RegisterBlocks.DARK_CUPBOARD, "Dark Cupboard");
+        builder.add(UDBlocks.TRASH_CAN, "Trash Can");
+        builder.add(UDBlocks.MICROWAVE, "Microwave");
+        builder.add(UDBlocks.SINK, "Sink");
+        builder.add(UDBlocks.TOILET, "Toilet");
+        builder.add(UDBlocks.WASHING_MACHINE, "Washing Machine");
+        builder.add(UDBlocks.DRYER, "Dryer");
+        builder.add(UDBlocks.TOASTER, "Toaster");
+        builder.add(UDBlocks.AIR_CONDITIONER, "Air Conditioner");
+        builder.add(UDBlocks.DESK_FAN, "Desk Fan");
+        builder.add(UDBlocks.FAUCET, "Faucet");
+        builder.add(UDBlocks.OVEN, "Oven");
+        builder.add(UDBlocks.RADIATOR, "Radiator");
+        builder.add(UDBlocks.STOVE, "Stove");
+        builder.add(UDBlocks.FRIDGE, "Fridge");
+        builder.add(UDBlocks.FREEZER, "Freezer");
+        builder.add(UDBlocks.TURBINE, "Turbine");
+        builder.add(UDBlocks.DARK_SINK, "Dark Sink");
+        builder.add(UDBlocks.DARK_TOILET, "Dark Toilet");
+        builder.add(UDBlocks.DARK_WASHING_MACHINE, "Dark Washing Machine");
+        builder.add(UDBlocks.DARK_DRYER, "Dark Dryer");
+        builder.add(UDBlocks.DARK_FRIDGE, "Dark Fridge");
+        builder.add(UDBlocks.DARK_FREEZER, "Dark Freezer");
+        builder.add(UDBlocks.DARK_OVEN, "Dark Oven");
+        builder.add(UDBlocks.TOWEL_BAR, "Towel Bar");
+        builder.add(UDBlocks.SATELLITE_DISH, "Satellite Dish");
+        builder.add(UDBlocks.SHOWER, "Shower");
+        builder.add(UDBlocks.BATHTUB, "Bathtub");
+        builder.add(UDBlocks.DARK_BATHTUB, "Dark Bathtub");
+        builder.add(UDBlocks.RIGID_GLASS, "Rigid Glass");
+        builder.add(UDBlocks.PICTURE_FRAME, "Picture Frame");
+        builder.add(UDBlocks.CUPBOARD, "Cupboard");
+        builder.add(UDBlocks.DARK_CUPBOARD, "Dark Cupboard");
 
         //ITEMS
-        builder.add(RegisterItems.PORCELAIN, "Porcelain");
-        builder.add(RegisterItems.STAINLESS_STEEL_INGOT, "Stainless Steel Ingot");
-        builder.add(RegisterItems.DARK_PORCELAIN, "Dark Porcelain");
-        builder.add(RegisterItems.TOOLBOX, "Toolbox");
-        builder.add(RegisterItems.STEEL_PIPE, "Steel Pipe");
-        builder.add(RegisterItems.STAINLESS_STEEL_NUGGET, "Stainless Steel Nugget");
+        builder.add(UDItems.PORCELAIN, "Porcelain");
+        builder.add(UDItems.STAINLESS_STEEL_INGOT, "Stainless Steel Ingot");
+        builder.add(UDItems.DARK_PORCELAIN, "Dark Porcelain");
+        builder.add(UDItems.TOOLBOX, "Toolbox");
+        builder.add(UDItems.STEEL_PIPE, "Steel Pipe");
+        builder.add(UDItems.STAINLESS_STEEL_NUGGET, "Stainless Steel Nugget");
 
         //STATS
         builder.add(UDStats.TIMES_SAT, "Times Sat Down");
 
         //ENTITIES
-        builder.add(RegisterEntities.TOILET, "Toilet");
+        builder.add(UDEntities.TOILET, "Toilet");
 
         //ITEM GROUPS
         builder.add("itemgroup.urban_decor", "Urban Decor");

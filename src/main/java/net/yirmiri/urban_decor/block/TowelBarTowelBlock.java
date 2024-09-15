@@ -12,7 +12,7 @@ import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
-import net.yirmiri.urban_decor.registry.RegisterBlocks;
+import net.yirmiri.urban_decor.registry.UDBlocks;
 
 import java.util.Map;
 
@@ -28,7 +28,7 @@ public class TowelBarTowelBlock extends TowelBarBlock {
 
     @Override
     public ItemStack getPickStack(BlockView world, BlockPos pos, BlockState state) {
-        return new ItemStack(RegisterBlocks.TOWEL_BAR);
+        return new ItemStack(UDBlocks.TOWEL_BAR);
     }
 
     @Override
@@ -42,7 +42,7 @@ public class TowelBarTowelBlock extends TowelBarBlock {
                 player.dropItem(towel, false);
             }
 
-            world.setBlockState(pos, RegisterBlocks.TOWEL_BAR.getDefaultState().with(FACING, state.get(FACING)), Block.NOTIFY_ALL);
+            world.setBlockState(pos, UDBlocks.TOWEL_BAR.getDefaultState().with(FACING, state.get(FACING)), Block.NOTIFY_ALL);
             return ActionResult.SUCCESS;
         }
         return ActionResult.PASS;

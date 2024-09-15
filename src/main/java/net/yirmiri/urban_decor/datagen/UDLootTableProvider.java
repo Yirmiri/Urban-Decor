@@ -7,8 +7,8 @@ import net.minecraft.block.enums.BedPart;
 import net.minecraft.loot.LootTable;
 import net.minecraft.util.DyeColor;
 import net.yirmiri.urban_decor.block.AbstractLongBlock;
-import net.yirmiri.urban_decor.registry.RegisterBlocks;
-import net.yirmiri.urban_decor.registry.RegisterItems;
+import net.yirmiri.urban_decor.registry.UDBlocks;
+import net.yirmiri.urban_decor.registry.UDItems;
 
 public class UDLootTableProvider extends FabricBlockLootTableProvider {
     public UDLootTableProvider(FabricDataOutput output) {
@@ -17,90 +17,90 @@ public class UDLootTableProvider extends FabricBlockLootTableProvider {
 
     @Override
     public void generate() {
-        addDrop(RegisterBlocks.PORCELAIN_TILES);
-        addDrop(RegisterBlocks.PORCELAIN_TILE_STAIRS);
-        addDrop(RegisterBlocks.PORCELAIN_TILE_SLAB, slabDrops(RegisterBlocks.PORCELAIN_TILE_SLAB));
-        addDrop(RegisterBlocks.TRASH_CAN);
-        addDrop(RegisterBlocks.MICROWAVE);
-        addDrop(RegisterBlocks.SINK);
-        addDrop(RegisterBlocks.CHROMITE);
-        addDrop(RegisterBlocks.CHROMITE_STAIRS);
-        addDrop(RegisterBlocks.CHROMITE_SLAB, slabDrops(RegisterBlocks.CHROMITE_SLAB));
-        addDrop(RegisterBlocks.CHROMITE_WALL);
-        addDrop(RegisterBlocks.POLISHED_CHROMITE);
-        addDrop(RegisterBlocks.POLISHED_CHROMITE_STAIRS);
-        addDrop(RegisterBlocks.POLISHED_CHROMITE_SLAB, slabDrops(RegisterBlocks.POLISHED_CHROMITE_SLAB));
-        addDrop(RegisterBlocks.WASHING_MACHINE);
-        addDrop(RegisterBlocks.DRYER);
-        addDrop(RegisterBlocks.TOASTER);
-        addDrop(RegisterBlocks.AIR_CONDITIONER);
-        addDrop(RegisterBlocks.DARK_PORCELAIN_TILES);
-        addDrop(RegisterBlocks.DARK_PORCELAIN_TILE_STAIRS);
-        addDrop(RegisterBlocks.DARK_PORCELAIN_TILE_SLAB, slabDrops(RegisterBlocks.PORCELAIN_TILE_SLAB));
-        addDrop(RegisterBlocks.DESK_FAN);
-        addDrop(RegisterBlocks.TOOLBOX, RegisterItems.TOOLBOX);
-        addDrop(RegisterBlocks.FAUCET);
-        addDrop(RegisterBlocks.CHECKERED_PORCELAIN_TILES);
-        addDrop(RegisterBlocks.CHECKERED_PORCELAIN_TILE_STAIRS);
-        addDrop(RegisterBlocks.CHECKERED_PORCELAIN_TILE_SLAB, slabDrops(RegisterBlocks.PORCELAIN_TILE_SLAB));
-        addDrop(RegisterBlocks.STAINLESS_STEEL_BLOCK);
-        addDrop(RegisterBlocks.OVEN);
-        addDrop(RegisterBlocks.RADIATOR);
-        addDrop(RegisterBlocks.STOVE);
-        addDrop(RegisterBlocks.FRIDGE);
-        addDrop(RegisterBlocks.FREEZER);
-        addDrop(RegisterBlocks.TURBINE);
-        addDrop(RegisterBlocks.TOILET);
-        addDrop(RegisterBlocks.DARK_TOILET);
-        addDrop(RegisterBlocks.DARK_FRIDGE);
-        addDrop(RegisterBlocks.DARK_FREEZER);
-        addDrop(RegisterBlocks.DARK_OVEN);
-        addDrop(RegisterBlocks.DARK_WASHING_MACHINE);
-        addDrop(RegisterBlocks.DARK_DRYER);
-        addDrop(RegisterBlocks.DARK_SINK);
+        addDrop(UDBlocks.PORCELAIN_TILES);
+        addDrop(UDBlocks.PORCELAIN_TILE_STAIRS);
+        addDrop(UDBlocks.PORCELAIN_TILE_SLAB, slabDrops(UDBlocks.PORCELAIN_TILE_SLAB));
+        addDrop(UDBlocks.TRASH_CAN);
+        addDrop(UDBlocks.MICROWAVE);
+        addDrop(UDBlocks.SINK);
+        addDrop(UDBlocks.CHROMITE);
+        addDrop(UDBlocks.CHROMITE_STAIRS);
+        addDrop(UDBlocks.CHROMITE_SLAB, slabDrops(UDBlocks.CHROMITE_SLAB));
+        addDrop(UDBlocks.CHROMITE_WALL);
+        addDrop(UDBlocks.POLISHED_CHROMITE);
+        addDrop(UDBlocks.POLISHED_CHROMITE_STAIRS);
+        addDrop(UDBlocks.POLISHED_CHROMITE_SLAB, slabDrops(UDBlocks.POLISHED_CHROMITE_SLAB));
+        addDrop(UDBlocks.WASHING_MACHINE);
+        addDrop(UDBlocks.DRYER);
+        addDrop(UDBlocks.TOASTER);
+        addDrop(UDBlocks.AIR_CONDITIONER);
+        addDrop(UDBlocks.DARK_PORCELAIN_TILES);
+        addDrop(UDBlocks.DARK_PORCELAIN_TILE_STAIRS);
+        addDrop(UDBlocks.DARK_PORCELAIN_TILE_SLAB, slabDrops(UDBlocks.PORCELAIN_TILE_SLAB));
+        addDrop(UDBlocks.DESK_FAN);
+        addDrop(UDBlocks.TOOLBOX, UDItems.TOOLBOX);
+        addDrop(UDBlocks.FAUCET);
+        addDrop(UDBlocks.CHECKERED_PORCELAIN_TILES);
+        addDrop(UDBlocks.CHECKERED_PORCELAIN_TILE_STAIRS);
+        addDrop(UDBlocks.CHECKERED_PORCELAIN_TILE_SLAB, slabDrops(UDBlocks.PORCELAIN_TILE_SLAB));
+        addDrop(UDBlocks.STAINLESS_STEEL_BLOCK);
+        addDrop(UDBlocks.OVEN);
+        addDrop(UDBlocks.RADIATOR);
+        addDrop(UDBlocks.STOVE);
+        addDrop(UDBlocks.FRIDGE);
+        addDrop(UDBlocks.FREEZER);
+        addDrop(UDBlocks.TURBINE);
+        addDrop(UDBlocks.TOILET);
+        addDrop(UDBlocks.DARK_TOILET);
+        addDrop(UDBlocks.DARK_FRIDGE);
+        addDrop(UDBlocks.DARK_FREEZER);
+        addDrop(UDBlocks.DARK_OVEN);
+        addDrop(UDBlocks.DARK_WASHING_MACHINE);
+        addDrop(UDBlocks.DARK_DRYER);
+        addDrop(UDBlocks.DARK_SINK);
         addDyedTowelsDrops();
-        addDrop(RegisterBlocks.TOWEL_BAR);
+        addDrop(UDBlocks.TOWEL_BAR);
         addTowelBarTowelDrops();
-        addDrop(RegisterBlocks.SATELLITE_DISH);
-        addDrop(RegisterBlocks.SHOWER);
-        addDrop(RegisterBlocks.BATHTUB, longBlockDrops(RegisterBlocks.BATHTUB));
-        addDrop(RegisterBlocks.DARK_BATHTUB, longBlockDrops(RegisterBlocks.DARK_BATHTUB));
+        addDrop(UDBlocks.SATELLITE_DISH);
+        addDrop(UDBlocks.SHOWER);
+        addDrop(UDBlocks.BATHTUB, longBlockDrops(UDBlocks.BATHTUB));
+        addDrop(UDBlocks.DARK_BATHTUB, longBlockDrops(UDBlocks.DARK_BATHTUB));
         addDyedTowelBlockDrops();
-        addDrop(RegisterBlocks.RIGID_GLASS);
-        addDrop(RegisterBlocks.PORCELAIN_BLOCK);
-        addDrop(RegisterBlocks.PORCELAIN_STAIRS);
-        addDrop(RegisterBlocks.PORCELAIN_SLAB, slabDrops(RegisterBlocks.PORCELAIN_SLAB));
-        addDrop(RegisterBlocks.DARK_PORCELAIN_BLOCK);
-        addDrop(RegisterBlocks.DARK_PORCELAIN_STAIRS);
-        addDrop(RegisterBlocks.DARK_PORCELAIN_SLAB, slabDrops(RegisterBlocks.DARK_PORCELAIN_SLAB));
+        addDrop(UDBlocks.RIGID_GLASS);
+        addDrop(UDBlocks.PORCELAIN_BLOCK);
+        addDrop(UDBlocks.PORCELAIN_STAIRS);
+        addDrop(UDBlocks.PORCELAIN_SLAB, slabDrops(UDBlocks.PORCELAIN_SLAB));
+        addDrop(UDBlocks.DARK_PORCELAIN_BLOCK);
+        addDrop(UDBlocks.DARK_PORCELAIN_STAIRS);
+        addDrop(UDBlocks.DARK_PORCELAIN_SLAB, slabDrops(UDBlocks.DARK_PORCELAIN_SLAB));
         addDyedPictureFrameDrops();
-        addDrop(RegisterBlocks.PICTURE_FRAME);
-        addDrop(RegisterBlocks.CUPBOARD);
-        addDrop(RegisterBlocks.DARK_CUPBOARD);
+        addDrop(UDBlocks.PICTURE_FRAME);
+        addDrop(UDBlocks.CUPBOARD);
+        addDrop(UDBlocks.DARK_CUPBOARD);
     }
 
     private void addDyedTowelBlockDrops() {
         for (DyeColor colors : DyeColor.values()) {
-            addDrop(RegisterBlocks.getDyedTowelBlocks(colors.getId()));
+            addDrop(UDBlocks.getDyedTowelBlocks(colors.getId()));
         }
     }
 
     private void addDyedTowelsDrops() {
         for (DyeColor colors : DyeColor.values()) {
-            addDrop(RegisterBlocks.getDyedTowels(colors.getId()));
+            addDrop(UDBlocks.getDyedTowels(colors.getId()));
         }
     }
 
     private void addTowelBarTowelDrops() {
         for (DyeColor colors : DyeColor.values()) {
-            addDrop(RegisterBlocks.getDyedTowels(colors.getId()));
-            addDrop(RegisterBlocks.TOWEL_BAR);
+            addDrop(UDBlocks.getDyedTowels(colors.getId()));
+            addDrop(UDBlocks.TOWEL_BAR);
         }
     }
 
     private void addDyedPictureFrameDrops() {
         for (DyeColor colors : DyeColor.values()) {
-            addDrop(RegisterBlocks.getDyedPictureFrames(colors.getId()));
+            addDrop(UDBlocks.getDyedPictureFrames(colors.getId()));
         }
     }
 

@@ -14,7 +14,7 @@ import net.yirmiri.urban_decor.util.UDProperties;
 
 import java.util.HashMap;
 
-public class RegisterBlocks {
+public class UDBlocks {
 
     //BLOCKS
     public static final Block PORCELAIN_BLOCK = register("porcelain_block", new Block(UDProperties.BlockP.PORCELAIN), true);
@@ -96,7 +96,7 @@ public class RegisterBlocks {
             DYED_TOWELS.put(colors, register(colors + "_towel", new TowelBlock(
                     FabricBlockSettings.copyOf(Blocks.WHITE_CARPET).mapColor(colors)), true));
 
-            DYED_TOWEL_BARS.put(colors, register("towel_bar_" + colors + "_towel", new TowelBarTowelBlock(RegisterBlocks.getDyedTowels(colors.getId()),
+            DYED_TOWEL_BARS.put(colors, register("towel_bar_" + colors + "_towel", new TowelBarTowelBlock(UDBlocks.getDyedTowels(colors.getId()),
                     UDProperties.BlockP.TOWEL_BAR), false));
 
             DYED_TOWEL_BLOCKS.put(colors, register(colors + "_towel_block", new Block(

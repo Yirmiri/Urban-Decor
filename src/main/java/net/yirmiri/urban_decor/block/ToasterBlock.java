@@ -13,7 +13,6 @@ import net.minecraft.recipe.CampfireCookingRecipe;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.state.StateManager;
-import net.minecraft.state.property.BooleanProperty;
 import net.minecraft.state.property.Properties;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
@@ -25,7 +24,7 @@ import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
 import net.yirmiri.urban_decor.block.entity.ToasterBlockEntity;
-import net.yirmiri.urban_decor.registry.RegisterBlockEntities;
+import net.yirmiri.urban_decor.registry.UDBlockEntities;
 import net.yirmiri.urban_decor.registry.RegisterDamageTypes;
 import org.jetbrains.annotations.Nullable;
 
@@ -111,11 +110,11 @@ public class ToasterBlock extends CampfireBlock implements Waterloggable {
     @Nullable @Override
     public <T extends BlockEntity> BlockEntityTicker<T> getTicker(World world, BlockState state, BlockEntityType<T> type) {
         if (world.isClient) {
-            return state.get(LIT) ? checkType(type, RegisterBlockEntities.TOASTER, ToasterBlockEntity::clientTick) : null;
+            return state.get(LIT) ? checkType(type, UDBlockEntities.TOASTER, ToasterBlockEntity::clientTick) : null;
         } else {
             return state.get(LIT)
-                    ? checkType(type, RegisterBlockEntities.TOASTER, ToasterBlockEntity::litServerTick)
-                    : checkType(type, RegisterBlockEntities.TOASTER, ToasterBlockEntity::unlitServerTick);
+                    ? checkType(type, UDBlockEntities.TOASTER, ToasterBlockEntity::litServerTick)
+                    : checkType(type, UDBlockEntities.TOASTER, ToasterBlockEntity::unlitServerTick);
         }
     }
 }

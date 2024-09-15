@@ -11,8 +11,6 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.recipe.CampfireCookingRecipe;
 import net.minecraft.recipe.RecipeManager;
 import net.minecraft.recipe.RecipeType;
-import net.minecraft.sound.SoundCategory;
-import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.Clearable;
 import net.minecraft.util.ItemScatterer;
 import net.minecraft.util.collection.DefaultedList;
@@ -23,7 +21,7 @@ import net.minecraft.util.math.random.Random;
 import net.minecraft.world.World;
 import net.minecraft.world.event.GameEvent;
 import net.yirmiri.urban_decor.block.ToasterBlock;
-import net.yirmiri.urban_decor.registry.RegisterBlockEntities;
+import net.yirmiri.urban_decor.registry.UDBlockEntities;
 import org.jetbrains.annotations.Nullable;
 
 public class ToasterBlockEntity extends CampfireBlockEntity implements Clearable {
@@ -38,7 +36,7 @@ public class ToasterBlockEntity extends CampfireBlockEntity implements Clearable
 
     @Override
     public BlockEntityType<?> getType() {
-        return RegisterBlockEntities.TOASTER;
+        return UDBlockEntities.TOASTER;
     }
 
     public static void litServerTick(World world, BlockPos pos, BlockState state, ToasterBlockEntity toaster) {

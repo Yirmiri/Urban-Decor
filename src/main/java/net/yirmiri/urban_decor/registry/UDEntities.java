@@ -9,7 +9,7 @@ import net.minecraft.util.Identifier;
 import net.yirmiri.urban_decor.UrbanDecor;
 import net.yirmiri.urban_decor.entity.ToiletEntity;
 
-public class RegisterEntities {
+public class UDEntities {
 
     public static final EntityType<ToiletEntity> TOILET = register("toilet", EntityType.Builder.create(ToiletEntity::new, SpawnGroup.MISC)
             .disableSummon().setDimensions(0.5F, 0.1F).build("toilet"));

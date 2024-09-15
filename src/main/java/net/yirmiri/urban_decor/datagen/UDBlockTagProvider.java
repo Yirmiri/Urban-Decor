@@ -10,7 +10,7 @@ import net.minecraft.registry.tag.TagKey;
 import net.minecraft.util.DyeColor;
 import net.minecraft.util.Identifier;
 import net.yirmiri.urban_decor.UrbanDecor;
-import net.yirmiri.urban_decor.registry.RegisterBlocks;
+import net.yirmiri.urban_decor.registry.UDBlocks;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -24,81 +24,81 @@ public class UDBlockTagProvider extends FabricTagProvider.BlockTagProvider {
     @Override
     protected void configure(RegistryWrapper.WrapperLookup arg) {
         getOrCreateTagBuilder(TOILETS)
-                .add(RegisterBlocks.TOILET)
-                .add(RegisterBlocks.DARK_TOILET)
+                .add(UDBlocks.TOILET)
+                .add(UDBlocks.DARK_TOILET)
         ;
 
         getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE)
-                .add(RegisterBlocks.DARK_PORCELAIN_BLOCK)
-                .add(RegisterBlocks.DARK_PORCELAIN_STAIRS)
-                .add(RegisterBlocks.DARK_PORCELAIN_SLAB)
-                .add(RegisterBlocks.PORCELAIN_BLOCK)
-                .add(RegisterBlocks.PORCELAIN_STAIRS)
-                .add(RegisterBlocks.PORCELAIN_SLAB)
-                .add(RegisterBlocks.PORCELAIN_TILES)
-                .add(RegisterBlocks.PORCELAIN_TILE_STAIRS)
-                .add(RegisterBlocks.PORCELAIN_TILE_SLAB)
-                .add(RegisterBlocks.MICROWAVE)
-                .add(RegisterBlocks.SINK)
-                .add(RegisterBlocks.CHROMITE)
-                .add(RegisterBlocks.CHROMITE_STAIRS)
-                .add(RegisterBlocks.CHROMITE_SLAB)
-                .add(RegisterBlocks.CHROMITE_WALL)
-                .add(RegisterBlocks.POLISHED_CHROMITE)
-                .add(RegisterBlocks.POLISHED_CHROMITE_STAIRS)
-                .add(RegisterBlocks.POLISHED_CHROMITE_SLAB)
-                .add(RegisterBlocks.TOILET)
-                .add(RegisterBlocks.WASHING_MACHINE)
-                .add(RegisterBlocks.DRYER)
-                .add(RegisterBlocks.TOASTER)
-                .add(RegisterBlocks.AIR_CONDITIONER)
-                .add(RegisterBlocks.DARK_PORCELAIN_TILES)
-                .add(RegisterBlocks.DARK_PORCELAIN_TILE_STAIRS)
-                .add(RegisterBlocks.DARK_PORCELAIN_TILE_SLAB)
-                .add(RegisterBlocks.DESK_FAN)
-                .add(RegisterBlocks.TOOLBOX)
-                .add(RegisterBlocks.FAUCET)
-                .add(RegisterBlocks.STAINLESS_STEEL_BLOCK)
-                .add(RegisterBlocks.CHECKERED_PORCELAIN_TILES)
-                .add(RegisterBlocks.CHECKERED_PORCELAIN_TILE_STAIRS)
-                .add(RegisterBlocks.CHECKERED_PORCELAIN_TILE_SLAB)
-                .add(RegisterBlocks.OVEN)
-                .add(RegisterBlocks.RADIATOR)
-                .add(RegisterBlocks.STOVE)
-                .add(RegisterBlocks.FRIDGE)
-                .add(RegisterBlocks.FREEZER)
-                .add(RegisterBlocks.TURBINE)
-                .add(RegisterBlocks.DARK_DRYER)
-                .add(RegisterBlocks.DARK_FRIDGE)
-                .add(RegisterBlocks.DARK_FREEZER)
-                .add(RegisterBlocks.DARK_SINK)
-                .add(RegisterBlocks.DARK_TOILET)
-                .add(RegisterBlocks.DARK_WASHING_MACHINE)
-                .add(RegisterBlocks.DARK_OVEN)
-                .add(RegisterBlocks.TOWEL_BAR)
-                .add(RegisterBlocks.SATELLITE_DISH)
-                .add(RegisterBlocks.SHOWER)
-                .add(RegisterBlocks.BATHTUB)
-                .add(RegisterBlocks.DARK_BATHTUB)
-                .add(RegisterBlocks.RIGID_GLASS)
-                .add(RegisterBlocks.CUPBOARD)
-                .add(RegisterBlocks.DARK_CUPBOARD)
+                .add(UDBlocks.DARK_PORCELAIN_BLOCK)
+                .add(UDBlocks.DARK_PORCELAIN_STAIRS)
+                .add(UDBlocks.DARK_PORCELAIN_SLAB)
+                .add(UDBlocks.PORCELAIN_BLOCK)
+                .add(UDBlocks.PORCELAIN_STAIRS)
+                .add(UDBlocks.PORCELAIN_SLAB)
+                .add(UDBlocks.PORCELAIN_TILES)
+                .add(UDBlocks.PORCELAIN_TILE_STAIRS)
+                .add(UDBlocks.PORCELAIN_TILE_SLAB)
+                .add(UDBlocks.MICROWAVE)
+                .add(UDBlocks.SINK)
+                .add(UDBlocks.CHROMITE)
+                .add(UDBlocks.CHROMITE_STAIRS)
+                .add(UDBlocks.CHROMITE_SLAB)
+                .add(UDBlocks.CHROMITE_WALL)
+                .add(UDBlocks.POLISHED_CHROMITE)
+                .add(UDBlocks.POLISHED_CHROMITE_STAIRS)
+                .add(UDBlocks.POLISHED_CHROMITE_SLAB)
+                .add(UDBlocks.TOILET)
+                .add(UDBlocks.WASHING_MACHINE)
+                .add(UDBlocks.DRYER)
+                .add(UDBlocks.TOASTER)
+                .add(UDBlocks.AIR_CONDITIONER)
+                .add(UDBlocks.DARK_PORCELAIN_TILES)
+                .add(UDBlocks.DARK_PORCELAIN_TILE_STAIRS)
+                .add(UDBlocks.DARK_PORCELAIN_TILE_SLAB)
+                .add(UDBlocks.DESK_FAN)
+                .add(UDBlocks.TOOLBOX)
+                .add(UDBlocks.FAUCET)
+                .add(UDBlocks.STAINLESS_STEEL_BLOCK)
+                .add(UDBlocks.CHECKERED_PORCELAIN_TILES)
+                .add(UDBlocks.CHECKERED_PORCELAIN_TILE_STAIRS)
+                .add(UDBlocks.CHECKERED_PORCELAIN_TILE_SLAB)
+                .add(UDBlocks.OVEN)
+                .add(UDBlocks.RADIATOR)
+                .add(UDBlocks.STOVE)
+                .add(UDBlocks.FRIDGE)
+                .add(UDBlocks.FREEZER)
+                .add(UDBlocks.TURBINE)
+                .add(UDBlocks.DARK_DRYER)
+                .add(UDBlocks.DARK_FRIDGE)
+                .add(UDBlocks.DARK_FREEZER)
+                .add(UDBlocks.DARK_SINK)
+                .add(UDBlocks.DARK_TOILET)
+                .add(UDBlocks.DARK_WASHING_MACHINE)
+                .add(UDBlocks.DARK_OVEN)
+                .add(UDBlocks.TOWEL_BAR)
+                .add(UDBlocks.SATELLITE_DISH)
+                .add(UDBlocks.SHOWER)
+                .add(UDBlocks.BATHTUB)
+                .add(UDBlocks.DARK_BATHTUB)
+                .add(UDBlocks.RIGID_GLASS)
+                .add(UDBlocks.CUPBOARD)
+                .add(UDBlocks.DARK_CUPBOARD)
         ;
 
         for (DyeColor colors : DyeColor.values()) {
-            getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE).add(RegisterBlocks.getDyedTowelBarTowels(colors.getId()));
+            getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE).add(UDBlocks.getDyedTowelBarTowels(colors.getId()));
         }
 
         getOrCreateTagBuilder(BlockTags.WALLS)
-                .add(RegisterBlocks.CHROMITE_WALL)
+                .add(UDBlocks.CHROMITE_WALL)
         ;
 
         getOrCreateTagBuilder(BlockTags.CAMPFIRES)
-                .add(RegisterBlocks.TOASTER)
+                .add(UDBlocks.TOASTER)
         ;
 
         for (DyeColor colors : DyeColor.values()) {
-            getOrCreateTagBuilder(BlockTags.WOOL).add(RegisterBlocks.getDyedTowelBlocks(colors.getId()));
+            getOrCreateTagBuilder(BlockTags.WOOL).add(UDBlocks.getDyedTowelBlocks(colors.getId()));
         }
     }
 

@@ -8,9 +8,9 @@ import net.minecraft.util.Identifier;
 import net.yirmiri.urban_decor.UrbanDecor;
 import net.yirmiri.urban_decor.block.entity.ToasterBlockEntity;
 
-public class RegisterBlockEntities {
+public class UDBlockEntities {
     public static final BlockEntityType<ToasterBlockEntity> TOASTER = Registry.register(Registries.BLOCK_ENTITY_TYPE,
-            Identifier.of(UrbanDecor.MOD_ID, "toaster"), FabricBlockEntityTypeBuilder.create(ToasterBlockEntity::new, RegisterBlocks.TOASTER).build());
+            Identifier.of(UrbanDecor.MOD_ID, "toaster"), FabricBlockEntityTypeBuilder.create(ToasterBlockEntity::new, UDBlocks.TOASTER).build());
 
     public static void loadBlockEntities() {
     }

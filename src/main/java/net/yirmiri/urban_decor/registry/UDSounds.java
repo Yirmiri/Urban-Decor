@@ -6,7 +6,7 @@ import net.minecraft.sound.SoundEvent;
 import net.minecraft.util.Identifier;
 import net.yirmiri.urban_decor.UrbanDecor;
 
-public class RegisterSounds {
+public class UDSounds {
     //OPEN
     public static final SoundEvent FRIDGE_OPEN = register("block.fridge.open");
 

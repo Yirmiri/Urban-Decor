@@ -7,8 +7,8 @@ import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
 import net.minecraft.client.render.RenderLayer;
 import net.minecraft.util.DyeColor;
-import net.yirmiri.urban_decor.registry.RegisterBlocks;
-import net.yirmiri.urban_decor.registry.RegisterEntities;
+import net.yirmiri.urban_decor.registry.UDBlocks;
+import net.yirmiri.urban_decor.registry.UDEntities;
 import net.yirmiri.urban_decor.entity.renderer.InvisibleEntityRenderer;
 
 @Environment(EnvType.CLIENT)
@@ -16,36 +16,36 @@ public class UrbanDecorClient implements ClientModInitializer {
     @Override
     public void onInitializeClient() {
         //CUTOUT
-        BlockRenderLayerMap.INSTANCE.putBlock(RegisterBlocks.TRASH_CAN, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(RegisterBlocks.MICROWAVE, RenderLayer.getTranslucent());
-        BlockRenderLayerMap.INSTANCE.putBlock(RegisterBlocks.WASHING_MACHINE, RenderLayer.getTranslucent());
-        BlockRenderLayerMap.INSTANCE.putBlock(RegisterBlocks.DRYER, RenderLayer.getTranslucent());
-        BlockRenderLayerMap.INSTANCE.putBlock(RegisterBlocks.AIR_CONDITIONER, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(RegisterBlocks.TOOLBOX, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(RegisterBlocks.DESK_FAN, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(RegisterBlocks.OVEN, RenderLayer.getCutoutMipped());
-        BlockRenderLayerMap.INSTANCE.putBlock(RegisterBlocks.RADIATOR, RenderLayer.getCutoutMipped());
-        BlockRenderLayerMap.INSTANCE.putBlock(RegisterBlocks.STOVE, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(RegisterBlocks.DARK_WASHING_MACHINE, RenderLayer.getTranslucent());
-        BlockRenderLayerMap.INSTANCE.putBlock(RegisterBlocks.DARK_OVEN, RenderLayer.getCutoutMipped());
-        BlockRenderLayerMap.INSTANCE.putBlock(RegisterBlocks.DARK_DRYER, RenderLayer.getTranslucent());
+        BlockRenderLayerMap.INSTANCE.putBlock(UDBlocks.TRASH_CAN, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(UDBlocks.MICROWAVE, RenderLayer.getTranslucent());
+        BlockRenderLayerMap.INSTANCE.putBlock(UDBlocks.WASHING_MACHINE, RenderLayer.getTranslucent());
+        BlockRenderLayerMap.INSTANCE.putBlock(UDBlocks.DRYER, RenderLayer.getTranslucent());
+        BlockRenderLayerMap.INSTANCE.putBlock(UDBlocks.AIR_CONDITIONER, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(UDBlocks.TOOLBOX, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(UDBlocks.DESK_FAN, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(UDBlocks.OVEN, RenderLayer.getCutoutMipped());
+        BlockRenderLayerMap.INSTANCE.putBlock(UDBlocks.RADIATOR, RenderLayer.getCutoutMipped());
+        BlockRenderLayerMap.INSTANCE.putBlock(UDBlocks.STOVE, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(UDBlocks.DARK_WASHING_MACHINE, RenderLayer.getTranslucent());
+        BlockRenderLayerMap.INSTANCE.putBlock(UDBlocks.DARK_OVEN, RenderLayer.getCutoutMipped());
+        BlockRenderLayerMap.INSTANCE.putBlock(UDBlocks.DARK_DRYER, RenderLayer.getTranslucent());
         addDyedCutouts();
-        BlockRenderLayerMap.INSTANCE.putBlock(RegisterBlocks.SATELLITE_DISH, RenderLayer.getCutoutMipped());
-        BlockRenderLayerMap.INSTANCE.putBlock(RegisterBlocks.TOILET, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(RegisterBlocks.DARK_TOILET, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(RegisterBlocks.FAUCET, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(RegisterBlocks.RIGID_GLASS, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(RegisterBlocks.PICTURE_FRAME, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(UDBlocks.SATELLITE_DISH, RenderLayer.getCutoutMipped());
+        BlockRenderLayerMap.INSTANCE.putBlock(UDBlocks.TOILET, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(UDBlocks.DARK_TOILET, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(UDBlocks.FAUCET, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(UDBlocks.RIGID_GLASS, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(UDBlocks.PICTURE_FRAME, RenderLayer.getCutout());
 
         //ENTITY
-        EntityRendererRegistry.register(RegisterEntities.TOILET, InvisibleEntityRenderer::new);
+        EntityRendererRegistry.register(UDEntities.TOILET, InvisibleEntityRenderer::new);
     }
 
     private void addDyedCutouts() {
         for (DyeColor colors : DyeColor.values()) {
-            BlockRenderLayerMap.INSTANCE.putBlock(RegisterBlocks.getDyedTowels(colors.getId()), RenderLayer.getCutout());
-            BlockRenderLayerMap.INSTANCE.putBlock(RegisterBlocks.getDyedTowelBarTowels(colors.getId()), RenderLayer.getCutout());
-            BlockRenderLayerMap.INSTANCE.putBlock(RegisterBlocks.getDyedPictureFrames(colors.getId()), RenderLayer.getCutout());
+            BlockRenderLayerMap.INSTANCE.putBlock(UDBlocks.getDyedTowels(colors.getId()), RenderLayer.getCutout());
+            BlockRenderLayerMap.INSTANCE.putBlock(UDBlocks.getDyedTowelBarTowels(colors.getId()), RenderLayer.getCutout());
+            BlockRenderLayerMap.INSTANCE.putBlock(UDBlocks.getDyedPictureFrames(colors.getId()), RenderLayer.getCutout());
         }
     }
 }

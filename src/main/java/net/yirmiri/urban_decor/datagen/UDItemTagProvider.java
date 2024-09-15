@@ -6,14 +6,12 @@ import net.minecraft.item.Item;
 import net.minecraft.item.Items;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.RegistryWrapper;
-import net.minecraft.registry.tag.BlockTags;
-import net.minecraft.registry.tag.ItemTags;
 import net.minecraft.registry.tag.TagKey;
 import net.minecraft.util.DyeColor;
 import net.minecraft.util.Identifier;
 import net.yirmiri.urban_decor.UrbanDecor;
-import net.yirmiri.urban_decor.registry.RegisterBlocks;
-import net.yirmiri.urban_decor.registry.RegisterItems;
+import net.yirmiri.urban_decor.registry.UDBlocks;
+import net.yirmiri.urban_decor.registry.UDItems;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -32,65 +30,65 @@ public class UDItemTagProvider extends FabricTagProvider.ItemTagProvider {
     @Override
     protected void configure(RegistryWrapper.WrapperLookup arg) {
         getOrCreateTagBuilder(FURNISHINGS)
-                .add(RegisterBlocks.TRASH_CAN.asItem())
-                .add(RegisterBlocks.MICROWAVE.asItem())
-                .add(RegisterBlocks.SINK.asItem())
-                .add(RegisterBlocks.TOILET.asItem())
-                .add(RegisterBlocks.WASHING_MACHINE.asItem())
-                .add(RegisterBlocks.DRYER.asItem())
-                .add(RegisterBlocks.TOASTER.asItem())
-                .add(RegisterBlocks.DESK_FAN.asItem())
-                .add(RegisterBlocks.OVEN.asItem())
-                .add(RegisterBlocks.STOVE.asItem())
-                .add(RegisterBlocks.FRIDGE.asItem())
-                .add(RegisterBlocks.FREEZER.asItem())
-                .add(RegisterBlocks.DARK_DRYER.asItem())
-                .add(RegisterBlocks.DARK_OVEN.asItem())
-                .add(RegisterBlocks.DARK_SINK.asItem())
-                .add(RegisterBlocks.DARK_FRIDGE.asItem())
-                .add(RegisterBlocks.DARK_FREEZER.asItem())
-                .add(RegisterBlocks.DARK_TOILET.asItem())
-                .add(RegisterBlocks.DARK_WASHING_MACHINE.asItem())
-                .add(RegisterBlocks.BATHTUB.asItem())
-                .add(RegisterBlocks.DARK_BATHTUB.asItem())
-                .add(RegisterBlocks.PICTURE_FRAME.asItem())
-                .add(RegisterBlocks.CUPBOARD.asItem())
-                .add(RegisterBlocks.DARK_CUPBOARD.asItem())
+                .add(UDBlocks.TRASH_CAN.asItem())
+                .add(UDBlocks.MICROWAVE.asItem())
+                .add(UDBlocks.SINK.asItem())
+                .add(UDBlocks.TOILET.asItem())
+                .add(UDBlocks.WASHING_MACHINE.asItem())
+                .add(UDBlocks.DRYER.asItem())
+                .add(UDBlocks.TOASTER.asItem())
+                .add(UDBlocks.DESK_FAN.asItem())
+                .add(UDBlocks.OVEN.asItem())
+                .add(UDBlocks.STOVE.asItem())
+                .add(UDBlocks.FRIDGE.asItem())
+                .add(UDBlocks.FREEZER.asItem())
+                .add(UDBlocks.DARK_DRYER.asItem())
+                .add(UDBlocks.DARK_OVEN.asItem())
+                .add(UDBlocks.DARK_SINK.asItem())
+                .add(UDBlocks.DARK_FRIDGE.asItem())
+                .add(UDBlocks.DARK_FREEZER.asItem())
+                .add(UDBlocks.DARK_TOILET.asItem())
+                .add(UDBlocks.DARK_WASHING_MACHINE.asItem())
+                .add(UDBlocks.BATHTUB.asItem())
+                .add(UDBlocks.DARK_BATHTUB.asItem())
+                .add(UDBlocks.PICTURE_FRAME.asItem())
+                .add(UDBlocks.CUPBOARD.asItem())
+                .add(UDBlocks.DARK_CUPBOARD.asItem())
         ;
 
         for (DyeColor colors : DyeColor.values()) {
-            getOrCreateTagBuilder(FURNISHINGS).add(RegisterBlocks.getDyedPictureFrames(colors.getId()).asItem());
+            getOrCreateTagBuilder(FURNISHINGS).add(UDBlocks.getDyedPictureFrames(colors.getId()).asItem());
         }
 
         getOrCreateTagBuilder(TOOLBOXABLE)
-                .add(RegisterBlocks.TRASH_CAN.asItem())
-                .add(RegisterBlocks.MICROWAVE.asItem())
-                .add(RegisterBlocks.SINK.asItem())
-                .add(RegisterBlocks.TOILET.asItem())
-                .add(RegisterBlocks.WASHING_MACHINE.asItem())
-                .add(RegisterBlocks.DRYER.asItem())
-                .add(RegisterBlocks.TOASTER.asItem())
-                .add(RegisterBlocks.OVEN.asItem())
-                .add(RegisterBlocks.STOVE.asItem())
-                .add(RegisterBlocks.FRIDGE.asItem())
-                .add(RegisterBlocks.FREEZER.asItem())
-                .add(RegisterBlocks.DARK_DRYER.asItem())
-                .add(RegisterBlocks.DARK_OVEN.asItem())
-                .add(RegisterBlocks.DARK_SINK.asItem())
-                .add(RegisterBlocks.DARK_FRIDGE.asItem())
-                .add(RegisterBlocks.DARK_FREEZER.asItem())
-                .add(RegisterBlocks.DARK_TOILET.asItem())
-                .add(RegisterBlocks.DARK_WASHING_MACHINE.asItem())
-                .add(RegisterBlocks.SATELLITE_DISH.asItem())
-                .add(RegisterBlocks.SHOWER.asItem())
-                .add(RegisterBlocks.FAUCET.asItem())
-                .add(RegisterBlocks.PICTURE_FRAME.asItem())
-                .add(RegisterBlocks.CUPBOARD.asItem())
-                .add(RegisterBlocks.DARK_CUPBOARD.asItem())
+                .add(UDBlocks.TRASH_CAN.asItem())
+                .add(UDBlocks.MICROWAVE.asItem())
+                .add(UDBlocks.SINK.asItem())
+                .add(UDBlocks.TOILET.asItem())
+                .add(UDBlocks.WASHING_MACHINE.asItem())
+                .add(UDBlocks.DRYER.asItem())
+                .add(UDBlocks.TOASTER.asItem())
+                .add(UDBlocks.OVEN.asItem())
+                .add(UDBlocks.STOVE.asItem())
+                .add(UDBlocks.FRIDGE.asItem())
+                .add(UDBlocks.FREEZER.asItem())
+                .add(UDBlocks.DARK_DRYER.asItem())
+                .add(UDBlocks.DARK_OVEN.asItem())
+                .add(UDBlocks.DARK_SINK.asItem())
+                .add(UDBlocks.DARK_FRIDGE.asItem())
+                .add(UDBlocks.DARK_FREEZER.asItem())
+                .add(UDBlocks.DARK_TOILET.asItem())
+                .add(UDBlocks.DARK_WASHING_MACHINE.asItem())
+                .add(UDBlocks.SATELLITE_DISH.asItem())
+                .add(UDBlocks.SHOWER.asItem())
+                .add(UDBlocks.FAUCET.asItem())
+                .add(UDBlocks.PICTURE_FRAME.asItem())
+                .add(UDBlocks.CUPBOARD.asItem())
+                .add(UDBlocks.DARK_CUPBOARD.asItem())
         ;
 
         for (DyeColor colors : DyeColor.values()) {
-            getOrCreateTagBuilder(TOOLBOXABLE).add(RegisterBlocks.getDyedPictureFrames(colors.getId()).asItem());
+            getOrCreateTagBuilder(TOOLBOXABLE).add(UDBlocks.getDyedPictureFrames(colors.getId()).asItem());
         }
 
         getOrCreateTagBuilder(DYES)
@@ -113,7 +111,7 @@ public class UDItemTagProvider extends FabricTagProvider.ItemTagProvider {
         ;
 
             getOrCreateTagBuilder(TOOLBOXES)
-                .add(RegisterItems.TOOLBOX)
+                .add(UDItems.TOOLBOX)
         ;
 
         getOrCreateTagBuilder(GLASS)
@@ -138,7 +136,7 @@ public class UDItemTagProvider extends FabricTagProvider.ItemTagProvider {
         ;
 
         for (DyeColor colors : DyeColor.values()) {
-            getOrCreateTagBuilder(TOWELS).add(RegisterBlocks.getDyedTowels(colors.getId()).asItem());
+            getOrCreateTagBuilder(TOWELS).add(UDBlocks.getDyedTowels(colors.getId()).asItem());
         }
     }
 

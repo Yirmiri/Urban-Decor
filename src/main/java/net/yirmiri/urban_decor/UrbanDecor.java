@@ -3,8 +3,8 @@ package net.yirmiri.urban_decor;
 import net.fabricmc.api.ModInitializer;
 
 import net.fabricmc.loader.api.FabricLoader;
-import net.yirmiri.urban_decor.compat.RegisterCompatRegistries;
-import net.yirmiri.urban_decor.compat.RegisterPacks;
+import net.yirmiri.urban_decor.compat.UDCompatRegistries;
+import net.yirmiri.urban_decor.compat.UDPacks;
 import net.yirmiri.urban_decor.registry.*;
 import net.yirmiri.urban_decor.util.UDRegistries;
 import net.yirmiri.urban_decor.util.UDStats;
@@ -18,15 +18,15 @@ public class UrbanDecor implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
-		RegisterBlocks.loadBlocks();
-		RegisterItems.loadItems();
-		RegisterItemGroups.loadItemGroups();
-		RegisterPacks.loadPacks();
-		RegisterCompatRegistries.loadCompatRegistries();
-		RegisterBlockEntities.loadBlockEntities();
-		RegisterSounds.loadSounds();
+		UDBlocks.loadBlocks();
+		UDItems.loadItems();
+		UDItemGroups.loadItemGroups();
+		UDPacks.loadPacks();
+		UDCompatRegistries.loadCompatRegistries();
+		UDBlockEntities.loadBlockEntities();
+		UDSounds.loadSounds();
 		UDRegistries.loadRegistries();
-		RegisterEntities.loadEntities();
+		UDEntities.loadEntities();
 		UDStats.loadStats();
 	}
 
