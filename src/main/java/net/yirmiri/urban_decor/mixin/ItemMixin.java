@@ -26,5 +26,9 @@ public abstract class ItemMixin {
         if (stack.isIn(UDItemTagProvider.TOOLBOXABLE)) {
             tooltip.add(Text.translatable("tooltip." + UrbanDecor.MOD_ID + ".toolboxable").formatted(Formatting.GRAY).formatted(Formatting.ITALIC));
         }
+
+        if (stack.isIn(UDItemTagProvider.WRAPPABLE)) {
+            tooltip.add(Text.translatable("tooltip." + UrbanDecor.MOD_ID + ".wrappable").formatted(Formatting.GRAY).formatted(Formatting.ITALIC));
+        }
     }
 }

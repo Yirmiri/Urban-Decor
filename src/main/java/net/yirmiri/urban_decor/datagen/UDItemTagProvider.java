@@ -22,6 +22,7 @@ public class UDItemTagProvider extends FabricTagProvider.ItemTagProvider {
     public static final TagKey<Item> GLASS = create("glass");
     public static final TagKey<Item> DYES = create("dyes");
     public static final TagKey<Item> TOOLBOXABLE = create("toolboxable");
+    public static final TagKey<Item> WRAPPABLE = create("wrappable");
 
     public UDItemTagProvider(FabricDataOutput output, CompletableFuture<RegistryWrapper.WrapperLookup> future) {
         super(output, future);
@@ -90,6 +91,10 @@ public class UDItemTagProvider extends FabricTagProvider.ItemTagProvider {
         for (DyeColor colors : DyeColor.values()) {
             getOrCreateTagBuilder(TOOLBOXABLE).add(UDBlocks.getDyedPictureFrames(colors.getId()).asItem());
         }
+
+        getOrCreateTagBuilder(WRAPPABLE)
+
+        ;
 
         getOrCreateTagBuilder(DYES)
                 .add(Items.RED_DYE)

@@ -7,8 +7,7 @@ import net.minecraft.util.Identifier;
 import net.yirmiri.urban_decor.UrbanDecor;
 
 public class UDSounds {
-    //OPEN
-    public static final SoundEvent FRIDGE_OPEN = register("block.fridge.open");
+    public static final SoundEvent APPLIANCE_OPEN = register("block.appliance.open");
 
     private static SoundEvent register(String id) {
         return Registry.register(Registries.SOUND_EVENT, Identifier.of(UrbanDecor.MOD_ID, id), SoundEvent.of(Identifier.of(UrbanDecor.MOD_ID, id)));

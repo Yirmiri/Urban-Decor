@@ -93,8 +93,12 @@ public class UDLangProvider extends FabricLanguageProvider {
         builder.add(UDItems.STEEL_PIPE, "Steel Pipe");
         builder.add(UDItems.STAINLESS_STEEL_NUGGET, "Stainless Steel Nugget");
 
+        //CONTAINERS
+        builder.add("container.urban_decor.cupboard", "Cupboard");
+
         //STATS
         builder.add(UDStats.TIMES_SAT, "Times Sat Down");
+        builder.add(UDStats.OPEN_CUPBOARD, "Cupboards Opened");
 
         //ENTITIES
         builder.add(UDEntities.TOILET, "Toilet");
@@ -106,6 +110,7 @@ public class UDLangProvider extends FabricLanguageProvider {
         builder.add("item.urban_decor.toolbox.use", "When Used on Blocks:");
         builder.add("item.urban_decor.toolbox.desc", "Can Change Variants of Specific Blocks");
         builder.add("tooltip.urban_decor.toolboxable", "Has toolbox variants");
+        builder.add("tooltip.urban_decor.wrappable", "Can be wrapped");
 
         //TOOLBOX
         builder.add("toolbox.dryer.variant_true", "Variant: Transparent");

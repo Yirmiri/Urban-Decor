@@ -119,6 +119,7 @@
   "block.urban_decor.yellow_picture_frame": "Yellow Picture Frame",
   "block.urban_decor.yellow_towel": "Yellow Towel",
   "block.urban_decor.yellow_towel_block": "Yellow Towel Block",
+  "container.urban_decor.cupboard": "Cupboard",
   "death.attack.urban_decor.toaster": "%1$s likes to play with toasters in the tub",
   "death.attack.urban_decor.toaster.player": "%2$s toasted %1$s into a delightful breakfast",
   "entity.urban_decor.toilet": "Toilet",
@@ -172,5 +173,7 @@
   "toolbox.washing_machine.variant_false": "Variant: Opaque",
   "toolbox.washing_machine.variant_true": "Variant: Transparent",
   "tooltip.urban_decor.toolboxable": "Has toolbox variants",
+  "tooltip.urban_decor.wrappable": "Can be wrapped",
+  "urban_decor.open_cupboard": "Cupboards Opened",
   "urban_decor.times_sat": "Times Sat Down"
 }

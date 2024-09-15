@@ -1,30 +1,41 @@
 package net.yirmiri.urban_decor.block;
 
-import net.minecraft.block.AbstractBlock;
-import net.minecraft.block.Block;
-import net.minecraft.block.BlockState;
-import net.minecraft.block.ShapeContext;
+import net.minecraft.block.*;
+import net.minecraft.block.entity.BlockEntity;
+import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.mob.PiglinBrain;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.inventory.Inventory;
 import net.minecraft.item.ItemStack;
+import net.minecraft.screen.ScreenHandler;
+import net.minecraft.server.world.ServerWorld;
+import net.minecraft.stat.Stats;
 import net.minecraft.state.StateManager;
+import net.minecraft.state.property.BooleanProperty;
 import net.minecraft.state.property.IntProperty;
 import net.minecraft.state.property.Properties;
 import net.minecraft.text.Text;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
+import net.minecraft.util.ItemScatterer;
 import net.minecraft.util.function.BooleanBiFunction;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
+import net.minecraft.util.math.random.Random;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.util.shape.VoxelShapes;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
+import net.yirmiri.urban_decor.block.entity.CupboardBlockEntity;
 import net.yirmiri.urban_decor.datagen.UDItemTagProvider;
+import net.yirmiri.urban_decor.util.UDStats;
 import net.yirmiri.urban_decor.util.UDUtils;
+import org.jetbrains.annotations.Nullable;
 
-public class CupboardBlock extends AbstractDecorBlock {
+public class CupboardBlock extends AbstractDecorBlockWithEntity {
     public static final IntProperty VARIANT = IntProperty.of("variant", 0, 3);
+    public static final BooleanProperty OPEN = BooleanProperty.of("open");
 
     private static final VoxelShape SHAPE_NORTH = VoxelShapes.combineAndSimplify(Block.createCuboidShape(2, 0, 4, 14, 14, 16), Block.createCuboidShape(0, 14, 2, 16, 16, 16), BooleanBiFunction.OR);
     private static final VoxelShape SHAPE_SOUTH = VoxelShapes.combineAndSimplify(Block.createCuboidShape(2, 0, 0, 14, 14, 12), Block.createCuboidShape(0, 14, 0, 16, 16, 14), BooleanBiFunction.OR);
@@ -48,7 +59,7 @@ public class CupboardBlock extends AbstractDecorBlock {
 
     public CupboardBlock(AbstractBlock.Settings settings) {
         super(settings);
-        setDefaultState(getDefaultState().with(Properties.HORIZONTAL_FACING, Direction.NORTH).with(WATERLOGGED, false).with(VARIANT, 0));
+        setDefaultState(getDefaultState().with(Properties.HORIZONTAL_FACING, Direction.NORTH).with(WATERLOGGED, false).with(VARIANT, 2).with(OPEN, false));
     }
 
     @Override
@@ -75,17 +86,77 @@ public class CupboardBlock extends AbstractDecorBlock {
     @Override
     public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
         ItemStack stackHand = player.getStackInHand(hand);
-        if (stackHand.isIn(UDItemTagProvider.TOOLBOXES)) {
-            world.setBlockState(pos, state.cycle(VARIANT));
-            UDUtils.toolboxUsed(world, pos);
-            player.sendMessage(Text.translatable("toolbox.cupboard.variant_" + state.get(VARIANT)), true);
+        BlockEntity blockEntity = world.getBlockEntity(pos);
+        if (world.isClient) {
             return ActionResult.SUCCESS;
+        } else {
+            if (blockEntity instanceof CupboardBlockEntity && !stackHand.isIn(UDItemTagProvider.TOOLBOXES)) {
+                player.openHandledScreen((CupboardBlockEntity)blockEntity);
+                player.incrementStat(UDStats.OPEN_CUPBOARD);
+                PiglinBrain.onGuardedBlockInteracted(player, true);
+            }
+
+            if (stackHand.isIn(UDItemTagProvider.TOOLBOXES)) {
+                world.setBlockState(pos, state.cycle(VARIANT));
+                UDUtils.toolboxUsed(world, pos);
+                player.sendMessage(Text.translatable("toolbox.cupboard.variant_" + state.get(VARIANT)), true);
+                return ActionResult.SUCCESS;
+            }
+            return ActionResult.CONSUME;
         }
-        return ActionResult.PASS;
     }
 
     @Override
     protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
-        builder.add(FACING, WATERLOGGED, VARIANT);
+        builder.add(FACING, WATERLOGGED, VARIANT, OPEN);
+    }
+
+    @Nullable
+    public BlockEntity createBlockEntity(BlockPos pos, BlockState state) {
+        return new CupboardBlockEntity(pos, state);
+    }
+
+    public BlockRenderType getRenderType(BlockState state) {
+        return BlockRenderType.MODEL;
+    }
+
+    public void onPlaced(World world, BlockPos pos, BlockState state, @Nullable LivingEntity placer, ItemStack itemStack) {
+        if (itemStack.hasCustomName()) {
+            BlockEntity blockEntity = world.getBlockEntity(pos);
+            if (blockEntity instanceof CupboardBlockEntity) {
+                ((CupboardBlockEntity)blockEntity).setCustomName(itemStack.getName());
+            }
+        }
+    }
+
+    @Override
+    public boolean hasComparatorOutput(BlockState state) {
+        return true;
+    }
+
+    @Override
+    public int getComparatorOutput(BlockState state, World world, BlockPos pos) {
+        return ScreenHandler.calculateComparatorOutput(world.getBlockEntity(pos));
+    }
+
+    @Override
+    public void onStateReplaced(BlockState state, World world, BlockPos pos, BlockState newState, boolean moved) {
+        if (!state.isOf(newState.getBlock())) {
+            BlockEntity blockEntity = world.getBlockEntity(pos);
+            if (blockEntity instanceof Inventory) {
+                ItemScatterer.spawn(world, pos, (Inventory)blockEntity);
+                world.updateComparators(pos, this);
+            }
+
+            super.onStateReplaced(state, world, pos, newState, moved);
+        }
+    }
+
+    @Override
+    public void scheduledTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
+        BlockEntity blockEntity = world.getBlockEntity(pos);
+        if (blockEntity instanceof CupboardBlockEntity) {
+            ((CupboardBlockEntity)blockEntity).tick();
+        }
     }
 }
