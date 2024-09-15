@@ -59,10 +59,10 @@ public class ToiletBlock extends AbstractDecorBlock {
     public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext ctx) {
         boolean alt = state.get(ALT);
         return switch (state.get(FACING)) {
-            default -> alt ? SHAPE_NORTH_ALT : SHAPE_NORTH;
             case SOUTH -> alt ? SHAPE_SOUTH_ALT : SHAPE_SOUTH;
             case WEST -> alt ? SHAPE_WEST_ALT : SHAPE_WEST;
             case EAST -> alt ? SHAPE_EAST_ALT : SHAPE_EAST;
+            default -> alt ? SHAPE_NORTH_ALT : SHAPE_NORTH;
         };
     }
 

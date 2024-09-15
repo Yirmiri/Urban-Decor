@@ -119,7 +119,7 @@
   "block.urban_decor.yellow_picture_frame": "Yellow Picture Frame",
   "block.urban_decor.yellow_towel": "Yellow Towel",
   "block.urban_decor.yellow_towel_block": "Yellow Towel Block",
-  "container.urban_decor.cupboard": "Cupboard",
+  "container.urban_decor.generic": "Appliance Container",
   "death.attack.urban_decor.toaster": "%1$s likes to play with toasters in the tub",
   "death.attack.urban_decor.toaster.player": "%2$s toasted %1$s into a delightful breakfast",
   "entity.urban_decor.toilet": "Toilet",

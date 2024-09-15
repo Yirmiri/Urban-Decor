@@ -18,16 +18,17 @@ import net.minecraft.util.collection.DefaultedList;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Vec3i;
 import net.minecraft.world.World;
-import net.yirmiri.urban_decor.block.CupboardBlock;
+import net.yirmiri.urban_decor.block.AbstractDecorBlockWithEntity;
+import net.yirmiri.urban_decor.datagen.UDBlockTagProvider;
 import net.yirmiri.urban_decor.registry.UDBlockEntities;
 import net.yirmiri.urban_decor.registry.UDSounds;
 
-public class CupboardBlockEntity extends LootableContainerBlockEntity {
+public class StorageApplianceBlockEntity extends LootableContainerBlockEntity {
     private DefaultedList<ItemStack> inventory;
     private final ViewerCountManager stateManager;
 
-    public CupboardBlockEntity(BlockPos pos, BlockState state) {
-        super(UDBlockEntities.CUPBOARD, pos, state);
+    public StorageApplianceBlockEntity(BlockPos pos, BlockState state) {
+        super(UDBlockEntities.STORAGE_APPLIANCE, pos, state);
         inventory = DefaultedList.ofSize(27, ItemStack.EMPTY);
         stateManager = new ViewerCountManager() {
             protected void onContainerOpen(World world, BlockPos pos, BlockState state) {
@@ -46,7 +47,7 @@ public class CupboardBlockEntity extends LootableContainerBlockEntity {
             protected boolean isPlayerViewing(PlayerEntity player) {
                 if (player.currentScreenHandler instanceof GenericContainerScreenHandler) {
                     Inventory inventory = ((GenericContainerScreenHandler)player.currentScreenHandler).getInventory();
-                    return inventory == CupboardBlockEntity.this;
+                    return inventory == StorageApplianceBlockEntity.this;
                 } else {
                     return false;
                 }
@@ -68,7 +69,6 @@ public class CupboardBlockEntity extends LootableContainerBlockEntity {
         if (!deserializeLootTable(nbt)) {
             Inventories.readNbt(nbt, inventory);
         }
-
     }
 
     public int size() {
@@ -84,7 +84,7 @@ public class CupboardBlockEntity extends LootableContainerBlockEntity {
     }
 
     protected Text getContainerName() {
-        return Text.translatable("container.urban_decor.cupboard");
+        return Text.translatable("container.urban_decor.generic");
     }
 
     protected ScreenHandler createScreenHandler(int syncId, PlayerInventory playerInventory) {
@@ -112,11 +112,13 @@ public class CupboardBlockEntity extends LootableContainerBlockEntity {
     }
 
     void setOpen(BlockState state, boolean open) {
-        world.setBlockState(getPos(), state.with(CupboardBlock.OPEN, open), 3);
+        if (!state.isIn(UDBlockTagProvider.OPENABLE)) {
+            world.setBlockState(getPos(), state.with(AbstractDecorBlockWithEntity.OPEN, open), 3);
+        }
     }
 
     void playSound(BlockState state, SoundEvent soundEvent) {
-        Vec3i vec3i = (state.get(CupboardBlock.FACING)).getVector();
+        Vec3i vec3i = (state.get(AbstractDecorBlockWithEntity.FACING)).getVector();
         double d = (double)pos.getX() + 0.5 + (double)vec3i.getX() / 2.0;
         double e = (double)pos.getY() + 0.5 + (double)vec3i.getY() / 2.0;
         double f = (double)pos.getZ() + 0.5 + (double)vec3i.getZ() / 2.0;

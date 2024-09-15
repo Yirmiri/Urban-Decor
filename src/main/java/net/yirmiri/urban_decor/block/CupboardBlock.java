@@ -9,9 +9,7 @@ import net.minecraft.inventory.Inventory;
 import net.minecraft.item.ItemStack;
 import net.minecraft.screen.ScreenHandler;
 import net.minecraft.server.world.ServerWorld;
-import net.minecraft.stat.Stats;
 import net.minecraft.state.StateManager;
-import net.minecraft.state.property.BooleanProperty;
 import net.minecraft.state.property.IntProperty;
 import net.minecraft.state.property.Properties;
 import net.minecraft.text.Text;
@@ -27,7 +25,7 @@ import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.util.shape.VoxelShapes;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
-import net.yirmiri.urban_decor.block.entity.CupboardBlockEntity;
+import net.yirmiri.urban_decor.block.entity.StorageApplianceBlockEntity;
 import net.yirmiri.urban_decor.datagen.UDItemTagProvider;
 import net.yirmiri.urban_decor.util.UDStats;
 import net.yirmiri.urban_decor.util.UDUtils;
@@ -35,7 +33,6 @@ import org.jetbrains.annotations.Nullable;
 
 public class CupboardBlock extends AbstractDecorBlockWithEntity {
     public static final IntProperty VARIANT = IntProperty.of("variant", 0, 3);
-    public static final BooleanProperty OPEN = BooleanProperty.of("open");
 
     private static final VoxelShape SHAPE_NORTH = VoxelShapes.combineAndSimplify(Block.createCuboidShape(2, 0, 4, 14, 14, 16), Block.createCuboidShape(0, 14, 2, 16, 16, 16), BooleanBiFunction.OR);
     private static final VoxelShape SHAPE_SOUTH = VoxelShapes.combineAndSimplify(Block.createCuboidShape(2, 0, 0, 14, 14, 12), Block.createCuboidShape(0, 14, 0, 16, 16, 14), BooleanBiFunction.OR);
@@ -90,9 +87,9 @@ public class CupboardBlock extends AbstractDecorBlockWithEntity {
         if (world.isClient) {
             return ActionResult.SUCCESS;
         } else {
-            if (blockEntity instanceof CupboardBlockEntity && !stackHand.isIn(UDItemTagProvider.TOOLBOXES)) {
-                player.openHandledScreen((CupboardBlockEntity)blockEntity);
-                player.incrementStat(UDStats.OPEN_CUPBOARD);
+            if (blockEntity instanceof StorageApplianceBlockEntity && !stackHand.isIn(UDItemTagProvider.TOOLBOXES)) {
+                player.openHandledScreen((StorageApplianceBlockEntity)blockEntity);
+                player.incrementStat(UDStats.OPEN_APPLIANCES);
                 PiglinBrain.onGuardedBlockInteracted(player, true);
             }
 
@@ -113,7 +110,7 @@ public class CupboardBlock extends AbstractDecorBlockWithEntity {
 
     @Nullable
     public BlockEntity createBlockEntity(BlockPos pos, BlockState state) {
-        return new CupboardBlockEntity(pos, state);
+        return new StorageApplianceBlockEntity(pos, state);
     }
 
     public BlockRenderType getRenderType(BlockState state) {
@@ -123,8 +120,8 @@ public class CupboardBlock extends AbstractDecorBlockWithEntity {
     public void onPlaced(World world, BlockPos pos, BlockState state, @Nullable LivingEntity placer, ItemStack itemStack) {
         if (itemStack.hasCustomName()) {
             BlockEntity blockEntity = world.getBlockEntity(pos);
-            if (blockEntity instanceof CupboardBlockEntity) {
-                ((CupboardBlockEntity)blockEntity).setCustomName(itemStack.getName());
+            if (blockEntity instanceof StorageApplianceBlockEntity) {
+                ((StorageApplianceBlockEntity)blockEntity).setCustomName(itemStack.getName());
             }
         }
     }
@@ -155,8 +152,8 @@ public class CupboardBlock extends AbstractDecorBlockWithEntity {
     @Override
     public void scheduledTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
         BlockEntity blockEntity = world.getBlockEntity(pos);
-        if (blockEntity instanceof CupboardBlockEntity) {
-            ((CupboardBlockEntity)blockEntity).tick();
+        if (blockEntity instanceof StorageApplianceBlockEntity) {
+            ((StorageApplianceBlockEntity)blockEntity).tick();
         }
     }
 }

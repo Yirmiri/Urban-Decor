@@ -5,11 +5,15 @@ import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.block.entity.BlockEntityTicker;
 import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.screen.NamedScreenHandlerFactory;
+import net.minecraft.state.StateManager;
+import net.minecraft.state.property.BooleanProperty;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
 
 public abstract class AbstractDecorBlockWithEntity extends AbstractDecorBlock implements BlockEntityProvider {
+    public static final BooleanProperty OPEN = BooleanProperty.of("open");
+
     protected AbstractDecorBlockWithEntity(AbstractBlock.Settings settings) {
         super(settings);
     }
@@ -33,5 +37,10 @@ public abstract class AbstractDecorBlockWithEntity extends AbstractDecorBlock im
     @Nullable
     protected static <E extends BlockEntity, A extends BlockEntity> BlockEntityTicker<A> checkType(BlockEntityType<A> givenType, BlockEntityType<E> expectedType, BlockEntityTicker<? super E> ticker) {
         return expectedType == givenType ? (BlockEntityTicker<A>) ticker : null;
+    }
+
+    @Override
+    protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
+        builder.add(FACING, WATERLOGGED, OPEN);
     }
 }

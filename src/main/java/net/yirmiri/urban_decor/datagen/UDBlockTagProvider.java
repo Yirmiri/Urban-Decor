@@ -16,6 +16,7 @@ import java.util.concurrent.CompletableFuture;
 
 public class UDBlockTagProvider extends FabricTagProvider.BlockTagProvider {
     public static final TagKey<Block> TOILETS = create("toilets");
+    public static final TagKey<Block> OPENABLE = create("openable");
 
     public UDBlockTagProvider(FabricDataOutput output, CompletableFuture<RegistryWrapper.WrapperLookup> future) {
         super(output, future);
@@ -26,6 +27,13 @@ public class UDBlockTagProvider extends FabricTagProvider.BlockTagProvider {
         getOrCreateTagBuilder(TOILETS)
                 .add(UDBlocks.TOILET)
                 .add(UDBlocks.DARK_TOILET)
+        ;
+
+        getOrCreateTagBuilder(OPENABLE)
+                .add(UDBlocks.FRIDGE)
+                .add(UDBlocks.FREEZER)
+                .add(UDBlocks.DARK_FRIDGE)
+                .add(UDBlocks.DARK_FREEZER)
         ;
 
         getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE)

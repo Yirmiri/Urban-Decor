@@ -94,11 +94,11 @@ public class UDLangProvider extends FabricLanguageProvider {
         builder.add(UDItems.STAINLESS_STEEL_NUGGET, "Stainless Steel Nugget");
 
         //CONTAINERS
-        builder.add("container.urban_decor.cupboard", "Cupboard");
+        builder.add("container.urban_decor.generic", "Appliance Container");
 
         //STATS
         builder.add(UDStats.TIMES_SAT, "Times Sat Down");
-        builder.add(UDStats.OPEN_CUPBOARD, "Cupboards Opened");
+        builder.add(UDStats.OPEN_APPLIANCES, "Appliances Opened");
         builder.add(UDStats.USE_FAUCET, "Faucets Used");
 
         //ENTITIES
