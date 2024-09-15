@@ -54,6 +54,8 @@ public class UDItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(RegisterBlocks.BATHTUB.asItem())
                 .add(RegisterBlocks.DARK_BATHTUB.asItem())
                 .add(RegisterBlocks.PICTURE_FRAME.asItem())
+                .add(RegisterBlocks.CUPBOARD.asItem())
+                .add(RegisterBlocks.DARK_CUPBOARD.asItem())
         ;
 
         for (DyeColor colors : DyeColor.values()) {
@@ -83,6 +85,8 @@ public class UDItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(RegisterBlocks.SHOWER.asItem())
                 .add(RegisterBlocks.FAUCET.asItem())
                 .add(RegisterBlocks.PICTURE_FRAME.asItem())
+                .add(RegisterBlocks.CUPBOARD.asItem())
+                .add(RegisterBlocks.DARK_CUPBOARD.asItem())
         ;
 
         for (DyeColor colors : DyeColor.values()) {

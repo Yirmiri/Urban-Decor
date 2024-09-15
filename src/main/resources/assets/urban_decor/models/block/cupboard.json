@@ -1,22 +1,22 @@
 {
 	"credit": "Made with Blockbench by Tellio-Ari",
 	"textures": {
-		"0": "furniture:cupboard",
-		"particle": "furniture:cupboard"
+		"0": "urban_decor:block/cupboard",
+		"particle": "urban_decor:block/cupboard"
 	},
 	"elements": [
 		{
-			"name": "small",
-			"from": [2, 0, 4],
-			"to": [14, 14, 16],
-			"rotation": {"angle": 0, "axis": "y", "origin": [2, 0, 4]},
+			"name": "medium",
+			"from": [0, 0, 4],
+			"to": [16, 14, 16],
+			"rotation": {"angle": 0, "axis": "y", "origin": [0, 0, 4]},
 			"faces": {
-				"north": {"uv": [4.5, 0.5, 7.5, 4], "texture": "#0"},
+				"north": {"uv": [0, 0.5, 4, 4], "texture": "#0"},
 				"east": {"uv": [4.5, 4.5, 7.5, 8], "texture": "#0"},
-				"south": {"uv": [4.5, 4.5, 7.5, 8], "texture": "#0"},
+				"south": {"uv": [0, 4.5, 4, 8], "texture": "#0"},
 				"west": {"uv": [4.5, 4.5, 7.5, 8], "texture": "#0"},
-				"up": {"uv": [0, 0, 12, 12], "texture": "#missing"},
-				"down": {"uv": [8.5, 0, 11.5, 3], "texture": "#0"}
+				"up": {"uv": [0, 0, 16, 12], "texture": "#missing"},
+				"down": {"uv": [8, 0, 12, 3], "texture": "#0"}
 			}
 		},
 		{

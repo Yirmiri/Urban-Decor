@@ -33,6 +33,7 @@ public class UDProperties {
         public static final Block.Settings FREEZER = FabricBlockSettings.copyOf(Blocks.STONE).strength(1.5F).mapColor(MapColor.WHITE).sounds(BlockSoundGroup.CALCITE).requiresTool();
         public static final Block.Settings BATHTUB = FabricBlockSettings.copyOf(Blocks.STONE).strength(2.0F).mapColor(MapColor.WHITE).sounds(BlockSoundGroup.CALCITE).requiresTool();
         public static final Block.Settings PICTURE_FRAME = FabricBlockSettings.copyOf(Blocks.WHITE_WOOL).strength(0.3F).sounds(BlockSoundGroup.WOOD);
+        public static final Block.Settings CUPBOARD = FabricBlockSettings.copyOf(Blocks.STONE).strength(1.0F).mapColor(MapColor.WHITE).sounds(BlockSoundGroup.CALCITE).requiresTool();
 
         //MISC APPLIANCES
         public static final Block.Settings AIR_CONDITIONER = FabricBlockSettings.copyOf(Blocks.STONE).strength(1.0F).mapColor(MapColor.GRAY).sounds(BlockSoundGroup.LANTERN).requiresTool();

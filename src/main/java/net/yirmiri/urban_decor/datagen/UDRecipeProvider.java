@@ -7,10 +7,16 @@ import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.data.server.recipe.RecipeJsonProvider;
 import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
+import net.minecraft.data.server.recipe.ShapelessRecipeJsonBuilder;
+import net.minecraft.item.DyeItem;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemConvertible;
 import net.minecraft.item.Items;
 import net.minecraft.recipe.Ingredient;
+import net.minecraft.recipe.ShapelessRecipe;
 import net.minecraft.recipe.book.RecipeCategory;
+import net.minecraft.registry.tag.ItemTags;
+import net.minecraft.registry.tag.TagKey;
 import net.minecraft.util.DyeColor;
 import net.minecraft.util.Identifier;
 import net.yirmiri.urban_decor.UrbanDecor;
@@ -656,6 +662,38 @@ public class UDRecipeProvider extends FabricRecipeProvider {
                 .pattern("@@@")
                 .criterion(hasItem(RegisterItems.DARK_PORCELAIN), conditionsFromItem(RegisterItems.DARK_PORCELAIN))
                 .offerTo(exporter, Identifier.of(UrbanDecor.MOD_ID, getRecipeName(RegisterBlocks.DARK_BATHTUB)));
+
+        for (DyeColor colors : DyeColor.values()) {
+            createFromBasePictureFrameRecipe(RegisterBlocks.getDyedPictureFrames(colors.getId()), RegisterBlocks.PICTURE_FRAME, DyeItem.byColor(colors).getColor())
+                    .criterion(hasItem(RegisterBlocks.getDyedPictureFrames(colors.getId())), conditionsFromItem(RegisterBlocks.getDyedPictureFrames(colors.getId())))
+                    .offerTo(exporter, Identifier.of(UrbanDecor.MOD_ID, getRecipeName(RegisterBlocks.getDyedPictureFrames(colors.getId())) + "_from_base"));
+        }
+
+        for (DyeColor colors : DyeColor.values()) {
+            createPictureFrameRecipe(RegisterBlocks.getDyedPictureFrames(colors.getId()), DyeItem.byColor(colors).getColor())
+                    .criterion(hasItem(RegisterBlocks.getDyedPictureFrames(colors.getId())), conditionsFromItem(RegisterBlocks.getDyedPictureFrames(colors.getId())))
+                    .offerTo(exporter, Identifier.of(UrbanDecor.MOD_ID, getRecipeName(RegisterBlocks.getDyedPictureFrames(colors.getId()))));
+        }
+
+        createBasePictureFrameRecipe(RegisterBlocks.PICTURE_FRAME, Items.PAPER)
+                .criterion(hasItem(RegisterBlocks.PICTURE_FRAME), conditionsFromItem(RegisterBlocks.PICTURE_FRAME))
+                .offerTo(exporter, Identifier.of(UrbanDecor.MOD_ID, getRecipeName(RegisterBlocks.PICTURE_FRAME)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, RegisterBlocks.CUPBOARD, 1)
+                .input('#', RegisterItems.PORCELAIN).input('@', Blocks.CHEST)
+                .pattern("###")
+                .pattern("#@#")
+                .pattern("###")
+                .criterion(hasItem(RegisterItems.PORCELAIN), conditionsFromItem(RegisterItems.PORCELAIN))
+                .offerTo(exporter, Identifier.of(UrbanDecor.MOD_ID, getRecipeName(RegisterBlocks.CUPBOARD)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, RegisterBlocks.DARK_CUPBOARD, 1)
+                .input('#', RegisterItems.DARK_PORCELAIN).input('@', Blocks.CHEST)
+                .pattern("###")
+                .pattern("#@#")
+                .pattern("###")
+                .criterion(hasItem(RegisterItems.DARK_PORCELAIN), conditionsFromItem(RegisterItems.DARK_PORCELAIN))
+                .offerTo(exporter, Identifier.of(UrbanDecor.MOD_ID, getRecipeName(RegisterBlocks.DARK_CUPBOARD)));
     }
 //yes this only exists so i can name it four for four wendys meal... there is no need for this recipe builder
     public static ShapedRecipeJsonBuilder createFourForFourWendysMealRecipe(ItemConvertible output, Ingredient input) {
@@ -670,6 +708,27 @@ public class UDRecipeProvider extends FabricRecipeProvider {
                 .input('#', input)
                 .pattern("##")
                 .pattern("##");
+    }
+
+    public static ShapedRecipeJsonBuilder createPictureFrameRecipe(ItemConvertible output, DyeColor color) {
+        return ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, output, 1)
+                .input('#', ItemTags.PLANKS).input('@', DyeItem.byColor(color))
+                .pattern("###")
+                .pattern("#@#")
+                .pattern("###");
+    }
+
+    public static ShapedRecipeJsonBuilder createBasePictureFrameRecipe(ItemConvertible output, Item item) {
+        return ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, output, 1)
+                .input('#', ItemTags.PLANKS).input('@', item)
+                .pattern("###")
+                .pattern("#@#")
+                .pattern("###");
+    }
+
+    public static ShapelessRecipeJsonBuilder createFromBasePictureFrameRecipe(ItemConvertible output, Block picture, DyeColor color) {
+        return ShapelessRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, output, 1)
+                .input(picture).input(DyeItem.byColor(color));
     }
 
     public static ShapedRecipeJsonBuilder createTowelBlockRecipe(ItemConvertible output, Block input) {

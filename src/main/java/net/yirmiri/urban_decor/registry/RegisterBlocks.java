@@ -71,6 +71,8 @@ public class RegisterBlocks {
     public static final Block DARK_DRYER = register("dark_dryer", new DryerBlock(UDProperties.BlockP.DRYER), true);
     public static final Block BATHTUB = register("bathtub", new BathtubBlock(UDProperties.BlockP.BATHTUB), true);
     public static final Block DARK_BATHTUB = register("dark_bathtub", new BathtubBlock(UDProperties.BlockP.BATHTUB), true);
+    public static final Block CUPBOARD = register("cupboard", new CupboardBlock(UDProperties.BlockP.CUPBOARD), true);
+    public static final Block DARK_CUPBOARD = register("dark_cupboard", new CupboardBlock(UDProperties.BlockP.CUPBOARD), true);
 
     //MISC APPLIANCES
     public static final Block TOOLBOX = register("toolbox", new ToolboxBlock(UDProperties.BlockP.TOOLBOX), false);

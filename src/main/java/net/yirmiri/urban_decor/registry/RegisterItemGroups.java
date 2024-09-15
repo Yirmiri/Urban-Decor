@@ -54,14 +54,14 @@ public class RegisterItemGroups {
 
                 entries.add(RegisterItems.TOOLBOX);
 
-                entries.add(RegisterBlocks.SHOWER);
-                entries.add(RegisterBlocks.FAUCET);
-                entries.add(RegisterBlocks.BATHTUB);
-                entries.add(RegisterBlocks.DARK_BATHTUB);
+                entries.add(RegisterBlocks.CUPBOARD);
+                entries.add(RegisterBlocks.DARK_CUPBOARD);
                 entries.add(RegisterBlocks.SINK);
                 entries.add(RegisterBlocks.DARK_SINK);
                 entries.add(RegisterBlocks.TOILET);
                 entries.add(RegisterBlocks.DARK_TOILET);
+                entries.add(RegisterBlocks.BATHTUB);
+                entries.add(RegisterBlocks.DARK_BATHTUB);
                 entries.add(RegisterBlocks.WASHING_MACHINE);
                 entries.add(RegisterBlocks.DARK_WASHING_MACHINE);
                 entries.add(RegisterBlocks.DRYER);
@@ -75,10 +75,12 @@ public class RegisterItemGroups {
                 entries.add(RegisterBlocks.STOVE);
                 entries.add(RegisterBlocks.TOASTER);
                 entries.add(RegisterBlocks.MICROWAVE);
+                entries.add(RegisterBlocks.SHOWER);
+                entries.add(RegisterBlocks.FAUCET);
                 entries.add(RegisterBlocks.TRASH_CAN);
                 entries.add(RegisterBlocks.DESK_FAN);
-                entries.add(RegisterBlocks.TURBINE);
                 entries.add(RegisterBlocks.SATELLITE_DISH);
+                entries.add(RegisterBlocks.TURBINE);
                 entries.add(RegisterBlocks.AIR_CONDITIONER);
                 entries.add(RegisterBlocks.RADIATOR);
 

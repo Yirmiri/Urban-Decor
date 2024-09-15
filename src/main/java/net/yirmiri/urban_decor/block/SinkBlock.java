@@ -58,10 +58,10 @@ public class SinkBlock extends AbstractDecorBlock {
             return SHAPE_FULLSIZE;
         } else {
             return switch (state.get(FACING)) {
-                default -> variant == 1 ? SHAPE_NORTH_BARE : SHAPE_NORTH;
                 case SOUTH -> variant == 1 ? SHAPE_SOUTH_BARE : SHAPE_SOUTH;
                 case WEST -> variant == 1 ? SHAPE_WEST_BARE : SHAPE_WEST;
                 case EAST -> variant == 1 ? SHAPE_EAST_BARE : SHAPE_EAST;
+                default -> variant == 1 ? SHAPE_NORTH_BARE : SHAPE_NORTH;
             };
         }
     }

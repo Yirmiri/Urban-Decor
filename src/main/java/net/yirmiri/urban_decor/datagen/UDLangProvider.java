@@ -82,6 +82,8 @@ public class UDLangProvider extends FabricLanguageProvider {
         builder.add(RegisterBlocks.DARK_BATHTUB, "Dark Bathtub");
         builder.add(RegisterBlocks.RIGID_GLASS, "Rigid Glass");
         builder.add(RegisterBlocks.PICTURE_FRAME, "Picture Frame");
+        builder.add(RegisterBlocks.CUPBOARD, "Cupboard");
+        builder.add(RegisterBlocks.DARK_CUPBOARD, "Dark Cupboard");
 
         //ITEMS
         builder.add(RegisterItems.PORCELAIN, "Porcelain");
@@ -118,7 +120,7 @@ public class UDLangProvider extends FabricLanguageProvider {
         builder.add("toolbox.satellite_dish.variant_false", "Variant: Wall Mounted");
         builder.add("toolbox.shower.variant_true", "Variant: Flat");
         builder.add("toolbox.shower.variant_false", "Variant: Cylindrical");
-        builder.add("toolbox.sink.variant_2", "Variant: Default");
+        builder.add("toolbox.sink.variant_2", "Variant: Slim");
         builder.add("toolbox.sink.variant_0", "Variant: Bare");
         builder.add("toolbox.sink.variant_1", "Variant: Fullsize");
         builder.add("toolbox.toilet.variant_true", "Variant: Tank");
@@ -132,12 +134,26 @@ public class UDLangProvider extends FabricLanguageProvider {
         builder.add("toolbox.microwave.variant_false", "Variant: Wall Mounted");
         builder.add("toolbox.picture_frame.variant_true", "Variant: Grounded");
         builder.add("toolbox.picture_frame.variant_false", "Variant: Wall Mounted");
+        builder.add("toolbox.cupboard.variant_3", "Variant: Fullsize");
+        builder.add("toolbox.cupboard.variant_0", "Variant: Fullsize Topless");
+        builder.add("toolbox.cupboard.variant_1", "Variant: Slim");
+        builder.add("toolbox.cupboard.variant_2", "Variant: Slim Topless");
 
         //DAMAGE
         builder.add("death.attack.urban_decor.toaster", "%1$s likes to play with toasters in the tub");
-        builder.add("death.attack.urban_decor.toaster.player", "%2$s toasted %1$s into a delight");
+        builder.add("death.attack.urban_decor.toaster.player", "%2$s toasted %1$s into a delightful breakfast");
 
         //SUBTITLES
-        builder.add("subtitles.block.fridge.open", "Fridge opens");
+        builder.add("subtitles.block.generic.activate", "Button clicks");
+        builder.add("subtitles.block.appliance.open", "Appliance opens");
+        builder.add("subtitles.block.appliance.close", "Appliance closes");
+        builder.add("subtitles.block.toolbox.use", "Toolbox used");
+        builder.add("subtitles.block.faucet.use", "Faucet turns");
+        builder.add("subtitles.block.toilet.use", "Toilet flushes");
+        builder.add("subtitles.block.fan.loop", "Fan spins");
+        builder.add("subtitles.block.water.loop", "Water pitter patters");
+        builder.add("subtitles.block.microwave.loop", "Microwave hums");
+        builder.add("subtitles.block.microwave.finish", "Microwave beeps");
+        builder.add("subtitles.block.satellite_dish.activate", "Satellite dish sequences");
     }
 }

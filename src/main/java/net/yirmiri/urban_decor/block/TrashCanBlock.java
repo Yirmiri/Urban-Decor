@@ -37,8 +37,8 @@ public class TrashCanBlock extends AbstractDecorBlock {
     public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext ctx) {
         int variant = state.get(VARIANT);
         return switch (state.get(FACING)) {
-            default -> variant == 2 ? SHAPE_THIN_SN : SHAPE;
             case WEST, EAST -> variant == 2 ? SHAPE_THIN_EW : SHAPE;
+            default -> variant == 2 ? SHAPE_THIN_SN : SHAPE;
         };
     }
 
