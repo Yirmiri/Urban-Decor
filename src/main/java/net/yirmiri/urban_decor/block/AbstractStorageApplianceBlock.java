@@ -11,10 +11,11 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
 
-public abstract class AbstractDecorBlockWithEntity extends AbstractDecorBlock implements BlockEntityProvider {
+public abstract class AbstractStorageApplianceBlock extends AbstractDecorBlock implements BlockEntityProvider {
     public static final BooleanProperty OPEN = BooleanProperty.of("open");
+    public static final BooleanProperty TRUE_OPEN = BooleanProperty.of("true_open");
 
-    protected AbstractDecorBlockWithEntity(AbstractBlock.Settings settings) {
+    protected AbstractStorageApplianceBlock(AbstractBlock.Settings settings) {
         super(settings);
     }
 
@@ -39,8 +40,12 @@ public abstract class AbstractDecorBlockWithEntity extends AbstractDecorBlock im
         return expectedType == givenType ? (BlockEntityTicker<A>) ticker : null;
     }
 
+    public static boolean isTrulyOpen(BlockState state) {
+        return state.get(TRUE_OPEN);
+    }
+
     @Override
     protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
-        builder.add(FACING, WATERLOGGED, OPEN);
+        builder.add(FACING, WATERLOGGED, OPEN, TRUE_OPEN);
     }
 }

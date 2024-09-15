@@ -34,16 +34,16 @@ public class BathtubBlock extends AbstractLongBlock {
         BedPart head = BedPart.HEAD;
         if (state.get(PART) == head)
             return switch (state.get(FACING)) {
-                default -> FRONT_NORTH;
                 case SOUTH -> FRONT_SOUTH;
                 case WEST -> FRONT_WEST;
                 case EAST -> FRONT_EAST;
+                default -> FRONT_NORTH;
             };
         else return switch (state.get(FACING)) {
-                default -> BACK_NORTH;
-                case SOUTH -> BACK_SOUTH;
+            case SOUTH -> BACK_SOUTH;
                 case WEST -> BACK_WEST;
                 case EAST -> BACK_EAST;
+            default -> BACK_NORTH;
         };
     }
 

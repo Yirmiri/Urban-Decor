@@ -55,10 +55,10 @@ public class ShowerBlock extends AbstractDecorBlock {
     @Override
     public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext ctx) {
         return switch (state.get(FACING)) {
-            default -> SHAPE_NORTH;
             case SOUTH -> SHAPE_SOUTH;
             case WEST -> SHAPE_WEST;
             case EAST -> SHAPE_EAST;
+            default -> SHAPE_NORTH;
         };
     }
 

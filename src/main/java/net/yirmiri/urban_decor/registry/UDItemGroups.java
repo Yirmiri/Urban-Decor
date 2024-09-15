@@ -54,6 +54,7 @@ public class UDItemGroups {
 
                 entries.add(UDItems.TOOLBOX);
 
+                entries.add(UDBlocks.FILING_CABINET);
                 entries.add(UDBlocks.CUPBOARD);
                 entries.add(UDBlocks.DARK_CUPBOARD);
                 entries.add(UDBlocks.SINK);

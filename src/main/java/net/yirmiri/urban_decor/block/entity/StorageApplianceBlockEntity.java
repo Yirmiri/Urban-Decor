@@ -18,8 +18,7 @@ import net.minecraft.util.collection.DefaultedList;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Vec3i;
 import net.minecraft.world.World;
-import net.yirmiri.urban_decor.block.AbstractDecorBlockWithEntity;
-import net.yirmiri.urban_decor.datagen.UDBlockTagProvider;
+import net.yirmiri.urban_decor.block.AbstractStorageApplianceBlock;
 import net.yirmiri.urban_decor.registry.UDBlockEntities;
 import net.yirmiri.urban_decor.registry.UDSounds;
 
@@ -38,7 +37,11 @@ public class StorageApplianceBlockEntity extends LootableContainerBlockEntity {
 
             protected void onContainerClose(World world, BlockPos pos, BlockState state) {
                 playSound(state, UDSounds.APPLIANCE_OPEN); //todo: close sound
-                setOpen(state, false);
+                if (AbstractStorageApplianceBlock.isTrulyOpen(state)) {
+                    setOpen(state, true);
+                } else if (!AbstractStorageApplianceBlock.isTrulyOpen(state)) {
+                    setOpen(state, false);
+                }
             }
 
             protected void onViewerCountUpdate(World world, BlockPos pos, BlockState state, int oldViewerCount, int newViewerCount) {
@@ -53,6 +56,10 @@ public class StorageApplianceBlockEntity extends LootableContainerBlockEntity {
                 }
             }
         };
+    }
+
+    void setOpen(BlockState state, boolean open) {
+        world.setBlockState(getPos(), state.with(AbstractStorageApplianceBlock.OPEN, open), 3);
     }
 
     protected void writeNbt(NbtCompound nbt) {
@@ -95,7 +102,6 @@ public class StorageApplianceBlockEntity extends LootableContainerBlockEntity {
         if (!removed && !player.isSpectator()) {
             stateManager.openContainer(player, getWorld(), getPos(), getCachedState());
         }
-
     }
 
     public void onClose(PlayerEntity player) {
@@ -111,14 +117,8 @@ public class StorageApplianceBlockEntity extends LootableContainerBlockEntity {
         }
     }
 
-    void setOpen(BlockState state, boolean open) {
-        if (!state.isIn(UDBlockTagProvider.OPENABLE)) {
-            world.setBlockState(getPos(), state.with(AbstractDecorBlockWithEntity.OPEN, open), 3);
-        }
-    }
-
     void playSound(BlockState state, SoundEvent soundEvent) {
-        Vec3i vec3i = (state.get(AbstractDecorBlockWithEntity.FACING)).getVector();
+        Vec3i vec3i = (state.get(AbstractStorageApplianceBlock.FACING)).getVector();
         double d = (double)pos.getX() + 0.5 + (double)vec3i.getX() / 2.0;
         double e = (double)pos.getY() + 0.5 + (double)vec3i.getY() / 2.0;
         double f = (double)pos.getZ() + 0.5 + (double)vec3i.getZ() / 2.0;

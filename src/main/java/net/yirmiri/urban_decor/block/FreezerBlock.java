@@ -16,6 +16,7 @@ import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.state.StateManager;
+import net.minecraft.state.property.BooleanProperty;
 import net.minecraft.state.property.Properties;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
@@ -33,12 +34,14 @@ import net.yirmiri.urban_decor.datagen.UDItemTagProvider;
 import net.yirmiri.urban_decor.util.UDStats;
 import org.jetbrains.annotations.Nullable;
 
-public class FreezerBlock extends AbstractDecorBlockWithEntity {
+public class FreezerBlock extends AbstractStorageApplianceBlock {
+    public static final BooleanProperty TRUE_OPEN = BooleanProperty.of("true_open");
+
     private static final VoxelShape SHAPE = Block.createCuboidShape(1, 0, 1, 15, 16, 15);
 
     public FreezerBlock(Settings settings) {
         super(settings);
-        setDefaultState(getDefaultState().with(Properties.HORIZONTAL_FACING, Direction.NORTH).with(WATERLOGGED, false).with(OPEN, false));
+        setDefaultState(getDefaultState().with(Properties.HORIZONTAL_FACING, Direction.NORTH).with(WATERLOGGED, false).with(OPEN, false).with(TRUE_OPEN, false));
     }
 
     @Override
@@ -61,7 +64,7 @@ public class FreezerBlock extends AbstractDecorBlockWithEntity {
             }
 
             if (player.getMainHandStack().isEmpty() && player.isSneaking()) {
-                world.setBlockState(pos, state.cycle(OPEN));
+                world.setBlockState(pos, state.cycle(OPEN).cycle(TRUE_OPEN));
                 if (state.get(OPEN)) {
                     playSound(world, pos, state, SoundEvents.BLOCK_CHERRY_WOOD_DOOR_CLOSE);
                 } else if (!state.get(OPEN)) {
@@ -74,7 +77,7 @@ public class FreezerBlock extends AbstractDecorBlockWithEntity {
     }
 
     void playSound(World world, BlockPos pos, BlockState state, SoundEvent soundEvent) {
-        Vec3i vec3i = (state.get(AbstractDecorBlockWithEntity.FACING)).getVector();
+        Vec3i vec3i = (state.get(AbstractStorageApplianceBlock.FACING)).getVector();
         double d = (double)pos.getX() + 0.5 + (double)vec3i.getX() / 2.0;
         double e = (double)pos.getY() + 0.5 + (double)vec3i.getY() / 2.0;
         double f = (double)pos.getZ() + 0.5 + (double)vec3i.getZ() / 2.0;
@@ -83,7 +86,7 @@ public class FreezerBlock extends AbstractDecorBlockWithEntity {
 
     @Override
     protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
-        builder.add(FACING, WATERLOGGED, OPEN);
+        builder.add(FACING, WATERLOGGED, OPEN, TRUE_OPEN);
     }
 
     @Nullable

@@ -84,6 +84,7 @@ public class UDLangProvider extends FabricLanguageProvider {
         builder.add(UDBlocks.PICTURE_FRAME, "Picture Frame");
         builder.add(UDBlocks.CUPBOARD, "Cupboard");
         builder.add(UDBlocks.DARK_CUPBOARD, "Dark Cupboard");
+        builder.add(UDBlocks.FILING_CABINET, "Filing Cabinet");
 
         //ITEMS
         builder.add(UDItems.PORCELAIN, "Porcelain");
@@ -118,8 +119,8 @@ public class UDLangProvider extends FabricLanguageProvider {
         builder.add("toolbox.dryer.variant_false", "Variant: Opaque");
         builder.add("toolbox.faucet.variant_true", "Variant: Indoor");
         builder.add("toolbox.faucet.variant_false", "Variant: Outdoor");
-        builder.add("toolbox.fridge.variant_true", "Variant: Default");
-        builder.add("toolbox.fridge.variant_false", "Variant: Flipped");
+        builder.add("toolbox.fridge.variant_true", "Variant: Facing Right");
+        builder.add("toolbox.fridge.variant_false", "Variant: Facing Left");
         builder.add("toolbox.oven.variant_true", "Variant: Transparent");
         builder.add("toolbox.oven.variant_false", "Variant: Opaque");
         builder.add("toolbox.satellite_dish.variant_true", "Variant: Grounded");
@@ -144,6 +145,8 @@ public class UDLangProvider extends FabricLanguageProvider {
         builder.add("toolbox.cupboard.variant_0", "Variant: Fullsize Topless");
         builder.add("toolbox.cupboard.variant_1", "Variant: Slim");
         builder.add("toolbox.cupboard.variant_2", "Variant: Slim Topless");
+        builder.add("toolbox.filing_cabinet.variant_true", "Variant: Fullsize");
+        builder.add("toolbox.filing_cabinet.variant_false", "Variant: Compact");
 
         //DAMAGE
         builder.add("death.attack.urban_decor.toaster", "%1$s likes to play with toasters in the tub");

@@ -36,21 +36,28 @@ import net.yirmiri.urban_decor.util.UDStats;
 import net.yirmiri.urban_decor.util.UDUtils;
 import org.jetbrains.annotations.Nullable;
 
-public class FridgeBlock extends AbstractStorageApplianceBlock {
-    public static final BooleanProperty FLIPPED = BooleanProperty.of("flipped");
+public class FilingCabinetBlock extends AbstractStorageApplianceBlock {
+    public static final BooleanProperty COMPACT = BooleanProperty.of("compact");
     public static final BooleanProperty TRUE_OPEN = BooleanProperty.of("true_open");
 
-    private static final VoxelShape SHAPE = Block.createCuboidShape(1, 0, 1, 15, 16, 15);
+    private static final VoxelShape SHAPE_NORTH = Block.createCuboidShape(0, 0, 1, 16, 16, 16);
+    private static final VoxelShape SHAPE_SOUTH = Block.createCuboidShape(0, 0, 0, 16, 16, 15);
+    private static final VoxelShape SHAPE_EAST = Block.createCuboidShape(0, 0, 0, 15, 16, 16);
+    private static final VoxelShape SHAPE_WEST = Block.createCuboidShape(1, 0, 0, 16, 16, 16);
 
-    public FridgeBlock(Settings settings) {
+    public FilingCabinetBlock(Settings settings) {
         super(settings);
-        setDefaultState(getDefaultState().with(Properties.HORIZONTAL_FACING, Direction.NORTH).with(WATERLOGGED, false).with(TRUE_OPEN, false).with(OPEN, false).with(FLIPPED, false));
+        setDefaultState(getDefaultState().with(Properties.HORIZONTAL_FACING, Direction.NORTH).with(WATERLOGGED, false).with(TRUE_OPEN, false).with(OPEN, false).with(COMPACT, false));
     }
 
     @Override
     public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext ctx) {
-        state.get(FACING);
-        return SHAPE;
+        return switch (state.get(FACING)) {
+            case SOUTH -> SHAPE_SOUTH;
+            case WEST -> SHAPE_WEST;
+            case EAST -> SHAPE_EAST;
+            default -> SHAPE_NORTH;
+        };
     }
 
     @Override
@@ -67,18 +74,18 @@ public class FridgeBlock extends AbstractStorageApplianceBlock {
             }
 
             if (stackHand.isIn(UDItemTagProvider.TOOLBOXES)) {
-                world.setBlockState(pos, state.cycle(FLIPPED));
+                world.setBlockState(pos, state.cycle(COMPACT));
                 UDUtils.toolboxUsed(world, pos);
-                player.sendMessage(Text.translatable("toolbox.fridge.variant_" + state.get(FLIPPED)), true);
+                player.sendMessage(Text.translatable("toolbox.filing_cabinet.variant_" + state.get(COMPACT)), true);
                 return ActionResult.SUCCESS;
             }
 
             if (player.getMainHandStack().isEmpty() && player.isSneaking()) {
                 world.setBlockState(pos, state.cycle(OPEN).cycle(TRUE_OPEN));
                 if (state.get(OPEN)) {
-                    playSound(world, pos, state, SoundEvents.BLOCK_CHERRY_WOOD_DOOR_CLOSE);
+                    playSound(world, pos, state, SoundEvents.BLOCK_IRON_DOOR_CLOSE);
                 } else if (!state.get(OPEN)) {
-                    playSound(world, pos, state, SoundEvents.BLOCK_CHERRY_WOOD_DOOR_OPEN);
+                    playSound(world, pos, state, SoundEvents.BLOCK_IRON_DOOR_OPEN);
                 }
                 return ActionResult.SUCCESS;
             }
@@ -96,7 +103,7 @@ public class FridgeBlock extends AbstractStorageApplianceBlock {
 
     @Override
     protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
-        builder.add(FACING, WATERLOGGED, OPEN, FLIPPED, TRUE_OPEN);
+        builder.add(FACING, WATERLOGGED, OPEN, COMPACT, TRUE_OPEN);
     }
 
     @Nullable

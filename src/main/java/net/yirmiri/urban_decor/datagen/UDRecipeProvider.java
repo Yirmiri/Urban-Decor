@@ -691,6 +691,14 @@ public class UDRecipeProvider extends FabricRecipeProvider {
                 .pattern("###")
                 .criterion(hasItem(UDItems.DARK_PORCELAIN), conditionsFromItem(UDItems.DARK_PORCELAIN))
                 .offerTo(exporter, Identifier.of(UrbanDecor.MOD_ID, getRecipeName(UDBlocks.DARK_CUPBOARD)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, UDBlocks.FILING_CABINET, 1)
+                .input('#', UDItems.STAINLESS_STEEL_INGOT).input('@', Blocks.CHEST)
+                .pattern("###")
+                .pattern("#@#")
+                .pattern("###")
+                .criterion(hasItem(UDItems.STAINLESS_STEEL_INGOT), conditionsFromItem(UDItems.STAINLESS_STEEL_INGOT))
+                .offerTo(exporter, Identifier.of(UrbanDecor.MOD_ID, getRecipeName(UDBlocks.FILING_CABINET)));
     }
 //yes this only exists so i can name it four for four wendys meal... there is no need for this recipe builder
     public static ShapedRecipeJsonBuilder createFourForFourWendysMealRecipe(ItemConvertible output, Ingredient input) {

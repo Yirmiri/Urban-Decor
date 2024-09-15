@@ -15,7 +15,7 @@ public class UDProperties {
         public static final Block.Settings DARK_PORCELAIN = FabricBlockSettings.copyOf(Blocks.STONE).mapColor(MapColor.BLACK).sounds(BlockSoundGroup.CALCITE).requiresTool();
         public static final Block.Settings CHROMITE = FabricBlockSettings.copyOf(Blocks.GRANITE).mapColor(MapColor.TERRACOTTA_CYAN);
         public static final Block.Settings POLISHED_CHROMITE = FabricBlockSettings.copyOf(Blocks.POLISHED_GRANITE).mapColor(MapColor.TERRACOTTA_CYAN);
-        public static final Block.Settings STAINLESS_STEEL = FabricBlockSettings.copyOf(Blocks.IRON_BLOCK);
+        public static final Block.Settings STAINLESS_STEEL = FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).sounds(BlockSoundGroup.COPPER);
         public static final Block.Settings RIGID_GLASS = FabricBlockSettings.copyOf(Blocks.GLASS).hardness(0.8F).resistance(0.8F);
 
         //DECOR
@@ -34,6 +34,7 @@ public class UDProperties {
         public static final Block.Settings BATHTUB = FabricBlockSettings.copyOf(Blocks.STONE).strength(2.0F).mapColor(MapColor.WHITE).sounds(BlockSoundGroup.CALCITE).requiresTool();
         public static final Block.Settings PICTURE_FRAME = FabricBlockSettings.copyOf(Blocks.WHITE_WOOL).strength(0.3F).sounds(BlockSoundGroup.WOOD);
         public static final Block.Settings CUPBOARD = FabricBlockSettings.copyOf(Blocks.STONE).strength(1.0F).mapColor(MapColor.WHITE).sounds(BlockSoundGroup.CALCITE).requiresTool();
+        public static final Block.Settings FILING_CABINET = FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).strength(3.0F).sounds(BlockSoundGroup.COPPER);
 
         //MISC APPLIANCES
         public static final Block.Settings AIR_CONDITIONER = FabricBlockSettings.copyOf(Blocks.STONE).strength(1.0F).mapColor(MapColor.GRAY).sounds(BlockSoundGroup.LANTERN).requiresTool();

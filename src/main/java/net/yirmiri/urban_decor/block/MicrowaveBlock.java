@@ -45,10 +45,10 @@ public class MicrowaveBlock extends AbstractDecorBlock {
     public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext ctx) {
         boolean wall = state.get(WALL);
         return switch (state.get(FACING)) {
-            default -> wall ? SHAPE_NORTH_WALL : SHAPE_NORTH;
             case SOUTH -> wall ? SHAPE_SOUTH_WALL : SHAPE_SOUTH;
             case WEST -> wall ? SHAPE_WEST_WALL : SHAPE_WEST;
             case EAST -> wall ? SHAPE_EAST_WALL : SHAPE_EAST;
+            default -> wall ? SHAPE_NORTH_WALL : SHAPE_NORTH;
         };
     }
 

@@ -27,14 +27,15 @@ public class UrbanDecorClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(UDBlocks.PICTURE_FRAME, RenderLayer.getCutout());
 
         //CUTOUT MIPPED
-        BlockRenderLayerMap.INSTANCE.putBlock(UDBlocks.AIR_CONDITIONER, RenderLayer.getCutoutMipped());
-        BlockRenderLayerMap.INSTANCE.putBlock(UDBlocks.DESK_FAN, RenderLayer.getCutoutMipped());
         BlockRenderLayerMap.INSTANCE.putBlock(UDBlocks.OVEN, RenderLayer.getCutoutMipped());
         BlockRenderLayerMap.INSTANCE.putBlock(UDBlocks.RADIATOR, RenderLayer.getCutoutMipped());
         BlockRenderLayerMap.INSTANCE.putBlock(UDBlocks.DARK_OVEN, RenderLayer.getCutoutMipped());
         BlockRenderLayerMap.INSTANCE.putBlock(UDBlocks.SATELLITE_DISH, RenderLayer.getCutoutMipped());
+        BlockRenderLayerMap.INSTANCE.putBlock(UDBlocks.FILING_CABINET, RenderLayer.getCutoutMipped());
 
         //TRANSLUCENT
+        BlockRenderLayerMap.INSTANCE.putBlock(UDBlocks.AIR_CONDITIONER, RenderLayer.getTranslucent());
+        BlockRenderLayerMap.INSTANCE.putBlock(UDBlocks.DESK_FAN, RenderLayer.getTranslucent());
         BlockRenderLayerMap.INSTANCE.putBlock(UDBlocks.DARK_WASHING_MACHINE, RenderLayer.getTranslucent());
         BlockRenderLayerMap.INSTANCE.putBlock(UDBlocks.DARK_DRYER, RenderLayer.getTranslucent());
         BlockRenderLayerMap.INSTANCE.putBlock(UDBlocks.MICROWAVE, RenderLayer.getTranslucent());

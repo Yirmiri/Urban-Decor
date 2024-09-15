@@ -77,6 +77,7 @@ public class UDLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(UDBlocks.PICTURE_FRAME);
         addDrop(UDBlocks.CUPBOARD);
         addDrop(UDBlocks.DARK_CUPBOARD);
+        addDrop(UDBlocks.FILING_CABINET);
     }
 
     private void addDyedTowelBlockDrops() {

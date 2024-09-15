@@ -15,7 +15,8 @@ public class UDBlockEntities {
 
     public static final BlockEntityType<StorageApplianceBlockEntity> STORAGE_APPLIANCE = Registry.register(Registries.BLOCK_ENTITY_TYPE,
             Identifier.of(UrbanDecor.MOD_ID, "storage_appliance"), FabricBlockEntityTypeBuilder.create(StorageApplianceBlockEntity::new,
-                    UDBlocks.CUPBOARD, UDBlocks.DARK_CUPBOARD, UDBlocks.FRIDGE, UDBlocks.DARK_FRIDGE, UDBlocks.FREEZER, UDBlocks.DARK_FREEZER).build());
+                    UDBlocks.CUPBOARD, UDBlocks.DARK_CUPBOARD, UDBlocks.FRIDGE, UDBlocks.DARK_FRIDGE, UDBlocks.FILING_CABINET, UDBlocks.FREEZER,
+                    UDBlocks.DARK_FREEZER).build());
 
     public static void loadBlockEntities() {
     }

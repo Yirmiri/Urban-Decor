@@ -39,10 +39,10 @@ public class PictureFrameBlock extends AbstractDecorBlock {
     public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext ctx) {
         boolean wall = state.get(WALL);
         return switch (state.get(FACING)) {
-            default -> wall ? SHAPE_NORTH_WALL : SHAPE;
             case SOUTH -> wall ? SHAPE_SOUTH_WALL : SHAPE;
             case WEST -> wall ? SHAPE_WEST_WALL : SHAPE;
             case EAST -> wall ? SHAPE_EAST_WALL : SHAPE;
+            default -> wall ? SHAPE_NORTH_WALL : SHAPE;
         };
     }
 

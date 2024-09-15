@@ -31,7 +31,7 @@ import net.yirmiri.urban_decor.util.UDStats;
 import net.yirmiri.urban_decor.util.UDUtils;
 import org.jetbrains.annotations.Nullable;
 
-public class CupboardBlock extends AbstractDecorBlockWithEntity {
+public class CupboardBlock extends AbstractStorageApplianceBlock {
     public static final IntProperty VARIANT = IntProperty.of("variant", 0, 3);
 
     private static final VoxelShape SHAPE_NORTH = VoxelShapes.combineAndSimplify(Block.createCuboidShape(2, 0, 4, 14, 14, 16), Block.createCuboidShape(0, 14, 2, 16, 16, 16), BooleanBiFunction.OR);
@@ -105,7 +105,7 @@ public class CupboardBlock extends AbstractDecorBlockWithEntity {
 
     @Override
     protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
-        builder.add(FACING, WATERLOGGED, VARIANT, OPEN);
+        builder.add(FACING, WATERLOGGED, VARIANT, OPEN, TRUE_OPEN);
     }
 
     @Nullable
