@@ -9,6 +9,7 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.world.BlockView;
+import net.yirmiri.urban_decor.block.abstracts.AbstractDecorBlock;
 
 public class RadiatorBlock extends AbstractDecorBlock {
     private static final VoxelShape SHAPE_NORTH = Block.createCuboidShape(1, 2, 14, 15, 14, 16);

@@ -1,56 +1,56 @@
 package net.yirmiri.urban_decor.block.entity;
 
 import net.minecraft.block.BlockState;
-import net.minecraft.block.entity.LootableContainerBlockEntity;
+import net.minecraft.block.entity.AbstractFurnaceBlockEntity;
 import net.minecraft.block.entity.ViewerCountManager;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
-import net.minecraft.inventory.Inventories;
 import net.minecraft.inventory.Inventory;
-import net.minecraft.item.ItemStack;
-import net.minecraft.nbt.NbtCompound;
+import net.minecraft.recipe.RecipeType;
+import net.minecraft.screen.FurnaceScreenHandler;
 import net.minecraft.screen.GenericContainerScreenHandler;
 import net.minecraft.screen.ScreenHandler;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.text.Text;
-import net.minecraft.util.collection.DefaultedList;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Vec3i;
 import net.minecraft.world.World;
-import net.yirmiri.urban_decor.block.abstracts.AbstractStorageDecorBlock;
+import net.yirmiri.urban_decor.block.abstracts.AbstractSmokerDecorBlock;
 import net.yirmiri.urban_decor.registry.UDBlockEntities;
 import net.yirmiri.urban_decor.registry.UDSounds;
 
-public class StorageApplianceBlockEntity extends LootableContainerBlockEntity {
-    private DefaultedList<ItemStack> inventory;
+public class SmokerDecorBlockEntity extends AbstractFurnaceBlockEntity {
     private final ViewerCountManager stateManager;
 
-    public StorageApplianceBlockEntity(BlockPos pos, BlockState state) {
-        super(UDBlockEntities.STORAGE_APPLIANCE, pos, state);
-        inventory = DefaultedList.ofSize(27, ItemStack.EMPTY);
+    public SmokerDecorBlockEntity(BlockPos pos, BlockState state) {
+        super(UDBlockEntities.SMOKER_DECOR, pos, state, RecipeType.SMOKING);
         stateManager = new ViewerCountManager() {
+            @Override
             protected void onContainerOpen(World world, BlockPos pos, BlockState state) {
                 playSound(state, UDSounds.APPLIANCE_OPEN);
                 setOpen(state, true);
             }
 
+            @Override
             protected void onContainerClose(World world, BlockPos pos, BlockState state) {
                 playSound(state, UDSounds.APPLIANCE_OPEN); //todo: close sound
-                if (AbstractStorageDecorBlock.isTrulyOpen(state)) {
+                if (AbstractSmokerDecorBlock.isTrulyOpen(state)) {
                     setOpen(state, true);
-                } else if (!AbstractStorageDecorBlock.isTrulyOpen(state)) {
+                } else if (!AbstractSmokerDecorBlock.isTrulyOpen(state)) {
                     setOpen(state, false);
                 }
             }
 
+            @Override
             protected void onViewerCountUpdate(World world, BlockPos pos, BlockState state, int oldViewerCount, int newViewerCount) {
             }
 
+            @Override
             protected boolean isPlayerViewing(PlayerEntity player) {
                 if (player.currentScreenHandler instanceof GenericContainerScreenHandler) {
                     Inventory inventory = ((GenericContainerScreenHandler)player.currentScreenHandler).getInventory();
-                    return inventory == StorageApplianceBlockEntity.this;
+                    return inventory == SmokerDecorBlockEntity.this;
                 } else {
                     return false;
                 }
@@ -58,44 +58,12 @@ public class StorageApplianceBlockEntity extends LootableContainerBlockEntity {
         };
     }
 
-    void setOpen(BlockState state, boolean open) {
-        world.setBlockState(getPos(), state.with(AbstractStorageDecorBlock.OPEN, open), 3);
-    }
-
-    protected void writeNbt(NbtCompound nbt) {
-        super.writeNbt(nbt);
-        if (!serializeLootTable(nbt)) {
-            Inventories.writeNbt(nbt, inventory);
-        }
-
-    }
-
-    public void readNbt(NbtCompound nbt) {
-        super.readNbt(nbt);
-        inventory = DefaultedList.ofSize(size(), ItemStack.EMPTY);
-        if (!deserializeLootTable(nbt)) {
-            Inventories.readNbt(nbt, inventory);
-        }
-    }
-
-    public int size() {
-        return 27;
-    }
-
-    protected DefaultedList<ItemStack> getInvStackList() {
-        return inventory;
-    }
-
-    protected void setInvStackList(DefaultedList<ItemStack> list) {
-        inventory = list;
-    }
-
     protected Text getContainerName() {
-        return Text.translatable("container.urban_decor.generic");
+        return Text.translatable("container.urban_decor.smoker");
     }
 
     protected ScreenHandler createScreenHandler(int syncId, PlayerInventory playerInventory) {
-        return GenericContainerScreenHandler.createGeneric9x3(syncId, playerInventory, this);
+        return new FurnaceScreenHandler(syncId, playerInventory, this, this.propertyDelegate);
     }
 
     public void onOpen(PlayerEntity player) {
@@ -110,14 +78,12 @@ public class StorageApplianceBlockEntity extends LootableContainerBlockEntity {
         }
     }
 
-    public void tick() {
-        if (!removed) {
-            stateManager.updateViewerCount(getWorld(), getPos(), getCachedState());
-        }
+    void setOpen(BlockState state, boolean open) {
+        world.setBlockState(getPos(), state.with(AbstractSmokerDecorBlock.OPEN, open), 3);
     }
 
     void playSound(BlockState state, SoundEvent soundEvent) {
-        Vec3i vec3i = (state.get(AbstractStorageDecorBlock.FACING)).getVector();
+        Vec3i vec3i = (state.get(AbstractSmokerDecorBlock.FACING)).getVector();
         double d = (double)pos.getX() + 0.5 + (double)vec3i.getX() / 2.0;
         double e = (double)pos.getY() + 0.5 + (double)vec3i.getY() / 2.0;
         double f = (double)pos.getZ() + 0.5 + (double)vec3i.getZ() / 2.0;

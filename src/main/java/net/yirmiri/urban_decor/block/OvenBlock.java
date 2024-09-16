@@ -19,10 +19,12 @@ import net.minecraft.util.math.Direction;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
+import net.yirmiri.urban_decor.block.abstracts.AbstractDecorBlock;
+import net.yirmiri.urban_decor.block.abstracts.AbstractSmokerDecorBlock;
 import net.yirmiri.urban_decor.datagen.UDItemTagProvider;
 import net.yirmiri.urban_decor.util.UDUtils;
 
-public class OvenBlock extends AbstractDecorBlock {
+public class OvenBlock extends AbstractSmokerDecorBlock {
     public static final BooleanProperty OPEN = BooleanProperty.of("open");
     public static final BooleanProperty OPAQUE = BooleanProperty.of("opaque");
 
@@ -49,25 +51,30 @@ public class OvenBlock extends AbstractDecorBlock {
     @Override
     public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
         ItemStack stackHand = player.getStackInHand(hand);
-        if (player.getMainHandStack().isEmpty()) {
-            world.setBlockState(pos, state.cycle(OPEN));
+        if (!world.isClient && !player.isSneaking()) {
+            this.openScreen(world, pos, player);
+            return ActionResult.SUCCESS;
+        }
+        if (player.getMainHandStack().isEmpty() && player.isSneaking()) {
+            world.setBlockState(pos, state.cycle(OPEN).cycle(TRUE_OPEN));
             if (state.get(OPEN)) {
                 world.playSound(pos.getX(), pos.getY(), pos.getZ(), SoundEvents.BLOCK_CHERRY_WOOD_DOOR_CLOSE, SoundCategory.BLOCKS, 1.0F, 1.0F, false);
             } else if (!state.get(OPEN)) {
                 world.playSound(pos.getX(), pos.getY(), pos.getZ(), SoundEvents.BLOCK_CHERRY_WOOD_DOOR_OPEN, SoundCategory.BLOCKS, 1.0F, 1.0F, false);
             }
             return ActionResult.SUCCESS;
+
         } else if (stackHand.isIn(UDItemTagProvider.TOOLBOXES)) {
             world.setBlockState(pos, state.cycle(OPAQUE));
             UDUtils.toolboxUsed(world, pos);
             player.sendMessage(Text.translatable("toolbox.oven.variant_" + state.get(OPAQUE)), true);
             return ActionResult.SUCCESS;
         }
-        return ActionResult.PASS;
+        return ActionResult.CONSUME;
     }
 
     @Override
     protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
-        builder.add(FACING, WATERLOGGED, OPEN, OPAQUE);
+        builder.add(FACING, WATERLOGGED, OPEN, OPAQUE, TRUE_OPEN, LIT);
     }
 }

@@ -30,13 +30,14 @@ import net.minecraft.util.math.random.Random;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
+import net.yirmiri.urban_decor.block.abstracts.AbstractStorageDecorBlock;
 import net.yirmiri.urban_decor.block.entity.StorageApplianceBlockEntity;
 import net.yirmiri.urban_decor.datagen.UDItemTagProvider;
 import net.yirmiri.urban_decor.util.UDStats;
 import net.yirmiri.urban_decor.util.UDUtils;
 import org.jetbrains.annotations.Nullable;
 
-public class FilingCabinetBlock extends AbstractStorageApplianceBlock {
+public class FilingCabinetBlock extends AbstractStorageDecorBlock {
     public static final BooleanProperty COMPACT = BooleanProperty.of("compact");
     public static final BooleanProperty TRUE_OPEN = BooleanProperty.of("true_open");
 
@@ -94,7 +95,7 @@ public class FilingCabinetBlock extends AbstractStorageApplianceBlock {
     }
 
     void playSound(World world, BlockPos pos, BlockState state, SoundEvent soundEvent) {
-        Vec3i vec3i = (state.get(AbstractStorageApplianceBlock.FACING)).getVector();
+        Vec3i vec3i = (state.get(AbstractStorageDecorBlock.FACING)).getVector();
         double d = (double)pos.getX() + 0.5 + (double)vec3i.getX() / 2.0;
         double e = (double)pos.getY() + 0.5 + (double)vec3i.getY() / 2.0;
         double f = (double)pos.getZ() + 0.5 + (double)vec3i.getZ() / 2.0;

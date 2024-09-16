@@ -25,13 +25,14 @@ import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.util.shape.VoxelShapes;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
+import net.yirmiri.urban_decor.block.abstracts.AbstractStorageDecorBlock;
 import net.yirmiri.urban_decor.block.entity.StorageApplianceBlockEntity;
 import net.yirmiri.urban_decor.datagen.UDItemTagProvider;
 import net.yirmiri.urban_decor.util.UDStats;
 import net.yirmiri.urban_decor.util.UDUtils;
 import org.jetbrains.annotations.Nullable;
 
-public class CupboardBlock extends AbstractStorageApplianceBlock {
+public class CupboardBlock extends AbstractStorageDecorBlock {
     public static final IntProperty VARIANT = IntProperty.of("variant", 0, 3);
 
     private static final VoxelShape SHAPE_NORTH = VoxelShapes.combineAndSimplify(Block.createCuboidShape(2, 0, 4, 14, 14, 16), Block.createCuboidShape(0, 14, 2, 16, 16, 16), BooleanBiFunction.OR);

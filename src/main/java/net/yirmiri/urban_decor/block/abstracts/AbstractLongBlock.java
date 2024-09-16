@@ -1,4 +1,4 @@
-package net.yirmiri.urban_decor.block;
+package net.yirmiri.urban_decor.block.abstracts;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;

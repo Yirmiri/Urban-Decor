@@ -6,7 +6,7 @@ import net.minecraft.block.Block;
 import net.minecraft.block.enums.BedPart;
 import net.minecraft.loot.LootTable;
 import net.minecraft.util.DyeColor;
-import net.yirmiri.urban_decor.block.AbstractLongBlock;
+import net.yirmiri.urban_decor.block.abstracts.AbstractLongBlock;
 import net.yirmiri.urban_decor.registry.UDBlocks;
 import net.yirmiri.urban_decor.registry.UDItems;
 

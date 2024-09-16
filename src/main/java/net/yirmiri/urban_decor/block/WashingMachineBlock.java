@@ -21,6 +21,7 @@ import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.util.shape.VoxelShapes;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
+import net.yirmiri.urban_decor.block.abstracts.AbstractDecorBlock;
 import net.yirmiri.urban_decor.datagen.UDItemTagProvider;
 import net.yirmiri.urban_decor.util.UDUtils;
 
@@ -55,7 +56,7 @@ public class WashingMachineBlock extends AbstractDecorBlock {
     @Override
     public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
         ItemStack stackHand = player.getStackInHand(hand);
-        if (player.getMainHandStack().isEmpty()) {
+        if (player.getMainHandStack().isEmpty() && player.isSneaking()) {
             world.setBlockState(pos, state.cycle(OPEN));
             if (state.get(OPEN)) {
                 world.playSound(pos.getX(), pos.getY(), pos.getZ(), SoundEvents.BLOCK_CHERRY_WOOD_DOOR_CLOSE, SoundCategory.BLOCKS, 1.0F, 1.0F, false);

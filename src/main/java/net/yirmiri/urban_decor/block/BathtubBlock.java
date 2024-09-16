@@ -10,6 +10,7 @@ import net.minecraft.util.math.Direction;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.util.shape.VoxelShapes;
 import net.minecraft.world.BlockView;
+import net.yirmiri.urban_decor.block.abstracts.AbstractLongBlock;
 
 import java.util.stream.Stream;
 

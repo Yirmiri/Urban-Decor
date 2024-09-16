@@ -19,10 +19,12 @@ import net.minecraft.util.math.Direction;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
+import net.yirmiri.urban_decor.block.abstracts.AbstractDecorBlock;
+import net.yirmiri.urban_decor.block.abstracts.AbstractFurnaceDecorBlock;
 import net.yirmiri.urban_decor.datagen.UDItemTagProvider;
 import net.yirmiri.urban_decor.util.UDUtils;
 
-public class MicrowaveBlock extends AbstractDecorBlock {
+public class MicrowaveBlock extends AbstractFurnaceDecorBlock {
     public static final BooleanProperty OPEN = BooleanProperty.of("open");
     public static final BooleanProperty WALL = BooleanProperty.of("wall");
 
@@ -38,7 +40,7 @@ public class MicrowaveBlock extends AbstractDecorBlock {
 
     public MicrowaveBlock(Settings settings) {
         super(settings);
-        setDefaultState(getDefaultState().with(Properties.HORIZONTAL_FACING, Direction.NORTH).with(WATERLOGGED, false).with(OPEN, false).with(WALL, false));
+        setDefaultState(getDefaultState().with(Properties.HORIZONTAL_FACING, Direction.NORTH).with(WATERLOGGED, false).with(TRUE_OPEN, false).with(OPEN, false).with(WALL, false));
     }
 
     @Override
@@ -55,14 +57,18 @@ public class MicrowaveBlock extends AbstractDecorBlock {
     @Override
     public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
         ItemStack stackHand = player.getStackInHand(hand);
+        if (!world.isClient && !player.isSneaking()) {
+            this.openScreen(world, pos, player);
+            return ActionResult.SUCCESS;
+        }
         if (stackHand.isIn(UDItemTagProvider.TOOLBOXES)) {
             world.setBlockState(pos, state.cycle(WALL));
             UDUtils.toolboxUsed(world, pos);
             player.sendMessage(Text.translatable("toolbox.microwave.variant_" + state.get(WALL)), true);
             return ActionResult.SUCCESS;
 
-        } else if (player.getMainHandStack().isEmpty()) {
-            world.setBlockState(pos, state.cycle(OPEN));
+        } else if (player.getMainHandStack().isEmpty() && player.isSneaking()) {
+            world.setBlockState(pos, state.cycle(OPEN).cycle(TRUE_OPEN));
             if (state.get(OPEN)) {
                 world.playSound(pos.getX(), pos.getY(), pos.getZ(), SoundEvents.BLOCK_CHERRY_WOOD_DOOR_CLOSE, SoundCategory.BLOCKS, 1.0F, 1.0F, false);
             } else if (!state.get(OPEN)) {
@@ -70,11 +76,11 @@ public class MicrowaveBlock extends AbstractDecorBlock {
             }
             return ActionResult.SUCCESS;
         }
-        return ActionResult.PASS;
+        return ActionResult.CONSUME;
     }
 
     @Override
     protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
-        builder.add(FACING, WATERLOGGED, OPEN, WALL);
+        builder.add(FACING, WATERLOGGED, OPEN, WALL, LIT, TRUE_OPEN);
     }
 }

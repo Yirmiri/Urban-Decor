@@ -1,4 +1,4 @@
-package net.yirmiri.urban_decor.block;
+package net.yirmiri.urban_decor.block.abstracts;
 
 import net.minecraft.block.*;
 import net.minecraft.block.entity.BlockEntity;
@@ -11,11 +11,11 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
 
-public abstract class AbstractStorageApplianceBlock extends AbstractDecorBlock implements BlockEntityProvider {
+public abstract class AbstractStorageDecorBlock extends AbstractDecorBlock implements BlockEntityProvider {
     public static final BooleanProperty OPEN = BooleanProperty.of("open");
     public static final BooleanProperty TRUE_OPEN = BooleanProperty.of("true_open");
 
-    protected AbstractStorageApplianceBlock(AbstractBlock.Settings settings) {
+    protected AbstractStorageDecorBlock(AbstractBlock.Settings settings) {
         super(settings);
     }
 
