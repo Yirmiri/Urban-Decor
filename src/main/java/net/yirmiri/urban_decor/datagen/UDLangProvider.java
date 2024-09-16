@@ -150,6 +150,8 @@ public class UDLangProvider extends FabricLanguageProvider {
         builder.add("toolbox.cupboard.variant_2", "Variant: Slim Topless");
         builder.add("toolbox.filing_cabinet.variant_true", "Variant: Fullsize");
         builder.add("toolbox.filing_cabinet.variant_false", "Variant: Compact");
+        builder.add("toolbox.radiator.variant_true", "Variant: Vertical");
+        builder.add("toolbox.radiator.variant_false", "Variant: Horizontal");
 
         //DAMAGE
         builder.add("death.attack.urban_decor.toaster", "%1$s likes to play with toasters in the tub");

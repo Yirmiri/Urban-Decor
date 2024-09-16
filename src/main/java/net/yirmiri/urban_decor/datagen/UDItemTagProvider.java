@@ -88,6 +88,7 @@ public class UDItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(UDBlocks.CUPBOARD.asItem())
                 .add(UDBlocks.DARK_CUPBOARD.asItem())
                 .add(UDBlocks.FILING_CABINET.asItem())
+                .add(UDBlocks.RADIATOR.asItem())
         ;
 
         for (DyeColor colors : DyeColor.values()) {

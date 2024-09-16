@@ -1,21 +1,40 @@
 {
   "variants": {
-    "facing=north": {
+    "facing=north,vertical=false": {
       "model": "urban_decor:block/radiator",
       "uvlock": false
     },
-    "facing=south": {
+    "facing=south,vertical=false": {
       "model": "urban_decor:block/radiator",
       "y": 180,
       "uvlock": false
     },
-    "facing=west": {
+    "facing=west,vertical=false": {
       "model": "urban_decor:block/radiator",
       "y": 270,
       "uvlock": false
     },
-    "facing=east": {
+    "facing=east,vertical=false": {
       "model": "urban_decor:block/radiator",
+      "y": 90,
+      "uvlock": false
+    },
+    "facing=north,vertical=true": {
+      "model": "urban_decor:block/radiator_vertical",
+      "uvlock": false
+    },
+    "facing=south,vertical=true": {
+      "model": "urban_decor:block/radiator_vertical",
+      "y": 180,
+      "uvlock": false
+    },
+    "facing=west,vertical=true": {
+      "model": "urban_decor:block/radiator_vertical",
+      "y": 270,
+      "uvlock": false
+    },
+    "facing=east,vertical=true": {
+      "model": "urban_decor:block/radiator_vertical",
       "y": 90,
       "uvlock": false
     }
