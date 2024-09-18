@@ -1,10 +1,23 @@
 {
 	"credit": "Made with Blockbench by Tellio-Ari",
 	"textures": {
-		"0": "urban_decor:block/radiator",
-		"particle": "urban_decor:block/radiator"
+		"0": "furniture:radiator",
+		"particle": "furniture:radiator"
 	},
 	"elements": [
+		{
+			"from": [13, 2, 14],
+			"to": [15, 14, 16],
+			"rotation": {"angle": 0, "axis": "y", "origin": [13, 2, 14]},
+			"faces": {
+				"north": {"uv": [1, 2, 3, 14], "texture": "#0"},
+				"east": {"uv": [3, 2, 1, 14], "texture": "#0"},
+				"south": {"uv": [13, 2, 15, 14], "texture": "#0"},
+				"west": {"uv": [3, 2, 1, 14], "texture": "#0"},
+				"up": {"uv": [1, 2, 3, 4], "texture": "#0"},
+				"down": {"uv": [1, 12, 3, 14], "texture": "#0"}
+			}
+		},
 		{
 			"from": [1, 2, 14],
 			"to": [3, 14, 16],
@@ -12,7 +25,7 @@
 			"faces": {
 				"north": {"uv": [13, 2, 15, 14], "texture": "#0"},
 				"east": {"uv": [15, 2, 13, 14], "texture": "#0"},
-				"south": {"uv": [13, 2, 15, 14], "texture": "#0"},
+				"south": {"uv": [1, 2, 3, 14], "texture": "#0"},
 				"west": {"uv": [15, 2, 13, 14], "texture": "#0"},
 				"up": {"uv": [13, 2, 15, 4], "texture": "#0"},
 				"down": {"uv": [13, 12, 15, 14], "texture": "#0"}
@@ -25,7 +38,7 @@
 			"faces": {
 				"north": {"uv": [10, 2, 12, 14], "texture": "#0"},
 				"east": {"uv": [12, 2, 10, 14], "texture": "#0"},
-				"south": {"uv": [10, 2, 12, 14], "texture": "#0"},
+				"south": {"uv": [4, 2, 6, 14], "texture": "#0"},
 				"west": {"uv": [12, 2, 10, 14], "texture": "#0"},
 				"up": {"uv": [10, 2, 12, 4], "texture": "#0"},
 				"down": {"uv": [10, 12, 12, 14], "texture": "#0"}
@@ -51,68 +64,32 @@
 			"faces": {
 				"north": {"uv": [4, 2, 6, 14], "texture": "#0"},
 				"east": {"uv": [6, 2, 4, 14], "texture": "#0"},
-				"south": {"uv": [4, 2, 6, 14], "texture": "#0"},
+				"south": {"uv": [10, 2, 12, 14], "texture": "#0"},
 				"west": {"uv": [6, 2, 4, 14], "texture": "#0"},
 				"up": {"uv": [4, 2, 6, 4], "texture": "#0"},
 				"down": {"uv": [4, 12, 6, 14], "texture": "#0"}
 			}
 		},
 		{
-			"from": [13, 2, 14],
-			"to": [15, 14, 16],
-			"rotation": {"angle": 0, "axis": "y", "origin": [13, 2, 14]},
-			"faces": {
-				"north": {"uv": [1, 2, 3, 14], "texture": "#0"},
-				"east": {"uv": [3, 2, 1, 14], "texture": "#0"},
-				"south": {"uv": [1, 2, 3, 14], "texture": "#0"},
-				"west": {"uv": [3, 2, 1, 14], "texture": "#0"},
-				"up": {"uv": [1, 2, 3, 4], "texture": "#0"},
-				"down": {"uv": [1, 12, 3, 14], "texture": "#0"}
-			}
-		},
-		{
-			"from": [0, 0, 16.25],
-			"to": [16, 16, 16.25],
-			"rotation": {"angle": 0, "axis": "y", "origin": [0, 0, 16.25]},
+			"from": [0, 0, 15.97],
+			"to": [16, 16, 15.97],
+			"rotation": {"angle": 0, "axis": "y", "origin": [0, 0, 15.9]},
 			"faces": {
 				"north": {"uv": [0, 0, 16, 16], "texture": "#0"},
-				"east": {"uv": [0, 0, 0, 16], "texture": "#0"},
+				"east": {"uv": [0, 0, 0, 16], "texture": "#missing"},
 				"south": {"uv": [16, 0, 0, 16], "texture": "#0"},
-				"west": {"uv": [0, 0, 0, 16], "texture": "#0"},
-				"up": {"uv": [0, 0, 16, 0], "texture": "#0"},
-				"down": {"uv": [0, 0, 16, 0], "texture": "#0"}
+				"west": {"uv": [0, 0, 0, 16], "texture": "#missing"},
+				"up": {"uv": [0, 0, 16, 0], "texture": "#missing"},
+				"down": {"uv": [0, 0, 16, 0], "texture": "#missing"}
 			}
 		}
 	],
-	"display": {
-		"thirdperson_righthand": {
-			"rotation": [75, 45, 0],
-			"translation": [0, 2.5, 0],
-			"scale": [0.375, 0.375, 0.375]
-		},
-		"thirdperson_lefthand": {
-			"rotation": [75, 45, 0],
-			"translation": [0, 2.5, 0],
-			"scale": [0.375, 0.375, 0.375]
-		},
-		"firstperson_righthand": {
-			"rotation": [0, 45, 0],
-			"scale": [0.4, 0.4, 0.4]
-		},
-		"firstperson_lefthand": {
-			"rotation": [0, 225, 0],
-			"scale": [0.4, 0.4, 0.4]
-		},
-		"ground": {
-			"translation": [0, 3, 0],
-			"scale": [0.25, 0.25, 0.25]
-		},
-		"gui": {
-			"rotation": [30, 225, 0],
-			"scale": [0.625, 0.625, 0.625]
-		},
-		"fixed": {
-			"scale": [0.5, 0.5, 0.5]
+	"groups": [
+		{
+			"name": "VoxelShapes",
+			"origin": [10, 2, 14],
+			"color": 0,
+			"children": [0, 1, 2, 3, 4, 5]
 		}
-	}
+	]
 }
