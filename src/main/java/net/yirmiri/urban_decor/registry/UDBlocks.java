@@ -93,7 +93,10 @@ public class UDBlocks {
     public static final HashMap<DyeColor, Block> DYED_TOWEL_BARS = new HashMap<>();
     public static final HashMap<DyeColor, Block> DYED_TOWEL_BLOCKS = new HashMap<>();
     public static final HashMap<DyeColor, Block> DYED_PICTURE_FRAMES = new HashMap<>();
-    public static final Block PICTURE_FRAME = register("picture_frame", new PictureFrameBlock(UDProperties.BlockP.PICTURE_FRAME), true);
+    public static final HashMap<DyeColor, Block> DYED_WALL_PICTURE_FRAMES = new HashMap<>();
+
+    public static final Block PICTURE_FRAME = register("picture_frame", new PictureFrameBlock(UDProperties.BlockP.PICTURE_FRAME), false);
+    public static final Block WALL_PICTURE_FRAME = register("wall_picture_frame", new PictureFrameWallBlock(UDProperties.BlockP.PICTURE_FRAME), false);
 
     static {
         for (DyeColor colors : DyeColor.values()) {
@@ -107,7 +110,10 @@ public class UDBlocks {
                     FabricBlockSettings.copyOf(Blocks.WHITE_WOOL).mapColor(colors)), true));
 
             DYED_PICTURE_FRAMES.put(colors, register(colors + "_picture_frame", new PictureFrameBlock(
-                    UDProperties.BlockP.PICTURE_FRAME.mapColor(colors)), true));
+                    UDProperties.BlockP.PICTURE_FRAME.mapColor(colors)), false));
+
+            DYED_WALL_PICTURE_FRAMES.put(colors, register(colors + "_wall_picture_frame", new PictureFrameWallBlock(
+                    UDProperties.BlockP.PICTURE_FRAME.mapColor(colors)), false));
         }
     }
 
@@ -123,8 +129,12 @@ public class UDBlocks {
         return DYED_TOWEL_BLOCKS.get(DyeColor.byId(colors));
     }
 
-    public static Block getDyedPictureFrames(int colors){
+    public static Block getDyedPictureBlocks(int colors){
         return DYED_PICTURE_FRAMES.get(DyeColor.byId(colors));
+    }
+
+    public static Block getDyedWallPictureBlocks(int colors){
+        return DYED_WALL_PICTURE_FRAMES.get(DyeColor.byId(colors));
     }
 
     private static Block register(String id, Block block, boolean registerItem) {

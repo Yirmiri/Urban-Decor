@@ -59,7 +59,7 @@ public class UDItemTagProvider extends FabricTagProvider.ItemTagProvider {
         ;
 
         for (DyeColor colors : DyeColor.values()) {
-            getOrCreateTagBuilder(FURNISHINGS).add(UDBlocks.getDyedPictureFrames(colors.getId()).asItem());
+            getOrCreateTagBuilder(FURNISHINGS).add(UDItems.getDyedPictureFrames(colors.getId()).asItem());
         }
 
         getOrCreateTagBuilder(TOOLBOXABLE)
@@ -90,7 +90,7 @@ public class UDItemTagProvider extends FabricTagProvider.ItemTagProvider {
         ;
 
         for (DyeColor colors : DyeColor.values()) {
-            getOrCreateTagBuilder(TOOLBOXABLE).add(UDBlocks.getDyedPictureFrames(colors.getId()).asItem());
+            getOrCreateTagBuilder(TOOLBOXABLE).add(UDItems.getDyedPictureFrames(colors.getId()).asItem());
         }
 
         getOrCreateTagBuilder(WRAPPABLE)

@@ -653,20 +653,20 @@ public class UDRecipeProvider extends FabricRecipeProvider {
                 .offerTo(exporter, Identifier.of(UrbanDecor.MOD_ID, getRecipeName(UDBlocks.DARK_BATHTUB)));
 
         for (DyeColor colors : DyeColor.values()) {
-            createFromBasePictureFrameRecipe(UDBlocks.getDyedPictureFrames(colors.getId()), UDBlocks.PICTURE_FRAME, DyeItem.byColor(colors).getColor())
-                    .criterion(hasItem(UDBlocks.getDyedPictureFrames(colors.getId())), conditionsFromItem(UDBlocks.getDyedPictureFrames(colors.getId())))
-                    .offerTo(exporter, Identifier.of(UrbanDecor.MOD_ID, getRecipeName(UDBlocks.getDyedPictureFrames(colors.getId())) + "_from_base"));
+            createFromBasePictureFrameRecipe(UDItems.getDyedPictureFrames(colors.getId()), UDItems.PICTURE_FRAME, DyeItem.byColor(colors).getColor())
+                    .criterion(hasItem(UDItems.getDyedPictureFrames(colors.getId())), conditionsFromItem(UDItems.getDyedPictureFrames(colors.getId())))
+                    .offerTo(exporter, Identifier.of(UrbanDecor.MOD_ID, getRecipeName(UDItems.getDyedPictureFrames(colors.getId())) + "_from_base"));
         }
 
         for (DyeColor colors : DyeColor.values()) {
-            createPictureFrameRecipe(UDBlocks.getDyedPictureFrames(colors.getId()), DyeItem.byColor(colors).getColor())
-                    .criterion(hasItem(UDBlocks.getDyedPictureFrames(colors.getId())), conditionsFromItem(UDBlocks.getDyedPictureFrames(colors.getId())))
-                    .offerTo(exporter, Identifier.of(UrbanDecor.MOD_ID, getRecipeName(UDBlocks.getDyedPictureFrames(colors.getId()))));
+            createPictureFrameRecipe(UDItems.getDyedPictureFrames(colors.getId()), DyeItem.byColor(colors).getColor())
+                    .criterion(hasItem(UDItems.getDyedPictureFrames(colors.getId())), conditionsFromItem(UDItems.getDyedPictureFrames(colors.getId())))
+                    .offerTo(exporter, Identifier.of(UrbanDecor.MOD_ID, getRecipeName(UDItems.getDyedPictureFrames(colors.getId()))));
         }
 
-        createBasePictureFrameRecipe(UDBlocks.PICTURE_FRAME, Items.PAPER)
-                .criterion(hasItem(UDBlocks.PICTURE_FRAME), conditionsFromItem(UDBlocks.PICTURE_FRAME))
-                .offerTo(exporter, Identifier.of(UrbanDecor.MOD_ID, getRecipeName(UDBlocks.PICTURE_FRAME)));
+        createBasePictureFrameRecipe(UDItems.PICTURE_FRAME, Items.PAPER)
+                .criterion(hasItem(UDItems.PICTURE_FRAME), conditionsFromItem(UDItems.PICTURE_FRAME))
+                .offerTo(exporter, Identifier.of(UrbanDecor.MOD_ID, getRecipeName(UDItems.PICTURE_FRAME)));
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, UDBlocks.CUPBOARD, 1)
                 .input('#', UDItems.PORCELAIN).input('@', Blocks.CHEST)
@@ -739,7 +739,7 @@ public class UDRecipeProvider extends FabricRecipeProvider {
                 .pattern("###");
     }
 
-    public static ShapelessRecipeJsonBuilder createFromBasePictureFrameRecipe(ItemConvertible output, Block picture, DyeColor color) {
+    public static ShapelessRecipeJsonBuilder createFromBasePictureFrameRecipe(ItemConvertible output, Item picture, DyeColor color) {
         return ShapelessRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, output, 1)
                 .input(picture).input(DyeItem.byColor(color));
     }

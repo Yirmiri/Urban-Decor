@@ -69,10 +69,11 @@ public class UDModelProvider extends FabricModelProvider {
         generator.register(UDItems.SATELLITE_DISH.asItem(), Models.GENERATED);
         generator.register(UDBlocks.TOWEL_BAR.asItem(), Models.GENERATED);
         generator.register(UDItems.STAINLESS_STEEL_NUGGET, Models.GENERATED);
+        generator.register(UDItems.PICTURE_FRAME, Models.GENERATED);
 
         for (DyeColor colors : DyeColor.values()) {
             generator.register(UDBlocks.getDyedTowels(colors.getId()).asItem(), Models.GENERATED);
-            generator.register(UDBlocks.getDyedPictureFrames(colors.getId()).asItem(), Models.GENERATED);
+            generator.register(UDItems.getDyedPictureFrames(colors.getId()).asItem(), Models.GENERATED);
         }
     }
 }

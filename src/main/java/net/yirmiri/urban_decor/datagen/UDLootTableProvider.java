@@ -81,6 +81,7 @@ public class UDLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(UDBlocks.TOILET_PAPER);
         addDrop(UDBlocks.SATELLITE_DISH, UDItems.SATELLITE_DISH);
         addDrop(UDBlocks.WALL_SATELLITE_DISH, UDItems.SATELLITE_DISH);
+        addDyedWallPictureFrameDrops();
     }
 
     private void addDyedTowelBlockDrops() {
@@ -97,14 +98,20 @@ public class UDLootTableProvider extends FabricBlockLootTableProvider {
 
     private void addTowelBarTowelDrops() {
         for (DyeColor colors : DyeColor.values()) {
-            addDrop(UDBlocks.getDyedTowels(colors.getId()));
-            addDrop(UDBlocks.TOWEL_BAR);
+            addDrop(UDBlocks.getDyedTowelBarTowels(colors.getId()), UDBlocks.getDyedTowels(colors.getId()));
+            addDrop(UDBlocks.getDyedTowelBarTowels(colors.getId()), UDBlocks.TOWEL_BAR);
         }
     }
 
     private void addDyedPictureFrameDrops() {
         for (DyeColor colors : DyeColor.values()) {
-            addDrop(UDBlocks.getDyedPictureFrames(colors.getId()));
+            addDrop(UDBlocks.getDyedPictureBlocks(colors.getId()), UDItems.getDyedPictureFrames(colors.getId()));
+        }
+    }
+
+    private void addDyedWallPictureFrameDrops() {
+        for (DyeColor colors : DyeColor.values()) {
+            addDrop(UDBlocks.getDyedWallPictureBlocks(colors.getId()), UDItems.getDyedPictureFrames(colors.getId()));
         }
     }
 

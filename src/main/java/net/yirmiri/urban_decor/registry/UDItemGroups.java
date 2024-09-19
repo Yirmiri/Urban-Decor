@@ -120,23 +120,23 @@ public class UDItemGroups {
                 entries.add(UDBlocks.getDyedTowels(DyeColor.MAGENTA.getId()));
                 entries.add(UDBlocks.getDyedTowels(DyeColor.PINK.getId()));
 
-                entries.add(UDBlocks.PICTURE_FRAME);
-                entries.add(UDBlocks.getDyedPictureFrames(DyeColor.WHITE.getId()));
-                entries.add(UDBlocks.getDyedPictureFrames(DyeColor.LIGHT_GRAY.getId()));
-                entries.add(UDBlocks.getDyedPictureFrames(DyeColor.GRAY.getId()));
-                entries.add(UDBlocks.getDyedPictureFrames(DyeColor.BLACK.getId()));
-                entries.add(UDBlocks.getDyedPictureFrames(DyeColor.BROWN.getId()));
-                entries.add(UDBlocks.getDyedPictureFrames(DyeColor.RED.getId()));
-                entries.add(UDBlocks.getDyedPictureFrames(DyeColor.ORANGE.getId()));
-                entries.add(UDBlocks.getDyedPictureFrames(DyeColor.YELLOW.getId()));
-                entries.add(UDBlocks.getDyedPictureFrames(DyeColor.LIME.getId()));
-                entries.add(UDBlocks.getDyedPictureFrames(DyeColor.GREEN.getId()));
-                entries.add(UDBlocks.getDyedPictureFrames(DyeColor.CYAN.getId()));
-                entries.add(UDBlocks.getDyedPictureFrames(DyeColor.LIGHT_BLUE.getId()));
-                entries.add(UDBlocks.getDyedPictureFrames(DyeColor.BLUE.getId()));
-                entries.add(UDBlocks.getDyedPictureFrames(DyeColor.PURPLE.getId()));
-                entries.add(UDBlocks.getDyedPictureFrames(DyeColor.MAGENTA.getId()));
-                entries.add(UDBlocks.getDyedPictureFrames(DyeColor.PINK.getId()));
+                entries.add(UDItems.PICTURE_FRAME);
+                entries.add(UDItems.getDyedPictureFrames(DyeColor.WHITE.getId()));
+                entries.add(UDItems.getDyedPictureFrames(DyeColor.LIGHT_GRAY.getId()));
+                entries.add(UDItems.getDyedPictureFrames(DyeColor.GRAY.getId()));
+                entries.add(UDItems.getDyedPictureFrames(DyeColor.BLACK.getId()));
+                entries.add(UDItems.getDyedPictureFrames(DyeColor.BROWN.getId()));
+                entries.add(UDItems.getDyedPictureFrames(DyeColor.RED.getId()));
+                entries.add(UDItems.getDyedPictureFrames(DyeColor.ORANGE.getId()));
+                entries.add(UDItems.getDyedPictureFrames(DyeColor.YELLOW.getId()));
+                entries.add(UDItems.getDyedPictureFrames(DyeColor.LIME.getId()));
+                entries.add(UDItems.getDyedPictureFrames(DyeColor.GREEN.getId()));
+                entries.add(UDItems.getDyedPictureFrames(DyeColor.CYAN.getId()));
+                entries.add(UDItems.getDyedPictureFrames(DyeColor.LIGHT_BLUE.getId()));
+                entries.add(UDItems.getDyedPictureFrames(DyeColor.BLUE.getId()));
+                entries.add(UDItems.getDyedPictureFrames(DyeColor.PURPLE.getId()));
+                entries.add(UDItems.getDyedPictureFrames(DyeColor.MAGENTA.getId()));
+                entries.add(UDItems.getDyedPictureFrames(DyeColor.PINK.getId()));
 
                 if (UDCompatRegistries.excessive_building) {
                     entries.add(EBRegisterBlocks.PORCELAIN_TILE_VERTICAL_STAIRS);

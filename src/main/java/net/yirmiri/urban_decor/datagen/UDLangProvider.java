@@ -23,7 +23,7 @@ public class UDLangProvider extends FabricLanguageProvider {
             builder.add(UDBlocks.getDyedTowels(colors.getId()), dyeString + " Towel");
             builder.add(UDBlocks.getDyedTowelBarTowels(colors.getId()), dyeString + " Towel Bar");
             builder.add(UDBlocks.getDyedTowelBlocks(colors.getId()), dyeString + " Towel Block");
-            builder.add(UDBlocks.getDyedPictureFrames(colors.getId()), dyeString + " Picture Frame");
+            builder.add(UDItems.getDyedPictureFrames(colors.getId()), dyeString + " Picture Frame");
         }
 
         //BLOCKS

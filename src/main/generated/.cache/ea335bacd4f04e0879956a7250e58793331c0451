@@ -1,4 +1,4 @@
-// 1.20.1	2024-09-19T15:30:55.9490579	Urban Decor/Recipes
+// 1.20.1	2024-09-19T16:37:22.5299025	Urban Decor/Recipes
 9c3957c14ba32e2f3886a7c7aa4c8c8b6e911de4 data\urban_decor\advancements\recipes\decorations\dark_freezer.json
 75f0dcac506d6b2b3c6f9a323842709021e30a0e data\urban_decor\advancements\recipes\decorations\gray_towel.json
 e7ac3fab2669b235d8d2486f5f397241cb26b56a data\urban_decor\advancements\recipes\decorations\cyan_picture_frame.json
@@ -282,8 +282,8 @@ dfbe675cfe922e7f9a4db65cccca79bef3cd4eca data\urban_decor\recipes\pink_towel_blo
 5272e12ecbf9aeb9b699619f6bf82cf78ef4f9d3 data\urban_decor\advancements\recipes\decorations\bathtub.json
 dcf90067ca07719e13c0bb4ceae30de920a99010 data\urban_decor\recipes\orange_towel_block.json
 60c1bc778f6b1927b8cf58f22caf0c52b1ba9263 data\urban_decor\recipes\checkered_porcelain_tile_stairs.json
-cd3c4bd608b7361ab872a305b15755bedee0904e data\urban_decor\advancements\recipes\decorations\trash_can.json
 af693bef998f7f3ef6367e63c569fb4bf158ee05 data\urban_decor\recipes\towel_bar.json
+cd3c4bd608b7361ab872a305b15755bedee0904e data\urban_decor\advancements\recipes\decorations\trash_can.json
 dc7efb6a21eead11e58bebf82063131a40b3e07c data\urban_decor\advancements\recipes\decorations\faucet.json
 df1ec6dac622718e968b9423dc1dc36098e52ee7 data\urban_decor\recipes\yellow_picture_frame_from_base.json
 d16ac3a509823e0622246bd9c085fc0f70dba7f7 data\urban_decor\advancements\recipes\building_blocks\porcelain_tile_stairs.json

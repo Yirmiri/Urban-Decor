@@ -25,6 +25,7 @@ public class UrbanDecorClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(UDBlocks.FAUCET, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(UDBlocks.RIGID_GLASS, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(UDBlocks.PICTURE_FRAME, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(UDBlocks.WALL_PICTURE_FRAME, RenderLayer.getCutout());
 
         //CUTOUT MIPPED
         BlockRenderLayerMap.INSTANCE.putBlock(UDBlocks.OVEN, RenderLayer.getCutoutMipped());
@@ -50,7 +51,8 @@ public class UrbanDecorClient implements ClientModInitializer {
         for (DyeColor colors : DyeColor.values()) {
             BlockRenderLayerMap.INSTANCE.putBlock(UDBlocks.getDyedTowels(colors.getId()), RenderLayer.getCutout());
             BlockRenderLayerMap.INSTANCE.putBlock(UDBlocks.getDyedTowelBarTowels(colors.getId()), RenderLayer.getCutout());
-            BlockRenderLayerMap.INSTANCE.putBlock(UDBlocks.getDyedPictureFrames(colors.getId()), RenderLayer.getCutout());
+            BlockRenderLayerMap.INSTANCE.putBlock(UDBlocks.getDyedPictureBlocks(colors.getId()), RenderLayer.getCutout());
+            BlockRenderLayerMap.INSTANCE.putBlock(UDBlocks.getDyedWallPictureBlocks(colors.getId()), RenderLayer.getCutout());
         }
     }
 }
