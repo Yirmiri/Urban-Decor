@@ -1,10 +1,17 @@
 package net.yirmiri.urban_decor.block;
 
 import net.minecraft.block.Block;
+import net.minecraft.block.BlockRenderType;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.ShapeContext;
+import net.minecraft.block.entity.BlockEntity;
+import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.mob.PiglinBrain;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.inventory.Inventory;
 import net.minecraft.item.ItemStack;
+import net.minecraft.screen.ScreenHandler;
+import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.state.StateManager;
@@ -13,19 +20,24 @@ import net.minecraft.state.property.Properties;
 import net.minecraft.text.Text;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
+import net.minecraft.util.ItemScatterer;
 import net.minecraft.util.function.BooleanBiFunction;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
+import net.minecraft.util.math.random.Random;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.util.shape.VoxelShapes;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
-import net.yirmiri.urban_decor.block.abstracts.AbstractDecorBlock;
+import net.yirmiri.urban_decor.block.abstracts.AbstractStorageDecorBlock;
+import net.yirmiri.urban_decor.block.entity.StorageApplianceBlockEntity;
 import net.yirmiri.urban_decor.datagen.UDItemTagProvider;
+import net.yirmiri.urban_decor.util.UDStats;
 import net.yirmiri.urban_decor.util.UDUtils;
+import org.jetbrains.annotations.Nullable;
 
-public class DryerBlock extends AbstractDecorBlock {
+public class DryerBlock extends AbstractStorageDecorBlock {
     public static final BooleanProperty OPEN = BooleanProperty.of("open");
     public static final BooleanProperty OPAQUE = BooleanProperty.of("opaque");
 
@@ -34,7 +46,7 @@ public class DryerBlock extends AbstractDecorBlock {
 
     public DryerBlock(Settings settings) {
         super(settings);
-        setDefaultState(getDefaultState().with(Properties.HORIZONTAL_FACING, Direction.NORTH).with(WATERLOGGED, false).with(OPEN, false).with(OPAQUE, false));
+        setDefaultState(getDefaultState().with(TRUE_OPEN, false).with(Properties.HORIZONTAL_FACING, Direction.NORTH).with(WATERLOGGED, false).with(OPEN, false).with(OPAQUE, false));
     }
 
     @Override
@@ -46,8 +58,19 @@ public class DryerBlock extends AbstractDecorBlock {
     @Override
     public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
         ItemStack stackHand = player.getStackInHand(hand);
+        BlockEntity blockEntity = world.getBlockEntity(pos);
+        if (world.isClient) {
+            return ActionResult.SUCCESS;
+        } else {
+            if (blockEntity instanceof StorageApplianceBlockEntity && !stackHand.isIn(UDItemTagProvider.TOOLBOXES) && !player.isSneaking()) {
+                player.openHandledScreen((StorageApplianceBlockEntity) blockEntity);
+                player.incrementStat(UDStats.OPEN_APPLIANCES);
+                PiglinBrain.onGuardedBlockInteracted(player, true);
+            }
+        }
+
         if (player.getMainHandStack().isEmpty() && player.isSneaking()) {
-            world.setBlockState(pos, state.cycle(OPEN));
+            world.setBlockState(pos, state.cycle(OPEN).cycle(TRUE_OPEN));
             if (state.get(OPEN)) {
                 world.playSound(pos.getX(), pos.getY(), pos.getZ(), SoundEvents.BLOCK_CHERRY_WOOD_DOOR_CLOSE, SoundCategory.BLOCKS, 1.0F, 1.0F, false);
             } else if (!state.get(OPEN)) {
@@ -65,6 +88,55 @@ public class DryerBlock extends AbstractDecorBlock {
 
     @Override
     protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
-        builder.add(FACING, WATERLOGGED, OPEN, OPAQUE);
+        builder.add(FACING, WATERLOGGED, OPEN, OPAQUE, TRUE_OPEN);
+    }
+
+    @Nullable
+    public BlockEntity createBlockEntity(BlockPos pos, BlockState state) {
+        return new StorageApplianceBlockEntity(pos, state);
+    }
+
+    public BlockRenderType getRenderType(BlockState state) {
+        return BlockRenderType.MODEL;
+    }
+
+    public void onPlaced(World world, BlockPos pos, BlockState state, @Nullable LivingEntity placer, ItemStack itemStack) {
+        if (itemStack.hasCustomName()) {
+            BlockEntity blockEntity = world.getBlockEntity(pos);
+            if (blockEntity instanceof StorageApplianceBlockEntity) {
+                ((StorageApplianceBlockEntity)blockEntity).setCustomName(itemStack.getName());
+            }
+        }
+    }
+
+    @Override
+    public boolean hasComparatorOutput(BlockState state) {
+        return true;
+    }
+
+    @Override
+    public int getComparatorOutput(BlockState state, World world, BlockPos pos) {
+        return ScreenHandler.calculateComparatorOutput(world.getBlockEntity(pos));
+    }
+
+    @Override
+    public void onStateReplaced(BlockState state, World world, BlockPos pos, BlockState newState, boolean moved) {
+        if (!state.isOf(newState.getBlock())) {
+            BlockEntity blockEntity = world.getBlockEntity(pos);
+            if (blockEntity instanceof Inventory) {
+                ItemScatterer.spawn(world, pos, (Inventory)blockEntity);
+                world.updateComparators(pos, this);
+            }
+
+            super.onStateReplaced(state, world, pos, newState, moved);
+        }
+    }
+
+    @Override
+    public void scheduledTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
+        BlockEntity blockEntity = world.getBlockEntity(pos);
+        if (blockEntity instanceof StorageApplianceBlockEntity) {
+            ((StorageApplianceBlockEntity)blockEntity).tick();
+        }
     }
 }

@@ -110,6 +110,7 @@ public class UDLangProvider extends FabricLanguageProvider {
         builder.add("container.urban_decor.furnace", "Smelting Appliance");
         builder.add("container.urban_decor.smoker", "Cooking Appliance");
         builder.add("container.urban_decor.blast_furnace", "Blasting Appliance");
+        builder.add("container.urban_decor.trash", "§4Destroy Items");
 
         //STATS
         builder.add(UDStats.TIMES_SAT, "Times Sat Down");

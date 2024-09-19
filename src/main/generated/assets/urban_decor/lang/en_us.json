@@ -136,6 +136,7 @@
   "container.urban_decor.furnace": "Smelting Appliance",
   "container.urban_decor.generic": "Storage Appliance",
   "container.urban_decor.smoker": "Cooking Appliance",
+  "container.urban_decor.trash": "§4Destroy Items",
   "death.attack.urban_decor.toaster": "%1$s likes to play with toasters in the tub",
   "death.attack.urban_decor.toaster.player": "%2$s toasted %1$s into a delightful breakfast",
   "entity.urban_decor.toilet": "Toilet",

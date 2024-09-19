@@ -57,7 +57,7 @@ public class CupboardBlock extends AbstractStorageDecorBlock {
 
     public CupboardBlock(AbstractBlock.Settings settings) {
         super(settings);
-        setDefaultState(getDefaultState().with(Properties.HORIZONTAL_FACING, Direction.NORTH).with(WATERLOGGED, false).with(VARIANT, 2).with(OPEN, false));
+        setDefaultState(getDefaultState().with(TRUE_OPEN, false).with(Properties.HORIZONTAL_FACING, Direction.NORTH).with(WATERLOGGED, false).with(VARIANT, 2).with(OPEN, false));
     }
 
     @Override
