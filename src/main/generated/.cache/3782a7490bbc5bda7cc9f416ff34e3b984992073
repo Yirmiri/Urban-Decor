@@ -1,4 +1,4 @@
-// 1.20.1	2024-09-19T00:30:48.9156472	Urban Decor/Model Definitions
+// 1.20.1	2024-09-19T15:30:55.9231282	Urban Decor/Model Definitions
 b00910c505ac410a8c177f6f544bf64bad758864 assets\urban_decor\models\item\desk_fan.json
 f93035260d8680d1bd96281d7ee8a34e3dcf89ea assets\urban_decor\models\item\yellow_picture_frame.json
 03e42f9fca785fb5226e5f08ea88e97aa62dce1b assets\urban_decor\models\item\checkered_porcelain_tiles.json
@@ -116,8 +116,8 @@ a9c9dd8d63d9ad060ee0d191f2cccea0a1a87037 assets\urban_decor\models\item\red_towe
 63183e0436ce1772d9cc220cf7ad05e949bf81ea assets\urban_decor\blockstates\checkered_porcelain_tile_stairs.json
 b42c71e417acd8ac6cceb52edfb11a5e2601c680 assets\urban_decor\models\block\stainless_steel_block.json
 fdbeda5fc14bed31cde4d2647b4005ff4d5d7f6c assets\urban_decor\models\item\microwave.json
-ac0d8d549f00ebbeadfcc94d73882424c9935d72 assets\urban_decor\models\item\pink_towel_block.json
 a8e2b99bd1f8615b4981010aaf205ecabd48cafe assets\urban_decor\models\item\blue_towel.json
+ac0d8d549f00ebbeadfcc94d73882424c9935d72 assets\urban_decor\models\item\pink_towel_block.json
 237373ad9aef44cab5ff105e748024c7958645da assets\urban_decor\models\item\chromite_slab.json
 b73315cbf579920629e0e8cb4ebf941ba1f32034 assets\urban_decor\models\block\lime_towel_block.json
 1b95185e557d3c2dc0c09f367bcbbe038771bbf3 assets\urban_decor\blockstates\red_towel_block.json

@@ -51,7 +51,6 @@ public class UDBlocks {
 
     //DECOR
     public static final Block TRASH_CAN = register("trash_can", new TrashCanBlock(UDProperties.BlockP.TRASH_CAN), true);
-    public static final Block MICROWAVE = register("microwave", new MicrowaveBlock(UDProperties.BlockP.MICROWAVE), true);
     public static final Block SINK = register("sink", new SinkBlock(UDProperties.BlockP.SINK), true);
     public static final Block TOILET = register("toilet", new ToiletBlock(UDProperties.BlockP.TOILET), true);
     public static final Block WASHING_MACHINE = register("washing_machine", new WashingMachineBlock(UDProperties.BlockP.WASHING_MACHINE), true);
@@ -74,6 +73,9 @@ public class UDBlocks {
     public static final Block CUPBOARD = register("cupboard", new CupboardBlock(UDProperties.BlockP.CUPBOARD), true);
     public static final Block DARK_CUPBOARD = register("dark_cupboard", new CupboardBlock(UDProperties.BlockP.CUPBOARD), true);
     public static final Block FILING_CABINET = register("filing_cabinet", new FilingCabinetBlock(UDProperties.BlockP.FILING_CABINET), true);
+    public static final Block TOILET_PAPER = register("toilet_paper", new ToiletPaperBlock(UDProperties.BlockP.TOILET_PAPER), true);
+    public static final Block MICROWAVE = register("microwave", new MicrowaveBlock(UDProperties.BlockP.MICROWAVE), false);
+    public static final Block WALL_MICROWAVE = register("wall_microwave", new MicrowaveWallBlock(UDProperties.BlockP.MICROWAVE), false);
 
     //MISC APPLIANCES
     public static final Block TOOLBOX = register("toolbox", new ToolboxBlock(UDProperties.BlockP.TOOLBOX), false);
@@ -82,8 +84,9 @@ public class UDBlocks {
     public static final Block RADIATOR = register("radiator", new RadiatorBlock(UDProperties.BlockP.RADIATOR), true);
     public static final Block TURBINE = register("turbine", new TurbineBlock(UDProperties.BlockP.TURBINE), true);
     public static final Block TOWEL_BAR = register("towel_bar", new TowelBarBlock(UDProperties.BlockP.TOWEL_BAR), true);
-    public static final Block SATELLITE_DISH = register("satellite_dish", new SatelliteDishBlock(UDProperties.BlockP.SATELLITE_DISH), true);
     public static final Block SHOWER = register("shower", new ShowerBlock(UDProperties.BlockP.SHOWER), true);
+    public static final Block SATELLITE_DISH = register("satellite_dish", new SatelliteDishBlock(UDProperties.BlockP.SATELLITE_DISH), false);
+    public static final Block WALL_SATELLITE_DISH = register("wall_satellite_dish", new SatelliteDishBlock(UDProperties.BlockP.SATELLITE_DISH), false);
 
     //DYED BLOCKS
     public static final HashMap<DyeColor, Block> DYED_TOWELS = new HashMap<>();

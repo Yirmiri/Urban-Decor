@@ -32,7 +32,7 @@ public class UDItemTagProvider extends FabricTagProvider.ItemTagProvider {
     protected void configure(RegistryWrapper.WrapperLookup arg) {
         getOrCreateTagBuilder(FURNISHINGS)
                 .add(UDBlocks.TRASH_CAN.asItem())
-                .add(UDBlocks.MICROWAVE.asItem())
+                .add(UDItems.MICROWAVE)
                 .add(UDBlocks.SINK.asItem())
                 .add(UDBlocks.TOILET.asItem())
                 .add(UDBlocks.WASHING_MACHINE.asItem())
@@ -64,7 +64,6 @@ public class UDItemTagProvider extends FabricTagProvider.ItemTagProvider {
 
         getOrCreateTagBuilder(TOOLBOXABLE)
                 .add(UDBlocks.TRASH_CAN.asItem())
-                .add(UDBlocks.MICROWAVE.asItem())
                 .add(UDBlocks.SINK.asItem())
                 .add(UDBlocks.TOILET.asItem())
                 .add(UDBlocks.WASHING_MACHINE.asItem())
@@ -81,14 +80,13 @@ public class UDItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(UDBlocks.DARK_FREEZER.asItem())
                 .add(UDBlocks.DARK_TOILET.asItem())
                 .add(UDBlocks.DARK_WASHING_MACHINE.asItem())
-                .add(UDBlocks.SATELLITE_DISH.asItem())
                 .add(UDBlocks.SHOWER.asItem())
                 .add(UDBlocks.FAUCET.asItem())
-                .add(UDBlocks.PICTURE_FRAME.asItem())
                 .add(UDBlocks.CUPBOARD.asItem())
                 .add(UDBlocks.DARK_CUPBOARD.asItem())
                 .add(UDBlocks.FILING_CABINET.asItem())
                 .add(UDBlocks.RADIATOR.asItem())
+                .add(UDBlocks.TOILET_PAPER.asItem())
         ;
 
         for (DyeColor colors : DyeColor.values()) {

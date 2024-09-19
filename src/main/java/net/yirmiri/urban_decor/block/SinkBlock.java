@@ -96,16 +96,15 @@ public class SinkBlock extends AbstractDecorBlock {
         int variant = state.get(VARIANT);
         boolean large = variant == 3;
         boolean fullsize = variant == 2;
-        if (large) {
-            return SHAPE_LARGE;
-        } else if (fullsize) {
-            return SHAPE_FULLSIZE;
+        boolean bare = variant == 1;
+        if (large || fullsize) {
+            return fullsize ? SHAPE_FULLSIZE : SHAPE_LARGE;
         } else {
             return switch (state.get(FACING)) {
-                case SOUTH -> variant == 1 ? SHAPE_SOUTH_BARE : SHAPE_SOUTH;
-                case WEST -> variant == 1 ? SHAPE_WEST_BARE : SHAPE_WEST;
-                case EAST -> variant == 1 ? SHAPE_EAST_BARE : SHAPE_EAST;
-                default -> variant == 1 ? SHAPE_NORTH_BARE : SHAPE_NORTH;
+                case SOUTH -> bare ? SHAPE_SOUTH_BARE : SHAPE_SOUTH;
+                case WEST -> bare ? SHAPE_WEST_BARE : SHAPE_WEST;
+                case EAST -> bare ? SHAPE_EAST_BARE : SHAPE_EAST;
+                default -> bare ? SHAPE_NORTH_BARE : SHAPE_NORTH;
             };
         }
     }

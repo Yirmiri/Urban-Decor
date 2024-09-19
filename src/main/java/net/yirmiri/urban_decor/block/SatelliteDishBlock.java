@@ -24,14 +24,12 @@ import net.yirmiri.urban_decor.datagen.UDItemTagProvider;
 import net.yirmiri.urban_decor.util.UDUtils;
 
 public class SatelliteDishBlock extends AbstractDecorBlock {
-    public static final BooleanProperty WALL = BooleanProperty.of("wall");
-
     private static final VoxelShape SHAPE = VoxelShapes.combineAndSimplify(Block.createCuboidShape(1, 0, 1, 15, 13, 15),
             Block.createCuboidShape(1, 13, 1, 15, 16, 15), BooleanBiFunction.OR);
 
     public SatelliteDishBlock(Settings settings) {
         super(settings);
-        setDefaultState(getDefaultState().with(Properties.HORIZONTAL_FACING, Direction.NORTH).with(WATERLOGGED, false).with(WALL, false));
+        setDefaultState(getDefaultState().with(Properties.HORIZONTAL_FACING, Direction.NORTH).with(WATERLOGGED, false));
     }
 
     @Override
@@ -41,19 +39,7 @@ public class SatelliteDishBlock extends AbstractDecorBlock {
     }
 
     @Override
-    public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
-        ItemStack stackHand = player.getStackInHand(hand);
-        if (stackHand.isIn(UDItemTagProvider.TOOLBOXES)) {
-            world.setBlockState(pos, state.cycle(WALL));
-            UDUtils.toolboxUsed(world, pos);
-            player.sendMessage(Text.translatable("toolbox.satellite_dish.variant_" + state.get(WALL)), true);
-            return ActionResult.SUCCESS;
-        }
-        return ActionResult.PASS;
-    }
-
-    @Override
     protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
-        builder.add(FACING, WATERLOGGED, WALL);
+        builder.add(FACING, WATERLOGGED);
     }
 }

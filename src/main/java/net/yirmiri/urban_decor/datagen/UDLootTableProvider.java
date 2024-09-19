@@ -21,7 +21,8 @@ public class UDLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(UDBlocks.PORCELAIN_TILE_STAIRS);
         addDrop(UDBlocks.PORCELAIN_TILE_SLAB, slabDrops(UDBlocks.PORCELAIN_TILE_SLAB));
         addDrop(UDBlocks.TRASH_CAN);
-        addDrop(UDBlocks.MICROWAVE);
+        addDrop(UDBlocks.MICROWAVE, UDItems.MICROWAVE);
+        addDrop(UDBlocks.WALL_MICROWAVE, UDItems.MICROWAVE);
         addDrop(UDBlocks.SINK);
         addDrop(UDBlocks.CHROMITE);
         addDrop(UDBlocks.CHROMITE_STAIRS);
@@ -61,7 +62,6 @@ public class UDLootTableProvider extends FabricBlockLootTableProvider {
         addDyedTowelsDrops();
         addDrop(UDBlocks.TOWEL_BAR);
         addTowelBarTowelDrops();
-        addDrop(UDBlocks.SATELLITE_DISH);
         addDrop(UDBlocks.SHOWER);
         addDrop(UDBlocks.BATHTUB, longBlockDrops(UDBlocks.BATHTUB));
         addDrop(UDBlocks.DARK_BATHTUB, longBlockDrops(UDBlocks.DARK_BATHTUB));
@@ -78,6 +78,9 @@ public class UDLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(UDBlocks.CUPBOARD);
         addDrop(UDBlocks.DARK_CUPBOARD);
         addDrop(UDBlocks.FILING_CABINET);
+        addDrop(UDBlocks.TOILET_PAPER);
+        addDrop(UDBlocks.SATELLITE_DISH, UDItems.SATELLITE_DISH);
+        addDrop(UDBlocks.WALL_SATELLITE_DISH, UDItems.SATELLITE_DISH);
     }
 
     private void addDyedTowelBlockDrops() {

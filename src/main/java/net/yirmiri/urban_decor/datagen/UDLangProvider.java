@@ -53,7 +53,6 @@ public class UDLangProvider extends FabricLanguageProvider {
 
         //APPLIANCES
         builder.add(UDBlocks.TRASH_CAN, "Trash Can");
-        builder.add(UDBlocks.MICROWAVE, "Microwave");
         builder.add(UDBlocks.SINK, "Sink");
         builder.add(UDBlocks.TOILET, "Toilet");
         builder.add(UDBlocks.WASHING_MACHINE, "Washing Machine");
@@ -76,7 +75,6 @@ public class UDLangProvider extends FabricLanguageProvider {
         builder.add(UDBlocks.DARK_FREEZER, "Dark Freezer");
         builder.add(UDBlocks.DARK_OVEN, "Dark Oven");
         builder.add(UDBlocks.TOWEL_BAR, "Towel Bar");
-        builder.add(UDBlocks.SATELLITE_DISH, "Satellite Dish");
         builder.add(UDBlocks.SHOWER, "Shower");
         builder.add(UDBlocks.BATHTUB, "Bathtub");
         builder.add(UDBlocks.DARK_BATHTUB, "Dark Bathtub");
@@ -93,6 +91,8 @@ public class UDLangProvider extends FabricLanguageProvider {
         builder.add(UDItems.TOOLBOX, "Toolbox");
         builder.add(UDItems.STEEL_PIPE, "Steel Pipe");
         builder.add(UDItems.STAINLESS_STEEL_NUGGET, "Stainless Steel Nugget");
+        builder.add(UDItems.MICROWAVE, "Microwave");
+        builder.add(UDItems.SATELLITE_DISH, "Satellite Dish");
 
         //CONTAINERS
         builder.add("container.urban_decor.generic", "Storage Appliance");
@@ -147,12 +147,8 @@ public class UDLangProvider extends FabricLanguageProvider {
         builder.add("toolbox.filing_cabinet.variant_false", "Variant: Compact");
         builder.add("toolbox.radiator.variant_true", "Variant: Vertical");
         builder.add("toolbox.radiator.variant_false", "Variant: Horizontal");
-        builder.add("toolbox.satellite_dish.variant_true", "Variant: Grounded");
-        builder.add("toolbox.satellite_dish.variant_false", "Variant: Wall Mounted");
-        builder.add("toolbox.microwave.variant_true", "Variant: Grounded");
-        builder.add("toolbox.microwave.variant_false", "Variant: Wall Mounted");
-        builder.add("toolbox.picture_frame.variant_true", "Variant: Grounded");
-        builder.add("toolbox.picture_frame.variant_false", "Variant: Wall Mounted");
+        builder.add("toolbox.toilet_paper.variant_0", "Variant: Commercial");
+        builder.add("toolbox.toilet_paper.variant_1", "Variant: Urban");
 
         //DAMAGE
         builder.add("death.attack.urban_decor.toaster", "%1$s likes to play with toasters in the tub");

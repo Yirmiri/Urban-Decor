@@ -66,7 +66,7 @@ public class UDModelProvider extends FabricModelProvider {
         generator.register(UDBlocks.FAUCET.asItem(), Models.GENERATED);
         generator.register(UDBlocks.SHOWER.asItem(), Models.GENERATED);
         generator.register(UDBlocks.DESK_FAN.asItem(), Models.GENERATED);
-        generator.register(UDBlocks.SATELLITE_DISH.asItem(), Models.GENERATED);
+        generator.register(UDItems.SATELLITE_DISH.asItem(), Models.GENERATED);
         generator.register(UDBlocks.TOWEL_BAR.asItem(), Models.GENERATED);
         generator.register(UDItems.STAINLESS_STEEL_NUGGET, Models.GENERATED);
 

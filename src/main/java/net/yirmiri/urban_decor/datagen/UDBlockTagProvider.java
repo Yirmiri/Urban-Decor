@@ -84,6 +84,8 @@ public class UDBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(UDBlocks.CUPBOARD)
                 .add(UDBlocks.DARK_CUPBOARD)
                 .add(UDBlocks.FILING_CABINET)
+                .add(UDBlocks.WALL_MICROWAVE)
+                .add(UDBlocks.WALL_SATELLITE_DISH)
         ;
 
         for (DyeColor colors : DyeColor.values()) {
