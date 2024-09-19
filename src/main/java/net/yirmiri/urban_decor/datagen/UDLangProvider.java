@@ -126,13 +126,12 @@ public class UDLangProvider extends FabricLanguageProvider {
         builder.add("toolbox.fridge.variant_false", "Variant: Facing Left");
         builder.add("toolbox.oven.variant_true", "Variant: Transparent");
         builder.add("toolbox.oven.variant_false", "Variant: Opaque");
-        builder.add("toolbox.satellite_dish.variant_true", "Variant: Grounded");
-        builder.add("toolbox.satellite_dish.variant_false", "Variant: Wall Mounted");
         builder.add("toolbox.shower.variant_true", "Variant: Flat");
         builder.add("toolbox.shower.variant_false", "Variant: Cylindrical");
         builder.add("toolbox.sink.variant_2", "Variant: Slim");
         builder.add("toolbox.sink.variant_0", "Variant: Bare");
-        builder.add("toolbox.sink.variant_1", "Variant: Fullsize");
+        builder.add("toolbox.sink.variant_1", "Variant: Large");
+        builder.add("toolbox.sink.variant_3", "Variant: Fullsize");
         builder.add("toolbox.toilet.variant_true", "Variant: Tank");
         builder.add("toolbox.toilet.variant_false", "Variant: Commercial");
         builder.add("toolbox.trash_can.variant_2", "Variant: Mesh");
@@ -140,10 +139,6 @@ public class UDLangProvider extends FabricLanguageProvider {
         builder.add("toolbox.trash_can.variant_1", "Variant: Rectangular");
         builder.add("toolbox.washing_machine.variant_true", "Variant: Transparent");
         builder.add("toolbox.washing_machine.variant_false", "Variant: Opaque");
-        builder.add("toolbox.microwave.variant_true", "Variant: Grounded");
-        builder.add("toolbox.microwave.variant_false", "Variant: Wall Mounted");
-        builder.add("toolbox.picture_frame.variant_true", "Variant: Grounded");
-        builder.add("toolbox.picture_frame.variant_false", "Variant: Wall Mounted");
         builder.add("toolbox.cupboard.variant_3", "Variant: Fullsize");
         builder.add("toolbox.cupboard.variant_0", "Variant: Fullsize Topless");
         builder.add("toolbox.cupboard.variant_1", "Variant: Slim");
@@ -152,6 +147,12 @@ public class UDLangProvider extends FabricLanguageProvider {
         builder.add("toolbox.filing_cabinet.variant_false", "Variant: Compact");
         builder.add("toolbox.radiator.variant_true", "Variant: Vertical");
         builder.add("toolbox.radiator.variant_false", "Variant: Horizontal");
+        builder.add("toolbox.satellite_dish.variant_true", "Variant: Grounded");
+        builder.add("toolbox.satellite_dish.variant_false", "Variant: Wall Mounted");
+        builder.add("toolbox.microwave.variant_true", "Variant: Grounded");
+        builder.add("toolbox.microwave.variant_false", "Variant: Wall Mounted");
+        builder.add("toolbox.picture_frame.variant_true", "Variant: Grounded");
+        builder.add("toolbox.picture_frame.variant_false", "Variant: Wall Mounted");
 
         //DAMAGE
         builder.add("death.attack.urban_decor.toaster", "%1$s likes to play with toasters in the tub");

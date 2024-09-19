@@ -72,6 +72,7 @@ public class UDModelProvider extends FabricModelProvider {
 
         for (DyeColor colors : DyeColor.values()) {
             generator.register(UDBlocks.getDyedTowels(colors.getId()).asItem(), Models.GENERATED);
+            generator.register(UDBlocks.getDyedPictureFrames(colors.getId()).asItem(), Models.GENERATED);
         }
     }
 }

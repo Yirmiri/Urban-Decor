@@ -39,20 +39,39 @@
       "uvlock": false
     },
     "facing=north,variant=2": {
-      "model": "urban_decor:block/sink_fullsize",
+      "model": "urban_decor:block/sink_large",
       "uvlock": false
     },
     "facing=south,variant=2": {
-      "model": "urban_decor:block/sink_fullsize",
+      "model": "urban_decor:block/sink_large",
       "y": 180,
       "uvlock": false
     },
     "facing=west,variant=2": {
-      "model": "urban_decor:block/sink_fullsize",
+      "model": "urban_decor:block/sink_large",
       "y": 270,
       "uvlock": false
     },
     "facing=east,variant=2": {
+      "model": "urban_decor:block/sink_large",
+      "y": 90,
+      "uvlock": false
+    },
+    "facing=north,variant=3": {
+      "model": "urban_decor:block/sink_fullsize",
+      "uvlock": false
+    },
+    "facing=south,variant=3": {
+      "model": "urban_decor:block/sink_fullsize",
+      "y": 180,
+      "uvlock": false
+    },
+    "facing=west,variant=3": {
+      "model": "urban_decor:block/sink_fullsize",
+      "y": 270,
+      "uvlock": false
+    },
+    "facing=east,variant=3": {
       "model": "urban_decor:block/sink_fullsize",
       "y": 90,
       "uvlock": false
