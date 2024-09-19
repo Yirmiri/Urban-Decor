@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "urban_decor:block/steel_pipe",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "urban_decor:block/steel_pipe"
+    },
+    "axis=z": {
+      "model": "urban_decor:block/steel_pipe",
+      "x": 90
+    }
+  }
+}

@@ -87,6 +87,8 @@ public class UDItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(UDBlocks.FILING_CABINET.asItem())
                 .add(UDBlocks.RADIATOR.asItem())
                 .add(UDBlocks.TOILET_PAPER.asItem())
+                .add(UDBlocks.STAINLESS_STEEL_DOOR.asItem())
+                .add(UDBlocks.STAINLESS_STEEL_TRAPDOOR.asItem())
         ;
 
         for (DyeColor colors : DyeColor.values()) {

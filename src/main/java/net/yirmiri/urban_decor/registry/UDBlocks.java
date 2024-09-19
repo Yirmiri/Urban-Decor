@@ -54,8 +54,15 @@ public class UDBlocks {
     public static final Block POLISHED_CHROMITE_STAIRS = register("polished_chromite_stairs", new StairsBlock(POLISHED_CHROMITE.getDefaultState(), UDProperties.BlockP.PORCELAIN), true);
     public static final Block POLISHED_CHROMITE_SLAB = register("polished_chromite_slab", new SlabBlock(UDProperties.BlockP.POLISHED_CHROMITE), true);
 
-    public static final Block STAINLESS_STEEL_BLOCK = register("stainless_steel_block", new Block(UDProperties.BlockP.STAINLESS_STEEL), true);
     public static final Block RIGID_GLASS = register("rigid_glass", new RigidGlassBlock(UDProperties.BlockP.RIGID_GLASS), true);
+    public static final Block STEEL_PIPE = register("steel_pipe", new ChainBlock(UDProperties.BlockP.STEEL_PIPE), false);
+
+    public static final Block STAINLESS_STEEL_BLOCK = register("stainless_steel_block", new Block(UDProperties.BlockP.STAINLESS_STEEL), true);
+    public static final Block STAINLESS_STEEL_BARS = register("stainless_steel_bars", new PaneBlock(UDProperties.BlockP.STEEL_BARS), true);
+    public static final Block STAINLESS_STEEL_LANTERN = register("stainless_steel_lantern", new LanternBlock(UDProperties.BlockP.STEEL_LANTERN), true);
+    public static final Block STAINLESS_STEEL_SOUL_LANTERN = register("stainless_steel_soul_lantern", new LanternBlock(UDProperties.BlockP.STEEL_SOUL_LANTERN), true);
+    public static final Block STAINLESS_STEEL_DOOR = register("stainless_steel_door", new StainlessSteelDoorBlock(UDProperties.BlockP.STEEL_DOOR, BlockSetType.STONE), true);
+    public static final Block STAINLESS_STEEL_TRAPDOOR = register("stainless_steel_trapdoor", new StainlessSteelTrapdoorBlock(UDProperties.BlockP.STEEL_TRAPDOOR, BlockSetType.STONE), true);
 
     //DECOR
     public static final Block TRASH_CAN = register("trash_can", new TrashCanBlock(UDProperties.BlockP.TRASH_CAN), true);

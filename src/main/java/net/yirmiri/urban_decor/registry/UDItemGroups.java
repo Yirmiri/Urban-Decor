@@ -19,6 +19,7 @@ public class UDItemGroups {
                 entries.add(UDItems.DARK_PORCELAIN);
                 entries.add(UDItems.STAINLESS_STEEL_INGOT);
                 entries.add(UDItems.STAINLESS_STEEL_NUGGET);
+                entries.add(UDItems.STEEL_PIPE);
 
                 entries.add(UDBlocks.PORCELAIN_BLOCK);
                 entries.add(UDBlocks.PORCELAIN_STAIRS);
@@ -58,6 +59,12 @@ public class UDItemGroups {
                 entries.add(UDBlocks.POLISHED_CHROMITE_SLAB);
 
                 entries.add(UDBlocks.STAINLESS_STEEL_BLOCK);
+                entries.add(UDBlocks.STAINLESS_STEEL_DOOR);
+                entries.add(UDBlocks.STAINLESS_STEEL_TRAPDOOR);
+                entries.add(UDBlocks.STAINLESS_STEEL_LANTERN);
+                entries.add(UDBlocks.STAINLESS_STEEL_SOUL_LANTERN);
+                //entries.add(UDBlocks.STAINLESS_STEEL_BARS);
+
                 entries.add(UDBlocks.RIGID_GLASS);
 
                 entries.add(UDItems.TOOLBOX);

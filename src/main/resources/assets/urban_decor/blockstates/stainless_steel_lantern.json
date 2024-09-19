@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "hanging=false": {
+      "model": "urban_decor:block/stainless_steel_lantern"
+    },
+    "hanging=true": {
+      "model": "urban_decor:block/stainless_steel_lantern_hanging"
+    }
+  }
+}

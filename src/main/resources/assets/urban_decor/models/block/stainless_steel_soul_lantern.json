@@ -1,8 +1,8 @@
 {
 	"credit": "Made with Blockbench by Tellio-Ari",
 	"textures": {
-		"0": "urban_decor:block/stainless_steel_lantern",
-		"particle": "urban_decor:block/stainless_steel_lantern"
+		"0": "urban_decor:block/stainless_steel_soul_lantern",
+		"particle": "urban_decor:block/stainless_steel_soul_lantern"
 	},
 	"elements": [
 		{

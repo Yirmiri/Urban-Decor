@@ -88,6 +88,12 @@ public class UDLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(UDBlocks.DARK_PORCELAIN_BRICKS);
         addDrop(UDBlocks.DARK_PORCELAIN_BRICK_STAIRS);
         addDrop(UDBlocks.DARK_PORCELAIN_BRICK_SLAB, slabDrops(UDBlocks.PORCELAIN_BRICK_SLAB));
+        addDrop(UDBlocks.STEEL_PIPE, UDItems.STEEL_PIPE);
+        addDrop(UDBlocks.STAINLESS_STEEL_DOOR, doorDrops(UDBlocks.STAINLESS_STEEL_DOOR));
+        addDrop(UDBlocks.STAINLESS_STEEL_TRAPDOOR);
+        addDrop(UDBlocks.STAINLESS_STEEL_LANTERN);
+        addDrop(UDBlocks.STAINLESS_STEEL_SOUL_LANTERN);
+        addDrop(UDBlocks.STAINLESS_STEEL_BARS);
     }
 
     private void addDyedTowelBlockDrops() {

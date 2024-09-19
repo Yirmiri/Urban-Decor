@@ -1,5 +1,6 @@
 package net.yirmiri.urban_decor.registry;
 
+import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.VerticallyAttachableBlockItem;
 import net.minecraft.registry.Registries;
@@ -19,7 +20,7 @@ public class UDItems {
     public static final Item DARK_PORCELAIN = register("dark_porcelain", new Item(UDProperties.ItemP.GENERIC_ITEM));
     public static final Item STAINLESS_STEEL_INGOT = register("stainless_steel_ingot", new Item(UDProperties.ItemP.GENERIC_ITEM));
     public static final Item STAINLESS_STEEL_NUGGET = register("stainless_steel_nugget", new Item(UDProperties.ItemP.GENERIC_ITEM));
-    public static final Item STEEL_PIPE = register("steel_pipe", new Item(UDProperties.ItemP.GENERIC_ITEM));
+    public static final Item STEEL_PIPE = register("steel_pipe", new BlockItem(UDBlocks.STEEL_PIPE, UDProperties.ItemP.GENERIC_ITEM));
 
     //BLOCK ITEMS
     public static final Item TOOLBOX = register("toolbox", new ToolboxBlockItem(UDBlocks.TOOLBOX, UDProperties.ItemP.TOOLBOX));

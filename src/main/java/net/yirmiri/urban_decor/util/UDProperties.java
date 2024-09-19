@@ -15,8 +15,14 @@ public class UDProperties {
         public static final Block.Settings DARK_PORCELAIN = FabricBlockSettings.copyOf(Blocks.STONE).mapColor(MapColor.BLACK).sounds(BlockSoundGroup.CALCITE).requiresTool();
         public static final Block.Settings CHROMITE = FabricBlockSettings.copyOf(Blocks.GRANITE).mapColor(MapColor.TERRACOTTA_CYAN);
         public static final Block.Settings POLISHED_CHROMITE = FabricBlockSettings.copyOf(Blocks.POLISHED_GRANITE).mapColor(MapColor.TERRACOTTA_CYAN);
-        public static final Block.Settings STAINLESS_STEEL = FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).sounds(BlockSoundGroup.COPPER);
         public static final Block.Settings RIGID_GLASS = FabricBlockSettings.copyOf(Blocks.GLASS).hardness(0.8F).resistance(0.8F);
+        public static final Block.Settings STAINLESS_STEEL = FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).sounds(BlockSoundGroup.COPPER);
+        public static final Block.Settings STEEL_LANTERN = FabricBlockSettings.copyOf(Blocks.LANTERN).sounds(BlockSoundGroup.COPPER);
+        public static final Block.Settings STEEL_SOUL_LANTERN = FabricBlockSettings.copyOf(Blocks.SOUL_LANTERN).sounds(BlockSoundGroup.COPPER);
+        public static final Block.Settings STEEL_PIPE = FabricBlockSettings.copyOf(Blocks.CHAIN).sounds(BlockSoundGroup.COPPER);
+        public static final Block.Settings STEEL_BARS = FabricBlockSettings.copyOf(Blocks.IRON_BARS).sounds(BlockSoundGroup.COPPER);
+        public static final Block.Settings STEEL_DOOR = FabricBlockSettings.copyOf(Blocks.IRON_DOOR).sounds(BlockSoundGroup.COPPER);
+        public static final Block.Settings STEEL_TRAPDOOR = FabricBlockSettings.copyOf(Blocks.IRON_TRAPDOOR).sounds(BlockSoundGroup.COPPER);
 
         //DECOR
         public static final Block.Settings TRASH_CAN = FabricBlockSettings.copyOf(Blocks.WHITE_WOOL).strength(0.3F).mapColor(MapColor.GRAY).sounds(BlockSoundGroup.LANTERN);

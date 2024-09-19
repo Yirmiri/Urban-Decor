@@ -745,6 +745,26 @@ public class UDRecipeProvider extends FabricRecipeProvider {
         offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, UDBlocks.DARK_PORCELAIN_BRICKS, UDBlocks.DARK_PORCELAIN_BLOCK, 1);
         offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, UDBlocks.DARK_PORCELAIN_BRICK_STAIRS, UDBlocks.DARK_PORCELAIN_BRICKS, 1);
         offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, UDBlocks.DARK_PORCELAIN_BRICK_SLAB, UDBlocks.DARK_PORCELAIN_BRICKS, 2);
+
+        createDoorRecipe(UDBlocks.STAINLESS_STEEL_DOOR, Ingredient.ofItems(UDItems.STAINLESS_STEEL_INGOT));
+        createTrapdoorRecipe(UDBlocks.STAINLESS_STEEL_DOOR, Ingredient.ofItems(UDItems.STAINLESS_STEEL_INGOT));
+        offerStainedGlassPaneRecipe(exporter, UDBlocks.STAINLESS_STEEL_BARS, UDItems.STAINLESS_STEEL_INGOT);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, UDBlocks.STAINLESS_STEEL_LANTERN, 1)
+                .input('#', UDItems.STAINLESS_STEEL_NUGGET).input('@', Items.TORCH)
+                .pattern("###")
+                .pattern("#@#")
+                .pattern("###")
+                .criterion(hasItem(UDItems.STAINLESS_STEEL_NUGGET), conditionsFromItem(UDItems.STAINLESS_STEEL_NUGGET))
+                .offerTo(exporter, Identifier.of(UrbanDecor.MOD_ID, getRecipeName(UDBlocks.STAINLESS_STEEL_LANTERN)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, UDBlocks.STAINLESS_STEEL_SOUL_LANTERN, 1)
+                .input('#', UDItems.STAINLESS_STEEL_NUGGET).input('@', Items.SOUL_TORCH)
+                .pattern("###")
+                .pattern("#@#")
+                .pattern("###")
+                .criterion(hasItem(UDItems.STAINLESS_STEEL_NUGGET), conditionsFromItem(UDItems.STAINLESS_STEEL_NUGGET))
+                .offerTo(exporter, Identifier.of(UrbanDecor.MOD_ID, getRecipeName(UDBlocks.STAINLESS_STEEL_SOUL_LANTERN)));
     }
 //yes this only exists so i can name it four for four wendys meal... there is no need for this recipe builder
     public static ShapedRecipeJsonBuilder createFourForFourWendysMealRecipe(ItemConvertible output, Ingredient input) {

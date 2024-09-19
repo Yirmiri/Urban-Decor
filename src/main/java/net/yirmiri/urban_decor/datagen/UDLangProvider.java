@@ -56,6 +56,11 @@ public class UDLangProvider extends FabricLanguageProvider {
         builder.add(UDBlocks.DARK_PORCELAIN_BRICKS, "Dark Porcelain Bricks");
         builder.add(UDBlocks.DARK_PORCELAIN_BRICK_STAIRS, "Dark Porcelain Brick Stairs");
         builder.add(UDBlocks.DARK_PORCELAIN_BRICK_SLAB, "Dark Porcelain Brick Slab");
+        builder.add(UDBlocks.STAINLESS_STEEL_DOOR, "Stainless Steel Door");
+        builder.add(UDBlocks.STAINLESS_STEEL_TRAPDOOR, "Stainless Steel Trapdoor");
+        builder.add(UDBlocks.STAINLESS_STEEL_LANTERN, "Stainless Steel Lantern");
+        builder.add(UDBlocks.STAINLESS_STEEL_SOUL_LANTERN, "Stainless Steel Soul Lantern");
+        builder.add(UDBlocks.STAINLESS_STEEL_BARS, "Stainless Steel Bars");
 
         //APPLIANCES
         builder.add(UDBlocks.TRASH_CAN, "Trash Can");
@@ -155,6 +160,8 @@ public class UDLangProvider extends FabricLanguageProvider {
         builder.add("toolbox.radiator.variant_false", "Variant: Horizontal");
         builder.add("toolbox.toilet_paper.variant_0", "Variant: Commercial");
         builder.add("toolbox.toilet_paper.variant_1", "Variant: Urban");
+        builder.add("toolbox.steel_door.variant_true", "Variant: Unlocked");
+        builder.add("toolbox.steel_door.variant_false", "Variant: Locked");
 
         //DAMAGE
         builder.add("death.attack.urban_decor.toaster", "%1$s likes to play with toasters in the tub");

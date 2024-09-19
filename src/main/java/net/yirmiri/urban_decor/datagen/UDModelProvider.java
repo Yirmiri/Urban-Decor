@@ -2,8 +2,11 @@ package net.yirmiri.urban_decor.datagen;
 
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
+import net.minecraft.block.Blocks;
 import net.minecraft.data.client.*;
+import net.minecraft.state.property.Properties;
 import net.minecraft.util.DyeColor;
+import net.minecraft.util.Identifier;
 import net.yirmiri.urban_decor.registry.UDBlocks;
 import net.yirmiri.urban_decor.registry.UDItems;
 
@@ -56,6 +59,10 @@ public class UDModelProvider extends FabricModelProvider {
         BlockStateModelGenerator.BlockTexturePool darkPorcelainBricks = generator.registerCubeAllModelTexturePool(UDBlocks.DARK_PORCELAIN_BRICKS);
         darkPorcelainBricks.stairs(UDBlocks.DARK_PORCELAIN_BRICK_STAIRS);
         darkPorcelainBricks.slab(UDBlocks.DARK_PORCELAIN_BRICK_SLAB);
+
+        generator.registerDoor(UDBlocks.STAINLESS_STEEL_DOOR);
+        generator.registerOrientableTrapdoor(UDBlocks.STAINLESS_STEEL_TRAPDOOR);
+        registerSteelBars(generator);
     }
 
     @Override
@@ -78,10 +85,23 @@ public class UDModelProvider extends FabricModelProvider {
         generator.register(UDBlocks.TOWEL_BAR.asItem(), Models.GENERATED);
         generator.register(UDItems.STAINLESS_STEEL_NUGGET, Models.GENERATED);
         generator.register(UDItems.PICTURE_FRAME, Models.GENERATED);
+        generator.register(UDBlocks.STAINLESS_STEEL_LANTERN.asItem(), Models.GENERATED);
+        generator.register(UDBlocks.STAINLESS_STEEL_SOUL_LANTERN.asItem(), Models.GENERATED);
 
         for (DyeColor colors : DyeColor.values()) {
             generator.register(UDBlocks.getDyedTowels(colors.getId()).asItem(), Models.GENERATED);
             generator.register(UDItems.getDyedPictureFrames(colors.getId()).asItem(), Models.GENERATED);
         }
+    }
+
+    private void registerSteelBars(BlockStateModelGenerator generator) {
+        Identifier identifier = ModelIds.getBlockSubModelId(UDBlocks.STAINLESS_STEEL_BARS, "_post_ends");
+        Identifier identifier2 = ModelIds.getBlockSubModelId(UDBlocks.STAINLESS_STEEL_BARS, "_post");
+        Identifier identifier3 = ModelIds.getBlockSubModelId(UDBlocks.STAINLESS_STEEL_BARS, "_cap");
+        Identifier identifier4 = ModelIds.getBlockSubModelId(UDBlocks.STAINLESS_STEEL_BARS, "_cap_alt");
+        Identifier identifier5 = ModelIds.getBlockSubModelId(UDBlocks.STAINLESS_STEEL_BARS, "_side");
+        Identifier identifier6 = ModelIds.getBlockSubModelId(UDBlocks.STAINLESS_STEEL_BARS, "_side_alt");
+        generator.blockStateCollector.accept(MultipartBlockStateSupplier.create(UDBlocks.STAINLESS_STEEL_BARS).with(BlockStateVariant.create().put(VariantSettings.MODEL, identifier)).with(When.create().set(Properties.NORTH, false).set(Properties.EAST, false).set(Properties.SOUTH, false).set(Properties.WEST, false), BlockStateVariant.create().put(VariantSettings.MODEL, identifier2)).with(When.create().set(Properties.NORTH, true).set(Properties.EAST, false).set(Properties.SOUTH, false).set(Properties.WEST, false), BlockStateVariant.create().put(VariantSettings.MODEL, identifier3)).with(When.create().set(Properties.NORTH, false).set(Properties.EAST, true).set(Properties.SOUTH, false).set(Properties.WEST, false), BlockStateVariant.create().put(VariantSettings.MODEL, identifier3).put(VariantSettings.Y, VariantSettings.Rotation.R90)).with(When.create().set(Properties.NORTH, false).set(Properties.EAST, false).set(Properties.SOUTH, true).set(Properties.WEST, false), BlockStateVariant.create().put(VariantSettings.MODEL, identifier4)).with(When.create().set(Properties.NORTH, false).set(Properties.EAST, false).set(Properties.SOUTH, false).set(Properties.WEST, true), BlockStateVariant.create().put(VariantSettings.MODEL, identifier4).put(VariantSettings.Y, VariantSettings.Rotation.R90)).with(When.create().set(Properties.NORTH, true), BlockStateVariant.create().put(VariantSettings.MODEL, identifier5)).with(When.create().set(Properties.EAST, true), BlockStateVariant.create().put(VariantSettings.MODEL, identifier5).put(VariantSettings.Y, VariantSettings.Rotation.R90)).with(When.create().set(Properties.SOUTH, true), BlockStateVariant.create().put(VariantSettings.MODEL, identifier6)).with(When.create().set(Properties.WEST, true), BlockStateVariant.create().put(VariantSettings.MODEL, identifier6).put(VariantSettings.Y, VariantSettings.Rotation.R90)));
+        generator.registerItemModel(UDBlocks.STAINLESS_STEEL_BARS);
     }
 }
