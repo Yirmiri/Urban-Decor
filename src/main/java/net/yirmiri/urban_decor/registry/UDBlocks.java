@@ -25,6 +25,14 @@ public class UDBlocks {
     public static final Block DARK_PORCELAIN_STAIRS = register("dark_porcelain_stairs", new StairsBlock(DARK_PORCELAIN_BLOCK.getDefaultState(), UDProperties.BlockP.DARK_PORCELAIN), true);
     public static final Block DARK_PORCELAIN_SLAB = register("dark_porcelain_slab", new SlabBlock(UDProperties.BlockP.DARK_PORCELAIN), true);
 
+    public static final Block PORCELAIN_BRICKS = register("porcelain_bricks", new Block(UDProperties.BlockP.PORCELAIN), true);
+    public static final Block PORCELAIN_BRICK_STAIRS = register("porcelain_brick_stairs", new StairsBlock(PORCELAIN_BRICKS.getDefaultState(), UDProperties.BlockP.PORCELAIN), true);
+    public static final Block PORCELAIN_BRICK_SLAB = register("porcelain_brick_slab", new SlabBlock(UDProperties.BlockP.PORCELAIN), true);
+
+    public static final Block DARK_PORCELAIN_BRICKS = register("dark_porcelain_bricks", new Block(UDProperties.BlockP.DARK_PORCELAIN), true);
+    public static final Block DARK_PORCELAIN_BRICK_STAIRS = register("dark_porcelain_brick_stairs", new StairsBlock(DARK_PORCELAIN_BRICKS.getDefaultState(), UDProperties.BlockP.DARK_PORCELAIN), true);
+    public static final Block DARK_PORCELAIN_BRICK_SLAB = register("dark_porcelain_brick_slab", new SlabBlock(UDProperties.BlockP.DARK_PORCELAIN), true);
+
     public static final Block PORCELAIN_TILES = register("porcelain_tiles", new Block(UDProperties.BlockP.PORCELAIN), true);
     public static final Block PORCELAIN_TILE_STAIRS = register("porcelain_tile_stairs", new StairsBlock(PORCELAIN_TILES.getDefaultState(), UDProperties.BlockP.PORCELAIN), true);
     public static final Block PORCELAIN_TILE_SLAB = register("porcelain_tile_slab", new SlabBlock(UDProperties.BlockP.PORCELAIN), true);

@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_porcelain_block": {
+    "has_porcelain_bricks": {
       "conditions": {
         "items": [
           {
             "items": [
-              "urban_decor:porcelain_block"
+              "urban_decor:porcelain_bricks"
             ]
           }
         ]
@@ -15,20 +15,20 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:porcelain_tiles_from_porcelain_block_stonecutting"
+        "recipe": "urban_decor:porcelain_brick_stairs"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_porcelain_block",
+      "has_porcelain_bricks",
       "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "minecraft:porcelain_tiles_from_porcelain_block_stonecutting"
+      "urban_decor:porcelain_brick_stairs"
     ]
   },
   "sends_telemetry_event": false

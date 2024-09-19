@@ -25,7 +25,7 @@ import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
 import net.yirmiri.urban_decor.block.entity.ToasterBlockEntity;
 import net.yirmiri.urban_decor.registry.UDBlockEntities;
-import net.yirmiri.urban_decor.registry.RegisterDamageTypes;
+import net.yirmiri.urban_decor.registry.UDDamageTypes;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.Optional;
@@ -41,7 +41,7 @@ public class ToasterBlock extends CampfireBlock implements Waterloggable {
     public ToasterBlock(boolean emitsParticles, int fireDamage, Settings settings) {
         super(emitsParticles, fireDamage, settings);
         this.fireDamage = fireDamage;
-        setDefaultState(getDefaultState().with(LIT, false).with(Properties.HORIZONTAL_FACING, Direction.NORTH).with(WATERLOGGED, false));
+        this.setDefaultState(getDefaultState().with(LIT, false).with(SIGNAL_FIRE, false).with(Properties.HORIZONTAL_FACING, Direction.NORTH).with(WATERLOGGED, false));
     }
 
     @Override
@@ -57,10 +57,10 @@ public class ToasterBlock extends CampfireBlock implements Waterloggable {
     @Override
     public void onSteppedOn(World world, BlockPos pos, BlockState state, Entity entity) {
         if (state.get(WATERLOGGED) && state.get(LIT)) {
-            entity.damage(RegisterDamageTypes.of(entity.getWorld(), RegisterDamageTypes.TOASTER), 10);
+            entity.damage(UDDamageTypes.of(entity.getWorld(), UDDamageTypes.TOASTER), 10);
         }
         if (!entity.bypassesSteppingEffects() && entity instanceof LivingEntity && !EnchantmentHelper.hasFrostWalker((LivingEntity)entity) && state.get(LIT)) {
-            entity.damage(RegisterDamageTypes.of(entity.getWorld(), RegisterDamageTypes.TOASTER), 2);
+            entity.damage(UDDamageTypes.of(entity.getWorld(), UDDamageTypes.TOASTER), 2);
         }
 
         super.onSteppedOn(world, pos, state, entity);

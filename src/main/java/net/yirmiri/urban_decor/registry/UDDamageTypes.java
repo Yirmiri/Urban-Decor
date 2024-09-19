@@ -8,7 +8,7 @@ import net.minecraft.util.Identifier;
 import net.minecraft.world.World;
 import net.yirmiri.urban_decor.UrbanDecor;
 
-public class RegisterDamageTypes {
+public class UDDamageTypes {
     public static final RegistryKey<DamageType> TOASTER = RegistryKey.of(RegistryKeys.DAMAGE_TYPE, Identifier.of(UrbanDecor.MOD_ID, "toaster"));
 
     public static DamageSource of(World world, RegistryKey<DamageType> key) {

@@ -24,6 +24,10 @@ public class UDItemGroups {
                 entries.add(UDBlocks.PORCELAIN_STAIRS);
                 entries.add(UDBlocks.PORCELAIN_SLAB);
 
+                entries.add(UDBlocks.PORCELAIN_BRICKS);
+                entries.add(UDBlocks.PORCELAIN_BRICK_STAIRS);
+                entries.add(UDBlocks.PORCELAIN_BRICK_SLAB);
+
                 entries.add(UDBlocks.PORCELAIN_TILES);
                 entries.add(UDBlocks.PORCELAIN_TILE_STAIRS);
                 entries.add(UDBlocks.PORCELAIN_TILE_SLAB);
@@ -31,6 +35,10 @@ public class UDItemGroups {
                 entries.add(UDBlocks.DARK_PORCELAIN_BLOCK);
                 entries.add(UDBlocks.DARK_PORCELAIN_STAIRS);
                 entries.add(UDBlocks.DARK_PORCELAIN_SLAB);
+
+                entries.add(UDBlocks.DARK_PORCELAIN_BRICKS);
+                entries.add(UDBlocks.DARK_PORCELAIN_BRICK_STAIRS);
+                entries.add(UDBlocks.DARK_PORCELAIN_BRICK_SLAB);
 
                 entries.add(UDBlocks.DARK_PORCELAIN_TILES);
                 entries.add(UDBlocks.DARK_PORCELAIN_TILE_STAIRS);

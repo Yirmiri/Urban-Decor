@@ -18,6 +18,10 @@ public class UDModelProvider extends FabricModelProvider {
         porcelainTiles.stairs(UDBlocks.PORCELAIN_TILE_STAIRS);
         porcelainTiles.slab(UDBlocks.PORCELAIN_TILE_SLAB);
 
+        BlockStateModelGenerator.BlockTexturePool darkPorcelainTiles = generator.registerCubeAllModelTexturePool(UDBlocks.DARK_PORCELAIN_TILES);
+        darkPorcelainTiles.stairs(UDBlocks.DARK_PORCELAIN_TILE_STAIRS);
+        darkPorcelainTiles.slab(UDBlocks.DARK_PORCELAIN_TILE_SLAB);
+
         BlockStateModelGenerator.BlockTexturePool chromite = generator.registerCubeAllModelTexturePool(UDBlocks.CHROMITE);
         chromite.stairs(UDBlocks.CHROMITE_STAIRS);
         chromite.slab(UDBlocks.CHROMITE_SLAB);
@@ -26,10 +30,6 @@ public class UDModelProvider extends FabricModelProvider {
         BlockStateModelGenerator.BlockTexturePool polishedChromite = generator.registerCubeAllModelTexturePool(UDBlocks.POLISHED_CHROMITE);
         polishedChromite.stairs(UDBlocks.POLISHED_CHROMITE_STAIRS);
         polishedChromite.slab(UDBlocks.POLISHED_CHROMITE_SLAB);
-
-        BlockStateModelGenerator.BlockTexturePool darkPorcelainTiles = generator.registerCubeAllModelTexturePool(UDBlocks.DARK_PORCELAIN_TILES);
-        darkPorcelainTiles.stairs(UDBlocks.DARK_PORCELAIN_TILE_STAIRS);
-        darkPorcelainTiles.slab(UDBlocks.DARK_PORCELAIN_TILE_SLAB);
 
         BlockStateModelGenerator.BlockTexturePool checkeredPorcelainTiles = generator.registerCubeAllModelTexturePool(UDBlocks.CHECKERED_PORCELAIN_TILES);
         checkeredPorcelainTiles.stairs(UDBlocks.CHECKERED_PORCELAIN_TILE_STAIRS);
@@ -48,6 +48,14 @@ public class UDModelProvider extends FabricModelProvider {
         BlockStateModelGenerator.BlockTexturePool darkPorcelain = generator.registerCubeAllModelTexturePool(UDBlocks.DARK_PORCELAIN_BLOCK);
         darkPorcelain.stairs(UDBlocks.DARK_PORCELAIN_STAIRS);
         darkPorcelain.slab(UDBlocks.DARK_PORCELAIN_SLAB);
+
+        BlockStateModelGenerator.BlockTexturePool porcelainBricks = generator.registerCubeAllModelTexturePool(UDBlocks.PORCELAIN_BRICKS);
+        porcelainBricks.stairs(UDBlocks.PORCELAIN_BRICK_STAIRS);
+        porcelainBricks.slab(UDBlocks.PORCELAIN_BRICK_SLAB);
+
+        BlockStateModelGenerator.BlockTexturePool darkPorcelainBricks = generator.registerCubeAllModelTexturePool(UDBlocks.DARK_PORCELAIN_BRICKS);
+        darkPorcelainBricks.stairs(UDBlocks.DARK_PORCELAIN_BRICK_STAIRS);
+        darkPorcelainBricks.slab(UDBlocks.DARK_PORCELAIN_BRICK_SLAB);
     }
 
     @Override

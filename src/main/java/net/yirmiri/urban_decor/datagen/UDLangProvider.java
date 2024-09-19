@@ -50,6 +50,12 @@ public class UDLangProvider extends FabricLanguageProvider {
         builder.add(UDBlocks.DARK_PORCELAIN_BLOCK, "Dark Porcelain Block");
         builder.add(UDBlocks.DARK_PORCELAIN_STAIRS, "Dark Porcelain Stairs");
         builder.add(UDBlocks.DARK_PORCELAIN_SLAB, "Dark Porcelain Slab");
+        builder.add(UDBlocks.PORCELAIN_BRICKS, "Porcelain Bricks");
+        builder.add(UDBlocks.PORCELAIN_BRICK_STAIRS, "Porcelain Brick Stairs");
+        builder.add(UDBlocks.PORCELAIN_BRICK_SLAB, "Porcelain Brick Slab");
+        builder.add(UDBlocks.DARK_PORCELAIN_BRICKS, "Dark Porcelain Bricks");
+        builder.add(UDBlocks.DARK_PORCELAIN_BRICK_STAIRS, "Dark Porcelain Brick Stairs");
+        builder.add(UDBlocks.DARK_PORCELAIN_BRICK_SLAB, "Dark Porcelain Brick Slab");
 
         //APPLIANCES
         builder.add(UDBlocks.TRASH_CAN, "Trash Can");

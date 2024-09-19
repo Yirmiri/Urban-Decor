@@ -20,6 +20,9 @@ public class UDLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(UDBlocks.PORCELAIN_TILES);
         addDrop(UDBlocks.PORCELAIN_TILE_STAIRS);
         addDrop(UDBlocks.PORCELAIN_TILE_SLAB, slabDrops(UDBlocks.PORCELAIN_TILE_SLAB));
+        addDrop(UDBlocks.DARK_PORCELAIN_TILES);
+        addDrop(UDBlocks.DARK_PORCELAIN_TILE_STAIRS);
+        addDrop(UDBlocks.DARK_PORCELAIN_TILE_SLAB, slabDrops(UDBlocks.PORCELAIN_TILE_SLAB));
         addDrop(UDBlocks.TRASH_CAN);
         addDrop(UDBlocks.MICROWAVE, UDItems.MICROWAVE);
         addDrop(UDBlocks.WALL_MICROWAVE, UDItems.MICROWAVE);
@@ -35,9 +38,6 @@ public class UDLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(UDBlocks.DRYER);
         addDrop(UDBlocks.TOASTER);
         addDrop(UDBlocks.AIR_CONDITIONER);
-        addDrop(UDBlocks.DARK_PORCELAIN_TILES);
-        addDrop(UDBlocks.DARK_PORCELAIN_TILE_STAIRS);
-        addDrop(UDBlocks.DARK_PORCELAIN_TILE_SLAB, slabDrops(UDBlocks.PORCELAIN_TILE_SLAB));
         addDrop(UDBlocks.DESK_FAN);
         addDrop(UDBlocks.TOOLBOX, UDItems.TOOLBOX);
         addDrop(UDBlocks.FAUCET);
@@ -82,6 +82,12 @@ public class UDLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(UDBlocks.SATELLITE_DISH, UDItems.SATELLITE_DISH);
         addDrop(UDBlocks.WALL_SATELLITE_DISH, UDItems.SATELLITE_DISH);
         addDyedWallPictureFrameDrops();
+        addDrop(UDBlocks.PORCELAIN_BRICKS);
+        addDrop(UDBlocks.PORCELAIN_BRICK_STAIRS);
+        addDrop(UDBlocks.PORCELAIN_BRICK_SLAB, slabDrops(UDBlocks.PORCELAIN_BRICK_SLAB));
+        addDrop(UDBlocks.DARK_PORCELAIN_BRICKS);
+        addDrop(UDBlocks.DARK_PORCELAIN_BRICK_STAIRS);
+        addDrop(UDBlocks.DARK_PORCELAIN_BRICK_SLAB, slabDrops(UDBlocks.PORCELAIN_BRICK_SLAB));
     }
 
     private void addDyedTowelBlockDrops() {

@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/outer_stairs",
+  "textures": {
+    "bottom": "urban_decor:block/porcelain_bricks",
+    "side": "urban_decor:block/porcelain_bricks",
+    "top": "urban_decor:block/porcelain_bricks"
+  }
+}
