@@ -39,21 +39,21 @@
       "uvlock": false
     },
     "facing=north,variant=2": {
-      "model": "urban_decor:block/sink_large",
+      "model": "urban_decor:block/sink_cupboard",
       "uvlock": false
     },
     "facing=south,variant=2": {
-      "model": "urban_decor:block/sink_large",
+      "model": "urban_decor:block/sink_cupboard",
       "y": 180,
       "uvlock": false
     },
     "facing=west,variant=2": {
-      "model": "urban_decor:block/sink_large",
+      "model": "urban_decor:block/sink_cupboard",
       "y": 270,
       "uvlock": false
     },
     "facing=east,variant=2": {
-      "model": "urban_decor:block/sink_large",
+      "model": "urban_decor:block/sink_cupboard",
       "y": 90,
       "uvlock": false
     },

@@ -142,7 +142,7 @@ public class UDLangProvider extends FabricLanguageProvider {
         builder.add("toolbox.shower.variant_false", "Variant: Cylindrical");
         builder.add("toolbox.sink.variant_2", "Variant: Slim");
         builder.add("toolbox.sink.variant_0", "Variant: Bare");
-        builder.add("toolbox.sink.variant_1", "Variant: Large");
+        builder.add("toolbox.sink.variant_1", "Variant: Cupboard");
         builder.add("toolbox.sink.variant_3", "Variant: Fullsize");
         builder.add("toolbox.toilet.variant_true", "Variant: Tank");
         builder.add("toolbox.toilet.variant_false", "Variant: Commercial");

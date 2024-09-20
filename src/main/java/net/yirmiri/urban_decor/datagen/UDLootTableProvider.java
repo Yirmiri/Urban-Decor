@@ -4,7 +4,15 @@ import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootTableProvider;
 import net.minecraft.block.Block;
 import net.minecraft.block.enums.BedPart;
+import net.minecraft.enchantment.Enchantments;
+import net.minecraft.item.ItemConvertible;
+import net.minecraft.item.Items;
+import net.minecraft.loot.LootPool;
 import net.minecraft.loot.LootTable;
+import net.minecraft.loot.condition.TableBonusLootCondition;
+import net.minecraft.loot.entry.ItemEntry;
+import net.minecraft.loot.entry.LeafEntry;
+import net.minecraft.loot.provider.number.ConstantLootNumberProvider;
 import net.minecraft.util.DyeColor;
 import net.yirmiri.urban_decor.block.abstracts.AbstractLongBlock;
 import net.yirmiri.urban_decor.registry.UDBlocks;
@@ -111,7 +119,6 @@ public class UDLootTableProvider extends FabricBlockLootTableProvider {
     private void addTowelBarTowelDrops() {
         for (DyeColor colors : DyeColor.values()) {
             addDrop(UDBlocks.getDyedTowelBarTowels(colors.getId()), UDBlocks.getDyedTowels(colors.getId()));
-            addDrop(UDBlocks.getDyedTowelBarTowels(colors.getId()), UDBlocks.TOWEL_BAR);
         }
     }
 
