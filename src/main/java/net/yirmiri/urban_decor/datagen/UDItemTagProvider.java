@@ -70,7 +70,6 @@ public class UDItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(UDBlocks.DRYER.asItem())
                 .add(UDBlocks.TOASTER.asItem())
                 .add(UDBlocks.OVEN.asItem())
-                .add(UDBlocks.STOVE.asItem())
                 .add(UDBlocks.FRIDGE.asItem())
                 .add(UDBlocks.FREEZER.asItem())
                 .add(UDBlocks.DARK_DRYER.asItem())
