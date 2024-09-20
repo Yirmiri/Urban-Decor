@@ -83,7 +83,7 @@ public class DryerBlock extends AbstractStorageDecorBlock {
             player.sendMessage(Text.translatable("toolbox.dryer.variant_" + state.get(OPAQUE)), true);
             return ActionResult.SUCCESS;
         }
-        return ActionResult.PASS;
+        return ActionResult.CONSUME;
     }
 
     @Override

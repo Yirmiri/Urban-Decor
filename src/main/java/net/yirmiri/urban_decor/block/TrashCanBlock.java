@@ -74,7 +74,7 @@ public class TrashCanBlock extends AbstractMiniStorageDecorBlock {
             player.sendMessage(Text.translatable("toolbox.trash_can.variant_" + state.get(VARIANT)), true);
             return ActionResult.SUCCESS;
         }
-        return ActionResult.PASS;
+        return ActionResult.CONSUME;
     }
 
     @Override

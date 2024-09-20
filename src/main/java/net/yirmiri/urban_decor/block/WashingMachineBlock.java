@@ -94,7 +94,7 @@ public class WashingMachineBlock extends AbstractStorageDecorBlock {
             player.sendMessage(Text.translatable("toolbox.washing_machine.variant_" + state.get(OPAQUE)), true);
             return ActionResult.SUCCESS;
         }
-        return ActionResult.PASS;
+        return ActionResult.CONSUME;
     }
 
     @Override
