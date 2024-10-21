@@ -443,115 +443,115 @@ public class UDRecipeProvider extends FabricRecipeProvider {
                 .offerTo(exporter, Identifier.of(UrbanDecor.MOD_ID, getRecipeName(UDBlocks.getDyedTowels(DyeColor.BROWN.getId()))));
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, UDBlocks.getDyedTowelBlocks(DyeColor.WHITE.getId()), 4)
-                .input('@', Blocks.WHITE_WOOL)
+                .input('@', UDBlocks.getDyedTowels(DyeColor.WHITE.getId()))
                 .pattern("@@")
                 .pattern("@@")
-                .criterion(hasItem(Blocks.WHITE_WOOL), conditionsFromItem(Blocks.WHITE_WOOL))
+                .criterion(hasItem(UDBlocks.getDyedTowels(DyeColor.WHITE.getId())), conditionsFromItem(UDBlocks.getDyedTowels(DyeColor.WHITE.getId())))
                 .offerTo(exporter, Identifier.of(UrbanDecor.MOD_ID, getRecipeName(UDBlocks.getDyedTowelBlocks(DyeColor.WHITE.getId()))));
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, UDBlocks.getDyedTowelBlocks(DyeColor.LIGHT_GRAY.getId()), 4)
-                .input('@', Blocks.LIGHT_GRAY_WOOL)
+                .input('@', UDBlocks.getDyedTowels(DyeColor.LIGHT_GRAY.getId()))
                 .pattern("@@")
                 .pattern("@@")
-                .criterion(hasItem(Blocks.LIGHT_GRAY_WOOL), conditionsFromItem(Blocks.LIGHT_GRAY_WOOL))
+                .criterion(hasItem(UDBlocks.getDyedTowels(DyeColor.LIGHT_GRAY.getId())), conditionsFromItem(UDBlocks.getDyedTowels(DyeColor.LIGHT_GRAY.getId())))
                 .offerTo(exporter, Identifier.of(UrbanDecor.MOD_ID, getRecipeName(UDBlocks.getDyedTowelBlocks(DyeColor.LIGHT_GRAY.getId()))));
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, UDBlocks.getDyedTowelBlocks(DyeColor.GRAY.getId()), 4)
-                .input('@', Blocks.GRAY_WOOL)
+                .input('@', UDBlocks.getDyedTowels(DyeColor.GRAY.getId()))
                 .pattern("@@")
                 .pattern("@@")
-                .criterion(hasItem(Blocks.GRAY_WOOL), conditionsFromItem(Blocks.GRAY_WOOL))
+                .criterion(hasItem(UDBlocks.getDyedTowels(DyeColor.GRAY.getId())), conditionsFromItem(UDBlocks.getDyedTowels(DyeColor.GRAY.getId())))
                 .offerTo(exporter, Identifier.of(UrbanDecor.MOD_ID, getRecipeName(UDBlocks.getDyedTowelBlocks(DyeColor.GRAY.getId()))));
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, UDBlocks.getDyedTowelBlocks(DyeColor.BLACK.getId()), 4)
-                .input('@', Blocks.BLACK_WOOL)
+                .input('@', UDBlocks.getDyedTowels(DyeColor.BLACK.getId()))
                 .pattern("@@")
                 .pattern("@@")
-                .criterion(hasItem(Blocks.BLACK_WOOL), conditionsFromItem(Blocks.BLACK_WOOL))
+                .criterion(hasItem(UDBlocks.getDyedTowels(DyeColor.BLACK.getId())), conditionsFromItem(UDBlocks.getDyedTowels(DyeColor.BLACK.getId())))
                 .offerTo(exporter, Identifier.of(UrbanDecor.MOD_ID, getRecipeName(UDBlocks.getDyedTowelBlocks(DyeColor.BLACK.getId()))));
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, UDBlocks.getDyedTowelBlocks(DyeColor.RED.getId()), 4)
-                .input('@', Blocks.RED_WOOL)
+                .input('@', UDBlocks.getDyedTowels(DyeColor.RED.getId()))
                 .pattern("@@")
                 .pattern("@@")
-                .criterion(hasItem(Blocks.RED_WOOL), conditionsFromItem(Blocks.RED_WOOL))
+                .criterion(hasItem(UDBlocks.getDyedTowels(DyeColor.RED.getId())), conditionsFromItem(UDBlocks.getDyedTowels(DyeColor.RED.getId())))
                 .offerTo(exporter, Identifier.of(UrbanDecor.MOD_ID, getRecipeName(UDBlocks.getDyedTowelBlocks(DyeColor.RED.getId()))));
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, UDBlocks.getDyedTowelBlocks(DyeColor.ORANGE.getId()), 4)
-                .input('@', Blocks.ORANGE_WOOL)
+                .input('@', UDBlocks.getDyedTowels(DyeColor.ORANGE.getId()))
                 .pattern("@@")
                 .pattern("@@")
-                .criterion(hasItem(Blocks.ORANGE_WOOL), conditionsFromItem(Blocks.ORANGE_WOOL))
+                .criterion(hasItem(UDBlocks.getDyedTowels(DyeColor.ORANGE.getId())), conditionsFromItem(UDBlocks.getDyedTowels(DyeColor.ORANGE.getId())))
                 .offerTo(exporter, Identifier.of(UrbanDecor.MOD_ID, getRecipeName(UDBlocks.getDyedTowelBlocks(DyeColor.ORANGE.getId()))));
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, UDBlocks.getDyedTowelBlocks(DyeColor.YELLOW.getId()), 4)
-                .input('@', Blocks.YELLOW_WOOL)
+                .input('@', UDBlocks.getDyedTowels(DyeColor.YELLOW.getId()))
                 .pattern("@@")
                 .pattern("@@")
-                .criterion(hasItem(Blocks.YELLOW_WOOL), conditionsFromItem(Blocks.YELLOW_WOOL))
+                .criterion(hasItem(UDBlocks.getDyedTowels(DyeColor.YELLOW.getId())), conditionsFromItem(UDBlocks.getDyedTowels(DyeColor.YELLOW.getId())))
                 .offerTo(exporter, Identifier.of(UrbanDecor.MOD_ID, getRecipeName(UDBlocks.getDyedTowelBlocks(DyeColor.YELLOW.getId()))));
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, UDBlocks.getDyedTowelBlocks(DyeColor.LIME.getId()), 4)
-                .input('@', Blocks.LIME_WOOL)
+                .input('@', UDBlocks.getDyedTowels(DyeColor.LIME.getId()))
                 .pattern("@@")
                 .pattern("@@")
-                .criterion(hasItem(Blocks.LIME_WOOL), conditionsFromItem(Blocks.LIME_WOOL))
+                .criterion(hasItem(UDBlocks.getDyedTowels(DyeColor.LIME.getId())), conditionsFromItem(UDBlocks.getDyedTowels(DyeColor.LIME.getId())))
                 .offerTo(exporter, Identifier.of(UrbanDecor.MOD_ID, getRecipeName(UDBlocks.getDyedTowelBlocks(DyeColor.LIME.getId()))));
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, UDBlocks.getDyedTowelBlocks(DyeColor.GREEN.getId()), 4)
-                .input('@', Blocks.GREEN_WOOL)
+                .input('@', UDBlocks.getDyedTowels(DyeColor.GREEN.getId()))
                 .pattern("@@")
                 .pattern("@@")
-                .criterion(hasItem(Blocks.GREEN_WOOL), conditionsFromItem(Blocks.GREEN_WOOL))
+                .criterion(hasItem(UDBlocks.getDyedTowels(DyeColor.GREEN.getId())), conditionsFromItem(UDBlocks.getDyedTowels(DyeColor.GREEN.getId())))
                 .offerTo(exporter, Identifier.of(UrbanDecor.MOD_ID, getRecipeName(UDBlocks.getDyedTowelBlocks(DyeColor.GREEN.getId()))));
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, UDBlocks.getDyedTowelBlocks(DyeColor.CYAN.getId()), 4)
-                .input('@', Blocks.CYAN_WOOL)
+                .input('@', UDBlocks.getDyedTowels(DyeColor.CYAN.getId()))
                 .pattern("@@")
                 .pattern("@@")
-                .criterion(hasItem(Blocks.CYAN_WOOL), conditionsFromItem(Blocks.CYAN_WOOL))
+                .criterion(hasItem(UDBlocks.getDyedTowels(DyeColor.CYAN.getId())), conditionsFromItem(UDBlocks.getDyedTowels(DyeColor.CYAN.getId())))
                 .offerTo(exporter, Identifier.of(UrbanDecor.MOD_ID, getRecipeName(UDBlocks.getDyedTowelBlocks(DyeColor.CYAN.getId()))));
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, UDBlocks.getDyedTowelBlocks(DyeColor.LIGHT_BLUE.getId()), 4)
-                .input('@', Blocks.LIGHT_BLUE_WOOL)
+                .input('@', UDBlocks.getDyedTowels(DyeColor.LIGHT_BLUE.getId()))
                 .pattern("@@")
                 .pattern("@@")
-                .criterion(hasItem(Blocks.LIGHT_BLUE_WOOL), conditionsFromItem(Blocks.LIGHT_BLUE_WOOL))
+                .criterion(hasItem(UDBlocks.getDyedTowels(DyeColor.LIGHT_BLUE.getId())), conditionsFromItem(UDBlocks.getDyedTowels(DyeColor.LIGHT_BLUE.getId())))
                 .offerTo(exporter, Identifier.of(UrbanDecor.MOD_ID, getRecipeName(UDBlocks.getDyedTowelBlocks(DyeColor.LIGHT_BLUE.getId()))));
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, UDBlocks.getDyedTowelBlocks(DyeColor.BLUE.getId()), 4)
-                .input('@', Blocks.BLUE_WOOL)
+                .input('@', UDBlocks.getDyedTowels(DyeColor.BLUE.getId()))
                 .pattern("@@")
                 .pattern("@@")
-                .criterion(hasItem(Blocks.BLUE_WOOL), conditionsFromItem(Blocks.BLUE_WOOL))
+                .criterion(hasItem(UDBlocks.getDyedTowels(DyeColor.BLUE.getId())), conditionsFromItem(UDBlocks.getDyedTowels(DyeColor.BLUE.getId())))
                 .offerTo(exporter, Identifier.of(UrbanDecor.MOD_ID, getRecipeName(UDBlocks.getDyedTowelBlocks(DyeColor.BLUE.getId()))));
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, UDBlocks.getDyedTowelBlocks(DyeColor.PURPLE.getId()), 4)
-                .input('@', Blocks.PURPLE_WOOL)
+                .input('@', UDBlocks.getDyedTowels(DyeColor.PURPLE.getId()))
                 .pattern("@@")
                 .pattern("@@")
-                .criterion(hasItem(Blocks.PURPLE_WOOL), conditionsFromItem(Blocks.PURPLE_WOOL))
+                .criterion(hasItem(UDBlocks.getDyedTowels(DyeColor.PURPLE.getId())), conditionsFromItem(UDBlocks.getDyedTowels(DyeColor.PURPLE.getId())))
                 .offerTo(exporter, Identifier.of(UrbanDecor.MOD_ID, getRecipeName(UDBlocks.getDyedTowelBlocks(DyeColor.PURPLE.getId()))));
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, UDBlocks.getDyedTowelBlocks(DyeColor.MAGENTA.getId()), 4)
-                .input('@', Blocks.MAGENTA_WOOL)
+                .input('@', UDBlocks.getDyedTowels(DyeColor.MAGENTA.getId()))
                 .pattern("@@")
                 .pattern("@@")
-                .criterion(hasItem(Blocks.MAGENTA_WOOL), conditionsFromItem(Blocks.MAGENTA_WOOL))
+                .criterion(hasItem(UDBlocks.getDyedTowels(DyeColor.MAGENTA.getId())), conditionsFromItem(UDBlocks.getDyedTowels(DyeColor.MAGENTA.getId())))
                 .offerTo(exporter, Identifier.of(UrbanDecor.MOD_ID, getRecipeName(UDBlocks.getDyedTowelBlocks(DyeColor.MAGENTA.getId()))));
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, UDBlocks.getDyedTowelBlocks(DyeColor.PINK.getId()), 4)
-                .input('@', Blocks.PINK_WOOL)
+                .input('@', UDBlocks.getDyedTowels(DyeColor.PINK.getId()))
                 .pattern("@@")
                 .pattern("@@")
-                .criterion(hasItem(Blocks.PINK_WOOL), conditionsFromItem(Blocks.PINK_WOOL))
+                .criterion(hasItem(UDBlocks.getDyedTowels(DyeColor.PINK.getId())), conditionsFromItem(UDBlocks.getDyedTowels(DyeColor.PINK.getId())))
                 .offerTo(exporter, Identifier.of(UrbanDecor.MOD_ID, getRecipeName(UDBlocks.getDyedTowelBlocks(DyeColor.PINK.getId()))));
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, UDBlocks.getDyedTowelBlocks(DyeColor.BROWN.getId()), 4)
-                .input('@', Blocks.BROWN_WOOL)
+                .input('@', UDBlocks.getDyedTowels(DyeColor.BROWN.getId()))
                 .pattern("@@")
                 .pattern("@@")
-                .criterion(hasItem(Blocks.BROWN_WOOL), conditionsFromItem(Blocks.BROWN_WOOL))
+                .criterion(hasItem(UDBlocks.getDyedTowels(DyeColor.BROWN.getId())), conditionsFromItem(UDBlocks.getDyedTowels(DyeColor.BROWN.getId())))
                 .offerTo(exporter, Identifier.of(UrbanDecor.MOD_ID, getRecipeName(UDBlocks.getDyedTowelBlocks(DyeColor.BROWN.getId()))));
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, UDBlocks.RIGID_GLASS, 3)

@@ -194,7 +194,6 @@
   "tooltip.urban_decor.toolboxable": "Has toolbox variants",
   "tooltip.urban_decor.wrappable": "Can be wrapped",
   "urban_decor.open_appliances": "Appliances Opened",
-  "urban_decor.times_sat": "Times Sat Down",
   "urban_decor.use_faucet": "Faucets Used",
   "yapping_tooltips.block.urban_decor.Block{urban_decor:black_picture_frame}.desc": "A small picture dyed Black, used to cozy up a home!",
   "yapping_tooltips.block.urban_decor.Block{urban_decor:black_towel_block}.desc": "You would think you would use towels to make these but you don't",

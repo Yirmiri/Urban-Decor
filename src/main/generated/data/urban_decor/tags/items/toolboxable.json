@@ -6,7 +6,6 @@
     "urban_decor:toilet",
     "urban_decor:washing_machine",
     "urban_decor:dryer",
-    "urban_decor:toaster",
     "urban_decor:oven",
     "urban_decor:fridge",
     "urban_decor:freezer",
@@ -25,22 +24,6 @@
     "urban_decor:radiator",
     "urban_decor:toilet_paper",
     "urban_decor:stainless_steel_door",
-    "urban_decor:stainless_steel_trapdoor",
-    "urban_decor:white_picture_frame",
-    "urban_decor:orange_picture_frame",
-    "urban_decor:magenta_picture_frame",
-    "urban_decor:light_blue_picture_frame",
-    "urban_decor:yellow_picture_frame",
-    "urban_decor:lime_picture_frame",
-    "urban_decor:pink_picture_frame",
-    "urban_decor:gray_picture_frame",
-    "urban_decor:light_gray_picture_frame",
-    "urban_decor:cyan_picture_frame",
-    "urban_decor:purple_picture_frame",
-    "urban_decor:blue_picture_frame",
-    "urban_decor:brown_picture_frame",
-    "urban_decor:green_picture_frame",
-    "urban_decor:red_picture_frame",
-    "urban_decor:black_picture_frame"
+    "urban_decor:stainless_steel_trapdoor"
   ]
 }

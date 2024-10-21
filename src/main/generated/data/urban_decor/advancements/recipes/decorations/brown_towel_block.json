@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_brown_wool": {
+    "has_brown_towel": {
       "conditions": {
         "items": [
           {
             "items": [
-              "minecraft:brown_wool"
+              "urban_decor:brown_towel"
             ]
           }
         ]
@@ -22,7 +22,7 @@
   },
   "requirements": [
     [
-      "has_brown_wool",
+      "has_brown_towel",
       "has_the_recipe"
     ]
   ],

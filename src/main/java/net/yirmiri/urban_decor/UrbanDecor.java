@@ -13,8 +13,7 @@ import org.slf4j.LoggerFactory;
 
 public class UrbanDecor implements ModInitializer {
 	public static final String MOD_ID = "urban_decor";
-	public static final String MOD_NAME = "Urban Decor";
-    public static final Logger LOGGER = LoggerFactory.getLogger(MOD_NAME);
+    public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
 
 	@Override
 	public void onInitialize() {

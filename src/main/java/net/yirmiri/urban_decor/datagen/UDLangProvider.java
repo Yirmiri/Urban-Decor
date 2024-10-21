@@ -117,7 +117,7 @@ public class UDLangProvider extends FabricLanguageProvider {
         build.add("container.urban_decor.trash", "§4Destroy Items");
 
         //STATS
-        build.add(UDStats.TIMES_SAT, "Times Sat Down");
+        //build.add(UDStats.TIMES_SAT, "Times Sat Down");
         build.add(UDStats.OPEN_APPLIANCES, "Appliances Opened");
         build.add(UDStats.USE_FAUCET, "Faucets Used");
 
@@ -169,7 +169,7 @@ public class UDLangProvider extends FabricLanguageProvider {
         build.add("toolbox.steel_door.variant_false", "Variant: Locked");
 
         //DAMAGE
-        build.add("death.attack.urban_decor.toaster", "%1$s likes to play with toasters in the tub");
+        build.add("death.attack.urban_decor.toaster", "%1$s likes to play with toasters while they are on");
         build.add("death.attack.urban_decor.toaster.player", "%2$s toasted %1$s into a delightful breakfast");
 
         //SUBTITLES
@@ -223,6 +223,7 @@ public class UDLangProvider extends FabricLanguageProvider {
         build.add(YT_ID + "block." + MOD_ID + "stainless_steel_trapdoor.desc", "Actually extremely great at it's job");
         build.add(YT_ID + "block." + MOD_ID + "stainless_steel_lantern.desc", "A simple source of light");
         build.add(YT_ID + "block." + MOD_ID + "stainless_steel_soul_lantern.desc", "Souls keep the flame ablaze");
+        build.add(YT_ID + "block." + MOD_ID + "stainless_steel_bars.desc", "Keeps the criminals out.");
         build.add(YT_ID + "block." + MOD_ID + "rigid_glass.desc", "A reinforced piece of glass that can be placed at the edge of a block");
 
         build.add(YT_ID + "block." + MOD_ID + "toolbox.desc", "Ah man, you cut the knob!");
@@ -263,7 +264,7 @@ public class UDLangProvider extends FabricLanguageProvider {
                     "_", " "), "gray", "Gray"), "blue", "Blue"));
 
             build.add(YT_ID + "block." + MOD_ID + UDBlocks.getDyedTowelBlocks(colors.getId()) + ".desc", "You would think you would use towels to make these but you don't");
-            build.add(YT_ID + "block." + MOD_ID + UDBlocks.getDyedTowels(colors.getId()) + ".desc", "Tellio had a fun time making the models for this :)");
+            build.add(YT_ID + "block." + MOD_ID + UDBlocks.getDyedTowels(colors.getId()) + ".desc", "Tellio totally had a fun time making the models for this :)");
             build.add(YT_ID + "block." + MOD_ID + UDBlocks.getDyedPictureBlocks(colors.getId()) + ".desc", "A small picture dyed " + dyeString + ", used to cozy up a home!");
         }
     }

@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_gray_wool": {
+    "has_gray_towel": {
       "conditions": {
         "items": [
           {
             "items": [
-              "minecraft:gray_wool"
+              "urban_decor:gray_towel"
             ]
           }
         ]
@@ -22,7 +22,7 @@
   },
   "requirements": [
     [
-      "has_gray_wool",
+      "has_gray_towel",
       "has_the_recipe"
     ]
   ],

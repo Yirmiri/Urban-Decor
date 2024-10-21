@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_light_blue_wool": {
+    "has_light_blue_towel": {
       "conditions": {
         "items": [
           {
             "items": [
-              "minecraft:light_blue_wool"
+              "urban_decor:light_blue_towel"
             ]
           }
         ]
@@ -22,7 +22,7 @@
   },
   "requirements": [
     [
-      "has_light_blue_wool",
+      "has_light_blue_towel",
       "has_the_recipe"
     ]
   ],

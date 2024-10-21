@@ -15,8 +15,11 @@ import net.yirmiri.urban_decor.entity.renderer.InvisibleEntityRenderer;
 public class UrbanDecorClient implements ClientModInitializer {
     @Override
     public void onInitializeClient() {
-        //CUTOUT
-        addDyedCutouts();
+        registerBlocks();
+        registerEntities();
+    }
+
+    private void registerBlocks() {
         BlockRenderLayerMap.INSTANCE.putBlock(UDBlocks.TRASH_CAN, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(UDBlocks.TOOLBOX, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(UDBlocks.STOVE, RenderLayer.getCutout());
@@ -26,33 +29,28 @@ public class UrbanDecorClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(UDBlocks.RIGID_GLASS, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(UDBlocks.PICTURE_FRAME, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(UDBlocks.WALL_PICTURE_FRAME, RenderLayer.getCutout());
-
-        //CUTOUT MIPPED
         BlockRenderLayerMap.INSTANCE.putBlock(UDBlocks.OVEN, RenderLayer.getCutoutMipped());
         BlockRenderLayerMap.INSTANCE.putBlock(UDBlocks.RADIATOR, RenderLayer.getCutoutMipped());
         BlockRenderLayerMap.INSTANCE.putBlock(UDBlocks.DARK_OVEN, RenderLayer.getCutoutMipped());
         BlockRenderLayerMap.INSTANCE.putBlock(UDBlocks.SATELLITE_DISH, RenderLayer.getCutoutMipped());
         BlockRenderLayerMap.INSTANCE.putBlock(UDBlocks.WALL_SATELLITE_DISH, RenderLayer.getCutoutMipped());
         BlockRenderLayerMap.INSTANCE.putBlock(UDBlocks.FILING_CABINET, RenderLayer.getCutoutMipped());
-
-        //TRANSLUCENT
-        BlockRenderLayerMap.INSTANCE.putBlock(UDBlocks.AIR_CONDITIONER, RenderLayer.getTranslucent());
-        BlockRenderLayerMap.INSTANCE.putBlock(UDBlocks.DESK_FAN, RenderLayer.getTranslucent());
+        BlockRenderLayerMap.INSTANCE.putBlock(UDBlocks.AIR_CONDITIONER, RenderLayer.getCutoutMipped());
+        BlockRenderLayerMap.INSTANCE.putBlock(UDBlocks.DESK_FAN, RenderLayer.getCutoutMipped());
         BlockRenderLayerMap.INSTANCE.putBlock(UDBlocks.DARK_WASHING_MACHINE, RenderLayer.getTranslucent());
         BlockRenderLayerMap.INSTANCE.putBlock(UDBlocks.DARK_DRYER, RenderLayer.getTranslucent());
         BlockRenderLayerMap.INSTANCE.putBlock(UDBlocks.WASHING_MACHINE, RenderLayer.getTranslucent());
         BlockRenderLayerMap.INSTANCE.putBlock(UDBlocks.DRYER, RenderLayer.getTranslucent());
 
-        //ENTITY
-        EntityRendererRegistry.register(UDEntities.TOILET, InvisibleEntityRenderer::new);
-    }
-
-    private void addDyedCutouts() {
         for (DyeColor colors : DyeColor.values()) {
             BlockRenderLayerMap.INSTANCE.putBlock(UDBlocks.getDyedTowels(colors.getId()), RenderLayer.getCutout());
             BlockRenderLayerMap.INSTANCE.putBlock(UDBlocks.getDyedTowelBarTowels(colors.getId()), RenderLayer.getCutout());
             BlockRenderLayerMap.INSTANCE.putBlock(UDBlocks.getDyedPictureBlocks(colors.getId()), RenderLayer.getCutout());
             BlockRenderLayerMap.INSTANCE.putBlock(UDBlocks.getDyedWallPictureBlocks(colors.getId()), RenderLayer.getCutout());
         }
+    }
+
+    private void registerEntities() {
+        EntityRendererRegistry.register(UDEntities.TOILET, InvisibleEntityRenderer::new);
     }
 }

@@ -13,8 +13,8 @@ import net.yirmiri.urban_decor.compat.UDCompatRegistries;
 import net.yirmiri.urban_decor.compat.excessive_building.EBRegisterBlocks;
 
 public class UDItemGroups {
-    public static ItemGroup URBAN_DECOR = Registry.register(Registries.ITEM_GROUP, Identifier.of(UrbanDecor.MOD_ID, "urban_decor"),
-            FabricItemGroup.builder().icon(() -> new ItemStack(UDItems.TOOLBOX)).displayName(Text.translatable("itemgroup.urban_decor")).entries((ctx, entries) -> {
+    public static ItemGroup URBAN_DECOR = Registry.register(Registries.ITEM_GROUP, Identifier.of(UrbanDecor.MOD_ID, "urban_decor"), FabricItemGroup.builder()
+                    .icon(() -> new ItemStack(UDItems.TOOLBOX)).displayName(Text.translatable("itemgroup.urban_decor")).entries((ctx, entries) -> {
                 entries.add(UDItems.PORCELAIN);
                 entries.add(UDItems.DARK_PORCELAIN);
                 entries.add(UDItems.STAINLESS_STEEL_INGOT);
@@ -63,7 +63,7 @@ public class UDItemGroups {
                 entries.add(UDBlocks.STAINLESS_STEEL_TRAPDOOR);
                 entries.add(UDBlocks.STAINLESS_STEEL_LANTERN);
                 entries.add(UDBlocks.STAINLESS_STEEL_SOUL_LANTERN);
-                //entries.add(UDBlocks.STAINLESS_STEEL_BARS);
+                entries.add(UDBlocks.STAINLESS_STEEL_BARS);
 
                 entries.add(UDBlocks.RIGID_GLASS);
 
@@ -153,7 +153,7 @@ public class UDItemGroups {
                 entries.add(UDItems.getDyedPictureFrames(DyeColor.MAGENTA.getId()));
                 entries.add(UDItems.getDyedPictureFrames(DyeColor.PINK.getId()));
 
-                if (UDCompatRegistries.excessive_building) {
+                if (UDCompatRegistries.EXCESSIVE_BUILDING) {
                     entries.add(EBRegisterBlocks.PORCELAIN_TILE_VERTICAL_STAIRS);
                     entries.add(EBRegisterBlocks.DARK_PORCELAIN_TILE_VERTICAL_STAIRS);
                     entries.add(EBRegisterBlocks.CHECKERED_PORCELAIN_TILE_VERTICAL_STAIRS);

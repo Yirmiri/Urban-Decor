@@ -7,12 +7,12 @@
       },
       "trigger": "minecraft:recipe_unlocked"
     },
-    "has_yellow_wool": {
+    "has_yellow_towel": {
       "conditions": {
         "items": [
           {
             "items": [
-              "minecraft:yellow_wool"
+              "urban_decor:yellow_towel"
             ]
           }
         ]
@@ -22,7 +22,7 @@
   },
   "requirements": [
     [
-      "has_yellow_wool",
+      "has_yellow_towel",
       "has_the_recipe"
     ]
   ],

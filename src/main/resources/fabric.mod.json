@@ -3,9 +3,9 @@
 	"id": "urban_decor",
 	"version": "${version}",
 	"name": "Urban Decor",
-	"description": "If you are reading this you can blame Yirmiri for not adding a description",
+	"description": "Urban Decor is a decorative mod designed to enchance the building experience of users by adding unique decoration blocks.",
 	"authors": [
-		"aridoitsu, Yirmiri"
+		"Yirmiri & aridoitsu"
 	],
 	"contact": {
 		"homepage": "https://modrinth.com/mod/urban-decor",

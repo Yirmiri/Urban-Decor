@@ -68,7 +68,6 @@ public class UDItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(UDBlocks.TOILET.asItem())
                 .add(UDBlocks.WASHING_MACHINE.asItem())
                 .add(UDBlocks.DRYER.asItem())
-                .add(UDBlocks.TOASTER.asItem())
                 .add(UDBlocks.OVEN.asItem())
                 .add(UDBlocks.FRIDGE.asItem())
                 .add(UDBlocks.FREEZER.asItem())
@@ -89,10 +88,6 @@ public class UDItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(UDBlocks.STAINLESS_STEEL_DOOR.asItem())
                 .add(UDBlocks.STAINLESS_STEEL_TRAPDOOR.asItem())
         ;
-
-        for (DyeColor colors : DyeColor.values()) {
-            getOrCreateTagBuilder(TOOLBOXABLE).add(UDItems.getDyedPictureFrames(colors.getId()).asItem());
-        }
 
         getOrCreateTagBuilder(WRAPPABLE)
 

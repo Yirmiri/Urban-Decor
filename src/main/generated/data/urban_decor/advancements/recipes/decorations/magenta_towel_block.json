@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_magenta_wool": {
+    "has_magenta_towel": {
       "conditions": {
         "items": [
           {
             "items": [
-              "minecraft:magenta_wool"
+              "urban_decor:magenta_towel"
             ]
           }
         ]
@@ -22,7 +22,7 @@
   },
   "requirements": [
     [
-      "has_magenta_wool",
+      "has_magenta_towel",
       "has_the_recipe"
     ]
   ],

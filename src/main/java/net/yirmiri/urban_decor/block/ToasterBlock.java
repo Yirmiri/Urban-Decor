@@ -56,11 +56,14 @@ public class ToasterBlock extends CampfireBlock implements Waterloggable {
 
     @Override
     public void onSteppedOn(World world, BlockPos pos, BlockState state, Entity entity) {
-        if (state.get(WATERLOGGED) && state.get(LIT)) {
-            entity.damage(UDDamageTypes.of(entity.getWorld(), UDDamageTypes.TOASTER), 10);
-        }
-        if (!entity.bypassesSteppingEffects() && entity instanceof LivingEntity && !EnchantmentHelper.hasFrostWalker((LivingEntity)entity) && state.get(LIT)) {
-            entity.damage(UDDamageTypes.of(entity.getWorld(), UDDamageTypes.TOASTER), 2);
+        if (entity instanceof LivingEntity livingEntity) {
+            if (state.get(WATERLOGGED) && state.get(LIT)) {
+                entity.damage(UDDamageTypes.of(entity.getWorld(), UDDamageTypes.TOASTER), 10);
+            }
+
+            if (state.get(LIT) && !livingEntity.bypassesSteppingEffects() && !EnchantmentHelper.hasFrostWalker(livingEntity)) {
+                entity.damage(UDDamageTypes.of(entity.getWorld(), UDDamageTypes.TOASTER), 2);
+            }
         }
 
         super.onSteppedOn(world, pos, state, entity);

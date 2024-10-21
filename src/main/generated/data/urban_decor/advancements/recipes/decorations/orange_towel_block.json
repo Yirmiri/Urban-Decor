@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_orange_wool": {
+    "has_orange_towel": {
       "conditions": {
         "items": [
           {
             "items": [
-              "minecraft:orange_wool"
+              "urban_decor:orange_towel"
             ]
           }
         ]
@@ -22,7 +22,7 @@
   },
   "requirements": [
     [
-      "has_orange_wool",
+      "has_orange_towel",
       "has_the_recipe"
     ]
   ],

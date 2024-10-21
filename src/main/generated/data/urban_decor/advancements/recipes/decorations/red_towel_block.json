@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_red_wool": {
+    "has_red_towel": {
       "conditions": {
         "items": [
           {
             "items": [
-              "minecraft:red_wool"
+              "urban_decor:red_towel"
             ]
           }
         ]
@@ -22,7 +22,7 @@
   },
   "requirements": [
     [
-      "has_red_wool",
+      "has_red_towel",
       "has_the_recipe"
     ]
   ],

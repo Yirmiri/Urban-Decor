@@ -29,6 +29,6 @@ public class EBRegisterBlocks {
         return Registry.register(Registries.ITEM, Identifier.of(UrbanDecor.MOD_ID, id), new BlockItem(block, new Item.Settings()));
     }
 
-    public static void ebRegisterBlocks() {
+    public static void EBLoadBlocks() {
     }
 }

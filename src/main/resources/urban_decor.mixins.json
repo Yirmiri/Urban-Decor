@@ -9,7 +9,6 @@
   },
   "client": [
     "AbstractClientPlayerMixin",
-    "ItemMixin",
-    "PlayerListEntryMixin"
+    "ItemMixin"
   ]
 }

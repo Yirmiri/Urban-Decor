@@ -7,12 +7,12 @@
       },
       "trigger": "minecraft:recipe_unlocked"
     },
-    "has_white_wool": {
+    "has_white_towel": {
       "conditions": {
         "items": [
           {
             "items": [
-              "minecraft:white_wool"
+              "urban_decor:white_towel"
             ]
           }
         ]
@@ -22,7 +22,7 @@
   },
   "requirements": [
     [
-      "has_white_wool",
+      "has_white_towel",
       "has_the_recipe"
     ]
   ],
