@@ -60,8 +60,6 @@ public class UDModelProvider extends FabricModelProvider {
         darkPorcelainBricks.stairs(UDBlocks.DARK_PORCELAIN_BRICK_STAIRS);
         darkPorcelainBricks.slab(UDBlocks.DARK_PORCELAIN_BRICK_SLAB);
 
-        generator.registerDoor(UDBlocks.STAINLESS_STEEL_DOOR);
-        generator.registerOrientableTrapdoor(UDBlocks.STAINLESS_STEEL_TRAPDOOR);
         registerSteelBars(generator);
     }
 
@@ -87,6 +85,7 @@ public class UDModelProvider extends FabricModelProvider {
         generator.register(UDItems.PICTURE_FRAME, Models.GENERATED);
         generator.register(UDBlocks.STAINLESS_STEEL_LANTERN.asItem(), Models.GENERATED);
         generator.register(UDBlocks.STAINLESS_STEEL_SOUL_LANTERN.asItem(), Models.GENERATED);
+        generator.register(UDBlocks.TOILET_PAPER.asItem(), Models.GENERATED);
 
         for (DyeColor colors : DyeColor.values()) {
             generator.register(UDBlocks.getDyedTowels(colors.getId()).asItem(), Models.GENERATED);

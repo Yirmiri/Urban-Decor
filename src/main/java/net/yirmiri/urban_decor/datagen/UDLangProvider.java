@@ -98,6 +98,7 @@ public class UDLangProvider extends FabricLanguageProvider {
         build.add(UDBlocks.CUPBOARD, "Cupboard");
         build.add(UDBlocks.DARK_CUPBOARD, "Dark Cupboard");
         build.add(UDBlocks.FILING_CABINET, "Filing Cabinet");
+        build.add(UDBlocks.TOILET_PAPER, "Toilet Paper");
 
         //ITEMS
         build.add(UDItems.PORCELAIN, "Porcelain");
@@ -167,6 +168,8 @@ public class UDLangProvider extends FabricLanguageProvider {
         build.add("toolbox.toilet_paper.variant_1", "Variant: Urban");
         build.add("toolbox.steel_door.variant_true", "Variant: Unlocked");
         build.add("toolbox.steel_door.variant_false", "Variant: Locked");
+        build.add("toolbox.turbine.variant_0", "Variant: Non-Vented");
+        build.add("toolbox.turbine.variant_1", "Variant: Vent");
 
         //DAMAGE
         build.add("death.attack.urban_decor.toaster", "%1$s likes to play with toasters while they are on");

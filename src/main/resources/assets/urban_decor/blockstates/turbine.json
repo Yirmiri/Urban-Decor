@@ -1,40 +1,78 @@
 {
   "variants": {
-    "facing=north,on=true": {
+    "facing=north,on=true,variant=0": {
       "model": "urban_decor:block/turbine_on",
       "uvlock": false
     },
-    "facing=south,on=true": {
+    "facing=south,on=true,variant=0": {
       "model": "urban_decor:block/turbine_on",
       "y": 180,
       "uvlock": false
     },
-    "facing=west,on=true": {
+    "facing=west,on=true,variant=0": {
       "model": "urban_decor:block/turbine_on",
       "y": 270,
       "uvlock": false
     },
-    "facing=east,on=true": {
+    "facing=east,on=true,variant=0": {
       "model": "urban_decor:block/turbine_on",
       "y": 90,
       "uvlock": false
     },
-    "facing=north,on=false": {
+    "facing=north,on=false,variant=0": {
       "model": "urban_decor:block/turbine",
       "uvlock": false
     },
-    "facing=south,on=false": {
+    "facing=south,on=false,variant=0": {
       "model": "urban_decor:block/turbine",
       "y": 180,
       "uvlock": false
     },
-    "facing=west,on=false": {
+    "facing=west,on=false,variant=0": {
       "model": "urban_decor:block/turbine",
       "y": 270,
       "uvlock": false
     },
-    "facing=east,on=false": {
+    "facing=east,on=false,variant=0": {
       "model": "urban_decor:block/turbine",
+      "y": 90,
+      "uvlock": false
+    },
+    "facing=north,on=true,variant=1": {
+      "model": "urban_decor:block/turbine_vent",
+      "uvlock": false
+    },
+    "facing=south,on=true,variant=1": {
+      "model": "urban_decor:block/turbine_vent",
+      "y": 180,
+      "uvlock": false
+    },
+    "facing=west,on=true,variant=1": {
+      "model": "urban_decor:block/turbine_vent",
+      "y": 270,
+      "uvlock": false
+    },
+    "facing=east,on=true,variant=1": {
+      "model": "urban_decor:block/turbine_vent",
+      "y": 90,
+      "uvlock": false
+    },
+    "facing=north,on=false,variant=1": {
+      "model": "urban_decor:block/turbine_vent",
+      "uvlock": false
+    },
+    "facing=south,on=false,variant=1": {
+      "model": "urban_decor:block/turbine_vent",
+      "y": 180,
+      "uvlock": false
+    },
+    "facing=west,on=false,variant=1": {
+      "model": "urban_decor:block/turbine_vent",
+      "y": 270,
+      "uvlock": false
+    },
+    "facing=east,on=false,variant=1": {
+      "model": "urban_decor:block/turbine_vent",
       "y": 90,
       "uvlock": false
     }

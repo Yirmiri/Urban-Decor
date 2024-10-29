@@ -76,6 +76,7 @@ public class UDItemGroups {
                 entries.add(UDBlocks.DARK_SINK);
                 entries.add(UDBlocks.TOILET);
                 entries.add(UDBlocks.DARK_TOILET);
+                entries.add(UDBlocks.TOILET_PAPER);
                 entries.add(UDBlocks.BATHTUB);
                 entries.add(UDBlocks.DARK_BATHTUB);
                 entries.add(UDBlocks.WASHING_MACHINE);

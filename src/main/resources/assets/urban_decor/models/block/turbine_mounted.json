@@ -1,8 +1,8 @@
 {
 	"credit": "Made with Blockbench by Tellio-Ari",
 	"textures": {
-		"0": "furniture:turbine",
-		"particle": "furniture:turbine"
+		"0": "urban_decor:block/turbine",
+		"particle": "urban_decor:block/turbine"
 	},
 	"elements": [
 		{
