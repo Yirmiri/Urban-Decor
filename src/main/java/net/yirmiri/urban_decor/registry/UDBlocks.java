@@ -62,6 +62,7 @@ public class UDBlocks {
     public static final Block STAINLESS_STEEL_LANTERN = register("stainless_steel_lantern", new StainlessSteelLanternBlock(UDProperties.BlockP.STEEL_LANTERN), true);
     public static final Block STAINLESS_STEEL_SOUL_LANTERN = register("stainless_steel_soul_lantern", new StainlessSteelLanternBlock(UDProperties.BlockP.STEEL_SOUL_LANTERN), true);
     public static final Block STAINLESS_STEEL_DOOR = register("stainless_steel_door", new StainlessSteelDoorBlock(UDProperties.BlockP.STEEL_DOOR, BlockSetType.STONE), true);
+    public static final Block STAINLESS_STEEL_DOOR_LOCKED = register("stainless_steel_door_locked", new StainlessSteelDoorBlock(UDProperties.BlockP.STEEL_DOOR, BlockSetType.STONE), true);
     public static final Block STAINLESS_STEEL_TRAPDOOR = register("stainless_steel_trapdoor", new StainlessSteelTrapdoorBlock(UDProperties.BlockP.STEEL_TRAPDOOR, BlockSetType.STONE), true);
 
     //DECOR

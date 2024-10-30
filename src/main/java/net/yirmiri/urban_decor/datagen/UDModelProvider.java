@@ -60,6 +60,8 @@ public class UDModelProvider extends FabricModelProvider {
         darkPorcelainBricks.stairs(UDBlocks.DARK_PORCELAIN_BRICK_STAIRS);
         darkPorcelainBricks.slab(UDBlocks.DARK_PORCELAIN_BRICK_SLAB);
 
+        generator.registerDoor(UDBlocks.STAINLESS_STEEL_DOOR);
+        generator.registerDoor(UDBlocks.STAINLESS_STEEL_DOOR_LOCKED);
         registerSteelBars(generator);
     }
 

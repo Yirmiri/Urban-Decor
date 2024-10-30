@@ -7,6 +7,7 @@ import net.minecraft.block.MapColor;
 import net.minecraft.block.piston.PistonBehavior;
 import net.minecraft.item.Item;
 import net.minecraft.sound.BlockSoundGroup;
+import net.yirmiri.urban_decor.registry.UDItems;
 
 public class UDProperties {
     public static class BlockP {
@@ -57,6 +58,6 @@ public class UDProperties {
     public static class ItemP {
         //MISC
         public static final Item.Settings GENERIC_ITEM = new Item.Settings();
-        public static final Item.Settings TOOLBOX = new Item.Settings().maxCount(1);
+        public static final Item.Settings TOOLBOX = new Item.Settings().maxCount(1).recipeRemainder(UDItems.TOOLBOX);
     }
 }

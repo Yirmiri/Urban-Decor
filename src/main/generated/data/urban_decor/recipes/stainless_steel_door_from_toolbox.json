@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "urban_decor:stainless_steel_door_locked"
+    },
+    "@": {
+      "item": "urban_decor:toolbox"
+    }
+  },
+  "pattern": [
+    "#@"
+  ],
+  "result": {
+    "item": "urban_decor:stainless_steel_door"
+  },
+  "show_notification": true
+}

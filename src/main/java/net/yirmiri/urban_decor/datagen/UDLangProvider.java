@@ -99,6 +99,7 @@ public class UDLangProvider extends FabricLanguageProvider {
         build.add(UDBlocks.DARK_CUPBOARD, "Dark Cupboard");
         build.add(UDBlocks.FILING_CABINET, "Filing Cabinet");
         build.add(UDBlocks.TOILET_PAPER, "Toilet Paper");
+        build.add(UDBlocks.STAINLESS_STEEL_DOOR_LOCKED, "Stainless Steel Door (Locked)");
 
         //ITEMS
         build.add(UDItems.PORCELAIN, "Porcelain");

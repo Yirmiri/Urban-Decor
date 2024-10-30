@@ -765,6 +765,18 @@ public class UDRecipeProvider extends FabricRecipeProvider {
                 .pattern("###")
                 .criterion(hasItem(UDItems.STAINLESS_STEEL_NUGGET), conditionsFromItem(UDItems.STAINLESS_STEEL_NUGGET))
                 .offerTo(exporter, Identifier.of(UrbanDecor.MOD_ID, getRecipeName(UDBlocks.STAINLESS_STEEL_SOUL_LANTERN)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, UDBlocks.STAINLESS_STEEL_DOOR_LOCKED, 1)
+                .input('#', UDBlocks.STAINLESS_STEEL_DOOR).input('@', UDItems.TOOLBOX)
+                .pattern("#@")
+                .criterion(hasItem(UDBlocks.STAINLESS_STEEL_DOOR), conditionsFromItem(UDBlocks.STAINLESS_STEEL_DOOR))
+                .offerTo(exporter, Identifier.of(UrbanDecor.MOD_ID, getRecipeName(UDBlocks.STAINLESS_STEEL_DOOR_LOCKED) + "_from_toolbox"));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, UDBlocks.STAINLESS_STEEL_DOOR, 1)
+                .input('#', UDBlocks.STAINLESS_STEEL_DOOR_LOCKED).input('@', UDItems.TOOLBOX)
+                .pattern("#@")
+                .criterion(hasItem(UDBlocks.STAINLESS_STEEL_DOOR_LOCKED), conditionsFromItem(UDBlocks.STAINLESS_STEEL_DOOR_LOCKED))
+                .offerTo(exporter, Identifier.of(UrbanDecor.MOD_ID, getRecipeName(UDBlocks.STAINLESS_STEEL_DOOR) + "_from_toolbox"));
     }
 //yes this only exists so i can name it four for four wendys meal... there is no need for this recipe builder
     public static ShapedRecipeJsonBuilder createFourForFourWendysMealRecipe(ItemConvertible output, Ingredient input) {

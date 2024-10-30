@@ -94,6 +94,7 @@ public class UDBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(UDBlocks.DARK_PORCELAIN_BRICK_SLAB)
                 .add(UDBlocks.STEEL_PIPE)
                 .add(UDBlocks.STAINLESS_STEEL_DOOR)
+                .add(UDBlocks.STAINLESS_STEEL_DOOR_LOCKED)
                 .add(UDBlocks.STAINLESS_STEEL_TRAPDOOR)
                 .add(UDBlocks.STAINLESS_STEEL_LANTERN)
                 .add(UDBlocks.STAINLESS_STEEL_SOUL_LANTERN)

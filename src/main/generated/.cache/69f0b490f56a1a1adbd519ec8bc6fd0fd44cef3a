@@ -1,4 +1,4 @@
-// 1.20.1	2024-10-29T00:03:28.1027875	Urban Decor/Block Loot Tables
+// 1.20.1	2024-10-29T17:39:36.6851384	Urban Decor/Block Loot Tables
 683e8d4f13004d41dd82cdda8656c53877b1bf6c data\urban_decor\loot_tables\blocks\wall_microwave.json
 b7d90d9d6a6a60674c5466062f50eaeeafcdf939 data\urban_decor\loot_tables\blocks\towel_bar.json
 01986f7194425d078447c1a231bdc57dc3d3c83c data\urban_decor\loot_tables\blocks\white_wall_picture_frame.json
@@ -14,6 +14,7 @@ acce953fb38287bfcb358f70fc5222b001ef8b92 data\urban_decor\loot_tables\blocks\pur
 cb1ebdac90b302593a9be786df9e63b5e1a2a888 data\urban_decor\loot_tables\blocks\toilet_paper.json
 02efd8b94ed7b1a75cb596aecb08a79579ab148c data\urban_decor\loot_tables\blocks\towel_bar_light_gray_towel.json
 1493f9f56646e8d221456c149cf32780090d4c6c data\urban_decor\loot_tables\blocks\towel_bar_pink_towel.json
+9923b5c2efd72d3173681312d090bd069c95e9c8 data\urban_decor\loot_tables\blocks\stainless_steel_door_locked.json
 7943fe0aaddbe44cd527bcbcf411734f86fb0580 data\urban_decor\loot_tables\blocks\white_towel.json
 5c373ccf844dfaf651b0abc1f8935114309d14c6 data\urban_decor\loot_tables\blocks\magenta_towel.json
 bcc97a64876804c9fcfaf6158ddec9efe820d710 data\urban_decor\loot_tables\blocks\trash_can.json

@@ -69,7 +69,6 @@ public class UDLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(UDBlocks.DARK_SINK);
         addDyedTowelsDrops();
         addDrop(UDBlocks.TOWEL_BAR);
-        addTowelBarTowelDrops();
         addDrop(UDBlocks.SHOWER);
         addDrop(UDBlocks.BATHTUB, longBlockDrops(UDBlocks.BATHTUB));
         addDrop(UDBlocks.DARK_BATHTUB, longBlockDrops(UDBlocks.DARK_BATHTUB));
@@ -102,6 +101,8 @@ public class UDLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(UDBlocks.STAINLESS_STEEL_LANTERN);
         addDrop(UDBlocks.STAINLESS_STEEL_SOUL_LANTERN);
         addDrop(UDBlocks.STAINLESS_STEEL_BARS);
+        addTowelBarTowelDrops();
+        addDrop(UDBlocks.STAINLESS_STEEL_DOOR_LOCKED, doorDrops(UDBlocks.STAINLESS_STEEL_DOOR_LOCKED));
     }
 
     private void addDyedTowelBlockDrops() {
@@ -119,6 +120,7 @@ public class UDLootTableProvider extends FabricBlockLootTableProvider {
     private void addTowelBarTowelDrops() {
         for (DyeColor colors : DyeColor.values()) {
             addDrop(UDBlocks.getDyedTowelBarTowels(colors.getId()), UDBlocks.getDyedTowels(colors.getId()));
+            addDrop(UDBlocks.TOWEL_BAR);
         }
     }
 

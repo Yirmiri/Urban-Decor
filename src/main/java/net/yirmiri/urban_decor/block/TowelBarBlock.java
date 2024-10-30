@@ -26,25 +26,21 @@ import java.util.stream.Stream;
 
 public class TowelBarBlock extends AbstractDecorBlock {
     private static final VoxelShape SHAPE_NORTH = Stream.of(
-            Block.createCuboidShape(0.03, 13.01, 13.99, 1.99, 14.97, 17.95),
-            Block.createCuboidShape(0.02, 13.01, 12.03, 15.98, 14.97, 13.99),
-            Block.createCuboidShape(14.01, 13.01, 13.99, 15.97, 14.97, 17.95)
-    ).reduce((v1, v2) -> VoxelShapes.combineAndSimplify(v1, v2, BooleanBiFunction.OR)).get();
+            Block.createCuboidShape(0, 14, 14, 2, 16, 16),
+            Block.createCuboidShape(14, 14, 14, 16, 16, 16),
+            Block.createCuboidShape(0, 14, 12, 16, 16, 14)).reduce((v1, v2) -> VoxelShapes.combineAndSimplify(v1, v2, BooleanBiFunction.OR)).get();
     private static final VoxelShape SHAPE_WEST = Stream.of(
-            Block.createCuboidShape(14.05, 13.01, 0.03000000000000025, 18.009999999999998, 14.97, 1.9900000000000002),
-            Block.createCuboidShape(12.01, 13.01, 0.020000000000000018, 13.97, 14.97, 15.98),
-            Block.createCuboidShape(14.05, 13.01, 14.009999999999998, 18.009999999999998, 14.97, 15.969999999999999)
-    ).reduce((v1, v2) -> VoxelShapes.combineAndSimplify(v1, v2, BooleanBiFunction.OR)).get();
+            Block.createCuboidShape(14, 14, 14, 16, 16, 16),
+            Block.createCuboidShape(14, 14, 0, 16, 16, 2),
+            Block.createCuboidShape(12, 14, 0, 14, 16, 16)).reduce((v1, v2) -> VoxelShapes.combineAndSimplify(v1, v2, BooleanBiFunction.OR)).get();
     private static final VoxelShape SHAPE_EAST = Stream.of(
-            Block.createCuboidShape(-1.9499999999999993, 13.01, 0.03000000000000025, 2.009999999999998, 14.97, 1.9900000000000002),
-            Block.createCuboidShape(2.01, 13.01, 0.020000000000000018, 3.9700000000000006, 14.97, 15.98),
-            Block.createCuboidShape(-1.9499999999999993, 13.01, 14.009999999999998, 2.009999999999998, 14.97, 15.969999999999999)
-    ).reduce((v1, v2) -> VoxelShapes.combineAndSimplify(v1, v2, BooleanBiFunction.OR)).get();
+            Block.createCuboidShape(0, 14, 0, 2, 16, 2),
+            Block.createCuboidShape(0, 14, 14, 2, 16, 16),
+            Block.createCuboidShape(2, 14, 0, 4, 16, 16)).reduce((v1, v2) -> VoxelShapes.combineAndSimplify(v1, v2, BooleanBiFunction.OR)).get();
     private static final VoxelShape SHAPE_SOUTH = Stream.of(
-            Block.createCuboidShape(0.03, 13.01, -2.01, 1.99, 14.97, 1.9499999999999993),
-            Block.createCuboidShape(0.02, 13.01, 2.0299999999999994, 15.98, 14.97, 3.99),
-            Block.createCuboidShape(14.01, 13.01, -2.01, 15.97, 14.97, 1.9499999999999993)
-    ).reduce((v1, v2) -> VoxelShapes.combineAndSimplify(v1, v2, BooleanBiFunction.OR)).get();
+            Block.createCuboidShape(14, 14, 0, 16, 16, 2),
+            Block.createCuboidShape(0, 14, 0, 2, 16, 2),
+            Block.createCuboidShape(0, 14, 2, 16, 16, 4)).reduce((v1, v2) -> VoxelShapes.combineAndSimplify(v1, v2, BooleanBiFunction.OR)).get();
 
     public TowelBarBlock(Settings settings) {
         super(settings);

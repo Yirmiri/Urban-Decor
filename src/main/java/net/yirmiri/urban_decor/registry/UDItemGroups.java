@@ -60,6 +60,7 @@ public class UDItemGroups {
 
                 entries.add(UDBlocks.STAINLESS_STEEL_BLOCK);
                 entries.add(UDBlocks.STAINLESS_STEEL_DOOR);
+                entries.add(UDBlocks.STAINLESS_STEEL_DOOR_LOCKED);
                 entries.add(UDBlocks.STAINLESS_STEEL_TRAPDOOR);
                 entries.add(UDBlocks.STAINLESS_STEEL_LANTERN);
                 entries.add(UDBlocks.STAINLESS_STEEL_SOUL_LANTERN);
