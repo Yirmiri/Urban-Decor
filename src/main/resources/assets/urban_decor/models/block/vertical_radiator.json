@@ -1,8 +1,8 @@
 {
 	"credit": "Made with Blockbench by Tellio-Ari",
 	"textures": {
-		"0": "furniture:vertical_radiator",
-		"particle": "furniture:vertical_radiator"
+		"0": "urban_decor:block/vertical_radiator",
+		"particle": "urban_decor:block/vertical_radiator"
 	},
 	"elements": [
 		{
@@ -71,9 +71,9 @@
 			}
 		},
 		{
-			"from": [0, 0, 15.97],
-			"to": [16, 16, 15.97],
-			"rotation": {"angle": 0, "axis": "y", "origin": [0, 0, 15.9]},
+			"from": [0, 0, 15.27],
+			"to": [16, 16, 15.27],
+			"rotation": {"angle": 0, "axis": "y", "origin": [0, 0, 15.2]},
 			"faces": {
 				"north": {"uv": [0, 0, 16, 16], "texture": "#0"},
 				"east": {"uv": [0, 0, 0, 16], "texture": "#missing"},

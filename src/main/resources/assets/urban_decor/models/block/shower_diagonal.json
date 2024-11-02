@@ -2,7 +2,7 @@
 	"credit": "Made with Blockbench by Tellio-Ari",
 	"textures": {
 		"0": "urban_decor:block/shower",
-		"particle": "urban_decor:block/shower"
+		"particle": "urban_decor:block/shower_particle"
 	},
 	"elements": [
 		{
@@ -16,19 +16,6 @@
 				"west": {"uv": [10, 8, 0, 10], "texture": "#0"},
 				"up": {"uv": [10, 6, 0, 8], "rotation": 90, "texture": "#0"},
 				"down": {"uv": [0, 10, 10, 12], "rotation": 90, "texture": "#0"}
-			}
-		},
-		{
-			"from": [5, 6, 6],
-			"to": [11, 8, 12],
-			"rotation": {"angle": 0, "axis": "y", "origin": [5, 6, 6]},
-			"faces": {
-				"north": {"uv": [1, 5, 7, 7], "texture": "#0"},
-				"east": {"uv": [7, 5, 1, 7], "texture": "#0"},
-				"south": {"uv": [1, 5, 7, 7], "texture": "#0"},
-				"west": {"uv": [7, 5, 1, 7], "texture": "#0"},
-				"up": {"uv": [6, 0, 12, 6], "texture": "#0"},
-				"down": {"uv": [0, 0, 6, 6], "texture": "#0"}
 			}
 		},
 		{
