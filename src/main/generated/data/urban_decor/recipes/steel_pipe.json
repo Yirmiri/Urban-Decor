@@ -4,10 +4,15 @@
   "key": {
     "#": {
       "item": "urban_decor:stainless_steel_ingot"
+    },
+    "@": {
+      "item": "urban_decor:stainless_steel_nugget"
     }
   },
   "pattern": [
-    "##"
+    "@",
+    "#",
+    "@"
   ],
   "result": {
     "count": 2,

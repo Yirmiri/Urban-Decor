@@ -102,7 +102,6 @@ public class UDLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(UDBlocks.STAINLESS_STEEL_SOUL_LANTERN);
         addDrop(UDBlocks.STAINLESS_STEEL_BARS);
         addTowelBarTowelDrops();
-        addDrop(UDBlocks.STAINLESS_STEEL_DOOR_LOCKED, doorDrops(UDBlocks.STAINLESS_STEEL_DOOR_LOCKED));
     }
 
     private void addDyedTowelBlockDrops() {

@@ -2,12 +2,15 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
+    "#": {
+      "item": "urban_decor:steel_pipe"
+    },
     "@": {
-      "item": "urban_decor:stainless_steel_ingot"
+      "item": "urban_decor:stainless_steel_nugget"
     }
   },
   "pattern": [
-    "@@@"
+    "@#@"
   ],
   "result": {
     "item": "urban_decor:towel_bar"

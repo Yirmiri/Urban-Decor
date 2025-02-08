@@ -24,10 +24,10 @@ import net.yirmiri.urban_decor.util.UDUtils;
 public class ToiletPaperBlock extends AbstractDecorBlock {
     public static final IntProperty VARIANT = IntProperty.of("variant", 0, 1);
 
-    private static final VoxelShape SHAPE_NORTH = Block.createCuboidShape(4, 7, 11, 12, 12, 16);
-    private static final VoxelShape SHAPE_WEST = Block.createCuboidShape(11, 7, 5, 16, 12, 13);
-    private static final VoxelShape SHAPE_EAST = Block.createCuboidShape(0, 7, 5, 5, 12, 13);
-    private static final VoxelShape SHAPE_SOUTH = Block.createCuboidShape(4, 7, 0, 12, 12, 5);
+    private static final VoxelShape SHAPE_NORTH = Block.createCuboidShape(4, 6, 10, 12, 11, 15);
+    private static final VoxelShape SHAPE_WEST = Block.createCuboidShape(10, 6, 4, 15, 11, 12);
+    private static final VoxelShape SHAPE_EAST = Block.createCuboidShape(1, 6, 4, 6, 11, 12);
+    private static final VoxelShape SHAPE_SOUTH = Block.createCuboidShape(4, 6, 1, 12, 11, 6);
 
     private static final VoxelShape SHAPE_COMMERCIAL_NORTH = Block.createCuboidShape(2, 4, 13, 14, 12, 16);
     private static final VoxelShape SHAPE_COMMERCIAL_WEST = Block.createCuboidShape(13, 4, 2, 16, 12, 14);

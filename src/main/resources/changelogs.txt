@@ -9,4 +9,10 @@ Version Release v1.0.0 Fabric-1.20.1
   Additions
 •   Released the mod
 
+  Notes
+•   This mod is a project that had been in development for months, most of which it was stuck at a "99% done" standing.
+This was back when I was a Fabric only developer, I plan to rewrite the mod's code for MultiLoader and also just to better the code itself
+like the rest of my projects then after which new content updates may release.
+I decided since it is in a playable state I may aswell release this version of the mod, so enjoy :)
+
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

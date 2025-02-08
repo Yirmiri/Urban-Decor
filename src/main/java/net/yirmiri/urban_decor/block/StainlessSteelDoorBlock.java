@@ -11,7 +11,6 @@ import net.minecraft.sound.SoundEvents;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.BooleanProperty;
 import net.minecraft.state.property.Properties;
-import net.minecraft.text.Text;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
 import net.minecraft.util.hit.BlockHitResult;
@@ -19,9 +18,7 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
 import net.minecraft.world.World;
 import net.minecraft.world.event.GameEvent;
-import net.yirmiri.urban_decor.datagen.UDItemTagProvider;
 import net.yirmiri.urban_decor.registry.UDBlocks;
-import net.yirmiri.urban_decor.util.UDUtils;
 import org.jetbrains.annotations.Nullable;
 
 public class StainlessSteelDoorBlock extends DoorBlock {
@@ -49,7 +46,7 @@ public class StainlessSteelDoorBlock extends DoorBlock {
 //            player.sendMessage(Text.translatable("toolbox.steel_door.variant_" + state.get(LOCKED)), true);
 //            return ActionResult.SUCCESS;
 //        }
-        if (!this.blockSetType.canOpenByHand() || state.get(LOCKED) || state.isOf(UDBlocks.STAINLESS_STEEL_DOOR_LOCKED)) {
+        if (!this.blockSetType.canOpenByHand() || state.get(LOCKED)) {
             return ActionResult.PASS;
         } else {
             state = state.cycle(OPEN);

@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_stainless_steel_door": {
+    "has_stainless_steel_ingot": {
       "conditions": {
         "items": [
           {
             "items": [
-              "urban_decor:stainless_steel_door"
+              "urban_decor:stainless_steel_ingot"
             ]
           }
         ]
@@ -15,20 +15,20 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "urban_decor:stainless_steel_door_locked_from_toolbox"
+        "recipe": "urban_decor:stainless_steel_door"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_stainless_steel_door",
+      "has_stainless_steel_ingot",
       "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "urban_decor:stainless_steel_door_locked_from_toolbox"
+      "urban_decor:stainless_steel_door"
     ]
   },
   "sends_telemetry_event": false

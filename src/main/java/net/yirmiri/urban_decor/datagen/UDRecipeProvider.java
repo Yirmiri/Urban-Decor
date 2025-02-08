@@ -112,8 +112,10 @@ public class UDRecipeProvider extends FabricRecipeProvider {
         offerReversibleCompactingRecipes(exporter, RecipeCategory.MISC, UDItems.STAINLESS_STEEL_INGOT, RecipeCategory.BUILDING_BLOCKS, UDBlocks.STAINLESS_STEEL_BLOCK);
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, UDItems.STEEL_PIPE, 2)
-                .input('#', UDItems.STAINLESS_STEEL_INGOT)
-                .pattern("##")
+                .input('#', UDItems.STAINLESS_STEEL_INGOT).input('@', UDItems.STAINLESS_STEEL_NUGGET)
+                .pattern("@")
+                .pattern("#")
+                .pattern("@")
                 .criterion(hasItem(UDItems.STAINLESS_STEEL_INGOT), conditionsFromItem(UDItems.STAINLESS_STEEL_INGOT))
                 .offerTo(exporter, Identifier.of(UrbanDecor.MOD_ID, getRecipeName(UDItems.STEEL_PIPE)));
 
@@ -278,8 +280,8 @@ public class UDRecipeProvider extends FabricRecipeProvider {
                 .offerTo(exporter, Identifier.of(UrbanDecor.MOD_ID, getRecipeName(UDBlocks.STOVE)));
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, UDBlocks.TOASTER, 1)
-                .input('@', UDItems.STAINLESS_STEEL_INGOT).input('#', Items.MAGMA_BLOCK).input('!', Items.REDSTONE)
-                .pattern("@!@")
+                .input('@', UDItems.STAINLESS_STEEL_INGOT).input('#', Items.MAGMA_BLOCK).input('!', Items.REDSTONE).input('%', UDItems.STAINLESS_STEEL_NUGGET)
+                .pattern("%!%")
                 .pattern("@#@")
                 .criterion(hasItem(UDItems.STAINLESS_STEEL_INGOT), conditionsFromItem(UDItems.STAINLESS_STEEL_INGOT))
                 .offerTo(exporter, Identifier.of(UrbanDecor.MOD_ID, getRecipeName(UDBlocks.TOASTER)));
@@ -293,25 +295,26 @@ public class UDRecipeProvider extends FabricRecipeProvider {
                 .offerTo(exporter, Identifier.of(UrbanDecor.MOD_ID, getRecipeName(UDItems.MICROWAVE)));
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, UDBlocks.TRASH_CAN, 1)
-                .input('@', UDItems.STAINLESS_STEEL_INGOT)
-                .pattern("@ @")
-                .pattern(" @ ")
+                .input('@', UDItems.STAINLESS_STEEL_INGOT).input('#', UDItems.STAINLESS_STEEL_NUGGET)
+                .pattern("# #")
+                .pattern("# #")
+                .pattern("#@#")
                 .criterion(hasItem(UDItems.STAINLESS_STEEL_INGOT), conditionsFromItem(UDItems.STAINLESS_STEEL_INGOT))
                 .offerTo(exporter, Identifier.of(UrbanDecor.MOD_ID, getRecipeName(UDBlocks.TRASH_CAN)));
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, UDBlocks.DESK_FAN, 1)
-                .input('@', UDItems.STAINLESS_STEEL_INGOT).input('!', Items.REDSTONE)
-                .pattern(" @ ")
-                .pattern(" @ ")
-                .pattern("@!@")
+                .input('@', UDItems.STAINLESS_STEEL_INGOT).input('!', Items.REDSTONE).input('#', UDItems.STAINLESS_STEEL_NUGGET)
+                .pattern("#!#")
+                .pattern(" # ")
+                .pattern("#@#")
                 .criterion(hasItem(UDItems.STAINLESS_STEEL_INGOT), conditionsFromItem(UDItems.STAINLESS_STEEL_INGOT))
                 .offerTo(exporter, Identifier.of(UrbanDecor.MOD_ID, getRecipeName(UDBlocks.DESK_FAN)));
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, UDBlocks.TURBINE, 1)
-                .input('@', UDItems.STAINLESS_STEEL_INGOT).input('!', Items.REDSTONE)
-                .pattern("@@@")
-                .pattern(" @ ")
-                .pattern("@!@")
+                .input('@', UDItems.STAINLESS_STEEL_INGOT).input('!', Items.REDSTONE).input('#', UDItems.STAINLESS_STEEL_NUGGET)
+                .pattern("#@#")
+                .pattern(" # ")
+                .pattern("#!#")
                 .criterion(hasItem(UDItems.STAINLESS_STEEL_INGOT), conditionsFromItem(UDItems.STAINLESS_STEEL_INGOT))
                 .offerTo(exporter, Identifier.of(UrbanDecor.MOD_ID, getRecipeName(UDBlocks.TURBINE)));
 
@@ -341,8 +344,8 @@ public class UDRecipeProvider extends FabricRecipeProvider {
                 .offerTo(exporter, Identifier.of(UrbanDecor.MOD_ID, getRecipeName(UDBlocks.SHOWER)));
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, UDBlocks.TOWEL_BAR, 1)
-                .input('@', UDItems.STAINLESS_STEEL_INGOT)
-                .pattern("@@@")
+                .input('@', UDItems.STAINLESS_STEEL_NUGGET).input('#', UDItems.STEEL_PIPE)
+                .pattern("@#@")
                 .criterion(hasItem(UDItems.STAINLESS_STEEL_INGOT), conditionsFromItem(UDItems.STAINLESS_STEEL_INGOT))
                 .offerTo(exporter, Identifier.of(UrbanDecor.MOD_ID, getRecipeName(UDBlocks.TOWEL_BAR)));
 
@@ -555,11 +558,11 @@ public class UDRecipeProvider extends FabricRecipeProvider {
                 .offerTo(exporter, Identifier.of(UrbanDecor.MOD_ID, getRecipeName(UDBlocks.getDyedTowelBlocks(DyeColor.BROWN.getId()))));
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, UDBlocks.RIGID_GLASS, 3)
-                .input('#', UDItems.STAINLESS_STEEL_INGOT).input('@', Items.GLASS_PANE)
+                .input('#', UDItems.STAINLESS_STEEL_NUGGET).input('@', Items.GLASS_PANE)
                 .pattern("#@#")
                 .pattern("#@#")
                 .pattern("#@#")
-                .criterion(hasItem(UDItems.STAINLESS_STEEL_INGOT), conditionsFromItem(UDItems.STAINLESS_STEEL_INGOT))
+                .criterion(hasItem(UDItems.STAINLESS_STEEL_NUGGET), conditionsFromItem(UDItems.STAINLESS_STEEL_NUGGET))
                 .offerTo(exporter, Identifier.of(UrbanDecor.MOD_ID, getRecipeName(UDBlocks.RIGID_GLASS)));
 
         for (DyeColor colors : DyeColor.values()) {
@@ -611,10 +614,10 @@ public class UDRecipeProvider extends FabricRecipeProvider {
                 .offerTo(exporter, Identifier.of(UrbanDecor.MOD_ID, getRecipeName(UDBlocks.TOILET_PAPER)));
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, UDItems.SATELLITE_DISH, 1)
-                .input('@', UDItems.STAINLESS_STEEL_INGOT).input('!', Items.AMETHYST_SHARD)
-                .pattern("@ !")
+                .input('@', UDItems.STAINLESS_STEEL_INGOT).input('!', Items.AMETHYST_SHARD).input('#', UDItems.STAINLESS_STEEL_NUGGET)
+                .pattern("# !")
                 .pattern(" @ ")
-                .pattern("@ @")
+                .pattern("@ #")
                 .criterion(hasItem(UDItems.STAINLESS_STEEL_INGOT), conditionsFromItem(UDItems.STAINLESS_STEEL_INGOT))
                 .offerTo(exporter, Identifier.of(UrbanDecor.MOD_ID, getRecipeName(UDItems.SATELLITE_DISH)));
 
@@ -746,10 +749,6 @@ public class UDRecipeProvider extends FabricRecipeProvider {
         offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, UDBlocks.DARK_PORCELAIN_BRICK_STAIRS, UDBlocks.DARK_PORCELAIN_BRICKS, 1);
         offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, UDBlocks.DARK_PORCELAIN_BRICK_SLAB, UDBlocks.DARK_PORCELAIN_BRICKS, 2);
 
-        createDoorRecipe(UDBlocks.STAINLESS_STEEL_DOOR, Ingredient.ofItems(UDItems.STAINLESS_STEEL_INGOT));
-        createTrapdoorRecipe(UDBlocks.STAINLESS_STEEL_DOOR, Ingredient.ofItems(UDItems.STAINLESS_STEEL_INGOT));
-        offerStainedGlassPaneRecipe(exporter, UDBlocks.STAINLESS_STEEL_BARS, UDItems.STAINLESS_STEEL_INGOT);
-
         ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, UDBlocks.STAINLESS_STEEL_LANTERN, 1)
                 .input('#', UDItems.STAINLESS_STEEL_NUGGET).input('@', Items.TORCH)
                 .pattern("###")
@@ -766,19 +765,29 @@ public class UDRecipeProvider extends FabricRecipeProvider {
                 .criterion(hasItem(UDItems.STAINLESS_STEEL_NUGGET), conditionsFromItem(UDItems.STAINLESS_STEEL_NUGGET))
                 .offerTo(exporter, Identifier.of(UrbanDecor.MOD_ID, getRecipeName(UDBlocks.STAINLESS_STEEL_SOUL_LANTERN)));
 
-        ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, UDBlocks.STAINLESS_STEEL_DOOR_LOCKED, 1)
-                .input('#', UDBlocks.STAINLESS_STEEL_DOOR).input('@', UDItems.TOOLBOX)
-                .pattern("#@")
-                .criterion(hasItem(UDBlocks.STAINLESS_STEEL_DOOR), conditionsFromItem(UDBlocks.STAINLESS_STEEL_DOOR))
-                .offerTo(exporter, Identifier.of(UrbanDecor.MOD_ID, getRecipeName(UDBlocks.STAINLESS_STEEL_DOOR_LOCKED) + "_from_toolbox"));
+        ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, UDBlocks.STAINLESS_STEEL_DOOR, 3)
+                .input('#', UDItems.STAINLESS_STEEL_INGOT)
+                .pattern("##")
+                .pattern("##")
+                .pattern("##")
+                .criterion(hasItem(UDItems.STAINLESS_STEEL_INGOT), conditionsFromItem(UDItems.STAINLESS_STEEL_INGOT))
+                .offerTo(exporter, Identifier.of(UrbanDecor.MOD_ID, getRecipeName(UDBlocks.STAINLESS_STEEL_DOOR)));
 
-        ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, UDBlocks.STAINLESS_STEEL_DOOR, 1)
-                .input('#', UDBlocks.STAINLESS_STEEL_DOOR_LOCKED).input('@', UDItems.TOOLBOX)
-                .pattern("#@")
-                .criterion(hasItem(UDBlocks.STAINLESS_STEEL_DOOR_LOCKED), conditionsFromItem(UDBlocks.STAINLESS_STEEL_DOOR_LOCKED))
-                .offerTo(exporter, Identifier.of(UrbanDecor.MOD_ID, getRecipeName(UDBlocks.STAINLESS_STEEL_DOOR) + "_from_toolbox"));
+        ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, UDBlocks.STAINLESS_STEEL_TRAPDOOR, 1)
+                .input('#', UDItems.STAINLESS_STEEL_INGOT)
+                .pattern("##")
+                .pattern("##")
+                .criterion(hasItem(UDItems.STAINLESS_STEEL_INGOT), conditionsFromItem(UDItems.STAINLESS_STEEL_INGOT))
+                .offerTo(exporter, Identifier.of(UrbanDecor.MOD_ID, getRecipeName(UDBlocks.STAINLESS_STEEL_TRAPDOOR)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, UDBlocks.STAINLESS_STEEL_BARS, 16)
+                .input('#', UDItems.STAINLESS_STEEL_INGOT)
+                .pattern("###")
+                .pattern("###")
+                .criterion(hasItem(UDItems.STAINLESS_STEEL_INGOT), conditionsFromItem(UDItems.STAINLESS_STEEL_INGOT))
+                .offerTo(exporter, Identifier.of(UrbanDecor.MOD_ID, getRecipeName(UDBlocks.STAINLESS_STEEL_BARS)));
     }
-//yes this only exists so i can name it four for four wendys meal... there is no need for this recipe builder
+
     public static ShapedRecipeJsonBuilder createFourForFourWendysMealRecipe(ItemConvertible output, Ingredient input) {
         return ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, output, 4)
                 .input('#', input)

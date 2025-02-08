@@ -3,19 +3,15 @@
   "category": "misc",
   "key": {
     "#": {
-      "item": "urban_decor:stainless_steel_nugget"
-    },
-    "@": {
       "item": "urban_decor:stainless_steel_ingot"
     }
   },
   "pattern": [
-    "# #",
-    "# #",
-    "#@#"
+    "##",
+    "##"
   ],
   "result": {
-    "item": "urban_decor:trash_can"
+    "item": "urban_decor:stainless_steel_trapdoor"
   },
   "show_notification": true
 }
