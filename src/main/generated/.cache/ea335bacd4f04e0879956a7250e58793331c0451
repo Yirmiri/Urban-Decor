@@ -1,4 +1,4 @@
-// 1.20.1	2025-02-08T00:06:43.3459158	Urban Decor/Recipes
+// 1.20.1	2025-02-08T01:23:47.6316349	Urban Decor/Recipes
 58da4cbea1164dcf48bfdd5e71f8efcfa6d010b7 data\urban_decor\advancements\recipes\decorations\light_blue_picture_frame.json
 4eb5730b04cbb4f5875c5a8631d0fcd889014c38 data\urban_decor\recipes\black_picture_frame.json
 214559f04acdd82af61bf24ba31e1fe1f6cb9d19 data\urban_decor\advancements\recipes\building_blocks\dark_porcelain_stairs_from_dark_porcelain_block_stonecutting.json
@@ -92,6 +92,7 @@ b2d2f86c09d25d438a71b00112b1f75090a484d9 data\urban_decor\advancements\recipes\b
 1ae4367c2c33af9e0adff5042cfe8c8dfe61f87c data\urban_decor\recipes\polished_chromite_slab.json
 513e44eb8867c2bc241ac2418f65280501db51e9 data\urban_decor\advancements\recipes\building_blocks\polished_chromite.json
 6a302dbc07825d327f85dffdd429addf0ff72a60 data\urban_decor\recipes\yellow_towel_block.json
+1a959262beed9d58a285613edb316dde2fa6fc18 data\urban_decor\advancements\recipes\decorations\floor_lamp.json
 7ea893995400e5418898ce8f367b16357cd81bdc data\urban_decor\recipes\stainless_steel_lantern.json
 7bbdf5e6998a003ab510c2cb57543ea30fddca22 data\urban_decor\advancements\recipes\decorations\washing_machine.json
 baf9dbeca1c28b273e0f24cf2f7fd5b49d6255b9 data\urban_decor\recipes\shower.json
@@ -284,6 +285,7 @@ ae2ede31293b78bcb837258e9c2ea6ef720a1034 data\urban_decor\recipes\dark_porcelain
 1cfa7dd3371e1105c078739c17f3ffaeac95d1d0 data\urban_decor\recipes\stainless_steel_ingot_from_chromite.json
 5d66cf75e0140a178fa0f24677b0745385eb5bd8 data\urban_decor\advancements\recipes\decorations\purple_picture_frame_from_base.json
 908518a48ef92d69201a518e4800430ee2621f96 data\urban_decor\recipes\light_blue_picture_frame.json
+0dcbca6260dd881890dfda2f6d75203785f10939 data\urban_decor\recipes\floor_lamp.json
 7f32cc4e07b4310451a39398b11d2772701c826d data\urban_decor\advancements\recipes\decorations\cyan_towel.json
 2c687ad2f46005bf9b69f1fc3d578067fb6ebfaa data\urban_decor\advancements\recipes\decorations\toilet.json
 793be4427e6fce5771cba58a94ffe6f94bee7b7c data\urban_decor\recipes\filing_cabinet.json

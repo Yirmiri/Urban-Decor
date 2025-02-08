@@ -91,6 +91,7 @@ public class UDBlocks {
     public static final Block TOILET_PAPER = register("toilet_paper", new ToiletPaperBlock(UDProperties.BlockP.TOILET_PAPER), true);
     public static final Block MICROWAVE = register("microwave", new MicrowaveBlock(UDProperties.BlockP.MICROWAVE), false);
     public static final Block WALL_MICROWAVE = register("wall_microwave", new MicrowaveWallBlock(UDProperties.BlockP.MICROWAVE), false);
+    public static final Block FLOOR_LAMP = register("floor_lamp", new FloorLampBlock(UDProperties.BlockP.FLOOR_LAMP), true);
 
     //MISC APPLIANCES
     public static final Block TOOLBOX = register("toolbox", new ToolboxBlock(UDProperties.BlockP.TOOLBOX), false);

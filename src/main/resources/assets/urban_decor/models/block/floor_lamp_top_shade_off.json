@@ -1,9 +1,9 @@
 {
 	"credit": "Made with Blockbench by Tellio-Ari",
 	"textures": {
-		"0": "furniture:floor_lamp",
-		"1": "furniture:floor_lamp_shade",
-		"particle": "furniture:floor_lamp"
+		"0": "urban_decor:block/floor_lamp",
+		"1": "urban_decor:block/floor_lamp_shade",
+		"particle": "urban_decor:block/floor_lamp"
 	},
 	"elements": [
 		{

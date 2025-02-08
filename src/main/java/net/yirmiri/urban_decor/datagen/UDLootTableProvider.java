@@ -3,7 +3,9 @@ package net.yirmiri.urban_decor.datagen;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootTableProvider;
 import net.minecraft.block.Block;
+import net.minecraft.block.DoorBlock;
 import net.minecraft.block.enums.BedPart;
+import net.minecraft.block.enums.DoubleBlockHalf;
 import net.minecraft.enchantment.Enchantments;
 import net.minecraft.item.ItemConvertible;
 import net.minecraft.item.Items;
@@ -14,6 +16,7 @@ import net.minecraft.loot.entry.ItemEntry;
 import net.minecraft.loot.entry.LeafEntry;
 import net.minecraft.loot.provider.number.ConstantLootNumberProvider;
 import net.minecraft.util.DyeColor;
+import net.yirmiri.urban_decor.block.FloorLampBlock;
 import net.yirmiri.urban_decor.block.abstracts.AbstractLongBlock;
 import net.yirmiri.urban_decor.registry.UDBlocks;
 import net.yirmiri.urban_decor.registry.UDItems;
@@ -102,6 +105,11 @@ public class UDLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(UDBlocks.STAINLESS_STEEL_SOUL_LANTERN);
         addDrop(UDBlocks.STAINLESS_STEEL_BARS);
         addTowelBarTowelDrops();
+        addDrop(UDBlocks.FLOOR_LAMP, floorLampDrops(UDBlocks.FLOOR_LAMP));
+    }
+
+    public LootTable.Builder floorLampDrops(Block block) {
+        return this.dropsWithProperty(block, FloorLampBlock.HALF, DoubleBlockHalf.LOWER);
     }
 
     private void addDyedTowelBlockDrops() {

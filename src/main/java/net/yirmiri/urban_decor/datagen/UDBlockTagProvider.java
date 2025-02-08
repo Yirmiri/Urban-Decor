@@ -98,6 +98,7 @@ public class UDBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(UDBlocks.STAINLESS_STEEL_LANTERN)
                 .add(UDBlocks.STAINLESS_STEEL_SOUL_LANTERN)
                 .add(UDBlocks.STAINLESS_STEEL_BARS)
+                .add(UDBlocks.FLOOR_LAMP)
         ;
 
         for (DyeColor colors : DyeColor.values()) {

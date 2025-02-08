@@ -14,6 +14,7 @@ import net.minecraft.item.ItemConvertible;
 import net.minecraft.item.Items;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.recipe.book.RecipeCategory;
+import net.minecraft.registry.tag.ItemTags;
 import net.minecraft.util.DyeColor;
 import net.minecraft.util.Identifier;
 import net.yirmiri.urban_decor.UrbanDecor;
@@ -786,6 +787,15 @@ public class UDRecipeProvider extends FabricRecipeProvider {
                 .pattern("###")
                 .criterion(hasItem(UDItems.STAINLESS_STEEL_INGOT), conditionsFromItem(UDItems.STAINLESS_STEEL_INGOT))
                 .offerTo(exporter, Identifier.of(UrbanDecor.MOD_ID, getRecipeName(UDBlocks.STAINLESS_STEEL_BARS)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, UDBlocks.FLOOR_LAMP, 1)
+                .input('#', UDItems.STAINLESS_STEEL_INGOT).input('@', Items.GLOWSTONE)
+                .input('!', UDItems.STAINLESS_STEEL_NUGGET).input('%', ItemTags.WOOL)
+                .pattern("%@%")
+                .pattern(" # ")
+                .pattern("!#!")
+                .criterion(hasItem(UDItems.STAINLESS_STEEL_INGOT), conditionsFromItem(UDItems.STAINLESS_STEEL_INGOT))
+                .offerTo(exporter, Identifier.of(UrbanDecor.MOD_ID, getRecipeName(UDBlocks.FLOOR_LAMP)));
     }
 
     public static ShapedRecipeJsonBuilder createFourForFourWendysMealRecipe(ItemConvertible output, Ingredient input) {

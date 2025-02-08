@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "half=lower": {
+      "model": "urban_decor:block/floor_lamp_bottom"
+    },
+    "half=upper,lit=false,shade=false": {
+      "model": "urban_decor:block/floor_lamp_top_off"
+    },
+    "half=upper,lit=true,shade=false": {
+      "model": "urban_decor:block/floor_lamp_top_on"
+    },
+    "half=upper,lit=true,shade=true": {
+      "model": "urban_decor:block/floor_lamp_top_shade_on"
+    },
+    "half=upper,lit=false,shade=true": {
+      "model": "urban_decor:block/floor_lamp_top_shade_off"
+    }
+  }
+}

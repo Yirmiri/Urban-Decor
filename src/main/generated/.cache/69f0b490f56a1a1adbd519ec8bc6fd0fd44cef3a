@@ -1,4 +1,4 @@
-// 1.20.1	2025-02-08T00:06:43.3279638	Urban Decor/Block Loot Tables
+// 1.20.1	2025-02-08T01:23:47.6136556	Urban Decor/Block Loot Tables
 b006af1b4ce00f965b9bc3966e7850c750fc531f data\urban_decor\loot_tables\blocks\light_gray_wall_picture_frame.json
 ffc13f81aea333d7bc9390967ffc0b2f46e86481 data\urban_decor\loot_tables\blocks\turbine.json
 856bdbe200a0f305a2af9477d490c943df3df670 data\urban_decor\loot_tables\blocks\dark_dryer.json
@@ -134,8 +134,8 @@ df756756dbf63e5b94a5c787de5d9b88a6c99276 data\urban_decor\loot_tables\blocks\lim
 3fc5470056b98c8c8909f83bda90a6b6bfb9b242 data\urban_decor\loot_tables\blocks\stove.json
 b76d56d66962c54f04b432c5ab786478bee84c85 data\urban_decor\loot_tables\blocks\stainless_steel_bars.json
 0c271122dec342b70a9c599e20c282a59137bc8f data\urban_decor\loot_tables\blocks\porcelain_bricks.json
-29e4fdf00e7cd9bc3456c55eaaddbb6cf53c5fca data\urban_decor\loot_tables\blocks\light_gray_towel_block.json
 1c086606f838970f6e242a4acdde47f3110754f9 data\urban_decor\loot_tables\blocks\radiator.json
+29e4fdf00e7cd9bc3456c55eaaddbb6cf53c5fca data\urban_decor\loot_tables\blocks\light_gray_towel_block.json
 8a9d570fea8e2a12fdb7ddcc39ef63e473053b83 data\urban_decor\loot_tables\blocks\shower.json
 633cafef1206e96b4325a8ae6d161990beb1c960 data\urban_decor\loot_tables\blocks\porcelain_brick_slab.json
 c328213087b4ce2b886b7dce5f585fddd171848b data\urban_decor\loot_tables\blocks\light_blue_towel_block.json
@@ -150,4 +150,5 @@ ed1a706155bfe0fa34690e85876e2d28257bb4ec data\urban_decor\loot_tables\blocks\por
 34771a2dedbac2a419ba2d561000129ceb06af22 data\urban_decor\loot_tables\blocks\porcelain_tile_stairs.json
 072af53aaf24aa0a895c7461eed90eafc7bba829 data\urban_decor\loot_tables\blocks\dark_porcelain_tiles.json
 155ba3ac5629765416290824393bcce89f40e2b4 data\urban_decor\loot_tables\blocks\towel_bar_black_towel.json
+dc16ffd89e3dfa68bccf8112b30b16b0a7dffd72 data\urban_decor\loot_tables\blocks\floor_lamp.json
 7bfd918eb946d88af1a31f717a6267cdeceffede data\urban_decor\loot_tables\blocks\towel_bar_brown_towel.json

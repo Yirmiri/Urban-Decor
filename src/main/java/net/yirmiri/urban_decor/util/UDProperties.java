@@ -43,6 +43,7 @@ public class UDProperties {
         public static final Block.Settings CUPBOARD = FabricBlockSettings.copyOf(Blocks.STONE).strength(1.0F).mapColor(MapColor.WHITE).sounds(BlockSoundGroup.CALCITE).requiresTool();
         public static final Block.Settings FILING_CABINET = FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).strength(3.0F).sounds(BlockSoundGroup.COPPER);
         public static final Block.Settings TOILET_PAPER = FabricBlockSettings.copyOf(Blocks.WHITE_WOOL).strength(0.3F).mapColor(MapColor.GRAY).sounds(BlockSoundGroup.LANTERN);
+        public static final Block.Settings FLOOR_LAMP = FabricBlockSettings.copyOf(Blocks.WHITE_WOOL).breakInstantly().mapColor(MapColor.GRAY).sounds(BlockSoundGroup.LANTERN);
 
         //MISC APPLIANCES
         public static final Block.Settings AIR_CONDITIONER = FabricBlockSettings.copyOf(Blocks.STONE).strength(1.0F).mapColor(MapColor.GRAY).sounds(BlockSoundGroup.LANTERN).requiresTool();

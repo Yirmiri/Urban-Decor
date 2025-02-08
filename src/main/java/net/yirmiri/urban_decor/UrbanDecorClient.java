@@ -42,6 +42,7 @@ public class UrbanDecorClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(UDBlocks.DARK_DRYER, RenderLayer.getTranslucent());
         BlockRenderLayerMap.INSTANCE.putBlock(UDBlocks.WASHING_MACHINE, RenderLayer.getTranslucent());
         BlockRenderLayerMap.INSTANCE.putBlock(UDBlocks.DRYER, RenderLayer.getTranslucent());
+        BlockRenderLayerMap.INSTANCE.putBlock(UDBlocks.FLOOR_LAMP, RenderLayer.getTranslucent());
 
         for (DyeColor colors : DyeColor.values()) {
             BlockRenderLayerMap.INSTANCE.putBlock(UDBlocks.getDyedTowels(colors.getId()), RenderLayer.getCutout());

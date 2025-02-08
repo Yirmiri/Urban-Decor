@@ -99,6 +99,7 @@ public class UDLangProvider extends FabricLanguageProvider {
         build.add(UDBlocks.DARK_CUPBOARD, "Dark Cupboard");
         build.add(UDBlocks.FILING_CABINET, "Filing Cabinet");
         build.add(UDBlocks.TOILET_PAPER, "Toilet Paper");
+        build.add(UDBlocks.FLOOR_LAMP, "Floor Lamp");
 
         //ITEMS
         build.add(UDItems.PORCELAIN, "Porcelain");
@@ -170,6 +171,8 @@ public class UDLangProvider extends FabricLanguageProvider {
         build.add("toolbox.steel_door.variant_false", "Variant: Locked");
         build.add("toolbox.turbine.variant_0", "Variant: Non-Vented");
         build.add("toolbox.turbine.variant_1", "Variant: Vent");
+        build.add("toolbox.floor_lamp.variant_true", "Variant: Free");
+        build.add("toolbox.floor_lamp.variant_false", "Variant: Shade");
 
         //DAMAGE
         build.add("death.attack.urban_decor.toaster", "%1$s likes to play with toasters while they are on");
@@ -261,6 +264,7 @@ public class UDLangProvider extends FabricLanguageProvider {
         build.add(YT_ID + "block." + MOD_ID + "air_conditioner.desc", "Cold to the touch...");
         build.add(YT_ID + "block." + MOD_ID + "radiator.desc", "Hot to the touch...");
         build.add(YT_ID + "block." + MOD_ID + "towel_bar.desc", "Can be used to hang towels on");
+        build.add(YT_ID + "block." + MOD_ID + "floor_lamp.desc", "A tall lamp that can illuminate the surrounding area");
 
         for (DyeColor colors : DyeColor.values()) {
             String dyeString = StringUtils.capitalize(StringUtils.replace(StringUtils.replace(StringUtils.replace(colors.getName(),
