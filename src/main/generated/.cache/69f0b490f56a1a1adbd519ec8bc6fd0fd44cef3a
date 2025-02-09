@@ -1,4 +1,4 @@
-// 1.20.1	2025-02-08T01:23:47.6136556	Urban Decor/Block Loot Tables
+// 1.20.1	2025-02-09T00:09:00.074921	Urban Decor/Block Loot Tables
 b006af1b4ce00f965b9bc3966e7850c750fc531f data\urban_decor\loot_tables\blocks\light_gray_wall_picture_frame.json
 ffc13f81aea333d7bc9390967ffc0b2f46e86481 data\urban_decor\loot_tables\blocks\turbine.json
 856bdbe200a0f305a2af9477d490c943df3df670 data\urban_decor\loot_tables\blocks\dark_dryer.json
@@ -92,8 +92,8 @@ a932ae1aafec226286db4d0931defee0dfe08e15 data\urban_decor\loot_tables\blocks\too
 988dbe9327c6e1e4ec6fcff2bf52accdd5599b21 data\urban_decor\loot_tables\blocks\towel_bar_purple_towel.json
 8123827d2245251cb742dd05574b0bc357fdb978 data\urban_decor\loot_tables\blocks\polished_chromite.json
 0289985881abd0708d9a2f3e1c4b01abbd2085bc data\urban_decor\loot_tables\blocks\polished_chromite_slab.json
-54bd8eabd5d131da1122d98659689055e8a5a128 data\urban_decor\loot_tables\blocks\red_wall_picture_frame.json
 8a60f7405caa0c2cff55430f4f97b1ab5e68660f data\urban_decor\loot_tables\blocks\magenta_wall_picture_frame.json
+54bd8eabd5d131da1122d98659689055e8a5a128 data\urban_decor\loot_tables\blocks\red_wall_picture_frame.json
 3f0c5b5c5f337ec4feaf56e928ffe4825c31aa14 data\urban_decor\loot_tables\blocks\black_picture_frame.json
 4016f5a67b0a624ba76a68822c679a2870434367 data\urban_decor\loot_tables\blocks\magenta_towel_block.json
 36e85d96a894fbe808635243a737b72255812207 data\urban_decor\loot_tables\blocks\filing_cabinet.json
@@ -139,8 +139,8 @@ b76d56d66962c54f04b432c5ab786478bee84c85 data\urban_decor\loot_tables\blocks\sta
 8a9d570fea8e2a12fdb7ddcc39ef63e473053b83 data\urban_decor\loot_tables\blocks\shower.json
 633cafef1206e96b4325a8ae6d161990beb1c960 data\urban_decor\loot_tables\blocks\porcelain_brick_slab.json
 c328213087b4ce2b886b7dce5f585fddd171848b data\urban_decor\loot_tables\blocks\light_blue_towel_block.json
-1294fa2eb9e5862853b5ae37f8c6887f33d1cde5 data\urban_decor\loot_tables\blocks\lime_wall_picture_frame.json
 cae36c49f38f350b5979b4597984a5b43e08fdde data\urban_decor\loot_tables\blocks\chromite_stairs.json
+1294fa2eb9e5862853b5ae37f8c6887f33d1cde5 data\urban_decor\loot_tables\blocks\lime_wall_picture_frame.json
 618a3fe93bfe60c564aa0fdcbb21331ad90e75c0 data\urban_decor\loot_tables\blocks\towel_bar_gray_towel.json
 ed1a706155bfe0fa34690e85876e2d28257bb4ec data\urban_decor\loot_tables\blocks\porcelain_brick_stairs.json
 32edb027b240866b501ef5a903cdbe342f406102 data\urban_decor\loot_tables\blocks\sink.json

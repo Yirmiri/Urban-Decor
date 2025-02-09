@@ -1,4 +1,4 @@
-// 1.20.1	2025-02-08T01:23:47.6196399	Urban Decor/Model Definitions
+// 1.20.1	2025-02-09T00:09:00.0858911	Urban Decor/Model Definitions
 7145aac11029e7fe72fe205932a84fef3b1977ee assets\urban_decor\models\item\orange_picture_frame.json
 1de2cd487f03f96cb7defdb0fb32f73503ba21c9 assets\urban_decor\models\item\stainless_steel_lantern.json
 b91594a170a0989a18a1165750a41a34bf5f0966 assets\urban_decor\models\item\pink_picture_frame.json
@@ -80,8 +80,8 @@ fb6d28c8f2ce4bddd94dab08aab7e247e63f467d assets\urban_decor\blockstates\pink_tow
 918b7c326b288fd56fb4bda23c7c255de8f49d72 assets\urban_decor\blockstates\blue_towel_block.json
 2e8f5d8ca3099ba71c0c720c09031d9934c99cdb assets\urban_decor\models\block\chromite_wall_side_tall.json
 26737a07a71a95e2faab28060dc5191ce5964973 assets\urban_decor\models\block\orange_towel_block.json
-855e37318c6e18644457209f1c6f5574934b6540 assets\urban_decor\blockstates\porcelain_stairs.json
 44e19882ece1052dbe4469e2c5c43bfe9adadc8d assets\urban_decor\blockstates\green_towel_block.json
+855e37318c6e18644457209f1c6f5574934b6540 assets\urban_decor\blockstates\porcelain_stairs.json
 dab12e582d9202451a7048a4f1e480d378fa517b assets\urban_decor\models\block\magenta_towel_block.json
 560eaeaa92baf4ecea5975289dee1fa7c0d885fa assets\urban_decor\models\block\dark_porcelain_brick_stairs.json
 b3032697a30f485fcf54a72dcc135701e8f424fc assets\urban_decor\models\block\porcelain_slab.json
@@ -107,6 +107,7 @@ e712e3cdde41ff73d938967f736bf1b74b7361cb assets\urban_decor\models\item\dark_por
 0fca955a83b9330ff1a27442c4f511a86ed25d92 assets\urban_decor\models\block\porcelain_tile_stairs_outer.json
 6f509d65ed5fb725989aff235c4e10fafad5e1f3 assets\urban_decor\models\block\stainless_steel_door_top_right.json
 be2575100ae59f0b19707a1fb6fd56f37ff8073b assets\urban_decor\models\block\chromite_stairs_outer.json
+8a694b887c58187b8b6c4436af5e783aaca3fd99 assets\urban_decor\models\item\floor_lamp.json
 dc573d67278a9543a3b2f84dfae0378eacc252f4 assets\urban_decor\models\block\polished_chromite_slab_top.json
 dfc18abca61bfd35361d78c436f018f9ade07378 assets\urban_decor\models\block\green_towel_block.json
 06825ffc6bbeb5fcc4f030bc43d90a006d46ddc9 assets\urban_decor\models\block\chromite_slab_top.json

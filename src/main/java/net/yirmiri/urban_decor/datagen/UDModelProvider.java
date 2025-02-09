@@ -87,6 +87,7 @@ public class UDModelProvider extends FabricModelProvider {
         generator.register(UDBlocks.STAINLESS_STEEL_LANTERN.asItem(), Models.GENERATED);
         generator.register(UDBlocks.STAINLESS_STEEL_SOUL_LANTERN.asItem(), Models.GENERATED);
         generator.register(UDBlocks.TOILET_PAPER.asItem(), Models.GENERATED);
+        generator.register(UDBlocks.FLOOR_LAMP.asItem(), Models.GENERATED);
 
         for (DyeColor colors : DyeColor.values()) {
             generator.register(UDBlocks.getDyedTowels(colors.getId()).asItem(), Models.GENERATED);
