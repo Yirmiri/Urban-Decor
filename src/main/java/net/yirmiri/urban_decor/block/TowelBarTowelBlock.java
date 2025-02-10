@@ -45,17 +45,15 @@ public class TowelBarTowelBlock extends TowelBarBlock {
     public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
         ItemStack itemStack = player.getStackInHand(hand);
         ItemStack towel = new ItemStack(this.towel);
-        if (!player.isCreative()) {
-            if (itemStack.isEmpty()) {
-                player.setStackInHand(hand, towel);
-            } else if (!player.giveItemStack(towel)) {
-                player.dropItem(towel, false);
-            }
 
-            world.setBlockState(pos, UDBlocks.TOWEL_BAR.getDefaultState().with(FACING, state.get(FACING)), Block.NOTIFY_ALL);
-            return ActionResult.SUCCESS;
+        if (itemStack.isEmpty()) {
+            player.setStackInHand(hand, towel);
+        } else if (!player.giveItemStack(towel)) {
+            player.dropItem(towel, false);
         }
-        return ActionResult.PASS;
+
+        world.setBlockState(pos, UDBlocks.TOWEL_BAR.getDefaultState().with(FACING, state.get(FACING)), Block.NOTIFY_ALL);
+        return ActionResult.SUCCESS;
     }
 
     public static BlockState getTowelColors(Block towel) {

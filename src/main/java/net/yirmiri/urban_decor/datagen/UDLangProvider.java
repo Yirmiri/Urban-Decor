@@ -130,8 +130,8 @@ public class UDLangProvider extends FabricLanguageProvider {
         build.add("itemgroup.urban_decor", "Urban Decor");
 
         //TOOLTIPS
-        build.add("item.urban_decor.toolbox.use", "When Used on Blocks:");
-        build.add("item.urban_decor.toolbox.desc", "Can Change Variants of Specific Blocks");
+        build.add("item.urban_decor.toolbox.use", "When used on blocks:");
+        build.add("item.urban_decor.toolbox.desc", "Can change variants of specific blocks");
         build.add("tooltip.urban_decor.toolboxable", "Has toolbox variants");
         build.add("tooltip.urban_decor.wrappable", "Can be wrapped");
 
@@ -146,10 +146,10 @@ public class UDLangProvider extends FabricLanguageProvider {
         build.add("toolbox.oven.variant_false", "Variant: Opaque");
         build.add("toolbox.shower.variant_true", "Variant: Flat");
         build.add("toolbox.shower.variant_false", "Variant: Cylindrical");
-        build.add("toolbox.sink.variant_2", "Variant: Slim");
         build.add("toolbox.sink.variant_0", "Variant: Bare");
         build.add("toolbox.sink.variant_1", "Variant: Cupboard");
-        build.add("toolbox.sink.variant_3", "Variant: Fullsize");
+        build.add("toolbox.sink.variant_2", "Variant: Fullsize");
+        build.add("toolbox.sink.variant_3", "Variant: Slim");
         build.add("toolbox.toilet.variant_true", "Variant: Tank");
         build.add("toolbox.toilet.variant_false", "Variant: Commercial");
         build.add("toolbox.trash_can.variant_2", "Variant: Mesh");
@@ -175,8 +175,8 @@ public class UDLangProvider extends FabricLanguageProvider {
         build.add("toolbox.floor_lamp.variant_false", "Variant: Shade");
 
         //DAMAGE
-        build.add("death.attack.urban_decor.toaster", "%1$s likes to play with toasters while they are on");
-        build.add("death.attack.urban_decor.toaster.player", "%2$s toasted %1$s into a delightful breakfast");
+        build.add("death.attack.urban_decor.toaster", "%1$s likes to play with hot toasters");
+        build.add("death.attack.urban_decor.toaster.player", "%2$s toasted %1$s into a delight!");
 
         //SUBTITLES
         build.add("subtitles.block.generic.activate", "Button clicks");

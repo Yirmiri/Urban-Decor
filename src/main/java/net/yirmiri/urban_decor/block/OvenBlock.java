@@ -51,11 +51,11 @@ public class OvenBlock extends AbstractSmokerDecorBlock {
     @Override
     public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
         ItemStack stackHand = player.getStackInHand(hand);
-        if (!world.isClient && !player.isSneaking()) {
+        if (!stackHand.isIn(UDItemTagProvider.TOOLBOXES) && !world.isClient && !player.isSneaking()) {
             this.openScreen(world, pos, player);
             return ActionResult.SUCCESS;
         }
-        if (player.getMainHandStack().isEmpty() && player.isSneaking()) {
+        if (!stackHand.isIn(UDItemTagProvider.TOOLBOXES) && player.isSneaking()) {
             world.setBlockState(pos, state.cycle(OPEN).cycle(TRUE_OPEN));
             if (state.get(OPEN)) {
                 world.playSound(pos.getX(), pos.getY(), pos.getZ(), SoundEvents.BLOCK_CHERRY_WOOD_DOOR_CLOSE, SoundCategory.BLOCKS, 1.0F, 1.0F, false);

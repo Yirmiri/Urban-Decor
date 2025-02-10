@@ -96,6 +96,7 @@ public class UDItemGroups {
                 entries.add(UDBlocks.FAUCET);
                 entries.add(UDBlocks.TRASH_CAN);
                 entries.add(UDBlocks.DESK_FAN);
+                entries.add(UDBlocks.FLOOR_LAMP);
                 entries.add(UDItems.SATELLITE_DISH);
                 entries.add(UDBlocks.TURBINE);
                 entries.add(UDBlocks.AIR_CONDITIONER);
