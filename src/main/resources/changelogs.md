@@ -4,6 +4,17 @@ Literally just a secret .txt file of every single update's changelog
 
 =============================================================================================================================================================
 
+## Version Release v1.0.1 Fabric-1.20.1 - The Porcelain Cats & Dogs Update !
+
+### Bug Fixes
+- Fixed missing stainless steel nugget recipe
+- Fixed missing particle textures on washing machine
+
+### Note
+- There are other issues, bugs, and balancing (with recipes) that will be addressed soon, the nugget recipe was just a big hitter I wanted to fix ASAP !
+
+=============================================================================================================================================================
+
 ## Version Release v1.0.0 Fabric-1.20.1
 
 ### Additions

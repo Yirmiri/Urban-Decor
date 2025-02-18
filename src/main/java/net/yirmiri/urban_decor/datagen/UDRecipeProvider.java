@@ -796,6 +796,8 @@ public class UDRecipeProvider extends FabricRecipeProvider {
                 .pattern("!#!")
                 .criterion(hasItem(UDItems.STAINLESS_STEEL_INGOT), conditionsFromItem(UDItems.STAINLESS_STEEL_INGOT))
                 .offerTo(exporter, Identifier.of(UrbanDecor.MOD_ID, getRecipeName(UDBlocks.FLOOR_LAMP)));
+
+        offerReversibleCompactingRecipes(exporter, RecipeCategory.MISC, UDItems.STAINLESS_STEEL_NUGGET, RecipeCategory.MISC, UDItems.STAINLESS_STEEL_INGOT);
     }
 
     public static ShapedRecipeJsonBuilder createFourForFourWendysMealRecipe(ItemConvertible output, Ingredient input) {
