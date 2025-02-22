@@ -2,16 +2,20 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
+    "#": {
+      "item": "minecraft:andesite"
+    },
     "@": {
-      "item": "minecraft:green_carpet"
+      "item": "urban_decor:stainless_steel_nugget"
     }
   },
   "pattern": [
-    "@@"
+    "@#",
+    "#@"
   ],
   "result": {
     "count": 4,
-    "item": "urban_decor:green_towel"
+    "item": "urban_decor:chromite"
   },
   "show_notification": true
 }
