@@ -6,6 +6,20 @@ Literally just a secret .txt file of every single update's changelog
 
 ## Version Release v1.0.2 Fabric-1.20.1 - The Porcelain Cats & Dogs Update !
 
+## Changes
+- Porcelain now outputs 8 porcelain per recipe
+- An alternative recipe has been added for porcelain that requires 2 quartz and 2 clay balls and outputs 8 porcelain
+- Dark porcelain is now crafted from 8 porcelain and 1 chromite and outputs 8 dark porcelain
+- Removed "Faucets Used" statistic (was a part of an unfinished feature)
+
+### Bug Fixes
+- Fixed missing stainless steel nugget recipe (fr this time)
+- Fixed missing stainless steel ingot recipe from nuggets
+- Fixed missing wall picture frame block drops
+- Added missing wall picture frame translation (only noticeable with mods like Jade)
+- Floor lamp did not emit light when lit
+- Adjusted vented turbine model to fix z-fighting issue
+
 =============================================================================================================================================================
 
 ## Version Release v1.0.1 Fabric-1.20.1

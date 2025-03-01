@@ -3,10 +3,10 @@
   "category": "misc",
   "key": {
     "#": {
-      "item": "minecraft:andesite"
+      "item": "minecraft:clay_ball"
     },
     "@": {
-      "item": "urban_decor:stainless_steel_nugget"
+      "item": "minecraft:quartz"
     }
   },
   "pattern": [
@@ -14,8 +14,8 @@
     "#@"
   ],
   "result": {
-    "count": 4,
-    "item": "urban_decor:chromite"
+    "count": 8,
+    "item": "urban_decor:porcelain"
   },
   "show_notification": true
 }

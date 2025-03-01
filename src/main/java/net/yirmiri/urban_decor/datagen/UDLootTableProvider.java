@@ -106,6 +106,7 @@ public class UDLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(UDBlocks.STAINLESS_STEEL_BARS);
         addTowelBarTowelDrops();
         addDrop(UDBlocks.FLOOR_LAMP, floorLampDrops(UDBlocks.FLOOR_LAMP));
+        addDrop(UDBlocks.WALL_PICTURE_FRAME);
     }
 
     public LootTable.Builder floorLampDrops(Block block) {

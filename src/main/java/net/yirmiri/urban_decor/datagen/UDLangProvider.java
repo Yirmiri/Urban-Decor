@@ -95,6 +95,7 @@ public class UDLangProvider extends FabricLanguageProvider {
         build.add(UDBlocks.DARK_BATHTUB, "Dark Bathtub");
         build.add(UDBlocks.RIGID_GLASS, "Rigid Glass");
         build.add(UDBlocks.PICTURE_FRAME, "Picture Frame");
+        build.add(UDBlocks.WALL_PICTURE_FRAME, "Picture Frame");
         build.add(UDBlocks.CUPBOARD, "Cupboard");
         build.add(UDBlocks.DARK_CUPBOARD, "Dark Cupboard");
         build.add(UDBlocks.FILING_CABINET, "Filing Cabinet");
@@ -121,7 +122,7 @@ public class UDLangProvider extends FabricLanguageProvider {
         //STATS
         //build.add(UDStats.TIMES_SAT, "Times Sat Down");
         build.add(UDStats.OPEN_APPLIANCES, "Appliances Opened");
-        build.add(UDStats.USE_FAUCET, "Faucets Used");
+        //build.add(UDStats.USE_FAUCET, "Faucets Used");
 
         //ENTITIES
         build.add(UDEntities.TOILET, "Toilet");

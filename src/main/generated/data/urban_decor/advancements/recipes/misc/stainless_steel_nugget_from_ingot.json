@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_andesite": {
+    "has_stainless_steel_ingot": {
       "conditions": {
         "items": [
           {
             "items": [
-              "minecraft:andesite"
+              "urban_decor:stainless_steel_ingot"
             ]
           }
         ]
@@ -15,20 +15,20 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "urban_decor:chromite"
+        "recipe": "urban_decor:stainless_steel_nugget_from_ingot"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_andesite",
+      "has_stainless_steel_ingot",
       "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "urban_decor:chromite"
+      "urban_decor:stainless_steel_nugget_from_ingot"
     ]
   },
   "sends_telemetry_event": false

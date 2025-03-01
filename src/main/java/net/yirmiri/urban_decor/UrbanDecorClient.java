@@ -20,6 +20,7 @@ public class UrbanDecorClient implements ClientModInitializer {
     }
 
     private void registerBlocks() {
+        //CUTOUT
         BlockRenderLayerMap.INSTANCE.putBlock(UDBlocks.TRASH_CAN, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(UDBlocks.TOOLBOX, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(UDBlocks.STOVE, RenderLayer.getCutout());
@@ -29,6 +30,8 @@ public class UrbanDecorClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(UDBlocks.RIGID_GLASS, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(UDBlocks.PICTURE_FRAME, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(UDBlocks.WALL_PICTURE_FRAME, RenderLayer.getCutout());
+
+        //CUTOUT MIPPED
         BlockRenderLayerMap.INSTANCE.putBlock(UDBlocks.OVEN, RenderLayer.getCutoutMipped());
         BlockRenderLayerMap.INSTANCE.putBlock(UDBlocks.RADIATOR, RenderLayer.getCutoutMipped());
         BlockRenderLayerMap.INSTANCE.putBlock(UDBlocks.DARK_OVEN, RenderLayer.getCutoutMipped());
@@ -38,6 +41,8 @@ public class UrbanDecorClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(UDBlocks.AIR_CONDITIONER, RenderLayer.getCutoutMipped());
         BlockRenderLayerMap.INSTANCE.putBlock(UDBlocks.DESK_FAN, RenderLayer.getCutoutMipped());
         BlockRenderLayerMap.INSTANCE.putBlock(UDBlocks.STAINLESS_STEEL_BARS, RenderLayer.getCutoutMipped());
+
+        //TRANSLUCENT
         BlockRenderLayerMap.INSTANCE.putBlock(UDBlocks.DARK_WASHING_MACHINE, RenderLayer.getTranslucent());
         BlockRenderLayerMap.INSTANCE.putBlock(UDBlocks.DARK_DRYER, RenderLayer.getTranslucent());
         BlockRenderLayerMap.INSTANCE.putBlock(UDBlocks.WASHING_MACHINE, RenderLayer.getTranslucent());

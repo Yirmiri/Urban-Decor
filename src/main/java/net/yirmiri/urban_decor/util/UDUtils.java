@@ -34,7 +34,7 @@ public class UDUtils {
         ItemStack stackHand = player.getStackInHand(hand);
         Item item = stackHand.getItem();
         player.setStackInHand(hand, ItemUsage.exchangeStack(stackHand, player, PotionUtil.setPotion(new ItemStack(Items.POTION), Potions.WATER)));
-        player.incrementStat(UDStats.USE_FAUCET);
+        //player.incrementStat(UDStats.USE_FAUCET);
         player.incrementStat(Stats.USED.getOrCreateStat(item));
         world.playSound(null, pos, SoundEvents.ITEM_BOTTLE_FILL, SoundCategory.BLOCKS, 1.0F, 1.0F);
         world.emitGameEvent(null, GameEvent.FLUID_PICKUP, pos);

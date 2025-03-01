@@ -10,11 +10,12 @@
     }
   },
   "pattern": [
-    "@#",
-    "#@"
+    "###",
+    "#@#",
+    "###"
   ],
   "result": {
-    "count": 3,
+    "count": 8,
     "item": "urban_decor:dark_porcelain"
   },
   "show_notification": true
