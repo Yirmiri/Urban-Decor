@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "urban_decor:toaster"
+    "urban_decor:toaster",
+    "urban_decor:wet_toaster"
   ]
 }

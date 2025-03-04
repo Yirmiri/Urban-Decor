@@ -3,6 +3,7 @@
   "package": "net.yirmiri.urban_decor.mixin",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
+    "ItemEntityMixin"
   ],
   "injectors": {
     "defaultRequire": 1

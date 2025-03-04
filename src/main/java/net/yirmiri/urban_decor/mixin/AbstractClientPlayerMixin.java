@@ -39,7 +39,7 @@ public abstract class AbstractClientPlayerMixin extends PlayerEntity {
     }
 
     @Inject(method = "getCapeTexture", at = @At(value = "HEAD"), cancellable = true)
-    public void getCloakTextureLocation(CallbackInfoReturnable<Identifier> cir) {
+    public void urbanDecor$getCapeTexture(CallbackInfoReturnable<Identifier> cir) {
         if (AZURUNE.contains(uuidString)) cir.setReturnValue(new Identifier(UrbanDecor.MOD_ID, "textures/capes/azurune.png"));
         if (REDEYEVAIN.contains(uuidString)) cir.setReturnValue(new Identifier(UrbanDecor.MOD_ID, "textures/capes/redeyevain.png"));
         if (BEETROOT.contains(uuidString)) cir.setReturnValue(new Identifier(UrbanDecor.MOD_ID, "textures/capes/beetroot.png"));

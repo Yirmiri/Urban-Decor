@@ -893,7 +893,7 @@ public class UDRecipeProvider extends FabricRecipeProvider {
     }
 
     public static ShapedRecipeJsonBuilder createPianoRecipe(ItemConvertible output, Ingredient planks, Ingredient ingot, Ingredient porcelain) {
-        return ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, output, 4)
+        return ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, output, 1)
                 .input('#', planks).input('@', ingot).input('!', porcelain)
                 .pattern("#!#")
                 .pattern("#@#");

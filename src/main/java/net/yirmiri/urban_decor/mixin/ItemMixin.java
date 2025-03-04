@@ -22,7 +22,7 @@ import java.util.List;
 public abstract class ItemMixin {
 
     @Inject(at = @At("HEAD"), method = "appendTooltip")
-    private void appendTooltip(ItemStack stack, World world, List<Text> tooltip, TooltipContext context, CallbackInfo ci) {
+    private void urbanDecor$appendTooltip(ItemStack stack, World world, List<Text> tooltip, TooltipContext context, CallbackInfo ci) {
         if (stack.isIn(UDItemTagProvider.TOOLBOXABLE)) {
             tooltip.add(Text.translatable("tooltip." + UrbanDecor.MOD_ID + ".toolboxable").formatted(Formatting.GRAY).formatted(Formatting.ITALIC));
         }

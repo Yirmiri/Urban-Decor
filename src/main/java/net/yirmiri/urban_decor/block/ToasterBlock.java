@@ -8,6 +8,8 @@ import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.fluid.Fluids;
+import net.minecraft.item.ItemPlacementContext;
 import net.minecraft.item.ItemStack;
 import net.minecraft.particle.ParticleTypes;
 import net.minecraft.recipe.CampfireCookingRecipe;
@@ -25,6 +27,7 @@ import net.minecraft.util.math.random.Random;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
+import net.minecraft.world.WorldAccess;
 import net.yirmiri.urban_decor.block.entity.ToasterBlockEntity;
 import net.yirmiri.urban_decor.registry.UDBlockEntities;
 import net.yirmiri.urban_decor.registry.UDDamageTypes;
@@ -60,14 +63,13 @@ public class ToasterBlock extends CampfireBlock implements Waterloggable {
     public void onSteppedOn(World world, BlockPos pos, BlockState state, Entity entity) {
         if (entity instanceof LivingEntity livingEntity) {
             if (state.get(WATERLOGGED) && state.get(LIT)) {
-                entity.damage(UDDamageTypes.of(entity.getWorld(), UDDamageTypes.TOASTER), 10);
+                entity.damage(UDDamageTypes.of(entity.getWorld(), UDDamageTypes.WET_TOASTER), 10);
             }
 
-            if (state.get(LIT) && !livingEntity.bypassesSteppingEffects() && !EnchantmentHelper.hasFrostWalker(livingEntity)) {
+            if (!state.get(WATERLOGGED) && state.get(LIT) && !livingEntity.bypassesSteppingEffects() && !EnchantmentHelper.hasFrostWalker(livingEntity)) {
                 entity.damage(UDDamageTypes.of(entity.getWorld(), UDDamageTypes.TOASTER), 2);
             }
         }
-
         super.onSteppedOn(world, pos, state, entity);
     }
 
@@ -80,6 +82,14 @@ public class ToasterBlock extends CampfireBlock implements Waterloggable {
             }
             super.onStateReplaced(state, world, pos, newState, moved);
         }
+    }
+
+    @Override @Nullable
+    public BlockState getPlacementState(ItemPlacementContext ctx) {
+        WorldAccess worldAccess = ctx.getWorld();
+        BlockPos blockPos = ctx.getBlockPos();
+        boolean bl = worldAccess.getFluidState(blockPos).getFluid() == Fluids.WATER;
+        return getDefaultState().with(WATERLOGGED, bl).with(LIT, false).with(FACING, ctx.getHorizontalPlayerFacing());
     }
 
     @Override
