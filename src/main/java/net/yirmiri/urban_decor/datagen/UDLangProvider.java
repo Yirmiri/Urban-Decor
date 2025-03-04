@@ -131,9 +131,8 @@ public class UDLangProvider extends FabricLanguageProvider {
         build.add("container.urban_decor.trash", "§4Destroy Items");
 
         //STATS
-        //build.add(UDStats.TIMES_SAT, "Times Sat Down");
-        build.add(UDStats.OPEN_APPLIANCES, "Appliances Opened");
-        //build.add(UDStats.USE_FAUCET, "Faucets Used");
+        build.add("stat.urban_decor.times_sat", "Sat on Appliances");
+        build.add("stat.urban_decor.open_appliances", "Appliances Opened");
 
         //ENTITIES
         build.add(UDEntities.TOILET, "Toilet");
@@ -143,7 +142,7 @@ public class UDLangProvider extends FabricLanguageProvider {
 
         //TOOLTIPS
         build.add("item.urban_decor.toolbox.use", "When used on blocks:");
-        build.add("item.urban_decor.toolbox.desc", "Can change variants of specific blocks");
+        build.add("item.urban_decor.toolbox.desc", "Can Change Variants of Specific Blocks");
         build.add("tooltip.urban_decor.toolboxable", "Has toolbox variants");
         build.add("tooltip.urban_decor.wrappable", "Can be wrapped");
 
@@ -196,7 +195,7 @@ public class UDLangProvider extends FabricLanguageProvider {
         build.add("subtitles.block.appliance.close", "Appliance closes");
         build.add("subtitles.block.toolbox.use", "Toolbox used");
         build.add("subtitles.block.faucet.use", "Faucet turns");
-        build.add("subtitles.block.toilet.use", "Toilet flushes");
+        build.add("subtitles.block.toilet.use", "Toilet flushes"); //todo: probably wont be added
         build.add("subtitles.block.fan.loop", "Fan spins");
         build.add("subtitles.block.water.loop", "Water pitter patters");
         build.add("subtitles.block.microwave.loop", "Microwave hums");
@@ -272,7 +271,7 @@ public class UDLangProvider extends FabricLanguageProvider {
         build.add(YT_ID + "block." + MOD_ID + "faucet.desc", "Not recommended to drink from... that doesn't mean you can't");
         build.add(YT_ID + "block." + MOD_ID + "trash_can.desc", "Oh hi thanks for checking in, I'm still a piece of garbage");
         build.add(YT_ID + "block." + MOD_ID + "desk_fan.desc", "Fun Fact: The fan in the original game Five Night's at Freddy's is just a GIF");
-        build.add(YT_ID + "item." + MOD_ID + "satellite_dish.desc", "Pending Transmission..."); //TODO: ???
+        build.add(YT_ID + "item." + MOD_ID + "satellite_dish.desc", "Pending Transmission... \"╎ᒲ!¡ᒷリ↸in⊣\""); //TODO: ???
         build.add(YT_ID + "block." + MOD_ID + "turbine.desc", "I won't lie I ran out of things to write at the point of this one");
         build.add(YT_ID + "block." + MOD_ID + "air_conditioner.desc", "Cold to the touch...");
         build.add(YT_ID + "block." + MOD_ID + "radiator.desc", "Hot to the touch...");

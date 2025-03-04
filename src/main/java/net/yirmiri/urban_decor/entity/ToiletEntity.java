@@ -1,6 +1,5 @@
 package net.yirmiri.urban_decor.entity;
 
-import net.minecraft.block.BlockState;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.nbt.NbtCompound;
@@ -17,9 +16,8 @@ public class ToiletEntity extends Entity {
     @Override
     protected void removePassenger(Entity passenger) {
         super.removePassenger(passenger);
-        BlockState state = getBlockStateAtPos();
         if (!passenger.getWorld().isClient && getBlockStateAtPos().isIn(UDBlockTagProvider.TOILETS)) {
-            getWorld().setBlockState(getBlockPos(), state.with(ToiletBlock.OCCUPIED, false));
+            getWorld().setBlockState(getBlockPos(), getBlockStateAtPos().with(ToiletBlock.OCCUPIED, false));
             discard();
         } else {
             discard();

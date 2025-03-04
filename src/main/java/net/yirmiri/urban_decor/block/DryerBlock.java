@@ -59,14 +59,10 @@ public class DryerBlock extends AbstractStorageDecorBlock {
     public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
         ItemStack stackHand = player.getStackInHand(hand);
         BlockEntity blockEntity = world.getBlockEntity(pos);
-        if (world.isClient) {
-            return ActionResult.SUCCESS;
-        } else {
-            if (blockEntity instanceof StorageApplianceBlockEntity && !stackHand.isIn(UDItemTagProvider.TOOLBOXES) && !player.isSneaking()) {
-                player.openHandledScreen((StorageApplianceBlockEntity) blockEntity);
-                player.incrementStat(UDStats.OPEN_APPLIANCES);
-                PiglinBrain.onGuardedBlockInteracted(player, true);
-            }
+        if (!world.isClient && blockEntity instanceof StorageApplianceBlockEntity && !stackHand.isIn(UDItemTagProvider.TOOLBOXES) && !player.isSneaking()) {
+            player.openHandledScreen((StorageApplianceBlockEntity) blockEntity);
+            player.incrementStat(UDStats.OPEN_APPLIANCES);
+            PiglinBrain.onGuardedBlockInteracted(player, true);
         }
 
         if (!stackHand.isIn(UDItemTagProvider.TOOLBOXES) && player.isSneaking()) {

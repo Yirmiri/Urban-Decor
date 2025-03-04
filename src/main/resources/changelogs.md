@@ -8,17 +8,25 @@ Literally just a secret .txt file of every single update's changelog
 
 ## Additions
 - Added pianos, can be crafted in any wood variant
+- Toilets can now be sat on (alongside a new statistic for it)
+- Added a custom damage type for toasters that are wet (pierces armor like normal toaster damage type)
+- Toasters will now emit smoke when in water
 
 ## Changes
+- Toasters will no longer be turned on by default
+- Toaster damage will no longer pierce enchantments, potion effects, and resistance unless it is in water
 - Updated the recipe of towels to output 2 instead of 1
 - Slightly tweaked toilet paper item texture
+- Capitalized the blue text on the toolbox tooltip to be consistent with other items
 
 ## Bug Fixes
 - Fixed the particle texture of every single block in the mod :')
 - Fixed sounds of opening and closing washing machines and dryers
 - The rendering of ovens, washing machines, and dryers have all been cleaned up
 - Fixed stainless steel trapdoor using the wrong trapdoor model
-- Used the correct item model rotations and positions for rigid glass
+- Many blocks now use the correct item model rotations and positions when in screens or held
+- Fixed an issue that caused the toaster to deal both the normal and wet damage when in water
+- Fixed missing translations for open appliances statistic
 - Removed the clock
 
 =============================================================================================================================================================
