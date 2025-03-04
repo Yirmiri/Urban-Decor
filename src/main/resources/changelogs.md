@@ -10,6 +10,7 @@ Literally just a secret .txt file of every single update's changelog
 - Added pianos, can be crafted in any wood variant
 
 ## Changes
+- Updated the recipe of towels to output 2 instead of 1
 - Slightly tweaked toilet paper item texture
 
 ## Bug Fixes

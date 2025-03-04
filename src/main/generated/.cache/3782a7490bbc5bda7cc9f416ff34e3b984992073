@@ -1,4 +1,4 @@
-// 1.20.1	2025-03-04T00:36:23.4771771	Urban Decor/Model Definitions
+// 1.20.1	2025-03-04T01:15:19.1382739	Urban Decor/Model Definitions
 1f048b54eeb3589c0f7a1e39e9d6b7627e768ff3 assets\urban_decor\blockstates\purple_towel_block.json
 43c6b2075d52477af894503882b69c94be6565a4 assets\urban_decor\models\item\crimson_piano.json
 207b460e00657f08692fac220c3f7fe03b7a1c7f assets\urban_decor\models\block\stainless_steel_trapdoor_top.json
@@ -116,8 +116,8 @@ c4b0bfebc3feb4d69a872f2ec41ff03e8b78bc52 assets\urban_decor\models\block\light_b
 bc84050480f575827d3398b7ce710bd9a033fd70 assets\urban_decor\models\block\porcelain_brick_slab.json
 6f509d65ed5fb725989aff235c4e10fafad5e1f3 assets\urban_decor\models\block\stainless_steel_door_top_right.json
 7d6448d5a54365193414c294f3e8cef79212c894 assets\urban_decor\blockstates\lime_towel_block.json
-6db9b8ae7064662c8df624f20f82b67b849d3ef2 assets\urban_decor\models\item\dark_porcelain_brick_stairs.json
 bf6e10c4edd1cae7c5da9202c345355417262019 assets\urban_decor\blockstates\polished_chromite.json
+6db9b8ae7064662c8df624f20f82b67b849d3ef2 assets\urban_decor\models\item\dark_porcelain_brick_stairs.json
 7145aac11029e7fe72fe205932a84fef3b1977ee assets\urban_decor\models\item\orange_picture_frame.json
 4257afed1e85194b01f1ce1dc1ee253afd6e23fe assets\urban_decor\blockstates\checkered_porcelain_tiles.json
 d058a2c00e35e7fb7b839bfcd623e2886ef96d5d assets\urban_decor\models\block\chromite_stairs_inner.json

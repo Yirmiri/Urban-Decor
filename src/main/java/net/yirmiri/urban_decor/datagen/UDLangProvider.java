@@ -202,6 +202,7 @@ public class UDLangProvider extends FabricLanguageProvider {
         build.add("subtitles.block.microwave.loop", "Microwave hums");
         build.add("subtitles.block.microwave.finish", "Microwave beeps");
         build.add("subtitles.block.satellite_dish.activate", "Satellite dish sequences");
+        build.add("subtitles.block.wrap.use", "Appliance wrapped");
 
         //YAPPING TOOLTIPS COMPAT
         build.add(YT_ID + "item." + MOD_ID + "porcelain.desc", "A mixture of clay and flint, used commonly in appliances");
@@ -271,12 +272,23 @@ public class UDLangProvider extends FabricLanguageProvider {
         build.add(YT_ID + "block." + MOD_ID + "faucet.desc", "Not recommended to drink from... that doesn't mean you can't");
         build.add(YT_ID + "block." + MOD_ID + "trash_can.desc", "Oh hi thanks for checking in, I'm still a piece of garbage");
         build.add(YT_ID + "block." + MOD_ID + "desk_fan.desc", "Fun Fact: The fan in the original game Five Night's at Freddy's is just a GIF");
-        build.add(YT_ID + "item." + MOD_ID + "satellite_dish.desc", "Pending Transmission..."); //todo: ???
+        build.add(YT_ID + "item." + MOD_ID + "satellite_dish.desc", "Pending Transmission..."); //TODO: ???
         build.add(YT_ID + "block." + MOD_ID + "turbine.desc", "I won't lie I ran out of things to write at the point of this one");
         build.add(YT_ID + "block." + MOD_ID + "air_conditioner.desc", "Cold to the touch...");
         build.add(YT_ID + "block." + MOD_ID + "radiator.desc", "Hot to the touch...");
         build.add(YT_ID + "block." + MOD_ID + "towel_bar.desc", "Can be used to hang towels on");
         build.add(YT_ID + "block." + MOD_ID + "floor_lamp.desc", "A tall lamp that can illuminate the surrounding area");
+        build.add(YT_ID + "block." + MOD_ID + "oak_piano.desc", "A wooden instrument constructed from oak planks");
+        build.add(YT_ID + "block." + MOD_ID + "spruce_piano.desc", "A wooden instrument constructed from spruce planks");
+        build.add(YT_ID + "block." + MOD_ID + "birch_piano.desc", "A wooden instrument constructed from birch planks");
+        build.add(YT_ID + "block." + MOD_ID + "jungle_piano.desc", "A wooden instrument constructed from jungle planks");
+        build.add(YT_ID + "block." + MOD_ID + "acacia_piano.desc", "A wooden instrument constructed from acacia planks");
+        build.add(YT_ID + "block." + MOD_ID + "dark_oak_piano.desc", "A wooden instrument constructed from dark oak planks");
+        build.add(YT_ID + "block." + MOD_ID + "mangrove_piano.desc", "A wooden instrument constructed from mangrove planks");
+        build.add(YT_ID + "block." + MOD_ID + "cherry_piano.desc", "A wooden instrument constructed from cherry planks");
+        build.add(YT_ID + "block." + MOD_ID + "bamboo_piano.desc", "A wooden instrument constructed from bamboo planks");
+        build.add(YT_ID + "block." + MOD_ID + "crimson_piano.desc", "A wooden instrument constructed from crimson planks");
+        build.add(YT_ID + "block." + MOD_ID + "warped_piano.desc", "A wooden instrument constructed from warped planks");
 
         for (DyeColor colors : DyeColor.values()) {
             String dyeString = StringUtils.capitalize(StringUtils.replace(StringUtils.replace(StringUtils.replace(colors.getName(),
