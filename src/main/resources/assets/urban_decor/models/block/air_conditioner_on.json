@@ -3,7 +3,7 @@
 	"texture_size": [64, 64],
 	"textures": {
 		"0": "urban_decor:block/air_conditioner_on",
-		"particle": "urban_decor:block/air_conditioner"
+		"particle": "urban_decor:block/stainless_steel_block"
 	},
 	"elements": [
 		{

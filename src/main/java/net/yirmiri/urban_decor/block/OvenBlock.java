@@ -55,6 +55,7 @@ public class OvenBlock extends AbstractSmokerDecorBlock {
             this.openScreen(world, pos, player);
             return ActionResult.SUCCESS;
         }
+
         if (!stackHand.isIn(UDItemTagProvider.TOOLBOXES) && player.isSneaking()) {
             world.setBlockState(pos, state.cycle(OPEN).cycle(TRUE_OPEN));
             if (state.get(OPEN)) {

@@ -2,7 +2,8 @@
 	"credit": "Made with Blockbench by Tellio-Ari",
 	"texture_size": [64, 64],
 	"textures": {
-		"1": "urban_decor:block/dark_oven_on"
+		"1": "urban_decor:block/dark_oven_on",
+		"particle": "urban_decor:block/dark_porcelain_block"
 	},
 	"elements": [
 		{

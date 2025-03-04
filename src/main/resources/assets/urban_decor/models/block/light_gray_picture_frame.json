@@ -3,7 +3,7 @@
 	"textures": {
 		"0": "urban_decor:block/picture_frame",
 		"2": "urban_decor:block/light_gray_picture",
-		"particle": "urban_decor:block/picture_frame"
+		"particle": "minecraft:block/oak_planks"
 	},
 	"elements": [
 		{

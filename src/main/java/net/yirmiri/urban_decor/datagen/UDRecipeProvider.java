@@ -816,6 +816,18 @@ public class UDRecipeProvider extends FabricRecipeProvider {
                 .input(UDItems.STAINLESS_STEEL_INGOT)
                 .criterion(hasItem(UDItems.STAINLESS_STEEL_INGOT), conditionsFromItem(UDItems.STAINLESS_STEEL_INGOT))
                 .offerTo(exporter, Identifier.of(UrbanDecor.MOD_ID, getRecipeName(UDItems.STAINLESS_STEEL_NUGGET) + "_from_ingot"));
+
+        createPianoRecipe(UDBlocks.OAK_PIANO, Ingredient.ofItems(Items.OAK_PLANKS), Ingredient.ofItems(UDItems.STAINLESS_STEEL_INGOT), Ingredient.ofItems(UDItems.PORCELAIN));
+        createPianoRecipe(UDBlocks.SPRUCE_PIANO, Ingredient.ofItems(Items.SPRUCE_PLANKS), Ingredient.ofItems(UDItems.STAINLESS_STEEL_INGOT), Ingredient.ofItems(UDItems.PORCELAIN));
+        createPianoRecipe(UDBlocks.BIRCH_PIANO, Ingredient.ofItems(Items.BIRCH_PLANKS), Ingredient.ofItems(UDItems.STAINLESS_STEEL_INGOT), Ingredient.ofItems(UDItems.PORCELAIN));
+        createPianoRecipe(UDBlocks.JUNGLE_PIANO, Ingredient.ofItems(Items.JUNGLE_PLANKS), Ingredient.ofItems(UDItems.STAINLESS_STEEL_INGOT), Ingredient.ofItems(UDItems.PORCELAIN));
+        createPianoRecipe(UDBlocks.ACACIA_PIANO, Ingredient.ofItems(Items.ACACIA_PLANKS), Ingredient.ofItems(UDItems.STAINLESS_STEEL_INGOT), Ingredient.ofItems(UDItems.PORCELAIN));
+        createPianoRecipe(UDBlocks.DARK_OAK_PIANO, Ingredient.ofItems(Items.DARK_OAK_PLANKS), Ingredient.ofItems(UDItems.STAINLESS_STEEL_INGOT), Ingredient.ofItems(UDItems.PORCELAIN));
+        createPianoRecipe(UDBlocks.MANGROVE_PIANO, Ingredient.ofItems(Items.MANGROVE_PLANKS), Ingredient.ofItems(UDItems.STAINLESS_STEEL_INGOT), Ingredient.ofItems(UDItems.PORCELAIN));
+        createPianoRecipe(UDBlocks.CHERRY_PIANO, Ingredient.ofItems(Items.CHERRY_PLANKS), Ingredient.ofItems(UDItems.STAINLESS_STEEL_INGOT), Ingredient.ofItems(UDItems.PORCELAIN));
+        createPianoRecipe(UDBlocks.BAMBOO_PIANO, Ingredient.ofItems(Items.BAMBOO_PLANKS), Ingredient.ofItems(UDItems.STAINLESS_STEEL_INGOT), Ingredient.ofItems(UDItems.PORCELAIN));
+        createPianoRecipe(UDBlocks.CRIMSON_PIANO, Ingredient.ofItems(Items.CRIMSON_PLANKS), Ingredient.ofItems(Items.GOLD_INGOT), Ingredient.ofItems(UDItems.PORCELAIN));
+        createPianoRecipe(UDBlocks.WARPED_PIANO, Ingredient.ofItems(Items.WARPED_PLANKS), Ingredient.ofItems(Items.GOLD_INGOT), Ingredient.ofItems(UDItems.PORCELAIN));
     }
 
     public static ShapelessRecipeJsonBuilder createFromBasePictureFrameRecipe(ItemConvertible output, Item picture, DyeColor color) {
@@ -835,6 +847,13 @@ public class UDRecipeProvider extends FabricRecipeProvider {
                 .input('#', input)
                 .pattern("##")
                 .pattern("##");
+    }
+
+    public static ShapedRecipeJsonBuilder createPianoRecipe(ItemConvertible output, Ingredient planks, Ingredient ingot, Ingredient porcelain) {
+        return ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, output, 4)
+                .input('#', planks).input('@', ingot).input('!', porcelain)
+                .pattern("#!#")
+                .pattern("#@#");
     }
 
     public static ShapedRecipeJsonBuilder createPictureFrameRecipe(ItemConvertible output, DyeColor color) {

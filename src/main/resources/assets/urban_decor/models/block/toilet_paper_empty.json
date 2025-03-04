@@ -2,7 +2,7 @@
 	"credit": "Made with Blockbench by Tellio-Ari",
 	"textures": {
 		"0": "furniture:toilet_paper",
-		"particle": "furniture:toilet_paper"
+		"particle": "minecraft:block/white_wool"
 	},
 	"elements": [
 		{

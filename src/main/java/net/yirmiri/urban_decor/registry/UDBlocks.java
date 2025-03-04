@@ -92,6 +92,17 @@ public class UDBlocks {
     public static final Block MICROWAVE = register("microwave", new MicrowaveBlock(UDProperties.BlockP.MICROWAVE), false);
     public static final Block WALL_MICROWAVE = register("wall_microwave", new MicrowaveWallBlock(UDProperties.BlockP.MICROWAVE), false);
     public static final Block FLOOR_LAMP = register("floor_lamp", new FloorLampBlock(UDProperties.BlockP.FLOOR_LAMP), true);
+    public static final Block OAK_PIANO = register("oak_piano", new PianoBlock(UDProperties.BlockP.PIANO), true);
+    public static final Block SPRUCE_PIANO = register("spruce_piano", new PianoBlock(UDProperties.BlockP.PIANO), true);
+    public static final Block BIRCH_PIANO = register("birch_piano", new PianoBlock(UDProperties.BlockP.PIANO), true);
+    public static final Block JUNGLE_PIANO = register("jungle_piano", new PianoBlock(UDProperties.BlockP.PIANO), true);
+    public static final Block ACACIA_PIANO = register("acacia_piano", new PianoBlock(UDProperties.BlockP.PIANO), true);
+    public static final Block DARK_OAK_PIANO = register("dark_oak_piano", new PianoBlock(UDProperties.BlockP.PIANO), true);
+    public static final Block MANGROVE_PIANO = register("mangrove_piano", new PianoBlock(UDProperties.BlockP.PIANO), true);
+    public static final Block CHERRY_PIANO = register("cherry_piano", new PianoBlock(UDProperties.BlockP.CHERRY_PIANO), true);
+    public static final Block BAMBOO_PIANO = register("bamboo_piano", new PianoBlock(UDProperties.BlockP.BAMBOO_PIANO), true);
+    public static final Block CRIMSON_PIANO = register("crimson_piano", new PianoBlock(UDProperties.BlockP.NETHER_PIANO), true);
+    public static final Block WARPED_PIANO = register("warped_piano", new PianoBlock(UDProperties.BlockP.NETHER_PIANO), true);
 
     //MISC APPLIANCES
     public static final Block TOOLBOX = register("toolbox", new ToolboxBlock(UDProperties.BlockP.TOOLBOX), false);

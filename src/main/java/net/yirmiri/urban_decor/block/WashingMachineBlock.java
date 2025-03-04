@@ -80,7 +80,7 @@ public class WashingMachineBlock extends AbstractStorageDecorBlock {
             }
         }
 
-        if (player.getMainHandStack().isEmpty() && player.isSneaking()) {
+        if (!stackHand.isIn(UDItemTagProvider.TOOLBOXES) && player.isSneaking()) {
             world.setBlockState(pos, state.cycle(OPEN).cycle(TRUE_OPEN));
             if (state.get(OPEN)) {
                 world.playSound(pos.getX(), pos.getY(), pos.getZ(), SoundEvents.BLOCK_CHERRY_WOOD_DOOR_CLOSE, SoundCategory.BLOCKS, 1.0F, 1.0F, false);
@@ -88,6 +88,7 @@ public class WashingMachineBlock extends AbstractStorageDecorBlock {
                 world.playSound(pos.getX(), pos.getY(), pos.getZ(), SoundEvents.BLOCK_CHERRY_WOOD_DOOR_OPEN, SoundCategory.BLOCKS, 1.0F, 1.0F, false);
             }
             return ActionResult.SUCCESS;
+
         } else if (stackHand.isIn(UDItemTagProvider.TOOLBOXES)) {
             world.setBlockState(pos, state.cycle(OPAQUE));
             UDUtils.toolboxUsed(world, pos);

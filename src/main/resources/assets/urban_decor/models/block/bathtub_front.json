@@ -6,7 +6,7 @@
 		"4": "urban_decor:block/bathtub_front_side",
 		"6": "urban_decor:block/bathtub_front_inner",
 		"8": "urban_decor:block/bathtub_bottom_front",
-		"particle": "urban_decor:block/bathtub_back_top"
+		"particle": "urban_decor:block/porcelain_block"
 	},
 	"elements": [
 		{

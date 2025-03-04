@@ -28,6 +28,20 @@ public class UDBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(UDBlocks.DARK_TOILET)
         ;
 
+        getOrCreateTagBuilder(BlockTags.AXE_MINEABLE)
+                .add(UDBlocks.OAK_PIANO)
+                .add(UDBlocks.SPRUCE_PIANO)
+                .add(UDBlocks.BIRCH_PIANO)
+                .add(UDBlocks.JUNGLE_PIANO)
+                .add(UDBlocks.ACACIA_PIANO)
+                .add(UDBlocks.DARK_OAK_PIANO)
+                .add(UDBlocks.MANGROVE_PIANO)
+                .add(UDBlocks.CHERRY_PIANO)
+                .add(UDBlocks.BAMBOO_PIANO)
+                .add(UDBlocks.CRIMSON_PIANO)
+                .add(UDBlocks.WARPED_PIANO)
+        ;
+
         getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE)
                 .add(UDBlocks.DARK_PORCELAIN_BLOCK)
                 .add(UDBlocks.DARK_PORCELAIN_STAIRS)

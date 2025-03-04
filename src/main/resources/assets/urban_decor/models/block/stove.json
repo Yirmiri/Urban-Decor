@@ -4,7 +4,7 @@
 		"0": "urban_decor:block/stove",
 		"1": "urban_decor:block/stove_top",
 		"2": "urban_decor:block/stove_bottom",
-		"particle": "urban_decor:block/stove"
+		"particle": "urban_decor:block/porcelain_block"
 	},
 	"elements": [
 		{

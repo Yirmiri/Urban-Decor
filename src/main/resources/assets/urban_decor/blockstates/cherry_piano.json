@@ -1,0 +1,42 @@
+{
+  "variants": {
+    "facing=north,part=head": {
+      "model": "urban_decor:block/cherry_piano_left",
+      "uvlock": false
+    },
+    "facing=south,part=head": {
+      "model": "urban_decor:block/cherry_piano_left",
+      "y": 180,
+      "uvlock": false
+    },
+    "facing=west,part=head": {
+      "model": "urban_decor:block/cherry_piano_left",
+      "y": 270,
+      "uvlock": false
+    },
+    "facing=east,part=head": {
+      "model": "urban_decor:block/cherry_piano_left",
+      "y": 90,
+      "uvlock": false
+    },
+    "facing=north,part=foot": {
+      "model": "urban_decor:block/cherry_piano_right",
+      "uvlock": false
+    },
+    "facing=south,part=foot": {
+      "model": "urban_decor:block/cherry_piano_right",
+      "y": 180,
+      "uvlock": false
+    },
+    "facing=west,part=foot": {
+      "model": "urban_decor:block/cherry_piano_right",
+      "y": 270,
+      "uvlock": false
+    },
+    "facing=east,part=foot": {
+      "model": "urban_decor:block/cherry_piano_right",
+      "y": 90,
+      "uvlock": false
+    }
+  }
+}

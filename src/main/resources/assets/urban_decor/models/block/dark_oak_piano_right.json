@@ -1,0 +1,7 @@
+{
+  "parent": "urban_decor:block/oak_piano_right",
+  "textures": {
+    "0": "urban_decor:block/dark_oak_piano",
+    "particle": "minecraft:block/dark_oak_planks"
+  }
+}

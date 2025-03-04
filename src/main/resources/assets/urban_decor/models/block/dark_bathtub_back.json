@@ -5,7 +5,7 @@
 		"1": "urban_decor:block/dark_bathtub_back_top",
 		"2": "urban_decor:block/dark_bathtub_front",
 		"6": "urban_decor:block/dark_bathtub_bottom_back",
-		"particle": "urban_decor:block/dark_bathtub_back_side"
+		"particle": "urban_decor:block/dark_porcelain_block"
 	},
 	"elements": [
 		{

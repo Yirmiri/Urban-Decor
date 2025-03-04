@@ -3,7 +3,7 @@
 	"textures": {
 		"0": "urban_decor:block/trash_can",
 		"2": "urban_decor:block/trash_can_opaque",
-		"particle": "urban_decor:block/trash_can"
+		"particle": "urban_decor:block/stainless_steel_block"
 	},
 	"elements": [
 		{

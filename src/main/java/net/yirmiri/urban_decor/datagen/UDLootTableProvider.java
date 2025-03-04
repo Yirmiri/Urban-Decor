@@ -107,6 +107,17 @@ public class UDLootTableProvider extends FabricBlockLootTableProvider {
         addTowelBarTowelDrops();
         addDrop(UDBlocks.FLOOR_LAMP, floorLampDrops(UDBlocks.FLOOR_LAMP));
         addDrop(UDBlocks.WALL_PICTURE_FRAME);
+        addDrop(UDBlocks.OAK_PIANO, longBlockDrops(UDBlocks.OAK_PIANO));
+        addDrop(UDBlocks.SPRUCE_PIANO, longBlockDrops(UDBlocks.SPRUCE_PIANO));
+        addDrop(UDBlocks.BIRCH_PIANO, longBlockDrops(UDBlocks.BIRCH_PIANO));
+        addDrop(UDBlocks.JUNGLE_PIANO, longBlockDrops(UDBlocks.JUNGLE_PIANO));
+        addDrop(UDBlocks.ACACIA_PIANO, longBlockDrops(UDBlocks.ACACIA_PIANO));
+        addDrop(UDBlocks.DARK_OAK_PIANO, longBlockDrops(UDBlocks.DARK_OAK_PIANO));
+        addDrop(UDBlocks.MANGROVE_PIANO, longBlockDrops(UDBlocks.MANGROVE_PIANO));
+        addDrop(UDBlocks.CHERRY_PIANO, longBlockDrops(UDBlocks.CHERRY_PIANO));
+        addDrop(UDBlocks.BAMBOO_PIANO, longBlockDrops(UDBlocks.BAMBOO_PIANO));
+        addDrop(UDBlocks.CRIMSON_PIANO, longBlockDrops(UDBlocks.CRIMSON_PIANO));
+        addDrop(UDBlocks.WARPED_PIANO, longBlockDrops(UDBlocks.WARPED_PIANO));
     }
 
     public LootTable.Builder floorLampDrops(Block block) {

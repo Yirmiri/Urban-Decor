@@ -52,6 +52,10 @@ public class UDProperties {
         public static final Block.Settings FILING_CABINET = FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).strength(3.0F).sounds(BlockSoundGroup.COPPER);
         public static final Block.Settings TOILET_PAPER = FabricBlockSettings.copyOf(Blocks.WHITE_WOOL).strength(0.3F).mapColor(MapColor.GRAY).sounds(BlockSoundGroup.LANTERN);
         public static final Block.Settings FLOOR_LAMP = FabricBlockSettings.copyOf(Blocks.WHITE_WOOL).luminance(createLightLevelFromLitBlockState(15)).breakInstantly().mapColor(MapColor.GRAY).sounds(BlockSoundGroup.LANTERN);
+        public static final Block.Settings PIANO = FabricBlockSettings.copyOf(Blocks.OAK_PLANKS);
+        public static final Block.Settings NETHER_PIANO = FabricBlockSettings.copyOf(Blocks.CRIMSON_PLANKS);
+        public static final Block.Settings CHERRY_PIANO = FabricBlockSettings.copyOf(Blocks.CHERRY_PLANKS);
+        public static final Block.Settings BAMBOO_PIANO = FabricBlockSettings.copyOf(Blocks.BAMBOO_PLANKS);
 
         //MISC APPLIANCES
         public static final Block.Settings AIR_CONDITIONER = FabricBlockSettings.copyOf(Blocks.STONE).strength(1.0F).mapColor(MapColor.GRAY).sounds(BlockSoundGroup.LANTERN).requiresTool();

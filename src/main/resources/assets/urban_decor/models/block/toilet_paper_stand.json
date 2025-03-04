@@ -3,7 +3,7 @@
 	"textures": {
 		"0": "furniture:toilet_paper",
 		"1": "furniture:toilet_paper_stand",
-		"particle": "furniture:toilet_paper"
+		"particle": "minecraft:block/white_wool"
 	},
 	"elements": [
 		{

@@ -101,6 +101,17 @@ public class UDLangProvider extends FabricLanguageProvider {
         build.add(UDBlocks.FILING_CABINET, "Filing Cabinet");
         build.add(UDBlocks.TOILET_PAPER, "Toilet Paper");
         build.add(UDBlocks.FLOOR_LAMP, "Floor Lamp");
+        build.add(UDBlocks.OAK_PIANO, "Oak Piano");
+        build.add(UDBlocks.SPRUCE_PIANO, "Spruce Piano");
+        build.add(UDBlocks.BIRCH_PIANO, "Birch Piano");
+        build.add(UDBlocks.JUNGLE_PIANO, "Jungle Piano");
+        build.add(UDBlocks.ACACIA_PIANO, "Acacia Piano");
+        build.add(UDBlocks.DARK_OAK_PIANO, "Dark Oak Piano");
+        build.add(UDBlocks.MANGROVE_PIANO, "Mangrove Piano");
+        build.add(UDBlocks.CHERRY_PIANO, "Cherry Piano");
+        build.add(UDBlocks.BAMBOO_PIANO, "Bamboo Piano");
+        build.add(UDBlocks.CRIMSON_PIANO, "Crimson Piano");
+        build.add(UDBlocks.WARPED_PIANO, "Warped Piano");
 
         //ITEMS
         build.add(UDItems.PORCELAIN, "Porcelain");

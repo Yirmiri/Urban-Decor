@@ -2,7 +2,7 @@
 	"credit": "Made with Blockbench by Tellio-Ari",
 	"textures": {
 		"1": "urban_decor:block/toaster_on",
-		"particle": "urban_decor:block/toaster_particle"
+		"particle": "urban_decor:block/stainless_steel_block"
 	},
 	"elements": [
 		{

@@ -61,7 +61,7 @@ public class UDModelProvider extends FabricModelProvider {
         darkPorcelainBricks.slab(UDBlocks.DARK_PORCELAIN_BRICK_SLAB);
 
         generator.registerDoor(UDBlocks.STAINLESS_STEEL_DOOR);
-        generator.registerTrapdoor(UDBlocks.STAINLESS_STEEL_TRAPDOOR);
+        generator.registerOrientableTrapdoor(UDBlocks.STAINLESS_STEEL_TRAPDOOR);
         registerSteelBars(generator);
     }
 
@@ -89,6 +89,17 @@ public class UDModelProvider extends FabricModelProvider {
         generator.register(UDBlocks.STAINLESS_STEEL_SOUL_LANTERN.asItem(), Models.GENERATED);
         generator.register(UDBlocks.TOILET_PAPER.asItem(), Models.GENERATED);
         generator.register(UDBlocks.FLOOR_LAMP.asItem(), Models.GENERATED);
+        generator.register(UDBlocks.OAK_PIANO.asItem(), Models.GENERATED);
+        generator.register(UDBlocks.SPRUCE_PIANO.asItem(), Models.GENERATED);
+        generator.register(UDBlocks.BIRCH_PIANO.asItem(), Models.GENERATED);
+        generator.register(UDBlocks.JUNGLE_PIANO.asItem(), Models.GENERATED);
+        generator.register(UDBlocks.ACACIA_PIANO.asItem(), Models.GENERATED);
+        generator.register(UDBlocks.DARK_OAK_PIANO.asItem(), Models.GENERATED);
+        generator.register(UDBlocks.MANGROVE_PIANO.asItem(), Models.GENERATED);
+        generator.register(UDBlocks.CHERRY_PIANO.asItem(), Models.GENERATED);
+        generator.register(UDBlocks.BAMBOO_PIANO.asItem(), Models.GENERATED);
+        generator.register(UDBlocks.CRIMSON_PIANO.asItem(), Models.GENERATED);
+        generator.register(UDBlocks.WARPED_PIANO.asItem(), Models.GENERATED);
 
         for (DyeColor colors : DyeColor.values()) {
             generator.register(UDBlocks.getDyedTowels(colors.getId()).asItem(), Models.GENERATED);

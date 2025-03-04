@@ -4,6 +4,24 @@ Literally just a secret .txt file of every single update's changelog
 
 =============================================================================================================================================================
 
+## Version Release v1.0.3 Fabric-1.20.1 - The Piano Update !
+
+## Additions
+- Added pianos, can be crafted in any wood variant
+
+## Changes
+- Slightly tweaked toilet paper item texture
+
+## Bug Fixes
+- Fixed the particle texture of every single block in the mod :')
+- Fixed sounds of opening and closing washing machines and dryers
+- The rendering of ovens, washing machines, and dryers have all been cleaned up
+- Fixed stainless steel trapdoor using the wrong trapdoor model
+- Used the correct item model rotations and positions for rigid glass
+- Removed the clock
+
+=============================================================================================================================================================
+
 ## Version Release v1.0.2 Fabric-1.20.1 - The Porcelain Cats & Dogs Update !
 
 ## Changes

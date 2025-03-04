@@ -3,7 +3,7 @@
 	"texture_size": [32, 32],
 	"textures": {
 		"0": "urban_decor:block/desk_fan",
-		"particle": "urban_decor:block/desk_fan"
+		"particle": "urban_decor:block/stainless_steel"
 	},
 	"elements": [
 		{

@@ -32,22 +32,33 @@ public class UrbanDecorClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(UDBlocks.WALL_PICTURE_FRAME, RenderLayer.getCutout());
 
         //CUTOUT MIPPED
-        BlockRenderLayerMap.INSTANCE.putBlock(UDBlocks.OVEN, RenderLayer.getCutoutMipped());
         BlockRenderLayerMap.INSTANCE.putBlock(UDBlocks.RADIATOR, RenderLayer.getCutoutMipped());
-        BlockRenderLayerMap.INSTANCE.putBlock(UDBlocks.DARK_OVEN, RenderLayer.getCutoutMipped());
         BlockRenderLayerMap.INSTANCE.putBlock(UDBlocks.SATELLITE_DISH, RenderLayer.getCutoutMipped());
         BlockRenderLayerMap.INSTANCE.putBlock(UDBlocks.WALL_SATELLITE_DISH, RenderLayer.getCutoutMipped());
         BlockRenderLayerMap.INSTANCE.putBlock(UDBlocks.FILING_CABINET, RenderLayer.getCutoutMipped());
         BlockRenderLayerMap.INSTANCE.putBlock(UDBlocks.AIR_CONDITIONER, RenderLayer.getCutoutMipped());
         BlockRenderLayerMap.INSTANCE.putBlock(UDBlocks.DESK_FAN, RenderLayer.getCutoutMipped());
         BlockRenderLayerMap.INSTANCE.putBlock(UDBlocks.STAINLESS_STEEL_BARS, RenderLayer.getCutoutMipped());
+        BlockRenderLayerMap.INSTANCE.putBlock(UDBlocks.OAK_PIANO, RenderLayer.getCutoutMipped());
+        BlockRenderLayerMap.INSTANCE.putBlock(UDBlocks.SPRUCE_PIANO, RenderLayer.getCutoutMipped());
+        BlockRenderLayerMap.INSTANCE.putBlock(UDBlocks.BIRCH_PIANO, RenderLayer.getCutoutMipped());
+        BlockRenderLayerMap.INSTANCE.putBlock(UDBlocks.JUNGLE_PIANO, RenderLayer.getCutoutMipped());
+        BlockRenderLayerMap.INSTANCE.putBlock(UDBlocks.ACACIA_PIANO, RenderLayer.getCutoutMipped());
+        BlockRenderLayerMap.INSTANCE.putBlock(UDBlocks.DARK_OAK_PIANO, RenderLayer.getCutoutMipped());
+        BlockRenderLayerMap.INSTANCE.putBlock(UDBlocks.MANGROVE_PIANO, RenderLayer.getCutoutMipped());
+        BlockRenderLayerMap.INSTANCE.putBlock(UDBlocks.CHERRY_PIANO, RenderLayer.getCutoutMipped());
+        BlockRenderLayerMap.INSTANCE.putBlock(UDBlocks.BAMBOO_PIANO, RenderLayer.getCutoutMipped());
+        BlockRenderLayerMap.INSTANCE.putBlock(UDBlocks.CRIMSON_PIANO, RenderLayer.getCutoutMipped());
+        BlockRenderLayerMap.INSTANCE.putBlock(UDBlocks.WARPED_PIANO, RenderLayer.getCutoutMipped());
+        BlockRenderLayerMap.INSTANCE.putBlock(UDBlocks.FLOOR_LAMP, RenderLayer.getCutoutMipped());
 
         //TRANSLUCENT
+        BlockRenderLayerMap.INSTANCE.putBlock(UDBlocks.OVEN, RenderLayer.getTranslucent());
+        BlockRenderLayerMap.INSTANCE.putBlock(UDBlocks.DARK_OVEN, RenderLayer.getTranslucent());
         BlockRenderLayerMap.INSTANCE.putBlock(UDBlocks.DARK_WASHING_MACHINE, RenderLayer.getTranslucent());
         BlockRenderLayerMap.INSTANCE.putBlock(UDBlocks.DARK_DRYER, RenderLayer.getTranslucent());
         BlockRenderLayerMap.INSTANCE.putBlock(UDBlocks.WASHING_MACHINE, RenderLayer.getTranslucent());
         BlockRenderLayerMap.INSTANCE.putBlock(UDBlocks.DRYER, RenderLayer.getTranslucent());
-        BlockRenderLayerMap.INSTANCE.putBlock(UDBlocks.FLOOR_LAMP, RenderLayer.getTranslucent());
 
         for (DyeColor colors : DyeColor.values()) {
             BlockRenderLayerMap.INSTANCE.putBlock(UDBlocks.getDyedTowels(colors.getId()), RenderLayer.getCutout());

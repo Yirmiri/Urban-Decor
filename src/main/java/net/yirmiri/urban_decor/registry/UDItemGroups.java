@@ -97,6 +97,17 @@ public class UDItemGroups {
                 entries.add(UDBlocks.TRASH_CAN);
                 entries.add(UDBlocks.DESK_FAN);
                 entries.add(UDBlocks.FLOOR_LAMP);
+                entries.add(UDBlocks.OAK_PIANO);
+                entries.add(UDBlocks.SPRUCE_PIANO);
+                entries.add(UDBlocks.BIRCH_PIANO);
+                entries.add(UDBlocks.JUNGLE_PIANO);
+                entries.add(UDBlocks.ACACIA_PIANO);
+                entries.add(UDBlocks.DARK_OAK_PIANO);
+                entries.add(UDBlocks.MANGROVE_PIANO);
+                entries.add(UDBlocks.CHERRY_PIANO);
+                entries.add(UDBlocks.BAMBOO_PIANO);
+                entries.add(UDBlocks.CRIMSON_PIANO);
+                entries.add(UDBlocks.WARPED_PIANO);
                 entries.add(UDItems.SATELLITE_DISH);
                 entries.add(UDBlocks.TURBINE);
                 entries.add(UDBlocks.AIR_CONDITIONER);

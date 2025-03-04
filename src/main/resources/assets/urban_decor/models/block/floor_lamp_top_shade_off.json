@@ -3,7 +3,7 @@
 	"textures": {
 		"0": "urban_decor:block/floor_lamp",
 		"1": "urban_decor:block/floor_lamp_shade",
-		"particle": "urban_decor:block/floor_lamp"
+		"particle": "urban_decor:block/stainless_steel_block"
 	},
 	"elements": [
 		{
