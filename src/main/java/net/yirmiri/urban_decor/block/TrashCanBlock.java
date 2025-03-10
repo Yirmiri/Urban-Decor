@@ -29,7 +29,7 @@ import net.minecraft.world.World;
 import net.yirmiri.urban_decor.block.abstracts.AbstractMiniStorageDecorBlock;
 import net.yirmiri.urban_decor.block.entity.MiniStorageApplianceBlockEntity;
 import net.yirmiri.urban_decor.datagen.UDItemTagProvider;
-import net.yirmiri.urban_decor.util.UDStats;
+import net.yirmiri.urban_decor.init.UDStats;
 import net.yirmiri.urban_decor.util.UDUtils;
 import org.jetbrains.annotations.Nullable;
 

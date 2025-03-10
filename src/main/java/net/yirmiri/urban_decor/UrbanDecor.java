@@ -6,8 +6,8 @@ import net.fabricmc.loader.api.FabricLoader;
 import net.yirmiri.urban_decor.compat.UDCompatRegistries;
 import net.yirmiri.urban_decor.compat.UDPacks;
 import net.yirmiri.urban_decor.registry.*;
-import net.yirmiri.urban_decor.util.UDRegistries;
-import net.yirmiri.urban_decor.util.UDStats;
+import net.yirmiri.urban_decor.init.UDRegistries;
+import net.yirmiri.urban_decor.init.UDStats;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

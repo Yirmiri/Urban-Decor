@@ -32,13 +32,13 @@ public class TowelBarTowelBlock extends TowelBarBlock {
 
     @Override
     public ItemStack getPickStack(BlockView world, BlockPos pos, BlockState state) {
-        return new ItemStack(UDBlocks.TOWEL_BAR);
+        return new ItemStack(UDBlocks.TOWEL_BAR.get());
     }
 
     @Override
     public void afterBreak(World world, PlayerEntity player, BlockPos pos, BlockState state, @Nullable BlockEntity blockEntity, ItemStack tool) {
         super.afterBreak(world, player, pos, state, blockEntity, tool);
-        dropStack(world, pos, new ItemStack (UDBlocks.TOWEL_BAR.asItem()));
+        dropStack(world, pos, new ItemStack (UDBlocks.TOWEL_BAR.get().asItem()));
     }
 
     @Override
@@ -52,7 +52,7 @@ public class TowelBarTowelBlock extends TowelBarBlock {
             player.dropItem(towel, false);
         }
 
-        world.setBlockState(pos, UDBlocks.TOWEL_BAR.getDefaultState().with(FACING, state.get(FACING)), Block.NOTIFY_ALL);
+        world.setBlockState(pos, UDBlocks.TOWEL_BAR.get().getDefaultState().with(FACING, state.get(FACING)), Block.NOTIFY_ALL);
         return ActionResult.SUCCESS;
     }
 

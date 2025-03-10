@@ -11,7 +11,6 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.fluid.Fluids;
 import net.minecraft.item.ItemPlacementContext;
 import net.minecraft.item.ItemStack;
-import net.minecraft.particle.ParticleTypes;
 import net.minecraft.recipe.CampfireCookingRecipe;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
@@ -30,7 +29,7 @@ import net.minecraft.world.World;
 import net.minecraft.world.WorldAccess;
 import net.yirmiri.urban_decor.block.entity.ToasterBlockEntity;
 import net.yirmiri.urban_decor.registry.UDBlockEntities;
-import net.yirmiri.urban_decor.registry.UDDamageTypes;
+import net.yirmiri.urban_decor.init.UDDamageTypes;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.Optional;

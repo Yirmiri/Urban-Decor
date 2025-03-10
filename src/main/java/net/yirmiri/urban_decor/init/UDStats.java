@@ -1,4 +1,4 @@
-package net.yirmiri.urban_decor.util;
+package net.yirmiri.urban_decor.init;
 
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;

@@ -18,7 +18,6 @@ import net.minecraft.sound.SoundEvents;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.BooleanProperty;
 import net.minecraft.state.property.Properties;
-import net.minecraft.text.Text;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
 import net.minecraft.util.ItemScatterer;
@@ -30,12 +29,10 @@ import net.minecraft.util.math.random.Random;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
-import net.yirmiri.urban_decor.block.abstracts.AbstractDecorBlock;
 import net.yirmiri.urban_decor.block.abstracts.AbstractStorageDecorBlock;
 import net.yirmiri.urban_decor.block.entity.StorageApplianceBlockEntity;
 import net.yirmiri.urban_decor.datagen.UDItemTagProvider;
-import net.yirmiri.urban_decor.util.UDStats;
-import net.yirmiri.urban_decor.util.UDUtils;
+import net.yirmiri.urban_decor.init.UDStats;
 import org.jetbrains.annotations.Nullable;
 
 public class ToolboxBlock extends AbstractStorageDecorBlock {

@@ -1,4 +1,4 @@
-package net.yirmiri.urban_decor.registry;
+package net.yirmiri.urban_decor.init;
 
 import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.damage.DamageType;

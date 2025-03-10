@@ -1,4 +1,4 @@
-// 1.20.1	2025-03-04T17:40:00.4233486	Urban Decor/Recipes
+// 1.20.1	2025-03-10T16:53:41.7196688	Urban Decor/Recipes
 45df67d7cf6731b31fd1feada16630c3b7fbd2e2 data\urban_decor\recipes\light_gray_picture_frame.json
 f2e4f1bdceb20b342676cd6b7ccb12f34708ed8a data\urban_decor\recipes\dark_bathtub.json
 c367528e6ddca56437a35aad1fdf0d0dfb9bc723 data\urban_decor\recipes\porcelain_tile_stairs_from_porcelain_tiles_stonecutting.json
@@ -198,8 +198,8 @@ ea331f113908ca4cef2c1e077354aface7a70b5e data\urban_decor\advancements\recipes\d
 49660ed76de987ef0b4bd743c3e91d1c75d76c07 data\urban_decor\recipes\freezer.json
 b5b1787d0d1f2ad48f8b8406d8bfeb94d8ac9e85 data\urban_decor\advancements\recipes\decorations\lime_picture_frame.json
 e144bcd34cc9dd08d1ae066c7ba120617e61afa4 data\urban_decor\advancements\recipes\decorations\birch_piano.json
-4fb2dc98dd655920b3317da0834ea407beee8d72 data\urban_decor\recipes\light_gray_towel.json
 15228fa6e452d9856791d38d590ff6c93185e7b0 data\urban_decor\advancements\recipes\decorations\light_gray_towel.json
+4fb2dc98dd655920b3317da0834ea407beee8d72 data\urban_decor\recipes\light_gray_towel.json
 25167eb056e2786597b21ac118198105357f02b4 data\urban_decor\recipes\porcelain_stairs_from_porcelain_block_stonecutting.json
 099e05287bc10edd25e66e9739a2d20ba8c90bea data\urban_decor\advancements\recipes\building_blocks\dark_porcelain_stairs.json
 81f2330aee703974602ba55f5eb1a5fc502034cc data\urban_decor\recipes\dark_dryer.json

@@ -25,7 +25,7 @@ import net.yirmiri.urban_decor.block.abstracts.AbstractDecorBlock;
 import net.yirmiri.urban_decor.datagen.UDItemTagProvider;
 import net.yirmiri.urban_decor.entity.ToiletEntity;
 import net.yirmiri.urban_decor.registry.UDEntities;
-import net.yirmiri.urban_decor.util.UDStats;
+import net.yirmiri.urban_decor.init.UDStats;
 import net.yirmiri.urban_decor.util.UDUtils;
 
 import java.util.stream.Stream;

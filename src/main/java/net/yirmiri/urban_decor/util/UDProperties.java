@@ -71,6 +71,6 @@ public class UDProperties {
     public static class ItemP {
         //MISC
         public static final Item.Settings GENERIC_ITEM = new Item.Settings();
-        public static final Item.Settings TOOLBOX = new Item.Settings().maxCount(1).recipeRemainder(UDItems.TOOLBOX);
+        public static final Item.Settings TOOLBOX = new Item.Settings().maxCount(1);
     }
 }
