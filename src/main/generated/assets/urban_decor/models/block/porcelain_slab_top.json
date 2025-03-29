@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/slab_top",
-  "textures": {
-    "bottom": "urban_decor:block/porcelain_block",
-    "side": "urban_decor:block/porcelain_block",
-    "top": "urban_decor:block/porcelain_block"
-  }
-}

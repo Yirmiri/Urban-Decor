@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:block/cube_all",
-  "textures": {
-    "all": "urban_decor:block/dark_porcelain_tiles"
-  }
-}
