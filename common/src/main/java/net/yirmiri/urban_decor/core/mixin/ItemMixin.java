@@ -1,7 +1,5 @@
 package net.yirmiri.urban_decor.core.mixin;
 
-import net.fabricmc.api.EnvType;
-import net.fabricmc.api.Environment;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.Item;
@@ -9,7 +7,6 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.level.Level;
 import net.yirmiri.urban_decor.UrbanDecor;
-import net.yirmiri.urban_decor.datagen.UDItemTagProvider;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
@@ -17,11 +14,10 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 import java.util.List;
 
-@Environment(EnvType.CLIENT)
 @Mixin(Item.class)
 public abstract class ItemMixin {
 
-    @Inject(at = @At("HEAD"), method = "appendTooltip")
+    @Inject(at = @At("HEAD"), method = "appendHoverText")
     private void urbanDecor$appendTooltip(ItemStack stack, Level world, List<Component> tooltip, TooltipFlag context, CallbackInfo ci) {
         if (stack.is(UDItemTagProvider.TOOLBOXABLE)) {
             tooltip.add(Component.translatable("tooltip." + UrbanDecor.MOD_ID + ".toolboxable").withStyle(ChatFormatting.GRAY).withStyle(ChatFormatting.ITALIC));

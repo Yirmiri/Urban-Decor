@@ -1,4 +1,4 @@
-package net.yirmiri.urban_decor.core.init;
+package net.yirmiri.urban_decor.init;
 
 import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
 import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;

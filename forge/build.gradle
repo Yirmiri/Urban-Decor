@@ -53,7 +53,7 @@ dependencies {
     compileOnly project(":common")
     annotationProcessor("org.spongepowered:mixin:0.8.5-SNAPSHOT:processor")
     //RUNICLIB
-    modImplementation "curse.maven:runiclib-880879:6329449"
+    modImplementation "curse.maven:runiclib-880879:${forge_runiclib}"
 }
 
 jar {

@@ -18,7 +18,7 @@ import net.minecraft.world.level.block.entity.ContainerOpenersCounter;
 import net.minecraft.world.level.block.state.BlockState;
 import net.yirmiri.urban_decor.common.block.abstracts.AbstractFurnaceDecorBlock;
 import net.yirmiri.urban_decor.core.registry.UDBlockEntities;
-import net.yirmiri.urban_decor.core.registry.UDSounds;
+import net.yirmiri.urban_decor.core.init.UDSounds;
 
 public class FurnaceDecorBlockEntity extends AbstractFurnaceBlockEntity {
     private final ContainerOpenersCounter stateManager;

@@ -5,7 +5,6 @@ import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.level.Level;
 import net.yirmiri.urban_decor.common.block.ToiletBlock;
-import net.yirmiri.urban_decor.datagen.UDBlockTagProvider;
 
 public class ToiletEntity extends Entity {
     public ToiletEntity(EntityType<?> type, Level world) {

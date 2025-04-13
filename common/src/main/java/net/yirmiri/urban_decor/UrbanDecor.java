@@ -1,5 +1,6 @@
 package net.yirmiri.urban_decor;
 
+import net.yirmiri.urban_decor.core.init.UDSounds;
 import net.yirmiri.urban_decor.core.registry.*;
 import net.yirmiri.urban_decor.core.init.UDRegistries;
 import net.yirmiri.urban_decor.core.init.UDStats;

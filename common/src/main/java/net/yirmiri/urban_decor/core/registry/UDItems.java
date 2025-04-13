@@ -1,6 +1,6 @@
 package net.yirmiri.urban_decor.core.registry;
 
-import net.azurune.tipsylib.platform.Services;
+import net.azurune.runiclib.core.platform.Services;
 import net.minecraft.core.Direction;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.DyeColor;

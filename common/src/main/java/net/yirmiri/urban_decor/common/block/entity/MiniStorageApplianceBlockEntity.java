@@ -20,7 +20,7 @@ import net.minecraft.world.level.block.entity.RandomizableContainerBlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.yirmiri.urban_decor.common.block.abstracts.AbstractMiniStorageDecorBlock;
 import net.yirmiri.urban_decor.core.registry.UDBlockEntities;
-import net.yirmiri.urban_decor.core.registry.UDSounds;
+import net.yirmiri.urban_decor.core.init.UDSounds;
 
 public class MiniStorageApplianceBlockEntity extends RandomizableContainerBlockEntity {
     private NonNullList<ItemStack> inventory;

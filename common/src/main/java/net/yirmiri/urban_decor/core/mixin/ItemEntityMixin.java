@@ -10,7 +10,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 @Mixin(ItemEntity.class)
 public class ItemEntityMixin {
-    @Inject(at = @At("HEAD"), method = "onPlayerCollision", cancellable = true)
+    @Inject(at = @At("HEAD"), method = "playerTouch", cancellable = true)
     private void urbanDecor$onPlayerCollision(Player player, CallbackInfo ci) {
         if (player.getVehicle() instanceof ToiletEntity) {
             ci.cancel();

@@ -3,6 +3,10 @@ plugins {
     id 'net.neoforged.moddev.legacyforge'
 }
 
+repositories {
+    maven { url = "https://cursemaven.com" }
+}
+
 legacyForge {
     mcpVersion = minecraft_version
     if (file("src/main/resources/META-INF/accesstransformer.cfg").exists()) {
@@ -17,6 +21,8 @@ legacyForge {
 dependencies {
     compileOnly group: 'org.spongepowered', name: 'mixin', version: '0.8.5'
     implementation group: 'com.google.code.findbugs', name: 'jsr305', version: '3.0.1'
+    //RUNICLIB
+    modImplementation "curse.maven:runiclib-880879:${forge_runiclib}"
 }
 
 configurations {

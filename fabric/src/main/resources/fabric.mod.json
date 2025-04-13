@@ -20,6 +20,9 @@
         ],
         "client": [
             "net.yirmiri.urban_decor.FabricUrbanDecorClient"
+        ],
+        "fabric-datagen": [
+            "net.yirmiri.urban_decor.UrbanDecorDataGenerator"
         ]
     },
     "mixins": [
@@ -31,7 +34,7 @@
         "fabric": "*",
         "minecraft": "${minecraft_version}",
         "java": ">=17",
-        "runiclib": ">=4.1.0"
+        "runiclib": ">=${runiclib_version_range}"
     },
     "suggests": {
         "another-mod": "*"

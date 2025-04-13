@@ -1,7 +1,7 @@
 package net.yirmiri.urban_decor.platform;
 
-import com.example.examplemod.platform.services.IPlatformHelper;
 import net.fabricmc.loader.api.FabricLoader;
+import net.yirmiri.urban_decor.core.platform.services.IPlatformHelper;
 
 public class FabricPlatformHelper implements IPlatformHelper {
 
@@ -12,13 +12,11 @@ public class FabricPlatformHelper implements IPlatformHelper {
 
     @Override
     public boolean isModLoaded(String modId) {
-
         return FabricLoader.getInstance().isModLoaded(modId);
     }
 
     @Override
     public boolean isDevelopmentEnvironment() {
-
         return FabricLoader.getInstance().isDevelopmentEnvironment();
     }
 }

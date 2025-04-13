@@ -17,6 +17,7 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.yirmiri.urban_decor.UrbanDecor;
+import net.yirmiri.urban_decor.core.init.UDTags;
 import net.yirmiri.urban_decor.core.registry.UDBlocks;
 import net.yirmiri.urban_decor.core.registry.UDItems;
 
@@ -180,7 +181,7 @@ public class UDRecipeProvider extends FabricRecipeProvider {
                 .save(exporter, ResourceLocation.tryBuild(UrbanDecor.MOD_ID, getSimpleRecipeName(UDBlocks.DARK_SINK.get())));
 
         ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, UDBlocks.WASHING_MACHINE.get(), 1)
-                .define('#', UDItems.PORCELAIN.get()).define('@', UDItems.STEEL_PIPE.get()).define('%', UDItems.STAINLESS_STEEL_INGOT.get()).define('&', UDItemTagProvider.GLASS)
+                .define('#', UDItems.PORCELAIN.get()).define('@', UDItems.STEEL_PIPE.get()).define('%', UDItems.STAINLESS_STEEL_INGOT.get()).define('&', UDTags.Items.GLASS)
                 .pattern("#&#")
                 .pattern("#%#")
                 .pattern("#@#")
@@ -190,7 +191,7 @@ public class UDRecipeProvider extends FabricRecipeProvider {
                 .save(exporter, ResourceLocation.tryBuild(UrbanDecor.MOD_ID, getSimpleRecipeName(UDBlocks.WASHING_MACHINE.get())));
 
         ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, UDBlocks.DARK_WASHING_MACHINE.get(), 1)
-                .define('#', UDItems.DARK_PORCELAIN.get()).define('@', UDItems.STEEL_PIPE.get()).define('%', UDItems.STAINLESS_STEEL_INGOT.get()).define('&', UDItemTagProvider.GLASS)
+                .define('#', UDItems.DARK_PORCELAIN.get()).define('@', UDItems.STEEL_PIPE.get()).define('%', UDItems.STAINLESS_STEEL_INGOT.get()).define('&', UDTags.Items.GLASS)
                 .pattern("#&#")
                 .pattern("#%#")
                 .pattern("#@#")
