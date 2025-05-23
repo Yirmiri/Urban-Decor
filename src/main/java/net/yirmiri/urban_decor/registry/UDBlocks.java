@@ -1,6 +1,6 @@
 package net.yirmiri.urban_decor.registry;
 
-import net.azurune.tipsylib.platform.Services;
+import net.azurune.runiclib.core.platform.Services;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.*;
 import net.minecraft.util.DyeColor;
@@ -161,8 +161,8 @@ public class UDBlocks {
         return DYED_WALL_PICTURE_FRAMES.get(DyeColor.byId(colors));
     }
 
-    public static Supplier<Block> register(String id, Supplier<Block> supplier, boolean hasItem) {
-        return Services.REGISTRY.registerBlock(UrbanDecor.MOD_ID, id, supplier, hasItem);
+    public static Supplier<Block> register(String id, Supplier<Block> block, boolean hasItem) {
+        return Services.REGISTRY.registerBlock(UrbanDecor.MOD_ID, id, block, hasItem);
     }
 
     public static void loadBlocks() {

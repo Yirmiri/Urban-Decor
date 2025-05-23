@@ -79,7 +79,6 @@ public class ExcessiveBuildingVerticalStairs extends Block implements Waterlogga
         if (state.get(WATERLOGGED)) {
             world.scheduleFluidTick(pos, Fluids.WATER, Fluids.WATER.getTickRate(world));
         }
-
         return super.getStateForNeighborUpdate(state, direction, neighborState, world, pos, neighborPos);
     }
 }

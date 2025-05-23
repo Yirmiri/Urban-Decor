@@ -1,6 +1,6 @@
 package net.yirmiri.urban_decor.registry;
 
-import net.azurune.tipsylib.platform.Services;
+import net.azurune.runiclib.core.platform.Services;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.VerticallyAttachableBlockItem;
