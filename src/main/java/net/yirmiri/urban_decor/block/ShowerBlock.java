@@ -6,6 +6,8 @@ import net.minecraft.block.ShapeContext;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
+import net.minecraft.sound.SoundCategory;
+import net.minecraft.sound.SoundEvents;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.BooleanProperty;
 import net.minecraft.state.property.Properties;
@@ -65,18 +67,19 @@ public class ShowerBlock extends AbstractDecorBlock {
         } if (stackHand.isOf(Items.GLASS_BOTTLE) && state.get(ON) && !world.isClient) {
             UDUtils.faucetFillBottle(world, pos, player, hand);
             return ActionResult.SUCCESS;
-        } //else if (stackHand.isEmpty()) {
-            //world.setBlockState(pos, state.cycle(ON));
-            //world.playSound(pos.getX(), pos.getY(), pos.getZ(), SoundEvents.BLOCK_CHERRY_WOOD_BUTTON_CLICK_ON, SoundCategory.BLOCKS, 0.8F, 1.0F, false);
-            //return ActionResult.SUCCESS;
-        //}
+//        } else if (stackHand.isEmpty()) {
+//            world.setBlockState(pos, state.cycle(ON));
+//            world.playSound(pos.getX(), pos.getY(), pos.getZ(), SoundEvents.BLOCK_CHERRY_WOOD_BUTTON_CLICK_ON, SoundCategory.BLOCKS, 0.8F, 1.0F, false);
+//            return ActionResult.SUCCESS;
+        }
         return ActionResult.PASS;
     }
 
     @Override
     public void randomDisplayTick(BlockState state, World world, BlockPos pos, Random random) {
+        Direction direction = state.get(Properties.HORIZONTAL_FACING);
         if (state.get(ON)) {
-            UDUtils.spawnWaterParticles(world, new Vec3d(pos.getX() + 0.5F, pos.getY() + 0.2F, pos.getZ() + 0.5F));
+            UDUtils.spawnWaterParticles(1, world, pos, direction);
         }
     }
 

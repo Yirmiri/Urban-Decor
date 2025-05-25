@@ -8,11 +8,13 @@ import net.minecraft.item.Items;
 import net.minecraft.particle.ParticleTypes;
 import net.minecraft.potion.PotionUtil;
 import net.minecraft.potion.Potions;
+import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.stat.Stats;
 import net.minecraft.util.Hand;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.Direction;
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
 import net.minecraft.world.event.GameEvent;
@@ -23,11 +25,13 @@ public class UDUtils {
         world.playSound(pos.getX(), pos.getY(), pos.getZ(), SoundEvents.BLOCK_GRINDSTONE_USE, SoundCategory.BLOCKS, 0.5F, 1.0F, false);
     }
 
-    public static void spawnWaterParticles(World world, Vec3d vec3d) {
-        world.addParticle(ParticleTypes.FALLING_WATER, vec3d.x, vec3d.y, vec3d.z, 0.0, 0.4, 0.0);
-        world.addParticle(ParticleTypes.FALLING_WATER, vec3d.x, vec3d.y, vec3d.z, 0.0, 0.4, 0.0);
-        world.addParticle(ParticleTypes.FALLING_WATER, vec3d.x, vec3d.y, vec3d.z, 0.0, 0.4, 0.0);
-        world.playSound(vec3d.x + 0.5, vec3d.y + 0.5, vec3d.z + 0.5, SoundEvents.WEATHER_RAIN, SoundCategory.BLOCKS, 0.05F, 1.0F, false);
+    public static void spawnWaterParticles(int count, World world, BlockPos blockPos, Direction direction) {
+        Vec3d spawnPos = new Vec3d(blockPos.getX() + 0.5, blockPos.getY() + 1.0, blockPos.getZ() + 0.5).add(new Vec3d(0, 0, -0.5));
+        Vec3d velocity = new Vec3d(direction.getOffsetX(), direction.getOffsetY(), direction.getOffsetZ()).normalize().multiply(0.1);
+
+        if (world instanceof ServerWorld serverWorld) {
+            serverWorld.spawnParticles(ParticleTypes.DRIPPING_WATER, spawnPos.x, spawnPos.y, spawnPos.z, count, 0.0, 0.0, 0.0, velocity.x);
+        }
     }
 
     public static void faucetFillBottle(World world, BlockPos pos, PlayerEntity player, Hand hand) {

@@ -181,7 +181,7 @@ public class UDRecipeProvider extends FabricRecipeProvider {
                 .offerTo(exporter, Identifier.of(UrbanDecor.MOD_ID, getRecipeName(UDBlocks.DARK_SINK.get())));
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, UDBlocks.WASHING_MACHINE.get(), 1)
-                .input('#', UDItems.PORCELAIN.get()).input('@', UDItems.STEEL_PIPE.get()).input('%', UDItems.STAINLESS_STEEL_INGOT.get()).input('&', UDItemTagProvider.GLASS)
+                .input('#', UDItems.PORCELAIN.get()).input('@', UDItems.STEEL_PIPE.get()).input('%', UDItems.STAINLESS_STEEL_INGOT.get()).input('&', Blocks.GLASS)
                 .pattern("#&#")
                 .pattern("#%#")
                 .pattern("#@#")
@@ -191,7 +191,7 @@ public class UDRecipeProvider extends FabricRecipeProvider {
                 .offerTo(exporter, Identifier.of(UrbanDecor.MOD_ID, getRecipeName(UDBlocks.WASHING_MACHINE.get())));
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, UDBlocks.DARK_WASHING_MACHINE.get(), 1)
-                .input('#', UDItems.DARK_PORCELAIN.get()).input('@', UDItems.STEEL_PIPE.get()).input('%', UDItems.STAINLESS_STEEL_INGOT.get()).input('&', UDItemTagProvider.GLASS)
+                .input('#', UDItems.DARK_PORCELAIN.get()).input('@', UDItems.STEEL_PIPE.get()).input('%', UDItems.STAINLESS_STEEL_INGOT.get()).input('&', Blocks.GLASS)
                 .pattern("#&#")
                 .pattern("#%#")
                 .pattern("#@#")

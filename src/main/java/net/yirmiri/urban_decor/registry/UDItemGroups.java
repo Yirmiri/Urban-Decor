@@ -9,8 +9,6 @@ import net.minecraft.text.Text;
 import net.minecraft.util.DyeColor;
 import net.minecraft.util.Identifier;
 import net.yirmiri.urban_decor.UrbanDecor;
-import net.yirmiri.urban_decor.compat.UDCompatRegistries;
-import net.yirmiri.urban_decor.compat.excessive_building.EBRegisterBlocks;
 
 public class UDItemGroups {
     public static ItemGroup URBAN_DECOR = Registry.register(Registries.ITEM_GROUP, Identifier.of(UrbanDecor.MOD_ID, "urban_decor"), FabricItemGroup.builder()
@@ -165,14 +163,6 @@ public class UDItemGroups {
                 entries.add(UDItems.getDyedPictureFrames(DyeColor.PURPLE.getId()).get());
                 entries.add(UDItems.getDyedPictureFrames(DyeColor.MAGENTA.getId()).get());
                 entries.add(UDItems.getDyedPictureFrames(DyeColor.PINK.getId()).get());
-
-                if (UDCompatRegistries.EXCESSIVE_BUILDING) {
-                    entries.add(EBRegisterBlocks.PORCELAIN_TILE_VERTICAL_STAIRS.get());
-                    entries.add(EBRegisterBlocks.DARK_PORCELAIN_TILE_VERTICAL_STAIRS.get());
-                    entries.add(EBRegisterBlocks.CHECKERED_PORCELAIN_TILE_VERTICAL_STAIRS.get());
-                    entries.add(EBRegisterBlocks.CHROMITE_VERTICAL_STAIRS.get());
-                    entries.add(EBRegisterBlocks.POLISHED_CHROMITE_VERTICAL_STAIRS.get());
-                }
             }).build());
 
     public static void loadItemGroups() {

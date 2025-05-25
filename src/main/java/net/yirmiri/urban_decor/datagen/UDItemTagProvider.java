@@ -19,8 +19,6 @@ public class UDItemTagProvider extends FabricTagProvider.ItemTagProvider {
     public static final TagKey<Item> FURNISHINGS = create("furnishings");
     public static final TagKey<Item> TOOLBOXES = create("toolboxes");
     public static final TagKey<Item> TOWELS = create("towels");
-    public static final TagKey<Item> GLASS = create("glass");
-    public static final TagKey<Item> DYES = create("dyes");
     public static final TagKey<Item> TOOLBOXABLE = create("toolboxable");
     public static final TagKey<Item> WRAPPABLE = create("wrappable");
 
@@ -87,54 +85,15 @@ public class UDItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(UDBlocks.RADIATOR.get().asItem())
                 .add(UDBlocks.TOILET_PAPER.get().asItem())
                 .add(UDBlocks.FLOOR_LAMP.get().asItem())
+                .add(UDBlocks.TURBINE.get().asItem())
         ;
 
         getOrCreateTagBuilder(WRAPPABLE)
 
         ;
 
-        getOrCreateTagBuilder(DYES)
-                .add(Items.RED_DYE)
-                .add(Items.ORANGE_DYE)
-                .add(Items.YELLOW_DYE)
-                .add(Items.LIME_DYE)
-                .add(Items.GREEN_DYE)
-                .add(Items.CYAN_DYE)
-                .add(Items.LIGHT_BLUE_DYE)
-                .add(Items.BLUE_DYE)
-                .add(Items.PURPLE_DYE)
-                .add(Items.MAGENTA_DYE)
-                .add(Items.PINK_DYE)
-                .add(Items.WHITE_DYE)
-                .add(Items.LIGHT_GRAY_DYE)
-                .add(Items.GRAY_DYE)
-                .add(Items.BLACK_DYE)
-                .add(Items.BROWN_DYE)
-        ;
-
             getOrCreateTagBuilder(TOOLBOXES)
                 .add(UDItems.TOOLBOX.get())
-        ;
-
-        getOrCreateTagBuilder(GLASS)
-                .add(Items.GLASS)
-                .add(Items.TINTED_GLASS)
-                .add(Items.RED_STAINED_GLASS)
-                .add(Items.ORANGE_STAINED_GLASS)
-                .add(Items.YELLOW_STAINED_GLASS)
-                .add(Items.LIME_STAINED_GLASS)
-                .add(Items.GREEN_STAINED_GLASS)
-                .add(Items.BLUE_STAINED_GLASS)
-                .add(Items.CYAN_STAINED_GLASS)
-                .add(Items.LIGHT_BLUE_STAINED_GLASS)
-                .add(Items.PURPLE_STAINED_GLASS)
-                .add(Items.MAGENTA_STAINED_GLASS)
-                .add(Items.PINK_STAINED_GLASS)
-                .add(Items.WHITE_STAINED_GLASS)
-                .add(Items.LIGHT_GRAY_STAINED_GLASS)
-                .add(Items.GRAY_STAINED_GLASS)
-                .add(Items.BLACK_STAINED_GLASS)
-                .add(Items.BROWN_STAINED_GLASS)
         ;
 
         for (DyeColor colors : DyeColor.values()) {

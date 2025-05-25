@@ -60,7 +60,7 @@ public class UDModelProvider extends FabricModelProvider {
         darkPorcelainBricks.slab(UDBlocks.DARK_PORCELAIN_BRICK_SLAB.get());
 
         generator.registerDoor(UDBlocks.STAINLESS_STEEL_DOOR.get());
-        generator.registerOrientableTrapdoor(UDBlocks.STAINLESS_STEEL_TRAPDOOR.get());
+        generator.registerTrapdoor(UDBlocks.STAINLESS_STEEL_TRAPDOOR.get());
         //registerSteelBars(generator);
     }
 
@@ -99,6 +99,9 @@ public class UDModelProvider extends FabricModelProvider {
         generator.register(UDBlocks.BAMBOO_PIANO.get().asItem(), Models.GENERATED);
         generator.register(UDBlocks.CRIMSON_PIANO.get().asItem(), Models.GENERATED);
         generator.register(UDBlocks.WARPED_PIANO.get().asItem(), Models.GENERATED);
+        generator.register(UDBlocks.AIR_CONDITIONER.get().asItem(), Models.GENERATED);
+        generator.register(UDBlocks.RADIATOR.get().asItem(), Models.GENERATED);
+        generator.register(UDBlocks.TURBINE.get().asItem(), Models.GENERATED);
 
         for (DyeColor colors : DyeColor.values()) {
             generator.register(UDBlocks.getDyedTowels(colors.getId()).get().asItem(), Models.GENERATED);

@@ -187,6 +187,8 @@ public class UDLangProvider extends FabricLanguageProvider {
         //DAMAGE
         build.add("death.attack.urban_decor.toaster", "%1$s likes to play with hot toasters");
         build.add("death.attack.urban_decor.toaster.player", "%2$s toasted %1$s into a delight!");
+        build.add("death.attack.urban_decor.wet_toaster", "%1$s likes to play with toasters in the water");
+        build.add("death.attack.urban_decor.wet_toaster.player", "%2$s electrocuted %1$s with a toaster in the water");
 
         //SUBTITLES
         build.add("subtitles.block.generic.activate", "Button clicks");
@@ -194,7 +196,7 @@ public class UDLangProvider extends FabricLanguageProvider {
         build.add("subtitles.block.appliance.close", "Appliance closes");
         build.add("subtitles.block.toolbox.use", "Toolbox used");
         build.add("subtitles.block.faucet.use", "Faucet turns");
-        build.add("subtitles.block.toilet.use", "Toilet flushes"); //todo: probably wont be added
+        build.add("subtitles.block.toilet.use", "Toilet flushes");
         build.add("subtitles.block.fan.loop", "Fan spins");
         build.add("subtitles.block.water.loop", "Water pitter patters");
         build.add("subtitles.block.microwave.loop", "Microwave hums");
@@ -270,7 +272,7 @@ public class UDLangProvider extends FabricLanguageProvider {
         build.add(YT_ID + "block." + MOD_ID + "faucet.desc", "Not recommended to drink from... that doesn't mean you can't");
         build.add(YT_ID + "block." + MOD_ID + "trash_can.desc", "Oh hi thanks for checking in, I'm still a piece of garbage");
         build.add(YT_ID + "block." + MOD_ID + "desk_fan.desc", "Fun Fact: The fan in the original game Five Night's at Freddy's is just a GIF");
-        build.add(YT_ID + "item." + MOD_ID + "satellite_dish.desc", "Pending Transmission... \"╎ᒲ!¡ᒷリ↸in⊣\""); //TODO: ???
+        build.add(YT_ID + "item." + MOD_ID + "satellite_dish.desc", "Pending Transmission... \"╎ᒲ!¡ᒷリ↸in⊣\"");
         build.add(YT_ID + "block." + MOD_ID + "turbine.desc", "I won't lie I ran out of things to write at the point of this one");
         build.add(YT_ID + "block." + MOD_ID + "air_conditioner.desc", "Cold to the touch...");
         build.add(YT_ID + "block." + MOD_ID + "radiator.desc", "Hot to the touch...");

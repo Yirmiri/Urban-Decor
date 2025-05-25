@@ -2,9 +2,6 @@ package net.yirmiri.urban_decor;
 
 import net.fabricmc.api.ModInitializer;
 
-import net.fabricmc.loader.api.FabricLoader;
-import net.yirmiri.urban_decor.compat.UDCompatRegistries;
-import net.yirmiri.urban_decor.compat.UDPacks;
 import net.yirmiri.urban_decor.registry.*;
 import net.yirmiri.urban_decor.init.UDRegistries;
 import net.yirmiri.urban_decor.init.UDStats;
@@ -20,16 +17,10 @@ public class UrbanDecor implements ModInitializer {
 		UDBlocks.loadBlocks();
 		UDItems.loadItems();
 		UDItemGroups.loadItemGroups();
-		UDPacks.loadPacks();
-		UDCompatRegistries.loadCompatRegistries();
 		UDBlockEntities.loadBlockEntities();
 		UDSounds.loadSounds();
 		UDRegistries.loadRegistries();
 		UDEntities.loadEntities();
 		UDStats.loadStats();
-	}
-
-	public static boolean isModLoaded(String id) {
-		return FabricLoader.getInstance().isModLoaded(id);
 	}
 }
