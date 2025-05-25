@@ -1,0 +1,43 @@
+{
+    "schemaVersion": 1,
+    "id": "urban_decor",
+    "version": "${version}",
+    "name": "${mod_name}",
+    "description": "${description}",
+    "authors": [
+        "${mod_author}"
+    ],
+    "contact": {
+        "homepage": "*",
+        "sources": "*"
+    },
+    "license": "${license}",
+    "icon": "icon.png",
+    "environment": "*",
+    "entrypoints": {
+        "main": [
+            "net.yirmiri.urban_decor.FabricUrbanDecor"
+        ],
+        "client": [
+            "net.yirmiri.urban_decor.FabricUrbanDecorClient"
+        ],
+        "fabric-datagen": [
+            "net.yirmiri.urban_decor.FabricUrbanDecorDataGenerator"
+        ]
+    },
+    "mixins": [
+        "${mod_id}.mixins.json",
+        "${mod_id}.fabric.mixins.json"
+    ],
+    "depends": {
+        "fabricloader": ">=0.14",
+        "fabric": "*",
+        "minecraft": "${minecraft_version}",
+        "java": ">=17",
+        "runiclib": ">=4.1.0"
+    },
+    "suggests": {
+        "another-mod": "*"
+    }
+}
+  

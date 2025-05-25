@@ -1,8 +1,0 @@
-{
-  "parent": "urban_decor:compatibility_templates/vertical_stairs",
-  "textures": {
-    "particle": "urban_decor:block/chromite",
-    "0": "urban_decor:block/chromite"
-  },
-  "render_type": "solid"
-}

@@ -1,8 +1,0 @@
-{
-  "parent": "urban_decor:compatibility_templates/vertical_stairs",
-  "textures": {
-    "particle": "urban_decor:block/dark_porcelain_tiles",
-    "0": "urban_decor:block/dark_porcelain_tiles"
-  },
-  "render_type": "solid"
-}
