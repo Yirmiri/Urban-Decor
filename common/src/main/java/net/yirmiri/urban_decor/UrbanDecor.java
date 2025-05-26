@@ -12,8 +12,8 @@ public class UrbanDecor {
         UDBlocks.loadBlocks();
         UDItems.loadItems();
         UDEntities.loadEntities();
-        UDItemGroups.loadItemGroups();
-        UDSounds.loadSounds();
+        UDCreativeTabs.loadItemGroups();
+        //UDSounds.loadSounds();
         UDBlockEntities.loadBlockEntities();
     }
 }

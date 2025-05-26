@@ -3,6 +3,14 @@ plugins {
     id 'net.neoforged.moddev.legacyforge'
 }
 
+repositories {
+    maven { url = "https://cursemaven.com" }
+}
+
+base {
+    archivesName = "${mod_name}-forge-${minecraft_version}"
+}
+
 mixin {
     add(sourceSets.main, "${mod_id}.refmap.json")
 
@@ -48,6 +56,8 @@ sourceSets.main.resources.srcDir 'src/generated/resources'
 dependencies {
     compileOnly project(":common")
     annotationProcessor("org.spongepowered:mixin:0.8.5-SNAPSHOT:processor")
+    //RUNICLIB
+    modImplementation "curse.maven:runiclib-880879:${forge_runiclib}"
 }
 
 jar {
