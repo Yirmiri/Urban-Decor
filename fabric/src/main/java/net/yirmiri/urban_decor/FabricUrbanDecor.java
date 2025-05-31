@@ -5,7 +5,7 @@ import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
 import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
 import net.minecraft.tags.BiomeTags;
 import net.minecraft.world.level.levelgen.GenerationStep;
-import net.yirmiri.urban_decor.common.worldgen.UDFeatures;
+import net.yirmiri.urban_decor.core.init.UDFeatures;
 
 public class FabricUrbanDecor implements ModInitializer {
     

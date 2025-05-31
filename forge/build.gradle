@@ -8,7 +8,7 @@ repositories {
 }
 
 base {
-    archivesName = "${mod_name}-forge-${minecraft_version}"
+    archivesName = "forge-${mod_id}-${minecraft_version}"
 }
 
 mixin {
@@ -51,7 +51,7 @@ legacyForge {
     }
 }
 
-sourceSets.main.resources { srcDir project(":common").file('src/main/generated/').getAbsolutePath() }
+sourceSets.main.resources.srcDir 'src/generated/resources'
 
 dependencies {
     compileOnly project(":common")
@@ -66,3 +66,5 @@ jar {
             "MixinConfigs": "${mod_id}.mixins.json,${mod_id}.forge.mixins.json"
     ])
 }
+
+sourceSets.main.resources { srcDir project(":common").file('src/main/generated/').getAbsolutePath() }
