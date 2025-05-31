@@ -54,6 +54,7 @@ public class UDProperties {
         public static final BlockBehaviour.Properties NETHER_PIANO = BlockBehaviour.Properties.copy(Blocks.CRIMSON_PLANKS);
         public static final BlockBehaviour.Properties CHERRY_PIANO = BlockBehaviour.Properties.copy(Blocks.CHERRY_PLANKS);
         public static final BlockBehaviour.Properties BAMBOO_PIANO = BlockBehaviour.Properties.copy(Blocks.BAMBOO_PLANKS);
+        public static final BlockBehaviour.Properties DISHWASHER = BlockBehaviour.Properties.copy(Blocks.STONE).strength(1.5F).mapColor(MapColor.SNOW).sound(SoundType.CALCITE).requiresCorrectToolForDrops();
 
         //MISC APPLIANCES
         public static final BlockBehaviour.Properties AIR_CONDITIONER = BlockBehaviour.Properties.copy(Blocks.STONE).strength(1.0F).mapColor(MapColor.COLOR_GRAY).sound(SoundType.LANTERN).requiresCorrectToolForDrops();

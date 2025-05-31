@@ -1,6 +1,5 @@
 package net.yirmiri.urban_decor.common.block.abstracts;
 
-import net.minecraft.block.*;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.MenuProvider;
 import net.minecraft.world.level.Level;
@@ -14,7 +13,6 @@ import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
-import org.jetbrains.annotations.Nullable;
 
 public abstract class AbstractMiniStorageDecorBlock extends AbstractDecorBlock implements EntityBlock {
     public static final BooleanProperty OPEN = BooleanProperty.create("open");
@@ -34,13 +32,11 @@ public abstract class AbstractMiniStorageDecorBlock extends AbstractDecorBlock i
         return blockEntity == null ? false : blockEntity.triggerEvent(type, data);
     }
 
-    @Nullable
     public MenuProvider getMenuProvider(BlockState state, Level world, BlockPos pos) {
         BlockEntity blockEntity = world.getBlockEntity(pos);
         return blockEntity instanceof MenuProvider ? (MenuProvider)blockEntity : null;
     }
 
-    @Nullable
     protected static <E extends BlockEntity, A extends BlockEntity> BlockEntityTicker<A> checkType(BlockEntityType<A> givenType, BlockEntityType<E> expectedType, BlockEntityTicker<? super E> ticker) {
         return expectedType == givenType ? (BlockEntityTicker<A>) ticker : null;
     }

@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "!": {
+      "item": "urban_decor:porcelain"
+    },
+    "#": {
+      "item": "minecraft:cherry_planks"
+    },
+    "@": {
+      "item": "urban_decor:stainless_steel_ingot"
+    }
+  },
+  "pattern": [
+    "#!#",
+    "#@#"
+  ],
+  "result": {
+    "item": "urban_decor:cherry_piano"
+  },
+  "show_notification": true
+}

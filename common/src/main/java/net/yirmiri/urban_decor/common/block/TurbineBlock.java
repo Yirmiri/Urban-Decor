@@ -24,9 +24,8 @@ import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import net.yirmiri.urban_decor.common.block.abstracts.AbstractDecorBlock;
-import net.yirmiri.urban_decor.datagen.UDItemTagProvider;
 import net.yirmiri.urban_decor.common.util.UDUtils;
-import org.jetbrains.annotations.Nullable;
+import net.yirmiri.urban_decor.core.init.UDTags;
 
 public class TurbineBlock extends AbstractDecorBlock {
     public static final IntegerProperty VARIANT = IntegerProperty.create("variant", 0, 1);
@@ -46,7 +45,7 @@ public class TurbineBlock extends AbstractDecorBlock {
         return SHAPE;
     }
 
-    @Nullable @Override
+    @Override
     public BlockState getStateForPlacement(BlockPlaceContext ctx) {
         return this.defaultBlockState().setValue(ON, Boolean.valueOf(ctx.getLevel().hasNeighborSignal(ctx.getClickedPos())));
     }
@@ -68,7 +67,7 @@ public class TurbineBlock extends AbstractDecorBlock {
     @Override
     public InteractionResult use(BlockState state, Level world, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit) {
         ItemStack stackHand = player.getItemInHand(hand);
-        if (stackHand.is(UDItemTagProvider.TOOLBOXES)) {
+        if (stackHand.is(UDTags.ItemT.TOOLBOXES)) {
             world.setBlockAndUpdate(pos, state.cycle(VARIANT));
             UDUtils.toolboxUsed(world, pos);
             player.displayClientMessage(Component.translatable("toolbox.turbine.variant_" + state.getValue(VARIANT)), true);

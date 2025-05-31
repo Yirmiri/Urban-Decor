@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "urban_decor:dark_porcelain"
+    },
+    "@": {
+      "item": "urban_decor:stainless_steel_ingot"
+    }
+  },
+  "pattern": [
+    "###",
+    "#@#",
+    "#@#"
+  ],
+  "result": {
+    "item": "urban_decor:dark_dishwasher"
+  },
+  "show_notification": true
+}

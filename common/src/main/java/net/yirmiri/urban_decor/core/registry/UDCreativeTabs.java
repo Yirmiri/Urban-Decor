@@ -87,6 +87,8 @@ public class UDCreativeTabs {
                 entry.accept(UDBlocks.DARK_FRIDGE.get());
                 entry.accept(UDBlocks.FREEZER.get());
                 entry.accept(UDBlocks.DARK_FREEZER.get());
+                entry.accept(UDBlocks.DISHWASHER.get());
+                entry.accept(UDBlocks.DARK_DISHWASHER.get());
                 entry.accept(UDBlocks.OVEN.get());
                 entry.accept(UDBlocks.DARK_OVEN.get());
                 entry.accept(UDBlocks.STOVE.get());

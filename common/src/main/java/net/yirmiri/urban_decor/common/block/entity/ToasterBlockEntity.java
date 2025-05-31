@@ -23,7 +23,6 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.gameevent.GameEvent;
 import net.yirmiri.urban_decor.common.block.ToasterBlock;
 import net.yirmiri.urban_decor.core.registry.UDBlockEntities;
-import org.jetbrains.annotations.Nullable;
 
 public class ToasterBlockEntity extends CampfireBlockEntity implements Clearable {
     private final NonNullList<ItemStack> itemsBeingCooked = NonNullList.withSize(2, ItemStack.EMPTY);
@@ -37,7 +36,7 @@ public class ToasterBlockEntity extends CampfireBlockEntity implements Clearable
 
     @Override
     public BlockEntityType<?> getType() {
-        return UDBlockEntities.TOASTER;
+        return UDBlockEntities.TOASTER.get();
     }
 
     public static void litServerTick(Level world, BlockPos pos, BlockState state, ToasterBlockEntity toaster) {
@@ -88,7 +87,7 @@ public class ToasterBlockEntity extends CampfireBlockEntity implements Clearable
         }
     }
 
-    public boolean placeFood(@Nullable Entity user, ItemStack stack, int cookTime) {
+    public boolean placeFood(Entity user, ItemStack stack, int cookTime) {
         for (int i = 0; i < itemsBeingCooked.size(); i++) {
             ItemStack itemStack = itemsBeingCooked.get(i);
             if (itemStack.isEmpty()) {

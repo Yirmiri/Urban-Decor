@@ -1,0 +1,10 @@
+{
+  "type": "forge:add_features",
+  "biomes": [
+    "#minecraft:is_overworld"
+  ],
+  "features": [
+    "urban_decor:ore_chromite"
+  ],
+  "step": "underground_ores"
+}

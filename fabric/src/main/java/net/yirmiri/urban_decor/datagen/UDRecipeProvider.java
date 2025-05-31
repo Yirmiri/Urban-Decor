@@ -870,6 +870,24 @@ public class UDRecipeProvider extends FabricRecipeProvider {
                 Ingredient.of(Items.GOLD_INGOT), Ingredient.of(UDItems.PORCELAIN.get()))
                 .unlockedBy(getHasName(UDItems.PORCELAIN.get()), has(UDItems.PORCELAIN.get()))
                 .save(exporter, ResourceLocation.tryBuild(UrbanDecor.MOD_ID, getSimpleRecipeName(UDBlocks.WARPED_PIANO.get())));
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, UDBlocks.DISHWASHER.get(), 1)
+                .define('#', UDItems.PORCELAIN.get()).define('@', UDItems.STAINLESS_STEEL_INGOT.get())
+                .pattern("###")
+                .pattern("#@#")
+                .pattern("#@#")
+                .unlockedBy(getHasName(UDItems.PORCELAIN.get()), has(UDItems.PORCELAIN.get()))
+                .unlockedBy(getHasName(UDItems.STAINLESS_STEEL_INGOT.get()), has(UDItems.STAINLESS_STEEL_INGOT.get()))
+                .save(exporter, ResourceLocation.tryBuild(UrbanDecor.MOD_ID, getSimpleRecipeName(UDBlocks.DISHWASHER.get())));
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, UDBlocks.DARK_DISHWASHER.get(), 1)
+                .define('#', UDItems.DARK_PORCELAIN.get()).define('@', UDItems.STAINLESS_STEEL_INGOT.get())
+                .pattern("###")
+                .pattern("#@#")
+                .pattern("#@#")
+                .unlockedBy(getHasName(UDItems.DARK_PORCELAIN.get()), has(UDItems.DARK_PORCELAIN.get()))
+                .unlockedBy(getHasName(UDItems.STAINLESS_STEEL_INGOT.get()), has(UDItems.STAINLESS_STEEL_INGOT.get()))
+                .save(exporter, ResourceLocation.tryBuild(UrbanDecor.MOD_ID, getSimpleRecipeName(UDBlocks.DARK_DISHWASHER.get())));
     }
 
     public static ShapelessRecipeBuilder createFromBasePictureFrameRecipe(ItemLike output, Item picture, DyeColor color) {

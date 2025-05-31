@@ -1,6 +1,5 @@
 package net.yirmiri.urban_decor.common.block;
 
-import net.minecraft.block.*;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.sounds.SoundEvents;
@@ -15,14 +14,9 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.DoorBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
-import net.minecraft.world.level.block.state.properties.BlockSetType;
-import net.minecraft.world.level.block.state.properties.BlockStateProperties;
-import net.minecraft.world.level.block.state.properties.BooleanProperty;
-import net.minecraft.world.level.block.state.properties.DoorHingeSide;
-import net.minecraft.world.level.block.state.properties.DoubleBlockHalf;
+import net.minecraft.world.level.block.state.properties.*;
 import net.minecraft.world.level.gameevent.GameEvent;
 import net.minecraft.world.phys.BlockHitResult;
-import org.jetbrains.annotations.Nullable;
 
 public class StainlessSteelDoorBlock extends DoorBlock {
     public static final BooleanProperty LOCKED = BooleanProperty.create("locked");
@@ -73,7 +67,7 @@ public class StainlessSteelDoorBlock extends DoorBlock {
 //        }
 //    }
 
-    private void playSound(@Nullable Entity entity, Level world, BlockPos pos, boolean open) {
+    private void playSound(Entity entity, Level world, BlockPos pos, boolean open) {
         world.playSound(entity, pos, open ? SoundEvents.IRON_DOOR_OPEN : SoundEvents.IRON_DOOR_CLOSE, SoundSource.BLOCKS, 1.0F, world.getRandom().nextFloat() * 0.1F + 0.9F);
     }
 

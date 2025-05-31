@@ -15,7 +15,6 @@ import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import net.yirmiri.urban_decor.common.block.abstracts.AbstractLongBlock;
-import org.jetbrains.annotations.Nullable;
 
 import java.util.stream.Stream;
 
@@ -76,7 +75,7 @@ public class PianoBlock extends AbstractLongBlock {
         registerDefaultState(defaultBlockState().setValue(BlockStateProperties.HORIZONTAL_FACING, Direction.NORTH).setValue(WATERLOGGED, false).setValue(PART, BedPart.FOOT));
     }
 
-    @Nullable @Override
+    @Override
     public BlockState getStateForPlacement(BlockPlaceContext ctx) {
         Direction direction = ctx.getHorizontalDirection().getOpposite().getClockWise(Direction.Axis.Y);
         BlockPos blockPos = ctx.getClickedPos();

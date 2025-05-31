@@ -111,6 +111,8 @@ public class UDLangProvider extends FabricLanguageProvider {
         build.add(UDBlocks.BAMBOO_PIANO.get(), "Bamboo Piano");
         build.add(UDBlocks.CRIMSON_PIANO.get(), "Crimson Piano");
         build.add(UDBlocks.WARPED_PIANO.get(), "Warped Piano");
+        build.add(UDBlocks.DISHWASHER.get(), "Dishwasher");
+        build.add(UDBlocks.DARK_DISHWASHER.get(), "Dark Dishwasher");
 
         //ITEMS
         build.add(UDItems.PORCELAIN.get(), "Porcelain");
@@ -134,7 +136,7 @@ public class UDLangProvider extends FabricLanguageProvider {
         build.add("stat.urban_decor.open_appliances", "Appliances Opened");
 
         //ENTITIES
-        build.add(UDEntities.TOILET, "Toilet");
+        build.add(UDEntities.TOILET.get(), "Toilet");
 
         //ITEM GROUPS
         build.add("itemgroup.urban_decor", "Urban Decor");
@@ -289,6 +291,8 @@ public class UDLangProvider extends FabricLanguageProvider {
         build.add(YT_ID + "block." + MOD_ID + "bamboo_piano.desc", "A wooden instrument constructed from bamboo planks");
         build.add(YT_ID + "block." + MOD_ID + "crimson_piano.desc", "A wooden instrument constructed from crimson planks");
         build.add(YT_ID + "block." + MOD_ID + "warped_piano.desc", "A wooden instrument constructed from warped planks");
+        build.add(YT_ID + "block." + MOD_ID + "dishwasher.desc", "A dishwasher but with what dishes to wash?");
+        build.add(YT_ID + "block." + MOD_ID + "dark_dishwasher.desc", "A dishwasher but with what dishes to wash?");
 
         for (DyeColor colors : DyeColor.values()) {
             String dyeString = StringUtils.capitalize(StringUtils.replace(StringUtils.replace(StringUtils.replace(colors.getName(),

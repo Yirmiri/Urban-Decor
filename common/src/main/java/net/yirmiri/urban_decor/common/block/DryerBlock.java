@@ -32,10 +32,9 @@ import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import net.yirmiri.urban_decor.common.block.abstracts.AbstractStorageDecorBlock;
 import net.yirmiri.urban_decor.common.block.entity.StorageApplianceBlockEntity;
-import net.yirmiri.urban_decor.datagen.UDItemTagProvider;
-import net.yirmiri.urban_decor.core.init.UDStats;
 import net.yirmiri.urban_decor.common.util.UDUtils;
-import org.jetbrains.annotations.Nullable;
+import net.yirmiri.urban_decor.core.init.UDStats;
+import net.yirmiri.urban_decor.core.init.UDTags;
 
 public class DryerBlock extends AbstractStorageDecorBlock {
     public static final BooleanProperty OPEN = BooleanProperty.create("open");
@@ -59,13 +58,13 @@ public class DryerBlock extends AbstractStorageDecorBlock {
     public InteractionResult use(BlockState state, Level world, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit) {
         ItemStack stackHand = player.getItemInHand(hand);
         BlockEntity blockEntity = world.getBlockEntity(pos);
-        if (!world.isClientSide && blockEntity instanceof StorageApplianceBlockEntity && !stackHand.is(UDItemTagProvider.TOOLBOXES) && !player.isShiftKeyDown()) {
+        if (!world.isClientSide && blockEntity instanceof StorageApplianceBlockEntity && !stackHand.is(UDTags.ItemT.TOOLBOXES) && !player.isShiftKeyDown()) {
             player.openMenu((StorageApplianceBlockEntity) blockEntity);
-            player.awardStat(UDStats.OPEN_APPLIANCES);
+            //player.awardStat(UDStats.OPEN_APPLIANCES);
             PiglinAi.angerNearbyPiglins(player, true);
         }
 
-        if (!stackHand.is(UDItemTagProvider.TOOLBOXES) && player.isShiftKeyDown()) {
+        if (!stackHand.is(UDTags.ItemT.TOOLBOXES) && player.isShiftKeyDown()) {
             world.setBlockAndUpdate(pos, state.cycle(OPEN).cycle(TRUE_OPEN));
             if (state.getValue(OPEN)) {
                 world.playLocalSound(pos.getX(), pos.getY(), pos.getZ(), SoundEvents.CHERRY_WOOD_DOOR_CLOSE, SoundSource.BLOCKS, 1.0F, 1.0F, false);
@@ -74,7 +73,7 @@ public class DryerBlock extends AbstractStorageDecorBlock {
             }
             return InteractionResult.SUCCESS;
 
-        } else if (stackHand.is(UDItemTagProvider.TOOLBOXES)) {
+        } else if (stackHand.is(UDTags.ItemT.TOOLBOXES)) {
             world.setBlockAndUpdate(pos, state.cycle(OPAQUE));
             UDUtils.toolboxUsed(world, pos);
             player.displayClientMessage(Component.translatable("toolbox.dryer.variant_" + state.getValue(OPAQUE)), true);
@@ -88,7 +87,6 @@ public class DryerBlock extends AbstractStorageDecorBlock {
         builder.add(FACING, WATERLOGGED, OPEN, OPAQUE, TRUE_OPEN);
     }
 
-    @Nullable
     public BlockEntity newBlockEntity(BlockPos pos, BlockState state) {
         return new StorageApplianceBlockEntity(pos, state);
     }
@@ -97,7 +95,7 @@ public class DryerBlock extends AbstractStorageDecorBlock {
         return RenderShape.MODEL;
     }
 
-    public void setPlacedBy(Level world, BlockPos pos, BlockState state, @Nullable LivingEntity placer, ItemStack itemStack) {
+    public void setPlacedBy(Level world, BlockPos pos, BlockState state, LivingEntity placer, ItemStack itemStack) {
         if (itemStack.hasCustomHoverName()) {
             BlockEntity blockEntity = world.getBlockEntity(pos);
             if (blockEntity instanceof StorageApplianceBlockEntity) {

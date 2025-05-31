@@ -24,17 +24,17 @@ public class SmokerDecorBlockEntity extends AbstractFurnaceBlockEntity {
     private final ContainerOpenersCounter stateManager;
 
     public SmokerDecorBlockEntity(BlockPos pos, BlockState state) {
-        super(UDBlockEntities.SMOKER_DECOR, pos, state, RecipeType.SMOKING);
+        super(UDBlockEntities.SMOKER_DECOR.get(), pos, state, RecipeType.SMOKING);
         stateManager = new ContainerOpenersCounter() {
             @Override
             protected void onOpen(Level world, BlockPos pos, BlockState state) {
-                playSound(state, UDSounds.APPLIANCE_OPEN);
+                playSound(state, UDSounds.APPLIANCE_OPEN.get());
                 setOpen(state, true);
             }
 
             @Override
             protected void onClose(Level world, BlockPos pos, BlockState state) {
-                playSound(state, UDSounds.APPLIANCE_OPEN); //todo: close sound
+                playSound(state, UDSounds.APPLIANCE_OPEN.get()); //todo: close sound
                 if (AbstractSmokerDecorBlock.isTrulyOpen(state)) {
                     setOpen(state, true);
                 } else if (!AbstractSmokerDecorBlock.isTrulyOpen(state)) {

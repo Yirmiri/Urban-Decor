@@ -14,7 +14,6 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.phys.BlockHitResult;
 import net.yirmiri.urban_decor.core.registry.UDBlocks;
-import org.jetbrains.annotations.Nullable;
 
 import java.util.Map;
 
@@ -34,7 +33,7 @@ public class TowelBarTowelBlock extends TowelBarBlock {
     }
 
     @Override
-    public void playerDestroy(Level world, Player player, BlockPos pos, BlockState state, @Nullable BlockEntity blockEntity, ItemStack tool) {
+    public void playerDestroy(Level world, Player player, BlockPos pos, BlockState state, BlockEntity blockEntity, ItemStack tool) {
         super.playerDestroy(world, player, pos, state, blockEntity, tool);
         popResource(world, pos, new ItemStack (UDBlocks.TOWEL_BAR.get().asItem()));
     }

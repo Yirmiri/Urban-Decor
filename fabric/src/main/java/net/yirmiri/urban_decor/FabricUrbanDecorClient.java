@@ -51,6 +51,8 @@ public class FabricUrbanDecorClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(UDBlocks.CRIMSON_PIANO.get(), RenderType.cutoutMipped());
         BlockRenderLayerMap.INSTANCE.putBlock(UDBlocks.WARPED_PIANO.get(), RenderType.cutoutMipped());
         BlockRenderLayerMap.INSTANCE.putBlock(UDBlocks.FLOOR_LAMP.get(), RenderType.cutoutMipped());
+        BlockRenderLayerMap.INSTANCE.putBlock(UDBlocks.DISHWASHER.get(), RenderType.cutoutMipped());
+        BlockRenderLayerMap.INSTANCE.putBlock(UDBlocks.DARK_DISHWASHER.get(), RenderType.cutoutMipped());
 
         //TRANSLUCENT
         BlockRenderLayerMap.INSTANCE.putBlock(UDBlocks.OVEN.get(), RenderType.translucent());

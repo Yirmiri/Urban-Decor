@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/stairs",
+  "textures": {
+    "bottom": "urban_decor:block/polished_chromite",
+    "side": "urban_decor:block/polished_chromite",
+    "top": "urban_decor:block/polished_chromite"
+  }
+}

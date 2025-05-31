@@ -109,6 +109,8 @@ public class UDBlocks {
     public static final Supplier<Block> BAMBOO_PIANO = register("bamboo_piano", () -> new PianoBlock(UDProperties.BlockP.BAMBOO_PIANO), true);
     public static final Supplier<Block> CRIMSON_PIANO = register("crimson_piano", () -> new PianoBlock(UDProperties.BlockP.NETHER_PIANO), true);
     public static final Supplier<Block> WARPED_PIANO = register("warped_piano", () -> new PianoBlock(UDProperties.BlockP.NETHER_PIANO), true);
+    public static final Supplier<Block> DISHWASHER = register("dishwasher", () -> new DishwasherBlock(UDProperties.BlockP.DISHWASHER), true);
+    public static final Supplier<Block> DARK_DISHWASHER = register("dark_dishwasher", () -> new DishwasherBlock(UDProperties.BlockP.DISHWASHER), true);
 
     //MISC APPLIANCES
     public static final Supplier<Block> TOOLBOX = register("toolbox", () -> new ToolboxBlock(UDProperties.BlockP.TOOLBOX), false);

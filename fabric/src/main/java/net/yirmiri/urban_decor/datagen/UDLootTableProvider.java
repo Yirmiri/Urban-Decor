@@ -109,6 +109,8 @@ public class UDLootTableProvider extends FabricBlockLootTableProvider {
         add(UDBlocks.BAMBOO_PIANO.get(), longBlockDrops(UDBlocks.BAMBOO_PIANO.get()));
         add(UDBlocks.CRIMSON_PIANO.get(), longBlockDrops(UDBlocks.CRIMSON_PIANO.get()));
         add(UDBlocks.WARPED_PIANO.get(), longBlockDrops(UDBlocks.WARPED_PIANO.get()));
+        dropSelf(UDBlocks.DISHWASHER.get());
+        dropSelf(UDBlocks.DARK_DISHWASHER.get());
     }
 
     public LootTable.Builder floorLampDrops(Block block) {

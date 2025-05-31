@@ -20,9 +20,8 @@ import net.minecraft.world.level.block.state.properties.Half;
 import net.minecraft.world.level.gameevent.GameEvent;
 import net.minecraft.world.level.material.Fluids;
 import net.minecraft.world.phys.BlockHitResult;
-import net.yirmiri.urban_decor.datagen.UDItemTagProvider;
 import net.yirmiri.urban_decor.common.util.UDUtils;
-import org.jetbrains.annotations.Nullable;
+import net.yirmiri.urban_decor.core.init.UDTags;
 
 public class StainlessSteelTrapdoorBlock extends TrapDoorBlock {
     public static final BooleanProperty LOCKED = BooleanProperty.create("locked");
@@ -37,7 +36,7 @@ public class StainlessSteelTrapdoorBlock extends TrapDoorBlock {
     @Override
     public InteractionResult use(BlockState state, Level world, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit) {
         ItemStack stackHand = player.getItemInHand(hand);
-        if (stackHand.is(UDItemTagProvider.TOOLBOXES)) {
+        if (stackHand.is(UDTags.ItemT.TOOLBOXES)) {
             world.setBlockAndUpdate(pos, state.cycle(LOCKED));
             UDUtils.toolboxUsed(world, pos);
             player.displayClientMessage(Component.translatable("toolbox.steel_door.variant_" + state.getValue(LOCKED)), true);
@@ -58,7 +57,7 @@ public class StainlessSteelTrapdoorBlock extends TrapDoorBlock {
     }
 
     @Override
-    protected void playSound(@Nullable Player player, Level world, BlockPos pos, boolean open) {
+    protected void playSound(Player player, Level world, BlockPos pos, boolean open) {
         world.playSound(player, pos, open ? SoundEvents.IRON_TRAPDOOR_OPEN : SoundEvents.IRON_TRAPDOOR_CLOSE, SoundSource.BLOCKS, 1.0F, world.getRandom().nextFloat() * 0.1F + 0.9F);
         world.gameEvent(player, open ? GameEvent.BLOCK_OPEN : GameEvent.BLOCK_CLOSE, pos);
     }

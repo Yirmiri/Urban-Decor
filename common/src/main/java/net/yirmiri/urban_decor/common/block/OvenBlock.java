@@ -20,8 +20,8 @@ import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import net.yirmiri.urban_decor.common.block.abstracts.AbstractSmokerDecorBlock;
-import net.yirmiri.urban_decor.datagen.UDItemTagProvider;
 import net.yirmiri.urban_decor.common.util.UDUtils;
+import net.yirmiri.urban_decor.core.init.UDTags;
 
 public class OvenBlock extends AbstractSmokerDecorBlock {
     public static final BooleanProperty OPEN = BooleanProperty.create("open");
@@ -50,12 +50,12 @@ public class OvenBlock extends AbstractSmokerDecorBlock {
     @Override
     public InteractionResult use(BlockState state, Level world, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit) {
         ItemStack stackHand = player.getItemInHand(hand);
-        if (!stackHand.is(UDItemTagProvider.TOOLBOXES) && !world.isClientSide && !player.isShiftKeyDown()) {
+        if (!stackHand.is(UDTags.ItemT.TOOLBOXES) && !world.isClientSide && !player.isShiftKeyDown()) {
             this.openContainer(world, pos, player);
             return InteractionResult.SUCCESS;
         }
 
-        if (!stackHand.is(UDItemTagProvider.TOOLBOXES) && player.isShiftKeyDown()) {
+        if (!stackHand.is(UDTags.ItemT.TOOLBOXES) && player.isShiftKeyDown()) {
             world.setBlockAndUpdate(pos, state.cycle(OPEN).cycle(TRUE_OPEN));
             if (state.getValue(OPEN)) {
                 world.playLocalSound(pos.getX(), pos.getY(), pos.getZ(), SoundEvents.CHERRY_WOOD_DOOR_CLOSE, SoundSource.BLOCKS, 1.0F, 1.0F, false);
@@ -64,7 +64,7 @@ public class OvenBlock extends AbstractSmokerDecorBlock {
             }
             return InteractionResult.SUCCESS;
 
-        } else if (stackHand.is(UDItemTagProvider.TOOLBOXES)) {
+        } else if (stackHand.is(UDTags.ItemT.TOOLBOXES)) {
             world.setBlockAndUpdate(pos, state.cycle(OPAQUE));
             UDUtils.toolboxUsed(world, pos);
             player.displayClientMessage(Component.translatable("toolbox.oven.variant_" + state.getValue(OPAQUE)), true);

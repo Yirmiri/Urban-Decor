@@ -58,6 +58,8 @@ public class ForgeUrbanDecor {
         ItemBlockRenderTypes.setRenderLayer(UDBlocks.CRIMSON_PIANO.get(), RenderType.cutoutMipped());
         ItemBlockRenderTypes.setRenderLayer(UDBlocks.WARPED_PIANO.get(), RenderType.cutoutMipped());
         ItemBlockRenderTypes.setRenderLayer(UDBlocks.FLOOR_LAMP.get(), RenderType.cutoutMipped());
+        ItemBlockRenderTypes.setRenderLayer(UDBlocks.DISHWASHER.get(), RenderType.cutoutMipped());
+        ItemBlockRenderTypes.setRenderLayer(UDBlocks.DARK_DISHWASHER.get(), RenderType.cutoutMipped());
 
         //TRANSLUCENT
         ItemBlockRenderTypes.setRenderLayer(UDBlocks.OVEN.get(), RenderType.translucent());

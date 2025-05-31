@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "urban_decor:porcelain"
+    },
+    "%": {
+      "item": "urban_decor:stainless_steel_ingot"
+    },
+    "@": {
+      "item": "urban_decor:steel_pipe"
+    }
+  },
+  "pattern": [
+    "###",
+    "% #",
+    "#@#"
+  ],
+  "result": {
+    "item": "urban_decor:dryer"
+  },
+  "show_notification": true
+}

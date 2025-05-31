@@ -59,4 +59,6 @@ loom {
             runDir "build/datagen"
         }
     }
+
+    sourceSets.main.resources { srcDir project(":common").file('src/main/generated/').getAbsolutePath() }
 }

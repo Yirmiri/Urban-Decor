@@ -24,17 +24,17 @@ public class FurnaceDecorBlockEntity extends AbstractFurnaceBlockEntity {
     private final ContainerOpenersCounter stateManager;
     
     public FurnaceDecorBlockEntity(BlockPos pos, BlockState state) {
-        super(UDBlockEntities.FURNACE_DECOR, pos, state, RecipeType.SMELTING);
+        super(UDBlockEntities.FURNACE_DECOR.get(), pos, state, RecipeType.SMELTING);
         stateManager = new ContainerOpenersCounter() {
             @Override
             protected void onOpen(Level world, BlockPos pos, BlockState state) {
-                playSound(state, UDSounds.APPLIANCE_OPEN);
+                playSound(state, UDSounds.APPLIANCE_OPEN.get());
                 setOpen(state, true);
             }
 
             @Override
             protected void onClose(Level world, BlockPos pos, BlockState state) {
-                playSound(state, UDSounds.APPLIANCE_OPEN); //todo: close sound
+                playSound(state, UDSounds.APPLIANCE_OPEN.get()); //todo: close sound
                 if (AbstractFurnaceDecorBlock.isTrulyOpen(state)) {
                     setOpen(state, true);
                 } else if (!AbstractFurnaceDecorBlock.isTrulyOpen(state)) {

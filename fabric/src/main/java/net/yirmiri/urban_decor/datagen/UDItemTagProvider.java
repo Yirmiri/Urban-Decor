@@ -9,25 +9,20 @@ import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.Item;
 import net.yirmiri.urban_decor.UrbanDecor;
+import net.yirmiri.urban_decor.core.init.UDTags;
 import net.yirmiri.urban_decor.core.registry.UDBlocks;
 import net.yirmiri.urban_decor.core.registry.UDItems;
 
 import java.util.concurrent.CompletableFuture;
 
 public class UDItemTagProvider extends FabricTagProvider.ItemTagProvider {
-    public static final TagKey<Item> FURNISHINGS = create("furnishings");
-    public static final TagKey<Item> TOOLBOXES = create("toolboxes");
-    public static final TagKey<Item> TOWELS = create("towels");
-    public static final TagKey<Item> TOOLBOXABLE = create("toolboxable");
-    public static final TagKey<Item> WRAPPABLE = create("wrappable");
-
     public UDItemTagProvider(FabricDataOutput output, CompletableFuture<HolderLookup.Provider> future) {
         super(output, future);
     }
 
     @Override
     protected void addTags(HolderLookup.Provider arg) {
-        tag(FURNISHINGS)
+        getOrCreateTagBuilder(UDTags.ItemT.FURNISHINGS)
                 .add(UDBlocks.TRASH_CAN.get().asItem())
                 .add(UDItems.MICROWAVE.get())
                 .add(UDBlocks.SINK.get().asItem())
@@ -54,13 +49,15 @@ public class UDItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(UDBlocks.DARK_CUPBOARD.get().asItem())
                 .add(UDBlocks.FILING_CABINET.get().asItem())
                 .add(UDBlocks.FLOOR_LAMP.get().asItem())
+                .add(UDBlocks.DISHWASHER.get().asItem())
+                .add(UDBlocks.DARK_DISHWASHER.get().asItem())
         ;
 
         for (DyeColor colors : DyeColor.values()) {
-            tag(FURNISHINGS).add(UDItems.getDyedPictureFrames(colors.getId()).get().asItem());
+            getOrCreateTagBuilder(UDTags.ItemT.FURNISHINGS).add(UDItems.getDyedPictureFrames(colors.getId()).get().asItem());
         }
 
-        tag(TOOLBOXABLE)
+        getOrCreateTagBuilder(UDTags.ItemT.TOOLBOXABLE)
                 .add(UDBlocks.TRASH_CAN.get().asItem())
                 .add(UDBlocks.SINK.get().asItem())
                 .add(UDBlocks.TOILET.get().asItem())
@@ -87,20 +84,16 @@ public class UDItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(UDBlocks.TURBINE.get().asItem())
         ;
 
-        tag(WRAPPABLE)
+        getOrCreateTagBuilder(UDTags.ItemT.WRAPPABLE)
 
         ;
 
-            tag(TOOLBOXES)
+        getOrCreateTagBuilder(UDTags.ItemT.TOOLBOXES)
                 .add(UDItems.TOOLBOX.get())
         ;
 
         for (DyeColor colors : DyeColor.values()) {
-            tag(TOWELS).add(UDBlocks.getDyedTowels(colors.getId()).get().asItem());
+            getOrCreateTagBuilder(UDTags.ItemT.TOWELS).add(UDBlocks.getDyedTowels(colors.getId()).get().asItem());
         }
-    }
-
-    private static TagKey<Item> create(String id) {
-        return TagKey.create(Registries.ITEM, ResourceLocation.tryBuild(UrbanDecor.MOD_ID, id));
     }
 }

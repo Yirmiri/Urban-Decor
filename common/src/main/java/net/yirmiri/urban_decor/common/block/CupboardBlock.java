@@ -1,6 +1,5 @@
 package net.yirmiri.urban_decor.common.block;
 
-import net.minecraft.block.*;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.network.chat.Component;
@@ -32,10 +31,9 @@ import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import net.yirmiri.urban_decor.common.block.abstracts.AbstractStorageDecorBlock;
 import net.yirmiri.urban_decor.common.block.entity.StorageApplianceBlockEntity;
-import net.yirmiri.urban_decor.datagen.UDItemTagProvider;
-import net.yirmiri.urban_decor.core.init.UDStats;
 import net.yirmiri.urban_decor.common.util.UDUtils;
-import org.jetbrains.annotations.Nullable;
+import net.yirmiri.urban_decor.core.init.UDStats;
+import net.yirmiri.urban_decor.core.init.UDTags;
 
 public class CupboardBlock extends AbstractStorageDecorBlock {
     public static final IntegerProperty VARIANT = IntegerProperty.create("variant", 0, 3);
@@ -93,13 +91,13 @@ public class CupboardBlock extends AbstractStorageDecorBlock {
         if (world.isClientSide) {
             return InteractionResult.SUCCESS;
         } else {
-            if (blockEntity instanceof StorageApplianceBlockEntity && !stackHand.is(UDItemTagProvider.TOOLBOXES)) {
+            if (blockEntity instanceof StorageApplianceBlockEntity && !stackHand.is(UDTags.ItemT.TOOLBOXES)) {
                 player.openMenu((StorageApplianceBlockEntity)blockEntity);
-                player.awardStat(UDStats.OPEN_APPLIANCES);
+                //player.awardStat(UDStats.OPEN_APPLIANCES);
                 PiglinAi.angerNearbyPiglins(player, true);
             }
 
-            if (stackHand.is(UDItemTagProvider.TOOLBOXES)) {
+            if (stackHand.is(UDTags.ItemT.TOOLBOXES)) {
                 world.setBlockAndUpdate(pos, state.cycle(VARIANT));
                 UDUtils.toolboxUsed(world, pos);
                 player.displayClientMessage(Component.translatable("toolbox.cupboard.variant_" + state.getValue(VARIANT)), true);
@@ -114,7 +112,6 @@ public class CupboardBlock extends AbstractStorageDecorBlock {
         builder.add(FACING, WATERLOGGED, VARIANT, OPEN, TRUE_OPEN);
     }
 
-    @Nullable
     public BlockEntity newBlockEntity(BlockPos pos, BlockState state) {
         return new StorageApplianceBlockEntity(pos, state);
     }
@@ -123,7 +120,7 @@ public class CupboardBlock extends AbstractStorageDecorBlock {
         return RenderShape.MODEL;
     }
 
-    public void setPlacedBy(Level world, BlockPos pos, BlockState state, @Nullable LivingEntity placer, ItemStack itemStack) {
+    public void setPlacedBy(Level world, BlockPos pos, BlockState state, LivingEntity placer, ItemStack itemStack) {
         if (itemStack.hasCustomHoverName()) {
             BlockEntity blockEntity = world.getBlockEntity(pos);
             if (blockEntity instanceof StorageApplianceBlockEntity) {

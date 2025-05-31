@@ -1,6 +1,5 @@
 package net.yirmiri.urban_decor.common.block;
 
-import net.minecraft.block.*;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.sounds.SoundEvents;
@@ -23,7 +22,7 @@ import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import net.yirmiri.urban_decor.common.block.abstracts.AbstractDecorBlock;
-import net.yirmiri.urban_decor.datagen.UDItemTagProvider;
+import net.yirmiri.urban_decor.core.init.UDTags;
 
 import java.util.stream.Stream;
 
@@ -64,7 +63,7 @@ public class TowelBarBlock extends AbstractDecorBlock {
     public InteractionResult use(BlockState state, Level world, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit) {
         ItemStack stackHand = player.getItemInHand(hand);
         Item item = stackHand.getItem();
-        if (stackHand.is(UDItemTagProvider.TOWELS)) {
+        if (stackHand.is(UDTags.ItemT.TOWELS)) {
             Block block = Block.byItem(item);
             if (block instanceof TowelBlock) {
                 if (!player.isCreative()) {

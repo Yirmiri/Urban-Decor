@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "urban_decor:steel_pipe"
+    },
+    "@": {
+      "item": "urban_decor:stainless_steel_ingot"
+    },
+    "^": {
+      "item": "minecraft:packed_ice"
+    }
+  },
+  "pattern": [
+    "@ @",
+    "###",
+    "@^@"
+  ],
+  "result": {
+    "item": "urban_decor:air_conditioner"
+  },
+  "show_notification": true
+}

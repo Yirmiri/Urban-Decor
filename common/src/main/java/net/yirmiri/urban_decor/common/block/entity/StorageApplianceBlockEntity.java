@@ -27,16 +27,16 @@ public class StorageApplianceBlockEntity extends RandomizableContainerBlockEntit
     private final ContainerOpenersCounter stateManager;
 
     public StorageApplianceBlockEntity(BlockPos pos, BlockState state) {
-        super(UDBlockEntities.STORAGE_APPLIANCE, pos, state);
+        super(UDBlockEntities.STORAGE_APPLIANCE.get(), pos, state);
         inventory = NonNullList.withSize(27, ItemStack.EMPTY);
         stateManager = new ContainerOpenersCounter() {
             protected void onOpen(Level world, BlockPos pos, BlockState state) {
-                playSound(state, UDSounds.APPLIANCE_OPEN);
+                playSound(state, UDSounds.APPLIANCE_OPEN.get());
                 setOpen(state, true);
             }
 
             protected void onClose(Level world, BlockPos pos, BlockState state) {
-                playSound(state, UDSounds.APPLIANCE_OPEN); //todo: close sound
+                playSound(state, UDSounds.APPLIANCE_OPEN.get()); //todo: close sound
                 if (AbstractStorageDecorBlock.isTrulyOpen(state)) {
                     setOpen(state, true);
                 } else if (!AbstractStorageDecorBlock.isTrulyOpen(state)) {

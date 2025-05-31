@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/door_top_right",
+  "textures": {
+    "bottom": "urban_decor:block/stainless_steel_door_bottom",
+    "top": "urban_decor:block/stainless_steel_door_top"
+  }
+}

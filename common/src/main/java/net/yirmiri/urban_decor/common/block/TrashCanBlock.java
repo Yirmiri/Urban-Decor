@@ -28,10 +28,9 @@ import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import net.yirmiri.urban_decor.common.block.abstracts.AbstractMiniStorageDecorBlock;
 import net.yirmiri.urban_decor.common.block.entity.MiniStorageApplianceBlockEntity;
-import net.yirmiri.urban_decor.datagen.UDItemTagProvider;
-import net.yirmiri.urban_decor.core.init.UDStats;
 import net.yirmiri.urban_decor.common.util.UDUtils;
-import org.jetbrains.annotations.Nullable;
+import net.yirmiri.urban_decor.core.init.UDStats;
+import net.yirmiri.urban_decor.core.init.UDTags;
 
 public class TrashCanBlock extends AbstractMiniStorageDecorBlock {
     public static final IntegerProperty VARIANT = IntegerProperty.create("variant", 0, 2);
@@ -62,13 +61,13 @@ public class TrashCanBlock extends AbstractMiniStorageDecorBlock {
         if (world.isClientSide) {
             return InteractionResult.SUCCESS;
         } else {
-            if (blockEntity instanceof MiniStorageApplianceBlockEntity && !stackHand.is(UDItemTagProvider.TOOLBOXES) && !player.isShiftKeyDown()) {
+            if (blockEntity instanceof MiniStorageApplianceBlockEntity && !stackHand.is(UDTags.ItemT.TOOLBOXES) && !player.isShiftKeyDown()) {
                 player.openMenu((MiniStorageApplianceBlockEntity) blockEntity);
-                player.awardStat(UDStats.OPEN_APPLIANCES);
+                //player.awardStat(UDStats.OPEN_APPLIANCES);
                 PiglinAi.angerNearbyPiglins(player, true);
             }
         }
-        if (stackHand.is(UDItemTagProvider.TOOLBOXES)) {
+        if (stackHand.is(UDTags.ItemT.TOOLBOXES)) {
             world.setBlockAndUpdate(pos, state.cycle(VARIANT));
             UDUtils.toolboxUsed(world, pos);
             player.displayClientMessage(Component.translatable("toolbox.trash_can.variant_" + state.getValue(VARIANT)), true);
@@ -82,7 +81,6 @@ public class TrashCanBlock extends AbstractMiniStorageDecorBlock {
         builder.add(FACING, WATERLOGGED, VARIANT, OPEN, TRUE_OPEN);
     }
 
-    @Nullable
     public BlockEntity newBlockEntity(BlockPos pos, BlockState state) {
         return new MiniStorageApplianceBlockEntity(pos, state);
     }
@@ -91,7 +89,7 @@ public class TrashCanBlock extends AbstractMiniStorageDecorBlock {
         return RenderShape.MODEL;
     }
 
-    public void setPlacedBy(Level world, BlockPos pos, BlockState state, @Nullable LivingEntity placer, ItemStack itemStack) {
+    public void setPlacedBy(Level world, BlockPos pos, BlockState state, LivingEntity placer, ItemStack itemStack) {
         if (itemStack.hasCustomHoverName()) {
             BlockEntity blockEntity = world.getBlockEntity(pos);
             if (blockEntity instanceof MiniStorageApplianceBlockEntity) {

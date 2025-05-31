@@ -13,7 +13,7 @@ public class UrbanDecor {
         UDItems.loadItems();
         UDEntities.loadEntities();
         UDCreativeTabs.loadItemGroups();
-        //UDSounds.loadSounds();
+        UDSounds.loadSounds();
         UDBlockEntities.loadBlockEntities();
     }
 }

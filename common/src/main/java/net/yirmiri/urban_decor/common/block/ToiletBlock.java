@@ -22,11 +22,11 @@ import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import net.yirmiri.urban_decor.common.block.abstracts.AbstractDecorBlock;
-import net.yirmiri.urban_decor.datagen.UDItemTagProvider;
 import net.yirmiri.urban_decor.common.entity.ToiletEntity;
-import net.yirmiri.urban_decor.core.registry.UDEntities;
-import net.yirmiri.urban_decor.core.init.UDStats;
 import net.yirmiri.urban_decor.common.util.UDUtils;
+import net.yirmiri.urban_decor.core.init.UDStats;
+import net.yirmiri.urban_decor.core.init.UDTags;
+import net.yirmiri.urban_decor.core.registry.UDEntities;
 
 import java.util.stream.Stream;
 
@@ -83,15 +83,15 @@ public class ToiletBlock extends AbstractDecorBlock {
                 }
             }
             else if (!player.isShiftKeyDown() && !state.getValue(OCCUPIED) && !world.isClientSide) {
-                ToiletEntity toiletEntity = UDEntities.TOILET.create(world);
+                ToiletEntity toiletEntity = UDEntities.TOILET.get().create(world);
                 toiletEntity.setPosRaw(pos.getX() + 0.5D, pos.getY() + 0.15D, pos.getZ() + 0.5D);
                 world.addFreshEntity(toiletEntity);
                 world.setBlockAndUpdate(pos, state.setValue(OCCUPIED, true));
                 player.startRiding(toiletEntity);
-                player.awardStat(UDStats.TIMES_SAT);
+                //player.awardStat(UDStats.TIMES_SAT);
             }
             return InteractionResult.SUCCESS;
-        } else if (stackHand.is(UDItemTagProvider.TOOLBOXES)) {
+        } else if (stackHand.is(UDTags.ItemT.TOOLBOXES)) {
             world.setBlockAndUpdate(pos, state.cycle(ALT));
             UDUtils.toolboxUsed(world, pos);
             player.displayClientMessage(Component.translatable("toolbox.toilet.variant_" + state.getValue(ALT)), true);

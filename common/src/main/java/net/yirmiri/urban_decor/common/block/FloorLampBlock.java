@@ -1,6 +1,5 @@
 package net.yirmiri.urban_decor.common.block;
 
-import net.minecraft.block.*;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.network.chat.Component;
@@ -32,9 +31,8 @@ import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import net.yirmiri.urban_decor.common.block.abstracts.AbstractDecorBlock;
-import net.yirmiri.urban_decor.datagen.UDItemTagProvider;
 import net.yirmiri.urban_decor.common.util.UDUtils;
-import org.jetbrains.annotations.Nullable;
+import net.yirmiri.urban_decor.core.init.UDTags;
 
 public class FloorLampBlock extends AbstractDecorBlock implements SimpleWaterloggedBlock {
     public static final EnumProperty<DoubleBlockHalf> HALF = BlockStateProperties.DOUBLE_BLOCK_HALF;
@@ -65,7 +63,7 @@ public class FloorLampBlock extends AbstractDecorBlock implements SimpleWaterlog
                     world.playLocalSound(pos.getX(), pos.getY(), pos.getZ(), SoundEvents.CHERRY_WOOD_BUTTON_CLICK_ON, SoundSource.BLOCKS, 1.0F, 1.0F, false);
                 }
                 return InteractionResult.SUCCESS;
-            } else if (stackHand.is(UDItemTagProvider.TOOLBOXES)) {
+            } else if (stackHand.is(UDTags.ItemT.TOOLBOXES)) {
                 world.setBlockAndUpdate(pos, state.cycle(SHADE));
                 UDUtils.toolboxUsed(world, pos);
                 player.displayClientMessage(Component.translatable("toolbox.floor_lamp.variant_" + state.getValue(SHADE)), true);
@@ -90,7 +88,7 @@ public class FloorLampBlock extends AbstractDecorBlock implements SimpleWaterlog
         }
     }
 
-    @Override @Nullable
+    @Override
     public BlockState getStateForPlacement(BlockPlaceContext ctx) {
         super.getStateForPlacement(ctx);
         BlockPos blockPos = ctx.getClickedPos();
@@ -132,7 +130,7 @@ public class FloorLampBlock extends AbstractDecorBlock implements SimpleWaterlog
     }
 
     @Override
-    public void playerDestroy(Level world, Player player, BlockPos pos, BlockState state, @Nullable BlockEntity blockEntity, ItemStack tool) {
+    public void playerDestroy(Level world, Player player, BlockPos pos, BlockState state, BlockEntity blockEntity, ItemStack tool) {
         super.playerDestroy(world, player, pos, Blocks.AIR.defaultBlockState(), blockEntity, tool);
     }
 

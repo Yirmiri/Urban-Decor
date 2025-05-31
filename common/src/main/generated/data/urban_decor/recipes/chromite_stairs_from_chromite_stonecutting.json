@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "item": "urban_decor:chromite"
+  },
+  "result": "urban_decor:chromite_stairs"
+}

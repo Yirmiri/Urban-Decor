@@ -11,11 +11,7 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.world.level.block.AbstractFurnaceBlock;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Mirror;
-import net.minecraft.world.level.block.Rotation;
-import net.minecraft.world.level.block.SimpleWaterloggedBlock;
+import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntityTicker;
 import net.minecraft.world.level.block.entity.BlockEntityType;
@@ -28,7 +24,6 @@ import net.minecraft.world.level.material.FluidState;
 import net.minecraft.world.level.material.Fluids;
 import net.yirmiri.urban_decor.common.block.entity.SmokerDecorBlockEntity;
 import net.yirmiri.urban_decor.core.registry.UDBlockEntities;
-import org.jetbrains.annotations.Nullable;
 
 public class AbstractSmokerDecorBlock extends AbstractFurnaceBlock implements SimpleWaterloggedBlock {
     public static final DirectionProperty FACING = BlockStateProperties.HORIZONTAL_FACING;
@@ -45,9 +40,8 @@ public class AbstractSmokerDecorBlock extends AbstractFurnaceBlock implements Si
         return new SmokerDecorBlockEntity(pos, state);
     }
 
-    @Nullable
     public <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level world, BlockState state, BlockEntityType<T> type) {
-        return createFurnaceTicker(world, type, UDBlockEntities.SMOKER_DECOR);
+        return createFurnaceTicker(world, type, UDBlockEntities.SMOKER_DECOR.get());
     }
 
     protected void openContainer(Level world, BlockPos pos, Player player) {
@@ -69,7 +63,6 @@ public class AbstractSmokerDecorBlock extends AbstractFurnaceBlock implements Si
         }
     }
 
-    @Nullable
     @Override
     public BlockState getStateForPlacement(BlockPlaceContext ctx) {
         return this.defaultBlockState().setValue(FACING, ctx.getHorizontalDirection().getOpposite())

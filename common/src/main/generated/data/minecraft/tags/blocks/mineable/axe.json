@@ -1,0 +1,16 @@
+{
+  "replace": false,
+  "values": [
+    "urban_decor:oak_piano",
+    "urban_decor:spruce_piano",
+    "urban_decor:birch_piano",
+    "urban_decor:jungle_piano",
+    "urban_decor:acacia_piano",
+    "urban_decor:dark_oak_piano",
+    "urban_decor:mangrove_piano",
+    "urban_decor:cherry_piano",
+    "urban_decor:bamboo_piano",
+    "urban_decor:crimson_piano",
+    "urban_decor:warped_piano"
+  ]
+}

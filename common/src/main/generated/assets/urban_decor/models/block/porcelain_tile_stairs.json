@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/stairs",
+  "textures": {
+    "bottom": "urban_decor:block/porcelain_tiles",
+    "side": "urban_decor:block/porcelain_tiles",
+    "top": "urban_decor:block/porcelain_tiles"
+  }
+}

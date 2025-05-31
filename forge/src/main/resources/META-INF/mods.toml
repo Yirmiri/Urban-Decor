@@ -31,6 +31,6 @@ side = "BOTH"
 [[dependencies.${mod_id}]] #optional
 modId = "runiclib" #mandatory
 mandatory = true #mandatory
-versionRange = "[${runiclib_version},)" #mandatory
+versionRange = "[4.2.1,)" #mandatory
 ordering = "NONE" # The order that this dependency should load in relation to your mod, required to be either 'BEFORE' or 'AFTER' if the dependency is not mandatory
 side = "BOTH" # Side this dependency is applied on - 'BOTH', 'CLIENT' or 'SERVER'

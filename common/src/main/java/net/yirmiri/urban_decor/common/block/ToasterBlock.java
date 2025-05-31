@@ -1,6 +1,5 @@
 package net.yirmiri.urban_decor.common.block;
 
-import net.minecraft.block.*;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.sounds.SoundEvents;
@@ -33,9 +32,8 @@ import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import net.yirmiri.urban_decor.common.block.entity.ToasterBlockEntity;
-import net.yirmiri.urban_decor.core.registry.UDBlockEntities;
 import net.yirmiri.urban_decor.core.init.UDDamageTypes;
-import org.jetbrains.annotations.Nullable;
+import net.yirmiri.urban_decor.core.registry.UDBlockEntities;
 
 import java.util.Optional;
 
@@ -88,7 +86,7 @@ public class ToasterBlock extends CampfireBlock implements SimpleWaterloggedBloc
         }
     }
 
-    @Override @Nullable
+    @Override
     public BlockState getStateForPlacement(BlockPlaceContext ctx) {
         LevelAccessor worldAccess = ctx.getLevel();
         BlockPos blockPos = ctx.getClickedPos();
@@ -125,14 +123,14 @@ public class ToasterBlock extends CampfireBlock implements SimpleWaterloggedBloc
         return new ToasterBlockEntity(pos, state);
     }
 
-    @Nullable @Override
+    @Override
     public <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level world, BlockState state, BlockEntityType<T> type) {
         if (world.isClientSide) {
-            return state.getValue(LIT) ? createTickerHelper(type, UDBlockEntities.TOASTER, ToasterBlockEntity::clientTick) : null;
+            return state.getValue(LIT) ? createTickerHelper(type, UDBlockEntities.TOASTER.get(), ToasterBlockEntity::clientTick) : null;
         } else {
             return state.getValue(LIT)
-                    ? createTickerHelper(type, UDBlockEntities.TOASTER, ToasterBlockEntity::litServerTick)
-                    : createTickerHelper(type, UDBlockEntities.TOASTER, ToasterBlockEntity::unlitServerTick);
+                    ? createTickerHelper(type, UDBlockEntities.TOASTER.get(), ToasterBlockEntity::litServerTick)
+                    : createTickerHelper(type, UDBlockEntities.TOASTER.get(), ToasterBlockEntity::unlitServerTick);
         }
     }
 

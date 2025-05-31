@@ -10,25 +10,24 @@ import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.level.block.Block;
 import net.yirmiri.urban_decor.UrbanDecor;
+import net.yirmiri.urban_decor.core.init.UDTags;
 import net.yirmiri.urban_decor.core.registry.UDBlocks;
 
 import java.util.concurrent.CompletableFuture;
 
 public class UDBlockTagProvider extends FabricTagProvider.BlockTagProvider {
-    public static final TagKey<Block> TOILETS = create("toilets");
-
     public UDBlockTagProvider(FabricDataOutput output, CompletableFuture<HolderLookup.Provider> future) {
         super(output, future);
     }
 
     @Override
     protected void addTags(HolderLookup.Provider arg) {
-        tag(TOILETS)
+        getOrCreateTagBuilder(UDTags.BlockT.TOILETS)
                 .add(UDBlocks.TOILET.get())
                 .add(UDBlocks.DARK_TOILET.get())
         ;
 
-        tag(BlockTags.MINEABLE_WITH_AXE)
+        getOrCreateTagBuilder(BlockTags.MINEABLE_WITH_AXE)
                 .add(UDBlocks.OAK_PIANO.get())
                 .add(UDBlocks.SPRUCE_PIANO.get())
                 .add(UDBlocks.BIRCH_PIANO.get())
@@ -42,7 +41,7 @@ public class UDBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(UDBlocks.WARPED_PIANO.get())
         ;
 
-        tag(BlockTags.MINEABLE_WITH_PICKAXE)
+        getOrCreateTagBuilder(BlockTags.MINEABLE_WITH_PICKAXE)
                 .add(UDBlocks.DARK_PORCELAIN_BLOCK.get())
                 .add(UDBlocks.DARK_PORCELAIN_STAIRS.get())
                 .add(UDBlocks.DARK_PORCELAIN_SLAB.get())
@@ -113,26 +112,24 @@ public class UDBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(UDBlocks.STAINLESS_STEEL_SOUL_LANTERN.get())
                 .add(UDBlocks.STAINLESS_STEEL_BARS.get())
                 .add(UDBlocks.FLOOR_LAMP.get())
+                .add(UDBlocks.DISHWASHER.get())
+                .add(UDBlocks.DARK_DISHWASHER.get())
         ;
 
         for (DyeColor colors : DyeColor.values()) {
-            tag(BlockTags.MINEABLE_WITH_PICKAXE).add(UDBlocks.getDyedTowelBarTowels(colors.getId()).get());
+            getOrCreateTagBuilder(BlockTags.MINEABLE_WITH_PICKAXE).add(UDBlocks.getDyedTowelBarTowels(colors.getId()).get());
         }
 
-        tag(BlockTags.WALLS)
+        getOrCreateTagBuilder(BlockTags.WALLS)
                 .add(UDBlocks.CHROMITE_WALL.get())
         ;
 
-        tag(BlockTags.CAMPFIRES)
+        getOrCreateTagBuilder(BlockTags.CAMPFIRES)
                 .add(UDBlocks.TOASTER.get())
         ;
 
         for (DyeColor colors : DyeColor.values()) {
-            tag(BlockTags.WOOL).add(UDBlocks.getDyedTowelBlocks(colors.getId()).get());
+            getOrCreateTagBuilder(BlockTags.WOOL).add(UDBlocks.getDyedTowelBlocks(colors.getId()).get());
         }
-    }
-
-    private static TagKey<Block> create(String id) {
-        return TagKey.create(Registries.BLOCK, ResourceLocation.tryBuild(UrbanDecor.MOD_ID, id));
     }
 }

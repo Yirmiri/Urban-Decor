@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "urban_decor:block/chromite_slab"
+    },
+    "type=double": {
+      "model": "urban_decor:block/chromite"
+    },
+    "type=top": {
+      "model": "urban_decor:block/chromite_slab_top"
+    }
+  }
+}

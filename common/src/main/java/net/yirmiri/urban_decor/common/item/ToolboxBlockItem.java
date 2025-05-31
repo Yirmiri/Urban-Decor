@@ -1,7 +1,5 @@
 package net.yirmiri.urban_decor.common.item;
 
-import org.jetbrains.annotations.Nullable;
-
 import java.util.List;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.CommonComponents;
@@ -35,7 +33,7 @@ public class ToolboxBlockItem extends BlockItem {
     }
 
     @Override
-    public void appendHoverText(ItemStack stack, @Nullable Level world, List<net.minecraft.network.chat.Component> tooltip, TooltipFlag ctx) {
+    public void appendHoverText(ItemStack stack, Level world, List<net.minecraft.network.chat.Component> tooltip, TooltipFlag ctx) {
         super.appendHoverText(stack, world, tooltip, ctx);
         tooltip.add(CommonComponents.EMPTY);
         tooltip.add(Component.translatable("item.urban_decor.toolbox.use").withStyle(ChatFormatting.GRAY));

@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "#": {
+      "item": "urban_decor:stainless_steel_ingot"
+    },
+    "@": {
+      "item": "urban_decor:stainless_steel_nugget"
+    }
+  },
+  "pattern": [
+    "@",
+    "#",
+    "@"
+  ],
+  "result": {
+    "count": 2,
+    "item": "urban_decor:steel_pipe"
+  },
+  "show_notification": true
+}

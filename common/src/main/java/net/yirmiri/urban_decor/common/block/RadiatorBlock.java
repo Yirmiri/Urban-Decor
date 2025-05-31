@@ -18,8 +18,8 @@ import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import net.yirmiri.urban_decor.common.block.abstracts.AbstractDecorBlock;
-import net.yirmiri.urban_decor.datagen.UDItemTagProvider;
 import net.yirmiri.urban_decor.common.util.UDUtils;
+import net.yirmiri.urban_decor.core.init.UDTags;
 
 public class RadiatorBlock extends AbstractDecorBlock {
     public static final BooleanProperty VERTICAL = BooleanProperty.create("vertical");
@@ -37,7 +37,7 @@ public class RadiatorBlock extends AbstractDecorBlock {
     @Override
     public InteractionResult use(BlockState state, Level world, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit) {
         ItemStack stackHand = player.getItemInHand(hand);
-        if (stackHand.is(UDItemTagProvider.TOOLBOXES)) {
+        if (stackHand.is(UDTags.ItemT.TOOLBOXES)) {
             world.setBlockAndUpdate(pos, state.cycle(VERTICAL));
             UDUtils.toolboxUsed(world, pos);
             player.displayClientMessage(Component.translatable("toolbox.radiator.variant_" + state.getValue(VERTICAL)), true);

@@ -18,8 +18,8 @@ import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import net.yirmiri.urban_decor.common.block.abstracts.AbstractDecorBlock;
-import net.yirmiri.urban_decor.datagen.UDItemTagProvider;
 import net.yirmiri.urban_decor.common.util.UDUtils;
+import net.yirmiri.urban_decor.core.init.UDTags;
 
 public class ToiletPaperBlock extends AbstractDecorBlock {
     public static final IntegerProperty VARIANT = IntegerProperty.create("variant", 0, 1);
@@ -42,7 +42,7 @@ public class ToiletPaperBlock extends AbstractDecorBlock {
     @Override
     public InteractionResult use(BlockState state, Level world, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit) {
         ItemStack stackHand = player.getItemInHand(hand);
-        if (stackHand.is(UDItemTagProvider.TOOLBOXES)) {
+        if (stackHand.is(UDTags.ItemT.TOOLBOXES)) {
             world.setBlockAndUpdate(pos, state.cycle(VARIANT));
             UDUtils.toolboxUsed(world, pos);
             player.displayClientMessage(Component.translatable("toolbox.toilet_paper.variant_" + state.getValue(VARIANT)), true);

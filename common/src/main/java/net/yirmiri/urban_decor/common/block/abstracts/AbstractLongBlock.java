@@ -18,7 +18,6 @@ import net.minecraft.world.level.block.state.properties.BedPart;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.EnumProperty;
 import net.minecraft.world.level.pathfinder.PathComputationType;
-import org.jetbrains.annotations.Nullable;
 
 public abstract class AbstractLongBlock extends AbstractDecorBlock {
     public static final EnumProperty<BedPart> PART = BlockStateProperties.BED_PART;
@@ -57,7 +56,7 @@ public abstract class AbstractLongBlock extends AbstractDecorBlock {
         super.playerWillDestroy(world, pos, state, player);
     }
 
-    @Nullable @Override
+    @Override
     public BlockState getStateForPlacement(BlockPlaceContext ctx) {
         Direction direction = ctx.getHorizontalDirection();
         BlockPos blockPos = ctx.getClickedPos();
@@ -67,7 +66,7 @@ public abstract class AbstractLongBlock extends AbstractDecorBlock {
     }
 
     @Override
-    public void setPlacedBy(Level world, BlockPos pos, BlockState state, @Nullable LivingEntity placer, ItemStack itemStack) {
+    public void setPlacedBy(Level world, BlockPos pos, BlockState state, LivingEntity placer, ItemStack itemStack) {
         super.setPlacedBy(world, pos, state, placer, itemStack);
         if (!world.isClientSide) {
             BlockPos blockPos = pos.relative(state.getValue(FACING));
