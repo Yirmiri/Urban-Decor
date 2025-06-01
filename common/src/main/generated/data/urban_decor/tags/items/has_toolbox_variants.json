@@ -1,0 +1,29 @@
+{
+  "replace": false,
+  "values": [
+    "urban_decor:trash_can",
+    "urban_decor:sink",
+    "urban_decor:toilet",
+    "urban_decor:washing_machine",
+    "urban_decor:dryer",
+    "urban_decor:oven",
+    "urban_decor:fridge",
+    "urban_decor:freezer",
+    "urban_decor:dark_dryer",
+    "urban_decor:dark_oven",
+    "urban_decor:dark_sink",
+    "urban_decor:dark_fridge",
+    "urban_decor:dark_freezer",
+    "urban_decor:dark_toilet",
+    "urban_decor:dark_washing_machine",
+    "urban_decor:shower",
+    "urban_decor:faucet",
+    "urban_decor:cupboard",
+    "urban_decor:dark_cupboard",
+    "urban_decor:filing_cabinet",
+    "urban_decor:radiator",
+    "urban_decor:toilet_paper",
+    "urban_decor:floor_lamp",
+    "urban_decor:turbine"
+  ]
+}

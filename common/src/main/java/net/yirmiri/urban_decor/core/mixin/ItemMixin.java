@@ -20,11 +20,11 @@ public abstract class ItemMixin {
 
     @Inject(at = @At("HEAD"), method = "appendHoverText")
     private void urbanDecor$appendTooltip(ItemStack stack, Level world, List<Component> tooltip, TooltipFlag context, CallbackInfo ci) {
-        if (stack.is(UDTags.ItemT.TOOLBOXABLE)) {
+        if (stack.is(UDTags.ItemT.HAS_TOOLBOX_VARIANTS)) {
             tooltip.add(Component.translatable("tooltip." + UrbanDecor.MOD_ID + ".toolboxable").withStyle(ChatFormatting.GRAY).withStyle(ChatFormatting.ITALIC));
         }
 
-        if (stack.is(UDTags.ItemT.WRAPPABLE)) {
+        if (stack.is(UDTags.ItemT.HAS_WRAPPED_VARIANTS)) {
             tooltip.add(Component.translatable("tooltip." + UrbanDecor.MOD_ID + ".wrappable").withStyle(ChatFormatting.GRAY).withStyle(ChatFormatting.ITALIC));
         }
     }

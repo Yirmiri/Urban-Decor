@@ -1,4 +1,4 @@
-// 1.20.1	2025-05-31T04:05:47.8979431	Urban Decor/Block Loot Tables
+// 1.20.1	2025-06-01T00:22:34.7865612	Urban Decor/Block Loot Tables
 3fc5470056b98c8c8909f83bda90a6b6bfb9b242 data\urban_decor\loot_tables\blocks\stove.json
 9604b0aabb550403e8fb1325fd7b24da04bd332b data\urban_decor\loot_tables\blocks\birch_piano.json
 173e080ca9cc7c35b7f123b746ae450078bc548a data\urban_decor\loot_tables\blocks\dark_porcelain_stairs.json
@@ -50,8 +50,8 @@ bae79bc372422891877e6c6d2a2414488994736a data\urban_decor\loot_tables\blocks\dar
 00f2b46e1816743e31a722933cbd3b918db304d9 data\urban_decor\loot_tables\blocks\cyan_wall_picture_frame.json
 81dae9f2056cede9230309085831bf9819db645a data\urban_decor\loot_tables\blocks\dark_porcelain_brick_stairs.json
 988dbe9327c6e1e4ec6fcff2bf52accdd5599b21 data\urban_decor\loot_tables\blocks\towel_bar_purple_towel.json
-abcbe2fd60f311f7739663d7c285d3a9adc0f334 data\urban_decor\loot_tables\blocks\towel_bar_orange_towel.json
 25a65b98cee6e142a5bb618dadbd2b430411cc48 data\urban_decor\loot_tables\blocks\cyan_towel.json
+abcbe2fd60f311f7739663d7c285d3a9adc0f334 data\urban_decor\loot_tables\blocks\towel_bar_orange_towel.json
 bd215334508205b7ee58f85575f894689bca571f data\urban_decor\loot_tables\blocks\purple_towel_block.json
 196cbf291697a69bfc0c76a999f05a83e3af5763 data\urban_decor\loot_tables\blocks\orange_wall_picture_frame.json
 bb49ad78aae6984a86c1e511e782d0cbba61882e data\urban_decor\loot_tables\blocks\dark_dishwasher.json
@@ -90,8 +90,8 @@ cae36c49f38f350b5979b4597984a5b43e08fdde data\urban_decor\loot_tables\blocks\chr
 112ca8d432af27e79d7bfeabafcf6fa2de2ecc49 data\urban_decor\loot_tables\blocks\towel_bar_light_blue_towel.json
 721d661cc55a2d41145e905d11d7ed6c7e324542 data\urban_decor\loot_tables\blocks\washing_machine.json
 988dbe9327c6e1e4ec6fcff2bf52accdd5599b21 data\urban_decor\loot_tables\blocks\purple_towel.json
-9090c674f77aed668fb3c9585c74acaaf8f1b28d data\urban_decor\loot_tables\blocks\dark_porcelain_block.json
 4016f5a67b0a624ba76a68822c679a2870434367 data\urban_decor\loot_tables\blocks\magenta_towel_block.json
+9090c674f77aed668fb3c9585c74acaaf8f1b28d data\urban_decor\loot_tables\blocks\dark_porcelain_block.json
 c1262f56db76307829ae53f7ea1149004981c891 data\urban_decor\loot_tables\blocks\dark_porcelain_tile_stairs.json
 1493f9f56646e8d221456c149cf32780090d4c6c data\urban_decor\loot_tables\blocks\towel_bar_pink_towel.json
 fec762b751d02e584d874d663bd2c380e8b247c8 data\urban_decor\loot_tables\blocks\cyan_towel_block.json

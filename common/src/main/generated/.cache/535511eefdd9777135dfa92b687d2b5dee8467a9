@@ -1,6 +1,5 @@
-// 1.20.1	2025-05-31T04:05:47.9178887	Urban Decor/Tags for minecraft:item
-5252706fb5c82dd6c705b9552540c30d2bd4e3d7 data\urban_decor\tags\items\furnishings.json
+// 1.20.1	2025-06-01T00:22:34.8104967	Urban Decor/Tags for minecraft:item
 c5289b84ad9705d98cf8c050a3c0ebd3657b8676 data\urban_decor\tags\items\toolboxes.json
 3cb259fc7556eddf7fd6347cc71e480b9468b153 data\urban_decor\tags\items\towels.json
-f0eb0314b3b605db6e6ab6e036997b2c1d2cde35 data\urban_decor\tags\items\toolboxable.json
-8a23702b05296c8af5014d6aa6e9265ded85c7d9 data\urban_decor\tags\items\wrappable.json
+8a23702b05296c8af5014d6aa6e9265ded85c7d9 data\urban_decor\tags\items\has_wrapped_variants.json
+f0eb0314b3b605db6e6ab6e036997b2c1d2cde35 data\urban_decor\tags\items\has_toolbox_variants.json

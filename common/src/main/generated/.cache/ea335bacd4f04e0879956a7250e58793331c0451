@@ -1,4 +1,4 @@
-// 1.20.1	2025-05-31T04:05:47.9188867	Urban Decor/Recipes
+// 1.20.1	2025-06-01T00:22:34.8194725	Urban Decor/Recipes
 d8cd52b19fd49a3cdd1778135e7d8da74ca1743f data\urban_decor\advancements\recipes\decorations\green_towel_block.json
 7d6e0d47f98c3f5cc5a9338757573632e0c87e7d data\urban_decor\advancements\recipes\building_blocks\checkered_porcelain_tiles.json
 1315253f4342b0ae902c62beb050b1c6df6f1183 data\urban_decor\advancements\recipes\decorations\oak_piano.json
@@ -53,6 +53,7 @@ ebd0602af26ef4d4e9523ed25d73fe366e417a8c data\urban_decor\advancements\recipes\b
 0f2b7b4275960f75003d3d200e3f4ae77de52879 data\urban_decor\advancements\recipes\decorations\magenta_picture_frame.json
 5fcb6235271a25e0e125a904199ac4fef87cd6d9 data\urban_decor\advancements\recipes\building_blocks\porcelain_slab.json
 beb08cff9cbf67310c128559085df96257d2ec07 data\urban_decor\advancements\recipes\decorations\light_gray_picture_frame.json
+0333fa21ca67978db84e5cb3eb47fe879b957f44 data\urban_decor\advancements\recipes\decorations\chromite.json
 463756b3bfd5ec2deecd827ebf39f34593564bc8 data\urban_decor\advancements\recipes\decorations\magenta_picture_frame_from_base.json
 b4d2b12cb5810962aeb91a141ddd048b0282393d data\urban_decor\recipes\checkered_porcelain_tiles_from_blocks.json
 45df67d7cf6731b31fd1feada16630c3b7fbd2e2 data\urban_decor\recipes\light_gray_picture_frame.json
@@ -96,8 +97,8 @@ aa16c42c197f97d9b12249017375c01b20a2d319 data\urban_decor\advancements\recipes\d
 a8b313e242b979a173866fcd9fdab5f0c4769bf2 data\urban_decor\recipes\yellow_towel.json
 c03746f9204f8ca82179ac01ebcb044921f5191f data\urban_decor\recipes\pink_towel_block.json
 5a24519d30e8eb57d4b086f655b6310c04d975bb data\urban_decor\recipes\dark_toilet.json
-f08180c2ca518eeed28f62b113a72b15a42066e2 data\urban_decor\advancements\recipes\decorations\dryer.json
 40c021c9d6d10e77e90f3c06e2189f826c99012d data\urban_decor\advancements\recipes\decorations\fridge.json
+f08180c2ca518eeed28f62b113a72b15a42066e2 data\urban_decor\advancements\recipes\decorations\dryer.json
 b91e3fc60c644409dc837a29a4e5fc87d98d165f data\urban_decor\recipes\steel_pipe.json
 8d51409c151c182d033f9a0a88c58734e02a5025 data\urban_decor\advancements\recipes\decorations\black_picture_frame_from_base.json
 57bb57729de5420c11a098a0b98610c3cf33c63c data\urban_decor\recipes\dark_freezer.json
@@ -171,6 +172,7 @@ d2293d20cd90d8c6a71e3fafbb40a9391899b1aa data\urban_decor\advancements\recipes\d
 bb236d9347338589955a4635355fa5e6c670c4fe data\urban_decor\advancements\recipes\misc\porcelain.json
 f6e082ebfcff05d9cfff795571f13131f504a5a8 data\urban_decor\recipes\bamboo_piano.json
 338b0f62d5ac3886d9088fc1e18978c82818f2ea data\urban_decor\recipes\jungle_piano.json
+61cc8a873bf66e716e72414ecd2b2dd250476e67 data\urban_decor\recipes\chromite.json
 05b1ca6c46379e853482ce25c2043e5d1a6fee5f data\urban_decor\advancements\recipes\decorations\turbine.json
 f5627d32a51097a905bd7a5a326bed6c63265c38 data\urban_decor\advancements\recipes\decorations\jungle_piano.json
 8509b70991c4df76a47203047dde431af81af141 data\urban_decor\recipes\dark_cupboard.json

@@ -3,12 +3,7 @@ package net.yirmiri.urban_decor.datagen;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
 import net.minecraft.core.HolderLookup;
-import net.minecraft.core.registries.Registries;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.DyeColor;
-import net.minecraft.world.item.Item;
-import net.yirmiri.urban_decor.UrbanDecor;
 import net.yirmiri.urban_decor.core.init.UDTags;
 import net.yirmiri.urban_decor.core.registry.UDBlocks;
 import net.yirmiri.urban_decor.core.registry.UDItems;
@@ -22,42 +17,7 @@ public class UDItemTagProvider extends FabricTagProvider.ItemTagProvider {
 
     @Override
     protected void addTags(HolderLookup.Provider arg) {
-        getOrCreateTagBuilder(UDTags.ItemT.FURNISHINGS)
-                .add(UDBlocks.TRASH_CAN.get().asItem())
-                .add(UDItems.MICROWAVE.get())
-                .add(UDBlocks.SINK.get().asItem())
-                .add(UDBlocks.TOILET.get().asItem())
-                .add(UDBlocks.WASHING_MACHINE.get().asItem())
-                .add(UDBlocks.DRYER.get().asItem())
-                .add(UDBlocks.TOASTER.get().asItem())
-                .add(UDBlocks.DESK_FAN.get().asItem())
-                .add(UDBlocks.OVEN.get().asItem())
-                .add(UDBlocks.STOVE.get().asItem())
-                .add(UDBlocks.FRIDGE.get().asItem())
-                .add(UDBlocks.FREEZER.get().asItem())
-                .add(UDBlocks.DARK_DRYER.get().asItem())
-                .add(UDBlocks.DARK_OVEN.get().asItem())
-                .add(UDBlocks.DARK_SINK.get().asItem())
-                .add(UDBlocks.DARK_FRIDGE.get().asItem())
-                .add(UDBlocks.DARK_FREEZER.get().asItem())
-                .add(UDBlocks.DARK_TOILET.get().asItem())
-                .add(UDBlocks.DARK_WASHING_MACHINE.get().asItem())
-                .add(UDBlocks.BATHTUB.get().asItem())
-                .add(UDBlocks.DARK_BATHTUB.get().asItem())
-                .add(UDBlocks.PICTURE_FRAME.get().asItem())
-                .add(UDBlocks.CUPBOARD.get().asItem())
-                .add(UDBlocks.DARK_CUPBOARD.get().asItem())
-                .add(UDBlocks.FILING_CABINET.get().asItem())
-                .add(UDBlocks.FLOOR_LAMP.get().asItem())
-                .add(UDBlocks.DISHWASHER.get().asItem())
-                .add(UDBlocks.DARK_DISHWASHER.get().asItem())
-        ;
-
-        for (DyeColor colors : DyeColor.values()) {
-            getOrCreateTagBuilder(UDTags.ItemT.FURNISHINGS).add(UDItems.getDyedPictureFrames(colors.getId()).get().asItem());
-        }
-
-        getOrCreateTagBuilder(UDTags.ItemT.TOOLBOXABLE)
+        getOrCreateTagBuilder(UDTags.ItemT.HAS_TOOLBOX_VARIANTS)
                 .add(UDBlocks.TRASH_CAN.get().asItem())
                 .add(UDBlocks.SINK.get().asItem())
                 .add(UDBlocks.TOILET.get().asItem())
@@ -84,7 +44,7 @@ public class UDItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(UDBlocks.TURBINE.get().asItem())
         ;
 
-        getOrCreateTagBuilder(UDTags.ItemT.WRAPPABLE)
+        getOrCreateTagBuilder(UDTags.ItemT.HAS_WRAPPED_VARIANTS)
 
         ;
 

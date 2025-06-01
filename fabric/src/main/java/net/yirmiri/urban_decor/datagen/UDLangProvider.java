@@ -206,6 +206,25 @@ public class UDLangProvider extends FabricLanguageProvider {
         build.add("subtitles.block.satellite_dish.activate", "Satellite dish sequences");
         build.add("subtitles.block.wrap.use", "Appliance wrapped");
 
+        //ADVANCEMENTS
+        build.add("urban_decor.advancement.root", "Urban Decor");
+        build.add("urban_decor.advancement.root.desc", "Decorate your spaces with Porcelain and Stainless Steel appliances!");
+
+        build.add("urban_decor.advancement.get_porcelain", "\uD835\uDD44\uD835\uDD6A \uD835\uDD5F\uD835\uDD52\uD835\uDD5E\uD835\uDD56 \uD835\uDD5A\uD835\uDD64 \uD835\uDD44\uD835\uDD52\uD835\uDD63\uD835\uDD5A\uD835\uDD60 \uD835\uDD52\uD835\uDD5F\uD835\uDD55 \uD835\uDD5A \uD835\uDD5D\uD835\uDD60\uD835\uDD67\uD835\uDD56 \uD835\uDD5E\uD835\uDD66\uD835\uDD64\uD835\uDD59\uD835\uDD63\uD835\uDD60\uD835\uDD60\uD835\uDD5E\uD835\uDD64");
+        build.add("urban_decor.advancement.get_porcelain.desc", "Obtain a piece of Porcelain, a primary component for most appliances");
+
+        build.add("urban_decor.advancement.get_stainless_steel_ingot", "Stain This!");
+        build.add("urban_decor.advancement.get_stainless_steel_ingot.desc", "Construct a Stainless Steel Ingot, a cold metal made from Chromite");
+
+        build.add("urban_decor.advancement.place_appliance", "Home Improvement");
+        build.add("urban_decor.advancement.place_appliance.desc", "Place any large appliance, a decorative block to spice a build up");
+
+        build.add("urban_decor.advancement.sit_on_toilet", "Serving My Porcelain Kingdom");
+        build.add("urban_decor.advancement.sit_on_toilet.desc", "Sit on the Porcelain Throne.");
+
+        build.add("urban_decor.advancement.use_toolbox", "HAN-D");
+        build.add("urban_decor.advancement.use_toolbox.desc", "Some appliances can be changed when interacted with a toolbox to change their variants");
+
         //YAPPING TOOLTIPS COMPAT
         build.add(YT_ID + "item." + MOD_ID + "porcelain.desc", "A mixture of clay and flint, used commonly in appliances");
         build.add(YT_ID + "item." + MOD_ID + "dark_porcelain.desc", "A mixture of clay and flint, used commonly in appliances");

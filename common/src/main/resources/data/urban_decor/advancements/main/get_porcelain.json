@@ -1,0 +1,39 @@
+{
+  "parent": "urban_decor:main/root",
+  "criteria": {
+    "get_porcelain": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "urban_decor:porcelain",
+              "urban_decor:dark_porcelain"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "translate": "urban_decor.advancement.get_porcelain.desc"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "urban_decor:porcelain"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "urban_decor.advancement.get_porcelain"
+    }
+  },
+  "requirements": [
+    [
+      "get_porcelain"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

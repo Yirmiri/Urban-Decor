@@ -1,0 +1,65 @@
+{
+  "parent": "urban_decor:main/place_appliance",
+  "criteria": {
+    "sit_on_toilet": {
+      "trigger": "minecraft:item_used_on_block",
+      "conditions": {
+        "location": [
+          {
+            "block": "urban_decor:toilet",
+            "condition": "minecraft:block_state_property"
+          }
+        ],
+        "item": {
+          "items": []
+        },
+        "player": {
+          "flags": {
+            "is_sneaking": false
+          }
+        }
+      }
+    },
+    "sit_on_dark_toilet": {
+      "trigger": "minecraft:item_used_on_block",
+      "conditions": {
+        "location": [
+          {
+            "block": "urban_decor:toilet",
+            "condition": "minecraft:block_state_property"
+          }
+        ],
+        "item": {
+          "items": []
+        },
+        "player": {
+          "flags": {
+            "is_sneaking": false
+          }
+        }
+      }
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "translate": "urban_decor.advancement.sit_on_toilet.desc"
+    },
+    "frame": "challenge",
+    "hidden": false,
+    "icon": {
+      "item": "urban_decor:toilet"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "urban_decor.advancement.sit_on_toilet"
+    }
+  },
+  "requirements": [
+    [
+      "sit_on_toilet",
+      "sit_on_dark_toilet"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

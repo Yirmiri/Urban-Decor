@@ -888,6 +888,13 @@ public class UDRecipeProvider extends FabricRecipeProvider {
                 .unlockedBy(getHasName(UDItems.DARK_PORCELAIN.get()), has(UDItems.DARK_PORCELAIN.get()))
                 .unlockedBy(getHasName(UDItems.STAINLESS_STEEL_INGOT.get()), has(UDItems.STAINLESS_STEEL_INGOT.get()))
                 .save(exporter, ResourceLocation.tryBuild(UrbanDecor.MOD_ID, getSimpleRecipeName(UDBlocks.DARK_DISHWASHER.get())));
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, UDBlocks.CHROMITE.get(), 2)
+                .define('#', Blocks.ANDESITE).define('@', UDItems.STAINLESS_STEEL_NUGGET.get())
+                .pattern("@#")
+                .pattern("#@")
+                .unlockedBy(getHasName(UDItems.STAINLESS_STEEL_NUGGET.get()), has(UDItems.STAINLESS_STEEL_NUGGET.get()))
+                .save(exporter, ResourceLocation.tryBuild(UrbanDecor.MOD_ID, getSimpleRecipeName(UDBlocks.CHROMITE.get())));
     }
 
     public static ShapelessRecipeBuilder createFromBasePictureFrameRecipe(ItemLike output, Item picture, DyeColor color) {
