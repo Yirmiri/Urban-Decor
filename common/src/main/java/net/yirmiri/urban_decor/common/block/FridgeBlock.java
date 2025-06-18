@@ -33,14 +33,12 @@ import net.yirmiri.urban_decor.core.init.UDTags;
 
 public class FridgeBlock extends AbstractStorageDecorBlock {
     public static final BooleanProperty FLIPPED = BooleanProperty.create("flipped");
-    public static final BooleanProperty TRUE_OPEN = BooleanProperty.create("true_open");
-    public static final BooleanProperty OPEN = BooleanProperty.create("open");
 
     private static final VoxelShape SHAPE = Block.box(1, 0, 1, 15, 16, 15);
 
     public FridgeBlock(Properties settings) {
         super(settings);
-        registerDefaultState(defaultBlockState().setValue(BlockStateProperties.HORIZONTAL_FACING, Direction.NORTH).setValue(WATERLOGGED, false).setValue(TRUE_OPEN, false).setValue(OPEN, false).setValue(FLIPPED, false));
+        registerDefaultState(defaultBlockState().setValue(FLIPPED, false));
     }
 
     @Override

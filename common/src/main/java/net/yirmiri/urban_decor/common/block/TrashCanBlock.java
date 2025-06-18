@@ -22,12 +22,12 @@ import net.minecraft.world.level.block.state.properties.IntegerProperty;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
-import net.yirmiri.urban_decor.common.block.abstracts.AbstractMiniStorageDecorBlock;
+import net.yirmiri.urban_decor.common.block.abstracts.AbstractDestroyStorageDecorBlock;
 import net.yirmiri.urban_decor.common.block.entity.DestroyStorageApplianceBlockEntity;
 import net.yirmiri.urban_decor.common.util.UDUtils;
 import net.yirmiri.urban_decor.core.init.UDTags;
 
-public class TrashCanBlock extends AbstractMiniStorageDecorBlock {
+public class TrashCanBlock extends AbstractDestroyStorageDecorBlock {
     public static final IntegerProperty VARIANT = IntegerProperty.create("variant", 0, 2);
 
     private static final VoxelShape SHAPE = Block.box(4, 0, 4, 12, 12, 12);

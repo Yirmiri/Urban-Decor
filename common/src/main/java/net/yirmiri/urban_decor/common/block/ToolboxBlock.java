@@ -1,13 +1,11 @@
 package net.yirmiri.urban_decor.common.block;
 
 import net.minecraft.core.BlockPos;
-import net.minecraft.core.Direction;
 import net.minecraft.core.Vec3i;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
-import net.minecraft.stats.Stats;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.Container;
 import net.minecraft.world.Containers;
@@ -19,12 +17,9 @@ import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.RenderShape;
-import net.minecraft.world.level.block.entity.BarrelBlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
-import net.minecraft.world.level.block.state.properties.BlockStateProperties;
-import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
@@ -33,8 +28,6 @@ import net.yirmiri.urban_decor.common.block.entity.StorageApplianceBlockEntity;
 import net.yirmiri.urban_decor.core.init.UDTags;
 
 public class ToolboxBlock extends AbstractStorageDecorBlock {
-    public static final BooleanProperty OPEN = BooleanProperty.create("open");
-    public static final BooleanProperty TRUE_OPEN = BooleanProperty.create("true_open");
 
     private static final VoxelShape SHAPE_NORTH = Block.box(1, 0, 4, 15, 8, 12);
     private static final VoxelShape SHAPE_EAST = Block.box(4, 0, 1, 12, 8, 15);
@@ -43,7 +36,7 @@ public class ToolboxBlock extends AbstractStorageDecorBlock {
 
     public ToolboxBlock(Properties settings) {
         super(settings);
-        registerDefaultState(defaultBlockState().setValue(BlockStateProperties.HORIZONTAL_FACING, Direction.NORTH).setValue(WATERLOGGED, false).setValue(TRUE_OPEN, false).setValue(OPEN, false));
+        registerDefaultState(defaultBlockState());
     }
 
     @Override

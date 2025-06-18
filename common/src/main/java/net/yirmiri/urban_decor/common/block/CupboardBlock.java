@@ -33,8 +33,6 @@ import net.yirmiri.urban_decor.core.init.UDTags;
 import net.yirmiri.urban_decor.core.registry.UDItems;
 
 public class CupboardBlock extends AbstractStorageDecorBlock {
-    public static final BooleanProperty OPEN = BooleanProperty.create("open");
-    public static final BooleanProperty TRUE_OPEN = BooleanProperty.create("true_open");
     public static final IntegerProperty VARIANT = IntegerProperty.create("variant", 0, 3);
 
     private static final VoxelShape SHAPE_NORTH = Shapes.join(Block.box(2, 0, 4, 14, 14, 16), Block.box(0, 14, 2, 16, 16, 16), BooleanOp.OR);
@@ -59,7 +57,7 @@ public class CupboardBlock extends AbstractStorageDecorBlock {
 
     public CupboardBlock(BlockBehaviour.Properties settings) {
         super(settings);
-        registerDefaultState(defaultBlockState().setValue(TRUE_OPEN, false).setValue(BlockStateProperties.HORIZONTAL_FACING, Direction.NORTH).setValue(WATERLOGGED, false).setValue(VARIANT, 2).setValue(OPEN, false));
+        registerDefaultState(defaultBlockState().setValue(VARIANT, 2));
     }
 
     @Override

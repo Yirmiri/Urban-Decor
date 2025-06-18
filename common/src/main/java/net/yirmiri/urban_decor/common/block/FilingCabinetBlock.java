@@ -33,8 +33,6 @@ import net.yirmiri.urban_decor.core.init.UDTags;
 
 public class FilingCabinetBlock extends AbstractStorageDecorBlock {
     public static final BooleanProperty COMPACT = BooleanProperty.create("compact");
-    public static final BooleanProperty OPEN = BooleanProperty.create("open");
-    public static final BooleanProperty TRUE_OPEN = BooleanProperty.create("true_open");
 
     private static final VoxelShape SHAPE_NORTH = Block.box(0, 0, 1, 16, 16, 16);
     private static final VoxelShape SHAPE_SOUTH = Block.box(0, 0, 0, 16, 16, 15);
@@ -43,7 +41,7 @@ public class FilingCabinetBlock extends AbstractStorageDecorBlock {
 
     public FilingCabinetBlock(Properties settings) {
         super(settings);
-        registerDefaultState(defaultBlockState().setValue(BlockStateProperties.HORIZONTAL_FACING, Direction.NORTH).setValue(WATERLOGGED, false).setValue(TRUE_OPEN, false).setValue(OPEN, false).setValue(COMPACT, false));
+        registerDefaultState(defaultBlockState().setValue(COMPACT, false));
     }
 
     @Override

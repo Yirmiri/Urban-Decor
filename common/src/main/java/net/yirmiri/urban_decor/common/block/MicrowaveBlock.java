@@ -20,9 +20,6 @@ import net.yirmiri.urban_decor.common.block.abstracts.AbstractFurnaceDecorBlock;
 import net.yirmiri.urban_decor.core.init.UDTags;
 
 public class MicrowaveBlock extends AbstractFurnaceDecorBlock {
-    public static final BooleanProperty OPEN = BooleanProperty.create("open");
-    public static final BooleanProperty TRUE_OPEN = BooleanProperty.create("true_open");
-
     private static final VoxelShape SHAPE_NORTH = Block.box(2, 0, 5, 14, 8, 12);
     private static final VoxelShape SHAPE_EAST = Block.box(4, 0, 2, 11, 8, 14);
     private static final VoxelShape SHAPE_WEST = Block.box(5, 0, 2, 12, 8, 14);
@@ -30,7 +27,7 @@ public class MicrowaveBlock extends AbstractFurnaceDecorBlock {
 
     public MicrowaveBlock(Properties settings) {
         super(settings);
-        registerDefaultState(defaultBlockState().setValue(BlockStateProperties.HORIZONTAL_FACING, Direction.NORTH).setValue(WATERLOGGED, false).setValue(TRUE_OPEN, false).setValue(OPEN, false));
+        registerDefaultState(defaultBlockState().setValue(BlockStateProperties.HORIZONTAL_FACING, Direction.NORTH).setValue(WATERLOGGED, false));
     }
 
     @Override

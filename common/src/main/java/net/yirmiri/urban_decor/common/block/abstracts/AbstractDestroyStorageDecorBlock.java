@@ -14,11 +14,11 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
 
-public abstract class AbstractMiniStorageDecorBlock extends AbstractDecorBlock implements EntityBlock {
+public abstract class AbstractDestroyStorageDecorBlock extends AbstractDecorBlock implements EntityBlock {
     public static final BooleanProperty OPEN = BooleanProperty.create("open");
     public static final BooleanProperty TRUE_OPEN = BooleanProperty.create("true_open");
 
-    protected AbstractMiniStorageDecorBlock(BlockBehaviour.Properties settings) {
+    protected AbstractDestroyStorageDecorBlock(BlockBehaviour.Properties settings) {
         super(settings);
     }
 

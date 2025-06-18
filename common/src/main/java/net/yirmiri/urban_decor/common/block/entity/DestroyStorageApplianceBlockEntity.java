@@ -19,7 +19,7 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.ContainerOpenersCounter;
 import net.minecraft.world.level.block.entity.RandomizableContainerBlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
-import net.yirmiri.urban_decor.common.block.abstracts.AbstractMiniStorageDecorBlock;
+import net.yirmiri.urban_decor.common.block.abstracts.AbstractDestroyStorageDecorBlock;
 import net.yirmiri.urban_decor.core.registry.UDBlockEntities;
 import net.yirmiri.urban_decor.core.registry.UDSounds;
 
@@ -38,9 +38,9 @@ public class DestroyStorageApplianceBlockEntity extends RandomizableContainerBlo
 
             protected void onClose(Level world, BlockPos pos, BlockState state) {
                 playSound(state, UDSounds.APPLIANCE_OPEN.get()); //todo: close sound
-                if (AbstractMiniStorageDecorBlock.isTrulyOpen(state)) {
+                if (AbstractDestroyStorageDecorBlock.isTrulyOpen(state)) {
                     setOpen(state, true);
-                } else if (!AbstractMiniStorageDecorBlock.isTrulyOpen(state)) {
+                } else if (!AbstractDestroyStorageDecorBlock.isTrulyOpen(state)) {
                     setOpen(state, false);
                 }
             }
@@ -60,7 +60,7 @@ public class DestroyStorageApplianceBlockEntity extends RandomizableContainerBlo
     }
 
     void setOpen(BlockState state, boolean open) {
-        level.setBlock(getBlockPos(), state.setValue(AbstractMiniStorageDecorBlock.OPEN, open), 3);
+        level.setBlock(getBlockPos(), state.setValue(AbstractDestroyStorageDecorBlock.OPEN, open), 3);
     }
 
     protected void saveAdditional(CompoundTag tag, HolderLookup.Provider registries) {
@@ -117,7 +117,7 @@ public class DestroyStorageApplianceBlockEntity extends RandomizableContainerBlo
     }
 
     void playSound(BlockState state, SoundEvent soundEvent) {
-        Vec3i vec3i = (state.getValue(AbstractMiniStorageDecorBlock.FACING)).getNormal();
+        Vec3i vec3i = (state.getValue(AbstractDestroyStorageDecorBlock.FACING)).getNormal();
         double d = (double)worldPosition.getX() + 0.5 + (double)vec3i.getX() / 2.0;
         double e = (double)worldPosition.getY() + 0.5 + (double)vec3i.getY() / 2.0;
         double f = (double)worldPosition.getZ() + 0.5 + (double)vec3i.getZ() / 2.0;

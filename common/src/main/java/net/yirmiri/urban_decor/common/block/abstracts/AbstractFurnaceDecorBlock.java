@@ -36,7 +36,7 @@ public class AbstractFurnaceDecorBlock extends AbstractFurnaceBlock implements S
 
     public AbstractFurnaceDecorBlock(Properties settings) {
         super(settings);
-        //registerDefaultState(defaultBlockState().setValue(BlockStateProperties.HORIZONTAL_FACING, Direction.NORTH).setValue(LIT, false).setValue(WATERLOGGED, false).setValue(TRUE_OPEN, false).setValue(OPEN, false));
+        registerDefaultState(defaultBlockState().setValue(LIT, false).setValue(WATERLOGGED, false).setValue(TRUE_OPEN, false).setValue(OPEN, false));
     }
 
     @Override

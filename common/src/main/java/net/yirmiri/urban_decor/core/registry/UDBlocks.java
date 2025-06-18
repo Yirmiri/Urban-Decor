@@ -76,7 +76,7 @@ public class UDBlocks {
     public static final Supplier<Block> TOILET = register("toilet", () -> new ToiletBlock(UDProperties.BlockP.TOILET), true);
     public static final Supplier<Block> WASHING_MACHINE = register("washing_machine", () -> new WashingMachineBlock(UDProperties.BlockP.WASHING_MACHINE), true);
     public static final Supplier<Block> DRYER = register("dryer", () -> new DryerBlock(UDProperties.BlockP.DRYER), true);
-    public static final Supplier<Block> TOASTER = register("toaster", () -> new ToasterBlock(false, 1, UDProperties.BlockP.TOASTER), true);
+    public static final Supplier<Block> TOASTER = register("toaster", () -> new ToasterBlock(UDProperties.BlockP.TOASTER), true);
     public static final Supplier<Block> DESK_FAN = register("desk_fan", () -> new DeskFanBlock(UDProperties.BlockP.DESK_FAN), true);
     public static final Supplier<Block> OVEN = register("oven", () -> new OvenBlock(UDProperties.BlockP.OVEN), true);
     public static final Supplier<Block> STOVE = register("stove", () -> new StoveBlock(UDProperties.BlockP.STOVE), true);

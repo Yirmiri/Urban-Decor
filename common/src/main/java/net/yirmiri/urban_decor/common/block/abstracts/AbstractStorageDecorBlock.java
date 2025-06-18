@@ -21,6 +21,7 @@ public abstract class AbstractStorageDecorBlock extends AbstractDecorBlock imple
 
     protected AbstractStorageDecorBlock(BlockBehaviour.Properties settings) {
         super(settings);
+        this.registerDefaultState(this.stateDefinition.any().setValue(WATERLOGGED, false).setValue(OPEN, false).setValue(TRUE_OPEN, false));
     }
 
     public RenderShape getRenderShape(BlockState state) {

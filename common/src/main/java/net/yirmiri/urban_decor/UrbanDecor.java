@@ -17,6 +17,3 @@ public class UrbanDecor {
         UDBlockEntities.loadBlockEntities();
     }
 }
-
-//TODO, fix true opening on storage/furnace blocks
-//TODO, ovens will switch to lit up texture while cooking

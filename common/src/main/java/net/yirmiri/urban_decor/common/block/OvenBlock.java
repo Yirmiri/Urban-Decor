@@ -25,8 +25,6 @@ import net.yirmiri.urban_decor.common.util.UDUtils;
 import net.yirmiri.urban_decor.core.init.UDTags;
 
 public class OvenBlock extends AbstractSmokerDecorBlock {
-    public static final BooleanProperty OPEN = BooleanProperty.create("open");
-    public static final BooleanProperty TRUE_OPEN = BooleanProperty.create("true_open");
     public static final BooleanProperty OPAQUE = BooleanProperty.create("opaque");
 
     private static final VoxelShape SHAPE_NORTH = Block.box(0, 0, 2, 16, 16, 16);
@@ -36,7 +34,7 @@ public class OvenBlock extends AbstractSmokerDecorBlock {
 
     public OvenBlock(Properties settings) {
         super(settings);
-        registerDefaultState(defaultBlockState().setValue(BlockStateProperties.HORIZONTAL_FACING, Direction.NORTH).setValue(WATERLOGGED, false).setValue(OPEN, false).setValue(OPAQUE, false));
+        registerDefaultState(defaultBlockState().setValue(OPAQUE, false));
     }
 
     @Override

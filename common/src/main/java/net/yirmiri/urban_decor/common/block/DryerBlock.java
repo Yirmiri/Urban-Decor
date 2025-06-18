@@ -32,8 +32,6 @@ import net.yirmiri.urban_decor.common.util.UDUtils;
 import net.yirmiri.urban_decor.core.init.UDTags;
 
 public class DryerBlock extends AbstractStorageDecorBlock {
-    public static final BooleanProperty OPEN = BooleanProperty.create("open");
-    public static final BooleanProperty TRUE_OPEN = BooleanProperty.create("true_open");
     public static final BooleanProperty OPAQUE = BooleanProperty.create("opaque");
 
     private static final VoxelShape SHAPE = Shapes.join(Block.box(1, 0, 1, 15, 13, 15),
@@ -41,7 +39,7 @@ public class DryerBlock extends AbstractStorageDecorBlock {
 
     public DryerBlock(Properties settings) {
         super(settings);
-        registerDefaultState(defaultBlockState().setValue(TRUE_OPEN, false).setValue(BlockStateProperties.HORIZONTAL_FACING, Direction.NORTH).setValue(WATERLOGGED, false).setValue(OPEN, false).setValue(OPAQUE, false));
+        registerDefaultState(defaultBlockState().setValue(OPAQUE, false));
     }
 
     @Override

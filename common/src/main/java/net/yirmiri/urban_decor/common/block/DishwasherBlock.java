@@ -29,8 +29,6 @@ import net.yirmiri.urban_decor.common.block.entity.StorageApplianceBlockEntity;
 import net.yirmiri.urban_decor.core.init.UDTags;
 
 public class DishwasherBlock extends AbstractStorageDecorBlock {
-    public static final BooleanProperty OPEN = BooleanProperty.create("open");
-
     private static final VoxelShape SHAPE_NORTH = Shapes.join(Block.box(0, 0, 4, 16, 14, 16),
             Block.box(0, 14, 2, 16, 16, 16), BooleanOp.OR);
     private static final VoxelShape SHAPE_WEST = Shapes.join(Block.box(4, 0, 0, 16, 14, 16),
@@ -42,7 +40,7 @@ public class DishwasherBlock extends AbstractStorageDecorBlock {
 
     public DishwasherBlock(Properties settings) {
         super(settings);
-        registerDefaultState(defaultBlockState().setValue(TRUE_OPEN, false).setValue(BlockStateProperties.HORIZONTAL_FACING, Direction.NORTH).setValue(WATERLOGGED, false).setValue(OPEN, false));
+        registerDefaultState(defaultBlockState());
     }
 
     @Override

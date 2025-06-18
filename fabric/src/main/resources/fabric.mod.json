@@ -8,8 +8,9 @@
         "${mod_author}"
     ],
     "contact": {
-        "homepage": "*",
-        "sources": "*"
+        "homepage": "https://www.curseforge.com/minecraft/mc-mods/urban-decor",
+        "sources": "https://github.com/Yirmiri/Urban-Decor",
+        "issues": "https://github.com/Yirmiri/Urban-Decor/issues"
     },
     "license": "${license}",
     "icon": "icon.png",
