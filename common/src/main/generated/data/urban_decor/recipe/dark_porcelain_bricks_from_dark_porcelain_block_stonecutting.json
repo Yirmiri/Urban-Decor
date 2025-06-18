@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "urban_decor:dark_porcelain_block"
+  },
+  "result": {
+    "count": 1,
+    "id": "urban_decor:dark_porcelain_bricks"
+  }
+}

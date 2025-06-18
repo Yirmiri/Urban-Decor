@@ -1,18 +1,19 @@
 package net.yirmiri.urban_decor.common.block.abstracts;
 
 import net.minecraft.core.BlockPos;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.util.RandomSource;
 import net.minecraft.world.MenuProvider;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.EntityBlock;
 import net.minecraft.world.level.block.RenderShape;
 import net.minecraft.world.level.block.entity.BlockEntity;
-import net.minecraft.world.level.block.entity.BlockEntityTicker;
-import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
+import net.yirmiri.urban_decor.common.block.entity.StorageApplianceBlockEntity;
 
 public abstract class AbstractStorageDecorBlock extends AbstractDecorBlock implements EntityBlock {
     public static final BooleanProperty OPEN = BooleanProperty.create("open");
@@ -26,19 +27,25 @@ public abstract class AbstractStorageDecorBlock extends AbstractDecorBlock imple
         return RenderShape.INVISIBLE;
     }
 
-    public boolean triggerEvent(BlockState state, Level world, BlockPos pos, int type, int data) {
-        super.triggerEvent(state, world, pos, type, data);
-        BlockEntity blockEntity = world.getBlockEntity(pos);
-        return blockEntity == null ? false : blockEntity.triggerEvent(type, data);
+    @Override
+    protected void tick(BlockState state, ServerLevel level, BlockPos pos, RandomSource random) {
+        BlockEntity blockentity = level.getBlockEntity(pos);
+        if (blockentity instanceof StorageApplianceBlockEntity) {
+            ((StorageApplianceBlockEntity)blockentity).recheckOpen();
+        }
     }
 
-    public MenuProvider getMenuProvider(BlockState state, Level world, BlockPos pos) {
-        BlockEntity blockEntity = world.getBlockEntity(pos);
-        return blockEntity instanceof MenuProvider ? (MenuProvider)blockEntity : null;
+    @Override
+    protected boolean triggerEvent(BlockState state, Level level, BlockPos pos, int id, int param) {
+        super.triggerEvent(state, level, pos, id, param);
+        BlockEntity blockentity = level.getBlockEntity(pos);
+        return blockentity == null ? false : blockentity.triggerEvent(id, param);
     }
 
-    protected static <E extends BlockEntity, A extends BlockEntity> BlockEntityTicker<A> checkType(BlockEntityType<A> givenType, BlockEntityType<E> expectedType, BlockEntityTicker<? super E> ticker) {
-        return expectedType == givenType ? (BlockEntityTicker<A>) ticker : null;
+    @Override
+    protected MenuProvider getMenuProvider(BlockState state, Level level, BlockPos pos) {
+        BlockEntity blockentity = level.getBlockEntity(pos);
+        return blockentity instanceof MenuProvider ? (MenuProvider)blockentity : null;
     }
 
     public static boolean isTrulyOpen(BlockState state) {

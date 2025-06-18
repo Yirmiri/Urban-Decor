@@ -19,55 +19,15 @@ import net.yirmiri.urban_decor.common.block.abstracts.AbstractLongBlock;
 import java.util.stream.Stream;
 
 public class PianoBlock extends AbstractLongBlock {
-    private static final VoxelShape BACK_NORTH = Stream.of(
-            Block.box(0, 0, 12, 16, 16, 16),
-            Block.box(8, 0, 0, 16, 10, 12),
-            Block.box(3, 10, 0, 11, 14, 12),
-            Block.box(11, 10, 0, 16, 16, 12)
-    ).reduce((v1, v2) -> Shapes.join(v1, v2, BooleanOp.OR)).get();
-    private static final VoxelShape BACK_EAST = Stream.of(
-            Block.box(0, 0, 0, 4, 16, 16),
-            Block.box(4, 0, 8, 16, 10, 16),
-            Block.box(4, 10, 3, 16, 14, 11),
-            Block.box(4, 10, 11, 16, 16, 16)
-    ).reduce((v1, v2) -> Shapes.join(v1, v2, BooleanOp.OR)).get();
-    private static final VoxelShape BACK_WEST = Stream.of(
-            Block.box(12, 0, 0, 16, 16, 16),
-            Block.box(0, 0, 0, 12, 10, 8),
-            Block.box(0, 10, 5, 12, 14, 13),
-            Block.box(0, 10, 0, 12, 16, 5)
-    ).reduce((v1, v2) -> Shapes.join(v1, v2, BooleanOp.OR)).get();
-    private static final VoxelShape BACK_SOUTH = Stream.of(
-            Block.box(0, 0, 0, 16, 16, 4),
-            Block.box(0, 0, 4, 8, 10, 16),
-            Block.box(5, 10, 4, 13, 14, 16),
-            Block.box(0, 10, 4, 5, 16, 16)
-    ).reduce((v1, v2) -> Shapes.join(v1, v2, BooleanOp.OR)).get();
+    private static final VoxelShape BACK_NORTH = Stream.of(Block.box(0, 0, 12, 16, 16, 16), Block.box(8, 0, 0, 16, 10, 12), Block.box(3, 10, 0, 11, 14, 12), Block.box(11, 10, 0, 16, 16, 12)).reduce((v1, v2) -> Shapes.join(v1, v2, BooleanOp.OR)).get();
+    private static final VoxelShape BACK_EAST = Stream.of(Block.box(0, 0, 0, 4, 16, 16), Block.box(4, 0, 8, 16, 10, 16), Block.box(4, 10, 3, 16, 14, 11), Block.box(4, 10, 11, 16, 16, 16)).reduce((v1, v2) -> Shapes.join(v1, v2, BooleanOp.OR)).get();
+    private static final VoxelShape BACK_WEST = Stream.of(Block.box(12, 0, 0, 16, 16, 16), Block.box(0, 0, 0, 12, 10, 8), Block.box(0, 10, 5, 12, 14, 13), Block.box(0, 10, 0, 12, 16, 5)).reduce((v1, v2) -> Shapes.join(v1, v2, BooleanOp.OR)).get();
+    private static final VoxelShape BACK_SOUTH = Stream.of(Block.box(0, 0, 0, 16, 16, 4), Block.box(0, 0, 4, 8, 10, 16), Block.box(5, 10, 4, 13, 14, 16), Block.box(0, 10, 4, 5, 16, 16)).reduce((v1, v2) -> Shapes.join(v1, v2, BooleanOp.OR)).get();
 
-    private static final VoxelShape FRONT_NORTH = Stream.of(
-            Block.box(0, 0, 0, 16, 16, 4),
-            Block.box(8, 0, 4, 16, 10, 16),
-            Block.box(3, 10, 4, 11, 14, 16),
-            Block.box(11, 10, 4, 16, 16, 16)
-    ).reduce((v1, v2) -> Shapes.join(v1, v2, BooleanOp.OR)).get();
-    private static final VoxelShape FRONT_EAST = Stream.of(
-            Block.box(12, 0, 0, 16, 16, 16),
-            Block.box(0, 0, 8, 12, 10, 16),
-            Block.box(0, 10, 3, 12, 14, 11),
-            Block.box(0, 10, 11, 12, 16, 16)
-    ).reduce((v1, v2) -> Shapes.join(v1, v2, BooleanOp.OR)).get();
-    private static final VoxelShape FRONT_WEST = Stream.of(
-            Block.box(0, 0, 0, 4, 16, 16),
-            Block.box(4, 0, 0, 16, 10, 8),
-            Block.box(4, 10, 5, 16, 14, 13),
-            Block.box(4, 10, 0, 16, 16, 5)
-    ).reduce((v1, v2) -> Shapes.join(v1, v2, BooleanOp.OR)).get();
-    private static final VoxelShape FRONT_SOUTH = Stream.of(
-            Block.box(0, 0, 12, 16, 16, 16),
-            Block.box(0, 0, 0, 8, 10, 12),
-            Block.box(5, 10, 0, 13, 14, 12),
-            Block.box(0, 10, 0, 5, 16, 12)
-    ).reduce((v1, v2) -> Shapes.join(v1, v2, BooleanOp.OR)).get();;
+    private static final VoxelShape FRONT_NORTH = Stream.of(Block.box(0, 0, 0, 16, 16, 4), Block.box(8, 0, 4, 16, 10, 16), Block.box(3, 10, 4, 11, 14, 16), Block.box(11, 10, 4, 16, 16, 16)).reduce((v1, v2) -> Shapes.join(v1, v2, BooleanOp.OR)).get();
+    private static final VoxelShape FRONT_EAST = Stream.of(Block.box(12, 0, 0, 16, 16, 16), Block.box(0, 0, 8, 12, 10, 16), Block.box(0, 10, 3, 12, 14, 11), Block.box(0, 10, 11, 12, 16, 16)).reduce((v1, v2) -> Shapes.join(v1, v2, BooleanOp.OR)).get();
+    private static final VoxelShape FRONT_WEST = Stream.of(Block.box(0, 0, 0, 4, 16, 16), Block.box(4, 0, 0, 16, 10, 8), Block.box(4, 10, 5, 16, 14, 13), Block.box(4, 10, 0, 16, 16, 5)).reduce((v1, v2) -> Shapes.join(v1, v2, BooleanOp.OR)).get();
+    private static final VoxelShape FRONT_SOUTH = Stream.of(Block.box(0, 0, 12, 16, 16, 16), Block.box(0, 0, 0, 8, 10, 12), Block.box(5, 10, 0, 13, 14, 12), Block.box(0, 10, 0, 5, 16, 12)).reduce((v1, v2) -> Shapes.join(v1, v2, BooleanOp.OR)).get();;
 
 
     public PianoBlock(Properties settings) {

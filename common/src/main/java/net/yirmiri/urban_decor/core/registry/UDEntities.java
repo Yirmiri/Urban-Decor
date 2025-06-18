@@ -1,13 +1,8 @@
 package net.yirmiri.urban_decor.core.registry;
 
 import net.azurune.runiclib.core.platform.Services;
-import net.minecraft.core.Registry;
-import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.MobCategory;
-import net.minecraft.world.level.block.Block;
 import net.yirmiri.urban_decor.UrbanDecor;
 import net.yirmiri.urban_decor.common.entity.ToiletEntity;
 

@@ -8,12 +8,14 @@ import net.minecraft.util.RandomSource;
 import net.minecraft.world.Containers;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
+import net.minecraft.world.ItemInteractionResult;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.item.crafting.CampfireCookingRecipe;
+import net.minecraft.world.item.crafting.RecipeHolder;
 import net.minecraft.world.item.enchantment.EnchantmentHelper;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
@@ -68,7 +70,7 @@ public class ToasterBlock extends CampfireBlock implements SimpleWaterloggedBloc
                 entity.hurt(UDDamageTypes.of(entity.level(), UDDamageTypes.WET_TOASTER), 10);
             }
 
-            if (!state.getValue(WATERLOGGED) && state.getValue(LIT) && !livingEntity.isSteppingCarefully() && !EnchantmentHelper.hasFrostWalker(livingEntity)) {
+            if (!state.getValue(WATERLOGGED) && state.getValue(LIT) && !livingEntity.isSteppingCarefully()) {
                 entity.hurt(UDDamageTypes.of(entity.level(), UDDamageTypes.TOASTER), 2);
             }
         }
@@ -95,22 +97,27 @@ public class ToasterBlock extends CampfireBlock implements SimpleWaterloggedBloc
     }
 
     @Override
-    public InteractionResult use(BlockState state, Level world, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit) {
-        if (world.getBlockEntity(pos) instanceof ToasterBlockEntity toasterBlockEntity) {
+    public ItemInteractionResult useItemOn(ItemStack stack, BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hitResult) {
+        if (level.getBlockEntity(pos) instanceof ToasterBlockEntity toasterBlockEntity) {
             ItemStack itemStack = player.getItemInHand(hand);
-            Optional<CampfireCookingRecipe> optional = toasterBlockEntity.getCookableRecipe(itemStack);
+            Optional<RecipeHolder<CampfireCookingRecipe>> optional = toasterBlockEntity.getCookableRecipe(itemStack);
 
             if (optional.isPresent() && state.getValue(LIT)) {
-                if (!world.isClientSide && toasterBlockEntity.placeFood(player, player.getAbilities().instabuild ? itemStack.copy() : itemStack, (optional.get()).getCookingTime()))
-                    return InteractionResult.CONSUME;
-
-            } else if (player.getMainHandItem().isEmpty()) {
-                world.setBlockAndUpdate(pos, state.cycle(LIT));
-                world.playLocalSound(pos.getX(), pos.getY(), pos.getZ(), SoundEvents.CHERRY_WOOD_BUTTON_CLICK_ON, SoundSource.BLOCKS, 0.8F, 1.0F, false);
-                return InteractionResult.SUCCESS;
+                if (!level.isClientSide && toasterBlockEntity.placeFood(player, itemStack, ((CampfireCookingRecipe) ((RecipeHolder) optional.get()).value()).getCookingTime()))
+                    return ItemInteractionResult.CONSUME;
             }
         }
-        return InteractionResult.PASS;
+        return ItemInteractionResult.CONSUME;
+    }
+
+    @Override
+    public InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos, Player player, BlockHitResult hitResult) {
+        if (player.getMainHandItem().isEmpty()) {
+            level.setBlockAndUpdate(pos, state.cycle(LIT));
+            level.playLocalSound(pos.getX(), pos.getY(), pos.getZ(), SoundEvents.CHERRY_WOOD_BUTTON_CLICK_ON, SoundSource.BLOCKS, 0.8F, 1.0F, false);
+            return InteractionResult.SUCCESS;
+        }
+        return InteractionResult.CONSUME;
     }
 
     @Override

@@ -2,23 +2,26 @@ package net.yirmiri.urban_decor.datagen;
 
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricLanguageProvider;
+import net.minecraft.core.HolderLookup;
 import net.minecraft.world.item.DyeColor;
 import net.yirmiri.urban_decor.core.registry.UDBlocks;
 import net.yirmiri.urban_decor.core.registry.UDEntities;
 import net.yirmiri.urban_decor.core.registry.UDItems;
 import org.apache.commons.lang3.StringUtils;
 
+import java.util.concurrent.CompletableFuture;
+
 public class UDLangProvider extends FabricLanguageProvider {
     public static final String ID = "minecraft.";
     public static final String MOD_ID = "urban_decor.";
     public static final String YT_ID = "yapping_tooltips.";
 
-    public UDLangProvider(FabricDataOutput dataGenerator) {
-        super(dataGenerator, "en_us");
+    public UDLangProvider(FabricDataOutput dataOutput, CompletableFuture<HolderLookup.Provider> registryLookup) {
+        super(dataOutput, registryLookup);
     }
 
     @Override
-    public void generateTranslations(TranslationBuilder build) {
+    public void generateTranslations(HolderLookup.Provider provider, TranslationBuilder build) {
         for (DyeColor colors : DyeColor.values()) {
             String dyeString = StringUtils.capitalize(StringUtils.replace(StringUtils.replace(StringUtils.replace(colors.getName(),
                     "_", " "), "gray", "Gray"), "blue", "Blue"));

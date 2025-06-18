@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "urban_decor:stainless_steel_nugget"
+    },
+    "@": {
+      "item": "minecraft:glass_pane"
+    }
+  },
+  "pattern": [
+    "#@#",
+    "#@#",
+    "#@#"
+  ],
+  "result": {
+    "count": 3,
+    "id": "urban_decor:rigid_glass"
+  }
+}

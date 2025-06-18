@@ -5,10 +5,9 @@ import net.minecraft.core.Direction;
 import net.minecraft.network.chat.Component;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.InteractionHand;
-import net.minecraft.world.InteractionResult;
+import net.minecraft.world.ItemInteractionResult;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Items;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
@@ -54,22 +53,15 @@ public class ShowerBlock extends AbstractDecorBlock {
     }
 
     @Override
-    public InteractionResult use(BlockState state, Level world, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit) {
+    public ItemInteractionResult useItemOn(ItemStack stack, BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hitResult) {
         ItemStack stackHand = player.getItemInHand(hand);
         if (stackHand.is(UDTags.ItemT.TOOLBOXES)) {
-            world.setBlockAndUpdate(pos, state.cycle(ALT));
-            UDUtils.toolboxUsed(world, pos);
+            level.setBlockAndUpdate(pos, state.cycle(ALT));
+            UDUtils.toolboxUsed(level, pos);
             player.displayClientMessage(Component.translatable("toolbox.shower.variant_" + state.getValue(ALT)), true);
-            return InteractionResult.SUCCESS;
-        } if (stackHand.is(Items.GLASS_BOTTLE) && state.getValue(ON) && !world.isClientSide) {
-            UDUtils.faucetFillBottle(world, pos, player, hand);
-            return InteractionResult.SUCCESS;
-//        } else if (stackHand.isEmpty()) {
-//            world.setBlockState(pos, state.cycle(ON));
-//            world.playSound(pos.getX(), pos.getY(), pos.getZ(), SoundEvents.BLOCK_CHERRY_WOOD_BUTTON_CLICK_ON, SoundCategory.BLOCKS, 0.8F, 1.0F, false);
-//            return ActionResult.SUCCESS;
+            return ItemInteractionResult.SUCCESS;
         }
-        return InteractionResult.PASS;
+        return ItemInteractionResult.PASS_TO_DEFAULT_BLOCK_INTERACTION;
     }
 
     @Override

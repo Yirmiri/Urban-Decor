@@ -1,8 +1,8 @@
-// 1.20.1	2025-06-01T00:22:34.7795793	Urban Decor/Tags for minecraft:block
-113e5ea8fe66e2ed0937b72ebb1f075a13694140 data\minecraft\tags\blocks\walls.json
-f0eb0314b3b605db6e6ab6e036997b2c1d2cde35 data\urban_decor\tags\blocks\has_toolbox_variants.json
-c0a7f2b96361f795f05f4a356324a749e25543b8 data\minecraft\tags\blocks\mineable\pickaxe.json
-81f15f79c612278a665d2476315160bf5df998d3 data\minecraft\tags\blocks\wool.json
-2b84d06f9ef9861d22719b0f269897fdae04aa94 data\minecraft\tags\blocks\mineable\axe.json
-b470da8eaa96ac910797680a419a083280bd5cbf data\urban_decor\tags\blocks\toilets.json
-ad9450f6b5a2953700236655ae1bcf0d408d00c8 data\minecraft\tags\blocks\campfires.json
+// 1.21.1	2025-06-17T21:21:37.0324905	Urban Decor/Tags for minecraft:block
+3870d329e4399147c29473fbe1d1229db7ea2f91 data\minecraft\tags\block\walls.json
+bfdd93f59fb20311dc1633d396a6efdd8b1479d2 data\minecraft\tags\block\campfires.json
+90b799e5d04fcf7e1f59ced8bf86398d02bb42b2 data\urban_decor\tags\block\has_toolbox_variants.json
+da654d67e78b8f46055aa829cbeebdd2ab95f594 data\urban_decor\tags\block\toilets.json
+e9349634ace576c1560cbf102fc6f0d743dbb617 data\minecraft\tags\block\mineable\pickaxe.json
+fbbfe40bdab17fe8ba06a42cfdf818704e0d0a7f data\minecraft\tags\block\mineable\axe.json
+76adecef9f85206ae9ed2751459ecf8ecf28f4a1 data\minecraft\tags\block\wool.json

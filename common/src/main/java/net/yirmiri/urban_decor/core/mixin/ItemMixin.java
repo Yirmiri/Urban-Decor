@@ -19,7 +19,7 @@ import java.util.List;
 public abstract class ItemMixin {
 
     @Inject(at = @At("HEAD"), method = "appendHoverText")
-    private void urbanDecor$appendTooltip(ItemStack stack, Level world, List<Component> tooltip, TooltipFlag context, CallbackInfo ci) {
+    private void urbanDecor$appendTooltip(ItemStack stack, Item.TooltipContext context, List<Component> tooltip, TooltipFlag tooltipFlag, CallbackInfo ci) {
         if (stack.is(UDTags.ItemT.HAS_TOOLBOX_VARIANTS)) {
             tooltip.add(Component.translatable("tooltip." + UrbanDecor.MOD_ID + ".toolboxable").withStyle(ChatFormatting.GRAY).withStyle(ChatFormatting.ITALIC));
         }

@@ -8,6 +8,7 @@ import net.minecraft.sounds.SoundSource;
 import net.minecraft.util.Mth;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
+import net.minecraft.world.ItemInteractionResult;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
@@ -52,25 +53,31 @@ public class FloorLampBlock extends AbstractDecorBlock implements SimpleWaterlog
     }
 
     @Override
-    public InteractionResult use(BlockState state, Level world, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit) {
+    public ItemInteractionResult useItemOn(ItemStack stack, BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hitResult) {
         ItemStack stackHand = player.getItemInHand(hand);
-        if (state.getValue(HALF) == DoubleBlockHalf.UPPER) {
-            if (player.getMainHandItem().isEmpty()) {
-                world.setBlockAndUpdate(pos, state.cycle(LIT));
+        if (stackHand.is(UDTags.ItemT.TOOLBOXES)) {
+            level.setBlockAndUpdate(pos, state.cycle(SHADE));
+            UDUtils.toolboxUsed(level, pos);
+            player.displayClientMessage(Component.translatable("toolbox.floor_lamp.variant_" + state.getValue(SHADE)), true);
+            return ItemInteractionResult.SUCCESS;
+        }
+        return ItemInteractionResult.PASS_TO_DEFAULT_BLOCK_INTERACTION;
+    }
+
+    @Override
+    public InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos, Player player, BlockHitResult hitResult) {
+        if (!player.getMainHandItem().getItem().getDefaultInstance().is(UDTags.ItemT.TOOLBOXES)) {
+            if (state.getValue(HALF) == DoubleBlockHalf.UPPER) {
+                level.setBlockAndUpdate(pos, state.cycle(LIT));
                 if (state.getValue(LIT)) {
-                    world.playLocalSound(pos.getX(), pos.getY(), pos.getZ(), SoundEvents.CHERRY_WOOD_BUTTON_CLICK_OFF, SoundSource.BLOCKS, 1.0F, 1.0F, false);
+                    level.playLocalSound(pos.getX(), pos.getY(), pos.getZ(), SoundEvents.CHERRY_WOOD_BUTTON_CLICK_OFF, SoundSource.BLOCKS, 1.0F, 1.0F, false);
                 } else if (!state.getValue(LIT)) {
-                    world.playLocalSound(pos.getX(), pos.getY(), pos.getZ(), SoundEvents.CHERRY_WOOD_BUTTON_CLICK_ON, SoundSource.BLOCKS, 1.0F, 1.0F, false);
+                    level.playLocalSound(pos.getX(), pos.getY(), pos.getZ(), SoundEvents.CHERRY_WOOD_BUTTON_CLICK_ON, SoundSource.BLOCKS, 1.0F, 1.0F, false);
                 }
-                return InteractionResult.SUCCESS;
-            } else if (stackHand.is(UDTags.ItemT.TOOLBOXES)) {
-                world.setBlockAndUpdate(pos, state.cycle(SHADE));
-                UDUtils.toolboxUsed(world, pos);
-                player.displayClientMessage(Component.translatable("toolbox.floor_lamp.variant_" + state.getValue(SHADE)), true);
                 return InteractionResult.SUCCESS;
             }
         }
-        return InteractionResult.PASS;
+        return InteractionResult.CONSUME;
     }
 
     @Override
@@ -117,7 +124,7 @@ public class FloorLampBlock extends AbstractDecorBlock implements SimpleWaterlog
     }
 
     @Override
-    public void playerWillDestroy(Level world, BlockPos pos, BlockState state, Player player) {
+    public BlockState playerWillDestroy(Level world, BlockPos pos, BlockState state, Player player) {
         if (!world.isClientSide) {
             if (player.isCreative()) {
                 onBreakInCreative(world, pos, state, player);
@@ -125,8 +132,7 @@ public class FloorLampBlock extends AbstractDecorBlock implements SimpleWaterlog
                 dropResources(state, world, pos, null, player, player.getMainHandItem());
             }
         }
-
-        super.playerWillDestroy(world, pos, state, player);
+        return super.playerWillDestroy(world, pos, state, player);
     }
 
     @Override

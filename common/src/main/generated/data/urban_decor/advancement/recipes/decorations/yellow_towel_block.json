@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "urban_decor:yellow_towel_block"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_yellow_towel": {
+      "conditions": {
+        "items": [
+          {
+            "items": "urban_decor:yellow_towel"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_yellow_towel"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "urban_decor:yellow_towel_block"
+    ]
+  }
+}

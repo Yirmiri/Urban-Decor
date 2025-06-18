@@ -7,6 +7,7 @@ import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
+import net.minecraft.world.ItemInteractionResult;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.BlockGetter;
@@ -25,6 +26,7 @@ import net.yirmiri.urban_decor.core.init.UDTags;
 
 public class OvenBlock extends AbstractSmokerDecorBlock {
     public static final BooleanProperty OPEN = BooleanProperty.create("open");
+    public static final BooleanProperty TRUE_OPEN = BooleanProperty.create("true_open");
     public static final BooleanProperty OPAQUE = BooleanProperty.create("opaque");
 
     private static final VoxelShape SHAPE_NORTH = Block.box(0, 0, 2, 16, 16, 16);
@@ -48,27 +50,34 @@ public class OvenBlock extends AbstractSmokerDecorBlock {
     }
 
     @Override
-    public InteractionResult use(BlockState state, Level world, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit) {
+    public ItemInteractionResult useItemOn(ItemStack stack, BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hitResult) {
         ItemStack stackHand = player.getItemInHand(hand);
-        if (!stackHand.is(UDTags.ItemT.TOOLBOXES) && !world.isClientSide && !player.isShiftKeyDown()) {
-            this.openContainer(world, pos, player);
-            return InteractionResult.SUCCESS;
-        }
-
-        if (!stackHand.is(UDTags.ItemT.TOOLBOXES) && player.isShiftKeyDown()) {
-            world.setBlockAndUpdate(pos, state.cycle(OPEN).cycle(TRUE_OPEN));
-            if (state.getValue(OPEN)) {
-                world.playLocalSound(pos.getX(), pos.getY(), pos.getZ(), SoundEvents.CHERRY_WOOD_DOOR_CLOSE, SoundSource.BLOCKS, 1.0F, 1.0F, false);
-            } else if (!state.getValue(OPEN)) {
-                world.playLocalSound(pos.getX(), pos.getY(), pos.getZ(), SoundEvents.CHERRY_WOOD_DOOR_OPEN, SoundSource.BLOCKS, 1.0F, 1.0F, false);
-            }
-            return InteractionResult.SUCCESS;
-
-        } else if (stackHand.is(UDTags.ItemT.TOOLBOXES)) {
-            world.setBlockAndUpdate(pos, state.cycle(OPAQUE));
-            UDUtils.toolboxUsed(world, pos);
+        if (stackHand.is(UDTags.ItemT.TOOLBOXES)) {
+            level.setBlockAndUpdate(pos, state.cycle(OPAQUE));
+            UDUtils.toolboxUsed(level, pos);
             player.displayClientMessage(Component.translatable("toolbox.oven.variant_" + state.getValue(OPAQUE)), true);
-            return InteractionResult.SUCCESS;
+            return ItemInteractionResult.SUCCESS;
+        }
+        return ItemInteractionResult.PASS_TO_DEFAULT_BLOCK_INTERACTION;
+    }
+
+    @Override
+    public InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos, Player player, BlockHitResult hitResult) {
+        if (!player.getMainHandItem().getItem().getDefaultInstance().is(UDTags.ItemT.TOOLBOXES)) {
+            if (!level.isClientSide && !player.isShiftKeyDown()) {
+                this.openContainer(level, pos, player);
+                return InteractionResult.SUCCESS;
+            }
+
+            if (player.isShiftKeyDown()) {
+                level.setBlockAndUpdate(pos, state.cycle(OPEN).cycle(TRUE_OPEN));
+                if (state.getValue(OPEN)) {
+                    level.playLocalSound(pos.getX(), pos.getY(), pos.getZ(), SoundEvents.CHERRY_WOOD_DOOR_CLOSE, SoundSource.BLOCKS, 1.0F, 1.0F, false);
+                } else if (!state.getValue(OPEN)) {
+                    level.playLocalSound(pos.getX(), pos.getY(), pos.getZ(), SoundEvents.CHERRY_WOOD_DOOR_OPEN, SoundSource.BLOCKS, 1.0F, 1.0F, false);
+                }
+                return InteractionResult.SUCCESS;
+            }
         }
         return InteractionResult.CONSUME;
     }

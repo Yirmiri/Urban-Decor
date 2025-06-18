@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "urban_decor:stainless_steel_ingot"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "id": "urban_decor:stainless_steel_nugget"
+  }
+}

@@ -1,8 +1,9 @@
 package net.yirmiri.urban_decor.datagen;
 
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
-import net.minecraft.data.recipes.FinishedRecipe;
+import net.minecraft.core.HolderLookup;
 import net.minecraft.data.recipes.RecipeCategory;
+import net.minecraft.data.recipes.RecipeOutput;
 import net.minecraft.data.recipes.ShapedRecipeBuilder;
 import net.minecraft.data.recipes.ShapelessRecipeBuilder;
 import net.minecraft.resources.ResourceLocation;
@@ -20,15 +21,15 @@ import net.yirmiri.urban_decor.UrbanDecor;
 import net.yirmiri.urban_decor.core.registry.UDBlocks;
 import net.yirmiri.urban_decor.core.registry.UDItems;
 
-import java.util.function.Consumer;
+import java.util.concurrent.CompletableFuture;
 
 public class UDRecipeProvider extends FabricRecipeProvider {
-    public UDRecipeProvider(FabricDataOutput output) {
-        super(output);
+    public UDRecipeProvider(FabricDataOutput output, CompletableFuture<HolderLookup.Provider> registriesFuture) {
+        super(output, registriesFuture);
     }
 
     @Override
-    public void buildRecipes(Consumer<FinishedRecipe> exporter) {
+    public void buildRecipes(RecipeOutput exporter) {
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, UDItems.PORCELAIN.get(), 8)
                 .define('#', Items.CLAY_BALL).define('@', Items.FLINT)
                 .pattern("@#")

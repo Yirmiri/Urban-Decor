@@ -9,11 +9,7 @@ import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.util.RandomSource;
-import net.minecraft.world.Container;
-import net.minecraft.world.Containers;
-import net.minecraft.world.InteractionHand;
-import net.minecraft.world.InteractionResult;
-import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.*;
 import net.minecraft.world.entity.monster.piglin.PiglinAi;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.AbstractContainerMenu;
@@ -33,12 +29,12 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 import net.yirmiri.urban_decor.common.block.abstracts.AbstractStorageDecorBlock;
 import net.yirmiri.urban_decor.common.block.entity.StorageApplianceBlockEntity;
 import net.yirmiri.urban_decor.common.util.UDUtils;
-import net.yirmiri.urban_decor.core.init.UDStats;
 import net.yirmiri.urban_decor.core.init.UDTags;
 
 public class FridgeBlock extends AbstractStorageDecorBlock {
     public static final BooleanProperty FLIPPED = BooleanProperty.create("flipped");
     public static final BooleanProperty TRUE_OPEN = BooleanProperty.create("true_open");
+    public static final BooleanProperty OPEN = BooleanProperty.create("open");
 
     private static final VoxelShape SHAPE = Block.box(1, 0, 1, 15, 16, 15);
 
@@ -54,36 +50,40 @@ public class FridgeBlock extends AbstractStorageDecorBlock {
     }
 
     @Override
-    public InteractionResult use(BlockState state, Level world, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit) {
+    public ItemInteractionResult useItemOn(ItemStack stack, BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hitResult) {
         ItemStack stackHand = player.getItemInHand(hand);
-        BlockEntity blockEntity = world.getBlockEntity(pos);
-        if (world.isClientSide) {
-            return InteractionResult.SUCCESS;
-        } else {
-            if (blockEntity instanceof StorageApplianceBlockEntity && !stackHand.is(UDTags.ItemT.TOOLBOXES) && !player.isShiftKeyDown()) {
-                player.openMenu((StorageApplianceBlockEntity) blockEntity);
-                //player.awardStat(UDStats.OPEN_APPLIANCES);
-                PiglinAi.angerNearbyPiglins(player, true);
+        if (stackHand.is(UDTags.ItemT.TOOLBOXES)) {
+            level.setBlockAndUpdate(pos, state.cycle(FLIPPED));
+            UDUtils.toolboxUsed(level, pos);
+            player.displayClientMessage(Component.translatable("toolbox.fridge.variant_" + state.getValue(FLIPPED)), true);
+            return ItemInteractionResult.SUCCESS;
+        } else if (player.getMainHandItem().isEmpty() && player.isShiftKeyDown()) {
+            level.setBlockAndUpdate(pos, state.cycle(OPEN).cycle(TRUE_OPEN));
+            if (state.getValue(OPEN)) {
+                playSound(level, pos, state, SoundEvents.CHERRY_WOOD_DOOR_CLOSE);
+            } else if (!state.getValue(OPEN)) {
+                playSound(level, pos, state, SoundEvents.CHERRY_WOOD_DOOR_OPEN);
             }
-
-            if (stackHand.is(UDTags.ItemT.TOOLBOXES)) {
-                world.setBlockAndUpdate(pos, state.cycle(FLIPPED));
-                UDUtils.toolboxUsed(world, pos);
-                player.displayClientMessage(Component.translatable("toolbox.fridge.variant_" + state.getValue(FLIPPED)), true);
-                return InteractionResult.SUCCESS;
-            }
-
-            if (player.getMainHandItem().isEmpty() && player.isShiftKeyDown()) {
-                world.setBlockAndUpdate(pos, state.cycle(OPEN).cycle(TRUE_OPEN));
-                if (state.getValue(OPEN)) {
-                    playSound(world, pos, state, SoundEvents.CHERRY_WOOD_DOOR_CLOSE);
-                } else if (!state.getValue(OPEN)) {
-                    playSound(world, pos, state, SoundEvents.CHERRY_WOOD_DOOR_OPEN);
-                }
-                return InteractionResult.SUCCESS;
-            }
-            return InteractionResult.CONSUME;
+            return ItemInteractionResult.SUCCESS;
         }
+        return ItemInteractionResult.PASS_TO_DEFAULT_BLOCK_INTERACTION;
+    }
+
+    @Override
+    public InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos, Player player, BlockHitResult hitResult) {
+        BlockEntity blockEntity = level.getBlockEntity(pos);
+        if (!player.getMainHandItem().getItem().getDefaultInstance().is(UDTags.ItemT.TOOLBOXES)) {
+            if (level.isClientSide) {
+                return InteractionResult.SUCCESS;
+            } else {
+                if (blockEntity instanceof StorageApplianceBlockEntity && !player.isShiftKeyDown()) {
+                    player.openMenu((StorageApplianceBlockEntity) blockEntity);
+                    //player.awardStat(UDStats.OPEN_APPLIANCES);
+                    PiglinAi.angerNearbyPiglins(player, true);
+                }
+            }
+        }
+        return InteractionResult.CONSUME;
     }
 
     void playSound(Level world, BlockPos pos, BlockState state, SoundEvent soundEvent) {
@@ -107,14 +107,14 @@ public class FridgeBlock extends AbstractStorageDecorBlock {
         return RenderShape.MODEL;
     }
 
-    public void setPlacedBy(Level world, BlockPos pos, BlockState state, LivingEntity placer, ItemStack itemStack) {
-        if (itemStack.hasCustomHoverName()) {
-            BlockEntity blockEntity = world.getBlockEntity(pos);
-            if (blockEntity instanceof StorageApplianceBlockEntity) {
-                ((StorageApplianceBlockEntity)blockEntity).setCustomName(itemStack.getHoverName());
-            }
-        }
-    }
+//    public void setPlacedBy(Level world, BlockPos pos, BlockState state, LivingEntity placer, ItemStack itemStack) {
+//        if (itemStack.hasCustomHoverName()) {
+//            BlockEntity blockEntity = world.getBlockEntity(pos);
+//            if (blockEntity instanceof StorageApplianceBlockEntity) {
+//                ((StorageApplianceBlockEntity)blockEntity).setCustomName(itemStack.getHoverName());
+//            }
+//        }
+//    }
 
     @Override
     public boolean hasAnalogOutputSignal(BlockState state) {
@@ -143,7 +143,7 @@ public class FridgeBlock extends AbstractStorageDecorBlock {
     public void tick(BlockState state, ServerLevel world, BlockPos pos, RandomSource random) {
         BlockEntity blockEntity = world.getBlockEntity(pos);
         if (blockEntity instanceof StorageApplianceBlockEntity) {
-            ((StorageApplianceBlockEntity)blockEntity).tick();
+            ((StorageApplianceBlockEntity)blockEntity).recheckOpen();
         }
     }
 }

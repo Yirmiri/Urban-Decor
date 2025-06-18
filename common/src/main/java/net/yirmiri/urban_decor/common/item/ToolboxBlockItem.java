@@ -6,11 +6,11 @@ import net.minecraft.network.chat.CommonComponents;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.item.BlockItem;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.item.context.UseOnContext;
-import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 
 public class ToolboxBlockItem extends BlockItem {
@@ -33,8 +33,8 @@ public class ToolboxBlockItem extends BlockItem {
     }
 
     @Override
-    public void appendHoverText(ItemStack stack, Level world, List<net.minecraft.network.chat.Component> tooltip, TooltipFlag ctx) {
-        super.appendHoverText(stack, world, tooltip, ctx);
+    public void appendHoverText(ItemStack stack, Item.TooltipContext context, List<Component> tooltip, TooltipFlag tooltipFlag) {
+        super.appendHoverText(stack, context, tooltip, tooltipFlag);
         tooltip.add(CommonComponents.EMPTY);
         tooltip.add(Component.translatable("item.urban_decor.toolbox.use").withStyle(ChatFormatting.GRAY));
         tooltip.add(CommonComponents.space().append(Component.translatable("item.urban_decor.toolbox.desc").withStyle(ChatFormatting.BLUE)));

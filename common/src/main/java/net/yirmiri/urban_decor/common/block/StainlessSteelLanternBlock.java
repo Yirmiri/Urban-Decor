@@ -17,6 +17,6 @@ public class StainlessSteelLanternBlock extends LanternBlock {
     }
 
     public VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context) {
-        return state.getValue(HANGING) ? HANGING_AABB : AABB;
+        return state.getValue(HANGING) ? HANGING_SHAPE : STANDING_SHAPE;
     }
 }

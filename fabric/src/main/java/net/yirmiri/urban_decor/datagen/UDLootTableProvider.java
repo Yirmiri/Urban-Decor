@@ -2,6 +2,7 @@ package net.yirmiri.urban_decor.datagen;
 
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootTableProvider;
+import net.minecraft.core.HolderLookup;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.properties.BedPart;
@@ -12,9 +13,11 @@ import net.yirmiri.urban_decor.common.block.abstracts.AbstractLongBlock;
 import net.yirmiri.urban_decor.core.registry.UDBlocks;
 import net.yirmiri.urban_decor.core.registry.UDItems;
 
+import java.util.concurrent.CompletableFuture;
+
 public class UDLootTableProvider extends FabricBlockLootTableProvider {
-    public UDLootTableProvider(FabricDataOutput output) {
-        super(output);
+    public UDLootTableProvider(FabricDataOutput dataOutput, CompletableFuture<HolderLookup.Provider> registryLookup) {
+        super(dataOutput, registryLookup);
     }
 
     @Override

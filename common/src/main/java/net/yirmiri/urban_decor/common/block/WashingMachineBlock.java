@@ -8,11 +8,7 @@ import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.util.RandomSource;
-import net.minecraft.world.Container;
-import net.minecraft.world.Containers;
-import net.minecraft.world.InteractionHand;
-import net.minecraft.world.InteractionResult;
-import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.*;
 import net.minecraft.world.entity.monster.piglin.PiglinAi;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.AbstractContainerMenu;
@@ -42,16 +38,13 @@ import java.util.Map;
 
 public class WashingMachineBlock extends AbstractStorageDecorBlock {
     public static final BooleanProperty OPEN = BooleanProperty.create("open");
+    public static final BooleanProperty TRUE_OPEN = BooleanProperty.create("true_open");
     public static final BooleanProperty OPAQUE = BooleanProperty.create("opaque");
 
-    private static final VoxelShape SHAPE_NORTH = Shapes.join(Block.box(1, 0, 1, 15, 12, 15),
-            Block.box(1, 12, 13, 15, 16, 15), BooleanOp.OR);
-    private static final VoxelShape SHAPE_EAST = Shapes.join(Block.box(1, 0, 1, 15, 12, 15),
-            Block.box(1, 12, 1, 3, 16, 15), BooleanOp.OR);
-    private static final VoxelShape SHAPE_WEST = Shapes.join(Block.box(1, 0, 1, 15, 12, 15),
-            Block.box(13, 12, 1, 15, 16, 15), BooleanOp.OR);
-    private static final VoxelShape SHAPE_SOUTH = Shapes.join(Block.box(1, 0, 1, 15, 12, 15),
-            Block.box(1, 12, 1, 15, 16, 3), BooleanOp.OR);
+    private static final VoxelShape SHAPE_NORTH = Shapes.join(Block.box(1, 0, 1, 15, 12, 15), Block.box(1, 12, 13, 15, 16, 15), BooleanOp.OR);
+    private static final VoxelShape SHAPE_EAST = Shapes.join(Block.box(1, 0, 1, 15, 12, 15), Block.box(1, 12, 1, 3, 16, 15), BooleanOp.OR);
+    private static final VoxelShape SHAPE_WEST = Shapes.join(Block.box(1, 0, 1, 15, 12, 15), Block.box(13, 12, 1, 15, 16, 15), BooleanOp.OR);
+    private static final VoxelShape SHAPE_SOUTH = Shapes.join(Block.box(1, 0, 1, 15, 12, 15), Block.box(1, 12, 1, 15, 16, 3), BooleanOp.OR);
 
     private final Map<BlockPos, Integer> explosionCountdown = new HashMap<>();
 
@@ -86,46 +79,51 @@ public class WashingMachineBlock extends AbstractStorageDecorBlock {
 
         BlockEntity blockEntity = serverLevel.getBlockEntity(pos);
         if (blockEntity instanceof StorageApplianceBlockEntity) {
-            ((StorageApplianceBlockEntity)blockEntity).tick();
+            ((StorageApplianceBlockEntity)blockEntity).recheckOpen();
         }
     }
 
     @Override
-    public InteractionResult use(BlockState state, Level world, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit) {
+    public ItemInteractionResult useItemOn(ItemStack stack, BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hitResult) {
         ItemStack stackHand = player.getItemInHand(hand);
-        BlockEntity blockEntity = world.getBlockEntity(pos);
-
-        if (stackHand.is(Items.BRICK) && world.hasNeighborSignal(pos)) {
-            if (!world.isClientSide) {
+        if (stackHand.is(Items.BRICK) && level.hasNeighborSignal(pos)) {
+            if (!level.isClientSide) {
                 if (!explosionCountdown.containsKey(pos)) {
                     explosionCountdown.put(pos, 3 * 20);
-                    world.scheduleTick(pos, this, 1);
+                    level.scheduleTick(pos, this, 1);
                     stackHand.shrink(1);
                 }
             }
-            return InteractionResult.SUCCESS;
-        }
-
-        if (!world.isClientSide && blockEntity instanceof StorageApplianceBlockEntity && !stackHand.is(UDTags.ItemT.TOOLBOXES) && !stackHand.is(Items.BRICK) && !player.isShiftKeyDown()) {
-            player.openMenu((StorageApplianceBlockEntity) blockEntity);
-            //player.awardStat(UDStats.OPEN_APPLIANCES);
-            PiglinAi.angerNearbyPiglins(player, true);
-        }
-
-        if (!stackHand.is(UDTags.ItemT.TOOLBOXES) && player.isShiftKeyDown()) {
-            world.setBlockAndUpdate(pos, state.cycle(OPEN).cycle(TRUE_OPEN));
-            if (state.getValue(OPEN)) {
-                world.playLocalSound(pos.getX(), pos.getY(), pos.getZ(), SoundEvents.CHERRY_WOOD_DOOR_CLOSE, SoundSource.BLOCKS, 1.0F, 1.0F, false);
-            } else if (!state.getValue(OPEN)) {
-                world.playLocalSound(pos.getX(), pos.getY(), pos.getZ(), SoundEvents.CHERRY_WOOD_DOOR_OPEN, SoundSource.BLOCKS, 1.0F, 1.0F, false);
-            }
-            return InteractionResult.SUCCESS;
-
+            return ItemInteractionResult.SUCCESS;
         } else if (stackHand.is(UDTags.ItemT.TOOLBOXES)) {
-            world.setBlockAndUpdate(pos, state.cycle(OPAQUE));
-            UDUtils.toolboxUsed(world, pos);
+            level.setBlockAndUpdate(pos, state.cycle(OPAQUE));
+            UDUtils.toolboxUsed(level, pos);
             player.displayClientMessage(Component.translatable("toolbox.washing_machine.variant_" + state.getValue(OPAQUE)), true);
-            return InteractionResult.SUCCESS;
+            return ItemInteractionResult.SUCCESS;
+        }
+        return ItemInteractionResult.PASS_TO_DEFAULT_BLOCK_INTERACTION;
+    }
+
+    @Override
+    public InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos, Player player, BlockHitResult hitResult) {
+        if (!player.getMainHandItem().getItem().getDefaultInstance().is(UDTags.ItemT.TOOLBOXES)) {
+            BlockEntity blockEntity = level.getBlockEntity(pos);
+
+            if (!level.isClientSide && blockEntity instanceof StorageApplianceBlockEntity && !player.isShiftKeyDown()) {
+                player.openMenu((StorageApplianceBlockEntity) blockEntity);
+                //player.awardStat(UDStats.OPEN_APPLIANCES);
+                PiglinAi.angerNearbyPiglins(player, true);
+            }
+
+            if (player.isShiftKeyDown()) {
+                level.setBlockAndUpdate(pos, state.cycle(OPEN).cycle(TRUE_OPEN));
+                if (state.getValue(OPEN)) {
+                    level.playLocalSound(pos.getX(), pos.getY(), pos.getZ(), SoundEvents.CHERRY_WOOD_DOOR_CLOSE, SoundSource.BLOCKS, 1.0F, 1.0F, false);
+                } else if (!state.getValue(OPEN)) {
+                    level.playLocalSound(pos.getX(), pos.getY(), pos.getZ(), SoundEvents.CHERRY_WOOD_DOOR_OPEN, SoundSource.BLOCKS, 1.0F, 1.0F, false);
+                }
+                return InteractionResult.SUCCESS;
+            }
         }
         return InteractionResult.CONSUME;
     }
@@ -143,14 +141,14 @@ public class WashingMachineBlock extends AbstractStorageDecorBlock {
         return RenderShape.MODEL;
     }
 
-    public void setPlacedBy(Level world, BlockPos pos, BlockState state, LivingEntity placer, ItemStack itemStack) {
-        if (itemStack.hasCustomHoverName()) {
-            BlockEntity blockEntity = world.getBlockEntity(pos);
-            if (blockEntity instanceof StorageApplianceBlockEntity) {
-                ((StorageApplianceBlockEntity)blockEntity).setCustomName(itemStack.getHoverName());
-            }
-        }
-    }
+//    public void setPlacedBy(Level world, BlockPos pos, BlockState state, LivingEntity placer, ItemStack itemStack) {
+//        if (itemStack.hasCustomHoverName()) {
+//            BlockEntity blockEntity = world.getBlockEntity(pos);
+//            if (blockEntity instanceof StorageApplianceBlockEntity) {
+//                ((StorageApplianceBlockEntity)blockEntity).setCustomName(itemStack.getHoverName());
+//            }
+//        }
+//    }
 
     @Override
     public boolean hasAnalogOutputSignal(BlockState state) {

@@ -1,5 +1,6 @@
 package net.yirmiri.urban_decor.common.block;
 
+import net.azurune.runiclib.common.publicized.PublicDoorBlock;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.sounds.SoundEvents;
@@ -18,19 +19,19 @@ import net.minecraft.world.level.block.state.properties.*;
 import net.minecraft.world.level.gameevent.GameEvent;
 import net.minecraft.world.phys.BlockHitResult;
 
-public class StainlessSteelDoorBlock extends DoorBlock {
+public class StainlessSteelDoorBlock extends PublicDoorBlock {
     public static final BooleanProperty LOCKED = BooleanProperty.create("locked");
     private final BlockSetType blockSetType;
 
-    public StainlessSteelDoorBlock(Properties settings, BlockSetType blockSetType) {
-        super(settings, blockSetType);
+    public StainlessSteelDoorBlock(BlockSetType blockSetType, Properties settings) {
+        super(blockSetType, settings);
         this.blockSetType = blockSetType;
         this.registerDefaultState((((((this.stateDefinition.any()).setValue(BlockStateProperties.LOCKED, false).setValue(FACING, Direction.NORTH)).setValue(OPEN, false)).setValue(HINGE, DoorHingeSide.LEFT)).setValue(POWERED, false)).setValue(HALF, DoubleBlockHalf.LOWER));
     }
 
-    @Override
-    public InteractionResult use(BlockState state, Level world, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit) {
-        ItemStack stackHand = player.getItemInHand(hand);
+//    @Override
+//    public InteractionResult use(BlockState state, Level world, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit) {
+//        ItemStack stackHand = player.getItemInHand(hand);
 //        if (stackHand.isIn(UDItemTagProvider.TOOLBOXES)) {
 //            if (state.get(HALF) == DoubleBlockHalf.LOWER && world.getBlockState(pos.up()).isOf(this)) {
 //                world.setBlockState(pos.up(), this.getDefaultState().cycle(LOCKED).with(FACING, state.get(FACING)).with(HALF, DoubleBlockHalf.UPPER).with(OPEN, state.get(OPEN)).with(HINGE, state.get(HINGE)), 0);
@@ -43,16 +44,16 @@ public class StainlessSteelDoorBlock extends DoorBlock {
 //            player.sendMessage(Text.translatable("toolbox.steel_door.variant_" + state.get(LOCKED)), true);
 //            return ActionResult.SUCCESS;
 //        }
-        if (!this.blockSetType.canOpenByHand() || state.getValue(LOCKED)) {
-            return InteractionResult.PASS;
-        } else {
-            state = state.cycle(OPEN);
-            world.setBlock(pos, state, 10);
-            playSound(player, world, pos, state.getValue(OPEN));
-            world.gameEvent(player, this.isOpen(state) ? GameEvent.BLOCK_OPEN : GameEvent.BLOCK_CLOSE, pos);
-            return InteractionResult.sidedSuccess(world.isClientSide);
-        }
-    }
+//        if (!this.blockSetType.canOpenByHand() || state.getValue(LOCKED)) {
+//            return InteractionResult.PASS;
+//        } else {
+//            state = state.cycle(OPEN);
+//            world.setBlock(pos, state, 10);
+//            playSound(player, world, pos, state.getValue(OPEN));
+//            world.gameEvent(player, this.isOpen(state) ? GameEvent.BLOCK_OPEN : GameEvent.BLOCK_CLOSE, pos);
+//            return InteractionResult.sidedSuccess(world.isClientSide);
+//        }
+//    }
 
 //    @Override
 //    public void neighborUpdate(BlockState state, World world, BlockPos pos, Block sourceBlock, BlockPos sourcePos, boolean notify) {

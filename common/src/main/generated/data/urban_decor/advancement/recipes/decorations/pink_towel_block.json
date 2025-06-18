@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_pink_towel": {
+      "conditions": {
+        "items": [
+          {
+            "items": "urban_decor:pink_towel"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "urban_decor:pink_towel_block"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_pink_towel"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "urban_decor:pink_towel_block"
+    ]
+  }
+}

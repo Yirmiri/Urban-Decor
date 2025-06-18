@@ -1,5 +1,6 @@
 package net.yirmiri.urban_decor.common.block.abstracts;
 
+import com.mojang.serialization.MapCodec;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.sounds.SoundEvents;
@@ -31,9 +32,16 @@ public class AbstractSmokerDecorBlock extends AbstractFurnaceBlock implements Si
     public static final BooleanProperty OPEN = BooleanProperty.create("open");
     public static final BooleanProperty TRUE_OPEN = BooleanProperty.create("true_open");
 
+    public static final MapCodec<AbstractSmokerDecorBlock> CODEC = simpleCodec(AbstractSmokerDecorBlock::new);
+
     public AbstractSmokerDecorBlock(Properties settings) {
         super(settings);
-        registerDefaultState(defaultBlockState().setValue(BlockStateProperties.HORIZONTAL_FACING, Direction.NORTH).setValue(LIT, false).setValue(WATERLOGGED, false).setValue(TRUE_OPEN, false).setValue(OPEN, false));
+        //registerDefaultState(defaultBlockState().setValue(BlockStateProperties.HORIZONTAL_FACING, Direction.NORTH).setValue(LIT, false).setValue(WATERLOGGED, false).setValue(TRUE_OPEN, false).setValue(OPEN, false));
+    }
+
+    @Override
+    protected MapCodec<? extends AbstractFurnaceBlock> codec() {
+        return CODEC;
     }
 
     public BlockEntity newBlockEntity(BlockPos pos, BlockState state) {

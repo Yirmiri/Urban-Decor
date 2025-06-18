@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "urban_decor:stainless_steel_nugget"
+    },
+    "@": {
+      "item": "minecraft:soul_torch"
+    }
+  },
+  "pattern": [
+    "###",
+    "#@#",
+    "###"
+  ],
+  "result": {
+    "count": 1,
+    "id": "urban_decor:stainless_steel_soul_lantern"
+  }
+}

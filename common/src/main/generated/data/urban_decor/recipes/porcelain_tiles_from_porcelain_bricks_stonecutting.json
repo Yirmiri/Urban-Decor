@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "count": 1,
-  "ingredient": {
-    "item": "urban_decor:porcelain_bricks"
-  },
-  "result": "urban_decor:porcelain_tiles"
-}

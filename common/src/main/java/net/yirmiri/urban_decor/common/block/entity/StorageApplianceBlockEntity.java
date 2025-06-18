@@ -1,6 +1,7 @@
 package net.yirmiri.urban_decor.common.block.entity;
 
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.HolderLookup;
 import net.minecraft.core.NonNullList;
 import net.minecraft.core.Vec3i;
 import net.minecraft.nbt.CompoundTag;
@@ -15,6 +16,8 @@ import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.inventory.ChestMenu;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.BarrelBlock;
+import net.minecraft.world.level.block.entity.BarrelBlockEntity;
 import net.minecraft.world.level.block.entity.ContainerOpenersCounter;
 import net.minecraft.world.level.block.entity.RandomizableContainerBlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
@@ -23,13 +26,13 @@ import net.yirmiri.urban_decor.core.registry.UDBlockEntities;
 import net.yirmiri.urban_decor.core.registry.UDSounds;
 
 public class StorageApplianceBlockEntity extends RandomizableContainerBlockEntity {
-    private NonNullList<ItemStack> inventory;
-    private final ContainerOpenersCounter stateManager;
+    private NonNullList<ItemStack> items;
+    private final ContainerOpenersCounter openersCounter;
 
     public StorageApplianceBlockEntity(BlockPos pos, BlockState state) {
         super(UDBlockEntities.STORAGE_APPLIANCE.get(), pos, state);
-        inventory = NonNullList.withSize(27, ItemStack.EMPTY);
-        stateManager = new ContainerOpenersCounter() {
+        items = NonNullList.withSize(27, ItemStack.EMPTY);
+        openersCounter = new ContainerOpenersCounter() {
             protected void onOpen(Level world, BlockPos pos, BlockState state) {
                 playSound(state, UDSounds.APPLIANCE_OPEN.get());
                 setOpen(state, true);
@@ -49,8 +52,8 @@ public class StorageApplianceBlockEntity extends RandomizableContainerBlockEntit
 
             protected boolean isOwnContainer(Player player) {
                 if (player.containerMenu instanceof ChestMenu) {
-                    Container inventory = ((ChestMenu)player.containerMenu).getContainer();
-                    return inventory == StorageApplianceBlockEntity.this;
+                    Container container = ((ChestMenu)player.containerMenu).getContainer();
+                    return container == StorageApplianceBlockEntity.this;
                 } else {
                     return false;
                 }
@@ -58,23 +61,18 @@ public class StorageApplianceBlockEntity extends RandomizableContainerBlockEntit
         };
     }
 
-    void setOpen(BlockState state, boolean open) {
-        level.setBlock(getBlockPos(), state.setValue(AbstractStorageDecorBlock.OPEN, open), 3);
-    }
-
-    protected void saveAdditional(CompoundTag nbt) {
-        super.saveAdditional(nbt);
-        if (!trySaveLootTable(nbt)) {
-            ContainerHelper.saveAllItems(nbt, inventory);
+    protected void saveAdditional(CompoundTag tag, HolderLookup.Provider registries) {
+        super.saveAdditional(tag, registries);
+        if (!this.trySaveLootTable(tag)) {
+            ContainerHelper.saveAllItems(tag, this.items, registries);
         }
-
     }
 
-    public void load(CompoundTag nbt) {
-        super.load(nbt);
-        inventory = NonNullList.withSize(getContainerSize(), ItemStack.EMPTY);
-        if (!tryLoadLootTable(nbt)) {
-            ContainerHelper.loadAllItems(nbt, inventory);
+    protected void loadAdditional(CompoundTag tag, HolderLookup.Provider registries) {
+        super.loadAdditional(tag, registries);
+        this.items = NonNullList.withSize(this.getContainerSize(), ItemStack.EMPTY);
+        if (!this.tryLoadLootTable(tag)) {
+            ContainerHelper.loadAllItems(tag, this.items, registries);
         }
     }
 
@@ -83,37 +81,41 @@ public class StorageApplianceBlockEntity extends RandomizableContainerBlockEntit
     }
 
     protected NonNullList<ItemStack> getItems() {
-        return inventory;
+        return items;
     }
 
     protected void setItems(NonNullList<ItemStack> list) {
-        inventory = list;
+        items = list;
     }
 
     protected Component getDefaultName() {
         return Component.translatable("container.urban_decor.generic");
     }
 
-    protected AbstractContainerMenu createMenu(int syncId, Inventory playerInventory) {
-        return ChestMenu.threeRows(syncId, playerInventory, this);
+    protected AbstractContainerMenu createMenu(int id, Inventory player) {
+        return ChestMenu.threeRows(id, player, this);
     }
 
     public void startOpen(Player player) {
-        if (!remove && !player.isSpectator()) {
-            stateManager.incrementOpeners(player, getLevel(), getBlockPos(), getBlockState());
+        if (!this.remove && !player.isSpectator()) {
+            this.openersCounter.incrementOpeners(player, this.getLevel(), this.getBlockPos(), this.getBlockState());
         }
     }
 
     public void stopOpen(Player player) {
-        if (!remove && !player.isSpectator()) {
-            stateManager.decrementOpeners(player, getLevel(), getBlockPos(), getBlockState());
+        if (!this.remove && !player.isSpectator()) {
+            this.openersCounter.decrementOpeners(player, this.getLevel(), this.getBlockPos(), this.getBlockState());
         }
     }
 
-    public void tick() {
-        if (!remove) {
-            stateManager.recheckOpeners(getLevel(), getBlockPos(), getBlockState());
+    public void recheckOpen() {
+        if (!this.remove) {
+            this.openersCounter.recheckOpeners(this.getLevel(), this.getBlockPos(), this.getBlockState());
         }
+    }
+
+    void setOpen(BlockState state, boolean open) {
+        this.level.setBlock(this.getBlockPos(), state.setValue(AbstractStorageDecorBlock.OPEN, open), 3);
     }
 
     void playSound(BlockState state, SoundEvent soundEvent) {

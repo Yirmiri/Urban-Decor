@@ -6,7 +6,7 @@ import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.stats.Stats;
 import net.minecraft.world.InteractionHand;
-import net.minecraft.world.InteractionResult;
+import net.minecraft.world.ItemInteractionResult;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
@@ -27,22 +27,10 @@ import net.yirmiri.urban_decor.core.init.UDTags;
 import java.util.stream.Stream;
 
 public class TowelBarBlock extends AbstractDecorBlock {
-    private static final VoxelShape SHAPE_NORTH = Stream.of(
-            Block.box(0, 14, 14, 2, 16, 16),
-            Block.box(14, 14, 14, 16, 16, 16),
-            Block.box(0, 14, 12, 16, 16, 14)).reduce((v1, v2) -> Shapes.join(v1, v2, BooleanOp.OR)).get();
-    private static final VoxelShape SHAPE_WEST = Stream.of(
-            Block.box(14, 14, 14, 16, 16, 16),
-            Block.box(14, 14, 0, 16, 16, 2),
-            Block.box(12, 14, 0, 14, 16, 16)).reduce((v1, v2) -> Shapes.join(v1, v2, BooleanOp.OR)).get();
-    private static final VoxelShape SHAPE_EAST = Stream.of(
-            Block.box(0, 14, 0, 2, 16, 2),
-            Block.box(0, 14, 14, 2, 16, 16),
-            Block.box(2, 14, 0, 4, 16, 16)).reduce((v1, v2) -> Shapes.join(v1, v2, BooleanOp.OR)).get();
-    private static final VoxelShape SHAPE_SOUTH = Stream.of(
-            Block.box(14, 14, 0, 16, 16, 2),
-            Block.box(0, 14, 0, 2, 16, 2),
-            Block.box(0, 14, 2, 16, 16, 4)).reduce((v1, v2) -> Shapes.join(v1, v2, BooleanOp.OR)).get();
+    private static final VoxelShape SHAPE_NORTH = Stream.of(Block.box(0, 14, 14, 2, 16, 16), Block.box(14, 14, 14, 16, 16, 16), Block.box(0, 14, 12, 16, 16, 14)).reduce((v1, v2) -> Shapes.join(v1, v2, BooleanOp.OR)).get();
+    private static final VoxelShape SHAPE_WEST = Stream.of(Block.box(14, 14, 14, 16, 16, 16), Block.box(14, 14, 0, 16, 16, 2), Block.box(12, 14, 0, 14, 16, 16)).reduce((v1, v2) -> Shapes.join(v1, v2, BooleanOp.OR)).get();
+    private static final VoxelShape SHAPE_EAST = Stream.of(Block.box(0, 14, 0, 2, 16, 2), Block.box(0, 14, 14, 2, 16, 16), Block.box(2, 14, 0, 4, 16, 16)).reduce((v1, v2) -> Shapes.join(v1, v2, BooleanOp.OR)).get();
+    private static final VoxelShape SHAPE_SOUTH = Stream.of(Block.box(14, 14, 0, 16, 16, 2), Block.box(0, 14, 0, 2, 16, 2), Block.box(0, 14, 2, 16, 16, 4)).reduce((v1, v2) -> Shapes.join(v1, v2, BooleanOp.OR)).get();
 
     public TowelBarBlock(Properties settings) {
         super(settings);
@@ -60,7 +48,7 @@ public class TowelBarBlock extends AbstractDecorBlock {
     }
 
     @Override
-    public InteractionResult use(BlockState state, Level world, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit) {
+    public ItemInteractionResult useItemOn(ItemStack stack, BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hitResult) {
         ItemStack stackHand = player.getItemInHand(hand);
         Item item = stackHand.getItem();
         if (stackHand.is(UDTags.ItemT.TOWELS)) {
@@ -69,13 +57,13 @@ public class TowelBarBlock extends AbstractDecorBlock {
                 if (!player.isCreative()) {
                     stackHand.shrink(1);
                 }
-                world.playSound(null, pos, SoundEvents.WOOL_PLACE, SoundSource.BLOCKS, 1.0F, 1.0F);
-                world.setBlockAndUpdate(pos, TowelBarTowelBlock.getTowelColors(block).setValue(FACING, state.getValue(FACING)));
-                world.gameEvent(player, GameEvent.BLOCK_CHANGE, pos);
+                level.playSound(null, pos, SoundEvents.WOOL_PLACE, SoundSource.BLOCKS, 1.0F, 1.0F);
+                level.setBlockAndUpdate(pos, TowelBarTowelBlock.getTowelColors(block).setValue(FACING, state.getValue(FACING)));
+                level.gameEvent(player, GameEvent.BLOCK_CHANGE, pos);
                 player.awardStat(Stats.ITEM_USED.get(item));
-                return InteractionResult.SUCCESS;
+                return ItemInteractionResult.SUCCESS;
             }
         }
-        return InteractionResult.PASS;
+        return ItemInteractionResult.PASS_TO_DEFAULT_BLOCK_INTERACTION;
     }
 }

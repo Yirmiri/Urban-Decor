@@ -1,0 +1,37 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "urban_decor:stainless_steel_nugget"
+    },
+    {
+      "item": "urban_decor:stainless_steel_nugget"
+    },
+    {
+      "item": "urban_decor:stainless_steel_nugget"
+    },
+    {
+      "item": "urban_decor:stainless_steel_nugget"
+    },
+    {
+      "item": "urban_decor:stainless_steel_nugget"
+    },
+    {
+      "item": "urban_decor:stainless_steel_nugget"
+    },
+    {
+      "item": "urban_decor:stainless_steel_nugget"
+    },
+    {
+      "item": "urban_decor:stainless_steel_nugget"
+    },
+    {
+      "item": "urban_decor:stainless_steel_nugget"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "urban_decor:stainless_steel_ingot"
+  }
+}

@@ -4,10 +4,8 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
-import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
@@ -23,6 +21,7 @@ import net.yirmiri.urban_decor.core.init.UDTags;
 
 public class MicrowaveBlock extends AbstractFurnaceDecorBlock {
     public static final BooleanProperty OPEN = BooleanProperty.create("open");
+    public static final BooleanProperty TRUE_OPEN = BooleanProperty.create("true_open");
 
     private static final VoxelShape SHAPE_NORTH = Block.box(2, 0, 5, 14, 8, 12);
     private static final VoxelShape SHAPE_EAST = Block.box(4, 0, 2, 11, 8, 14);
@@ -45,20 +44,22 @@ public class MicrowaveBlock extends AbstractFurnaceDecorBlock {
     }
 
     @Override
-    public InteractionResult use(BlockState state, Level world, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit) {
-        ItemStack stackHand = player.getItemInHand(hand);
-        if (!stackHand.is(UDTags.ItemT.TOOLBOXES) && !world.isClientSide && !player.isShiftKeyDown()) {
-            this.openContainer(world, pos, player);
-            return InteractionResult.SUCCESS;
-        }
-        if (!stackHand.is(UDTags.ItemT.TOOLBOXES) && player.isShiftKeyDown()) {
-            world.setBlockAndUpdate(pos, state.cycle(OPEN).cycle(TRUE_OPEN));
-            if (state.getValue(OPEN)) {
-                world.playLocalSound(pos.getX(), pos.getY(), pos.getZ(), SoundEvents.CHERRY_WOOD_DOOR_CLOSE, SoundSource.BLOCKS, 1.0F, 1.0F, false);
-            } else if (!state.getValue(OPEN)) {
-                world.playLocalSound(pos.getX(), pos.getY(), pos.getZ(), SoundEvents.CHERRY_WOOD_DOOR_OPEN, SoundSource.BLOCKS, 1.0F, 1.0F, false);
+    public InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos, Player player, BlockHitResult hitResult) {
+        if (!player.getMainHandItem().getItem().getDefaultInstance().is(UDTags.ItemT.TOOLBOXES)) {
+            if (!level.isClientSide && !player.isShiftKeyDown()) {
+                this.openContainer(level, pos, player);
+                return InteractionResult.SUCCESS;
             }
-            return InteractionResult.SUCCESS;
+
+            if (player.isShiftKeyDown()) {
+                level.setBlockAndUpdate(pos, state.cycle(OPEN).cycle(TRUE_OPEN));
+                if (state.getValue(OPEN)) {
+                    level.playLocalSound(pos.getX(), pos.getY(), pos.getZ(), SoundEvents.CHERRY_WOOD_DOOR_CLOSE, SoundSource.BLOCKS, 1.0F, 1.0F, false);
+                } else if (!state.getValue(OPEN)) {
+                    level.playLocalSound(pos.getX(), pos.getY(), pos.getZ(), SoundEvents.CHERRY_WOOD_DOOR_OPEN, SoundSource.BLOCKS, 1.0F, 1.0F, false);
+                }
+                return InteractionResult.SUCCESS;
+            }
         }
         return InteractionResult.CONSUME;
     }

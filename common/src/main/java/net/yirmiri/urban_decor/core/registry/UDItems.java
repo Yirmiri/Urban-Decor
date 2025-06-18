@@ -6,7 +6,6 @@ import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.StandingAndWallBlockItem;
-import net.minecraft.world.level.block.Block;
 import net.yirmiri.urban_decor.UrbanDecor;
 import net.yirmiri.urban_decor.common.item.ToolboxBlockItem;
 import net.yirmiri.urban_decor.common.util.UDProperties;

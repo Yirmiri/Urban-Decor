@@ -5,11 +5,7 @@ import net.minecraft.core.Direction;
 import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.util.RandomSource;
-import net.minecraft.world.Container;
-import net.minecraft.world.Containers;
-import net.minecraft.world.InteractionHand;
-import net.minecraft.world.InteractionResult;
-import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.*;
 import net.minecraft.world.entity.monster.piglin.PiglinAi;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.AbstractContainerMenu;
@@ -23,6 +19,7 @@ import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
+import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraft.world.level.block.state.properties.IntegerProperty;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.shapes.BooleanOp;
@@ -32,10 +29,12 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 import net.yirmiri.urban_decor.common.block.abstracts.AbstractStorageDecorBlock;
 import net.yirmiri.urban_decor.common.block.entity.StorageApplianceBlockEntity;
 import net.yirmiri.urban_decor.common.util.UDUtils;
-import net.yirmiri.urban_decor.core.init.UDStats;
 import net.yirmiri.urban_decor.core.init.UDTags;
+import net.yirmiri.urban_decor.core.registry.UDItems;
 
 public class CupboardBlock extends AbstractStorageDecorBlock {
+    public static final BooleanProperty OPEN = BooleanProperty.create("open");
+    public static final BooleanProperty TRUE_OPEN = BooleanProperty.create("true_open");
     public static final IntegerProperty VARIANT = IntegerProperty.create("variant", 0, 3);
 
     private static final VoxelShape SHAPE_NORTH = Shapes.join(Block.box(2, 0, 4, 14, 14, 16), Block.box(0, 14, 2, 16, 16, 16), BooleanOp.OR);
@@ -85,26 +84,32 @@ public class CupboardBlock extends AbstractStorageDecorBlock {
     }
 
     @Override
-    public InteractionResult use(BlockState state, Level world, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit) {
+    public ItemInteractionResult useItemOn(ItemStack stack, BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hitResult) {
         ItemStack stackHand = player.getItemInHand(hand);
-        BlockEntity blockEntity = world.getBlockEntity(pos);
-        if (world.isClientSide) {
-            return InteractionResult.SUCCESS;
-        } else {
-            if (blockEntity instanceof StorageApplianceBlockEntity && !stackHand.is(UDTags.ItemT.TOOLBOXES)) {
-                player.openMenu((StorageApplianceBlockEntity)blockEntity);
-                //player.awardStat(UDStats.OPEN_APPLIANCES);
-                PiglinAi.angerNearbyPiglins(player, true);
-            }
-
-            if (stackHand.is(UDTags.ItemT.TOOLBOXES)) {
-                world.setBlockAndUpdate(pos, state.cycle(VARIANT));
-                UDUtils.toolboxUsed(world, pos);
-                player.displayClientMessage(Component.translatable("toolbox.cupboard.variant_" + state.getValue(VARIANT)), true);
-                return InteractionResult.SUCCESS;
-            }
-            return InteractionResult.CONSUME;
+        if (stackHand.is(UDTags.ItemT.TOOLBOXES)) {
+            level.setBlockAndUpdate(pos, state.cycle(VARIANT));
+            UDUtils.toolboxUsed(level, pos);
+            player.displayClientMessage(Component.translatable("toolbox.cupboard.variant_" + state.getValue(VARIANT)), true);
+            return ItemInteractionResult.SUCCESS;
         }
+        return ItemInteractionResult.PASS_TO_DEFAULT_BLOCK_INTERACTION;
+    }
+
+    @Override
+    public InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos, Player player, BlockHitResult hitResult) {
+        BlockEntity blockEntity = level.getBlockEntity(pos);
+        if (!player.getMainHandItem().getItem().getDefaultInstance().is(UDTags.ItemT.TOOLBOXES)) {
+            if (level.isClientSide) {
+                return InteractionResult.SUCCESS;
+            } else {
+                if (blockEntity instanceof StorageApplianceBlockEntity) {
+                    player.openMenu((StorageApplianceBlockEntity) blockEntity);
+                    //player.awardStat(UDStats.OPEN_APPLIANCES);
+                    PiglinAi.angerNearbyPiglins(player, true);
+                }
+            }
+        }
+        return InteractionResult.CONSUME;
     }
 
     @Override
@@ -120,14 +125,14 @@ public class CupboardBlock extends AbstractStorageDecorBlock {
         return RenderShape.MODEL;
     }
 
-    public void setPlacedBy(Level world, BlockPos pos, BlockState state, LivingEntity placer, ItemStack itemStack) {
-        if (itemStack.hasCustomHoverName()) {
-            BlockEntity blockEntity = world.getBlockEntity(pos);
-            if (blockEntity instanceof StorageApplianceBlockEntity) {
-                ((StorageApplianceBlockEntity)blockEntity).setCustomName(itemStack.getHoverName());
-            }
-        }
-    }
+//    public void setPlacedBy(Level world, BlockPos pos, BlockState state, LivingEntity placer, ItemStack itemStack) {
+//        if (itemStack.hasCustomHoverName()) {
+//            BlockEntity blockEntity = world.getBlockEntity(pos);
+//            if (blockEntity instanceof StorageApplianceBlockEntity) {
+//                ((StorageApplianceBlockEntity)blockEntity).setCustomName(itemStack.getHoverName());
+//            }
+//        }
+//    }
 
     @Override
     public boolean hasAnalogOutputSignal(BlockState state) {
@@ -140,23 +145,16 @@ public class CupboardBlock extends AbstractStorageDecorBlock {
     }
 
     @Override
-    public void onRemove(BlockState state, Level world, BlockPos pos, BlockState newState, boolean moved) {
-        if (!state.is(newState.getBlock())) {
-            BlockEntity blockEntity = world.getBlockEntity(pos);
-            if (blockEntity instanceof Container) {
-                Containers.dropContents(world, pos, (Container)blockEntity);
-                world.updateNeighbourForOutputSignal(pos, this);
-            }
-
-            super.onRemove(state, world, pos, newState, moved);
-        }
+    protected void onRemove(BlockState state, Level level, BlockPos pos, BlockState newState, boolean isMoving) {
+        Containers.dropContentsOnDestroy(state, newState, level, pos);
+        super.onRemove(state, level, pos, newState, isMoving);
     }
 
     @Override
     public void tick(BlockState state, ServerLevel world, BlockPos pos, RandomSource random) {
         BlockEntity blockEntity = world.getBlockEntity(pos);
         if (blockEntity instanceof StorageApplianceBlockEntity) {
-            ((StorageApplianceBlockEntity)blockEntity).tick();
+            ((StorageApplianceBlockEntity)blockEntity).recheckOpen();
         }
     }
 }

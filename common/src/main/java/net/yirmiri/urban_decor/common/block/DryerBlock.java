@@ -7,11 +7,7 @@ import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.util.RandomSource;
-import net.minecraft.world.Container;
-import net.minecraft.world.Containers;
-import net.minecraft.world.InteractionHand;
-import net.minecraft.world.InteractionResult;
-import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.*;
 import net.minecraft.world.entity.monster.piglin.PiglinAi;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.AbstractContainerMenu;
@@ -33,11 +29,11 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 import net.yirmiri.urban_decor.common.block.abstracts.AbstractStorageDecorBlock;
 import net.yirmiri.urban_decor.common.block.entity.StorageApplianceBlockEntity;
 import net.yirmiri.urban_decor.common.util.UDUtils;
-import net.yirmiri.urban_decor.core.init.UDStats;
 import net.yirmiri.urban_decor.core.init.UDTags;
 
 public class DryerBlock extends AbstractStorageDecorBlock {
     public static final BooleanProperty OPEN = BooleanProperty.create("open");
+    public static final BooleanProperty TRUE_OPEN = BooleanProperty.create("true_open");
     public static final BooleanProperty OPAQUE = BooleanProperty.create("opaque");
 
     private static final VoxelShape SHAPE = Shapes.join(Block.box(1, 0, 1, 15, 13, 15),
@@ -55,29 +51,36 @@ public class DryerBlock extends AbstractStorageDecorBlock {
     }
 
     @Override
-    public InteractionResult use(BlockState state, Level world, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit) {
+    public ItemInteractionResult useItemOn(ItemStack stack, BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hitResult) {
         ItemStack stackHand = player.getItemInHand(hand);
-        BlockEntity blockEntity = world.getBlockEntity(pos);
-        if (!world.isClientSide && blockEntity instanceof StorageApplianceBlockEntity && !stackHand.is(UDTags.ItemT.TOOLBOXES) && !player.isShiftKeyDown()) {
-            player.openMenu((StorageApplianceBlockEntity) blockEntity);
-            //player.awardStat(UDStats.OPEN_APPLIANCES);
-            PiglinAi.angerNearbyPiglins(player, true);
-        }
-
-        if (!stackHand.is(UDTags.ItemT.TOOLBOXES) && player.isShiftKeyDown()) {
-            world.setBlockAndUpdate(pos, state.cycle(OPEN).cycle(TRUE_OPEN));
-            if (state.getValue(OPEN)) {
-                world.playLocalSound(pos.getX(), pos.getY(), pos.getZ(), SoundEvents.CHERRY_WOOD_DOOR_CLOSE, SoundSource.BLOCKS, 1.0F, 1.0F, false);
-            } else if (!state.getValue(OPEN)) {
-                world.playLocalSound(pos.getX(), pos.getY(), pos.getZ(), SoundEvents.CHERRY_WOOD_DOOR_OPEN, SoundSource.BLOCKS, 1.0F, 1.0F, false);
-            }
-            return InteractionResult.SUCCESS;
-
-        } else if (stackHand.is(UDTags.ItemT.TOOLBOXES)) {
-            world.setBlockAndUpdate(pos, state.cycle(OPAQUE));
-            UDUtils.toolboxUsed(world, pos);
+        if (stackHand.is(UDTags.ItemT.TOOLBOXES)) {
+            level.setBlockAndUpdate(pos, state.cycle(OPAQUE));
+            UDUtils.toolboxUsed(level, pos);
             player.displayClientMessage(Component.translatable("toolbox.dryer.variant_" + state.getValue(OPAQUE)), true);
-            return InteractionResult.SUCCESS;
+            return ItemInteractionResult.SUCCESS;
+        }
+        return ItemInteractionResult.PASS_TO_DEFAULT_BLOCK_INTERACTION;
+    }
+
+    @Override
+    public InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos, Player player, BlockHitResult hitResult) {
+        BlockEntity blockEntity = level.getBlockEntity(pos);
+        if (!player.getMainHandItem().getItem().getDefaultInstance().is(UDTags.ItemT.TOOLBOXES)) {
+            if (!level.isClientSide && blockEntity instanceof StorageApplianceBlockEntity && !player.isShiftKeyDown()) {
+                player.openMenu((StorageApplianceBlockEntity) blockEntity);
+                //player.awardStat(UDStats.OPEN_APPLIANCES);
+                PiglinAi.angerNearbyPiglins(player, true);
+            }
+
+            if (player.isShiftKeyDown()) {
+                level.setBlockAndUpdate(pos, state.cycle(OPEN).cycle(TRUE_OPEN));
+                if (state.getValue(OPEN)) {
+                    level.playLocalSound(pos.getX(), pos.getY(), pos.getZ(), SoundEvents.CHERRY_WOOD_DOOR_CLOSE, SoundSource.BLOCKS, 1.0F, 1.0F, false);
+                } else if (!state.getValue(OPEN)) {
+                    level.playLocalSound(pos.getX(), pos.getY(), pos.getZ(), SoundEvents.CHERRY_WOOD_DOOR_OPEN, SoundSource.BLOCKS, 1.0F, 1.0F, false);
+                }
+                return InteractionResult.SUCCESS;
+            }
         }
         return InteractionResult.CONSUME;
     }
@@ -95,14 +98,14 @@ public class DryerBlock extends AbstractStorageDecorBlock {
         return RenderShape.MODEL;
     }
 
-    public void setPlacedBy(Level world, BlockPos pos, BlockState state, LivingEntity placer, ItemStack itemStack) {
-        if (itemStack.hasCustomHoverName()) {
-            BlockEntity blockEntity = world.getBlockEntity(pos);
-            if (blockEntity instanceof StorageApplianceBlockEntity) {
-                ((StorageApplianceBlockEntity)blockEntity).setCustomName(itemStack.getHoverName());
-            }
-        }
-    }
+//    public void setPlacedBy(Level world, BlockPos pos, BlockState state, LivingEntity placer, ItemStack itemStack) {
+//        if (itemStack.hasCustomHoverName()) {
+//            BlockEntity blockEntity = world.getBlockEntity(pos);
+//            if (blockEntity instanceof StorageApplianceBlockEntity) {
+//                ((StorageApplianceBlockEntity)blockEntity).setCustomName(itemStack.getHoverName());
+//            }
+//        }
+//    }
 
     @Override
     public boolean hasAnalogOutputSignal(BlockState state) {
@@ -131,7 +134,7 @@ public class DryerBlock extends AbstractStorageDecorBlock {
     public void tick(BlockState state, ServerLevel world, BlockPos pos, RandomSource random) {
         BlockEntity blockEntity = world.getBlockEntity(pos);
         if (blockEntity instanceof StorageApplianceBlockEntity) {
-            ((StorageApplianceBlockEntity)blockEntity).tick();
+            ((StorageApplianceBlockEntity)blockEntity).recheckOpen();
         }
     }
 }

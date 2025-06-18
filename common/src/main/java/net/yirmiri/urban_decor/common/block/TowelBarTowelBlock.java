@@ -6,8 +6,8 @@ import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
@@ -28,7 +28,7 @@ public class TowelBarTowelBlock extends TowelBarBlock {
     }
 
     @Override
-    public ItemStack getCloneItemStack(BlockGetter world, BlockPos pos, BlockState state) {
+    public ItemStack getCloneItemStack(LevelReader level, BlockPos pos, BlockState state) {
         return new ItemStack(UDBlocks.TOWEL_BAR.get());
     }
 
@@ -39,18 +39,13 @@ public class TowelBarTowelBlock extends TowelBarBlock {
     }
 
     @Override
-    public InteractionResult use(BlockState state, Level world, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit) {
-        ItemStack itemStack = player.getItemInHand(hand);
+    public InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos, Player player, BlockHitResult hitResult) {
         ItemStack towel = new ItemStack(this.towel);
-
-        if (itemStack.isEmpty()) {
-            player.setItemInHand(hand, towel);
-        } else if (!player.addItem(towel)) {
+        if (!player.addItem(towel)) {
             player.drop(towel, false);
         }
-
-        world.setBlock(pos, UDBlocks.TOWEL_BAR.get().defaultBlockState().setValue(FACING, state.getValue(FACING)), Block.UPDATE_ALL);
-        return InteractionResult.SUCCESS;
+        level.setBlock(pos, UDBlocks.TOWEL_BAR.get().defaultBlockState().setValue(FACING, state.getValue(FACING)), Block.UPDATE_ALL);
+        return InteractionResult.CONSUME;
     }
 
     public static BlockState getTowelColors(Block towel) {

@@ -5,11 +5,7 @@ import net.minecraft.core.Direction;
 import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.util.RandomSource;
-import net.minecraft.world.Container;
-import net.minecraft.world.Containers;
-import net.minecraft.world.InteractionHand;
-import net.minecraft.world.InteractionResult;
-import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.*;
 import net.minecraft.world.entity.monster.piglin.PiglinAi;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.AbstractContainerMenu;
@@ -27,9 +23,8 @@ import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import net.yirmiri.urban_decor.common.block.abstracts.AbstractMiniStorageDecorBlock;
-import net.yirmiri.urban_decor.common.block.entity.MiniStorageApplianceBlockEntity;
+import net.yirmiri.urban_decor.common.block.entity.DestroyStorageApplianceBlockEntity;
 import net.yirmiri.urban_decor.common.util.UDUtils;
-import net.yirmiri.urban_decor.core.init.UDStats;
 import net.yirmiri.urban_decor.core.init.UDTags;
 
 public class TrashCanBlock extends AbstractMiniStorageDecorBlock {
@@ -55,23 +50,30 @@ public class TrashCanBlock extends AbstractMiniStorageDecorBlock {
     }
 
     @Override
-    public InteractionResult use(BlockState state, Level world, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit) {
+    public ItemInteractionResult useItemOn(ItemStack stack, BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hitResult) {
         ItemStack stackHand = player.getItemInHand(hand);
-        BlockEntity blockEntity = world.getBlockEntity(pos);
-        if (world.isClientSide) {
-            return InteractionResult.SUCCESS;
-        } else {
-            if (blockEntity instanceof MiniStorageApplianceBlockEntity && !stackHand.is(UDTags.ItemT.TOOLBOXES) && !player.isShiftKeyDown()) {
-                player.openMenu((MiniStorageApplianceBlockEntity) blockEntity);
-                //player.awardStat(UDStats.OPEN_APPLIANCES);
-                PiglinAi.angerNearbyPiglins(player, true);
-            }
-        }
         if (stackHand.is(UDTags.ItemT.TOOLBOXES)) {
-            world.setBlockAndUpdate(pos, state.cycle(VARIANT));
-            UDUtils.toolboxUsed(world, pos);
+            level.setBlockAndUpdate(pos, state.cycle(VARIANT));
+            UDUtils.toolboxUsed(level, pos);
             player.displayClientMessage(Component.translatable("toolbox.trash_can.variant_" + state.getValue(VARIANT)), true);
-            return InteractionResult.SUCCESS;
+            return ItemInteractionResult.SUCCESS;
+        }
+        return ItemInteractionResult.PASS_TO_DEFAULT_BLOCK_INTERACTION;
+    }
+
+    @Override
+    public InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos, Player player, BlockHitResult hitResult) {
+        if (!player.getMainHandItem().getItem().getDefaultInstance().is(UDTags.ItemT.TOOLBOXES)) {
+            BlockEntity blockEntity = level.getBlockEntity(pos);
+            if (level.isClientSide) {
+                return InteractionResult.SUCCESS;
+            } else {
+                if (blockEntity instanceof DestroyStorageApplianceBlockEntity && !player.isShiftKeyDown()) {
+                    player.openMenu((DestroyStorageApplianceBlockEntity) blockEntity);
+                    //player.awardStat(UDStats.OPEN_APPLIANCES);
+                    PiglinAi.angerNearbyPiglins(player, true);
+                }
+            }
         }
         return InteractionResult.CONSUME;
     }
@@ -82,21 +84,21 @@ public class TrashCanBlock extends AbstractMiniStorageDecorBlock {
     }
 
     public BlockEntity newBlockEntity(BlockPos pos, BlockState state) {
-        return new MiniStorageApplianceBlockEntity(pos, state);
+        return new DestroyStorageApplianceBlockEntity(pos, state);
     }
 
     public RenderShape getRenderShape(BlockState state) {
         return RenderShape.MODEL;
     }
 
-    public void setPlacedBy(Level world, BlockPos pos, BlockState state, LivingEntity placer, ItemStack itemStack) {
-        if (itemStack.hasCustomHoverName()) {
-            BlockEntity blockEntity = world.getBlockEntity(pos);
-            if (blockEntity instanceof MiniStorageApplianceBlockEntity) {
-                ((MiniStorageApplianceBlockEntity)blockEntity).setCustomName(itemStack.getHoverName());
-            }
-        }
-    }
+//    public void setPlacedBy(Level world, BlockPos pos, BlockState state, LivingEntity placer, ItemStack itemStack) {
+//        if (itemStack.hasCustomHoverName()) {
+//            BlockEntity blockEntity = world.getBlockEntity(pos);
+//            if (blockEntity instanceof MiniStorageApplianceBlockEntity) {
+//                ((MiniStorageApplianceBlockEntity)blockEntity).setCustomName(itemStack.getHoverName());
+//            }
+//        }
+//    }
 
     @Override
     public boolean hasAnalogOutputSignal(BlockState state) {
@@ -124,8 +126,8 @@ public class TrashCanBlock extends AbstractMiniStorageDecorBlock {
     @Override
     public void tick(BlockState state, ServerLevel world, BlockPos pos, RandomSource random) {
         BlockEntity blockEntity = world.getBlockEntity(pos);
-        if (blockEntity instanceof MiniStorageApplianceBlockEntity) {
-            ((MiniStorageApplianceBlockEntity)blockEntity).tick();
+        if (blockEntity instanceof DestroyStorageApplianceBlockEntity) {
+            ((DestroyStorageApplianceBlockEntity)blockEntity).tick();
         }
     }
 }

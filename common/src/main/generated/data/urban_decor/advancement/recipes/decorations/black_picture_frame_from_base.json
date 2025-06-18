@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_black_picture_frame": {
+      "conditions": {
+        "items": [
+          {
+            "items": "urban_decor:black_picture_frame"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "urban_decor:black_picture_frame_from_base"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_black_picture_frame"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "urban_decor:black_picture_frame_from_base"
+    ]
+  }
+}

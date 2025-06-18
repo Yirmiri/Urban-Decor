@@ -11,10 +11,12 @@ import net.minecraft.world.Container;
 import net.minecraft.world.Containers;
 import net.minecraft.world.SimpleContainer;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.CampfireCookingRecipe;
 import net.minecraft.world.item.crafting.RecipeManager;
 import net.minecraft.world.item.crafting.RecipeType;
+import net.minecraft.world.item.crafting.SingleRecipeInput;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.entity.BlockEntityType;
@@ -28,7 +30,7 @@ public class ToasterBlockEntity extends CampfireBlockEntity implements Clearable
     private final NonNullList<ItemStack> itemsBeingCooked = NonNullList.withSize(2, ItemStack.EMPTY);
     private final int[] cookingTimes = new int[2];
     private final int[] cookingTotalTimes = new int[2];
-    private final RecipeManager.CachedCheck<Container, CampfireCookingRecipe> matchGetter = RecipeManager.createCheck(RecipeType.CAMPFIRE_COOKING);
+    private final RecipeManager.CachedCheck<SingleRecipeInput, CampfireCookingRecipe> quickCheck = RecipeManager.createCheck(RecipeType.CAMPFIRE_COOKING);
 
     public ToasterBlockEntity(BlockPos pos, BlockState state) {
         super(pos, state);
@@ -48,15 +50,12 @@ public class ToasterBlockEntity extends CampfireBlockEntity implements Clearable
                 bl = true;
                 toaster.cookingTimes[i]++;
                 if (toaster.cookingTimes[i] >= toaster.cookingTotalTimes[i]) {
-                    Container inventory = new SimpleContainer(itemStack);
-                    ItemStack itemStack2 = toaster.matchGetter
-                            .getRecipeFor(inventory, world)
-                            .map(recipe -> recipe.assemble(inventory, world.registryAccess()))
-                            .orElse(itemStack);
-                    if (itemStack2.isItemEnabled(world.enabledFeatures())) {
-                        Containers.dropItemStack(world, pos.getX(), pos.getY(), pos.getZ(), itemStack2);
+                    SingleRecipeInput singlerecipeinput = new SingleRecipeInput(itemStack);
+                    ItemStack itemstack1 = toaster.quickCheck.getRecipeFor(singlerecipeinput, world).map((holder) -> holder.value().assemble(singlerecipeinput, world.registryAccess())).orElse(itemStack);
+                    if (itemstack1.isItemEnabled(world.enabledFeatures())) {
+                        Containers.dropItemStack(world, pos.getX(), pos.getY(), pos.getZ(), itemstack1);
                         toaster.itemsBeingCooked.set(i, ItemStack.EMPTY);
-                        world.sendBlockUpdated(pos, state, state, Block.UPDATE_ALL);
+                        world.sendBlockUpdated(pos, state, state, 3);
                         world.gameEvent(GameEvent.BLOCK_CHANGE, pos, GameEvent.Context.of(state));
                     }
                 }
@@ -87,21 +86,19 @@ public class ToasterBlockEntity extends CampfireBlockEntity implements Clearable
         }
     }
 
-    public boolean placeFood(Entity user, ItemStack stack, int cookTime) {
-        for (int i = 0; i < itemsBeingCooked.size(); i++) {
-            ItemStack itemStack = itemsBeingCooked.get(i);
-            if (itemStack.isEmpty()) {
-                cookingTotalTimes[i] = cookTime;
-                cookingTimes[i] = 0;
-                itemsBeingCooked.set(i, stack.split(1));
-                level.gameEvent(GameEvent.BLOCK_CHANGE, getBlockPos(), GameEvent.Context.of(user, getBlockState()));
-                markUpdated();
+    public boolean placeFood(LivingEntity entity, ItemStack food, int cookTime) {
+        for(int i = 0; i < this.itemsBeingCooked.size(); ++i) {
+            ItemStack itemstack = this.itemsBeingCooked.get(i);
+            if (itemstack.isEmpty()) {
+                this.cookingTotalTimes[i] = cookTime;
+                this.cookingTimes[i] = 0;
+                this.itemsBeingCooked.set(i, food.consumeAndReturn(1, entity));
+                this.level.gameEvent(GameEvent.BLOCK_CHANGE, this.getBlockPos(), GameEvent.Context.of(entity, this.getBlockState()));
+                this.markUpdated();
                 return true;
             }
-            if (user != null) {
-                user.playSound(SoundEvents.ITEM_FRAME_ADD_ITEM, 1.0F, 1.0F);
-            }
         }
+
         return false;
     }
 

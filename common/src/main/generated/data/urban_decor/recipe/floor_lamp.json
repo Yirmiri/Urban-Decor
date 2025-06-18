@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "!": {
+      "item": "urban_decor:stainless_steel_nugget"
+    },
+    "#": {
+      "item": "urban_decor:stainless_steel_ingot"
+    },
+    "%": {
+      "tag": "minecraft:wool"
+    },
+    "@": {
+      "item": "minecraft:glowstone"
+    }
+  },
+  "pattern": [
+    "%@%",
+    " # ",
+    "!#!"
+  ],
+  "result": {
+    "count": 1,
+    "id": "urban_decor:floor_lamp"
+  }
+}

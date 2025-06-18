@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "!": {
+      "item": "minecraft:redstone"
+    },
+    "#": {
+      "item": "urban_decor:stainless_steel_nugget"
+    },
+    "@": {
+      "item": "urban_decor:stainless_steel_ingot"
+    }
+  },
+  "pattern": [
+    "#@#",
+    " # ",
+    "#!#"
+  ],
+  "result": {
+    "count": 1,
+    "id": "urban_decor:turbine"
+  }
+}

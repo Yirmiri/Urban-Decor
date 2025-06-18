@@ -26,8 +26,8 @@ public class UDBlockEntities {
             UrbanDecor.MOD_ID, "smoker_decor", () -> Services.REGISTRY.createBlockEntity(SmokerDecorBlockEntity::new,
                     UDBlocks.OVEN.get(), UDBlocks.DARK_OVEN.get()));
 
-    public static final Supplier<BlockEntityType<MiniStorageApplianceBlockEntity>> MINI_STORAGE_APPLIANCE = Services.REGISTRY.registerBlockEntityType(
-            UrbanDecor.MOD_ID, "mini_storage_appliance", () -> Services.REGISTRY.createBlockEntity(MiniStorageApplianceBlockEntity::new,
+    public static final Supplier<BlockEntityType<DestroyStorageApplianceBlockEntity>> DESTROY_STORAGE_APPLIANCE = Services.REGISTRY.registerBlockEntityType(
+            UrbanDecor.MOD_ID, "destroy_storage_appliance", () -> Services.REGISTRY.createBlockEntity(DestroyStorageApplianceBlockEntity::new,
                     UDBlocks.TRASH_CAN.get()));
 
 

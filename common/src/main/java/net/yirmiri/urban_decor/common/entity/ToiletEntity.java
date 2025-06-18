@@ -1,6 +1,7 @@
 package net.yirmiri.urban_decor.common.entity;
 
 import net.minecraft.nbt.CompoundTag;
+import net.minecraft.network.syncher.SynchedEntityData;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.level.Level;
@@ -16,8 +17,8 @@ public class ToiletEntity extends Entity {
     @Override
     protected void removePassenger(Entity passenger) {
         super.removePassenger(passenger);
-        if (!passenger.level().isClientSide && getFeetBlockState().is(UDTags.BlockT.TOILETS)) {
-            level().setBlockAndUpdate(blockPosition(), getFeetBlockState().setValue(ToiletBlock.OCCUPIED, false));
+        if (!passenger.level().isClientSide && getBlockStateOn().is(UDTags.BlockT.TOILETS)) {
+            level().setBlockAndUpdate(blockPosition(), getBlockStateOn().setValue(ToiletBlock.OCCUPIED, false));
             discard();
         } else {
             discard();
@@ -30,7 +31,7 @@ public class ToiletEntity extends Entity {
     }
 
     @Override
-    protected void defineSynchedData() {
+    protected void defineSynchedData(SynchedEntityData.Builder builder) {
 
     }
 

@@ -67,8 +67,8 @@ public class UDBlocks {
     public static final Supplier<Block> STAINLESS_STEEL_BARS = register("stainless_steel_bars", () -> new PublicIronBarsBlock(UDProperties.BlockP.STEEL_BARS), true);
     public static final Supplier<Block> STAINLESS_STEEL_LANTERN = register("stainless_steel_lantern", () -> new StainlessSteelLanternBlock(UDProperties.BlockP.STEEL_LANTERN), true);
     public static final Supplier<Block> STAINLESS_STEEL_SOUL_LANTERN = register("stainless_steel_soul_lantern", () -> new StainlessSteelLanternBlock(UDProperties.BlockP.STEEL_SOUL_LANTERN), true);
-    public static final Supplier<Block> STAINLESS_STEEL_DOOR = register("stainless_steel_door", () -> new PublicDoorBlock(UDProperties.BlockP.STEEL_DOOR, BlockSetType.STONE), true);
-    public static final Supplier<Block> STAINLESS_STEEL_TRAPDOOR = register("stainless_steel_trapdoor", () -> new PublicTrapdoorBlock(UDProperties.BlockP.STEEL_TRAPDOOR, BlockSetType.STONE), true);
+    public static final Supplier<Block> STAINLESS_STEEL_DOOR = register("stainless_steel_door", () -> new PublicDoorBlock(BlockSetType.STONE, UDProperties.BlockP.STEEL_DOOR), true);
+    public static final Supplier<Block> STAINLESS_STEEL_TRAPDOOR = register("stainless_steel_trapdoor", () -> new PublicTrapdoorBlock(BlockSetType.STONE, UDProperties.BlockP.STEEL_TRAPDOOR), true);
 //TODO: steel door and trapdoor locking
     //DECOR
     public static final Supplier<Block> TRASH_CAN = register("trash_can", () -> new TrashCanBlock(UDProperties.BlockP.TRASH_CAN), true);
@@ -136,13 +136,13 @@ public class UDBlocks {
     static {
         for (DyeColor colors : DyeColor.values()) {
             DYED_TOWELS.put(colors, register(colors + "_towel", () -> new TowelBlock(
-                    BlockBehaviour.Properties.copy(Blocks.WHITE_CARPET).mapColor(colors)), true));
+                    BlockBehaviour.Properties.ofFullCopy(Blocks.WHITE_CARPET).mapColor(colors)), true));
 
             DYED_TOWEL_BARS.put(colors, register("towel_bar_" + colors + "_towel", () -> new TowelBarTowelBlock(
                     UDBlocks.getDyedTowels(colors.getId()).get(), UDProperties.BlockP.TOWEL_BAR), false));
 
             DYED_TOWEL_BLOCKS.put(colors, register(colors + "_towel_block", () -> new Block(
-                    BlockBehaviour.Properties.copy(Blocks.WHITE_WOOL).mapColor(colors)), true));
+                    BlockBehaviour.Properties.ofFullCopy(Blocks.WHITE_WOOL).mapColor(colors)), true));
 
             DYED_PICTURE_FRAMES.put(colors, register(colors + "_picture_frame", () -> new PictureFrameBlock(
                     UDProperties.BlockP.PICTURE_FRAME.mapColor(colors)), false));

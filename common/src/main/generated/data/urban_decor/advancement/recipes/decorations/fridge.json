@@ -1,0 +1,43 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_porcelain": {
+      "conditions": {
+        "items": [
+          {
+            "items": "urban_decor:porcelain"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_stainless_steel_ingot": {
+      "conditions": {
+        "items": [
+          {
+            "items": "urban_decor:stainless_steel_ingot"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "urban_decor:fridge"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_porcelain",
+      "has_stainless_steel_ingot"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "urban_decor:fridge"
+    ]
+  }
+}
