@@ -16,7 +16,4 @@ public class UrbanDecor {
         UDSounds.loadSounds();
         UDBlockEntities.loadBlockEntities();
     }
-
-    //TODO for release v1.1
-    //Advancement for using a toolbox
 }

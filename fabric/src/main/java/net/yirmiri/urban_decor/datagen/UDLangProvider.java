@@ -210,7 +210,7 @@ public class UDLangProvider extends FabricLanguageProvider {
         build.add("urban_decor.advancement.root", "Urban Decor");
         build.add("urban_decor.advancement.root.desc", "Decorate your spaces with Porcelain and Stainless Steel appliances!");
 
-        build.add("urban_decor.advancement.get_porcelain", "\uD835\uDD44\uD835\uDD6A \uD835\uDD5F\uD835\uDD52\uD835\uDD5E\uD835\uDD56 \uD835\uDD5A\uD835\uDD64 \uD835\uDD44\uD835\uDD52\uD835\uDD63\uD835\uDD5A\uD835\uDD60 \uD835\uDD52\uD835\uDD5F\uD835\uDD55 \uD835\uDD5A \uD835\uDD5D\uD835\uDD60\uD835\uDD67\uD835\uDD56 \uD835\uDD5E\uD835\uDD66\uD835\uDD64\uD835\uDD59\uD835\uDD63\uD835\uDD60\uD835\uDD60\uD835\uDD5E\uD835\uDD64");
+        build.add("urban_decor.advancement.get_porcelain", "Handle with Care");
         build.add("urban_decor.advancement.get_porcelain.desc", "Obtain a piece of Porcelain, a primary component for most appliances");
 
         build.add("urban_decor.advancement.get_stainless_steel_ingot", "Stain This!");
@@ -293,7 +293,7 @@ public class UDLangProvider extends FabricLanguageProvider {
         build.add(YT_ID + "block." + MOD_ID + "faucet.desc", "Not recommended to drink from... that doesn't mean you can't");
         build.add(YT_ID + "block." + MOD_ID + "trash_can.desc", "Oh hi thanks for checking in, I'm still a piece of garbage");
         build.add(YT_ID + "block." + MOD_ID + "desk_fan.desc", "Fun Fact: The fan in the original game Five Night's at Freddy's is just a GIF");
-        build.add(YT_ID + "item." + MOD_ID + "satellite_dish.desc", "Pending Transmission... \"╎ᒲ!¡ᒷリ↸in⊣\"");
+        build.add(YT_ID + "item." + MOD_ID + "satellite_dish.desc", "Transmission Failed");
         build.add(YT_ID + "block." + MOD_ID + "turbine.desc", "I won't lie I ran out of things to write at the point of this one");
         build.add(YT_ID + "block." + MOD_ID + "air_conditioner.desc", "Cold to the touch...");
         build.add(YT_ID + "block." + MOD_ID + "radiator.desc", "Hot to the touch...");

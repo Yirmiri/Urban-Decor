@@ -1,0 +1,255 @@
+{
+  "urban_decor:recipes/decorations/oven": {
+    "criteria": {
+      "has_stainless_steel_ingot": "2025-06-17 21:25:33 -0400"
+    },
+    "done": true
+  },
+  "urban_decor:recipes/decorations/stainless_steel_soul_lantern": {
+    "criteria": {
+      "has_stainless_steel_nugget": "2025-06-17 21:25:24 -0400"
+    },
+    "done": true
+  },
+  "urban_decor:recipes/decorations/filing_cabinet": {
+    "criteria": {
+      "has_stainless_steel_ingot": "2025-06-17 21:25:33 -0400"
+    },
+    "done": true
+  },
+  "urban_decor:recipes/decorations/satellite_dish": {
+    "criteria": {
+      "has_stainless_steel_ingot": "2025-06-17 21:25:33 -0400"
+    },
+    "done": true
+  },
+  "urban_decor:recipes/decorations/floor_lamp": {
+    "criteria": {
+      "has_stainless_steel_ingot": "2025-06-17 21:25:33 -0400"
+    },
+    "done": true
+  },
+  "urban_decor:recipes/decorations/stove": {
+    "criteria": {
+      "has_stainless_steel_ingot": "2025-06-17 21:25:33 -0400"
+    },
+    "done": true
+  },
+  "urban_decor:recipes/decorations/freezer": {
+    "criteria": {
+      "has_stainless_steel_ingot": "2025-06-17 21:25:33 -0400"
+    },
+    "done": true
+  },
+  "urban_decor:recipes/decorations/washing_machine": {
+    "criteria": {
+      "has_stainless_steel_ingot": "2025-06-17 21:25:33 -0400"
+    },
+    "done": true
+  },
+  "urban_decor:recipes/decorations/sink": {
+    "criteria": {
+      "has_stainless_steel_ingot": "2025-06-17 21:25:33 -0400"
+    },
+    "done": true
+  },
+  "urban_decor:recipes/decorations/microwave": {
+    "criteria": {
+      "has_stainless_steel_ingot": "2025-06-17 21:25:33 -0400"
+    },
+    "done": true
+  },
+  "urban_decor:recipes/decorations/stainless_steel_bars": {
+    "criteria": {
+      "has_stainless_steel_ingot": "2025-06-17 21:25:33 -0400"
+    },
+    "done": true
+  },
+  "urban_decor:recipes/decorations/fridge": {
+    "criteria": {
+      "has_stainless_steel_ingot": "2025-06-17 21:25:33 -0400"
+    },
+    "done": true
+  },
+  "urban_decor:recipes/decorations/dark_dryer": {
+    "criteria": {
+      "has_stainless_steel_ingot": "2025-06-17 21:25:33 -0400"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/crafting_table": {
+    "criteria": {
+      "unlock_right_away": "2025-06-17 21:23:15 -0400"
+    },
+    "done": true
+  },
+  "urban_decor:recipes/decorations/dark_dishwasher": {
+    "criteria": {
+      "has_stainless_steel_ingot": "2025-06-17 21:25:33 -0400"
+    },
+    "done": true
+  },
+  "urban_decor:recipes/building_blocks/steel_pipe": {
+    "criteria": {
+      "has_stainless_steel_ingot": "2025-06-17 21:25:33 -0400"
+    },
+    "done": true
+  },
+  "urban_decor:recipes/misc/stainless_steel_nugget_from_ingot": {
+    "criteria": {
+      "has_the_recipe": "2025-06-17 21:25:28 -0400"
+    },
+    "done": true
+  },
+  "urban_decor:recipes/building_blocks/stainless_steel_block": {
+    "criteria": {
+      "has_stainless_steel_ingot": "2025-06-17 21:25:33 -0400"
+    },
+    "done": true
+  },
+  "urban_decor:recipes/decorations/desk_fan": {
+    "criteria": {
+      "has_stainless_steel_ingot": "2025-06-17 21:25:33 -0400"
+    },
+    "done": true
+  },
+  "urban_decor:recipes/decorations/shower": {
+    "criteria": {
+      "has_stainless_steel_ingot": "2025-06-17 21:25:33 -0400"
+    },
+    "done": true
+  },
+  "urban_decor:recipes/decorations/toaster": {
+    "criteria": {
+      "has_stainless_steel_ingot": "2025-06-17 21:25:33 -0400"
+    },
+    "done": true
+  },
+  "urban_decor:recipes/decorations/dishwasher": {
+    "criteria": {
+      "has_stainless_steel_ingot": "2025-06-17 21:25:33 -0400"
+    },
+    "done": true
+  },
+  "urban_decor:recipes/decorations/dark_sink": {
+    "criteria": {
+      "has_stainless_steel_ingot": "2025-06-17 21:25:33 -0400"
+    },
+    "done": true
+  },
+  "urban_decor:recipes/decorations/toolbox": {
+    "criteria": {
+      "has_stainless_steel_ingot": "2025-06-17 21:25:33 -0400"
+    },
+    "done": true
+  },
+  "urban_decor:recipes/decorations/trash_can": {
+    "criteria": {
+      "has_stainless_steel_ingot": "2025-06-17 21:25:33 -0400"
+    },
+    "done": true
+  },
+  "urban_decor:recipes/decorations/turbine": {
+    "criteria": {
+      "has_stainless_steel_ingot": "2025-06-17 21:25:33 -0400"
+    },
+    "done": true
+  },
+  "urban_decor:recipes/decorations/dark_oven": {
+    "criteria": {
+      "has_stainless_steel_ingot": "2025-06-17 21:25:33 -0400"
+    },
+    "done": true
+  },
+  "urban_decor:recipes/decorations/stainless_steel_lantern": {
+    "criteria": {
+      "has_stainless_steel_nugget": "2025-06-17 21:25:24 -0400"
+    },
+    "done": true
+  },
+  "urban_decor:recipes/decorations/air_conditioner": {
+    "criteria": {
+      "has_stainless_steel_ingot": "2025-06-17 21:25:33 -0400"
+    },
+    "done": true
+  },
+  "urban_decor:recipes/misc/stainless_steel_ingot_from_nugget": {
+    "criteria": {
+      "has_stainless_steel_nugget": "2025-06-17 21:25:24 -0400"
+    },
+    "done": true
+  },
+  "urban_decor:recipes/decorations/dark_washing_machine": {
+    "criteria": {
+      "has_stainless_steel_ingot": "2025-06-17 21:25:33 -0400"
+    },
+    "done": true
+  },
+  "urban_decor:recipes/decorations/rigid_glass": {
+    "criteria": {
+      "has_stainless_steel_nugget": "2025-06-17 21:25:24 -0400"
+    },
+    "done": true
+  },
+  "urban_decor:recipes/decorations/chromite": {
+    "criteria": {
+      "has_stainless_steel_nugget": "2025-06-17 21:25:24 -0400"
+    },
+    "done": true
+  },
+  "urban_decor:recipes/decorations/dark_freezer": {
+    "criteria": {
+      "has_stainless_steel_ingot": "2025-06-17 21:25:33 -0400"
+    },
+    "done": true
+  },
+  "urban_decor:recipes/decorations/stainless_steel_trapdoor": {
+    "criteria": {
+      "has_stainless_steel_ingot": "2025-06-17 21:25:33 -0400"
+    },
+    "done": true
+  },
+  "urban_decor:recipes/decorations/stainless_steel_door": {
+    "criteria": {
+      "has_stainless_steel_ingot": "2025-06-17 21:25:33 -0400"
+    },
+    "done": true
+  },
+  "urban_decor:recipes/decorations/towel_bar": {
+    "criteria": {
+      "has_stainless_steel_ingot": "2025-06-17 21:25:33 -0400"
+    },
+    "done": true
+  },
+  "minecraft:adventure/adventuring_time": {
+    "criteria": {
+      "minecraft:beach": "2025-06-17 21:23:15 -0400"
+    },
+    "done": false
+  },
+  "urban_decor:recipes/decorations/dryer": {
+    "criteria": {
+      "has_stainless_steel_ingot": "2025-06-17 21:25:33 -0400"
+    },
+    "done": true
+  },
+  "urban_decor:recipes/decorations/radiator": {
+    "criteria": {
+      "has_stainless_steel_ingot": "2025-06-17 21:25:33 -0400"
+    },
+    "done": true
+  },
+  "urban_decor:recipes/decorations/dark_fridge": {
+    "criteria": {
+      "has_stainless_steel_ingot": "2025-06-17 21:25:33 -0400"
+    },
+    "done": true
+  },
+  "minecraft:story/root": {
+    "criteria": {
+      "crafting_table": "2025-06-17 21:25:14 -0400"
+    },
+    "done": true
+  },
+  "DataVersion": 3955
+}

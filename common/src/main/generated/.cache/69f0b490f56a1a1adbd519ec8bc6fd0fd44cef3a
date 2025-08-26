@@ -1,4 +1,4 @@
-// 1.20.1	2025-06-01T00:22:34.7865612	Urban Decor/Block Loot Tables
+// 1.20.1	2025-08-26T17:22:04.1924104	Urban Decor/Block Loot Tables
 3fc5470056b98c8c8909f83bda90a6b6bfb9b242 data\urban_decor\loot_tables\blocks\stove.json
 9604b0aabb550403e8fb1325fd7b24da04bd332b data\urban_decor\loot_tables\blocks\birch_piano.json
 173e080ca9cc7c35b7f123b746ae450078bc548a data\urban_decor\loot_tables\blocks\dark_porcelain_stairs.json
@@ -33,8 +33,8 @@ fa3ed3c4b67e14705b28274f76e0c4770efdc23e data\urban_decor\loot_tables\blocks\tow
 ed1a706155bfe0fa34690e85876e2d28257bb4ec data\urban_decor\loot_tables\blocks\porcelain_brick_stairs.json
 b7d788f3a66ee37e8b0d3652d1e65c3564935e5e data\urban_decor\loot_tables\blocks\red_towel_block.json
 c328213087b4ce2b886b7dce5f585fddd171848b data\urban_decor\loot_tables\blocks\light_blue_towel_block.json
-06b8478bffc5fe7d445c704de4b8fc72956094f6 data\urban_decor\loot_tables\blocks\blue_wall_picture_frame.json
 f962342dce3837de9fe7752d3b8640dae270bb9e data\urban_decor\loot_tables\blocks\toaster.json
+06b8478bffc5fe7d445c704de4b8fc72956094f6 data\urban_decor\loot_tables\blocks\blue_wall_picture_frame.json
 b7d120890dce7c2d6b8e466e033c92c8bfc99782 data\urban_decor\loot_tables\blocks\yellow_wall_picture_frame.json
 d306a4d49b26c5afaa5710ae945fe70dcca68b6c data\urban_decor\loot_tables\blocks\polished_chromite_stairs.json
 97a7f4c36842aa89055a79e2960042b8f7e98840 data\urban_decor\loot_tables\blocks\warped_piano.json

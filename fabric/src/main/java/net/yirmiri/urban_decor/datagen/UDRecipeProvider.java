@@ -811,11 +811,6 @@ public class UDRecipeProvider extends FabricRecipeProvider {
                 .unlockedBy(getHasName(UDItems.STAINLESS_STEEL_NUGGET.get()), has(UDItems.STAINLESS_STEEL_NUGGET.get()))
                 .save(exporter, ResourceLocation.tryBuild(UrbanDecor.MOD_ID, getSimpleRecipeName(UDItems.STAINLESS_STEEL_INGOT.get()) + "_from_nugget"));
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, UDItems.STAINLESS_STEEL_NUGGET.get(), 9)
-                .requires(UDItems.STAINLESS_STEEL_INGOT.get())
-                .unlockedBy(getHasName(UDItems.STAINLESS_STEEL_INGOT.get()), has(UDItems.STAINLESS_STEEL_INGOT.get()))
-                .save(exporter, ResourceLocation.tryBuild(UrbanDecor.MOD_ID, getSimpleRecipeName(UDItems.STAINLESS_STEEL_NUGGET.get()) + "_from_ingot"));
-
         createPianoRecipe(UDBlocks.OAK_PIANO.get(), Ingredient.of(Items.OAK_PLANKS),
                 Ingredient.of(UDItems.STAINLESS_STEEL_INGOT.get()), Ingredient.of(UDItems.PORCELAIN.get()))
                 .unlockedBy(getHasName(UDItems.PORCELAIN.get()), has(UDItems.PORCELAIN.get()))
@@ -895,6 +890,11 @@ public class UDRecipeProvider extends FabricRecipeProvider {
                 .pattern("#@")
                 .unlockedBy(getHasName(UDItems.STAINLESS_STEEL_NUGGET.get()), has(UDItems.STAINLESS_STEEL_NUGGET.get()))
                 .save(exporter, ResourceLocation.tryBuild(UrbanDecor.MOD_ID, getSimpleRecipeName(UDBlocks.CHROMITE.get())));
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, UDItems.STAINLESS_STEEL_NUGGET.get(), 9)
+                .requires(UDItems.STAINLESS_STEEL_INGOT.get())
+                .unlockedBy(getHasName(UDItems.STAINLESS_STEEL_INGOT.get()), has(UDItems.STAINLESS_STEEL_INGOT.get()))
+                .save(exporter, ResourceLocation.tryBuild(UrbanDecor.MOD_ID, getSimpleRecipeName(UDItems.STAINLESS_STEEL_NUGGET.get()) + "_from_ingot"));
     }
 
     public static ShapelessRecipeBuilder createFromBasePictureFrameRecipe(ItemLike output, Item picture, DyeColor color) {

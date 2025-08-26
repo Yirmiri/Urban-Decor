@@ -1,0 +1,4 @@
+/time set day
+/effect give Player66 minecraft:night_vision infinite 0 true
+/effect clear
+/time set day
