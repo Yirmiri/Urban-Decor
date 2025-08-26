@@ -35,7 +35,7 @@
         "fabric": "*",
         "minecraft": "${minecraft_version}",
         "java": ">=21",
-        "runiclib": ">=4.2.1"
+        "runiclib": ">=4.2.3"
     },
     "suggests": {
         "another-mod": "*"

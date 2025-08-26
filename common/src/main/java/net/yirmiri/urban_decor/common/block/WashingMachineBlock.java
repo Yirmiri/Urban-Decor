@@ -66,20 +66,24 @@ public class WashingMachineBlock extends AbstractStorageDecorBlock {
     public InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos, Player player, BlockHitResult hitResult) {
         BlockEntity blockEntity = level.getBlockEntity(pos);
         if (!player.getMainHandItem().getItem().getDefaultInstance().is(UDTags.ItemT.TOOLBOXES)) {
-            if (!level.isClientSide && blockEntity instanceof StorageApplianceBlockEntity && !player.isShiftKeyDown()) {
-                player.openMenu((StorageApplianceBlockEntity) blockEntity);
-                //player.awardStat(UDStats.OPEN_APPLIANCES);
-                PiglinAi.angerNearbyPiglins(player, true);
-            }
-
-            if (player.isShiftKeyDown()) {
-                level.setBlockAndUpdate(pos, state.cycle(OPEN).cycle(TRUE_OPEN));
-                if (state.getValue(OPEN)) {
-                    level.playLocalSound(pos.getX(), pos.getY(), pos.getZ(), SoundEvents.CHERRY_WOOD_DOOR_CLOSE, SoundSource.BLOCKS, 1.0F, 1.0F, false);
-                } else if (!state.getValue(OPEN)) {
-                    level.playLocalSound(pos.getX(), pos.getY(), pos.getZ(), SoundEvents.CHERRY_WOOD_DOOR_OPEN, SoundSource.BLOCKS, 1.0F, 1.0F, false);
-                }
+            if (level.isClientSide) {
                 return InteractionResult.SUCCESS;
+            } else {
+                if (blockEntity instanceof StorageApplianceBlockEntity && !player.isShiftKeyDown()) {
+                    player.openMenu((StorageApplianceBlockEntity) blockEntity);
+                    //player.awardStat(UDStats.OPEN_APPLIANCES);
+                    PiglinAi.angerNearbyPiglins(player, true);
+                }
+
+                if (player.getMainHandItem().isEmpty() && player.isShiftKeyDown()) {
+                    level.setBlockAndUpdate(pos, state.cycle(OPEN).cycle(TRUE_OPEN));
+                    if (state.getValue(OPEN)) {
+                        level.playLocalSound(pos.getX(), pos.getY(), pos.getZ(), SoundEvents.CHERRY_WOOD_DOOR_CLOSE, SoundSource.BLOCKS, 1.0F, 1.0F, false);
+                    } else if (!state.getValue(OPEN)) {
+                        level.playLocalSound(pos.getX(), pos.getY(), pos.getZ(), SoundEvents.CHERRY_WOOD_DOOR_OPEN, SoundSource.BLOCKS, 1.0F, 1.0F, false);
+                    }
+                    return InteractionResult.SUCCESS;
+                }
             }
         }
         return InteractionResult.CONSUME;

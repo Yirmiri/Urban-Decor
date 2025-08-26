@@ -9,8 +9,7 @@
         "ItemMixin"
     ],
     "client": [
-    ],
-    "server": [
+        "SplashManagerMixin"
     ],
     "injectors": {
         "defaultRequire": 1

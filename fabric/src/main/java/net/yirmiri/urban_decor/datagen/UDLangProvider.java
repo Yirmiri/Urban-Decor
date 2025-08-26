@@ -296,7 +296,7 @@ public class UDLangProvider extends FabricLanguageProvider {
         build.add(YT_ID + "block." + MOD_ID + "faucet.desc", "Not recommended to drink from... that doesn't mean you can't");
         build.add(YT_ID + "block." + MOD_ID + "trash_can.desc", "Oh hi thanks for checking in, I'm still a piece of garbage");
         build.add(YT_ID + "block." + MOD_ID + "desk_fan.desc", "Fun Fact: The fan in the original game Five Night's at Freddy's is just a GIF");
-        build.add(YT_ID + "item." + MOD_ID + "satellite_dish.desc", "Pending Transmission... \"╎ᒲ!¡ᒷリ↸in⊣\"");
+        build.add(YT_ID + "item." + MOD_ID + "satellite_dish.desc", "Transmission Received: ⎓╎リᔑꖎ ⚍!¡↸ᔑℸ ̣ᒷ ᓭ\uD835\uDE79\uD835\uDE79リ");
         build.add(YT_ID + "block." + MOD_ID + "turbine.desc", "I won't lie I ran out of things to write at the point of this one");
         build.add(YT_ID + "block." + MOD_ID + "air_conditioner.desc", "Cold to the touch...");
         build.add(YT_ID + "block." + MOD_ID + "radiator.desc", "Hot to the touch...");
