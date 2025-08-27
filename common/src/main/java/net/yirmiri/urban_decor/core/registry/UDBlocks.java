@@ -23,6 +23,8 @@ import java.util.function.Supplier;
 public class UDBlocks {
 
     //BLOCKS
+    public static final Supplier<Block> POLYPROPYLENE_BLOCK = register("polypropylene_block", () -> new Block(UDProperties.BlockP.PLASTIC), true);
+
     public static final Supplier<Block> PORCELAIN_BLOCK = register("porcelain_block", () -> new Block(UDProperties.BlockP.PORCELAIN), true);
     public static final Supplier<Block> PORCELAIN_STAIRS = register("porcelain_stairs", () -> new PublicStairBlock(PORCELAIN_BLOCK.get().defaultBlockState(), UDProperties.BlockP.PORCELAIN), true);
     public static final Supplier<Block> PORCELAIN_SLAB = register("porcelain_slab", () -> new SlabBlock(UDProperties.BlockP.PORCELAIN), true);

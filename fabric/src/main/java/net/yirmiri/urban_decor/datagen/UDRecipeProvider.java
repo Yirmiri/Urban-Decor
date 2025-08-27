@@ -896,6 +896,21 @@ public class UDRecipeProvider extends FabricRecipeProvider {
                 .pattern("#@")
                 .unlockedBy(getHasName(UDItems.STAINLESS_STEEL_NUGGET.get()), has(UDItems.STAINLESS_STEEL_NUGGET.get()))
                 .save(exporter, ResourceLocation.tryBuild(UrbanDecor.MOD_ID, getSimpleRecipeName(UDBlocks.CHROMITE.get())));
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, UDItems.POLYPROPYLENE.get(), 4)
+                .define('#', Items.COAL).define('@', Items.CLAY_BALL)
+                .pattern("##")
+                .pattern("@#")
+                .unlockedBy(getHasName(Items.COAL), has(Items.COAL))
+                .unlockedBy(getHasName(Items.CLAY_BALL), has(Items.CLAY_BALL))
+                .save(exporter, ResourceLocation.tryBuild(UrbanDecor.MOD_ID, getSimpleRecipeName(UDItems.POLYPROPYLENE.get())));
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, UDBlocks.POLYPROPYLENE_BLOCK.get(), 1)
+                .define('#', UDItems.POLYPROPYLENE.get())
+                .pattern("##")
+                .pattern("##")
+                .unlockedBy(getHasName(UDItems.POLYPROPYLENE.get()), has(UDItems.POLYPROPYLENE.get()))
+                .save(exporter, ResourceLocation.tryBuild(UrbanDecor.MOD_ID, getSimpleRecipeName(UDBlocks.POLYPROPYLENE_BLOCK.get())));
     }
 
     public static ShapelessRecipeBuilder createFromBasePictureFrameRecipe(ItemLike output, Item picture, DyeColor color) {

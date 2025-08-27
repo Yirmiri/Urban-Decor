@@ -30,6 +30,7 @@ public class UDProperties {
         public static final BlockBehaviour.Properties STEEL_BARS = BlockBehaviour.Properties.ofFullCopy(Blocks.IRON_BARS).sound(SoundType.COPPER);
         public static final BlockBehaviour.Properties STEEL_DOOR = BlockBehaviour.Properties.ofFullCopy(Blocks.IRON_DOOR).sound(SoundType.COPPER);
         public static final BlockBehaviour.Properties STEEL_TRAPDOOR = BlockBehaviour.Properties.ofFullCopy(Blocks.IRON_TRAPDOOR).sound(SoundType.COPPER);
+        public static final BlockBehaviour.Properties PLASTIC = BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_WOOD).mapColor(MapColor.STONE).sound(SoundType.SCAFFOLDING).strength(0.8F, 0.5F);
 
         //DECOR
         public static final BlockBehaviour.Properties TRASH_CAN = BlockBehaviour.Properties.ofFullCopy(Blocks.WHITE_WOOL).strength(0.3F).mapColor(MapColor.COLOR_GRAY).sound(SoundType.LANTERN);

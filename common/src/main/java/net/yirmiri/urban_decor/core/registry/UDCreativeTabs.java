@@ -17,6 +17,7 @@ public class UDCreativeTabs {
                     .displayItems((displayParameters, entry) -> {
                 entry.accept(UDItems.PORCELAIN.get());
                 entry.accept(UDItems.DARK_PORCELAIN.get());
+                entry.accept(UDItems.POLYPROPYLENE.get());
                 entry.accept(UDItems.STAINLESS_STEEL_INGOT.get());
                 entry.accept(UDItems.STAINLESS_STEEL_NUGGET.get());
                 entry.accept(UDItems.STEEL_PIPE.get());
@@ -48,6 +49,8 @@ public class UDCreativeTabs {
                 entry.accept(UDBlocks.CHECKERED_PORCELAIN_TILES.get());
                 entry.accept(UDBlocks.CHECKERED_PORCELAIN_TILE_STAIRS.get());
                 entry.accept(UDBlocks.CHECKERED_PORCELAIN_TILE_SLAB.get());
+
+                entry.accept(UDBlocks.POLYPROPYLENE_BLOCK.get());
 
                 entry.accept(UDBlocks.CHROMITE.get());
                 entry.accept(UDBlocks.CHROMITE_STAIRS.get());

@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_polypropylene": {
+      "conditions": {
+        "items": [
+          {
+            "items": "urban_decor:polypropylene"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "urban_decor:polypropylene_block"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_polypropylene"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "urban_decor:polypropylene_block"
+    ]
+  }
+}

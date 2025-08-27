@@ -66,9 +66,11 @@ public class UDBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(UDBlocks.BAMBOO_PIANO.get())
                 .add(UDBlocks.CRIMSON_PIANO.get())
                 .add(UDBlocks.WARPED_PIANO.get())
+                .add(UDBlocks.POLYPROPYLENE_BLOCK.get())
         ;
 
         getOrCreateTagBuilder(BlockTags.MINEABLE_WITH_PICKAXE)
+                .add(UDBlocks.POLYPROPYLENE_BLOCK.get())
                 .add(UDBlocks.DARK_PORCELAIN_BLOCK.get())
                 .add(UDBlocks.DARK_PORCELAIN_STAIRS.get())
                 .add(UDBlocks.DARK_PORCELAIN_SLAB.get())

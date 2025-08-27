@@ -62,10 +62,13 @@ public class UDModelProvider extends FabricModelProvider {
         generator.createDoor(UDBlocks.STAINLESS_STEEL_DOOR.get());
         generator.createTrapdoor(UDBlocks.STAINLESS_STEEL_TRAPDOOR.get());
         //registerSteelBars(generator);
+
+        generator.createTrivialCube(UDBlocks.POLYPROPYLENE_BLOCK.get());
     }
 
     @Override
     public void generateItemModels(ItemModelGenerators generator) {
+        generator.generateFlatItem(UDItems.POLYPROPYLENE.get(), ModelTemplates.FLAT_ITEM);
         generator.generateFlatItem(UDItems.PORCELAIN.get(), ModelTemplates.FLAT_ITEM);
         generator.generateFlatItem(UDItems.STAINLESS_STEEL_INGOT.get(), ModelTemplates.FLAT_ITEM);
         generator.generateFlatItem(UDBlocks.TRASH_CAN.get().asItem(), ModelTemplates.FLAT_ITEM);

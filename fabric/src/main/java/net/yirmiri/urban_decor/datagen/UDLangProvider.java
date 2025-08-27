@@ -33,6 +33,7 @@ public class UDLangProvider extends FabricLanguageProvider {
         }
 
         //BLOCKS
+        build.add(UDBlocks.POLYPROPYLENE_BLOCK.get(), "Block of Polypropylene");
         build.add(UDBlocks.PORCELAIN_TILES.get(), "Porcelain Tiles");
         build.add(UDBlocks.PORCELAIN_TILE_STAIRS.get(), "Porcelain Tile Stairs");
         build.add(UDBlocks.PORCELAIN_TILE_SLAB.get(), "Porcelain Tile Slab");
@@ -118,6 +119,7 @@ public class UDLangProvider extends FabricLanguageProvider {
         build.add(UDBlocks.DARK_DISHWASHER.get(), "Dark Dishwasher");
 
         //ITEMS
+        build.add(UDItems.POLYPROPYLENE.get(), "Polypropylene");
         build.add(UDItems.PORCELAIN.get(), "Porcelain");
         build.add(UDItems.STAINLESS_STEEL_INGOT.get(), "Stainless Steel Ingot");
         build.add(UDItems.DARK_PORCELAIN.get(), "Dark Porcelain");
@@ -213,7 +215,7 @@ public class UDLangProvider extends FabricLanguageProvider {
         build.add("urban_decor.advancement.root", "Urban Decor");
         build.add("urban_decor.advancement.root.desc", "Decorate your spaces with Porcelain and Stainless Steel appliances!");
 
-        build.add("urban_decor.advancement.get_porcelain", "\uD835\uDD44\uD835\uDD6A \uD835\uDD5F\uD835\uDD52\uD835\uDD5E\uD835\uDD56 \uD835\uDD5A\uD835\uDD64 \uD835\uDD44\uD835\uDD52\uD835\uDD63\uD835\uDD5A\uD835\uDD60 \uD835\uDD52\uD835\uDD5F\uD835\uDD55 \uD835\uDD5A \uD835\uDD5D\uD835\uDD60\uD835\uDD67\uD835\uDD56 \uD835\uDD5E\uD835\uDD66\uD835\uDD64\uD835\uDD59\uD835\uDD63\uD835\uDD60\uD835\uDD60\uD835\uDD5E\uD835\uDD64");
+        build.add("urban_decor.advancement.get_porcelain", "Handle With Care");
         build.add("urban_decor.advancement.get_porcelain.desc", "Obtain a piece of Porcelain, a primary component for most appliances");
 
         build.add("urban_decor.advancement.get_stainless_steel_ingot", "Stain This!");
@@ -268,6 +270,8 @@ public class UDLangProvider extends FabricLanguageProvider {
         build.add(YT_ID + "block." + MOD_ID + "stainless_steel_soul_lantern.desc", "Souls keep the flame ablaze");
         build.add(YT_ID + "block." + MOD_ID + "stainless_steel_bars.desc", "Keeps the criminals out.");
         build.add(YT_ID + "block." + MOD_ID + "rigid_glass.desc", "A reinforced piece of glass that can be placed at the edge of a block");
+        build.add(YT_ID + "item." + MOD_ID + "polypropylene.desc", "A mixture of coal and clay, used commonly in smaller decoratives and wraps.");
+        build.add(YT_ID + "block." + MOD_ID + "polypropylene_block.desc", "A smooth block constructed from polypropylene.");
 
         build.add(YT_ID + "block." + MOD_ID + "toolbox.desc", "Ah man, you cut the knob!");
         build.add(YT_ID + "block." + MOD_ID + "filing_cabinet.desc", "Back to my crappy 9 to 5...");

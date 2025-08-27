@@ -20,6 +20,7 @@ public class UDItems {
     public static final Supplier<Item> STAINLESS_STEEL_INGOT = register("stainless_steel_ingot", () -> new Item(UDProperties.ItemP.GENERIC_ITEM));
     public static final Supplier<Item> STAINLESS_STEEL_NUGGET = register("stainless_steel_nugget", () -> new Item(UDProperties.ItemP.GENERIC_ITEM));
     public static final Supplier<Item> STEEL_PIPE = register("steel_pipe", () -> new BlockItem(UDBlocks.STEEL_PIPE.get(), UDProperties.ItemP.GENERIC_ITEM));
+    public static final Supplier<Item> POLYPROPYLENE = register("polypropylene", () -> new Item(UDProperties.ItemP.GENERIC_ITEM));
 
     //BLOCK ITEMS
     public static final Supplier<Item> TOOLBOX = register("toolbox", () -> new ToolboxBlockItem(UDBlocks.TOOLBOX.get(), UDProperties.ItemP.TOOLBOX));
