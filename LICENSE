@@ -1,11 +1,17 @@
 All Rights Reserved
 
-This license applies to any file in the following directories:
-- ./src/main/resources/assets/
+This license applies to all files unless they are considered "addons", more information regarding "addons" below:
 
-This license also applies to any file in a `model` package.
+- Definition of an "Addon"
+For the purposes of this license, an "addon" is a separate piece of software for Minecraft that depends on this software
+to function and cannot function as an individual mod. This does not include ports of this software, or similar software
+that intends to replicate the features of this mod, to other Minecraft mod loaders, game versions, or platforms.
 
-All other files are under the following license
+
+
+
+
+The below license applies to all files if they are considered "addons", more information regarding "addons" above:
 
 MIT License
 
@@ -20,6 +26,8 @@ furnished to do so, subject to the following conditions:
 
 The above copyright notice and this permission notice shall be included in all
 copies or substantial portions of the Software.
+
+The above copyright notice and these permission notices shall be included in all copies or substantial portions of the software.
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
