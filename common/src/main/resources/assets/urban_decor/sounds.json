@@ -4,5 +4,17 @@
     "sounds": [
       "urban_decor:generic/open1"
     ]
+  },
+  "block.satellite.receive_signal": {
+    "subtitle": "subtitles.block.satellite.receive_signal",
+    "sounds": [
+      "urban_decor:misc_appliances/satellite_receive_signal"
+    ]
+  },
+  "block.satellite.receive_signal_rare": {
+    "subtitle": "subtitles.block.satellite.receive_signal_rare",
+    "sounds": [
+      "urban_decor:misc_appliances/satellite_receive_signal_rare"
+    ]
   }
 }

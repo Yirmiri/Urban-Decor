@@ -201,15 +201,8 @@ public class UDLangProvider extends FabricLanguageProvider {
         build.add("subtitles.block.generic.activate", "Button clicks");
         build.add("subtitles.block.appliance.open", "Appliance opens");
         build.add("subtitles.block.appliance.close", "Appliance closes");
-        build.add("subtitles.block.toolbox.use", "Toolbox used");
-        build.add("subtitles.block.faucet.use", "Faucet turns");
-        build.add("subtitles.block.toilet.use", "Toilet flushes");
-        build.add("subtitles.block.fan.loop", "Fan spins");
-        build.add("subtitles.block.water.loop", "Water pitter patters");
-        build.add("subtitles.block.microwave.loop", "Microwave hums");
-        build.add("subtitles.block.microwave.finish", "Microwave beeps");
-        build.add("subtitles.block.satellite_dish.activate", "Satellite dish sequences");
-        build.add("subtitles.block.wrap.use", "Appliance wrapped");
+        build.add("subtitles.block.satellite.receive_signal", "Satellite dish sequences");
+        build.add("subtitles.block.satellite.receive_signal_rare", "Satellite dish sequences...?");
 
         //ADVANCEMENTS
         build.add("urban_decor.advancement.root", "Urban Decor");

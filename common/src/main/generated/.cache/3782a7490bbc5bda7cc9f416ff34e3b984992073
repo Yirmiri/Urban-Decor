@@ -1,4 +1,4 @@
-// 1.21.1	2025-08-26T21:49:31.1737743	Urban Decor/Model Definitions
+// 1.21.1	2025-09-24T05:22:42.0741009	Urban Decor/Model Definitions
 d1517087071099e6dc61a22d3df8ce5a218ece20 assets\urban_decor\models\block\porcelain_brick_stairs.json
 2fe596efbe89b806021d8f80217e2f11cac5b4b1 assets\urban_decor\models\block\porcelain_bricks.json
 cc5297212b3cb5f27a94bf487e4bccf5d2716d11 assets\urban_decor\models\item\dark_porcelain_bricks.json
@@ -48,8 +48,8 @@ dbeb21e0dee9bb2dc7351761dca4a6e3498aa1a4 assets\urban_decor\models\item\gray_tow
 dfc18abca61bfd35361d78c436f018f9ade07378 assets\urban_decor\models\block\green_towel_block.json
 247ebecbd97057ad6112f3436dee291ea8ac593d assets\urban_decor\blockstates\chromite_stairs.json
 31170b0ee6dc28fc6d7289cabd1caa147a6c4d0d assets\urban_decor\models\item\stainless_steel_block.json
-e5b4074bebf612ee2ab8eb2f3c324cc3b4ceae89 assets\urban_decor\blockstates\yellow_towel_block.json
 560eaeaa92baf4ecea5975289dee1fa7c0d885fa assets\urban_decor\models\block\dark_porcelain_brick_stairs.json
+e5b4074bebf612ee2ab8eb2f3c324cc3b4ceae89 assets\urban_decor\blockstates\yellow_towel_block.json
 3082216b76d1021bb6051c5a15f5ac29d579b79f assets\urban_decor\models\item\pink_towel.json
 0eff5ddbec19d0179f27c17e87840fc2e3f3dd93 assets\urban_decor\models\item\light_blue_towel.json
 f2ca40fc5858d25517a326ab9ffa3bebe22bb359 assets\urban_decor\models\block\dark_porcelain_stairs.json
@@ -107,8 +107,8 @@ bb4d3e988731f575959312caa75db443141ac883 assets\urban_decor\models\block\dark_po
 b73315cbf579920629e0e8cb4ebf941ba1f32034 assets\urban_decor\models\block\lime_towel_block.json
 f82497e432ca298e37a1d26ef05ed04db14cec99 assets\urban_decor\blockstates\chromite_wall.json
 cc2cb0855571821d25d3bc1b197098393d3691fb assets\urban_decor\models\block\pink_towel_block.json
-753ce43c8dd9fb46252f7787f497c5d5f9dd37c5 assets\urban_decor\models\item\light_gray_towel_block.json
 6c300864607fe2179a0b4b7254cac849d4ca1e17 assets\urban_decor\models\block\porcelain_stairs_inner.json
+753ce43c8dd9fb46252f7787f497c5d5f9dd37c5 assets\urban_decor\models\item\light_gray_towel_block.json
 3f31eee413a525e6efb9f8258dc449120851e599 assets\urban_decor\models\block\light_gray_towel_block.json
 8ce2bed92615bed6c24929287be694b194158aa4 assets\urban_decor\models\item\purple_towel.json
 b86423caf59b3124694fe43801218bd57bf20292 assets\urban_decor\models\block\porcelain_stairs_outer.json

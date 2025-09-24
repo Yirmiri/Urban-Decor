@@ -21,7 +21,6 @@ import java.util.HashMap;
 import java.util.function.Supplier;
 
 public class UDBlocks {
-
     //BLOCKS
     public static final Supplier<Block> POLYPROPYLENE_BLOCK = register("polypropylene_block", () -> new Block(UDProperties.BlockP.PLASTIC), true);
 
