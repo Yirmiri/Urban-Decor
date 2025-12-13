@@ -13,7 +13,7 @@ import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
-import net.yirmiri.urban_decor.common.block.entity.StorageApplianceBlockEntity;
+import net.yirmiri.urban_decor.common.block.entity.StorageDecorBlockEntity;
 
 public abstract class AbstractStorageDecorBlock extends AbstractDecorBlock implements EntityBlock {
     public static final BooleanProperty OPEN = BooleanProperty.create("open");
@@ -31,8 +31,8 @@ public abstract class AbstractStorageDecorBlock extends AbstractDecorBlock imple
     @Override
     protected void tick(BlockState state, ServerLevel level, BlockPos pos, RandomSource random) {
         BlockEntity blockentity = level.getBlockEntity(pos);
-        if (blockentity instanceof StorageApplianceBlockEntity) {
-            ((StorageApplianceBlockEntity)blockentity).recheckOpen();
+        if (blockentity instanceof StorageDecorBlockEntity) {
+            ((StorageDecorBlockEntity)blockentity).recheckOpen();
         }
     }
 
@@ -46,7 +46,7 @@ public abstract class AbstractStorageDecorBlock extends AbstractDecorBlock imple
     @Override
     protected MenuProvider getMenuProvider(BlockState state, Level level, BlockPos pos) {
         BlockEntity blockentity = level.getBlockEntity(pos);
-        return blockentity instanceof MenuProvider ? (MenuProvider)blockentity : null;
+        return blockentity instanceof MenuProvider ? (MenuProvider) blockentity : null;
     }
 
     public static boolean isTrulyOpen(BlockState state) {

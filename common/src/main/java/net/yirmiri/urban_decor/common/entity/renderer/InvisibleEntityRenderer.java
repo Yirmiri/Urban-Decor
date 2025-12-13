@@ -1,5 +1,6 @@
 package net.yirmiri.urban_decor.common.entity.renderer;
 
+import net.azurune.runiclib.RunicLib;
 import net.minecraft.client.renderer.entity.EntityRenderer;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
 import net.minecraft.resources.ResourceLocation;
@@ -13,6 +14,6 @@ public class InvisibleEntityRenderer extends EntityRenderer<Entity> {
 
     @Override
     public ResourceLocation getTextureLocation(net.minecraft.world.entity.Entity entity) {
-        return ResourceLocation.tryBuild(UrbanDecor.MOD_ID, "textures/literally_nothing");
+        return RunicLib.customid(UrbanDecor.MOD_ID, "textures/entity/literally_nothing");
     }
 }

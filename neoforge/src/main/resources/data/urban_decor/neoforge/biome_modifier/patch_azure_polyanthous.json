@@ -1,0 +1,6 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": "#urban_decor:azure_polyanthous_generates_in",
+  "features": "urban_decor:patch_azure_polyanthous",
+  "step": "vegetal_decoration"
+}

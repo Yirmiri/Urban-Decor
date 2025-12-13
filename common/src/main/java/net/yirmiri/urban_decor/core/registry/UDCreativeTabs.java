@@ -6,6 +6,7 @@ import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.ItemStack;
 import net.yirmiri.urban_decor.UrbanDecor;
+import net.yirmiri.urban_decor.common.util.WrapColor;
 
 import java.util.function.Supplier;
 
@@ -102,6 +103,8 @@ public class UDCreativeTabs {
                 entry.accept(UDBlocks.TRASH_CAN.get());
                 entry.accept(UDBlocks.DESK_FAN.get());
                 entry.accept(UDBlocks.FLOOR_LAMP.get());
+                entry.accept(UDBlocks.PLASTIC_CHAIR.get());
+                
                 entry.accept(UDBlocks.OAK_PIANO.get());
                 entry.accept(UDBlocks.SPRUCE_PIANO.get());
                 entry.accept(UDBlocks.BIRCH_PIANO.get());
@@ -113,10 +116,30 @@ public class UDCreativeTabs {
                 entry.accept(UDBlocks.BAMBOO_PIANO.get());
                 entry.accept(UDBlocks.CRIMSON_PIANO.get());
                 entry.accept(UDBlocks.WARPED_PIANO.get());
+
+                entry.accept(UDBlocks.OAK_CALENDAR.get());
+                entry.accept(UDBlocks.SPRUCE_CALENDAR.get());
+                entry.accept(UDBlocks.BIRCH_CALENDAR.get());
+                entry.accept(UDBlocks.JUNGLE_CALENDAR.get());
+                entry.accept(UDBlocks.ACACIA_CALENDAR.get());
+                entry.accept(UDBlocks.DARK_OAK_CALENDAR.get());
+                entry.accept(UDBlocks.MANGROVE_CALENDAR.get());
+                entry.accept(UDBlocks.CHERRY_CALENDAR.get());
+                entry.accept(UDBlocks.BAMBOO_CALENDAR.get());
+                entry.accept(UDBlocks.CRIMSON_CALENDAR.get());
+                entry.accept(UDBlocks.WARPED_CALENDAR.get());
+                
                 entry.accept(UDItems.SATELLITE_DISH.get());
                 entry.accept(UDBlocks.TURBINE.get());
                 entry.accept(UDBlocks.AIR_CONDITIONER.get());
                 entry.accept(UDBlocks.RADIATOR.get());
+
+                entry.accept(UDBlocks.getWrappedPolyanthous(WrapColor.CHERRY.getId()).get());
+                entry.accept(UDBlocks.getWrappedPolyanthous(WrapColor.DAFFODIL.getId()).get());
+                entry.accept(UDBlocks.getWrappedPolyanthous(WrapColor.SPRING.getId()).get());
+                entry.accept(UDBlocks.getWrappedPolyanthous(WrapColor.MINT.getId()).get());
+                entry.accept(UDBlocks.getWrappedPolyanthous(WrapColor.AZURE.getId()).get());
+                entry.accept(UDBlocks.getWrappedPolyanthous(WrapColor.RUBY.getId()).get());
 
                 entry.accept(UDBlocks.TOWEL_BAR.get());
                 entry.accept(UDBlocks.getDyedTowelBlocks(DyeColor.WHITE.getId()).get());

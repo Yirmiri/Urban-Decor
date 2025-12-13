@@ -2,16 +2,22 @@ package net.yirmiri.urban_decor.core.registry;
 
 import net.azurune.runiclib.RunicLib;
 import net.azurune.runiclib.core.platform.Services;
-import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.sounds.SoundEvent;
 import net.yirmiri.urban_decor.UrbanDecor;
 
 import java.util.function.Supplier;
 
 public class UDSounds {
-    public static final Supplier<SoundEvent> APPLIANCE_OPEN = register("block.appliance.open");
+    //APPLIANCE
+    public static final Supplier<SoundEvent> GENERIC_APPLIANCE_OPEN = register("block.appliance.open");
+    public static final Supplier<SoundEvent> FAUCET_TURN = register("block.faucet.turn");
+    public static final Supplier<SoundEvent> SMOOTH_OPEN = register("block.smooth.open");
+    public static final Supplier<SoundEvent> SMOOTH_CLOSE = register("block.smooth.close");
+    public static final Supplier<SoundEvent> METALLIC_OPEN = register("block.metallic.open");
+    public static final Supplier<SoundEvent> METALLIC_CLOSE = register("block.metallic.close");
+
+    //MISC
     public static final Supplier<SoundEvent> SATELITE_RECIEVE_SIGNAL = register("block.satellite.receive_signal");
     public static final Supplier<SoundEvent> SATELITE_RECIEVE_SIGNAL_RARE = register("block.satellite.receive_signal_rare");
 

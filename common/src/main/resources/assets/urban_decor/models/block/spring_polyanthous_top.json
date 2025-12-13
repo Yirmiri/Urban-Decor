@@ -1,0 +1,7 @@
+{
+  "parent": "urban_decor:block/large_flower_top",
+  "textures": {
+    "0": "urban_decor:block/spring_polyanthous_top",
+    "particle": "urban_decor:block/spring_polyanthous_top"
+  }
+}

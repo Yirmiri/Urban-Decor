@@ -1,0 +1,7 @@
+{
+  "parent": "urban_decor:block/calendar",
+  "textures": {
+    "0": "urban_decor:block/warped_calendar",
+    "particle": "minecraft:block/warped_planks"
+  }
+}

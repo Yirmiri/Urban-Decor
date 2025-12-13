@@ -1,0 +1,7 @@
+{
+  "parent": "urban_decor:block/calendar",
+  "textures": {
+    "0": "urban_decor:block/mangrove_calendar",
+    "particle": "minecraft:block/mangrove_planks"
+  }
+}

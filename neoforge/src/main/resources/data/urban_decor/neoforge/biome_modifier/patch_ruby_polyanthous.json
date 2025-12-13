@@ -1,0 +1,6 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": "#urban_decor:ruby_polyanthous_generates_in",
+  "features": "urban_decor:patch_ruby_polyanthous",
+  "step": "vegetal_decoration"
+}

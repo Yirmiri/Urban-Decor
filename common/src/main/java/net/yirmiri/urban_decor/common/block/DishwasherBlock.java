@@ -1,9 +1,7 @@
 package net.yirmiri.urban_decor.common.block;
 
 import net.minecraft.core.BlockPos;
-import net.minecraft.core.Direction;
 import net.minecraft.server.level.ServerLevel;
-import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.*;
@@ -17,16 +15,15 @@ import net.minecraft.world.level.block.RenderShape;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
-import net.minecraft.world.level.block.state.properties.BlockStateProperties;
-import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.shapes.BooleanOp;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import net.yirmiri.urban_decor.common.block.abstracts.AbstractStorageDecorBlock;
-import net.yirmiri.urban_decor.common.block.entity.StorageApplianceBlockEntity;
+import net.yirmiri.urban_decor.common.block.entity.StorageDecorBlockEntity;
 import net.yirmiri.urban_decor.core.init.UDTags;
+import net.yirmiri.urban_decor.core.registry.UDSounds;
 
 public class DishwasherBlock extends AbstractStorageDecorBlock {
     private static final VoxelShape SHAPE_NORTH = Shapes.join(Block.box(0, 0, 4, 16, 14, 16),
@@ -60,18 +57,18 @@ public class DishwasherBlock extends AbstractStorageDecorBlock {
             if (level.isClientSide) {
                 return InteractionResult.SUCCESS;
             } else {
-                if (blockEntity instanceof StorageApplianceBlockEntity && !player.isShiftKeyDown()) {
-                    player.openMenu((StorageApplianceBlockEntity) blockEntity);
+                if (blockEntity instanceof StorageDecorBlockEntity && !player.isShiftKeyDown()) {
+                    player.openMenu((StorageDecorBlockEntity) blockEntity);
                     //player.awardStat(UDStats.OPEN_APPLIANCES);
                     PiglinAi.angerNearbyPiglins(player, true);
                 }
 
-                if (player.getMainHandItem().isEmpty() && player.isShiftKeyDown()) {
+                if (player.isShiftKeyDown()) {
                     level.setBlockAndUpdate(pos, state.cycle(OPEN).cycle(TRUE_OPEN));
                     if (state.getValue(OPEN)) {
-                        level.playLocalSound(pos.getX(), pos.getY(), pos.getZ(), SoundEvents.CHERRY_WOOD_DOOR_CLOSE, SoundSource.BLOCKS, 1.0F, 1.0F, false);
+                        level.playLocalSound(pos.getX(), pos.getY(), pos.getZ(), UDSounds.METALLIC_CLOSE.get(), SoundSource.BLOCKS, 1.0F, 1.0F, false);
                     } else if (!state.getValue(OPEN)) {
-                        level.playLocalSound(pos.getX(), pos.getY(), pos.getZ(), SoundEvents.CHERRY_WOOD_DOOR_OPEN, SoundSource.BLOCKS, 1.0F, 1.0F, false);
+                        level.playLocalSound(pos.getX(), pos.getY(), pos.getZ(), UDSounds.METALLIC_OPEN.get(), SoundSource.BLOCKS, 1.0F, 1.0F, false);
                     }
                     return InteractionResult.SUCCESS;
                 }
@@ -86,7 +83,7 @@ public class DishwasherBlock extends AbstractStorageDecorBlock {
     }
 
     public BlockEntity newBlockEntity(BlockPos pos, BlockState state) {
-        return new StorageApplianceBlockEntity(pos, state);
+        return new StorageDecorBlockEntity(pos, state);
     }
 
     public RenderShape getRenderShape(BlockState state) {
@@ -128,8 +125,8 @@ public class DishwasherBlock extends AbstractStorageDecorBlock {
     @Override
     public void tick(BlockState state, ServerLevel world, BlockPos pos, RandomSource random) {
         BlockEntity blockEntity = world.getBlockEntity(pos);
-        if (blockEntity instanceof StorageApplianceBlockEntity) {
-            ((StorageApplianceBlockEntity)blockEntity).recheckOpen();
+        if (blockEntity instanceof StorageDecorBlockEntity) {
+            ((StorageDecorBlockEntity)blockEntity).recheckOpen();
         }
     }
 }

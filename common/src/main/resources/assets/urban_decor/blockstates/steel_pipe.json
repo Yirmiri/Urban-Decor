@@ -1,16 +1,31 @@
 {
-  "variants": {
-    "axis=x": {
-      "model": "urban_decor:block/steel_pipe",
-      "x": 90,
-      "y": 90
+  "multipart": [
+    {
+      "apply": {
+        "model": "urban_decor:block/steel_pipe"
+      },
+      "when": {
+        "y": "true"
+      }
     },
-    "axis=y": {
-      "model": "urban_decor:block/steel_pipe"
+    {
+      "apply": {
+        "model": "urban_decor:block/steel_pipe",
+        "x": 90,
+        "y": 90
+      },
+      "when": {
+        "x": "true"
+      }
     },
-    "axis=z": {
-      "model": "urban_decor:block/steel_pipe",
-      "x": 90
+    {
+      "apply": {
+        "model": "urban_decor:block/steel_pipe",
+        "x": 90
+      },
+      "when": {
+        "z": "true"
+      }
     }
-  }
+  ]
 }

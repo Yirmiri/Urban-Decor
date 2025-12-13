@@ -1,0 +1,6 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": "#urban_decor:daffodil_polyanthous_generates_in",
+  "features": "urban_decor:patch_daffodil_polyanthous",
+  "step": "vegetal_decoration"
+}

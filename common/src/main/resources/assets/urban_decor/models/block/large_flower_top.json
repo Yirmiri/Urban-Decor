@@ -1,0 +1,46 @@
+{
+	"format_version": "1.9.0",
+	"credit": "Made with Blockbench",
+	"ambientocclusion": false,
+	"texture_size": [32, 32],
+	"textures": {
+		"0": "urban_decor:block/ruby_polyanthous_top",
+		"particle": "urban_decor:block/ruby_polyanthous_top"
+	},
+	"elements": [
+		{
+			"from": [-3, 0, -3],
+			"to": [-3, 16, 29],
+			"rotation": {"angle": 45, "axis": "y", "origin": [-3, 0, -3]},
+			"faces": {
+				"north": {"uv": [1, 0, 1, 8], "texture": "#missing"},
+				"east": {"uv": [0, 0, 16, 8], "texture": "#0"},
+				"south": {"uv": [0, 0, 0, 8], "texture": "#missing"},
+				"west": {"uv": [0, 0, 16, 8], "texture": "#0"},
+				"up": {"uv": [0, 0, 0, 16], "texture": "#missing"},
+				"down": {"uv": [0, 0, 0, 1], "texture": "#missing"}
+			}
+		},
+		{
+			"from": [19, 0, -3],
+			"to": [19, 16, 29],
+			"rotation": {"angle": -45, "axis": "y", "origin": [19, 0, -3]},
+			"faces": {
+				"north": {"uv": [1, 0, 1, 8], "texture": "#missing"},
+				"east": {"uv": [0, 0, 16, 8], "texture": "#0"},
+				"south": {"uv": [0, 0, 0, 8], "texture": "#missing"},
+				"west": {"uv": [0, 0, 16, 8], "texture": "#0"},
+				"up": {"uv": [0, 0, 0, 16], "texture": "#missing"},
+				"down": {"uv": [0, 0, 0, 1], "texture": "#missing"}
+			}
+		}
+	],
+	"groups": [
+		{
+			"name": "plant",
+			"origin": [8, 8, 8],
+			"color": 0,
+			"children": [0, 1]
+		}
+	]
+}

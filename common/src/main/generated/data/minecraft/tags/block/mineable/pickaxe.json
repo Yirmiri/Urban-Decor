@@ -1,6 +1,6 @@
 {
   "values": [
-    "urban_decor:polypropylene_block",
+    "#urban_decor:mineable_with_axe_and_pickaxe",
     "urban_decor:dark_porcelain_block",
     "urban_decor:dark_porcelain_stairs",
     "urban_decor:dark_porcelain_slab",

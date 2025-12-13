@@ -5,6 +5,36 @@
       "urban_decor:generic/open1"
     ]
   },
+  "block.faucet.turn": {
+    "subtitle": "subtitles.block.faucet.turn",
+    "sounds": [
+      "urban_decor:generic/faucet_turn"
+    ]
+  },
+  "block.smooth.open": {
+    "subtitle": "subtitles.block.appliance.open",
+    "sounds": [
+      "urban_decor:generic/smooth_open"
+    ]
+  },
+  "block.smooth.close": {
+    "subtitle": "subtitles.block.appliance.close",
+    "sounds": [
+      "urban_decor:generic/smooth_close"
+    ]
+  },
+  "block.metallic.open": {
+    "subtitle": "subtitles.block.appliance.open",
+    "sounds": [
+      "urban_decor:generic/metallic_open"
+    ]
+  },
+  "block.metallic.close": {
+    "subtitle": "subtitles.block.appliance.close",
+    "sounds": [
+      "urban_decor:generic/metallic_close"
+    ]
+  },
   "block.satellite.receive_signal": {
     "subtitle": "subtitles.block.satellite.receive_signal",
     "sounds": [

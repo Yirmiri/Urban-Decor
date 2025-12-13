@@ -4,6 +4,7 @@ import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricLanguageProvider;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.world.item.DyeColor;
+import net.yirmiri.urban_decor.common.util.WrapColor;
 import net.yirmiri.urban_decor.core.registry.UDBlocks;
 import net.yirmiri.urban_decor.core.registry.UDEntities;
 import net.yirmiri.urban_decor.core.registry.UDItems;
@@ -31,6 +32,24 @@ public class UDLangProvider extends FabricLanguageProvider {
             build.add(UDBlocks.getDyedTowelBlocks(colors.getId()).get(), dyeString + " Towel Block");
             build.add(UDItems.getDyedPictureFrames(colors.getId()).get(), dyeString + " Picture Frame");
         }
+
+        for (WrapColor colors : WrapColor.values()) {
+            String wrapString = StringUtils.capitalize(StringUtils.replace(StringUtils.replace(StringUtils.replace(colors.getName(),
+                    "_", " "), "gray", "Gray"), "blue", "Blue"));
+
+            build.add(UDBlocks.getWrappedPolyanthous(colors.getId()).get(), wrapString + " Polyanthous");
+        }
+
+        //MISC
+        build.add("itemgroup.urban_decor", "Urban Decor");
+        build.add("urban_decor.calendar.day", "Today is Day");
+        build.add("urban_decor.calendar.year", "Year");
+
+        //TOOLTIPS
+        build.add("item.urban_decor.toolbox.use", "When used on blocks:");
+        build.add("item.urban_decor.toolbox.desc", "Can Change Variants of Specific Blocks");
+        build.add("tooltip.urban_decor.toolboxable", "Has toolbox variants");
+        build.add("tooltip.urban_decor.wrappable", "Can be wrapped");
 
         //BLOCKS
         build.add(UDBlocks.POLYPROPYLENE_BLOCK.get(), "Block of Polypropylene");
@@ -117,6 +136,18 @@ public class UDLangProvider extends FabricLanguageProvider {
         build.add(UDBlocks.WARPED_PIANO.get(), "Warped Piano");
         build.add(UDBlocks.DISHWASHER.get(), "Dishwasher");
         build.add(UDBlocks.DARK_DISHWASHER.get(), "Dark Dishwasher");
+        build.add(UDBlocks.PLASTIC_CHAIR.get(), "Plastic Chair");
+        build.add(UDBlocks.OAK_CALENDAR.get(), "Oak Calendar");
+        build.add(UDBlocks.SPRUCE_CALENDAR.get(), "Spruce Calendar");
+        build.add(UDBlocks.BIRCH_CALENDAR.get(), "Birch Calendar");
+        build.add(UDBlocks.JUNGLE_CALENDAR.get(), "Jungle Calendar");
+        build.add(UDBlocks.ACACIA_CALENDAR.get(), "Acacia Calendar");
+        build.add(UDBlocks.DARK_OAK_CALENDAR.get(), "Dark Oak Calendar");
+        build.add(UDBlocks.MANGROVE_CALENDAR.get(), "Mangrove Calendar");
+        build.add(UDBlocks.CHERRY_CALENDAR.get(), "Cherry Calendar");
+        build.add(UDBlocks.BAMBOO_CALENDAR.get(), "Bamboo Calendar");
+        build.add(UDBlocks.CRIMSON_CALENDAR.get(), "Crimson Calendar");
+        build.add(UDBlocks.WARPED_CALENDAR.get(), "Warped Calendar");
 
         //ITEMS
         build.add(UDItems.POLYPROPYLENE.get(), "Polypropylene");
@@ -141,16 +172,7 @@ public class UDLangProvider extends FabricLanguageProvider {
         build.add("stat.urban_decor.open_appliances", "Appliances Opened");
 
         //ENTITIES
-        build.add(UDEntities.TOILET.get(), "Toilet");
-
-        //ITEM GROUPS
-        build.add("itemgroup.urban_decor", "Urban Decor");
-
-        //TOOLTIPS
-        build.add("item.urban_decor.toolbox.use", "When used on blocks:");
-        build.add("item.urban_decor.toolbox.desc", "Can Change Variants of Specific Blocks");
-        build.add("tooltip.urban_decor.toolboxable", "Has toolbox variants");
-        build.add("tooltip.urban_decor.wrappable", "Can be wrapped");
+        build.add(UDEntities.SEAT.get(), "Seat");
 
         //TOOLBOX
         build.add("toolbox.dryer.variant_true", "Variant: Transparent");
@@ -198,15 +220,15 @@ public class UDLangProvider extends FabricLanguageProvider {
         build.add("death.attack.urban_decor.wet_toaster.player", "%2$s electrocuted %1$s with a toaster in the water");
 
         //SUBTITLES
-        build.add("subtitles.block.generic.activate", "Button clicks");
         build.add("subtitles.block.appliance.open", "Appliance opens");
         build.add("subtitles.block.appliance.close", "Appliance closes");
+        build.add("subtitles.block.faucet.turn", "Faucet Turns");
         build.add("subtitles.block.satellite.receive_signal", "Satellite dish sequences");
-        build.add("subtitles.block.satellite.receive_signal_rare", "Satellite dish sequences...?");
+        build.add("subtitles.block.satellite.receive_signal_rare", "SATELLITE DISH SEQUENCES...");
 
         //ADVANCEMENTS
         build.add("urban_decor.advancement.root", "Urban Decor");
-        build.add("urban_decor.advancement.root.desc", "Decorate your spaces with Porcelain and Stainless Steel appliances!");
+        build.add("urban_decor.advancement.root.desc", "Decorate your spaces with both decorative and functional appliances!");
 
         build.add("urban_decor.advancement.get_porcelain", "Handle With Care");
         build.add("urban_decor.advancement.get_porcelain.desc", "Obtain a piece of Porcelain, a primary component for most appliances");
@@ -263,9 +285,8 @@ public class UDLangProvider extends FabricLanguageProvider {
         build.add(YT_ID + "block." + MOD_ID + "stainless_steel_soul_lantern.desc", "Souls keep the flame ablaze");
         build.add(YT_ID + "block." + MOD_ID + "stainless_steel_bars.desc", "Keeps the criminals out.");
         build.add(YT_ID + "block." + MOD_ID + "rigid_glass.desc", "A reinforced piece of glass that can be placed at the edge of a block");
-        build.add(YT_ID + "item." + MOD_ID + "polypropylene.desc", "A mixture of coal and clay, used commonly in smaller decoratives and wraps.");
+        build.add(YT_ID + "item." + MOD_ID + "polypropylene.desc", "A mixture of coal, clay, and polyanthous, used commonly in smaller decorations and wraps.");
         build.add(YT_ID + "block." + MOD_ID + "polypropylene_block.desc", "A smooth block constructed from polypropylene.");
-
         build.add(YT_ID + "block." + MOD_ID + "toolbox.desc", "Ah man, you cut the knob!");
         build.add(YT_ID + "block." + MOD_ID + "filing_cabinet.desc", "Back to my crappy 9 to 5...");
         build.add(YT_ID + "block." + MOD_ID + "cupboard.desc", "Not to be confused with a cabinet");
@@ -312,13 +333,32 @@ public class UDLangProvider extends FabricLanguageProvider {
         build.add(YT_ID + "block." + MOD_ID + "warped_piano.desc", "A wooden instrument constructed from warped planks");
         build.add(YT_ID + "block." + MOD_ID + "dishwasher.desc", "A dishwasher but with what dishes to wash?");
         build.add(YT_ID + "block." + MOD_ID + "dark_dishwasher.desc", "A dishwasher but with what dishes to wash?");
+        build.add(YT_ID + "block." + MOD_ID + "plastic_chair.desc", "The Monobloc chair is a lightweight stackable polypropylene chair, usually white in color, often described as the world's most common plastic chair.");
+        build.add(YT_ID + "block." + MOD_ID + "oak_calendar.desc", "A place to keep track of time, constructed from oak planks");
+        build.add(YT_ID + "block." + MOD_ID + "spruce_calendar.desc", "A place to keep track of time, constructed from spruce planks");
+        build.add(YT_ID + "block." + MOD_ID + "birch_calendar.desc", "A place to keep track of time, constructed from birch planks");
+        build.add(YT_ID + "block." + MOD_ID + "jungle_calendar.desc", "A place to keep track of time, constructed from jungle planks");
+        build.add(YT_ID + "block." + MOD_ID + "acacia_calendar.desc", "A place to keep track of time, constructed from acacia planks");
+        build.add(YT_ID + "block." + MOD_ID + "dark_oak_calendar.desc", "A place to keep track of time, constructed from dark oak planks");
+        build.add(YT_ID + "block." + MOD_ID + "mangrove_calendar.desc", "A place to keep track of time, constructed from mangrove planks");
+        build.add(YT_ID + "block." + MOD_ID + "cherry_calendar.desc", "A place to keep track of time, constructed from cherry planks");
+        build.add(YT_ID + "block." + MOD_ID + "bamboo_calendar.desc", "A place to keep track of time, constructed from bamboo planks");
+        build.add(YT_ID + "block." + MOD_ID + "crimson_calendar.desc", "A place to keep track of time, constructed from crimson planks");
+        build.add(YT_ID + "block." + MOD_ID + "warped_calendar.desc", "A place to keep track of time, constructed from warped planks");
+        
+        for (WrapColor colors : WrapColor.values()) {
+            String dyeString = StringUtils.capitalize(StringUtils.replace(StringUtils.replace(StringUtils.replace(colors.getName(),
+                    "_", " "), "gray", "Gray"), "blue", "Blue"));
+
+            build.add(YT_ID + "block." + MOD_ID + UDBlocks.getWrappedPolyanthous(colors.getId()) + ".desc", "A vibrant, delicate flower that is essential in the creation of polypropylene");
+        }
 
         for (DyeColor colors : DyeColor.values()) {
             String dyeString = StringUtils.capitalize(StringUtils.replace(StringUtils.replace(StringUtils.replace(colors.getName(),
                     "_", " "), "gray", "Gray"), "blue", "Blue"));
 
-            build.add(YT_ID + "block." + MOD_ID + UDBlocks.getDyedTowelBlocks(colors.getId()) + ".desc", "You would think you would use towels to make these but you don't");
-            build.add(YT_ID + "block." + MOD_ID + UDBlocks.getDyedTowels(colors.getId()) + ".desc", "Tellio totally had a fun time making the models for this :)");
+            build.add(YT_ID + "block." + MOD_ID + UDBlocks.getDyedTowelBlocks(colors.getId()) + ".desc", "A soft block of compressed towels with a pattern");
+            build.add(YT_ID + "block." + MOD_ID + UDBlocks.getDyedTowels(colors.getId()) + ".desc", "A place to dry off or clean yourself, can be hung on towel bars");
             build.add(YT_ID + "block." + MOD_ID + UDBlocks.getDyedPictureBlocks(colors.getId()) + ".desc", "A small picture dyed " + dyeString + ", used to cozy up a home!");
         }
     }

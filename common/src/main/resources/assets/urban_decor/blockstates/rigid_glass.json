@@ -1,22 +1,82 @@
 {
   "variants": {
-    "facing=east": {
+    "connection=single,facing=east": {
       "model": "urban_decor:block/rigid_glass",
       "uvlock": false,
       "y": 90
     },
-    "facing=north": {
+    "connection=single,facing=north": {
       "model": "urban_decor:block/rigid_glass",
       "uvlock": false,
       "y": 0
     },
-    "facing=south": {
+    "connection=single,facing=south": {
       "model": "urban_decor:block/rigid_glass",
       "uvlock": false,
       "y": 180
     },
-    "facing=west": {
+    "connection=single,facing=west": {
       "model": "urban_decor:block/rigid_glass",
+      "uvlock": false,
+      "y": 270
+    },
+    "connection=top,facing=east": {
+      "model": "urban_decor:block/rigid_glass_top",
+      "uvlock": false,
+      "y": 90
+    },
+    "connection=top,facing=north": {
+      "model": "urban_decor:block/rigid_glass_top",
+      "uvlock": false,
+      "y": 0
+    },
+    "connection=top,facing=south": {
+      "model": "urban_decor:block/rigid_glass_top",
+      "uvlock": false,
+      "y": 180
+    },
+    "connection=top,facing=west": {
+      "model": "urban_decor:block/rigid_glass_top",
+      "uvlock": false,
+      "y": 270
+    },
+    "connection=middle,facing=east": {
+      "model": "urban_decor:block/rigid_glass_middle",
+      "uvlock": false,
+      "y": 90
+    },
+    "connection=middle,facing=north": {
+      "model": "urban_decor:block/rigid_glass_middle",
+      "uvlock": false,
+      "y": 0
+    },
+    "connection=middle,facing=south": {
+      "model": "urban_decor:block/rigid_glass_middle",
+      "uvlock": false,
+      "y": 180
+    },
+    "connection=middle,facing=west": {
+      "model": "urban_decor:block/rigid_glass_middle",
+      "uvlock": false,
+      "y": 270
+    },
+    "connection=bottom,facing=east": {
+      "model": "urban_decor:block/rigid_glass_bottom",
+      "uvlock": false,
+      "y": 90
+    },
+    "connection=bottom,facing=north": {
+      "model": "urban_decor:block/rigid_glass_bottom",
+      "uvlock": false,
+      "y": 0
+    },
+    "connection=bottom,facing=south": {
+      "model": "urban_decor:block/rigid_glass_bottom",
+      "uvlock": false,
+      "y": 180
+    },
+    "connection=bottom,facing=west": {
+      "model": "urban_decor:block/rigid_glass_bottom",
       "uvlock": false,
       "y": 270
     }

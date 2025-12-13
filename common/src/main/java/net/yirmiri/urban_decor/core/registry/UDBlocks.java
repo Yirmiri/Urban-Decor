@@ -6,16 +6,13 @@ import net.azurune.runiclib.common.publicized.PublicStairBlock;
 import net.azurune.runiclib.common.publicized.PublicTrapdoorBlock;
 import net.azurune.runiclib.core.platform.Services;
 import net.minecraft.world.item.DyeColor;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.ChainBlock;
-import net.minecraft.world.level.block.SlabBlock;
-import net.minecraft.world.level.block.WallBlock;
+import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
 import net.yirmiri.urban_decor.UrbanDecor;
 import net.yirmiri.urban_decor.common.block.*;
 import net.yirmiri.urban_decor.common.util.UDProperties;
+import net.yirmiri.urban_decor.common.util.WrapColor;
 
 import java.util.HashMap;
 import java.util.function.Supplier;
@@ -62,7 +59,7 @@ public class UDBlocks {
     public static final Supplier<Block> POLISHED_CHROMITE_SLAB = register("polished_chromite_slab", () -> new SlabBlock(UDProperties.BlockP.POLISHED_CHROMITE), true);
 
     public static final Supplier<Block> RIGID_GLASS = register("rigid_glass", () -> new RigidGlassBlock(UDProperties.BlockP.RIGID_GLASS), true);
-    public static final Supplier<Block> STEEL_PIPE = register("steel_pipe", () -> new ChainBlock(UDProperties.BlockP.STEEL_PIPE), false);
+    public static final Supplier<Block> STEEL_PIPE = register("steel_pipe", () -> new SteelPipeBlock(UDProperties.BlockP.STEEL_PIPE), false);
 
     public static final Supplier<Block> STAINLESS_STEEL_BLOCK = register("stainless_steel_block", () -> new Block(UDProperties.BlockP.STAINLESS_STEEL), true);
     public static final Supplier<Block> STAINLESS_STEEL_BARS = register("stainless_steel_bars", () -> new PublicIronBarsBlock(UDProperties.BlockP.STEEL_BARS), true);
@@ -99,6 +96,11 @@ public class UDBlocks {
     public static final Supplier<Block> MICROWAVE = register("microwave", () -> new MicrowaveBlock(UDProperties.BlockP.MICROWAVE), false);
     public static final Supplier<Block> WALL_MICROWAVE = register("wall_microwave", () -> new MicrowaveWallBlock(UDProperties.BlockP.MICROWAVE), false);
     public static final Supplier<Block> FLOOR_LAMP = register("floor_lamp", () -> new FloorLampBlock(UDProperties.BlockP.FLOOR_LAMP), true);
+    public static final Supplier<Block> DISHWASHER = register("dishwasher", () -> new DishwasherBlock(UDProperties.BlockP.DISHWASHER), true);
+    public static final Supplier<Block> DARK_DISHWASHER = register("dark_dishwasher", () -> new DishwasherBlock(UDProperties.BlockP.DISHWASHER), true);
+    public static final Supplier<Block> PLASTIC_CHAIR = register("plastic_chair", () -> new PlasticChairBlock(UDProperties.BlockP.PLASTIC_CHAIR), true);
+
+    //WOODEN
     public static final Supplier<Block> OAK_PIANO = register("oak_piano", () -> new PianoBlock(UDProperties.BlockP.PIANO), true);
     public static final Supplier<Block> SPRUCE_PIANO = register("spruce_piano", () -> new PianoBlock(UDProperties.BlockP.PIANO), true);
     public static final Supplier<Block> BIRCH_PIANO = register("birch_piano", () -> new PianoBlock(UDProperties.BlockP.PIANO), true);
@@ -110,9 +112,19 @@ public class UDBlocks {
     public static final Supplier<Block> BAMBOO_PIANO = register("bamboo_piano", () -> new PianoBlock(UDProperties.BlockP.BAMBOO_PIANO), true);
     public static final Supplier<Block> CRIMSON_PIANO = register("crimson_piano", () -> new PianoBlock(UDProperties.BlockP.NETHER_PIANO), true);
     public static final Supplier<Block> WARPED_PIANO = register("warped_piano", () -> new PianoBlock(UDProperties.BlockP.NETHER_PIANO), true);
-    public static final Supplier<Block> DISHWASHER = register("dishwasher", () -> new DishwasherBlock(UDProperties.BlockP.DISHWASHER), true);
-    public static final Supplier<Block> DARK_DISHWASHER = register("dark_dishwasher", () -> new DishwasherBlock(UDProperties.BlockP.DISHWASHER), true);
-
+    
+    public static final Supplier<Block> OAK_CALENDAR = register("oak_calendar", () -> new CalendarBlock(UDProperties.BlockP.CALENDAR), true);
+    public static final Supplier<Block> SPRUCE_CALENDAR = register("spruce_calendar", () -> new CalendarBlock(UDProperties.BlockP.CALENDAR), true);
+    public static final Supplier<Block> BIRCH_CALENDAR = register("birch_calendar", () -> new CalendarBlock(UDProperties.BlockP.CALENDAR), true);
+    public static final Supplier<Block> JUNGLE_CALENDAR = register("jungle_calendar", () -> new CalendarBlock(UDProperties.BlockP.CALENDAR), true);
+    public static final Supplier<Block> ACACIA_CALENDAR = register("acacia_calendar", () -> new CalendarBlock(UDProperties.BlockP.CALENDAR), true);
+    public static final Supplier<Block> DARK_OAK_CALENDAR = register("dark_oak_calendar", () -> new CalendarBlock(UDProperties.BlockP.CALENDAR), true);
+    public static final Supplier<Block> MANGROVE_CALENDAR = register("mangrove_calendar", () -> new CalendarBlock(UDProperties.BlockP.CALENDAR), true);
+    public static final Supplier<Block> CHERRY_CALENDAR = register("cherry_calendar", () -> new CalendarBlock(UDProperties.BlockP.CHERRY_CALENDAR), true);
+    public static final Supplier<Block> BAMBOO_CALENDAR = register("bamboo_calendar", () -> new CalendarBlock(UDProperties.BlockP.BAMBOO_CALENDAR), true);
+    public static final Supplier<Block> CRIMSON_CALENDAR = register("crimson_calendar", () -> new CalendarBlock(UDProperties.BlockP.NETHER_CALENDAR), true);
+    public static final Supplier<Block> WARPED_CALENDAR = register("warped_calendar", () -> new CalendarBlock(UDProperties.BlockP.NETHER_CALENDAR), true);
+    
     //MISC APPLIANCES
     public static final Supplier<Block> TOOLBOX = register("toolbox", () -> new ToolboxBlock(UDProperties.BlockP.TOOLBOX), false);
     public static final Supplier<Block> AIR_CONDITIONER = register("air_conditioner", () -> new AirConditionerBlock(UDProperties.BlockP.AIR_CONDITIONER), true);
@@ -123,6 +135,16 @@ public class UDBlocks {
     public static final Supplier<Block> SHOWER = register("shower", () -> new ShowerBlock(UDProperties.BlockP.SHOWER), true);
     public static final Supplier<Block> SATELLITE_DISH = register("satellite_dish", () -> new SatelliteDishBlock(UDProperties.BlockP.SATELLITE_DISH), false);
     public static final Supplier<Block> WALL_SATELLITE_DISH = register("wall_satellite_dish", () -> new SatelliteDishBlock(UDProperties.BlockP.SATELLITE_DISH), false);
+
+    //WRAPPED
+    public static final HashMap<WrapColor, Supplier<Block>> WRAPPED_POLYANTHOUS = new HashMap<>();
+
+    static {
+        for (WrapColor colors : WrapColor.values()) {
+            WRAPPED_POLYANTHOUS.put(colors, register(colors + "_polyanthous", () -> new TallFlowerBlock(
+                    BlockBehaviour.Properties.ofFullCopy(Blocks.ROSE_BUSH).mapColor(colors.getMapColor())), true));
+        }
+    }
 
     //DYED BLOCKS
     public static final HashMap<DyeColor, Supplier<Block>> DYED_TOWELS = new HashMap<>();
@@ -151,6 +173,10 @@ public class UDBlocks {
             DYED_WALL_PICTURE_FRAMES.put(colors, register(colors + "_wall_picture_frame", () -> new PictureFrameWallBlock(
                     UDProperties.BlockP.PICTURE_FRAME.mapColor(colors)), false));
         }
+    }
+
+    public static Supplier<Block> getWrappedPolyanthous(int colors){
+        return WRAPPED_POLYANTHOUS.get(WrapColor.byId(colors));
     }
 
     public static Supplier<Block> getDyedTowels(int colors){

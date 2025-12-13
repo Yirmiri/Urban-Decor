@@ -1,0 +1,94 @@
+{
+  "variants": {
+    "face=ceiling,facing=east,broken=false": {
+      "model": "urban_decor:block/plastic_chair_up",
+      "y": 270
+    },
+    "face=ceiling,facing=north,broken=false": {
+      "model": "urban_decor:block/plastic_chair_up",
+      "y": 180
+    },
+    "face=ceiling,facing=south,broken=false": {
+      "model": "urban_decor:block/plastic_chair_up"
+    },
+    "face=ceiling,facing=west,broken=false": {
+      "model": "urban_decor:block/plastic_chair_up",
+      "y": 90
+    },
+    "face=floor,facing=east,broken=false": {
+      "model": "urban_decor:block/plastic_chair",
+      "y": 90
+    },
+    "face=floor,facing=north,broken=false": {
+      "model": "urban_decor:block/plastic_chair"
+    },
+    "face=floor,facing=south,broken=false": {
+      "model": "urban_decor:block/plastic_chair",
+      "y": 180
+    },
+    "face=floor,facing=west,broken=false": {
+      "model": "urban_decor:block/plastic_chair",
+      "y": 270
+    },
+    "face=wall,facing=east,broken=false": {
+      "model": "urban_decor:block/plastic_chair_down",
+      "y": 90
+    },
+    "face=wall,facing=north,broken=false": {
+      "model": "urban_decor:block/plastic_chair_down"
+    },
+    "face=wall,facing=south,broken=false": {
+      "model": "urban_decor:block/plastic_chair_down",
+      "y": 180
+    },
+    "face=wall,facing=west,broken=false": {
+      "model": "urban_decor:block/plastic_chair_down",
+      "y": 270
+    },
+    "face=ceiling,facing=east,broken=true": {
+      "model": "urban_decor:block/plastic_chair_up_broken",
+      "y": 270
+    },
+    "face=ceiling,facing=north,broken=true": {
+      "model": "urban_decor:block/plastic_chair_up_broken",
+      "y": 180
+    },
+    "face=ceiling,facing=south,broken=true": {
+      "model": "urban_decor:block/plastic_chair_up_broken"
+    },
+    "face=ceiling,facing=west,broken=true": {
+      "model": "urban_decor:block/plastic_chair_up_broken",
+      "y": 90
+    },
+    "face=floor,facing=east,broken=true": {
+      "model": "urban_decor:block/plastic_chair_broken",
+      "y": 90
+    },
+    "face=floor,facing=north,broken=true": {
+      "model": "urban_decor:block/plastic_chair_broken"
+    },
+    "face=floor,facing=south,broken=true": {
+      "model": "urban_decor:block/plastic_chair_broken",
+      "y": 180
+    },
+    "face=floor,facing=west,broken=true": {
+      "model": "urban_decor:block/plastic_chair_broken",
+      "y": 270
+    },
+    "face=wall,facing=east,broken=true": {
+      "model": "urban_decor:block/plastic_chair_down_broken",
+      "y": 90
+    },
+    "face=wall,facing=north,broken=true": {
+      "model": "urban_decor:block/plastic_chair_down_broken"
+    },
+    "face=wall,facing=south,broken=true": {
+      "model": "urban_decor:block/plastic_chair_down_broken",
+      "y": 180
+    },
+    "face=wall,facing=west,broken=true": {
+      "model": "urban_decor:block/plastic_chair_down_broken",
+      "y": 270
+    }
+  }
+}

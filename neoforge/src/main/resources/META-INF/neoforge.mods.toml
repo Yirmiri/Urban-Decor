@@ -37,7 +37,7 @@ side = "BOTH"
 [[dependencies.${mod_id}]]
 modId = "runiclib"
 mandatory = true
-versionRange = "4.2.3,"
+versionRange = "4.3.9,"
 ordering = "NONE"
 side = "BOTH"
 

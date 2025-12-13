@@ -56,6 +56,10 @@ public class UDProperties {
         public static final BlockBehaviour.Properties CHERRY_PIANO = BlockBehaviour.Properties.ofFullCopy(Blocks.CHERRY_PLANKS);
         public static final BlockBehaviour.Properties BAMBOO_PIANO = BlockBehaviour.Properties.ofFullCopy(Blocks.BAMBOO_PLANKS);
         public static final BlockBehaviour.Properties DISHWASHER = BlockBehaviour.Properties.ofFullCopy(Blocks.STONE).strength(1.5F).mapColor(MapColor.SNOW).sound(SoundType.CALCITE).requiresCorrectToolForDrops();
+        public static final BlockBehaviour.Properties CALENDAR = BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS).strength(0.5F);
+        public static final BlockBehaviour.Properties CHERRY_CALENDAR = BlockBehaviour.Properties.ofFullCopy(Blocks.CHERRY_PLANKS).strength(0.5F);
+        public static final BlockBehaviour.Properties NETHER_CALENDAR = BlockBehaviour.Properties.ofFullCopy(Blocks.CRIMSON_PLANKS).strength(0.5F);
+        public static final BlockBehaviour.Properties BAMBOO_CALENDAR = BlockBehaviour.Properties.ofFullCopy(Blocks.BAMBOO_PLANKS).strength(0.5F);
 
         //MISC APPLIANCES
         public static final BlockBehaviour.Properties AIR_CONDITIONER = BlockBehaviour.Properties.ofFullCopy(Blocks.STONE).strength(1.0F).mapColor(MapColor.COLOR_GRAY).sound(SoundType.LANTERN).requiresCorrectToolForDrops();
@@ -66,6 +70,7 @@ public class UDProperties {
         public static final BlockBehaviour.Properties TOWEL_BAR = BlockBehaviour.Properties.ofFullCopy(Blocks.WHITE_WOOL).strength(0.5F).mapColor(MapColor.COLOR_GRAY).sound(SoundType.COPPER);
         public static final BlockBehaviour.Properties SATELLITE_DISH = BlockBehaviour.Properties.ofFullCopy(Blocks.WHITE_WOOL).strength(0.5F).mapColor(MapColor.COLOR_GRAY).sound(SoundType.COPPER).noCollission();
         public static final BlockBehaviour.Properties SHOWER = BlockBehaviour.Properties.ofFullCopy(Blocks.WHITE_WOOL).strength(0.3F).mapColor(MapColor.COLOR_GRAY).sound(SoundType.COPPER);
+        public static final BlockBehaviour.Properties PLASTIC_CHAIR = BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_WOOD).mapColor(MapColor.STONE).sound(SoundType.SCAFFOLDING).strength(0.8F, 0.5F);
     }
 
     public static class ItemP {

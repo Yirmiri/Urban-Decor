@@ -12,8 +12,8 @@ public class UDBlockEntities {
             UrbanDecor.MOD_ID, "toaster", () -> Services.REGISTRY.createBlockEntity(ToasterBlockEntity::new,
                     UDBlocks.TOASTER.get()));
 
-    public static final Supplier<BlockEntityType<StorageApplianceBlockEntity>> STORAGE_APPLIANCE = Services.REGISTRY.registerBlockEntityType(
-            UrbanDecor.MOD_ID, "storage_appliance", () -> Services.REGISTRY.createBlockEntity(StorageApplianceBlockEntity::new,
+    public static final Supplier<BlockEntityType<StorageDecorBlockEntity>> STORAGE_APPLIANCE = Services.REGISTRY.registerBlockEntityType(
+            UrbanDecor.MOD_ID, "storage_appliance", () -> Services.REGISTRY.createBlockEntity(StorageDecorBlockEntity::new,
                     UDBlocks.CUPBOARD.get(), UDBlocks.DARK_CUPBOARD.get(), UDBlocks.FRIDGE.get(), UDBlocks.DARK_FRIDGE.get(), UDBlocks.FILING_CABINET.get(),
                     UDBlocks.FREEZER.get(), UDBlocks.DARK_FREEZER.get(), UDBlocks.WASHING_MACHINE.get(), UDBlocks.DARK_WASHING_MACHINE.get(),
                     UDBlocks.DRYER.get(), UDBlocks.DARK_DRYER.get(), UDBlocks.TOOLBOX.get(), UDBlocks.DISHWASHER.get(), UDBlocks.DARK_DISHWASHER.get()));

@@ -1,0 +1,6 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": "#urban_decor:spring_polyanthous_generates_in",
+  "features": "urban_decor:patch_spring_polyanthous",
+  "step": "vegetal_decoration"
+}

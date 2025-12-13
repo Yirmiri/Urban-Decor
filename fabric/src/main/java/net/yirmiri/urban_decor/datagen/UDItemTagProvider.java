@@ -3,7 +3,10 @@ package net.yirmiri.urban_decor.datagen;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
 import net.minecraft.core.HolderLookup;
+import net.minecraft.tags.BlockTags;
+import net.minecraft.tags.ItemTags;
 import net.minecraft.world.item.DyeColor;
+import net.yirmiri.urban_decor.common.util.WrapColor;
 import net.yirmiri.urban_decor.core.init.UDTags;
 import net.yirmiri.urban_decor.core.registry.UDBlocks;
 import net.yirmiri.urban_decor.core.registry.UDItems;
@@ -46,6 +49,14 @@ public class UDItemTagProvider extends FabricTagProvider.ItemTagProvider {
 
         getOrCreateTagBuilder(UDTags.ItemT.HAS_WRAPPED_VARIANTS)
 
+        ;
+
+        for (WrapColor colors : WrapColor.values()) {
+            getOrCreateTagBuilder(UDTags.ItemT.POLYANTHOUS).add(UDBlocks.getWrappedPolyanthous(colors.getId()).get().asItem());
+        }
+
+        getOrCreateTagBuilder(ItemTags.TALL_FLOWERS)
+                .addTag(UDTags.ItemT.POLYANTHOUS)
         ;
 
         getOrCreateTagBuilder(UDTags.ItemT.TOOLBOXES)

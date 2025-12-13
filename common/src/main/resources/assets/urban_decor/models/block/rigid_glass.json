@@ -1,8 +1,9 @@
 {
+	"format_version": "1.9.0",
 	"credit": "Made with Blockbench",
 	"textures": {
 		"0": "urban_decor:block/rigid_glass",
-		"1": "urban_decor:block/rigid_glass_top",
+		"1": "urban_decor:block/rigid_glass_edge",
 		"particle": "urban_decor:block/rigid_glass"
 	},
 	"elements": [
@@ -15,8 +16,8 @@
 				"east": {"uv": [7, 0, 9, 16], "texture": "#1"},
 				"south": {"uv": [0, 0, 16, 16], "texture": "#0"},
 				"west": {"uv": [7, 0, 9, 16], "texture": "#1"},
-				"up": {"uv": [5, 0, 7, 16], "rotation": 90, "texture": "#1"},
-				"down": {"uv": [9, 0, 11, 16], "rotation": 90, "texture": "#1"}
+				"up": {"uv": [5, 0, 7, 16], "rotation": 90, "texture": "#1", "cullface": "up"},
+				"down": {"uv": [9, 0, 11, 16], "rotation": 90, "texture": "#1", "cullface": "down"}
 			}
 		}
 	],
@@ -46,7 +47,7 @@
 			"scale": [0.25, 0.25, 0.25]
 		},
 		"gui": {
-			"rotation": [30, 225, 0],
+			"rotation": [30, -135, 0],
 			"translation": [2.5, -1.5, 0],
 			"scale": [0.625, 0.625, 0.625]
 		},

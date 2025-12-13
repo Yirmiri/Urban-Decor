@@ -1,0 +1,14 @@
+{
+  "values": [
+    "minecraft:taiga",
+    "minecraft:snowy_taiga",
+    "minecraft:old_growth_pine_taiga",
+    "minecraft:old_growth_spruce_taiga",
+    "minecraft:grove",
+    "minecraft:snowy_slopes",
+    "minecraft:jagged_peaks",
+    "minecraft:stony_peaks",
+    "minecraft:frozen_peaks",
+    "minecraft:flower_forest"
+  ]
+}

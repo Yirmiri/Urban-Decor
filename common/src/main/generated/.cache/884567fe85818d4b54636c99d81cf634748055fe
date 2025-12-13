@@ -1,8 +1,14 @@
-// 1.21.1	2025-09-24T05:22:42.0671196	Urban Decor/Tags for minecraft:block
-3870d329e4399147c29473fbe1d1229db7ea2f91 data\minecraft\tags\block\walls.json
-bfdd93f59fb20311dc1633d396a6efdd8b1479d2 data\minecraft\tags\block\campfires.json
-90b799e5d04fcf7e1f59ced8bf86398d02bb42b2 data\urban_decor\tags\block\has_toolbox_variants.json
+// 1.21.1	2025-12-13T00:16:45.78062	Urban Decor/Tags for minecraft:block
+8f8fa75d181b9e72a824060a7459a30f74bdf02e data\urban_decor\tags\block\mineable_with_axe_and_pickaxe.json
 da654d67e78b8f46055aa829cbeebdd2ab95f594 data\urban_decor\tags\block\toilets.json
-0dcbea90c5cdab4ee7ba71704622d1f7eff0b199 data\minecraft\tags\block\mineable\pickaxe.json
-9fb88c9c00bba7a57cd3646b4f54a368c0d603f3 data\minecraft\tags\block\mineable\axe.json
 76adecef9f85206ae9ed2751459ecf8ecf28f4a1 data\minecraft\tags\block\wool.json
+bfdd93f59fb20311dc1633d396a6efdd8b1479d2 data\minecraft\tags\block\campfires.json
+5c1cb523386eb8a923dfc01d87487d45780a790d data\urban_decor\tags\block\heavy_storage_sound.json
+40543abd8648c55bb69c9bc2d8c45b368adeceb3 data\minecraft\tags\block\mineable\axe.json
+1b84b531e67038f7d67b870aa4280d156c7fbd2b data\urban_decor\tags\block\smooth_storage_sound.json
+578655c4c03fa3fa7cf23b09532575cbebb73212 data\minecraft\tags\block\tall_flowers.json
+90b799e5d04fcf7e1f59ced8bf86398d02bb42b2 data\urban_decor\tags\block\has_toolbox_variants.json
+80ecaef9f0c9221f26609e3871fdd7969b40b38f data\urban_decor\tags\block\polyanthous.json
+c942287a968ded3c7c42e2e1dde9f04cbf97bf51 data\urban_decor\tags\block\seats.json
+3870d329e4399147c29473fbe1d1229db7ea2f91 data\minecraft\tags\block\walls.json
+625d982847aa3544e5ff39c1df7cb8665cd5a044 data\minecraft\tags\block\mineable\pickaxe.json

@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "blue_dye",
+  "ingredients": [
+    {
+      "item": "urban_decor:azure_polyanthous"
+    }
+  ],
+  "result": {
+    "count": 2,
+    "id": "minecraft:blue_dye"
+  }
+}

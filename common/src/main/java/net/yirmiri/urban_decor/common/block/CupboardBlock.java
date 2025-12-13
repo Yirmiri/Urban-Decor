@@ -1,7 +1,6 @@
 package net.yirmiri.urban_decor.common.block;
 
 import net.minecraft.core.BlockPos;
-import net.minecraft.core.Direction;
 import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.util.RandomSource;
@@ -18,8 +17,6 @@ import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
-import net.minecraft.world.level.block.state.properties.BlockStateProperties;
-import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraft.world.level.block.state.properties.IntegerProperty;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.shapes.BooleanOp;
@@ -27,10 +24,9 @@ import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import net.yirmiri.urban_decor.common.block.abstracts.AbstractStorageDecorBlock;
-import net.yirmiri.urban_decor.common.block.entity.StorageApplianceBlockEntity;
+import net.yirmiri.urban_decor.common.block.entity.StorageDecorBlockEntity;
 import net.yirmiri.urban_decor.common.util.UDUtils;
 import net.yirmiri.urban_decor.core.init.UDTags;
-import net.yirmiri.urban_decor.core.registry.UDItems;
 
 public class CupboardBlock extends AbstractStorageDecorBlock {
     public static final IntegerProperty VARIANT = IntegerProperty.create("variant", 0, 3);
@@ -100,8 +96,8 @@ public class CupboardBlock extends AbstractStorageDecorBlock {
             if (level.isClientSide) {
                 return InteractionResult.SUCCESS;
             } else {
-                if (blockEntity instanceof StorageApplianceBlockEntity) {
-                    player.openMenu((StorageApplianceBlockEntity) blockEntity);
+                if (blockEntity instanceof StorageDecorBlockEntity) {
+                    player.openMenu((StorageDecorBlockEntity) blockEntity);
                     //player.awardStat(UDStats.OPEN_APPLIANCES);
                     PiglinAi.angerNearbyPiglins(player, true);
                 }
@@ -116,7 +112,7 @@ public class CupboardBlock extends AbstractStorageDecorBlock {
     }
 
     public BlockEntity newBlockEntity(BlockPos pos, BlockState state) {
-        return new StorageApplianceBlockEntity(pos, state);
+        return new StorageDecorBlockEntity(pos, state);
     }
 
     public RenderShape getRenderShape(BlockState state) {
@@ -151,8 +147,8 @@ public class CupboardBlock extends AbstractStorageDecorBlock {
     @Override
     public void tick(BlockState state, ServerLevel world, BlockPos pos, RandomSource random) {
         BlockEntity blockEntity = world.getBlockEntity(pos);
-        if (blockEntity instanceof StorageApplianceBlockEntity) {
-            ((StorageApplianceBlockEntity)blockEntity).recheckOpen();
+        if (blockEntity instanceof StorageDecorBlockEntity) {
+            ((StorageDecorBlockEntity)blockEntity).recheckOpen();
         }
     }
 }

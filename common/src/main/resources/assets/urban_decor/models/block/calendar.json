@@ -1,0 +1,36 @@
+{
+	"format_version": "1.9.0",
+	"credit": "Made with Blockbench by Tellio-Ari",
+	"textures": {
+		"0": "urban_decor:block/oak_calendar",
+		"particle": "block/oak_planks"
+	},
+	"elements": [
+		{
+			"from": [1, 0, 15.9],
+			"to": [15, 14, 15.9],
+			"rotation": {"angle": 0, "axis": "y", "origin": [1, 0, 15.9]},
+			"faces": {
+				"north": {"uv": [0, 2, 14, 16], "texture": "#0"},
+				"east": {"uv": [0, 0, 0, 12], "texture": "#missing"},
+				"south": {"uv": [14, 2, 0, 16], "texture": "#0", "cullface": "south"},
+				"west": {"uv": [0, 0, 0, 12], "texture": "#missing"},
+				"up": {"uv": [0, 0, 14, 0], "texture": "#missing"},
+				"down": {"uv": [0, 0, 14, 0], "texture": "#missing"}
+			}
+		},
+		{
+			"from": [1, 14, 14],
+			"to": [15, 16, 16],
+			"rotation": {"angle": 0, "axis": "y", "origin": [1, 14, 14]},
+			"faces": {
+				"north": {"uv": [1, 0, 15, 2], "texture": "#0"},
+				"east": {"uv": [16, 16, 14, 14], "texture": "#0"},
+				"south": {"uv": [2, 0, 16, 2], "texture": "#0", "cullface": "south"},
+				"west": {"uv": [14, 16, 16, 14], "texture": "#0"},
+				"up": {"uv": [0, 0, 14, 2], "texture": "#0"},
+				"down": {"uv": [1, 0, 15, 2], "texture": "#0"}
+			}
+		}
+	]
+}

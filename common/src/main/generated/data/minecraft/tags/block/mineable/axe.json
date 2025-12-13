@@ -1,5 +1,6 @@
 {
   "values": [
+    "#urban_decor:mineable_with_axe_and_pickaxe",
     "urban_decor:oak_piano",
     "urban_decor:spruce_piano",
     "urban_decor:birch_piano",
@@ -11,6 +12,16 @@
     "urban_decor:bamboo_piano",
     "urban_decor:crimson_piano",
     "urban_decor:warped_piano",
-    "urban_decor:polypropylene_block"
+    "urban_decor:oak_calendar",
+    "urban_decor:spruce_calendar",
+    "urban_decor:birch_calendar",
+    "urban_decor:jungle_calendar",
+    "urban_decor:acacia_calendar",
+    "urban_decor:dark_oak_calendar",
+    "urban_decor:mangrove_calendar",
+    "urban_decor:cherry_calendar",
+    "urban_decor:bamboo_calendar",
+    "urban_decor:crimson_calendar",
+    "urban_decor:warped_calendar"
   ]
 }

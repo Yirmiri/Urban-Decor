@@ -4,7 +4,6 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.core.Vec3i;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvent;
-import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.*;
@@ -22,8 +21,9 @@ import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import net.yirmiri.urban_decor.common.block.abstracts.AbstractStorageDecorBlock;
-import net.yirmiri.urban_decor.common.block.entity.StorageApplianceBlockEntity;
+import net.yirmiri.urban_decor.common.block.entity.StorageDecorBlockEntity;
 import net.yirmiri.urban_decor.core.init.UDTags;
+import net.yirmiri.urban_decor.core.registry.UDSounds;
 
 public class FreezerBlock extends AbstractStorageDecorBlock {
     private static final VoxelShape SHAPE = Block.box(1, 0, 1, 15, 16, 15);
@@ -46,8 +46,8 @@ public class FreezerBlock extends AbstractStorageDecorBlock {
             if (level.isClientSide) {
                 return InteractionResult.SUCCESS;
             } else {
-                if (blockEntity instanceof StorageApplianceBlockEntity && !player.isShiftKeyDown()) {
-                    player.openMenu((StorageApplianceBlockEntity) blockEntity);
+                if (blockEntity instanceof StorageDecorBlockEntity && !player.isShiftKeyDown()) {
+                    player.openMenu((StorageDecorBlockEntity) blockEntity);
                     //player.awardStat(UDStats.OPEN_APPLIANCES);
                     PiglinAi.angerNearbyPiglins(player, true);
                 }
@@ -55,9 +55,9 @@ public class FreezerBlock extends AbstractStorageDecorBlock {
                 if (player.isShiftKeyDown()) {
                     level.setBlockAndUpdate(pos, state.cycle(OPEN).cycle(TRUE_OPEN));
                     if (state.getValue(OPEN)) {
-                        playSound(level, pos, state, SoundEvents.CHERRY_WOOD_DOOR_CLOSE);
+                        playSound(level, pos, state, UDSounds.SMOOTH_CLOSE.get());
                     } else if (!state.getValue(OPEN)) {
-                        playSound(level, pos, state, SoundEvents.CHERRY_WOOD_DOOR_OPEN);
+                        playSound(level, pos, state, UDSounds.SMOOTH_OPEN.get());
                     }
                     return InteractionResult.SUCCESS;
                 }
@@ -80,7 +80,7 @@ public class FreezerBlock extends AbstractStorageDecorBlock {
     }
 
     public BlockEntity newBlockEntity(BlockPos pos, BlockState state) {
-        return new StorageApplianceBlockEntity(pos, state);
+        return new StorageDecorBlockEntity(pos, state);
     }
 
     public RenderShape getRenderShape(BlockState state) {
@@ -122,8 +122,8 @@ public class FreezerBlock extends AbstractStorageDecorBlock {
     @Override
     public void tick(BlockState state, ServerLevel world, BlockPos pos, RandomSource random) {
         BlockEntity blockEntity = world.getBlockEntity(pos);
-        if (blockEntity instanceof StorageApplianceBlockEntity) {
-            ((StorageApplianceBlockEntity)blockEntity).recheckOpen();
+        if (blockEntity instanceof StorageDecorBlockEntity) {
+            ((StorageDecorBlockEntity)blockEntity).recheckOpen();
         }
     }
 }

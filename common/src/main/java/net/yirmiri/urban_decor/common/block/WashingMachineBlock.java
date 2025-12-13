@@ -2,8 +2,9 @@ package net.yirmiri.urban_decor.common.block;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
-import net.minecraft.sounds.SoundEvents;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundSource;
+import net.minecraft.util.RandomSource;
 import net.minecraft.world.*;
 import net.minecraft.world.entity.monster.piglin.PiglinAi;
 import net.minecraft.world.entity.player.Player;
@@ -23,9 +24,10 @@ import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import net.yirmiri.urban_decor.common.block.abstracts.AbstractStorageDecorBlock;
-import net.yirmiri.urban_decor.common.block.entity.StorageApplianceBlockEntity;
+import net.yirmiri.urban_decor.common.block.entity.StorageDecorBlockEntity;
 import net.yirmiri.urban_decor.common.util.UDUtils;
 import net.yirmiri.urban_decor.core.init.UDTags;
+import net.yirmiri.urban_decor.core.registry.UDSounds;
 
 public class WashingMachineBlock extends AbstractStorageDecorBlock {
     public static final BooleanProperty OPAQUE = BooleanProperty.create("opaque");
@@ -69,18 +71,18 @@ public class WashingMachineBlock extends AbstractStorageDecorBlock {
             if (level.isClientSide) {
                 return InteractionResult.SUCCESS;
             } else {
-                if (blockEntity instanceof StorageApplianceBlockEntity && !player.isShiftKeyDown()) {
-                    player.openMenu((StorageApplianceBlockEntity) blockEntity);
+                if (blockEntity instanceof StorageDecorBlockEntity && !player.isShiftKeyDown()) {
+                    player.openMenu((StorageDecorBlockEntity) blockEntity);
                     //player.awardStat(UDStats.OPEN_APPLIANCES);
                     PiglinAi.angerNearbyPiglins(player, true);
                 }
 
-                if (player.getMainHandItem().isEmpty() && player.isShiftKeyDown()) {
+                if (player.isShiftKeyDown()) {
                     level.setBlockAndUpdate(pos, state.cycle(OPEN).cycle(TRUE_OPEN));
                     if (state.getValue(OPEN)) {
-                        level.playLocalSound(pos.getX(), pos.getY(), pos.getZ(), SoundEvents.CHERRY_WOOD_DOOR_CLOSE, SoundSource.BLOCKS, 1.0F, 1.0F, false);
+                        level.playLocalSound(pos.getX(), pos.getY(), pos.getZ(), UDSounds.METALLIC_CLOSE.get(), SoundSource.BLOCKS, 1.0F, 1.0F, false);
                     } else if (!state.getValue(OPEN)) {
-                        level.playLocalSound(pos.getX(), pos.getY(), pos.getZ(), SoundEvents.CHERRY_WOOD_DOOR_OPEN, SoundSource.BLOCKS, 1.0F, 1.0F, false);
+                        level.playLocalSound(pos.getX(), pos.getY(), pos.getZ(), UDSounds.METALLIC_OPEN.get(), SoundSource.BLOCKS, 1.0F, 1.0F, false);
                     }
                     return InteractionResult.SUCCESS;
                 }
@@ -95,7 +97,7 @@ public class WashingMachineBlock extends AbstractStorageDecorBlock {
     }
 
     public BlockEntity newBlockEntity(BlockPos pos, BlockState state) {
-        return new StorageApplianceBlockEntity(pos, state);
+        return new StorageDecorBlockEntity(pos, state);
     }
 
     public RenderShape getRenderShape(BlockState state) {
@@ -119,5 +121,26 @@ public class WashingMachineBlock extends AbstractStorageDecorBlock {
     @Override
     public int getAnalogOutputSignal(BlockState state, Level world, BlockPos pos) {
         return AbstractContainerMenu.getRedstoneSignalFromBlockEntity(world.getBlockEntity(pos));
+    }
+
+    @Override
+    public void onRemove(BlockState state, Level world, BlockPos pos, BlockState newState, boolean moved) {
+        if (!state.is(newState.getBlock())) {
+            BlockEntity blockEntity = world.getBlockEntity(pos);
+            if (blockEntity instanceof Container) {
+                Containers.dropContents(world, pos, (Container)blockEntity);
+                world.updateNeighbourForOutputSignal(pos, this);
+            }
+
+            super.onRemove(state, world, pos, newState, moved);
+        }
+    }
+
+    @Override
+    public void tick(BlockState state, ServerLevel world, BlockPos pos, RandomSource random) {
+        BlockEntity blockEntity = world.getBlockEntity(pos);
+        if (blockEntity instanceof StorageDecorBlockEntity) {
+            ((StorageDecorBlockEntity)blockEntity).recheckOpen();
+        }
     }
 }

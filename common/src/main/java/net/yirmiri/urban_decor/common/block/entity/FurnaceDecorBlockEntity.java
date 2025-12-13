@@ -17,6 +17,8 @@ import net.minecraft.world.level.block.entity.AbstractFurnaceBlockEntity;
 import net.minecraft.world.level.block.entity.ContainerOpenersCounter;
 import net.minecraft.world.level.block.state.BlockState;
 import net.yirmiri.urban_decor.common.block.abstracts.AbstractFurnaceDecorBlock;
+import net.yirmiri.urban_decor.common.block.abstracts.AbstractStorageDecorBlock;
+import net.yirmiri.urban_decor.core.init.UDTags;
 import net.yirmiri.urban_decor.core.registry.UDBlockEntities;
 import net.yirmiri.urban_decor.core.registry.UDSounds;
 
@@ -28,13 +30,13 @@ public class FurnaceDecorBlockEntity extends AbstractFurnaceBlockEntity {
         stateManager = new ContainerOpenersCounter() {
             @Override
             protected void onOpen(Level world, BlockPos pos, BlockState state) {
-                playSound(state, UDSounds.APPLIANCE_OPEN.get());
+                playSound(state, UDSounds.GENERIC_APPLIANCE_OPEN.get(), true);
                 setOpen(state, true);
             }
 
             @Override
             protected void onClose(Level world, BlockPos pos, BlockState state) {
-                playSound(state, UDSounds.APPLIANCE_OPEN.get()); //todo: close sound
+                playSound(state, UDSounds.GENERIC_APPLIANCE_OPEN.get(), false);
                 if (AbstractFurnaceDecorBlock.isTrulyOpen(state)) {
                     setOpen(state, true);
                 } else if (!AbstractFurnaceDecorBlock.isTrulyOpen(state)) {
@@ -82,11 +84,18 @@ public class FurnaceDecorBlockEntity extends AbstractFurnaceBlockEntity {
         level.setBlock(getBlockPos(), state.setValue(AbstractFurnaceDecorBlock.OPEN, open), 3);
     }
 
-    void playSound(BlockState state, SoundEvent soundEvent) {
-        Vec3i vec3i = (state.getValue(AbstractFurnaceDecorBlock.FACING)).getNormal();
-        double d = (double)worldPosition.getX() + 0.5 + (double)vec3i.getX() / 2.0;
-        double e = (double)worldPosition.getY() + 0.5 + (double)vec3i.getY() / 2.0;
-        double f = (double)worldPosition.getZ() + 0.5 + (double)vec3i.getZ() / 2.0;
-        level.playSound(null, d, e, f, soundEvent, SoundSource.BLOCKS, 0.5F, level.random.nextFloat() * 0.1F + 0.9F);
+    void playSound(BlockState state, SoundEvent soundEvent, boolean open) {
+        Vec3i vec3i = (state.getValue(AbstractStorageDecorBlock.FACING)).getNormal();
+        double x = (double) worldPosition.getX() + 0.5 + (double) vec3i.getX() / 2.0;
+        double y = (double) worldPosition.getY() + 0.5 + (double) vec3i.getY() / 2.0;
+        double z = (double) worldPosition.getZ() + 0.5 + (double) vec3i.getZ() / 2.0;
+
+        if (state.is(UDTags.BlockT.SMOOTH_STORAGE_SOUND)) {
+            soundEvent = open ? UDSounds.SMOOTH_OPEN.get() : UDSounds.SMOOTH_CLOSE.get();
+        } else if (state.is(UDTags.BlockT.HEAVY_STORAGE_SOUND)) {
+            soundEvent = open ? UDSounds.METALLIC_OPEN.get() : UDSounds.METALLIC_CLOSE.get();
+        }
+
+        level.playSound(null, x, y, z, soundEvent, SoundSource.BLOCKS, 0.5F, level.random.nextFloat() * 0.1F + 0.9F);
     }
 }

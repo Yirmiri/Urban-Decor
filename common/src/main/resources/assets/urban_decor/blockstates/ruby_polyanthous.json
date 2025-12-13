@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "half=lower": {
+      "model": "urban_decor:block/ruby_polyanthous_bottom"
+    },
+    "half=upper": {
+      "model": "urban_decor:block/ruby_polyanthous_top"
+    }
+  }
+}

@@ -34,7 +34,7 @@ public abstract class SplashManagerMixin {
     private static final ResourceLocation MODDED_SPLASHES = ResourceLocation.fromNamespaceAndPath(UrbanDecor.MOD_ID, "texts/splashes.txt");
 
     @ModifyReturnValue(method = "prepare(Lnet/minecraft/server/packs/resources/ResourceManager;Lnet/minecraft/util/profiling/ProfilerFiller;)Ljava/util/List;", at = @At("RETURN"))
-    protected List<String> dungeonsDelights$addSplashes(List<String> original, @Local(argsOnly = true) ResourceManager resourceManager, @Local(argsOnly = true) ProfilerFiller profiler) {
+    protected List<String> urbanDecor$addSplashes(List<String> original, @Local(argsOnly = true) ResourceManager resourceManager, @Local(argsOnly = true) ProfilerFiller profiler) {
         try (BufferedReader reader = new BufferedReader(new InputStreamReader(
                 Minecraft.getInstance().getResourceManager().open(MODDED_SPLASHES),
                 StandardCharsets.UTF_8))) {
@@ -51,7 +51,7 @@ public abstract class SplashManagerMixin {
     }
 
     @Inject(method = "apply(Ljava/util/List;Lnet/minecraft/server/packs/resources/ResourceManager;Lnet/minecraft/util/profiling/ProfilerFiller;)V", at = @At("TAIL"))
-    protected void dungeonsDelights$applyNewSplashes(List<String> list, ResourceManager resourceManager, ProfilerFiller profiler, CallbackInfo ci) {
+    protected void urbanDecor$applyNewSplashes(List<String> list, ResourceManager resourceManager, ProfilerFiller profiler, CallbackInfo ci) {
         this.moddedTexts.addAll(list);
     }
 }

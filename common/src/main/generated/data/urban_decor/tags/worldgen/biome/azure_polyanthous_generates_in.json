@@ -1,0 +1,10 @@
+{
+  "values": [
+    "minecraft:jungle",
+    "minecraft:sparse_jungle",
+    "minecraft:snowy_taiga",
+    "minecraft:snowy_plains",
+    "minecraft:grove",
+    "minecraft:flower_forest"
+  ]
+}

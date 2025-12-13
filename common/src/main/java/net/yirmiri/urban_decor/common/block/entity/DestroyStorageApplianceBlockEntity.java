@@ -32,12 +32,12 @@ public class DestroyStorageApplianceBlockEntity extends RandomizableContainerBlo
         items = NonNullList.withSize(9, ItemStack.EMPTY);
         stateManager = new ContainerOpenersCounter() {
             protected void onOpen(Level world, BlockPos pos, BlockState state) {
-                playSound(state, UDSounds.APPLIANCE_OPEN.get());
+                playSound(state, UDSounds.GENERIC_APPLIANCE_OPEN.get());
                 setOpen(state, true);
             }
 
             protected void onClose(Level world, BlockPos pos, BlockState state) {
-                playSound(state, UDSounds.APPLIANCE_OPEN.get()); //todo: close sound
+                playSound(state, UDSounds.GENERIC_APPLIANCE_OPEN.get()); //todo: close sound
                 if (AbstractDestroyStorageDecorBlock.isTrulyOpen(state)) {
                     setOpen(state, true);
                 } else if (!AbstractDestroyStorageDecorBlock.isTrulyOpen(state)) {

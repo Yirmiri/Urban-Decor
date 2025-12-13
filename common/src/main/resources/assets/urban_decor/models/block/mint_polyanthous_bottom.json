@@ -1,0 +1,7 @@
+{
+  "parent": "urban_decor:block/large_flower_bottom",
+  "textures": {
+    "0": "urban_decor:block/mint_polyanthous_bottom",
+    "particle": "urban_decor:block/mint_polyanthous_bottom"
+  }
+}

@@ -5,11 +5,13 @@ import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootTableProvider;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.DoublePlantBlock;
 import net.minecraft.world.level.block.state.properties.BedPart;
 import net.minecraft.world.level.block.state.properties.DoubleBlockHalf;
 import net.minecraft.world.level.storage.loot.LootTable;
 import net.yirmiri.urban_decor.common.block.FloorLampBlock;
 import net.yirmiri.urban_decor.common.block.abstracts.AbstractLongBlock;
+import net.yirmiri.urban_decor.common.util.WrapColor;
 import net.yirmiri.urban_decor.core.registry.UDBlocks;
 import net.yirmiri.urban_decor.core.registry.UDItems;
 
@@ -93,7 +95,6 @@ public class UDLootTableProvider extends FabricBlockLootTableProvider {
         dropSelf(UDBlocks.DARK_PORCELAIN_BRICKS.get());
         dropSelf(UDBlocks.DARK_PORCELAIN_BRICK_STAIRS.get());
         add(UDBlocks.DARK_PORCELAIN_BRICK_SLAB.get(), createSlabItemTable(UDBlocks.PORCELAIN_BRICK_SLAB.get()));
-        dropOther(UDBlocks.STEEL_PIPE.get(), UDItems.STEEL_PIPE.get());
         add(UDBlocks.STAINLESS_STEEL_DOOR.get(), createDoorTable(UDBlocks.STAINLESS_STEEL_DOOR.get()));
         dropSelf(UDBlocks.STAINLESS_STEEL_TRAPDOOR.get());
         dropSelf(UDBlocks.STAINLESS_STEEL_LANTERN.get());
@@ -115,10 +116,29 @@ public class UDLootTableProvider extends FabricBlockLootTableProvider {
         add(UDBlocks.WARPED_PIANO.get(), longBlockDrops(UDBlocks.WARPED_PIANO.get()));
         dropSelf(UDBlocks.DISHWASHER.get());
         dropSelf(UDBlocks.DARK_DISHWASHER.get());
+        addWrappedPolyanthousDrops();
+        dropSelf(UDBlocks.PLASTIC_CHAIR.get());
+        dropSelf(UDBlocks.OAK_CALENDAR.get());
+        dropSelf(UDBlocks.SPRUCE_CALENDAR.get());
+        dropSelf(UDBlocks.BIRCH_CALENDAR.get());
+        dropSelf(UDBlocks.JUNGLE_CALENDAR.get());
+        dropSelf(UDBlocks.ACACIA_CALENDAR.get());
+        dropSelf(UDBlocks.DARK_OAK_CALENDAR.get());
+        dropSelf(UDBlocks.MANGROVE_CALENDAR.get());
+        dropSelf(UDBlocks.CHERRY_CALENDAR.get());
+        dropSelf(UDBlocks.BAMBOO_CALENDAR.get());
+        dropSelf(UDBlocks.CRIMSON_CALENDAR.get());
+        dropSelf(UDBlocks.WARPED_CALENDAR.get());
     }
 
     public LootTable.Builder floorLampDrops(Block block) {
         return this.createSinglePropConditionTable(block, FloorLampBlock.HALF, DoubleBlockHalf.LOWER);
+    }
+
+    private void addWrappedPolyanthousDrops() {
+        for (WrapColor colors : WrapColor.values()) {
+            add(UDBlocks.getWrappedPolyanthous(colors.getId()).get(), (b) -> createSinglePropConditionTable(b, DoublePlantBlock.HALF, DoubleBlockHalf.LOWER));
+        }
     }
 
     private void addDyedTowelBlockDrops() {

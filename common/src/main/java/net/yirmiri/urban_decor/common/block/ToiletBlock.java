@@ -17,13 +17,14 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
+import net.minecraft.world.phys.AABB;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.shapes.BooleanOp;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import net.yirmiri.urban_decor.common.block.abstracts.AbstractDecorBlock;
-import net.yirmiri.urban_decor.common.entity.ToiletEntity;
+import net.yirmiri.urban_decor.common.entity.SeatEntity;
 import net.yirmiri.urban_decor.common.util.UDUtils;
 import net.yirmiri.urban_decor.core.init.UDTags;
 import net.yirmiri.urban_decor.core.registry.UDEntities;
@@ -85,16 +86,24 @@ public class ToiletBlock extends AbstractDecorBlock {
                 }
                 return InteractionResult.SUCCESS;
             } else if (!player.isShiftKeyDown() && !state.getValue(OCCUPIED) && !level.isClientSide) {
-                ToiletEntity toiletEntity = UDEntities.TOILET.get().create(level);
-                toiletEntity.setPosRaw(pos.getX() + 0.5D, pos.getY() + 0.25D, pos.getZ() + 0.5D);
-                level.addFreshEntity(toiletEntity);
+                SeatEntity seatEntity = UDEntities.SEAT.get().create(level);
+                seatEntity.setPosRaw(pos.getX() + 0.5D, pos.getY() + 0.25D, pos.getZ() + 0.5D);
+                level.addFreshEntity(seatEntity);
                 level.setBlockAndUpdate(pos, state.setValue(OCCUPIED, true));
-                player.startRiding(toiletEntity);
+                player.startRiding(seatEntity);
                 //player.awardStat(UDStats.TIMES_SAT);
                 return InteractionResult.SUCCESS;
             }
         }
         return InteractionResult.CONSUME;
+    }
+
+    @Override
+    public void onRemove(BlockState state, Level level, BlockPos pos, BlockState newState, boolean moved) {
+        super.onRemove(state, level, pos, newState, moved);
+        for (SeatEntity seat : level.getEntitiesOfClass(SeatEntity.class, new AABB(pos))) {
+            seat.discard();
+        }
     }
 
     @Override

@@ -10,12 +10,15 @@ import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraft.world.level.block.state.properties.DirectionProperty;
+import net.minecraft.world.level.block.state.properties.EnumProperty;
 import net.minecraft.world.level.material.FluidState;
 import net.minecraft.world.level.material.Fluids;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
+import net.yirmiri.urban_decor.common.block.enums.ConnectionType;
 
 public class RigidGlassBlock extends HalfTransparentBlock implements SimpleWaterloggedBlock {
+    public static final EnumProperty<ConnectionType> CONNECTION = EnumProperty.create("connection", ConnectionType.class);
     public static final DirectionProperty FACING = BlockStateProperties.HORIZONTAL_FACING;
     public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
     private static final VoxelShape SHAPE_NORTH = Block.box(0, 0, 14, 16, 16, 16);
@@ -25,7 +28,10 @@ public class RigidGlassBlock extends HalfTransparentBlock implements SimpleWater
 
     public RigidGlassBlock(Properties settings) {
         super(settings);
-        registerDefaultState(defaultBlockState().setValue(BlockStateProperties.HORIZONTAL_FACING, Direction.NORTH).setValue(WATERLOGGED, false));
+        registerDefaultState(defaultBlockState()
+                .setValue(CONNECTION, ConnectionType.SINGLE)
+                .setValue(BlockStateProperties.HORIZONTAL_FACING, Direction.NORTH)
+                .setValue(WATERLOGGED, false));
     }
 
     @Override
@@ -55,21 +61,42 @@ public class RigidGlassBlock extends HalfTransparentBlock implements SimpleWater
     }
 
     @Override
-    protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
-        builder.add(FACING, WATERLOGGED);
-    }
-
-    @Override
     public FluidState getFluidState(BlockState state) {
         return state.getValue(WATERLOGGED) ? Fluids.WATER.getSource(false) : super.getFluidState(state);
     }
 
     @Override
-    public BlockState updateShape(BlockState state, Direction direction, BlockState neighborState, LevelAccessor world, BlockPos pos, BlockPos neighborPos) {
-        if (state.getValue(WATERLOGGED)) {
-            world.scheduleTick(pos, Fluids.WATER, Fluids.WATER.getTickDelay(world));
-        }
+    public BlockState updateShape(BlockState state, Direction direction, BlockState neighborState, LevelAccessor level, BlockPos pos, BlockPos neighborPos) {
+        BlockState newState = state;
+        newState = updateConnectionState(newState, level, pos);
 
-        return super.updateShape(state, direction, neighborState, world, pos, neighborPos);
+        if (newState.getValue(WATERLOGGED)) {
+            level.scheduleTick(pos, Fluids.WATER, Fluids.WATER.getTickDelay(level));
+        }
+        return newState;
+    }
+
+    @Override
+    protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
+        builder.add(FACING, WATERLOGGED, CONNECTION);
+    }
+
+    private BlockState updateConnectionState(BlockState state, LevelAccessor level, BlockPos pos) {
+        boolean above = level.getBlockState(pos.above()).getBlock() instanceof RigidGlassBlock;
+        boolean below = level.getBlockState(pos.below()).getBlock() instanceof RigidGlassBlock;
+        ConnectionType connectionType;
+
+        if (above && below) {
+            connectionType = ConnectionType.MIDDLE;
+        } else if (above) {
+            connectionType = ConnectionType.BOTTOM;
+        } else if (below) {
+            connectionType = ConnectionType.TOP;
+        } else {
+            connectionType = ConnectionType.SINGLE;
+        }
+        return this.defaultBlockState().setValue(CONNECTION, connectionType)
+                .setValue(FACING, state.getValue(FACING))
+                .setValue(WATERLOGGED, state.getValue(WATERLOGGED));
     }
 }

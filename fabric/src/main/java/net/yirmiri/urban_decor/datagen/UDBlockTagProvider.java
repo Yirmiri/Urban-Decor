@@ -3,13 +3,9 @@ package net.yirmiri.urban_decor.datagen;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
 import net.minecraft.core.HolderLookup;
-import net.minecraft.core.registries.Registries;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BlockTags;
-import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.DyeColor;
-import net.minecraft.world.level.block.Block;
-import net.yirmiri.urban_decor.UrbanDecor;
+import net.yirmiri.urban_decor.common.util.WrapColor;
 import net.yirmiri.urban_decor.core.init.UDTags;
 import net.yirmiri.urban_decor.core.registry.UDBlocks;
 
@@ -48,13 +44,25 @@ public class UDBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(UDBlocks.FLOOR_LAMP.get())
                 .add(UDBlocks.TURBINE.get())
         ;
+
+        getOrCreateTagBuilder(UDTags.BlockT.SEATS)
+                .addTag(UDTags.BlockT.TOILETS)
+                .add(UDBlocks.PLASTIC_CHAIR.get())
+        ;
         
         getOrCreateTagBuilder(UDTags.BlockT.TOILETS)
                 .add(UDBlocks.TOILET.get())
                 .add(UDBlocks.DARK_TOILET.get())
         ;
 
+        getOrCreateTagBuilder(UDTags.BlockT.MINEABLE_WITH_AXE_AND_PICKAXE)
+                .add(UDBlocks.POLYPROPYLENE_BLOCK.get())
+                .add(UDBlocks.PLASTIC_CHAIR.get())
+        ;
+
+
         getOrCreateTagBuilder(BlockTags.MINEABLE_WITH_AXE)
+                .addTag(UDTags.BlockT.MINEABLE_WITH_AXE_AND_PICKAXE)
                 .add(UDBlocks.OAK_PIANO.get())
                 .add(UDBlocks.SPRUCE_PIANO.get())
                 .add(UDBlocks.BIRCH_PIANO.get())
@@ -66,11 +74,22 @@ public class UDBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(UDBlocks.BAMBOO_PIANO.get())
                 .add(UDBlocks.CRIMSON_PIANO.get())
                 .add(UDBlocks.WARPED_PIANO.get())
-                .add(UDBlocks.POLYPROPYLENE_BLOCK.get())
+
+                .add(UDBlocks.OAK_CALENDAR.get())
+                .add(UDBlocks.SPRUCE_CALENDAR.get())
+                .add(UDBlocks.BIRCH_CALENDAR.get())
+                .add(UDBlocks.JUNGLE_CALENDAR.get())
+                .add(UDBlocks.ACACIA_CALENDAR.get())
+                .add(UDBlocks.DARK_OAK_CALENDAR.get())
+                .add(UDBlocks.MANGROVE_CALENDAR.get())
+                .add(UDBlocks.CHERRY_CALENDAR.get())
+                .add(UDBlocks.BAMBOO_CALENDAR.get())
+                .add(UDBlocks.CRIMSON_CALENDAR.get())
+                .add(UDBlocks.WARPED_CALENDAR.get())
         ;
 
         getOrCreateTagBuilder(BlockTags.MINEABLE_WITH_PICKAXE)
-                .add(UDBlocks.POLYPROPYLENE_BLOCK.get())
+                .addTag(UDTags.BlockT.MINEABLE_WITH_AXE_AND_PICKAXE)
                 .add(UDBlocks.DARK_PORCELAIN_BLOCK.get())
                 .add(UDBlocks.DARK_PORCELAIN_STAIRS.get())
                 .add(UDBlocks.DARK_PORCELAIN_SLAB.get())
@@ -145,9 +164,41 @@ public class UDBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(UDBlocks.DARK_DISHWASHER.get())
         ;
 
+        getOrCreateTagBuilder(UDTags.BlockT.HEAVY_STORAGE_SOUND)
+                .add(UDBlocks.DRYER.get())
+                .add(UDBlocks.DARK_DRYER.get())
+                .add(UDBlocks.FILING_CABINET.get())
+                .add(UDBlocks.MICROWAVE.get())
+                .add(UDBlocks.WALL_MICROWAVE.get())
+                .add(UDBlocks.OVEN.get())
+                .add(UDBlocks.DARK_OVEN.get())
+                .add(UDBlocks.TOOLBOX.get())
+                .add(UDBlocks.WASHING_MACHINE.get())
+                .add(UDBlocks.DARK_WASHING_MACHINE.get())
+        ;
+
+        getOrCreateTagBuilder(UDTags.BlockT.SMOOTH_STORAGE_SOUND)
+                .add(UDBlocks.CUPBOARD.get())
+                .add(UDBlocks.DISHWASHER.get())
+                .add(UDBlocks.DARK_CUPBOARD.get())
+                .add(UDBlocks.DARK_DISHWASHER.get())
+                .add(UDBlocks.FREEZER.get())
+                .add(UDBlocks.DARK_FREEZER.get())
+                .add(UDBlocks.FRIDGE.get())
+                .add(UDBlocks.DARK_FRIDGE.get())
+        ;
+
         for (DyeColor colors : DyeColor.values()) {
             getOrCreateTagBuilder(BlockTags.MINEABLE_WITH_PICKAXE).add(UDBlocks.getDyedTowelBarTowels(colors.getId()).get());
         }
+
+        for (WrapColor colors : WrapColor.values()) {
+            getOrCreateTagBuilder(UDTags.BlockT.POLYANTHOUS).add(UDBlocks.getWrappedPolyanthous(colors.getId()).get());
+        }
+
+        getOrCreateTagBuilder(BlockTags.TALL_FLOWERS)
+                .addTag(UDTags.BlockT.POLYANTHOUS)
+        ;
 
         getOrCreateTagBuilder(BlockTags.WALLS)
                 .add(UDBlocks.CHROMITE_WALL.get())

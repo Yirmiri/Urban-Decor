@@ -1,12 +1,10 @@
 package net.yirmiri.urban_decor.common.block;
 
 import net.minecraft.core.BlockPos;
-import net.minecraft.core.Direction;
 import net.minecraft.core.Vec3i;
 import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvent;
-import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.*;
@@ -21,15 +19,15 @@ import net.minecraft.world.level.block.RenderShape;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
-import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import net.yirmiri.urban_decor.common.block.abstracts.AbstractStorageDecorBlock;
-import net.yirmiri.urban_decor.common.block.entity.StorageApplianceBlockEntity;
+import net.yirmiri.urban_decor.common.block.entity.StorageDecorBlockEntity;
 import net.yirmiri.urban_decor.common.util.UDUtils;
 import net.yirmiri.urban_decor.core.init.UDTags;
+import net.yirmiri.urban_decor.core.registry.UDSounds;
 
 public class FilingCabinetBlock extends AbstractStorageDecorBlock {
     public static final BooleanProperty COMPACT = BooleanProperty.create("compact");
@@ -73,8 +71,8 @@ public class FilingCabinetBlock extends AbstractStorageDecorBlock {
             if (level.isClientSide) {
                 return InteractionResult.SUCCESS;
             } else {
-                if (blockEntity instanceof StorageApplianceBlockEntity && !player.isShiftKeyDown()) {
-                    player.openMenu((StorageApplianceBlockEntity) blockEntity);
+                if (blockEntity instanceof StorageDecorBlockEntity && !player.isShiftKeyDown()) {
+                    player.openMenu((StorageDecorBlockEntity) blockEntity);
                     //player.awardStat(UDStats.OPEN_APPLIANCES);
                     PiglinAi.angerNearbyPiglins(player, true);
                 }
@@ -82,9 +80,9 @@ public class FilingCabinetBlock extends AbstractStorageDecorBlock {
                 if (player.getMainHandItem().isEmpty() && player.isShiftKeyDown()) {
                     level.setBlockAndUpdate(pos, state.cycle(OPEN).cycle(TRUE_OPEN));
                     if (state.getValue(OPEN)) {
-                        playSound(level, pos, state, SoundEvents.IRON_DOOR_CLOSE);
+                        playSound(level, pos, state, UDSounds.METALLIC_CLOSE.get());
                     } else if (!state.getValue(OPEN)) {
-                        playSound(level, pos, state, SoundEvents.IRON_DOOR_OPEN);
+                        playSound(level, pos, state, UDSounds.METALLIC_OPEN.get());
                     }
                     return InteractionResult.SUCCESS;
                 }
@@ -107,7 +105,7 @@ public class FilingCabinetBlock extends AbstractStorageDecorBlock {
     }
 
     public BlockEntity newBlockEntity(BlockPos pos, BlockState state) {
-        return new StorageApplianceBlockEntity(pos, state);
+        return new StorageDecorBlockEntity(pos, state);
     }
 
     public RenderShape getRenderShape(BlockState state) {
@@ -149,8 +147,8 @@ public class FilingCabinetBlock extends AbstractStorageDecorBlock {
     @Override
     public void tick(BlockState state, ServerLevel world, BlockPos pos, RandomSource random) {
         BlockEntity blockEntity = world.getBlockEntity(pos);
-        if (blockEntity instanceof StorageApplianceBlockEntity) {
-            ((StorageApplianceBlockEntity)blockEntity).recheckOpen();
+        if (blockEntity instanceof StorageDecorBlockEntity) {
+            ((StorageDecorBlockEntity)blockEntity).recheckOpen();
         }
     }
 }

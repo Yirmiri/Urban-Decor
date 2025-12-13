@@ -1,0 +1,6 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": "#urban_decor:mint_polyanthous_generates_in",
+  "features": "urban_decor:patch_mint_polyanthous",
+  "step": "vegetal_decoration"
+}

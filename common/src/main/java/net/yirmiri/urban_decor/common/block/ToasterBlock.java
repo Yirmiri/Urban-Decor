@@ -5,7 +5,6 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
-import net.minecraft.tags.BlockTags;
 import net.minecraft.world.Containers;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
@@ -95,11 +94,11 @@ public class ToasterBlock extends BaseEntityBlock implements SimpleWaterloggedBl
     public void stepOn(Level world, BlockPos pos, BlockState state, Entity entity) {
         if (entity instanceof LivingEntity livingEntity) {
             if (state.getValue(WATERLOGGED) && state.getValue(LIT)) {
-                entity.hurt(UDDamageTypes.of(entity.level(), UDDamageTypes.WET_TOASTER), 10);
+                entity.hurt(UDDamageTypes.create(entity.level(), UDDamageTypes.WET_TOASTER), 10);
             }
 
             if (!state.getValue(WATERLOGGED) && state.getValue(LIT) && !livingEntity.isSteppingCarefully()) {
-                entity.hurt(UDDamageTypes.of(entity.level(), UDDamageTypes.TOASTER), 2);
+                entity.hurt(UDDamageTypes.create(entity.level(), UDDamageTypes.TOASTER), 2);
             }
         }
         super.stepOn(world, pos, state, entity);

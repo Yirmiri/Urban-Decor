@@ -14,5 +14,6 @@ public class FabricUrbanDecorDataGenerator implements DataGeneratorEntrypoint {
 		pack.addProvider(UDLootTableProvider::new);
 		pack.addProvider(UDModelProvider::new);
 		pack.addProvider(UDRecipeProvider::new);
+        pack.addProvider(UDBiomeTagProvider::new);
 	}
 }
