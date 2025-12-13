@@ -1,0 +1,10 @@
+{
+  "parent": "urban_decor:block/box",
+  "textures": {
+    "1": "urban_decor:block/warped_cardboard_box_top",
+    "2": "urban_decor:block/warped_cardboard_box_bottom",
+    "4": "urban_decor:block/warped_cardboard_box_side",
+    "5": "urban_decor:block/warped_cardboard_box_side_top",
+    "particle": "block/warped_planks"
+  }
+}

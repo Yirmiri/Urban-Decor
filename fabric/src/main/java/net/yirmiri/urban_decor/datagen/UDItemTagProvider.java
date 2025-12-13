@@ -48,11 +48,25 @@ public class UDItemTagProvider extends FabricTagProvider.ItemTagProvider {
         ;
 
         getOrCreateTagBuilder(UDTags.ItemT.HAS_WRAPPED_VARIANTS)
-
+                .add(UDBlocks.OAK_BOX.get().asItem())
+                .add(UDBlocks.SPRUCE_BOX.get().asItem())
+                .add(UDBlocks.BIRCH_BOX.get().asItem())
+                .add(UDBlocks.JUNGLE_BOX.get().asItem())
+                .add(UDBlocks.ACACIA_BOX.get().asItem())
+                .add(UDBlocks.DARK_OAK_BOX.get().asItem())
+                .add(UDBlocks.MANGROVE_BOX.get().asItem())
+                .add(UDBlocks.CHERRY_BOX.get().asItem())
+                .add(UDBlocks.BAMBOO_BOX.get().asItem())
+                .add(UDBlocks.CRIMSON_BOX.get().asItem())
+                .add(UDBlocks.WARPED_BOX.get().asItem())
         ;
 
         for (WrapColor colors : WrapColor.values()) {
             getOrCreateTagBuilder(UDTags.ItemT.POLYANTHOUS).add(UDBlocks.getWrappedPolyanthous(colors.getId()).get().asItem());
+        }
+
+        for (WrapColor colors : WrapColor.values()) {
+            getOrCreateTagBuilder(UDTags.ItemT.WRAPS).add(UDItems.getWrappedWraps(colors.getId()).get());
         }
 
         getOrCreateTagBuilder(UDTags.ItemT.PORCELAIN)

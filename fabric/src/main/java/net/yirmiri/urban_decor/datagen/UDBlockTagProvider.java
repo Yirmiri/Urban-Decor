@@ -65,6 +65,18 @@ public class UDBlockTagProvider extends FabricTagProvider.BlockTagProvider {
         getOrCreateTagBuilder(BlockTags.MINEABLE_WITH_AXE)
                 .addTag(UDTags.BlockT.MINEABLE_WITH_AXE_AND_PICKAXE)
 
+                .add(UDBlocks.OAK_BOX.get())
+                .add(UDBlocks.SPRUCE_BOX.get())
+                .add(UDBlocks.BIRCH_BOX.get())
+                .add(UDBlocks.JUNGLE_BOX.get())
+                .add(UDBlocks.ACACIA_BOX.get())
+                .add(UDBlocks.DARK_OAK_BOX.get())
+                .add(UDBlocks.MANGROVE_BOX.get())
+                .add(UDBlocks.CHERRY_BOX.get())
+                .add(UDBlocks.BAMBOO_BOX.get())
+                .add(UDBlocks.CRIMSON_BOX.get())
+                .add(UDBlocks.WARPED_BOX.get())
+                
                 .add(UDBlocks.OAK_GRANDFATHER_CLOCK.get())
                 .add(UDBlocks.SPRUCE_GRANDFATHER_CLOCK.get())
                 .add(UDBlocks.BIRCH_GRANDFATHER_CLOCK.get())

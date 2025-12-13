@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "wrap",
+  "key": {
+    "#": {
+      "item": "urban_decor:azure_polyanthous"
+    },
+    "@": {
+      "item": "urban_decor:polypropylene"
+    }
+  },
+  "pattern": [
+    "@#@"
+  ],
+  "result": {
+    "count": 3,
+    "id": "urban_decor:azure_wrap"
+  }
+}

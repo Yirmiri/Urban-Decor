@@ -1,3 +1,15 @@
 {
-  "values": []
+  "values": [
+    "urban_decor:oak_box",
+    "urban_decor:spruce_box",
+    "urban_decor:birch_box",
+    "urban_decor:jungle_box",
+    "urban_decor:acacia_box",
+    "urban_decor:dark_oak_box",
+    "urban_decor:mangrove_box",
+    "urban_decor:cherry_box",
+    "urban_decor:bamboo_box",
+    "urban_decor:crimson_box",
+    "urban_decor:warped_box"
+  ]
 }

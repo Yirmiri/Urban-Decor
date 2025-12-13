@@ -1,11 +1,11 @@
-// 1.21.1	2025-12-13T07:09:08.8199969	Urban Decor/Tags for minecraft:block
+// 1.21.1	2025-12-13T11:02:49.0573026	Urban Decor/Tags for minecraft:block
 cf577f811663e6674d59ffd998e8e7ea32c8d6c7 data\urban_decor\tags\block\mineable_with_axe_and_pickaxe.json
 da654d67e78b8f46055aa829cbeebdd2ab95f594 data\urban_decor\tags\block\toilets.json
 772b50cda2f50c6df51365f467cb24c926766add data\minecraft\tags\block\climbable.json
 76adecef9f85206ae9ed2751459ecf8ecf28f4a1 data\minecraft\tags\block\wool.json
 bfdd93f59fb20311dc1633d396a6efdd8b1479d2 data\minecraft\tags\block\campfires.json
 5c1cb523386eb8a923dfc01d87487d45780a790d data\urban_decor\tags\block\heavy_storage_sound.json
-778b08a404f728e90708d4fa54087ebd88d8cb7e data\minecraft\tags\block\mineable\axe.json
+b28812dffd948ffebbd922898ebc313ef78f85d8 data\minecraft\tags\block\mineable\axe.json
 1b84b531e67038f7d67b870aa4280d156c7fbd2b data\urban_decor\tags\block\smooth_storage_sound.json
 578655c4c03fa3fa7cf23b09532575cbebb73212 data\minecraft\tags\block\tall_flowers.json
 90b799e5d04fcf7e1f59ced8bf86398d02bb42b2 data\urban_decor\tags\block\has_toolbox_variants.json

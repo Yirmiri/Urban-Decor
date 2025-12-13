@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_spring_polyanthous": {
+      "conditions": {
+        "items": [
+          {
+            "items": "urban_decor:spring_polyanthous"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "urban_decor:spring_wrap"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_spring_polyanthous"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "urban_decor:spring_wrap"
+    ]
+  }
+}

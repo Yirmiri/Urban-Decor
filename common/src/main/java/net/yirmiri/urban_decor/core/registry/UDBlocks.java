@@ -135,6 +135,18 @@ public class UDBlocks {
     public static final Supplier<Block> CRIMSON_GRANDFATHER_CLOCK = register("crimson_grandfather_clock", () -> new GrandClockBlock(UDProperties.BlockP.NETHER_GRAND_CLOCK), true);
     public static final Supplier<Block> WARPED_GRANDFATHER_CLOCK = register("warped_grandfather_clock", () -> new GrandClockBlock(UDProperties.BlockP.NETHER_GRAND_CLOCK), true);
 
+    public static final Supplier<Block> OAK_BOX = register("oak_box", () -> new BoxBlock(UDProperties.BlockP.OAK_PLANKS), true);
+    public static final Supplier<Block> SPRUCE_BOX = register("spruce_box", () -> new BoxBlock(UDProperties.BlockP.OAK_PLANKS), true);
+    public static final Supplier<Block> BIRCH_BOX = register("birch_box", () -> new BoxBlock(UDProperties.BlockP.OAK_PLANKS), true);
+    public static final Supplier<Block> JUNGLE_BOX = register("jungle_box", () -> new BoxBlock(UDProperties.BlockP.OAK_PLANKS), true);
+    public static final Supplier<Block> ACACIA_BOX = register("acacia_box", () -> new BoxBlock(UDProperties.BlockP.OAK_PLANKS), true);
+    public static final Supplier<Block> DARK_OAK_BOX = register("dark_oak_box", () -> new BoxBlock(UDProperties.BlockP.OAK_PLANKS), true);
+    public static final Supplier<Block> MANGROVE_BOX = register("mangrove_box", () -> new BoxBlock(UDProperties.BlockP.OAK_PLANKS), true);
+    public static final Supplier<Block> CHERRY_BOX = register("cherry_box", () -> new BoxBlock(UDProperties.BlockP.CHERRY_PLANKS), true);
+    public static final Supplier<Block> BAMBOO_BOX = register("bamboo_box", () -> new BoxBlock(UDProperties.BlockP.BAMBOO_PLANKS), true);
+    public static final Supplier<Block> CRIMSON_BOX = register("crimson_box", () -> new BoxBlock(UDProperties.BlockP.CRIMSON_PLANKS), true);
+    public static final Supplier<Block> WARPED_BOX = register("warped_box", () -> new BoxBlock(UDProperties.BlockP.CRIMSON_PLANKS), true);
+
     public static final Supplier<Block> WALL_CLOCK = register("wall_clock", () -> new WallClockBlock(UDProperties.BlockP.WALL_CLOCK), true);
 
     //MISC APPLIANCES

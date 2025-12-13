@@ -23,10 +23,9 @@ public class UrbanDecor {
 //Fixed some appliances not making any open/close sounds when truly opening them
 //more interactions
 //lead on animal to click seat to make it sit
-//add ticking hands to clock
-//click clock to see current time in day
 
 //TODO MISC
+//box drops applied wrap when broken
 //toaster smoke particles
 //microwave cook sound instance
 //re-sort creative

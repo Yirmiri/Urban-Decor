@@ -38,6 +38,7 @@ public class UDLangProvider extends FabricLanguageProvider {
                     "_", " "), "gray", "Gray"), "blue", "Blue"));
 
             build.add(UDBlocks.getWrappedPolyanthous(colors.getId()).get(), wrapString + " Polyanthous");
+            build.add(UDItems.getWrappedWraps(colors.getId()).get(), wrapString + " Wrap");
         }
 
         //MISC
@@ -162,6 +163,17 @@ public class UDLangProvider extends FabricLanguageProvider {
         build.add(UDBlocks.CRIMSON_GRANDFATHER_CLOCK.get(), "Crimson Grandfather Clock");
         build.add(UDBlocks.WARPED_GRANDFATHER_CLOCK.get(), "Warped Grandfather Clock");
         build.add(UDBlocks.WALL_CLOCK.get(), "Wall Clock");
+        build.add(UDBlocks.OAK_BOX.get(), "Oak Box");
+        build.add(UDBlocks.SPRUCE_BOX.get(), "Spruce Box");
+        build.add(UDBlocks.BIRCH_BOX.get(), "Birch Box");
+        build.add(UDBlocks.JUNGLE_BOX.get(), "Jungle Box");
+        build.add(UDBlocks.ACACIA_BOX.get(), "Acacia Box");
+        build.add(UDBlocks.DARK_OAK_BOX.get(), "Dark Oak Box");
+        build.add(UDBlocks.MANGROVE_BOX.get(), "Mangrove Box");
+        build.add(UDBlocks.CHERRY_BOX.get(), "Cherry Box");
+        build.add(UDBlocks.BAMBOO_BOX.get(), "Bamboo Box");
+        build.add(UDBlocks.CRIMSON_BOX.get(), "Crimson Box");
+        build.add(UDBlocks.WARPED_BOX.get(), "Warped Box");
 
         //ITEMS
         build.add(UDItems.POLYPROPYLENE.get(), "Polypropylene");
@@ -239,6 +251,7 @@ public class UDLangProvider extends FabricLanguageProvider {
         build.add("subtitles.block.faucet.turn", "Faucet Turns");
         build.add("subtitles.block.satellite.receive_signal", "Satellite dish sequences");
         build.add("subtitles.block.satellite.receive_signal_rare", "SATELLITE DISH SEQUENCES...");
+        build.add("subtitles.item.wrap.use", "Wrapping wraps");
 
         //ADVANCEMENTS
         build.add("urban_decor.advancement.root", "Urban Decor");
@@ -372,12 +385,24 @@ public class UDLangProvider extends FabricLanguageProvider {
         build.add(YT_ID + "block." + MOD_ID + "crimson_grandfather_clock.desc", "Tick tock, constructed from crimson planks");
         build.add(YT_ID + "block." + MOD_ID + "warped_grandfather_clock.desc", "Tick tock, constructed from warped planks");
         build.add(YT_ID + "block." + MOD_ID + "wall_clock.desc", "Ticking tin...");
+        build.add(YT_ID + "block." + MOD_ID + "oak_box.desc", "Handle with care!, constructed from oak planks");
+        build.add(YT_ID + "block." + MOD_ID + "spruce_box.desc", "Handle with care!, constructed from spruce planks");
+        build.add(YT_ID + "block." + MOD_ID + "birch_box.desc", "Handle with care!, constructed from birch planks");
+        build.add(YT_ID + "block." + MOD_ID + "jungle_box.desc", "Handle with care!, constructed from jungle planks");
+        build.add(YT_ID + "block." + MOD_ID + "acacia_box.desc", "Handle with care!, constructed from acacia planks");
+        build.add(YT_ID + "block." + MOD_ID + "dark_oak_box.desc", "Handle with care!, constructed from dark oak planks");
+        build.add(YT_ID + "block." + MOD_ID + "mangrove_box.desc", "Handle with care!, constructed from mangrove planks");
+        build.add(YT_ID + "block." + MOD_ID + "cherry_box.desc", "Handle with care!, constructed from cherry planks");
+        build.add(YT_ID + "block." + MOD_ID + "bamboo_box.desc", "Handle with care!, constructed from bamboo planks");
+        build.add(YT_ID + "block." + MOD_ID + "crimson_box.desc", "Handle with care!, constructed from crimson planks");
+        build.add(YT_ID + "block." + MOD_ID + "warped_box.desc", "Handle with care!, constructed from warped planks");
         
         for (WrapColor colors : WrapColor.values()) {
-            String dyeString = StringUtils.capitalize(StringUtils.replace(StringUtils.replace(StringUtils.replace(colors.getName(),
+            String wrapString = StringUtils.capitalize(StringUtils.replace(StringUtils.replace(StringUtils.replace(colors.getName(),
                     "_", " "), "gray", "Gray"), "blue", "Blue"));
 
             build.add(YT_ID + "block." + MOD_ID + UDBlocks.getWrappedPolyanthous(colors.getId()) + ".desc", "A vibrant, delicate flower that is essential in the creation of polypropylene");
+            build.add(YT_ID + "item." + MOD_ID + UDItems.getWrappedWraps(colors.getId()) + ".desc", "A" + " " + colors.getName() + " " + " wrap that can be applied to various applianced");
         }
 
         for (DyeColor colors : DyeColor.values()) {

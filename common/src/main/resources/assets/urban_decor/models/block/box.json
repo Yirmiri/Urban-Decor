@@ -1,0 +1,25 @@
+{
+    "format_version": "1.9.0",
+	"credit": "Made with Blockbench by Tellio-Ari",
+	"textures": {
+		"1": "urban_decor:block/oak_cardboard_box_top",
+		"2": "urban_decor:block/oak_cardboard_box_bottom",
+		"4": "urban_decor:block/oak_cardboard_box_side",
+		"5": "urban_decor:block/oak_cardboard_box_side_top",
+		"particle": "block/oak_planks"
+	},
+	"elements": [
+		{
+			"from": [0, 0, 0],
+			"to": [16, 16, 16],
+			"faces": {
+				"north": {"uv": [0, 0, 16, 16], "texture": "#4"},
+				"east": {"uv": [0, 0, 16, 16], "texture": "#5"},
+				"south": {"uv": [0, 0, 16, 16], "texture": "#4"},
+				"west": {"uv": [0, 0, 16, 16], "texture": "#5"},
+				"up": {"uv": [0, 0, 16, 16], "texture": "#1"},
+				"down": {"uv": [0, 0, 16, 16], "rotation": 90, "texture": "#2"}
+			}
+		}
+	]
+}

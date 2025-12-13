@@ -142,6 +142,17 @@ public class UDLootTableProvider extends FabricBlockLootTableProvider {
         add(UDBlocks.CRIMSON_GRANDFATHER_CLOCK.get(), createDoorTable(UDBlocks.CRIMSON_GRANDFATHER_CLOCK.get()));
         add(UDBlocks.WARPED_GRANDFATHER_CLOCK.get(), createDoorTable(UDBlocks.WARPED_GRANDFATHER_CLOCK.get()));
         dropSelf(UDBlocks.WALL_CLOCK.get());
+        dropSelf(UDBlocks.OAK_BOX.get());
+        dropSelf(UDBlocks.SPRUCE_BOX.get());
+        dropSelf(UDBlocks.BIRCH_BOX.get());
+        dropSelf(UDBlocks.JUNGLE_BOX.get());
+        dropSelf(UDBlocks.ACACIA_BOX.get());
+        dropSelf(UDBlocks.DARK_OAK_BOX.get());
+        dropSelf(UDBlocks.MANGROVE_BOX.get());
+        dropSelf(UDBlocks.CHERRY_BOX.get());
+        dropSelf(UDBlocks.BAMBOO_BOX.get());
+        dropSelf(UDBlocks.CRIMSON_BOX.get());
+        dropSelf(UDBlocks.WARPED_BOX.get());
     }
 
     public LootTable.Builder floorLampDrops(Block block) {

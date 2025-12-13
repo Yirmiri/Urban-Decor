@@ -17,6 +17,9 @@ public class UDSounds {
     public static final Supplier<SoundEvent> METALLIC_OPEN = register("block.metallic.open");
     public static final Supplier<SoundEvent> METALLIC_CLOSE = register("block.metallic.close");
 
+    //ITEM
+    public static final Supplier<SoundEvent> WRAP_USE = register("item.wrap.use");
+
     //MISC
     public static final Supplier<SoundEvent> SATELITE_RECIEVE_SIGNAL = register("block.satellite.receive_signal");
     public static final Supplier<SoundEvent> SATELITE_RECIEVE_SIGNAL_RARE = register("block.satellite.receive_signal_rare");

@@ -66,6 +66,10 @@ public class UDProperties {
         public static final BlockBehaviour.Properties CHERRY_GRAND_CLOCK = BlockBehaviour.Properties.ofFullCopy(Blocks.CHERRY_PLANKS);
         public static final BlockBehaviour.Properties BAMBOO_GRAND_CLOCK = BlockBehaviour.Properties.ofFullCopy(Blocks.BAMBOO_PLANKS);
         public static final BlockBehaviour.Properties WALL_CLOCK = BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS).strength(0.5F);
+        public static final BlockBehaviour.Properties OAK_PLANKS = BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS);
+        public static final BlockBehaviour.Properties CRIMSON_PLANKS = BlockBehaviour.Properties.ofFullCopy(Blocks.CRIMSON_PLANKS);
+        public static final BlockBehaviour.Properties CHERRY_PLANKS = BlockBehaviour.Properties.ofFullCopy(Blocks.CHERRY_PLANKS);
+        public static final BlockBehaviour.Properties BAMBOO_PLANKS = BlockBehaviour.Properties.ofFullCopy(Blocks.BAMBOO_PLANKS);
 
         //MISC APPLIANCES
         public static final BlockBehaviour.Properties AIR_CONDITIONER = BlockBehaviour.Properties.ofFullCopy(Blocks.STONE).strength(1.0F).mapColor(MapColor.COLOR_GRAY).sound(SoundType.LANTERN).requiresCorrectToolForDrops();

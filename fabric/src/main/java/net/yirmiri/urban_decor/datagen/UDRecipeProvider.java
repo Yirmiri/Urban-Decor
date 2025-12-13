@@ -1057,6 +1057,86 @@ public class UDRecipeProvider extends FabricRecipeProvider {
                 .pattern("@@@")
                 .unlockedBy(getHasName(UDItems.POLYPROPYLENE.get()), has(UDItems.POLYPROPYLENE.get()))
                 .save(exporter, RunicLib.customid(UrbanDecor.MOD_ID, getSimpleRecipeName(UDBlocks.WALL_CLOCK.get())));
+
+        createBoxRecipe(UDBlocks.OAK_BOX.get(), Ingredient.of(Items.OAK_PLANKS))
+                .unlockedBy(getHasName(Items.OAK_PLANKS), has(Items.OAK_PLANKS))
+                .save(exporter, RunicLib.customid(UrbanDecor.MOD_ID, getSimpleRecipeName(UDBlocks.OAK_BOX.get())));
+
+        createBoxRecipe(UDBlocks.SPRUCE_BOX.get(), Ingredient.of(Items.SPRUCE_PLANKS))
+                .unlockedBy(getHasName(Items.SPRUCE_PLANKS), has(Items.SPRUCE_PLANKS))
+                .save(exporter, RunicLib.customid(UrbanDecor.MOD_ID, getSimpleRecipeName(UDBlocks.SPRUCE_BOX.get())));
+
+        createBoxRecipe(UDBlocks.BIRCH_BOX.get(), Ingredient.of(Items.BIRCH_PLANKS))
+                .unlockedBy(getHasName(Items.BIRCH_PLANKS), has(Items.BIRCH_PLANKS))
+                .save(exporter, RunicLib.customid(UrbanDecor.MOD_ID, getSimpleRecipeName(UDBlocks.BIRCH_BOX.get())));
+
+        createBoxRecipe(UDBlocks.JUNGLE_BOX.get(), Ingredient.of(Items.JUNGLE_PLANKS))
+                .unlockedBy(getHasName(Items.JUNGLE_PLANKS), has(Items.JUNGLE_PLANKS))
+                .save(exporter, RunicLib.customid(UrbanDecor.MOD_ID, getSimpleRecipeName(UDBlocks.JUNGLE_BOX.get())));
+
+        createBoxRecipe(UDBlocks.ACACIA_BOX.get(), Ingredient.of(Items.ACACIA_PLANKS))
+                .unlockedBy(getHasName(Items.ACACIA_PLANKS), has(Items.ACACIA_PLANKS))
+                .save(exporter, RunicLib.customid(UrbanDecor.MOD_ID, getSimpleRecipeName(UDBlocks.ACACIA_BOX.get())));
+
+        createBoxRecipe(UDBlocks.DARK_OAK_BOX.get(), Ingredient.of(Items.DARK_OAK_PLANKS))
+                .unlockedBy(getHasName(Items.DARK_OAK_PLANKS), has(Items.DARK_OAK_PLANKS))
+                .save(exporter, RunicLib.customid(UrbanDecor.MOD_ID, getSimpleRecipeName(UDBlocks.DARK_OAK_BOX.get())));
+
+        createBoxRecipe(UDBlocks.MANGROVE_BOX.get(), Ingredient.of(Items.MANGROVE_PLANKS))
+                .unlockedBy(getHasName(Items.MANGROVE_PLANKS), has(Items.MANGROVE_PLANKS))
+                .save(exporter, RunicLib.customid(UrbanDecor.MOD_ID, getSimpleRecipeName(UDBlocks.MANGROVE_BOX.get())));
+
+        createBoxRecipe(UDBlocks.CHERRY_BOX.get(), Ingredient.of(Items.CHERRY_PLANKS))
+                .unlockedBy(getHasName(Items.CHERRY_PLANKS), has(Items.CHERRY_PLANKS))
+                .save(exporter, RunicLib.customid(UrbanDecor.MOD_ID, getSimpleRecipeName(UDBlocks.CHERRY_BOX.get())));
+
+        createBoxRecipe(UDBlocks.BAMBOO_BOX.get(), Ingredient.of(Items.BAMBOO_PLANKS))
+                .unlockedBy(getHasName(Items.BAMBOO_PLANKS), has(Items.BAMBOO_PLANKS))
+                .save(exporter, RunicLib.customid(UrbanDecor.MOD_ID, getSimpleRecipeName(UDBlocks.BAMBOO_BOX.get())));
+
+        createBoxRecipe(UDBlocks.CRIMSON_BOX.get(), Ingredient.of(Items.CRIMSON_PLANKS))
+                .unlockedBy(getHasName(Items.CRIMSON_PLANKS), has(Items.CRIMSON_PLANKS))
+                .save(exporter, RunicLib.customid(UrbanDecor.MOD_ID, getSimpleRecipeName(UDBlocks.CRIMSON_BOX.get())));
+
+        createBoxRecipe(UDBlocks.WARPED_BOX.get(), Ingredient.of(Items.WARPED_PLANKS))
+                .unlockedBy(getHasName(Items.WARPED_PLANKS), has(Items.WARPED_PLANKS))
+                .save(exporter, RunicLib.customid(UrbanDecor.MOD_ID, getSimpleRecipeName(UDBlocks.WARPED_BOX.get())));
+
+        createWrap(UDItems.getWrappedWraps(WrapColor.CHERRY.getId()).get(), 
+                Ingredient.of(UDBlocks.getWrappedPolyanthous(WrapColor.CHERRY.getId()).get().asItem()))
+                .unlockedBy(getHasName(UDBlocks.getWrappedPolyanthous(WrapColor.CHERRY.getId()).get().asItem()), 
+                        has(UDBlocks.getWrappedPolyanthous(WrapColor.CHERRY.getId()).get().asItem())).group("wrap")
+                .save(exporter, RunicLib.customid(UrbanDecor.MOD_ID, getSimpleRecipeName(UDItems.getWrappedWraps(WrapColor.CHERRY.getId()).get())));
+
+        createWrap(UDItems.getWrappedWraps(WrapColor.DAFFODIL.getId()).get(),
+                Ingredient.of(UDBlocks.getWrappedPolyanthous(WrapColor.DAFFODIL.getId()).get().asItem()))
+                .unlockedBy(getHasName(UDBlocks.getWrappedPolyanthous(WrapColor.DAFFODIL.getId()).get().asItem()),
+                        has(UDBlocks.getWrappedPolyanthous(WrapColor.DAFFODIL.getId()).get().asItem())).group("wrap")
+                .save(exporter, RunicLib.customid(UrbanDecor.MOD_ID, getSimpleRecipeName(UDItems.getWrappedWraps(WrapColor.DAFFODIL.getId()).get())));
+
+        createWrap(UDItems.getWrappedWraps(WrapColor.SPRING.getId()).get(),
+                Ingredient.of(UDBlocks.getWrappedPolyanthous(WrapColor.SPRING.getId()).get().asItem()))
+                .unlockedBy(getHasName(UDBlocks.getWrappedPolyanthous(WrapColor.SPRING.getId()).get().asItem()),
+                        has(UDBlocks.getWrappedPolyanthous(WrapColor.SPRING.getId()).get().asItem())).group("wrap")
+                .save(exporter, RunicLib.customid(UrbanDecor.MOD_ID, getSimpleRecipeName(UDItems.getWrappedWraps(WrapColor.SPRING.getId()).get())));
+
+        createWrap(UDItems.getWrappedWraps(WrapColor.MINT.getId()).get(),
+                Ingredient.of(UDBlocks.getWrappedPolyanthous(WrapColor.MINT.getId()).get().asItem()))
+                .unlockedBy(getHasName(UDBlocks.getWrappedPolyanthous(WrapColor.MINT.getId()).get().asItem()),
+                        has(UDBlocks.getWrappedPolyanthous(WrapColor.MINT.getId()).get().asItem())).group("wrap")
+                .save(exporter, RunicLib.customid(UrbanDecor.MOD_ID, getSimpleRecipeName(UDItems.getWrappedWraps(WrapColor.MINT.getId()).get())));
+
+        createWrap(UDItems.getWrappedWraps(WrapColor.AZURE.getId()).get(),
+                Ingredient.of(UDBlocks.getWrappedPolyanthous(WrapColor.AZURE.getId()).get().asItem()))
+                .unlockedBy(getHasName(UDBlocks.getWrappedPolyanthous(WrapColor.AZURE.getId()).get().asItem()),
+                        has(UDBlocks.getWrappedPolyanthous(WrapColor.AZURE.getId()).get().asItem())).group("wrap")
+                .save(exporter, RunicLib.customid(UrbanDecor.MOD_ID, getSimpleRecipeName(UDItems.getWrappedWraps(WrapColor.AZURE.getId()).get())));
+
+        createWrap(UDItems.getWrappedWraps(WrapColor.RUBY.getId()).get(),
+                Ingredient.of(UDBlocks.getWrappedPolyanthous(WrapColor.RUBY.getId()).get().asItem()))
+                .unlockedBy(getHasName(UDBlocks.getWrappedPolyanthous(WrapColor.RUBY.getId()).get().asItem()),
+                        has(UDBlocks.getWrappedPolyanthous(WrapColor.RUBY.getId()).get().asItem())).group("wrap")
+                .save(exporter, RunicLib.customid(UrbanDecor.MOD_ID, getSimpleRecipeName(UDItems.getWrappedWraps(WrapColor.RUBY.getId()).get())));
     }
 
     public static ShapelessRecipeBuilder createFromBasePictureFrameRecipe(ItemLike output, Item picture, DyeColor color) {
@@ -1078,11 +1158,25 @@ public class UDRecipeProvider extends FabricRecipeProvider {
                 .pattern("##");
     }
 
+    public static ShapedRecipeBuilder createWrap(ItemLike output, Ingredient polyanthous) {
+        return ShapedRecipeBuilder.shaped(RecipeCategory.MISC, output, 3)
+                .define('#', polyanthous).define('@', UDItems.POLYPROPYLENE.get())
+                .pattern("@#@");
+    }
+
     public static ShapedRecipeBuilder createCalenderRecipe(ItemLike output, Ingredient planks) {
         return ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, output, 1)
                 .define('#', planks).define('@', Items.PAPER)
                 .pattern("###")
                 .pattern("@@@")
+                .pattern("###");
+    }
+
+    public static ShapedRecipeBuilder createBoxRecipe(ItemLike output, Ingredient planks) {
+        return ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, output, 1)
+                .define('#', planks).define('@', Items.PAPER)
+                .pattern("###")
+                .pattern("#@#")
                 .pattern("###");
     }
 

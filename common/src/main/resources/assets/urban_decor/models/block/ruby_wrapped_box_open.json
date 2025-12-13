@@ -1,0 +1,11 @@
+{
+  "parent": "urban_decor:block/box_open",
+  "textures": {
+    "2": "urban_decor:block/ruby_wrapped_cardboard_box_bottom",
+    "4": "urban_decor:block/ruby_wrapped_cardboard_box_side",
+    "5": "urban_decor:block/ruby_wrapped_cardboard_box_side_top",
+    "6": "urban_decor:block/ruby_wrapped_cardboard_box_top_flaps",
+    "7": "urban_decor:block/ruby_wrapped_cardboard_box_top_inside",
+    "particle": "urban_decor:block/ruby_wrapped_cardboard_box_side"
+  }
+}

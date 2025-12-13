@@ -132,6 +132,18 @@ public class UDCreativeTabs {
                 entry.accept(UDBlocks.CRIMSON_PIANO.get());
                 entry.accept(UDBlocks.WARPED_PIANO.get());
 
+                entry.accept(UDBlocks.OAK_BOX.get());
+                entry.accept(UDBlocks.SPRUCE_BOX.get());
+                entry.accept(UDBlocks.BIRCH_BOX.get());
+                entry.accept(UDBlocks.JUNGLE_BOX.get());
+                entry.accept(UDBlocks.ACACIA_BOX.get());
+                entry.accept(UDBlocks.DARK_OAK_BOX.get());
+                entry.accept(UDBlocks.MANGROVE_BOX.get());
+                entry.accept(UDBlocks.CHERRY_BOX.get());
+                entry.accept(UDBlocks.BAMBOO_BOX.get());
+                entry.accept(UDBlocks.CRIMSON_BOX.get());
+                entry.accept(UDBlocks.WARPED_BOX.get());
+
                 entry.accept(UDBlocks.OAK_CALENDAR.get());
                 entry.accept(UDBlocks.SPRUCE_CALENDAR.get());
                 entry.accept(UDBlocks.BIRCH_CALENDAR.get());
@@ -149,6 +161,14 @@ public class UDCreativeTabs {
                 entry.accept(UDBlocks.AIR_CONDITIONER.get());
                 entry.accept(UDBlocks.RADIATOR.get());
 
+                //WRAPPED
+                entry.accept(UDItems.getWrappedWraps(WrapColor.CHERRY.getId()).get());
+                entry.accept(UDItems.getWrappedWraps(WrapColor.DAFFODIL.getId()).get());
+                entry.accept(UDItems.getWrappedWraps(WrapColor.SPRING.getId()).get());
+                entry.accept(UDItems.getWrappedWraps(WrapColor.MINT.getId()).get());
+                entry.accept(UDItems.getWrappedWraps(WrapColor.AZURE.getId()).get());
+                entry.accept(UDItems.getWrappedWraps(WrapColor.RUBY.getId()).get());
+
                 entry.accept(UDBlocks.getWrappedPolyanthous(WrapColor.CHERRY.getId()).get());
                 entry.accept(UDBlocks.getWrappedPolyanthous(WrapColor.DAFFODIL.getId()).get());
                 entry.accept(UDBlocks.getWrappedPolyanthous(WrapColor.SPRING.getId()).get());
@@ -156,6 +176,7 @@ public class UDCreativeTabs {
                 entry.accept(UDBlocks.getWrappedPolyanthous(WrapColor.AZURE.getId()).get());
                 entry.accept(UDBlocks.getWrappedPolyanthous(WrapColor.RUBY.getId()).get());
 
+                //DYED
                 entry.accept(UDBlocks.TOWEL_BAR.get());
                 entry.accept(UDBlocks.getDyedTowelBlocks(DyeColor.WHITE.getId()).get());
                 entry.accept(UDBlocks.getDyedTowelBlocks(DyeColor.LIGHT_GRAY.getId()).get());
