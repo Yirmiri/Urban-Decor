@@ -22,6 +22,9 @@ public class UrbanDecor {
 //make tags for each appliance type with their black/white/wrapped included
 //Fixed some appliances not making any open/close sounds when truly opening them
 //more interactions
+//lead on animal to click seat to make it sit
+//add ticking hands to clock
+//click clock to see current time in day
 
 //TODO MISC
 //toaster smoke particles

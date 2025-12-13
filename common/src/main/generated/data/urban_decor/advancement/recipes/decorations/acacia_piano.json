@@ -1,6 +1,16 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
+    "has_dark_porcelain": {
+      "conditions": {
+        "items": [
+          {
+            "items": "urban_decor:dark_porcelain"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
     "has_porcelain": {
       "conditions": {
         "items": [
@@ -21,7 +31,8 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_porcelain"
+      "has_porcelain",
+      "has_dark_porcelain"
     ]
   ],
   "rewards": {

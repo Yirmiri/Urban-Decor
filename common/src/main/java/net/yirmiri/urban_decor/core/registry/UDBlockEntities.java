@@ -30,6 +30,9 @@ public class UDBlockEntities {
             UrbanDecor.MOD_ID, "destroy_storage_appliance", () -> Services.REGISTRY.createBlockEntity(DestroyStorageApplianceBlockEntity::new,
                     UDBlocks.TRASH_CAN.get()));
 
+    public static final Supplier<BlockEntityType<WallClockBlockEntity>> WALL_CLOCK = Services.REGISTRY.registerBlockEntityType(
+            UrbanDecor.MOD_ID, "wall_clock", () -> Services.REGISTRY.createBlockEntity(WallClockBlockEntity::new,
+                    UDBlocks.WALL_CLOCK.get()));
 
     public static void loadBlockEntities() {
     }

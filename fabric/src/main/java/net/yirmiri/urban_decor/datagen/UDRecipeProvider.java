@@ -330,7 +330,7 @@ public class UDRecipeProvider extends FabricRecipeProvider {
                 .save(exporter, RunicLib.customid(UrbanDecor.MOD_ID, getSimpleRecipeName(UDBlocks.TURBINE.get())));
 
         ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, UDBlocks.AIR_CONDITIONER.get(), 1)
-                .define('@', UDItems.STAINLESS_STEEL_INGOT.get()).define('#', UDItems.STEEL_PIPE.get()).define('^', Items.PACKED_ICE)
+                .define('@', UDItems.STAINLESS_STEEL_INGOT.get()).define('#', UDItems.STEEL_PIPE.get()).define('^', Items.WIND_CHARGE)
                 .pattern("@ @")
                 .pattern("###")
                 .pattern("@^@")
@@ -339,7 +339,7 @@ public class UDRecipeProvider extends FabricRecipeProvider {
                 .save(exporter, RunicLib.customid(UrbanDecor.MOD_ID, getSimpleRecipeName(UDBlocks.AIR_CONDITIONER.get())));
 
         ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, UDBlocks.RADIATOR.get(), 1)
-                .define('@', UDItems.STAINLESS_STEEL_INGOT.get()).define('#', UDItems.STEEL_PIPE.get()).define('^', Items.MAGMA_BLOCK)
+                .define('@', UDItems.STAINLESS_STEEL_INGOT.get()).define('#', UDItems.STEEL_PIPE.get()).define('^', Items.BLAZE_ROD)
                 .pattern(" # ")
                 .pattern("###")
                 .pattern("@^@")
@@ -820,58 +820,69 @@ public class UDRecipeProvider extends FabricRecipeProvider {
                 .save(exporter, RunicLib.customid(UrbanDecor.MOD_ID, getSimpleRecipeName(UDItems.STAINLESS_STEEL_NUGGET.get()) + "_from_ingot"));
 
         createPianoRecipe(UDBlocks.OAK_PIANO.get(), Ingredient.of(Items.OAK_PLANKS),
-                Ingredient.of(UDItems.STAINLESS_STEEL_INGOT.get()), Ingredient.of(UDItems.PORCELAIN.get()))
+                Ingredient.of(UDItems.STAINLESS_STEEL_INGOT.get()), Ingredient.of(UDTags.ItemT.PORCELAIN))
                 .unlockedBy(getHasName(UDItems.PORCELAIN.get()), has(UDItems.PORCELAIN.get()))
+                .unlockedBy(getHasName(UDItems.DARK_PORCELAIN.get()), has(UDItems.DARK_PORCELAIN.get()))
                 .save(exporter, RunicLib.customid(UrbanDecor.MOD_ID, getSimpleRecipeName(UDBlocks.OAK_PIANO.get())));
 
         createPianoRecipe(UDBlocks.SPRUCE_PIANO.get(), Ingredient.of(Items.SPRUCE_PLANKS),
-                Ingredient.of(UDItems.STAINLESS_STEEL_INGOT.get()), Ingredient.of(UDItems.PORCELAIN.get()))
+                Ingredient.of(UDItems.STAINLESS_STEEL_INGOT.get()), Ingredient.of(UDTags.ItemT.PORCELAIN))
                 .unlockedBy(getHasName(UDItems.PORCELAIN.get()), has(UDItems.PORCELAIN.get()))
+                .unlockedBy(getHasName(UDItems.DARK_PORCELAIN.get()), has(UDItems.DARK_PORCELAIN.get()))
                 .save(exporter, RunicLib.customid(UrbanDecor.MOD_ID, getSimpleRecipeName(UDBlocks.SPRUCE_PIANO.get())));
 
         createPianoRecipe(UDBlocks.BIRCH_PIANO.get(), Ingredient.of(Items.BIRCH_PLANKS),
-                Ingredient.of(UDItems.STAINLESS_STEEL_INGOT.get()), Ingredient.of(UDItems.PORCELAIN.get()))
+                Ingredient.of(UDItems.STAINLESS_STEEL_INGOT.get()), Ingredient.of(UDTags.ItemT.PORCELAIN))
                 .unlockedBy(getHasName(UDItems.PORCELAIN.get()), has(UDItems.PORCELAIN.get()))
+                .unlockedBy(getHasName(UDItems.DARK_PORCELAIN.get()), has(UDItems.DARK_PORCELAIN.get()))
                 .save(exporter, RunicLib.customid(UrbanDecor.MOD_ID, getSimpleRecipeName(UDBlocks.BIRCH_PIANO.get())));
 
         createPianoRecipe(UDBlocks.JUNGLE_PIANO.get(), Ingredient.of(Items.JUNGLE_PLANKS),
-                Ingredient.of(UDItems.STAINLESS_STEEL_INGOT.get()), Ingredient.of(UDItems.PORCELAIN.get()))
+                Ingredient.of(UDItems.STAINLESS_STEEL_INGOT.get()), Ingredient.of(UDTags.ItemT.PORCELAIN))
                 .unlockedBy(getHasName(UDItems.PORCELAIN.get()), has(UDItems.PORCELAIN.get()))
+                .unlockedBy(getHasName(UDItems.DARK_PORCELAIN.get()), has(UDItems.DARK_PORCELAIN.get()))
                 .save(exporter, RunicLib.customid(UrbanDecor.MOD_ID, getSimpleRecipeName(UDBlocks.JUNGLE_PIANO.get())));
 
         createPianoRecipe(UDBlocks.ACACIA_PIANO.get(), Ingredient.of(Items.ACACIA_PLANKS),
-                Ingredient.of(UDItems.STAINLESS_STEEL_INGOT.get()), Ingredient.of(UDItems.PORCELAIN.get()))
+                Ingredient.of(UDItems.STAINLESS_STEEL_INGOT.get()), Ingredient.of(UDTags.ItemT.PORCELAIN))
                 .unlockedBy(getHasName(UDItems.PORCELAIN.get()), has(UDItems.PORCELAIN.get()))
+                .unlockedBy(getHasName(UDItems.DARK_PORCELAIN.get()), has(UDItems.DARK_PORCELAIN.get()))
                 .save(exporter, RunicLib.customid(UrbanDecor.MOD_ID, getSimpleRecipeName(UDBlocks.ACACIA_PIANO.get())));
 
         createPianoRecipe(UDBlocks.DARK_OAK_PIANO.get(), Ingredient.of(Items.DARK_OAK_PLANKS),
-                Ingredient.of(UDItems.STAINLESS_STEEL_INGOT.get()), Ingredient.of(UDItems.PORCELAIN.get()))
+                Ingredient.of(UDItems.STAINLESS_STEEL_INGOT.get()), Ingredient.of(UDTags.ItemT.PORCELAIN))
                 .unlockedBy(getHasName(UDItems.PORCELAIN.get()), has(UDItems.PORCELAIN.get()))
+                .unlockedBy(getHasName(UDItems.DARK_PORCELAIN.get()), has(UDItems.DARK_PORCELAIN.get()))
                 .save(exporter, RunicLib.customid(UrbanDecor.MOD_ID, getSimpleRecipeName(UDBlocks.DARK_OAK_PIANO.get())));
 
         createPianoRecipe(UDBlocks.MANGROVE_PIANO.get(), Ingredient.of(Items.MANGROVE_PLANKS),
-                Ingredient.of(UDItems.STAINLESS_STEEL_INGOT.get()), Ingredient.of(UDItems.PORCELAIN.get()))
+                Ingredient.of(UDItems.STAINLESS_STEEL_INGOT.get()), Ingredient.of(UDTags.ItemT.PORCELAIN))
                 .unlockedBy(getHasName(UDItems.PORCELAIN.get()), has(UDItems.PORCELAIN.get()))
+                .unlockedBy(getHasName(UDItems.DARK_PORCELAIN.get()), has(UDItems.DARK_PORCELAIN.get()))
                 .save(exporter, RunicLib.customid(UrbanDecor.MOD_ID, getSimpleRecipeName(UDBlocks.MANGROVE_PIANO.get())));
 
         createPianoRecipe(UDBlocks.CHERRY_PIANO.get(), Ingredient.of(Items.CHERRY_PLANKS),
-                Ingredient.of(UDItems.STAINLESS_STEEL_INGOT.get()), Ingredient.of(UDItems.PORCELAIN.get()))
+                Ingredient.of(UDItems.STAINLESS_STEEL_INGOT.get()), Ingredient.of(UDTags.ItemT.PORCELAIN))
                 .unlockedBy(getHasName(UDItems.PORCELAIN.get()), has(UDItems.PORCELAIN.get()))
+                .unlockedBy(getHasName(UDItems.DARK_PORCELAIN.get()), has(UDItems.DARK_PORCELAIN.get()))
                 .save(exporter, RunicLib.customid(UrbanDecor.MOD_ID, getSimpleRecipeName(UDBlocks.CHERRY_PIANO.get())));
 
         createPianoRecipe(UDBlocks.BAMBOO_PIANO.get(), Ingredient.of(Items.BAMBOO_PLANKS),
-                Ingredient.of(UDItems.STAINLESS_STEEL_INGOT.get()), Ingredient.of(UDItems.PORCELAIN.get()))
+                Ingredient.of(UDItems.STAINLESS_STEEL_INGOT.get()), Ingredient.of(UDTags.ItemT.PORCELAIN))
                 .unlockedBy(getHasName(UDItems.PORCELAIN.get()), has(UDItems.PORCELAIN.get()))
+                .unlockedBy(getHasName(UDItems.DARK_PORCELAIN.get()), has(UDItems.DARK_PORCELAIN.get()))
                 .save(exporter, RunicLib.customid(UrbanDecor.MOD_ID, getSimpleRecipeName(UDBlocks.BAMBOO_PIANO.get())));
 
         createPianoRecipe(UDBlocks.CRIMSON_PIANO.get(), Ingredient.of(Items.CRIMSON_PLANKS),
-                Ingredient.of(Items.GOLD_INGOT), Ingredient.of(UDItems.PORCELAIN.get()))
-             .unlockedBy(getHasName(UDItems.PORCELAIN.get()), has(UDItems.PORCELAIN.get()))
+                Ingredient.of(Items.GOLD_INGOT), Ingredient.of(UDTags.ItemT.PORCELAIN))
+                .unlockedBy(getHasName(UDItems.PORCELAIN.get()), has(UDItems.PORCELAIN.get()))
+                .unlockedBy(getHasName(UDItems.DARK_PORCELAIN.get()), has(UDItems.DARK_PORCELAIN.get()))
                 .save(exporter, RunicLib.customid(UrbanDecor.MOD_ID, getSimpleRecipeName(UDBlocks.CRIMSON_PIANO.get())));
 
         createPianoRecipe(UDBlocks.WARPED_PIANO.get(), Ingredient.of(Items.WARPED_PLANKS),
-                Ingredient.of(Items.GOLD_INGOT), Ingredient.of(UDItems.PORCELAIN.get()))
+                Ingredient.of(Items.GOLD_INGOT), Ingredient.of(UDTags.ItemT.PORCELAIN))
                 .unlockedBy(getHasName(UDItems.PORCELAIN.get()), has(UDItems.PORCELAIN.get()))
+                .unlockedBy(getHasName(UDItems.DARK_PORCELAIN.get()), has(UDItems.DARK_PORCELAIN.get()))
                 .save(exporter, RunicLib.customid(UrbanDecor.MOD_ID, getSimpleRecipeName(UDBlocks.WARPED_PIANO.get())));
 
         ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, UDBlocks.DISHWASHER.get(), 1)
@@ -975,6 +986,77 @@ public class UDRecipeProvider extends FabricRecipeProvider {
         createCalenderRecipe(UDBlocks.WARPED_CALENDAR.get(), Ingredient.of(Items.WARPED_PLANKS))
                 .unlockedBy(getHasName(Items.WARPED_PLANKS), has(Items.WARPED_PLANKS))
                 .save(exporter, RunicLib.customid(UrbanDecor.MOD_ID, getSimpleRecipeName(UDBlocks.WARPED_CALENDAR.get())));
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, UDBlocks.STAINLESS_STEEL_LADDER.get(), 3)
+                .define('#', UDBlocks.STEEL_PIPE.get())
+                .pattern("# #")
+                .pattern("###")
+                .pattern("# #")
+                .unlockedBy(getHasName(UDBlocks.STEEL_PIPE.get()), has(UDBlocks.STEEL_PIPE.get()))
+                .save(exporter, RunicLib.customid(UrbanDecor.MOD_ID, getSimpleRecipeName(UDBlocks.STAINLESS_STEEL_LADDER.get())));
+
+        createGrandfatherClockRecipe(UDBlocks.OAK_GRANDFATHER_CLOCK.get(), Ingredient.of(Items.OAK_PLANKS),
+                Ingredient.of(UDItems.STAINLESS_STEEL_INGOT.get()))
+                .unlockedBy(getHasName(UDItems.STAINLESS_STEEL_INGOT.get()), has(UDItems.STAINLESS_STEEL_INGOT.get()))
+                .save(exporter, RunicLib.customid(UrbanDecor.MOD_ID, getSimpleRecipeName(UDBlocks.OAK_GRANDFATHER_CLOCK.get())));
+
+        createGrandfatherClockRecipe(UDBlocks.SPRUCE_GRANDFATHER_CLOCK.get(), Ingredient.of(Items.SPRUCE_PLANKS),
+                Ingredient.of(UDItems.STAINLESS_STEEL_INGOT.get()))
+                .unlockedBy(getHasName(UDItems.STAINLESS_STEEL_INGOT.get()), has(UDItems.STAINLESS_STEEL_INGOT.get()))
+                .save(exporter, RunicLib.customid(UrbanDecor.MOD_ID, getSimpleRecipeName(UDBlocks.SPRUCE_GRANDFATHER_CLOCK.get())));
+
+        createGrandfatherClockRecipe(UDBlocks.BIRCH_GRANDFATHER_CLOCK.get(), Ingredient.of(Items.BIRCH_PLANKS),
+                Ingredient.of(UDItems.STAINLESS_STEEL_INGOT.get()))
+                .unlockedBy(getHasName(UDItems.STAINLESS_STEEL_INGOT.get()), has(UDItems.STAINLESS_STEEL_INGOT.get()))
+                .save(exporter, RunicLib.customid(UrbanDecor.MOD_ID, getSimpleRecipeName(UDBlocks.BIRCH_GRANDFATHER_CLOCK.get())));
+
+        createGrandfatherClockRecipe(UDBlocks.JUNGLE_GRANDFATHER_CLOCK.get(), Ingredient.of(Items.JUNGLE_PLANKS),
+                Ingredient.of(UDItems.STAINLESS_STEEL_INGOT.get()))
+                .unlockedBy(getHasName(UDItems.STAINLESS_STEEL_INGOT.get()), has(UDItems.STAINLESS_STEEL_INGOT.get()))
+                .save(exporter, RunicLib.customid(UrbanDecor.MOD_ID, getSimpleRecipeName(UDBlocks.JUNGLE_GRANDFATHER_CLOCK.get())));
+
+        createGrandfatherClockRecipe(UDBlocks.ACACIA_GRANDFATHER_CLOCK.get(), Ingredient.of(Items.ACACIA_PLANKS),
+                Ingredient.of(UDItems.STAINLESS_STEEL_INGOT.get()))
+                .unlockedBy(getHasName(UDItems.STAINLESS_STEEL_INGOT.get()), has(UDItems.STAINLESS_STEEL_INGOT.get()))
+                .save(exporter, RunicLib.customid(UrbanDecor.MOD_ID, getSimpleRecipeName(UDBlocks.ACACIA_GRANDFATHER_CLOCK.get())));
+
+        createGrandfatherClockRecipe(UDBlocks.DARK_OAK_GRANDFATHER_CLOCK.get(), Ingredient.of(Items.DARK_OAK_PLANKS),
+                Ingredient.of(UDItems.STAINLESS_STEEL_INGOT.get()))
+                .unlockedBy(getHasName(UDItems.STAINLESS_STEEL_INGOT.get()), has(UDItems.STAINLESS_STEEL_INGOT.get()))
+                .save(exporter, RunicLib.customid(UrbanDecor.MOD_ID, getSimpleRecipeName(UDBlocks.DARK_OAK_GRANDFATHER_CLOCK.get())));
+
+        createGrandfatherClockRecipe(UDBlocks.MANGROVE_GRANDFATHER_CLOCK.get(), Ingredient.of(Items.MANGROVE_PLANKS),
+                Ingredient.of(UDItems.STAINLESS_STEEL_INGOT.get()))
+                .unlockedBy(getHasName(UDItems.STAINLESS_STEEL_INGOT.get()), has(UDItems.STAINLESS_STEEL_INGOT.get()))
+                .save(exporter, RunicLib.customid(UrbanDecor.MOD_ID, getSimpleRecipeName(UDBlocks.MANGROVE_GRANDFATHER_CLOCK.get())));
+
+        createGrandfatherClockRecipe(UDBlocks.CHERRY_GRANDFATHER_CLOCK.get(), Ingredient.of(Items.CHERRY_PLANKS),
+                Ingredient.of(UDItems.STAINLESS_STEEL_INGOT.get()))
+                .unlockedBy(getHasName(UDItems.STAINLESS_STEEL_INGOT.get()), has(UDItems.STAINLESS_STEEL_INGOT.get()))
+                .save(exporter, RunicLib.customid(UrbanDecor.MOD_ID, getSimpleRecipeName(UDBlocks.CHERRY_GRANDFATHER_CLOCK.get())));
+
+        createGrandfatherClockRecipe(UDBlocks.BAMBOO_GRANDFATHER_CLOCK.get(), Ingredient.of(Items.BAMBOO_PLANKS),
+                Ingredient.of(UDItems.STAINLESS_STEEL_INGOT.get()))
+                .unlockedBy(getHasName(UDItems.STAINLESS_STEEL_INGOT.get()), has(UDItems.STAINLESS_STEEL_INGOT.get()))
+                .save(exporter, RunicLib.customid(UrbanDecor.MOD_ID, getSimpleRecipeName(UDBlocks.BAMBOO_GRANDFATHER_CLOCK.get())));
+
+        createGrandfatherClockRecipe(UDBlocks.CRIMSON_GRANDFATHER_CLOCK.get(), Ingredient.of(Items.CRIMSON_PLANKS),
+                Ingredient.of(Items.GOLD_INGOT))
+                .unlockedBy(getHasName(Items.GOLD_INGOT), has(Items.GOLD_INGOT))
+                .save(exporter, RunicLib.customid(UrbanDecor.MOD_ID, getSimpleRecipeName(UDBlocks.CRIMSON_GRANDFATHER_CLOCK.get())));
+
+        createGrandfatherClockRecipe(UDBlocks.WARPED_GRANDFATHER_CLOCK.get(), Ingredient.of(Items.WARPED_PLANKS),
+                Ingredient.of(Items.GOLD_INGOT))
+                .unlockedBy(getHasName(Items.GOLD_INGOT), has(Items.GOLD_INGOT))
+                .save(exporter, RunicLib.customid(UrbanDecor.MOD_ID, getSimpleRecipeName(UDBlocks.WARPED_GRANDFATHER_CLOCK.get())));
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, UDBlocks.WALL_CLOCK.get(), 1)
+                .define('@', UDItems.POLYPROPYLENE.get()).define('#', Items.CLOCK)
+                .pattern("@@@")
+                .pattern("@#@")
+                .pattern("@@@")
+                .unlockedBy(getHasName(UDItems.POLYPROPYLENE.get()), has(UDItems.POLYPROPYLENE.get()))
+                .save(exporter, RunicLib.customid(UrbanDecor.MOD_ID, getSimpleRecipeName(UDBlocks.WALL_CLOCK.get())));
     }
 
     public static ShapelessRecipeBuilder createFromBasePictureFrameRecipe(ItemLike output, Item picture, DyeColor color) {
@@ -1008,6 +1090,14 @@ public class UDRecipeProvider extends FabricRecipeProvider {
         return ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, output, 1)
                 .define('#', planks).define('@', ingot).define('!', porcelain)
                 .pattern("#!#")
+                .pattern("#@#");
+    }
+
+    public static ShapedRecipeBuilder createGrandfatherClockRecipe(ItemLike output, Ingredient planks, Ingredient ingot) {
+        return ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, output, 1)
+                .define('#', planks).define('@', ingot).define('!', Items.CLOCK)
+                .pattern("#!#")
+                .pattern("#@#")
                 .pattern("#@#");
     }
 

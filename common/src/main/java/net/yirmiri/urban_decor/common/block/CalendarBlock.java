@@ -60,8 +60,9 @@ public class CalendarBlock extends AbstractDecorBlock {
             player.displayClientMessage(Component.translatable("urban_decor.calendar.day").append(" ").append(String.valueOf(currentDay))
                     .append(" (").append(Component.translatable("urban_decor.calendar.year")).append(" ").append(String.valueOf(currentYear))
                     .append(")"), true);
+            return InteractionResult.SUCCESS;
         }
-        return InteractionResult.CONSUME;
+        return InteractionResult.PASS;
     }
 
     @Override

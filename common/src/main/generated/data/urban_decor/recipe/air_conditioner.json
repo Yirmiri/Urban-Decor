@@ -9,7 +9,7 @@
       "item": "urban_decor:stainless_steel_ingot"
     },
     "^": {
-      "item": "minecraft:packed_ice"
+      "item": "minecraft:wind_charge"
     }
   },
   "pattern": [

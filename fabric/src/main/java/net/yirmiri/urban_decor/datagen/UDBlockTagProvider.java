@@ -58,11 +58,25 @@ public class UDBlockTagProvider extends FabricTagProvider.BlockTagProvider {
         getOrCreateTagBuilder(UDTags.BlockT.MINEABLE_WITH_AXE_AND_PICKAXE)
                 .add(UDBlocks.POLYPROPYLENE_BLOCK.get())
                 .add(UDBlocks.PLASTIC_CHAIR.get())
+                .add(UDBlocks.WALL_CLOCK.get())
         ;
 
 
         getOrCreateTagBuilder(BlockTags.MINEABLE_WITH_AXE)
                 .addTag(UDTags.BlockT.MINEABLE_WITH_AXE_AND_PICKAXE)
+
+                .add(UDBlocks.OAK_GRANDFATHER_CLOCK.get())
+                .add(UDBlocks.SPRUCE_GRANDFATHER_CLOCK.get())
+                .add(UDBlocks.BIRCH_GRANDFATHER_CLOCK.get())
+                .add(UDBlocks.JUNGLE_GRANDFATHER_CLOCK.get())
+                .add(UDBlocks.ACACIA_GRANDFATHER_CLOCK.get())
+                .add(UDBlocks.DARK_OAK_GRANDFATHER_CLOCK.get())
+                .add(UDBlocks.MANGROVE_GRANDFATHER_CLOCK.get())
+                .add(UDBlocks.CHERRY_GRANDFATHER_CLOCK.get())
+                .add(UDBlocks.BAMBOO_GRANDFATHER_CLOCK.get())
+                .add(UDBlocks.CRIMSON_GRANDFATHER_CLOCK.get())
+                .add(UDBlocks.WARPED_GRANDFATHER_CLOCK.get())
+                
                 .add(UDBlocks.OAK_PIANO.get())
                 .add(UDBlocks.SPRUCE_PIANO.get())
                 .add(UDBlocks.BIRCH_PIANO.get())
@@ -162,6 +176,7 @@ public class UDBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(UDBlocks.FLOOR_LAMP.get())
                 .add(UDBlocks.DISHWASHER.get())
                 .add(UDBlocks.DARK_DISHWASHER.get())
+                .add(UDBlocks.STAINLESS_STEEL_LADDER.get())
         ;
 
         getOrCreateTagBuilder(UDTags.BlockT.HEAVY_STORAGE_SOUND)
@@ -186,6 +201,10 @@ public class UDBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(UDBlocks.DARK_FREEZER.get())
                 .add(UDBlocks.FRIDGE.get())
                 .add(UDBlocks.DARK_FRIDGE.get())
+        ;
+
+        getOrCreateTagBuilder(BlockTags.CLIMBABLE)
+                .add(UDBlocks.STAINLESS_STEEL_LADDER.get())
         ;
 
         for (DyeColor colors : DyeColor.values()) {

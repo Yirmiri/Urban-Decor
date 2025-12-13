@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "!": {
+      "item": "minecraft:clock"
+    },
+    "#": {
+      "item": "minecraft:crimson_planks"
+    },
+    "@": {
+      "item": "minecraft:gold_ingot"
+    }
+  },
+  "pattern": [
+    "#!#",
+    "#@#",
+    "#@#"
+  ],
+  "result": {
+    "count": 1,
+    "id": "urban_decor:crimson_grandfather_clock"
+  }
+}

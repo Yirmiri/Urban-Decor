@@ -1,0 +1,42 @@
+{
+  "variants": {
+    "facing=north,half=upper": {
+      "model": "urban_decor:block/crimson_grandfather_clock_top",
+      "uvlock": false
+    },
+    "facing=south,half=upper": {
+      "model": "urban_decor:block/crimson_grandfather_clock_top",
+      "y": 180,
+      "uvlock": false
+    },
+    "facing=west,half=upper": {
+      "model": "urban_decor:block/crimson_grandfather_clock_top",
+      "y": 270,
+      "uvlock": false
+    },
+    "facing=east,half=upper": {
+      "model": "urban_decor:block/crimson_grandfather_clock_top",
+      "y": 90,
+      "uvlock": false
+    },
+    "facing=north,half=lower": {
+      "model": "urban_decor:block/crimson_grandfather_clock_bottom",
+      "uvlock": false
+    },
+    "facing=south,half=lower": {
+      "model": "urban_decor:block/crimson_grandfather_clock_bottom",
+      "y": 180,
+      "uvlock": false
+    },
+    "facing=west,half=lower": {
+      "model": "urban_decor:block/crimson_grandfather_clock_bottom",
+      "y": 270,
+      "uvlock": false
+    },
+    "facing=east,half=lower": {
+      "model": "urban_decor:block/crimson_grandfather_clock_bottom",
+      "y": 90,
+      "uvlock": false
+    }
+  }
+}

@@ -22,7 +22,9 @@ public abstract class AbstractDecorBlock extends Block implements SimpleWaterlog
 
     public AbstractDecorBlock(Properties settings) {
         super(settings);
-        registerDefaultState(defaultBlockState().setValue(BlockStateProperties.HORIZONTAL_FACING, Direction.NORTH).setValue(WATERLOGGED, false));
+        registerDefaultState(defaultBlockState()
+                .setValue(BlockStateProperties.HORIZONTAL_FACING, Direction.NORTH)
+                .setValue(WATERLOGGED, false));
     }
 
     @Override
@@ -56,7 +58,6 @@ public abstract class AbstractDecorBlock extends Block implements SimpleWaterlog
         if (state.getValue(WATERLOGGED)) {
             world.scheduleTick(pos, Fluids.WATER, Fluids.WATER.getTickDelay(world));
         }
-
         return super.updateShape(state, direction, neighborState, world, pos, neighborPos);
     }
 }

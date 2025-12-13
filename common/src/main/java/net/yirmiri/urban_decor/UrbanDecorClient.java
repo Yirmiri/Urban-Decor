@@ -32,6 +32,18 @@ public class UrbanDecorClient {
         Services.loadClient().registerBlockRenderType(UDBlocks.PICTURE_FRAME.get(), RenderType.cutout());
         Services.loadClient().registerBlockRenderType(UDBlocks.WALL_PICTURE_FRAME.get(), RenderType.cutout());
         Services.loadClient().registerBlockRenderType(UDBlocks.PLASTIC_CHAIR.get(), RenderType.cutout());
+        Services.loadClient().registerBlockRenderType(UDBlocks.STAINLESS_STEEL_LADDER.get(), RenderType.cutout());
+        Services.loadClient().registerBlockRenderType(UDBlocks.OAK_GRANDFATHER_CLOCK.get(), RenderType.cutout());
+        Services.loadClient().registerBlockRenderType(UDBlocks.SPRUCE_GRANDFATHER_CLOCK.get(), RenderType.cutout());
+        Services.loadClient().registerBlockRenderType(UDBlocks.BIRCH_GRANDFATHER_CLOCK.get(), RenderType.cutout());
+        Services.loadClient().registerBlockRenderType(UDBlocks.JUNGLE_GRANDFATHER_CLOCK.get(), RenderType.cutout());
+        Services.loadClient().registerBlockRenderType(UDBlocks.ACACIA_GRANDFATHER_CLOCK.get(), RenderType.cutout());
+        Services.loadClient().registerBlockRenderType(UDBlocks.DARK_OAK_GRANDFATHER_CLOCK.get(), RenderType.cutout());
+        Services.loadClient().registerBlockRenderType(UDBlocks.MANGROVE_GRANDFATHER_CLOCK.get(), RenderType.cutout());
+        Services.loadClient().registerBlockRenderType(UDBlocks.CHERRY_GRANDFATHER_CLOCK.get(), RenderType.cutout());
+        Services.loadClient().registerBlockRenderType(UDBlocks.BAMBOO_GRANDFATHER_CLOCK.get(), RenderType.cutout());
+        Services.loadClient().registerBlockRenderType(UDBlocks.CRIMSON_GRANDFATHER_CLOCK.get(), RenderType.cutout());
+        Services.loadClient().registerBlockRenderType(UDBlocks.WARPED_GRANDFATHER_CLOCK.get(), RenderType.cutout());
 
         //CUTOUT MIPPED
         Services.loadClient().registerBlockRenderType(UDBlocks.RADIATOR.get(), RenderType.cutoutMipped());

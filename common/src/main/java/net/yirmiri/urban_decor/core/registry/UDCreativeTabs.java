@@ -68,6 +68,7 @@ public class UDCreativeTabs {
                 entry.accept(UDBlocks.STAINLESS_STEEL_LANTERN.get());
                 entry.accept(UDBlocks.STAINLESS_STEEL_SOUL_LANTERN.get());
                 entry.accept(UDBlocks.STAINLESS_STEEL_BARS.get());
+                entry.accept(UDBlocks.STAINLESS_STEEL_LADDER.get());
 
                 entry.accept(UDBlocks.RIGID_GLASS.get());
 
@@ -103,8 +104,22 @@ public class UDCreativeTabs {
                 entry.accept(UDBlocks.TRASH_CAN.get());
                 entry.accept(UDBlocks.DESK_FAN.get());
                 entry.accept(UDBlocks.FLOOR_LAMP.get());
+
                 entry.accept(UDBlocks.PLASTIC_CHAIR.get());
-                
+                entry.accept(UDBlocks.WALL_CLOCK.get());
+
+                entry.accept(UDBlocks.OAK_GRANDFATHER_CLOCK.get());
+                entry.accept(UDBlocks.SPRUCE_GRANDFATHER_CLOCK.get());
+                entry.accept(UDBlocks.BIRCH_GRANDFATHER_CLOCK.get());
+                entry.accept(UDBlocks.JUNGLE_GRANDFATHER_CLOCK.get());
+                entry.accept(UDBlocks.ACACIA_GRANDFATHER_CLOCK.get());
+                entry.accept(UDBlocks.DARK_OAK_GRANDFATHER_CLOCK.get());
+                entry.accept(UDBlocks.MANGROVE_GRANDFATHER_CLOCK.get());
+                entry.accept(UDBlocks.CHERRY_GRANDFATHER_CLOCK.get());
+                entry.accept(UDBlocks.BAMBOO_GRANDFATHER_CLOCK.get());
+                entry.accept(UDBlocks.CRIMSON_GRANDFATHER_CLOCK.get());
+                entry.accept(UDBlocks.WARPED_GRANDFATHER_CLOCK.get());
+
                 entry.accept(UDBlocks.OAK_PIANO.get());
                 entry.accept(UDBlocks.SPRUCE_PIANO.get());
                 entry.accept(UDBlocks.BIRCH_PIANO.get());

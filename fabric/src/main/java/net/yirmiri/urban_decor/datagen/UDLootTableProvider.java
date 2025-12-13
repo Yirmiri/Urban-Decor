@@ -129,6 +129,19 @@ public class UDLootTableProvider extends FabricBlockLootTableProvider {
         dropSelf(UDBlocks.BAMBOO_CALENDAR.get());
         dropSelf(UDBlocks.CRIMSON_CALENDAR.get());
         dropSelf(UDBlocks.WARPED_CALENDAR.get());
+        dropSelf(UDBlocks.STAINLESS_STEEL_LADDER.get());
+        add(UDBlocks.OAK_GRANDFATHER_CLOCK.get(), createDoorTable(UDBlocks.OAK_GRANDFATHER_CLOCK.get()));
+        add(UDBlocks.SPRUCE_GRANDFATHER_CLOCK.get(), createDoorTable(UDBlocks.SPRUCE_GRANDFATHER_CLOCK.get()));
+        add(UDBlocks.BIRCH_GRANDFATHER_CLOCK.get(), createDoorTable(UDBlocks.BIRCH_GRANDFATHER_CLOCK.get()));
+        add(UDBlocks.JUNGLE_GRANDFATHER_CLOCK.get(), createDoorTable(UDBlocks.JUNGLE_GRANDFATHER_CLOCK.get()));
+        add(UDBlocks.ACACIA_GRANDFATHER_CLOCK.get(), createDoorTable(UDBlocks.ACACIA_GRANDFATHER_CLOCK.get()));
+        add(UDBlocks.DARK_OAK_GRANDFATHER_CLOCK.get(), createDoorTable(UDBlocks.DARK_OAK_GRANDFATHER_CLOCK.get()));
+        add(UDBlocks.MANGROVE_GRANDFATHER_CLOCK.get(), createDoorTable(UDBlocks.MANGROVE_GRANDFATHER_CLOCK.get()));
+        add(UDBlocks.CHERRY_GRANDFATHER_CLOCK.get(), createDoorTable(UDBlocks.CHERRY_GRANDFATHER_CLOCK.get()));
+        add(UDBlocks.BAMBOO_GRANDFATHER_CLOCK.get(), createDoorTable(UDBlocks.BAMBOO_GRANDFATHER_CLOCK.get()));
+        add(UDBlocks.CRIMSON_GRANDFATHER_CLOCK.get(), createDoorTable(UDBlocks.CRIMSON_GRANDFATHER_CLOCK.get()));
+        add(UDBlocks.WARPED_GRANDFATHER_CLOCK.get(), createDoorTable(UDBlocks.WARPED_GRANDFATHER_CLOCK.get()));
+        dropSelf(UDBlocks.WALL_CLOCK.get());
     }
 
     public LootTable.Builder floorLampDrops(Block block) {

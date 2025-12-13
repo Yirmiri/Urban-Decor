@@ -55,6 +55,11 @@ public class UDItemTagProvider extends FabricTagProvider.ItemTagProvider {
             getOrCreateTagBuilder(UDTags.ItemT.POLYANTHOUS).add(UDBlocks.getWrappedPolyanthous(colors.getId()).get().asItem());
         }
 
+        getOrCreateTagBuilder(UDTags.ItemT.PORCELAIN)
+                .add(UDItems.PORCELAIN.get())
+                .add(UDItems.DARK_PORCELAIN.get())
+        ;
+
         getOrCreateTagBuilder(ItemTags.TALL_FLOWERS)
                 .addTag(UDTags.ItemT.POLYANTHOUS)
         ;

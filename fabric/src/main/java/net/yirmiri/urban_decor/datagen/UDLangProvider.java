@@ -44,6 +44,7 @@ public class UDLangProvider extends FabricLanguageProvider {
         build.add("itemgroup.urban_decor", "Urban Decor");
         build.add("urban_decor.calendar.day", "Today is Day");
         build.add("urban_decor.calendar.year", "Year");
+        build.add("urban_decor.clock", "It is currently");
 
         //TOOLTIPS
         build.add("item.urban_decor.toolbox.use", "When used on blocks:");
@@ -148,6 +149,19 @@ public class UDLangProvider extends FabricLanguageProvider {
         build.add(UDBlocks.BAMBOO_CALENDAR.get(), "Bamboo Calendar");
         build.add(UDBlocks.CRIMSON_CALENDAR.get(), "Crimson Calendar");
         build.add(UDBlocks.WARPED_CALENDAR.get(), "Warped Calendar");
+        build.add(UDBlocks.STAINLESS_STEEL_LADDER.get(), "Stainless Steel Ladder");
+        build.add(UDBlocks.OAK_GRANDFATHER_CLOCK.get(), "Oak Grandfather Clock");
+        build.add(UDBlocks.SPRUCE_GRANDFATHER_CLOCK.get(), "Spruce Grandfather Clock");
+        build.add(UDBlocks.BIRCH_GRANDFATHER_CLOCK.get(), "Birch Grandfather Clock");
+        build.add(UDBlocks.JUNGLE_GRANDFATHER_CLOCK.get(), "Jungle Grandfather Clock");
+        build.add(UDBlocks.ACACIA_GRANDFATHER_CLOCK.get(), "Acacia Grandfather Clock");
+        build.add(UDBlocks.DARK_OAK_GRANDFATHER_CLOCK.get(), "Dark Oak Grandfather Clock");
+        build.add(UDBlocks.MANGROVE_GRANDFATHER_CLOCK.get(), "Mangrove Grandfather Clock");
+        build.add(UDBlocks.CHERRY_GRANDFATHER_CLOCK.get(), "Cherry Grandfather Clock");
+        build.add(UDBlocks.BAMBOO_GRANDFATHER_CLOCK.get(), "Bamboo Grandfather Clock");
+        build.add(UDBlocks.CRIMSON_GRANDFATHER_CLOCK.get(), "Crimson Grandfather Clock");
+        build.add(UDBlocks.WARPED_GRANDFATHER_CLOCK.get(), "Warped Grandfather Clock");
+        build.add(UDBlocks.WALL_CLOCK.get(), "Wall Clock");
 
         //ITEMS
         build.add(UDItems.POLYPROPYLENE.get(), "Polypropylene");
@@ -345,6 +359,19 @@ public class UDLangProvider extends FabricLanguageProvider {
         build.add(YT_ID + "block." + MOD_ID + "bamboo_calendar.desc", "A place to keep track of time, constructed from bamboo planks");
         build.add(YT_ID + "block." + MOD_ID + "crimson_calendar.desc", "A place to keep track of time, constructed from crimson planks");
         build.add(YT_ID + "block." + MOD_ID + "warped_calendar.desc", "A place to keep track of time, constructed from warped planks");
+        build.add(YT_ID + "block." + MOD_ID + "stainless_steel_ladder.desc", "Can be climbed up, just don't fall!");
+        build.add(YT_ID + "block." + MOD_ID + "oak_grandfather_clock.desc", "Tick tock, constructed from oak planks");
+        build.add(YT_ID + "block." + MOD_ID + "spruce_grandfather_clock.desc", "Tick tock, constructed from spruce planks");
+        build.add(YT_ID + "block." + MOD_ID + "birch_grandfather_clock.desc", "Tick tock, constructed from birch planks");
+        build.add(YT_ID + "block." + MOD_ID + "jungle_grandfather_clock.desc", "Tick tock, constructed from jungle planks");
+        build.add(YT_ID + "block." + MOD_ID + "acacia_grandfather_clock.desc", "Tick tock, constructed from acacia planks");
+        build.add(YT_ID + "block." + MOD_ID + "dark_oak_grandfather_clock.desc", "Tick tock, constructed from dark oak planks");
+        build.add(YT_ID + "block." + MOD_ID + "mangrove_grandfather_clock.desc", "Tick tock, constructed from mangrove planks");
+        build.add(YT_ID + "block." + MOD_ID + "cherry_grandfather_clock.desc", "Tick tock, constructed from cherry planks");
+        build.add(YT_ID + "block." + MOD_ID + "bamboo_grandfather_clock.desc", "Tick tock, constructed from bamboo planks");
+        build.add(YT_ID + "block." + MOD_ID + "crimson_grandfather_clock.desc", "Tick tock, constructed from crimson planks");
+        build.add(YT_ID + "block." + MOD_ID + "warped_grandfather_clock.desc", "Tick tock, constructed from warped planks");
+        build.add(YT_ID + "block." + MOD_ID + "wall_clock.desc", "Ticking tin...");
         
         for (WrapColor colors : WrapColor.values()) {
             String dyeString = StringUtils.capitalize(StringUtils.replace(StringUtils.replace(StringUtils.replace(colors.getName(),

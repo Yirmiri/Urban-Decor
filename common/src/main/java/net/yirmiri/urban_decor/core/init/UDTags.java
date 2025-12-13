@@ -29,6 +29,7 @@ public class UDTags {
         public static final TagKey<Item> HAS_TOOLBOX_VARIANTS = create("has_toolbox_variants");
         public static final TagKey<Item> HAS_WRAPPED_VARIANTS = create("has_wrapped_variants");
         public static final TagKey<Item> POLYANTHOUS = create("polyanthous");
+        public static final TagKey<Item> PORCELAIN = create("porcelain");
 
         private static TagKey<Item> create(String id) {
             return TagKey.create(Registries.ITEM, RunicLib.customid(UrbanDecor.MOD_ID, id));

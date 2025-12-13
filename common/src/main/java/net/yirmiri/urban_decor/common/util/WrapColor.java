@@ -15,7 +15,6 @@ public enum WrapColor implements StringRepresentable {
     RUBY(5, "ruby", MapColor.COLOR_PINK);
 
     private static final IntFunction<WrapColor> BY_ID = ByIdMap.continuous(WrapColor::getId, values(), ByIdMap.OutOfBoundsStrategy.ZERO);
-    public static final StringRepresentable.EnumCodec<WrapColor> CODEC = StringRepresentable.fromEnum(WrapColor::values);
     private final int id;
     private final String name;
     private final MapColor color;

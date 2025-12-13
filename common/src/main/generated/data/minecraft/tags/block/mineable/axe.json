@@ -1,6 +1,17 @@
 {
   "values": [
     "#urban_decor:mineable_with_axe_and_pickaxe",
+    "urban_decor:oak_grandfather_clock",
+    "urban_decor:spruce_grandfather_clock",
+    "urban_decor:birch_grandfather_clock",
+    "urban_decor:jungle_grandfather_clock",
+    "urban_decor:acacia_grandfather_clock",
+    "urban_decor:dark_oak_grandfather_clock",
+    "urban_decor:mangrove_grandfather_clock",
+    "urban_decor:cherry_grandfather_clock",
+    "urban_decor:bamboo_grandfather_clock",
+    "urban_decor:crimson_grandfather_clock",
+    "urban_decor:warped_grandfather_clock",
     "urban_decor:oak_piano",
     "urban_decor:spruce_piano",
     "urban_decor:birch_piano",

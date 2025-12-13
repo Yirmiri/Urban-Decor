@@ -5,7 +5,10 @@ import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 import net.neoforged.neoforge.client.event.EntityRenderersEvent;
+import net.yirmiri.urban_decor.common.block.entity.WallClockModel;
+import net.yirmiri.urban_decor.common.block.entity.WallClockRenderer;
 import net.yirmiri.urban_decor.common.entity.renderer.InvisibleEntityRenderer;
+import net.yirmiri.urban_decor.core.registry.UDBlockEntities;
 import net.yirmiri.urban_decor.core.registry.UDEntities;
 
 @Mod(UrbanDecor.MOD_ID)
@@ -16,6 +19,8 @@ public class NeoForgeUrbanDecor {
 
         eventBus.addListener(this::clientSetup);
         eventBus.addListener(this::registerEntityRenderer);
+        eventBus.addListener(this::registerRenderers);
+        eventBus.addListener(this::registerLayers);
     }
 
     @SubscribeEvent
@@ -26,5 +31,15 @@ public class NeoForgeUrbanDecor {
     @SubscribeEvent
     public void registerEntityRenderer(EntityRenderersEvent.RegisterRenderers event) {
         event.registerEntityRenderer(UDEntities.SEAT.get(), InvisibleEntityRenderer::new);
+    }
+
+    @SubscribeEvent
+    public void registerRenderers(EntityRenderersEvent.RegisterRenderers event) {
+        event.registerBlockEntityRenderer(UDBlockEntities.WALL_CLOCK.get(), WallClockRenderer::new);
+    }
+
+    @SubscribeEvent
+    public void registerLayers(EntityRenderersEvent.RegisterLayerDefinitions event) {
+        event.registerLayerDefinition(WallClockModel.LAYER_LOCATION, WallClockModel::createBodyLayer);
     }
 }

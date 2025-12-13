@@ -31,6 +31,7 @@ public class UDProperties {
         public static final BlockBehaviour.Properties STEEL_DOOR = BlockBehaviour.Properties.ofFullCopy(Blocks.IRON_DOOR).sound(SoundType.COPPER);
         public static final BlockBehaviour.Properties STEEL_TRAPDOOR = BlockBehaviour.Properties.ofFullCopy(Blocks.IRON_TRAPDOOR).sound(SoundType.COPPER);
         public static final BlockBehaviour.Properties PLASTIC = BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_WOOD).mapColor(MapColor.STONE).sound(SoundType.SCAFFOLDING).strength(0.8F, 0.5F);
+        public static final BlockBehaviour.Properties STEEL_LADDER = BlockBehaviour.Properties.ofFullCopy(Blocks.LADDER).sound(SoundType.COPPER);
 
         //DECOR
         public static final BlockBehaviour.Properties TRASH_CAN = BlockBehaviour.Properties.ofFullCopy(Blocks.WHITE_WOOL).strength(0.3F).mapColor(MapColor.COLOR_GRAY).sound(SoundType.LANTERN);
@@ -60,6 +61,11 @@ public class UDProperties {
         public static final BlockBehaviour.Properties CHERRY_CALENDAR = BlockBehaviour.Properties.ofFullCopy(Blocks.CHERRY_PLANKS).strength(0.5F);
         public static final BlockBehaviour.Properties NETHER_CALENDAR = BlockBehaviour.Properties.ofFullCopy(Blocks.CRIMSON_PLANKS).strength(0.5F);
         public static final BlockBehaviour.Properties BAMBOO_CALENDAR = BlockBehaviour.Properties.ofFullCopy(Blocks.BAMBOO_PLANKS).strength(0.5F);
+        public static final BlockBehaviour.Properties GRAND_CLOCK = BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS);
+        public static final BlockBehaviour.Properties NETHER_GRAND_CLOCK = BlockBehaviour.Properties.ofFullCopy(Blocks.CRIMSON_PLANKS);
+        public static final BlockBehaviour.Properties CHERRY_GRAND_CLOCK = BlockBehaviour.Properties.ofFullCopy(Blocks.CHERRY_PLANKS);
+        public static final BlockBehaviour.Properties BAMBOO_GRAND_CLOCK = BlockBehaviour.Properties.ofFullCopy(Blocks.BAMBOO_PLANKS);
+        public static final BlockBehaviour.Properties WALL_CLOCK = BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS).strength(0.5F);
 
         //MISC APPLIANCES
         public static final BlockBehaviour.Properties AIR_CONDITIONER = BlockBehaviour.Properties.ofFullCopy(Blocks.STONE).strength(1.0F).mapColor(MapColor.COLOR_GRAY).sound(SoundType.LANTERN).requiresCorrectToolForDrops();

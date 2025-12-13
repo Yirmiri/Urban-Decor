@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "minecraft:clock"
+    },
+    "@": {
+      "item": "urban_decor:polypropylene"
+    }
+  },
+  "pattern": [
+    "@@@",
+    "@#@",
+    "@@@"
+  ],
+  "result": {
+    "count": 1,
+    "id": "urban_decor:wall_clock"
+  }
+}

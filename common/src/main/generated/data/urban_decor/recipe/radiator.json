@@ -9,7 +9,7 @@
       "item": "urban_decor:stainless_steel_ingot"
     },
     "^": {
-      "item": "minecraft:magma_block"
+      "item": "minecraft:blaze_rod"
     }
   },
   "pattern": [

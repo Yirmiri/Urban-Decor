@@ -65,6 +65,8 @@ public class UDModelProvider extends FabricModelProvider {
         //registerSteelBars(generator);
 
         generator.createTrivialCube(UDBlocks.POLYPROPYLENE_BLOCK.get());
+
+        generator.createSimpleFlatItemModel(UDBlocks.STAINLESS_STEEL_LADDER.get());
     }
 
     @Override
@@ -118,6 +120,18 @@ public class UDModelProvider extends FabricModelProvider {
         generator.generateFlatItem(UDBlocks.BAMBOO_CALENDAR.get().asItem(), ModelTemplates.FLAT_ITEM);
         generator.generateFlatItem(UDBlocks.CRIMSON_CALENDAR.get().asItem(), ModelTemplates.FLAT_ITEM);
         generator.generateFlatItem(UDBlocks.WARPED_CALENDAR.get().asItem(), ModelTemplates.FLAT_ITEM);
+        generator.generateFlatItem(UDBlocks.OAK_GRANDFATHER_CLOCK.get().asItem(), ModelTemplates.FLAT_ITEM);
+        generator.generateFlatItem(UDBlocks.SPRUCE_GRANDFATHER_CLOCK.get().asItem(), ModelTemplates.FLAT_ITEM);
+        generator.generateFlatItem(UDBlocks.BIRCH_GRANDFATHER_CLOCK.get().asItem(), ModelTemplates.FLAT_ITEM);
+        generator.generateFlatItem(UDBlocks.JUNGLE_GRANDFATHER_CLOCK.get().asItem(), ModelTemplates.FLAT_ITEM);
+        generator.generateFlatItem(UDBlocks.ACACIA_GRANDFATHER_CLOCK.get().asItem(), ModelTemplates.FLAT_ITEM);
+        generator.generateFlatItem(UDBlocks.DARK_OAK_GRANDFATHER_CLOCK.get().asItem(), ModelTemplates.FLAT_ITEM);
+        generator.generateFlatItem(UDBlocks.MANGROVE_GRANDFATHER_CLOCK.get().asItem(), ModelTemplates.FLAT_ITEM);
+        generator.generateFlatItem(UDBlocks.CHERRY_GRANDFATHER_CLOCK.get().asItem(), ModelTemplates.FLAT_ITEM);
+        generator.generateFlatItem(UDBlocks.BAMBOO_GRANDFATHER_CLOCK.get().asItem(), ModelTemplates.FLAT_ITEM);
+        generator.generateFlatItem(UDBlocks.CRIMSON_GRANDFATHER_CLOCK.get().asItem(), ModelTemplates.FLAT_ITEM);
+        generator.generateFlatItem(UDBlocks.WARPED_GRANDFATHER_CLOCK.get().asItem(), ModelTemplates.FLAT_ITEM);
+        generator.generateFlatItem(UDBlocks.WALL_CLOCK.get().asItem(), ModelTemplates.FLAT_ITEM);
 
         for (DyeColor colors : DyeColor.values()) {
             generator.generateFlatItem(UDBlocks.getDyedTowels(colors.getId()).get().asItem(), ModelTemplates.FLAT_ITEM);
