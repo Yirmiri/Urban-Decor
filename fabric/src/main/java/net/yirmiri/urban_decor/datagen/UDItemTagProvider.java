@@ -3,7 +3,6 @@ package net.yirmiri.urban_decor.datagen;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
 import net.minecraft.core.HolderLookup;
-import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.world.item.DyeColor;
 import net.yirmiri.urban_decor.common.util.WrapColor;
@@ -45,6 +44,7 @@ public class UDItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(UDBlocks.TOILET_PAPER.get().asItem())
                 .add(UDBlocks.FLOOR_LAMP.get().asItem())
                 .add(UDBlocks.TURBINE.get().asItem())
+                .add(UDBlocks.PLASTIC_DESK_TABLE.get().asItem())
         ;
 
         getOrCreateTagBuilder(UDTags.ItemT.HAS_WRAPPED_VARIANTS)
@@ -59,6 +59,7 @@ public class UDItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(UDBlocks.BAMBOO_BOX.get().asItem())
                 .add(UDBlocks.CRIMSON_BOX.get().asItem())
                 .add(UDBlocks.WARPED_BOX.get().asItem())
+                .add(UDBlocks.PLASTIC_DESK_TABLE.get().asItem())
         ;
 
         for (WrapColor colors : WrapColor.values()) {

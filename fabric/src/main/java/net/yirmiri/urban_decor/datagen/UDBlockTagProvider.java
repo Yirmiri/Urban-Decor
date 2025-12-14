@@ -18,36 +18,10 @@ public class UDBlockTagProvider extends FabricTagProvider.BlockTagProvider {
 
     @Override
     protected void addTags(HolderLookup.Provider arg) {
-        getOrCreateTagBuilder(UDTags.BlockT.HAS_TOOLBOX_VARIANTS)
-                .add(UDBlocks.TRASH_CAN.get())
-                .add(UDBlocks.SINK.get())
-                .add(UDBlocks.TOILET.get())
-                .add(UDBlocks.WASHING_MACHINE.get())
-                .add(UDBlocks.DRYER.get())
-                .add(UDBlocks.OVEN.get())
-                .add(UDBlocks.FRIDGE.get())
-                .add(UDBlocks.FREEZER.get())
-                .add(UDBlocks.DARK_DRYER.get())
-                .add(UDBlocks.DARK_OVEN.get())
-                .add(UDBlocks.DARK_SINK.get())
-                .add(UDBlocks.DARK_FRIDGE.get())
-                .add(UDBlocks.DARK_FREEZER.get())
-                .add(UDBlocks.DARK_TOILET.get())
-                .add(UDBlocks.DARK_WASHING_MACHINE.get())
-                .add(UDBlocks.SHOWER.get())
-                .add(UDBlocks.FAUCET.get())
-                .add(UDBlocks.CUPBOARD.get())
-                .add(UDBlocks.DARK_CUPBOARD.get())
-                .add(UDBlocks.FILING_CABINET.get())
-                .add(UDBlocks.RADIATOR.get())
-                .add(UDBlocks.TOILET_PAPER.get())
-                .add(UDBlocks.FLOOR_LAMP.get())
-                .add(UDBlocks.TURBINE.get())
-        ;
-
         getOrCreateTagBuilder(UDTags.BlockT.SEATS)
                 .addTag(UDTags.BlockT.TOILETS)
                 .add(UDBlocks.PLASTIC_CHAIR.get())
+                .add(UDBlocks.PLASTIC_DESK_TABLE.get())
         ;
         
         getOrCreateTagBuilder(UDTags.BlockT.TOILETS)
@@ -59,6 +33,7 @@ public class UDBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(UDBlocks.POLYPROPYLENE_BLOCK.get())
                 .add(UDBlocks.PLASTIC_CHAIR.get())
                 .add(UDBlocks.WALL_CLOCK.get())
+                .add(UDBlocks.PLASTIC_DESK_TABLE.get())
         ;
 
 

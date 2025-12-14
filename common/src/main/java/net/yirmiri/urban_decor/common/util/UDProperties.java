@@ -81,6 +81,7 @@ public class UDProperties {
         public static final BlockBehaviour.Properties SATELLITE_DISH = BlockBehaviour.Properties.ofFullCopy(Blocks.WHITE_WOOL).strength(0.5F).mapColor(MapColor.COLOR_GRAY).sound(SoundType.COPPER).noCollission();
         public static final BlockBehaviour.Properties SHOWER = BlockBehaviour.Properties.ofFullCopy(Blocks.WHITE_WOOL).strength(0.3F).mapColor(MapColor.COLOR_GRAY).sound(SoundType.COPPER);
         public static final BlockBehaviour.Properties PLASTIC_CHAIR = BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_WOOD).mapColor(MapColor.STONE).sound(SoundType.SCAFFOLDING).strength(0.8F, 0.5F);
+        public static final BlockBehaviour.Properties PLASTIC_TABLE = BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_WOOD).mapColor(MapColor.STONE).sound(SoundType.COPPER).strength(1.0F, 0.8F);
     }
 
     public static class ItemP {

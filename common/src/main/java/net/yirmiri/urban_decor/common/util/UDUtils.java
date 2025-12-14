@@ -12,8 +12,12 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.gameevent.GameEvent;
+import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.Vec3;
+import net.yirmiri.urban_decor.common.block.PlasticChairBlock;
 import net.yirmiri.urban_decor.core.registry.UDSounds;
 
 public class UDUtils {
@@ -23,7 +27,17 @@ public class UDUtils {
     }
 
     public static void wrapUsed(Level level, BlockPos pos) {
-        level.playLocalSound(pos.getX(), pos.getY(), pos.getZ(), UDSounds.WRAP_USE.get(), SoundSource.BLOCKS, 0.8F, 1.0F, false);
+        level.playLocalSound(pos.getX(), pos.getY(), pos.getZ(), UDSounds.WRAP_USE.get(), SoundSource.BLOCKS, 1.2F, 1.0F, false);
+    }
+
+    public static boolean canSitOn(BlockState state, Level level, BlockPos pos, Player player) {
+        return !level.isClientSide && !state.getValue(BlockStateProperties.OCCUPIED) && !player.isCrouching()
+                && player.getMainHandItem().getItem().getDefaultInstance().isEmpty() && level.getBlockState(pos.above()).isAir();
+    }
+
+    public static boolean canSitOnLenient(BlockState state, Level level, BlockPos pos, Player player) {
+        return !level.isClientSide && !state.getValue(BlockStateProperties.OCCUPIED) && !player.isCrouching()
+                && player.getMainHandItem().getItem().getDefaultInstance().isEmpty() && level.getBlockState(pos.above()).isSolid();
     }
 
     public static void spawnWaterParticles(int count, Level level, BlockPos blockPos, Direction direction) {

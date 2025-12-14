@@ -47,12 +47,12 @@ public class UDBlocks {
     public static final Supplier<Block> CHECKERED_PORCELAIN_TILE_SLAB = register("checkered_porcelain_tile_slab", () -> new SlabBlock(UDProperties.BlockP.PORCELAIN), true);
 
     public static final Supplier<Block> CHROMITE = register("chromite", () -> new Block(UDProperties.BlockP.CHROMITE), true);
-    public static final Supplier<Block> CHROMITE_STAIRS = register("chromite_stairs", () -> new PublicStairBlock(CHROMITE.get().defaultBlockState(), UDProperties.BlockP.PORCELAIN), true);
+    public static final Supplier<Block> CHROMITE_STAIRS = register("chromite_stairs", () -> new PublicStairBlock(CHROMITE.get().defaultBlockState(), UDProperties.BlockP.CHROMITE), true);
     public static final Supplier<Block> CHROMITE_SLAB = register("chromite_slab", () -> new SlabBlock(UDProperties.BlockP.CHROMITE), true);
     public static final Supplier<Block> CHROMITE_WALL = register("chromite_wall", () -> new WallBlock(UDProperties.BlockP.CHROMITE), true);
 
     public static final Supplier<Block> POLISHED_CHROMITE = register("polished_chromite", () -> new Block(UDProperties.BlockP.POLISHED_CHROMITE), true);
-    public static final Supplier<Block> POLISHED_CHROMITE_STAIRS = register("polished_chromite_stairs", () -> new PublicStairBlock(POLISHED_CHROMITE.get().defaultBlockState(), UDProperties.BlockP.PORCELAIN), true);
+    public static final Supplier<Block> POLISHED_CHROMITE_STAIRS = register("polished_chromite_stairs", () -> new PublicStairBlock(POLISHED_CHROMITE.get().defaultBlockState(), UDProperties.BlockP.POLISHED_CHROMITE), true);
     public static final Supplier<Block> POLISHED_CHROMITE_SLAB = register("polished_chromite_slab", () -> new SlabBlock(UDProperties.BlockP.POLISHED_CHROMITE), true);
 
     public static final Supplier<Block> RIGID_GLASS = register("rigid_glass", () -> new RigidGlassBlock(UDProperties.BlockP.RIGID_GLASS), true);
@@ -96,7 +96,11 @@ public class UDBlocks {
     public static final Supplier<Block> FLOOR_LAMP = register("floor_lamp", () -> new FloorLampBlock(UDProperties.BlockP.FLOOR_LAMP), true);
     public static final Supplier<Block> DISHWASHER = register("dishwasher", () -> new DishwasherBlock(UDProperties.BlockP.DISHWASHER), true);
     public static final Supplier<Block> DARK_DISHWASHER = register("dark_dishwasher", () -> new DishwasherBlock(UDProperties.BlockP.DISHWASHER), true);
+
+    //PLASTIC
+    public static final Supplier<Block> WALL_CLOCK = register("wall_clock", () -> new WallClockBlock(UDProperties.BlockP.WALL_CLOCK), true);
     public static final Supplier<Block> PLASTIC_CHAIR = register("plastic_chair", () -> new PlasticChairBlock(UDProperties.BlockP.PLASTIC_CHAIR), true);
+    public static final Supplier<Block> PLASTIC_DESK_TABLE = register("plastic_desk_table", () -> new PlasticDeskTableBlock(UDProperties.BlockP.PLASTIC_TABLE), true);
 
     //WOODEN
     public static final Supplier<Block> OAK_PIANO = register("oak_piano", () -> new PianoBlock(UDProperties.BlockP.PIANO), true);
@@ -123,17 +127,17 @@ public class UDBlocks {
     public static final Supplier<Block> CRIMSON_CALENDAR = register("crimson_calendar", () -> new CalendarBlock(UDProperties.BlockP.NETHER_CALENDAR), true);
     public static final Supplier<Block> WARPED_CALENDAR = register("warped_calendar", () -> new CalendarBlock(UDProperties.BlockP.NETHER_CALENDAR), true);
 
-    public static final Supplier<Block> OAK_GRANDFATHER_CLOCK = register("oak_grandfather_clock", () -> new GrandClockBlock(UDProperties.BlockP.GRAND_CLOCK), true);
-    public static final Supplier<Block> SPRUCE_GRANDFATHER_CLOCK = register("spruce_grandfather_clock", () -> new GrandClockBlock(UDProperties.BlockP.GRAND_CLOCK), true);
-    public static final Supplier<Block> BIRCH_GRANDFATHER_CLOCK = register("birch_grandfather_clock", () -> new GrandClockBlock(UDProperties.BlockP.GRAND_CLOCK), true);
-    public static final Supplier<Block> JUNGLE_GRANDFATHER_CLOCK = register("jungle_grandfather_clock", () -> new GrandClockBlock(UDProperties.BlockP.GRAND_CLOCK), true);
-    public static final Supplier<Block> ACACIA_GRANDFATHER_CLOCK = register("acacia_grandfather_clock", () -> new GrandClockBlock(UDProperties.BlockP.GRAND_CLOCK), true);
-    public static final Supplier<Block> DARK_OAK_GRANDFATHER_CLOCK = register("dark_oak_grandfather_clock", () -> new GrandClockBlock(UDProperties.BlockP.GRAND_CLOCK), true);
-    public static final Supplier<Block> MANGROVE_GRANDFATHER_CLOCK = register("mangrove_grandfather_clock", () -> new GrandClockBlock(UDProperties.BlockP.GRAND_CLOCK), true);
-    public static final Supplier<Block> CHERRY_GRANDFATHER_CLOCK = register("cherry_grandfather_clock", () -> new GrandClockBlock(UDProperties.BlockP.CHERRY_GRAND_CLOCK), true);
-    public static final Supplier<Block> BAMBOO_GRANDFATHER_CLOCK = register("bamboo_grandfather_clock", () -> new GrandClockBlock(UDProperties.BlockP.BAMBOO_GRAND_CLOCK), true);
-    public static final Supplier<Block> CRIMSON_GRANDFATHER_CLOCK = register("crimson_grandfather_clock", () -> new GrandClockBlock(UDProperties.BlockP.NETHER_GRAND_CLOCK), true);
-    public static final Supplier<Block> WARPED_GRANDFATHER_CLOCK = register("warped_grandfather_clock", () -> new GrandClockBlock(UDProperties.BlockP.NETHER_GRAND_CLOCK), true);
+    public static final Supplier<Block> OAK_GRANDFATHER_CLOCK = register("oak_grandfather_clock", () -> new GrandClockBlock(BlockSetType.OAK, UDProperties.BlockP.GRAND_CLOCK), true);
+    public static final Supplier<Block> SPRUCE_GRANDFATHER_CLOCK = register("spruce_grandfather_clock", () -> new GrandClockBlock(BlockSetType.SPRUCE, UDProperties.BlockP.GRAND_CLOCK), true);
+    public static final Supplier<Block> BIRCH_GRANDFATHER_CLOCK = register("birch_grandfather_clock", () -> new GrandClockBlock(BlockSetType.BIRCH, UDProperties.BlockP.GRAND_CLOCK), true);
+    public static final Supplier<Block> JUNGLE_GRANDFATHER_CLOCK = register("jungle_grandfather_clock", () -> new GrandClockBlock(BlockSetType.JUNGLE, UDProperties.BlockP.GRAND_CLOCK), true);
+    public static final Supplier<Block> ACACIA_GRANDFATHER_CLOCK = register("acacia_grandfather_clock", () -> new GrandClockBlock(BlockSetType.ACACIA, UDProperties.BlockP.GRAND_CLOCK), true);
+    public static final Supplier<Block> DARK_OAK_GRANDFATHER_CLOCK = register("dark_oak_grandfather_clock", () -> new GrandClockBlock(BlockSetType.DARK_OAK, UDProperties.BlockP.GRAND_CLOCK), true);
+    public static final Supplier<Block> MANGROVE_GRANDFATHER_CLOCK = register("mangrove_grandfather_clock", () -> new GrandClockBlock(BlockSetType.MANGROVE, UDProperties.BlockP.GRAND_CLOCK), true);
+    public static final Supplier<Block> CHERRY_GRANDFATHER_CLOCK = register("cherry_grandfather_clock", () -> new GrandClockBlock(BlockSetType.CHERRY, UDProperties.BlockP.CHERRY_GRAND_CLOCK), true);
+    public static final Supplier<Block> BAMBOO_GRANDFATHER_CLOCK = register("bamboo_grandfather_clock", () -> new GrandClockBlock(BlockSetType.BAMBOO, UDProperties.BlockP.BAMBOO_GRAND_CLOCK), true);
+    public static final Supplier<Block> CRIMSON_GRANDFATHER_CLOCK = register("crimson_grandfather_clock", () -> new GrandClockBlock(BlockSetType.CRIMSON, UDProperties.BlockP.NETHER_GRAND_CLOCK), true);
+    public static final Supplier<Block> WARPED_GRANDFATHER_CLOCK = register("warped_grandfather_clock", () -> new GrandClockBlock(BlockSetType.WARPED, UDProperties.BlockP.NETHER_GRAND_CLOCK), true);
 
     public static final Supplier<Block> OAK_BOX = register("oak_box", () -> new BoxBlock(UDProperties.BlockP.OAK_PLANKS), true);
     public static final Supplier<Block> SPRUCE_BOX = register("spruce_box", () -> new BoxBlock(UDProperties.BlockP.OAK_PLANKS), true);
@@ -146,8 +150,6 @@ public class UDBlocks {
     public static final Supplier<Block> BAMBOO_BOX = register("bamboo_box", () -> new BoxBlock(UDProperties.BlockP.BAMBOO_PLANKS), true);
     public static final Supplier<Block> CRIMSON_BOX = register("crimson_box", () -> new BoxBlock(UDProperties.BlockP.CRIMSON_PLANKS), true);
     public static final Supplier<Block> WARPED_BOX = register("warped_box", () -> new BoxBlock(UDProperties.BlockP.CRIMSON_PLANKS), true);
-
-    public static final Supplier<Block> WALL_CLOCK = register("wall_clock", () -> new WallClockBlock(UDProperties.BlockP.WALL_CLOCK), true);
 
     //MISC APPLIANCES
     public static final Supplier<Block> TOOLBOX = register("toolbox", () -> new ToolboxBlock(UDProperties.BlockP.TOOLBOX), false);

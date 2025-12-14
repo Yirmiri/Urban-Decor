@@ -174,6 +174,7 @@ public class UDLangProvider extends FabricLanguageProvider {
         build.add(UDBlocks.BAMBOO_BOX.get(), "Bamboo Box");
         build.add(UDBlocks.CRIMSON_BOX.get(), "Crimson Box");
         build.add(UDBlocks.WARPED_BOX.get(), "Warped Box");
+        build.add(UDBlocks.PLASTIC_DESK_TABLE.get(), "Plastic Table");
 
         //ITEMS
         build.add(UDItems.POLYPROPYLENE.get(), "Polypropylene");
@@ -238,6 +239,8 @@ public class UDLangProvider extends FabricLanguageProvider {
         build.add("toolbox.turbine.variant_1", "Variant: Vent");
         build.add("toolbox.floor_lamp.variant_true", "Variant: Free");
         build.add("toolbox.floor_lamp.variant_false", "Variant: Shade");
+        build.add("toolbox.plastic_table.variant_0", "Variant: Quad Legged");
+        build.add("toolbox.plastic_table.variant_1", "Variant: Single Legged");
 
         //DAMAGE
         build.add("death.attack.urban_decor.toaster", "%1$s likes to play with hot toasters");
@@ -252,6 +255,10 @@ public class UDLangProvider extends FabricLanguageProvider {
         build.add("subtitles.block.satellite.receive_signal", "Satellite dish sequences");
         build.add("subtitles.block.satellite.receive_signal_rare", "SATELLITE DISH SEQUENCES...");
         build.add("subtitles.item.wrap.use", "Wrapping wraps");
+        build.add("subtitles.block.grand_clock.tick", "Grandfather Clock ticks");
+        build.add("subtitles.block.grand_clock.chime_day", "Grandfather Clock chimes");
+        build.add("subtitles.block.grand_clock.chime_might", "Grandfather Clock tolls");
+        build.add("subtitles.block.grand_clock.chime_3am", "Grandfather Clock eerily tolls");
 
         //ADVANCEMENTS
         build.add("urban_decor.advancement.root", "Urban Decor");
@@ -396,6 +403,7 @@ public class UDLangProvider extends FabricLanguageProvider {
         build.add(YT_ID + "block." + MOD_ID + "bamboo_box.desc", "Handle with care!, constructed from bamboo planks");
         build.add(YT_ID + "block." + MOD_ID + "crimson_box.desc", "Handle with care!, constructed from crimson planks");
         build.add(YT_ID + "block." + MOD_ID + "warped_box.desc", "Handle with care!, constructed from warped planks");
+        build.add(YT_ID + "block." + MOD_ID + "plastic_table.desc", "A useful decorative that is commonly used for, well, having even more decorations");
         
         for (WrapColor colors : WrapColor.values()) {
             String wrapString = StringUtils.capitalize(StringUtils.replace(StringUtils.replace(StringUtils.replace(colors.getName(),

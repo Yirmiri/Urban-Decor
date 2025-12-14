@@ -34,6 +34,7 @@ import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import net.yirmiri.urban_decor.common.entity.SeatEntity;
 import net.yirmiri.urban_decor.common.util.UDSeasonalEvents;
+import net.yirmiri.urban_decor.common.util.UDUtils;
 import net.yirmiri.urban_decor.core.registry.UDEntities;
 
 import java.util.List;
@@ -132,7 +133,7 @@ public class PlasticChairBlock extends FaceAttachedHorizontalDirectionalBlock im
 
     @Override
     public InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos, Player player, BlockHitResult hitResult) {
-        if (!level.isClientSide && !state.getValue(OCCUPIED) && !player.isCrouching() && state.getValue(FACE) == AttachFace.FLOOR) {
+        if (UDUtils.canSitOnLenient(state, level, pos, player) && state.getValue(FACE) == AttachFace.FLOOR) {
             UDSeasonalEvents event = new UDSeasonalEvents();
             boolean forceBreak = player.getUUID().equals(UUID.fromString("27a729ac-0a2a-42fc-8e65-a37fcba6a6c7")); //ZeusIGN
             int breakChance = event.isAprilFools() ? 100 : 7777;

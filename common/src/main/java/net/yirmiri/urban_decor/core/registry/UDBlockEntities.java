@@ -43,6 +43,16 @@ public class UDBlockEntities {
                     UDBlocks.WALL_CLOCK.get()
             ));
 
+    public static final Supplier<BlockEntityType<GrandBlockEntity>> GRAND_CLOCK = Services.REGISTRY.registerBlockEntityType(
+            UrbanDecor.MOD_ID, "grand_clock", () -> Services.REGISTRY.createBlockEntity(GrandBlockEntity::new,
+                    UDBlocks.OAK_GRANDFATHER_CLOCK.get(), UDBlocks.SPRUCE_GRANDFATHER_CLOCK.get(),
+                    UDBlocks.BIRCH_GRANDFATHER_CLOCK.get(), UDBlocks.JUNGLE_GRANDFATHER_CLOCK.get(),
+                    UDBlocks.ACACIA_GRANDFATHER_CLOCK.get(), UDBlocks.DARK_OAK_GRANDFATHER_CLOCK.get(),
+                    UDBlocks.MANGROVE_GRANDFATHER_CLOCK.get(), UDBlocks.CHERRY_GRANDFATHER_CLOCK.get(),
+                    UDBlocks.CRIMSON_GRANDFATHER_CLOCK.get(), UDBlocks.WARPED_GRANDFATHER_CLOCK.get(),
+                    UDBlocks.BAMBOO_GRANDFATHER_CLOCK.get()
+            ));
+
     public static void loadBlockEntities() {
     }
 }

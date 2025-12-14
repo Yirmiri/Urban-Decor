@@ -105,6 +105,7 @@ public class UDCreativeTabs {
                 entry.accept(UDBlocks.DESK_FAN.get());
                 entry.accept(UDBlocks.FLOOR_LAMP.get());
 
+                entry.accept(UDBlocks.PLASTIC_DESK_TABLE.get());
                 entry.accept(UDBlocks.PLASTIC_CHAIR.get());
                 entry.accept(UDBlocks.WALL_CLOCK.get());
 

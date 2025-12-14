@@ -12,7 +12,6 @@ public class UDTags {
     public static class BlockT {
         public static final TagKey<Block> SEATS = create("seats");
         public static final TagKey<Block> TOILETS = create("toilets");
-        public static final TagKey<Block> HAS_TOOLBOX_VARIANTS = create("has_toolbox_variants");
         public static final TagKey<Block> POLYANTHOUS = create("polyanthous");
         public static final TagKey<Block> SMOOTH_STORAGE_SOUND = create("smooth_storage_sound");
         public static final TagKey<Block> HEAVY_STORAGE_SOUND = create("heavy_storage_sound");

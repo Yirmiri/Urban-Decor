@@ -50,7 +50,11 @@ public class SinkBlock extends AbstractDecorBlock {
 
     public SinkBlock(Properties settings) {
         super(settings);
-        registerDefaultState(defaultBlockState().setValue(ON, false).setValue(BlockStateProperties.HORIZONTAL_FACING, Direction.NORTH).setValue(WATERLOGGED, false).setValue(VARIANT, 0));
+        registerDefaultState(defaultBlockState()
+                .setValue(ON, false)
+                .setValue(BlockStateProperties.HORIZONTAL_FACING, Direction.NORTH)
+                .setValue(WATERLOGGED, false)
+                .setValue(VARIANT, 0));
     }
 
     @Override

@@ -1,0 +1,7 @@
+{
+  "parent": "urban_decor:block/plastic_desk_table_alt",
+  "textures": {
+	"0": "urban_decor:block/mint_wrapped_plastic_table",
+	"particle": "urban_decor:block/polypropylene_block"
+  }
+}

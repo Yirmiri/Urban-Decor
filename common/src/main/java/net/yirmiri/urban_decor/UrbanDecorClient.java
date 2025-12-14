@@ -44,6 +44,7 @@ public class UrbanDecorClient {
         Services.loadClient().registerBlockRenderType(UDBlocks.BAMBOO_GRANDFATHER_CLOCK.get(), RenderType.cutout());
         Services.loadClient().registerBlockRenderType(UDBlocks.CRIMSON_GRANDFATHER_CLOCK.get(), RenderType.cutout());
         Services.loadClient().registerBlockRenderType(UDBlocks.WARPED_GRANDFATHER_CLOCK.get(), RenderType.cutout());
+        Services.loadClient().registerBlockRenderType(UDBlocks.PLASTIC_DESK_TABLE.get(), RenderType.cutout());
 
         //CUTOUT MIPPED
         Services.loadClient().registerBlockRenderType(UDBlocks.RADIATOR.get(), RenderType.cutoutMipped());

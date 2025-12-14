@@ -1,4 +1,4 @@
-// 1.21.1	2025-12-13T11:02:49.0616128	Urban Decor/Model Definitions
+// 1.21.1	2025-12-14T10:14:06.6535205	Urban Decor/Model Definitions
 fafe75cd66f153c60f4c7a5112621028ec491634 assets\urban_decor\models\block\dark_porcelain_brick_stairs_outer.json
 4c8ac93698f8cb7e13eb25aac21a48ef477b9336 assets\urban_decor\models\item\azure_polyanthous.json
 420ba200f7f531d8c5f35b418bc692093c4149f8 assets\urban_decor\models\item\magenta_towel_block.json
@@ -87,6 +87,7 @@ f871206c6957b760e9c80f27fd8c866201ea0127 assets\urban_decor\models\block\chromit
 f25a9e25664ae4dffd185f232458c0d3781503ea assets\urban_decor\models\item\dark_oak_box.json
 51f062ddb1dd53f6bc5964884d37ae4145e23b76 assets\urban_decor\models\item\porcelain_tile_stairs.json
 5384e09375260299ac9445802f42b4c03c68c6dc assets\urban_decor\models\item\air_conditioner.json
+71affa298bd66b8bdb989a7d58ba42a3a36b494b assets\urban_decor\models\item\plastic_desk_table.json
 1e33d30fe7492783ac588c4e76a188cafaf068df assets\urban_decor\models\block\checkered_porcelain_tiles.json
 ab4c27814f005351bd8a5ae56fbdffb473e8b5a3 assets\urban_decor\models\item\cherry_piano.json
 1a30a43c891921dc7ce37cacd053cce5c311427c assets\urban_decor\models\block\red_towel_block.json
@@ -191,8 +192,8 @@ b16880b718947f1dce374839038b146172f5e06f assets\urban_decor\models\item\warped_g
 8668843291f59574242c72ad959455b0e09f9d32 assets\urban_decor\models\item\jungle_calendar.json
 592d2e8717a78556aa310029a6dcda8dcb939cfe assets\urban_decor\blockstates\dark_porcelain_brick_stairs.json
 79544fb040b968cfe436bacbf4932bd2050f5ed4 assets\urban_decor\blockstates\dark_porcelain_tile_stairs.json
-b3032697a30f485fcf54a72dcc135701e8f424fc assets\urban_decor\models\block\porcelain_slab.json
 ef10109a677abf2f94454399d77f3eb45da317ee assets\urban_decor\models\item\cyan_picture_frame.json
+b3032697a30f485fcf54a72dcc135701e8f424fc assets\urban_decor\models\block\porcelain_slab.json
 d310b8c5c3cd4b2a3b45171aa8125419adebab97 assets\urban_decor\models\item\spruce_piano.json
 7f97405776fcf544a99ee860a1dc9ef6cf2384d0 assets\urban_decor\models\item\magenta_towel.json
 e6dc54b5c6648412247e47a24485c7081efbcdf9 assets\urban_decor\models\block\porcelain_tile_stairs_inner.json

@@ -23,13 +23,13 @@ public class WallClockRenderer implements BlockEntityRenderer<WallClockBlockEnti
     public void render(WallClockBlockEntity blockEntity, float partialTicks, PoseStack poseStack, MultiBufferSource buffer, int light, int overlay) {
         poseStack.pushPose();
 
-        poseStack.translate(0.5D, -0.1875D, 0.5D);
+        poseStack.translate(0.5D, -1.8125D, 0.5D);
 
         switch (blockEntity.getBlockState().getValue(WallClockBlock.FACING)) {
-            case SOUTH -> poseStack.mulPose(Axis.YP.rotationDegrees(180F));
-            case WEST -> poseStack.mulPose(Axis.YP.rotationDegrees(90F));
-            case EAST -> poseStack.mulPose(Axis.YP.rotationDegrees(-90F));
-            case NORTH -> poseStack.mulPose(Axis.YP.rotationDegrees(0F));
+            case NORTH -> poseStack.mulPose(Axis.YP.rotationDegrees(180F));
+            case EAST -> poseStack.mulPose(Axis.YP.rotationDegrees(90F));
+            case WEST -> poseStack.mulPose(Axis.YP.rotationDegrees(-90F));
+            case SOUTH -> poseStack.mulPose(Axis.YP.rotationDegrees(0F));
         }
 
         model.setupAnim(null, 0, 0, blockEntity.getLevel().getDayTime(), 0, 0);

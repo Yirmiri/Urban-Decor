@@ -153,6 +153,7 @@ public class UDLootTableProvider extends FabricBlockLootTableProvider {
         dropSelf(UDBlocks.BAMBOO_BOX.get());
         dropSelf(UDBlocks.CRIMSON_BOX.get());
         dropSelf(UDBlocks.WARPED_BOX.get());
+        dropSelf(UDBlocks.PLASTIC_DESK_TABLE.get());
     }
 
     public LootTable.Builder floorLampDrops(Block block) {

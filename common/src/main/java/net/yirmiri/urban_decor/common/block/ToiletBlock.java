@@ -85,7 +85,7 @@ public class ToiletBlock extends AbstractDecorBlock {
                     level.playLocalSound(pos.getX(), pos.getY(), pos.getZ(), SoundEvents.CHERRY_WOOD_DOOR_OPEN, SoundSource.BLOCKS, 1.0F, 1.0F, false);
                 }
                 return InteractionResult.SUCCESS;
-            } else if (!player.isShiftKeyDown() && !state.getValue(OCCUPIED) && !level.isClientSide) {
+            } else if (UDUtils.canSitOnLenient(state, level, pos, player)) {
                 SeatEntity seatEntity = UDEntities.SEAT.get().create(level);
                 seatEntity.setPosRaw(pos.getX() + 0.5D, pos.getY() + 0.25D, pos.getZ() + 0.5D);
                 level.addFreshEntity(seatEntity);

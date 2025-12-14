@@ -1,0 +1,7 @@
+{
+  "parent": "urban_decor:block/plastic_desk_table",
+  "textures": {
+	"0": "urban_decor:block/daffodil_wrapped_plastic_table",
+	"particle": "urban_decor:block/polypropylene_block"
+  }
+}

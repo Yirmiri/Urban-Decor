@@ -27,7 +27,7 @@ public class WallClockModel<T extends Entity> extends EntityModel<T> {
         MeshDefinition meshdefinition = new MeshDefinition();
         PartDefinition partdefinition = meshdefinition.getRoot();
 
-        PartDefinition root = partdefinition.addOrReplaceChild("root", CubeListBuilder.create().texOffs(0, 0).addBox(-5.0F, -18.0F, 6.0F, 10.0F, 10.0F, 2.0F, new CubeDeformation(0.0F)), PartPose.offset(0.0F, 24.0F, 0.0F));
+        PartDefinition root = partdefinition.addOrReplaceChild("root", CubeListBuilder.create().texOffs(0, 0).addBox(-5.0F, -18.0F, 6.0F, 10.0F, 10.0F, 2.0F, new CubeDeformation(0.0F)), PartPose.offsetAndRotation(0.0F, 24.0F, 0.0F, (float)Math.PI, 0.0F, 0.0F));
 
         PartDefinition minute_hand = root.addOrReplaceChild("minute_hand", CubeListBuilder.create().texOffs(0, 12).addBox(-0.5F, -3.5F, -0.85F, 1.0F, 4.0F, 0.0F, new CubeDeformation(0.0F)), PartPose.offset(0.0F, -13.0F, 6.75F));
 
@@ -38,9 +38,11 @@ public class WallClockModel<T extends Entity> extends EntityModel<T> {
 
     @Override
     public void setupAnim(Entity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
-        float time = ageInTicks % 24000.0F;
+        //  float time = ageInTicks % 24000.0F;
+        float time = (float) Math.floor(ageInTicks / 20.0F) * 20.0F;
 
         this.hour_hand.zRot = (((time / 1000.0F) + 6.0F) % 12.0F / 12.0F) * ((float) Math.PI * 2F);
+        //this.minute_hand.zRot = ((time % 1000.0F) / 1000.0F) * ((float) Math.PI * 2F);
         this.minute_hand.zRot = ((time % 1000.0F) / 1000.0F) * ((float) Math.PI * 2F);
     }
 

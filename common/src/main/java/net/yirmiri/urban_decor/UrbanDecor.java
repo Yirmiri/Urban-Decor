@@ -23,9 +23,12 @@ public class UrbanDecor {
 //Fixed some appliances not making any open/close sounds when truly opening them
 //more interactions
 //lead on animal to click seat to make it sit
+//grand clock emits signal when making tong sound
+//grand clock be weird in nether
 
 //TODO MISC
-//box drops applied wrap when broken
+//fix satellite sound
+//wrapped blocks with state wraps should drop wrap on break
 //toaster smoke particles
 //microwave cook sound instance
 //re-sort creative
@@ -33,6 +36,7 @@ public class UrbanDecor {
 //delicate integration
 
 //TODO Technical updates
+//convert wall clock and grand clock to models + hand just as entity
 //datadrive wraps
 //datadrive toolbox variants
 //make sounds for each block a lot more open

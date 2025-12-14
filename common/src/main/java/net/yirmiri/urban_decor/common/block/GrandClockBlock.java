@@ -1,6 +1,7 @@
 package net.yirmiri.urban_decor.common.block;
 
 import com.mojang.serialization.MapCodec;
+import com.mojang.serialization.codecs.RecordCodecBuilder;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.network.chat.Component;
@@ -15,6 +16,8 @@ import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.entity.BlockEntity;
+import net.minecraft.world.level.block.entity.BlockEntityTicker;
+import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.*;
@@ -23,8 +26,11 @@ import net.minecraft.world.level.material.Fluids;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
+import net.yirmiri.urban_decor.common.block.entity.GrandBlockEntity;
 
-public class GrandClockBlock extends Block implements SimpleWaterloggedBlock {
+public class GrandClockBlock extends Block implements SimpleWaterloggedBlock, EntityBlock {
+    private final BlockSetType type;
+
     public static final DirectionProperty FACING = BlockStateProperties.HORIZONTAL_FACING;
     public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
     public static final EnumProperty<DoubleBlockHalf> HALF = BlockStateProperties.DOUBLE_BLOCK_HALF;
@@ -39,18 +45,34 @@ public class GrandClockBlock extends Block implements SimpleWaterloggedBlock {
     protected static final VoxelShape SOUTH_LOWER = Block.box(3, 0, 0, 13, 16, 8);
     protected static final VoxelShape EAST_LOWER = Block.box(0, 0, 3, 8, 16, 13);
 
-    public static final MapCodec<GrandClockBlock> CODEC = simpleCodec(GrandClockBlock::new);
+    public static final MapCodec<GrandClockBlock> CODEC = RecordCodecBuilder.mapCodec((setType) -> setType
+            .group(BlockSetType.CODEC.fieldOf("block_set_type").forGetter(GrandClockBlock::type), propertiesCodec()).apply(setType, GrandClockBlock::new));
 
     public MapCodec<? extends GrandClockBlock> codec() {
         return CODEC;
     }
 
-    public GrandClockBlock(Properties settings) {
+    public GrandClockBlock(BlockSetType type, Properties settings) {
         super(settings);
+        this.type = type;
         registerDefaultState(defaultBlockState()
                 .setValue(BlockStateProperties.HORIZONTAL_FACING, Direction.NORTH)
                 .setValue(HALF, DoubleBlockHalf.LOWER)
                 .setValue(WATERLOGGED, false));
+    }
+
+    public BlockSetType type() {
+        return this.type;
+    }
+
+    public static BlockSetType getType(Block block) {
+        BlockSetType type1;
+        if (block instanceof GrandClockBlock) {
+            type1 = ((GrandClockBlock) block).type();
+        } else {
+            type1 = WoodType.OAK.setType();
+        }
+        return type1;
     }
 
     protected VoxelShape getShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
@@ -110,7 +132,9 @@ public class GrandClockBlock extends Block implements SimpleWaterloggedBlock {
     @Override
     public void setPlacedBy(Level level, BlockPos pos, BlockState state, LivingEntity placer, ItemStack stack) {
         BlockPos blockpos = pos.above();
-        level.setBlock(blockpos, copyWaterloggedFrom(level, blockpos, this.defaultBlockState().setValue(HALF, DoubleBlockHalf.UPPER)), 3);
+        level.setBlock(blockpos, copyWaterloggedFrom(level, blockpos, this.defaultBlockState()
+                .setValue(HALF, DoubleBlockHalf.UPPER)
+                .setValue(FACING, state.getValue(FACING))), 3);
     }
 
     @Override
@@ -186,5 +210,20 @@ public class GrandClockBlock extends Block implements SimpleWaterloggedBlock {
     @Override
     public FluidState getFluidState(BlockState state) {
         return state.getValue(WATERLOGGED) ? Fluids.WATER.getSource(false) : super.getFluidState(state);
+    }
+
+    @Override
+    public BlockEntity newBlockEntity(BlockPos pos, BlockState state) {
+        return new GrandBlockEntity(pos, state);
+    }
+
+    @Override
+    public <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level level, BlockState state, BlockEntityType<T> type) {
+        return level.isClientSide ? null : (level1, pos, state1, blockEntity) -> GrandBlockEntity.tick(level1, pos, state1, (GrandBlockEntity) blockEntity);
+    }
+
+    @Override
+    protected RenderShape getRenderShape(BlockState state) {
+        return RenderShape.ENTITYBLOCK_ANIMATED;
     }
 }

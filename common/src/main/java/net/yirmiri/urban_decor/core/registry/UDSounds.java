@@ -20,7 +20,14 @@ public class UDSounds {
     //ITEM
     public static final Supplier<SoundEvent> WRAP_USE = register("item.wrap.use");
 
-    //MISC
+    //GRAND CLOCK
+    public static final Supplier<SoundEvent> GRAND_CLOCK_TICK = register("block.grand_clock.tick");
+    public static final Supplier<SoundEvent> GRAND_CLOCK_TOCK = register("block.grand_clock.tock");
+    public static final Supplier<SoundEvent> GRAND_CLOCK_CHIME_DAY = register("block.grand_clock.chime_day");
+    public static final Supplier<SoundEvent> GRAND_CLOCK_CHIME_NIGHT = register("block.grand_clock.chime_night");
+    public static final Supplier<SoundEvent> GRAND_CLOCK_CHIME_3AM = register("block.grand_clock.chime_3am");
+
+    //SATELLITE DISH
     public static final Supplier<SoundEvent> SATELITE_RECIEVE_SIGNAL = register("block.satellite.receive_signal");
     public static final Supplier<SoundEvent> SATELITE_RECIEVE_SIGNAL_RARE = register("block.satellite.receive_signal_rare");
 

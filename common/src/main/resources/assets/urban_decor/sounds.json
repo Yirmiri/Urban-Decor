@@ -44,13 +44,43 @@
   "block.satellite.receive_signal": {
     "subtitle": "subtitles.block.satellite.receive_signal",
     "sounds": [
-      "urban_decor:misc_appliances/satellite_receive_signal"
+      "urban_decor:misc_appliances/satellite_dish/satellite_receive_signal"
     ]
   },
   "block.satellite.receive_signal_rare": {
     "subtitle": "subtitles.block.satellite.receive_signal_rare",
     "sounds": [
-      "urban_decor:misc_appliances/satellite_receive_signal_rare"
+      "urban_decor:misc_appliances/satellite_dish/satellite_receive_signal_rare"
+    ]
+  },
+  "block.grand_clock.tick": {
+    "subtitle": "subtitles.block.grand_clock.tick",
+    "sounds": [
+      "urban_decor:misc_appliances/grand_clock/tick"
+    ]
+  },
+  "block.grand_clock.tock": {
+    "subtitle": "subtitles.block.grand_clock.tick",
+    "sounds": [
+      "urban_decor:misc_appliances/grand_clock/tock"
+    ]
+  },
+  "block.grand_clock.chime_day": {
+    "subtitle": "subtitles.block.grand_clock.chime_day",
+    "sounds": [
+      "urban_decor:misc_appliances/grand_clock/chime_day"
+    ]
+  },
+  "block.grand_clock.chime_night": {
+    "subtitle": "subtitles.block.grand_clock.chime_night",
+    "sounds": [
+      "urban_decor:misc_appliances/grand_clock/chime_night"
+    ]
+  },
+  "block.grand_clock.chime_3am": {
+    "subtitle": "subtitles.block.grand_clock.chime_3am",
+    "sounds": [
+      "urban_decor:misc_appliances/grand_clock/chime_3am"
     ]
   }
 }
