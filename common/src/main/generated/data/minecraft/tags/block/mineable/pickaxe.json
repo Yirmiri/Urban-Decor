@@ -1,6 +1,7 @@
 {
   "values": [
     "#urban_decor:mineable_with_axe_and_pickaxe",
+    "urban_decor:stainless_steel_chair",
     "urban_decor:dark_porcelain_block",
     "urban_decor:dark_porcelain_stairs",
     "urban_decor:dark_porcelain_slab",
@@ -70,6 +71,7 @@
     "urban_decor:stainless_steel_lantern",
     "urban_decor:stainless_steel_soul_lantern",
     "urban_decor:stainless_steel_bars",
+    "urban_decor:stainless_steel_fence",
     "urban_decor:floor_lamp",
     "urban_decor:dishwasher",
     "urban_decor:dark_dishwasher",

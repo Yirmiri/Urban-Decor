@@ -6,10 +6,12 @@ import net.fabricmc.api.Environment;
 import net.fabricmc.fabric.api.client.rendering.v1.BlockEntityRendererRegistry;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityModelLayerRegistry;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
-import net.yirmiri.urban_decor.common.block.entity.GrandClockModel;
-import net.yirmiri.urban_decor.common.block.entity.GrandClockRenderer;
-import net.yirmiri.urban_decor.common.block.entity.WallClockModel;
-import net.yirmiri.urban_decor.common.block.entity.WallClockRenderer;
+import net.yirmiri.urban_decor.common.block.entity.model.GrandClockModel;
+import net.yirmiri.urban_decor.common.block.entity.model.StainlessSteelChairModel;
+import net.yirmiri.urban_decor.common.block.entity.renderer.GrandClockRenderer;
+import net.yirmiri.urban_decor.common.block.entity.model.WallClockModel;
+import net.yirmiri.urban_decor.common.block.entity.renderer.StainlessSteelChairRenderer;
+import net.yirmiri.urban_decor.common.block.entity.renderer.WallClockRenderer;
 import net.yirmiri.urban_decor.core.registry.UDBlockEntities;
 import net.yirmiri.urban_decor.core.registry.UDEntities;
 import net.yirmiri.urban_decor.common.entity.renderer.InvisibleEntityRenderer;
@@ -27,5 +29,8 @@ public class FabricUrbanDecorClient implements ClientModInitializer {
 
         BlockEntityRendererRegistry.register(UDBlockEntities.GRAND_CLOCK.get(), GrandClockRenderer::new);
         EntityModelLayerRegistry.registerModelLayer(GrandClockModel.LAYER_LOCATION, GrandClockModel::createBodyLayer);
+
+        BlockEntityRendererRegistry.register(UDBlockEntities.STAINLESS_STEEL_CHAIR.get(), StainlessSteelChairRenderer::new);
+        EntityModelLayerRegistry.registerModelLayer(StainlessSteelChairModel.LAYER_LOCATION, StainlessSteelChairModel::createBodyLayer);
     }
 }

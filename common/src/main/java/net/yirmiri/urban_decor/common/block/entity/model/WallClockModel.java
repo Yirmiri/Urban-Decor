@@ -1,4 +1,4 @@
-package net.yirmiri.urban_decor.common.block.entity;
+package net.yirmiri.urban_decor.common.block.entity.model;
 
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;

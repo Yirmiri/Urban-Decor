@@ -48,7 +48,7 @@
     "frame": "challenge",
     "hidden": false,
     "icon": {
-      "item": "urban_decor:toilet"
+      "id": "urban_decor:toilet"
     },
     "show_toast": true,
     "title": {

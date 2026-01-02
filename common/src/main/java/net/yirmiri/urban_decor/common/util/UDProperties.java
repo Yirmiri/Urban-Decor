@@ -28,10 +28,13 @@ public class UDProperties {
         public static final BlockBehaviour.Properties STEEL_SOUL_LANTERN = BlockBehaviour.Properties.ofFullCopy(Blocks.SOUL_LANTERN).sound(SoundType.COPPER);
         public static final BlockBehaviour.Properties STEEL_PIPE = BlockBehaviour.Properties.ofFullCopy(Blocks.CHAIN).sound(SoundType.COPPER);
         public static final BlockBehaviour.Properties STEEL_BARS = BlockBehaviour.Properties.ofFullCopy(Blocks.IRON_BARS).sound(SoundType.COPPER);
+        public static final BlockBehaviour.Properties STEEL_FENCE = BlockBehaviour.Properties.ofFullCopy(Blocks.IRON_BARS).sound(SoundType.CHAIN);
         public static final BlockBehaviour.Properties STEEL_DOOR = BlockBehaviour.Properties.ofFullCopy(Blocks.IRON_DOOR).sound(SoundType.COPPER);
         public static final BlockBehaviour.Properties STEEL_TRAPDOOR = BlockBehaviour.Properties.ofFullCopy(Blocks.IRON_TRAPDOOR).sound(SoundType.COPPER);
         public static final BlockBehaviour.Properties PLASTIC = BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_WOOD).mapColor(MapColor.STONE).sound(SoundType.SCAFFOLDING).strength(0.8F, 0.5F);
         public static final BlockBehaviour.Properties STEEL_LADDER = BlockBehaviour.Properties.ofFullCopy(Blocks.LADDER).sound(SoundType.COPPER);
+        public static final BlockBehaviour.Properties PLASTIC_LIGHTS = BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_WOOD).lightLevel(s -> 12).sound(SoundType.SCAFFOLDING).noCollission().instabreak();
+        public static final BlockBehaviour.Properties DARK_PLASTIC_LIGHTS = BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_WOOD).lightLevel(s -> 7).sound(SoundType.SCAFFOLDING).noCollission().instabreak();
 
         //DECOR
         public static final BlockBehaviour.Properties TRASH_CAN = BlockBehaviour.Properties.ofFullCopy(Blocks.WHITE_WOOL).strength(0.3F).mapColor(MapColor.COLOR_GRAY).sound(SoundType.LANTERN);
@@ -82,6 +85,7 @@ public class UDProperties {
         public static final BlockBehaviour.Properties SHOWER = BlockBehaviour.Properties.ofFullCopy(Blocks.WHITE_WOOL).strength(0.3F).mapColor(MapColor.COLOR_GRAY).sound(SoundType.COPPER);
         public static final BlockBehaviour.Properties PLASTIC_CHAIR = BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_WOOD).mapColor(MapColor.STONE).sound(SoundType.SCAFFOLDING).strength(0.8F, 0.5F);
         public static final BlockBehaviour.Properties PLASTIC_TABLE = BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_WOOD).mapColor(MapColor.STONE).sound(SoundType.COPPER).strength(1.0F, 0.8F);
+        public static final BlockBehaviour.Properties STAINLESS_STEEL_CHAIR = BlockBehaviour.Properties.ofFullCopy(Blocks.IRON_BLOCK).sound(SoundType.COPPER).strength(1.5F, 2.0F);
     }
 
     public static class ItemP {

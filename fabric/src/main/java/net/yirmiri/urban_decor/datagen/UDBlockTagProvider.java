@@ -21,6 +21,7 @@ public class UDBlockTagProvider extends FabricTagProvider.BlockTagProvider {
         getOrCreateTagBuilder(UDTags.BlockT.SEATS)
                 .addTag(UDTags.BlockT.TOILETS)
                 .add(UDBlocks.PLASTIC_CHAIR.get())
+                .add(UDBlocks.STAINLESS_STEEL_CHAIR.get())
                 .add(UDBlocks.PLASTIC_DESK_TABLE.get())
         ;
         
@@ -35,7 +36,6 @@ public class UDBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(UDBlocks.WALL_CLOCK.get())
                 .add(UDBlocks.PLASTIC_DESK_TABLE.get())
         ;
-
 
         getOrCreateTagBuilder(BlockTags.MINEABLE_WITH_AXE)
                 .addTag(UDTags.BlockT.MINEABLE_WITH_AXE_AND_PICKAXE)
@@ -91,6 +91,7 @@ public class UDBlockTagProvider extends FabricTagProvider.BlockTagProvider {
 
         getOrCreateTagBuilder(BlockTags.MINEABLE_WITH_PICKAXE)
                 .addTag(UDTags.BlockT.MINEABLE_WITH_AXE_AND_PICKAXE)
+                .add(UDBlocks.STAINLESS_STEEL_CHAIR.get())
                 .add(UDBlocks.DARK_PORCELAIN_BLOCK.get())
                 .add(UDBlocks.DARK_PORCELAIN_STAIRS.get())
                 .add(UDBlocks.DARK_PORCELAIN_SLAB.get())
@@ -160,6 +161,7 @@ public class UDBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(UDBlocks.STAINLESS_STEEL_LANTERN.get())
                 .add(UDBlocks.STAINLESS_STEEL_SOUL_LANTERN.get())
                 .add(UDBlocks.STAINLESS_STEEL_BARS.get())
+                .add(UDBlocks.STAINLESS_STEEL_FENCE.get())
                 .add(UDBlocks.FLOOR_LAMP.get())
                 .add(UDBlocks.DISHWASHER.get())
                 .add(UDBlocks.DARK_DISHWASHER.get())
@@ -213,6 +215,14 @@ public class UDBlockTagProvider extends FabricTagProvider.BlockTagProvider {
         getOrCreateTagBuilder(BlockTags.CAMPFIRES)
                 .add(UDBlocks.TOASTER.get())
         ;
+
+        getOrCreateTagBuilder(BlockTags.INSIDE_STEP_SOUND_BLOCKS)
+                .add(UDBlocks.PLASTIC_LIGHTS.get())
+        ;
+
+        for (DyeColor colors : DyeColor.values()) {
+            getOrCreateTagBuilder(BlockTags.INSIDE_STEP_SOUND_BLOCKS).add(UDBlocks.getDyedPlasticLights(colors.getId()).get());
+        }
 
         for (DyeColor colors : DyeColor.values()) {
             getOrCreateTagBuilder(BlockTags.WOOL).add(UDBlocks.getDyedTowelBlocks(colors.getId()).get());

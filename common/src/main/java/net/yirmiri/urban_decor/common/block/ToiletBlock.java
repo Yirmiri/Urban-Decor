@@ -8,6 +8,7 @@ import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.ItemInteractionResult;
+import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.BlockGetter;
@@ -85,25 +86,12 @@ public class ToiletBlock extends AbstractDecorBlock {
                     level.playLocalSound(pos.getX(), pos.getY(), pos.getZ(), SoundEvents.CHERRY_WOOD_DOOR_OPEN, SoundSource.BLOCKS, 1.0F, 1.0F, false);
                 }
                 return InteractionResult.SUCCESS;
-            } else if (UDUtils.canSitOnLenient(state, level, pos, player)) {
-                SeatEntity seatEntity = UDEntities.SEAT.get().create(level);
-                seatEntity.setPosRaw(pos.getX() + 0.5D, pos.getY() + 0.25D, pos.getZ() + 0.5D);
-                level.addFreshEntity(seatEntity);
-                level.setBlockAndUpdate(pos, state.setValue(OCCUPIED, true));
-                player.startRiding(seatEntity);
-                //player.awardStat(UDStats.TIMES_SAT);
+            } else if (UDUtils.canSitOn(state, pos, level, player)) {
+                UDUtils.createSeat(0.25D, state, level, pos, player, hitResult);
                 return InteractionResult.SUCCESS;
             }
         }
-        return InteractionResult.CONSUME;
-    }
-
-    @Override
-    public void onRemove(BlockState state, Level level, BlockPos pos, BlockState newState, boolean moved) {
-        super.onRemove(state, level, pos, newState, moved);
-        for (SeatEntity seat : level.getEntitiesOfClass(SeatEntity.class, new AABB(pos))) {
-            seat.discard();
-        }
+        return InteractionResult.PASS;
     }
 
     @Override

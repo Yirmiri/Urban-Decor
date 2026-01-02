@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "urban_decor:polypropylene"
+    },
+    "@": {
+      "item": "minecraft:glowstone_dust"
+    }
+  },
+  "pattern": [
+    "# #",
+    "@#@",
+    " @ "
+  ],
+  "result": {
+    "count": 12,
+    "id": "urban_decor:plastic_lights"
+  }
+}

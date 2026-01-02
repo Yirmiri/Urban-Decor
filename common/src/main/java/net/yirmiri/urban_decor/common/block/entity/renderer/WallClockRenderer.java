@@ -1,4 +1,4 @@
-package net.yirmiri.urban_decor.common.block.entity;
+package net.yirmiri.urban_decor.common.block.entity.renderer;
 
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.math.Axis;
@@ -11,6 +11,8 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.Entity;
 import net.yirmiri.urban_decor.UrbanDecor;
 import net.yirmiri.urban_decor.common.block.WallClockBlock;
+import net.yirmiri.urban_decor.common.block.entity.WallClockBlockEntity;
+import net.yirmiri.urban_decor.common.block.entity.model.WallClockModel;
 
 public class WallClockRenderer implements BlockEntityRenderer<WallClockBlockEntity> {
     private final WallClockModel<Entity> model;

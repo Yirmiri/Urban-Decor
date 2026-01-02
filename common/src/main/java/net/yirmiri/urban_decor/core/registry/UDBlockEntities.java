@@ -53,6 +53,11 @@ public class UDBlockEntities {
                     UDBlocks.BAMBOO_GRANDFATHER_CLOCK.get()
             ));
 
+    public static final Supplier<BlockEntityType<StainlessSteelChairBlockEntity>> STAINLESS_STEEL_CHAIR = Services.REGISTRY.registerBlockEntityType(
+            UrbanDecor.MOD_ID, "stainless_steel_chair", () -> Services.REGISTRY.createBlockEntity(StainlessSteelChairBlockEntity::new,
+                    UDBlocks.STAINLESS_STEEL_CHAIR.get()
+            ));
+
     public static void loadBlockEntities() {
     }
 }

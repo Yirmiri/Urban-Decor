@@ -230,7 +230,7 @@
     "frame": "task",
     "hidden": false,
     "icon": {
-      "item": "urban_decor:cupboard"
+      "id": "urban_decor:cupboard"
     },
     "show_toast": true,
     "title": {

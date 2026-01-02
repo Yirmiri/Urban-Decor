@@ -4,8 +4,10 @@ import net.minecraft.util.StringRepresentable;
 
 public enum ConnectionType implements StringRepresentable {
     SINGLE("single"),
-    TOP("top"),
     MIDDLE("middle"),
+    LEFT("left"),
+    RIGHT("right"),
+    TOP("top"),
     BOTTOM("bottom")
     ;
 

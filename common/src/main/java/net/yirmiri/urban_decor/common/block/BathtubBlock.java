@@ -2,21 +2,35 @@ package net.yirmiri.urban_decor.common.block;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.world.InteractionResult;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
+import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BedPart;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
+import net.minecraft.world.level.block.state.properties.BooleanProperty;
+import net.minecraft.world.level.material.Fluids;
+import net.minecraft.world.phys.AABB;
+import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.shapes.BooleanOp;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import net.yirmiri.urban_decor.common.block.abstracts.AbstractLongBlock;
+import net.yirmiri.urban_decor.common.entity.SeatEntity;
+import net.yirmiri.urban_decor.common.util.UDUtils;
+import net.yirmiri.urban_decor.core.registry.UDEntities;
 
 import java.util.stream.Stream;
 
 public class BathtubBlock extends AbstractLongBlock {
+    public static final BooleanProperty OCCUPIED = BlockStateProperties.OCCUPIED;
+
     private static final VoxelShape BACK_NORTH = Stream.of(Block.box(0, 0, 0, 16, 3, 16), Block.box(0, 3, 0, 2, 16, 16), Block.box(14, 3, 0, 16, 16, 16), Block.box(2, 3, 14, 14, 16, 16)).reduce((v1, v2) -> Shapes.join(v1, v2, BooleanOp.OR)).get();
     private static final VoxelShape BACK_EAST = Stream.of(Block.box(0, 0, 0, 16, 3, 16), Block.box(0, 3, 0, 16, 16, 2), Block.box(0, 3, 14, 16, 16, 16), Block.box(0, 3, 2, 2, 16, 14)).reduce((v1, v2) -> Shapes.join(v1, v2, BooleanOp.OR)).get();
     private static final VoxelShape BACK_WEST = Stream.of(Block.box(0, 0, 0, 16, 3, 16), Block.box(0, 3, 14, 16, 16, 16), Block.box(0, 3, 0, 16, 16, 2), Block.box(14, 3, 2, 16, 16, 14)).reduce((v1, v2) -> Shapes.join(v1, v2, BooleanOp.OR)).get();
@@ -29,7 +43,21 @@ public class BathtubBlock extends AbstractLongBlock {
 
     public BathtubBlock(Properties settings) {
         super(settings);
-        registerDefaultState(defaultBlockState().setValue(BlockStateProperties.HORIZONTAL_FACING, Direction.NORTH).setValue(WATERLOGGED, false).setValue(PART, BedPart.FOOT));
+        registerDefaultState(defaultBlockState()
+                .setValue(BlockStateProperties.HORIZONTAL_FACING, Direction.NORTH)
+                .setValue(WATERLOGGED, false)
+                .setValue(PART, BedPart.FOOT)
+                .setValue(OCCUPIED, false)
+        );
+    }
+
+    @Override
+    public InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos, Player player, BlockHitResult hitResult) {
+        if (UDUtils.canSitOn(state, pos, level, player)) {
+            UDUtils.createSeat(0.1D, state, level, pos, player, hitResult);
+            return InteractionResult.SUCCESS;
+        }
+        return InteractionResult.PASS;
     }
 
     @Override
@@ -52,6 +80,6 @@ public class BathtubBlock extends AbstractLongBlock {
 
     @Override
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
-        builder.add(FACING, WATERLOGGED, PART);
+        builder.add(FACING, WATERLOGGED, PART, OCCUPIED);
     }
 }

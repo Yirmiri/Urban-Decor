@@ -1,40 +1,78 @@
 {
   "variants": {
-    "facing=north,outdoor=false": {
+    "facing=north,outdoor=false,on=false": {
       "model": "urban_decor:block/faucet",
       "uvlock": false
     },
-    "facing=south,outdoor=false": {
+    "facing=south,outdoor=false,on=false": {
       "model": "urban_decor:block/faucet",
       "y": 180,
       "uvlock": false
     },
-    "facing=west,outdoor=false": {
+    "facing=west,outdoor=false,on=false": {
       "model": "urban_decor:block/faucet",
       "y": 270,
       "uvlock": false
     },
-    "facing=east,outdoor=false": {
+    "facing=east,outdoor=false,on=false": {
       "model": "urban_decor:block/faucet",
       "y": 90,
       "uvlock": false
     },
-    "facing=north,outdoor=true": {
+    "facing=north,outdoor=true,on=false": {
       "model": "urban_decor:block/faucet_outdoor",
       "uvlock": false
     },
-    "facing=south,outdoor=true": {
+    "facing=south,outdoor=true,on=false": {
       "model": "urban_decor:block/faucet_outdoor",
       "y": 180,
       "uvlock": false
     },
-    "facing=west,outdoor=true": {
+    "facing=west,outdoor=true,on=false": {
       "model": "urban_decor:block/faucet_outdoor",
       "y": 270,
       "uvlock": false
     },
-    "facing=east,outdoor=true": {
+    "facing=east,outdoor=true,on=false": {
       "model": "urban_decor:block/faucet_outdoor",
+      "y": 90,
+      "uvlock": false
+    },
+    "facing=north,outdoor=false,on=true": {
+      "model": "urban_decor:block/faucet_on",
+      "uvlock": false
+    },
+    "facing=south,outdoor=false,on=true": {
+      "model": "urban_decor:block/faucet_on",
+      "y": 180,
+      "uvlock": false
+    },
+    "facing=west,outdoor=false,on=true": {
+      "model": "urban_decor:block/faucet_on",
+      "y": 270,
+      "uvlock": false
+    },
+    "facing=east,outdoor=false,on=true": {
+      "model": "urban_decor:block/faucet_on",
+      "y": 90,
+      "uvlock": false
+    },
+    "facing=north,outdoor=true,on=true": {
+      "model": "urban_decor:block/faucet_outdoor_on",
+      "uvlock": false
+    },
+    "facing=south,outdoor=true,on=true": {
+      "model": "urban_decor:block/faucet_outdoor_on",
+      "y": 180,
+      "uvlock": false
+    },
+    "facing=west,outdoor=true,on=true": {
+      "model": "urban_decor:block/faucet_outdoor_on",
+      "y": 270,
+      "uvlock": false
+    },
+    "facing=east,outdoor=true,on=true": {
+      "model": "urban_decor:block/faucet_outdoor_on",
       "y": 90,
       "uvlock": false
     }

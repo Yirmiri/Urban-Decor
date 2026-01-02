@@ -37,7 +37,6 @@ import net.yirmiri.urban_decor.common.util.UDSeasonalEvents;
 import net.yirmiri.urban_decor.common.util.UDUtils;
 import net.yirmiri.urban_decor.core.registry.UDEntities;
 
-import java.util.List;
 import java.util.Map;
 import java.util.UUID;
 import java.util.stream.Stream;
@@ -133,7 +132,7 @@ public class PlasticChairBlock extends FaceAttachedHorizontalDirectionalBlock im
 
     @Override
     public InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos, Player player, BlockHitResult hitResult) {
-        if (UDUtils.canSitOnLenient(state, level, pos, player) && state.getValue(FACE) == AttachFace.FLOOR) {
+        if (UDUtils.canSitOn(state, pos, level, player) && state.getValue(FACE) == AttachFace.FLOOR) {
             UDSeasonalEvents event = new UDSeasonalEvents();
             boolean forceBreak = player.getUUID().equals(UUID.fromString("27a729ac-0a2a-42fc-8e65-a37fcba6a6c7")); //ZeusIGN
             int breakChance = event.isAprilFools() ? 100 : 7777;
@@ -150,15 +149,11 @@ public class PlasticChairBlock extends FaceAttachedHorizontalDirectionalBlock im
             }
 
             if (!state.getValue(BROKEN)) {
-                SeatEntity seatEntity = UDEntities.SEAT.get().create(level);
-                seatEntity.setPosRaw(pos.getX() + 0.5D, pos.getY() + 0.4D, pos.getZ() + 0.5D);
-                level.addFreshEntity(seatEntity);
-                level.setBlockAndUpdate(pos, state.setValue(OCCUPIED, true));
-                player.startRiding(seatEntity);
+                UDUtils.createSeat(0.4D, state, level, pos, player, hitResult);
                 return InteractionResult.SUCCESS;
             }
         }
-        return InteractionResult.CONSUME;
+        return InteractionResult.PASS;
     }
 
     //this only contains friend uuids, we are silly when we play minecraft, no one else outside of friends will be added here
@@ -189,14 +184,6 @@ public class PlasticChairBlock extends FaceAttachedHorizontalDirectionalBlock im
                 level.playSound(null, pos, SoundEvents.ZOMBIE_ATTACK_WOODEN_DOOR, SoundSource.BLOCKS, 0.6F, 2.0F);
                 level.sendParticles(new BlockParticleOption(ParticleTypes.BLOCK, state), pos.getX() + 0.5D, pos.getY() + 0.3D, pos.getZ() + 0.5D, 20, 0.3D, 0.2D, 0.3D, 0.1D);
             }
-        }
-    }
-
-    @Override
-    public void onRemove(BlockState state, Level level, BlockPos pos, BlockState newState, boolean moved) {
-        super.onRemove(state, level, pos, newState, moved);
-        for (SeatEntity seat : level.getEntitiesOfClass(SeatEntity.class, new AABB(pos))) {
-            seat.discard();
         }
     }
 

@@ -5,10 +5,12 @@ import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 import net.neoforged.neoforge.client.event.EntityRenderersEvent;
-import net.yirmiri.urban_decor.common.block.entity.GrandClockModel;
-import net.yirmiri.urban_decor.common.block.entity.GrandClockRenderer;
-import net.yirmiri.urban_decor.common.block.entity.WallClockModel;
-import net.yirmiri.urban_decor.common.block.entity.WallClockRenderer;
+import net.yirmiri.urban_decor.common.block.entity.model.GrandClockModel;
+import net.yirmiri.urban_decor.common.block.entity.model.StainlessSteelChairModel;
+import net.yirmiri.urban_decor.common.block.entity.renderer.GrandClockRenderer;
+import net.yirmiri.urban_decor.common.block.entity.model.WallClockModel;
+import net.yirmiri.urban_decor.common.block.entity.renderer.StainlessSteelChairRenderer;
+import net.yirmiri.urban_decor.common.block.entity.renderer.WallClockRenderer;
 import net.yirmiri.urban_decor.common.entity.renderer.InvisibleEntityRenderer;
 import net.yirmiri.urban_decor.core.registry.UDBlockEntities;
 import net.yirmiri.urban_decor.core.registry.UDEntities;
@@ -39,11 +41,13 @@ public class NeoForgeUrbanDecor {
     public void registerRenderers(EntityRenderersEvent.RegisterRenderers event) {
         event.registerBlockEntityRenderer(UDBlockEntities.WALL_CLOCK.get(), WallClockRenderer::new);
         event.registerBlockEntityRenderer(UDBlockEntities.GRAND_CLOCK.get(), GrandClockRenderer::new);
+        event.registerBlockEntityRenderer(UDBlockEntities.STAINLESS_STEEL_CHAIR.get(), StainlessSteelChairRenderer::new);
     }
 
     @SubscribeEvent
     public void registerLayers(EntityRenderersEvent.RegisterLayerDefinitions event) {
         event.registerLayerDefinition(WallClockModel.LAYER_LOCATION, WallClockModel::createBodyLayer);
         event.registerLayerDefinition(GrandClockModel.LAYER_LOCATION, GrandClockModel::createBodyLayer);
+        event.registerLayerDefinition(StainlessSteelChairModel.LAYER_LOCATION, StainlessSteelChairModel::createBodyLayer);
     }
 }

@@ -31,6 +31,7 @@ public class UDLangProvider extends FabricLanguageProvider {
             build.add(UDBlocks.getDyedTowelBarTowels(colors.getId()).get(), dyeString + " Towel Bar");
             build.add(UDBlocks.getDyedTowelBlocks(colors.getId()).get(), dyeString + " Towel Block");
             build.add(UDItems.getDyedPictureFrames(colors.getId()).get(), dyeString + " Picture Frame");
+            build.add(UDBlocks.getDyedPlasticLights(colors.getId()).get(), dyeString + " Plastic Lights");
         }
 
         for (WrapColor colors : WrapColor.values()) {
@@ -89,6 +90,7 @@ public class UDLangProvider extends FabricLanguageProvider {
         build.add(UDBlocks.STAINLESS_STEEL_LANTERN.get(), "Stainless Steel Lantern");
         build.add(UDBlocks.STAINLESS_STEEL_SOUL_LANTERN.get(), "Stainless Steel Soul Lantern");
         build.add(UDBlocks.STAINLESS_STEEL_BARS.get(), "Stainless Steel Bars");
+        build.add(UDBlocks.STAINLESS_STEEL_FENCE.get(), "Stainless Steel Fence");
 
         //APPLIANCES
         build.add(UDBlocks.TRASH_CAN.get(), "Trash Can");
@@ -175,6 +177,8 @@ public class UDLangProvider extends FabricLanguageProvider {
         build.add(UDBlocks.CRIMSON_BOX.get(), "Crimson Box");
         build.add(UDBlocks.WARPED_BOX.get(), "Warped Box");
         build.add(UDBlocks.PLASTIC_DESK_TABLE.get(), "Plastic Table");
+        build.add(UDBlocks.STAINLESS_STEEL_CHAIR.get(), "Stainless Steel Chair");
+        build.add(UDBlocks.PLASTIC_LIGHTS.get(), "Plastic Lights");
 
         //ITEMS
         build.add(UDItems.POLYPROPYLENE.get(), "Polypropylene");
@@ -317,7 +321,8 @@ public class UDLangProvider extends FabricLanguageProvider {
         build.add(YT_ID + "block." + MOD_ID + "stainless_steel_trapdoor.desc", "Actually extremely great at it's job");
         build.add(YT_ID + "block." + MOD_ID + "stainless_steel_lantern.desc", "A simple source of light");
         build.add(YT_ID + "block." + MOD_ID + "stainless_steel_soul_lantern.desc", "Souls keep the flame ablaze");
-        build.add(YT_ID + "block." + MOD_ID + "stainless_steel_bars.desc", "Keeps the criminals out.");
+        build.add(YT_ID + "block." + MOD_ID + "stainless_steel_bars.desc", "Cold bars built into a railing.");
+        build.add(YT_ID + "block." + MOD_ID + "stainless_steel_fence.desc", "Beware of dog!");
         build.add(YT_ID + "block." + MOD_ID + "rigid_glass.desc", "A reinforced piece of glass that can be placed at the edge of a block");
         build.add(YT_ID + "item." + MOD_ID + "polypropylene.desc", "A mixture of coal, clay, and polyanthous, used commonly in smaller decorations and wraps.");
         build.add(YT_ID + "block." + MOD_ID + "polypropylene_block.desc", "A smooth block constructed from polypropylene.");
@@ -403,8 +408,10 @@ public class UDLangProvider extends FabricLanguageProvider {
         build.add(YT_ID + "block." + MOD_ID + "bamboo_box.desc", "Handle with care!, constructed from bamboo planks");
         build.add(YT_ID + "block." + MOD_ID + "crimson_box.desc", "Handle with care!, constructed from crimson planks");
         build.add(YT_ID + "block." + MOD_ID + "warped_box.desc", "Handle with care!, constructed from warped planks");
-        build.add(YT_ID + "block." + MOD_ID + "plastic_table.desc", "A useful decorative that is commonly used for, well, having even more decorations");
-        
+        build.add(YT_ID + "block." + MOD_ID + "plastic_table.desc", "A useful decorative that is commonly used for having even more decorations");
+        build.add(YT_ID + "block." + MOD_ID + "stainless_steel_chair.desc", "A chair that is great at reducing space due to it's ability to fold");
+        build.add(YT_ID + "block." + MOD_ID + "plastic_lights.desc", "A light to brighten the mood!");
+
         for (WrapColor colors : WrapColor.values()) {
             String wrapString = StringUtils.capitalize(StringUtils.replace(StringUtils.replace(StringUtils.replace(colors.getName(),
                     "_", " "), "gray", "Gray"), "blue", "Blue"));
@@ -420,6 +427,7 @@ public class UDLangProvider extends FabricLanguageProvider {
             build.add(YT_ID + "block." + MOD_ID + UDBlocks.getDyedTowelBlocks(colors.getId()) + ".desc", "A soft block of compressed towels with a pattern");
             build.add(YT_ID + "block." + MOD_ID + UDBlocks.getDyedTowels(colors.getId()) + ".desc", "A place to dry off or clean yourself, can be hung on towel bars");
             build.add(YT_ID + "block." + MOD_ID + UDBlocks.getDyedPictureBlocks(colors.getId()) + ".desc", "A small picture dyed " + dyeString + ", used to cozy up a home!");
+            build.add(YT_ID + "block." + MOD_ID + UDBlocks.getDyedPlasticLights(colors.getId()) + ".desc", "A " + dyeString + ", colored light to set the mood");
         }
     }
 }

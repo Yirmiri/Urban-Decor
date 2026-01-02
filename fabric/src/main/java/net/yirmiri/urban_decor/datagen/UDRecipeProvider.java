@@ -114,7 +114,7 @@ public class UDRecipeProvider extends FabricRecipeProvider {
 
         nineBlockStorageRecipes(exporter, RecipeCategory.MISC, UDItems.STAINLESS_STEEL_INGOT.get(), RecipeCategory.BUILDING_BLOCKS, UDBlocks.STAINLESS_STEEL_BLOCK.get());
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, UDItems.STEEL_PIPE.get(), 2)
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, UDItems.STEEL_PIPE.get(), 8)
                 .define('#', UDItems.STAINLESS_STEEL_INGOT.get()).define('@', UDItems.STAINLESS_STEEL_NUGGET.get())
                 .pattern("@")
                 .pattern("#")
@@ -580,9 +580,7 @@ public class UDRecipeProvider extends FabricRecipeProvider {
             createFromBasePictureFrameRecipe(UDItems.getDyedPictureFrames(colors.getId()).get(), UDItems.PICTURE_FRAME.get(), DyeItem.byColor(colors).getDyeColor())
                     .unlockedBy(getHasName(UDItems.getDyedPictureFrames(colors.getId()).get()), has(UDItems.getDyedPictureFrames(colors.getId()).get()))
                     .save(exporter, RunicLib.customid(UrbanDecor.MOD_ID, getSimpleRecipeName(UDItems.getDyedPictureFrames(colors.getId()).get()) + "_from_base"));
-        }
 
-        for (DyeColor colors : DyeColor.values()) {
             createPictureFrameRecipe(UDItems.getDyedPictureFrames(colors.getId()).get(), DyeItem.byColor(colors).getDyeColor())
                     .unlockedBy(getHasName(UDItems.getDyedPictureFrames(colors.getId()).get()), has(UDItems.getDyedPictureFrames(colors.getId()).get()))
                     .save(exporter, RunicLib.customid(UrbanDecor.MOD_ID, getSimpleRecipeName(UDItems.getDyedPictureFrames(colors.getId()).get())));
@@ -797,6 +795,13 @@ public class UDRecipeProvider extends FabricRecipeProvider {
                 .pattern("###")
                 .unlockedBy(getHasName(UDItems.STAINLESS_STEEL_INGOT.get()), has(UDItems.STAINLESS_STEEL_INGOT.get()))
                 .save(exporter, RunicLib.customid(UrbanDecor.MOD_ID, getSimpleRecipeName(UDBlocks.STAINLESS_STEEL_BARS.get())));
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, UDBlocks.STAINLESS_STEEL_FENCE.get(), 16)
+                .define('#', UDItems.STAINLESS_STEEL_NUGGET.get()).define('@', UDItems.STAINLESS_STEEL_INGOT.get())
+                .pattern("@#@")
+                .pattern("@#@")
+                .unlockedBy(getHasName(UDItems.STAINLESS_STEEL_INGOT.get()), has(UDItems.STAINLESS_STEEL_INGOT.get()))
+                .save(exporter, RunicLib.customid(UrbanDecor.MOD_ID, getSimpleRecipeName(UDBlocks.STAINLESS_STEEL_FENCE.get())));
 
         ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, UDBlocks.FLOOR_LAMP.get(), 1)
                 .define('#', UDItems.STAINLESS_STEEL_INGOT.get()).define('@', Items.GLOWSTONE)
@@ -1145,6 +1150,28 @@ public class UDRecipeProvider extends FabricRecipeProvider {
                 .unlockedBy(getHasName(UDItems.POLYPROPYLENE.get()), has(UDItems.POLYPROPYLENE.get()))
                 .unlockedBy(getHasName(UDItems.STAINLESS_STEEL_INGOT.get()), has(UDItems.STAINLESS_STEEL_INGOT.get()))
                 .save(exporter, RunicLib.customid(UrbanDecor.MOD_ID, getSimpleRecipeName(UDBlocks.PLASTIC_DESK_TABLE.get())));
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, UDBlocks.STAINLESS_STEEL_CHAIR.get(), 1)
+                .define('#', UDItems.STAINLESS_STEEL_NUGGET.get()).define('@', UDItems.STAINLESS_STEEL_INGOT.get())
+                .pattern("  #")
+                .pattern("#@#")
+                .pattern("# #")
+                .unlockedBy(getHasName(UDItems.STAINLESS_STEEL_INGOT.get()), has(UDItems.STAINLESS_STEEL_INGOT.get()))
+                .save(exporter, RunicLib.customid(UrbanDecor.MOD_ID, getSimpleRecipeName(UDBlocks.STAINLESS_STEEL_CHAIR.get())));
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, UDBlocks.PLASTIC_LIGHTS.get(), 12)
+                .define('#', UDItems.POLYPROPYLENE.get()).define('@', Items.GLOWSTONE_DUST)
+                .pattern("# #")
+                .pattern("@#@")
+                .pattern(" @ ")
+                .unlockedBy(getHasName(UDItems.POLYPROPYLENE.get()), has(UDItems.POLYPROPYLENE.get()))
+                .save(exporter, RunicLib.customid(UrbanDecor.MOD_ID, getSimpleRecipeName(UDBlocks.PLASTIC_LIGHTS.get())));
+
+        for (DyeColor colors : DyeColor.values()) {
+            create8DyingRecipe(UDBlocks.getDyedPlasticLights(colors.getId()).get(), UDBlocks.PLASTIC_LIGHTS.get().asItem(), DyeItem.byColor(colors).getDyeColor())
+                    .unlockedBy(getHasName(UDBlocks.getDyedPlasticLights(colors.getId()).get()), has(UDBlocks.getDyedPlasticLights(colors.getId()).get()))
+                    .save(exporter, RunicLib.customid(UrbanDecor.MOD_ID, getSimpleRecipeName(UDBlocks.getDyedPlasticLights(colors.getId()).get())));
+        }
     }
 
     public static ShapelessRecipeBuilder createFromBasePictureFrameRecipe(ItemLike output, Item picture, DyeColor color) {
@@ -1219,10 +1246,11 @@ public class UDRecipeProvider extends FabricRecipeProvider {
                 .pattern("###");
     }
 
-    public static ShapedRecipeBuilder createTowelBlockRecipe(ItemLike output, Block input) {
-        return ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, output, 4)
-                .define('#', input)
-                .pattern("##")
-                .pattern("##");
+    public static ShapedRecipeBuilder create8DyingRecipe(ItemLike output, Item input, DyeColor color) {
+        return ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, output, 8)
+                .define('#', input).define('@', DyeItem.byColor(color))
+                .pattern("###")
+                .pattern("#@#")
+                .pattern("###");
     }
 }

@@ -1,23 +1,24 @@
 package net.yirmiri.urban_decor.common.util;
 
 import net.minecraft.core.BlockPos;
-import net.minecraft.core.Direction;
-import net.minecraft.core.particles.ParticleTypes;
-import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.stats.Stats;
 import net.minecraft.world.InteractionHand;
+import net.minecraft.world.entity.animal.Animal;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.ItemUtils;
+import net.minecraft.world.item.Items;
+import net.minecraft.world.item.alchemy.PotionContents;
+import net.minecraft.world.item.alchemy.Potions;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.gameevent.GameEvent;
 import net.minecraft.world.phys.BlockHitResult;
-import net.minecraft.world.phys.Vec3;
-import net.yirmiri.urban_decor.common.block.PlasticChairBlock;
+import net.yirmiri.urban_decor.common.entity.SeatEntity;
+import net.yirmiri.urban_decor.core.registry.UDEntities;
 import net.yirmiri.urban_decor.core.registry.UDSounds;
 
 public class UDUtils {
@@ -30,32 +31,44 @@ public class UDUtils {
         level.playLocalSound(pos.getX(), pos.getY(), pos.getZ(), UDSounds.WRAP_USE.get(), SoundSource.BLOCKS, 1.2F, 1.0F, false);
     }
 
-    public static boolean canSitOn(BlockState state, Level level, BlockPos pos, Player player) {
-        return !level.isClientSide && !state.getValue(BlockStateProperties.OCCUPIED) && !player.isCrouching()
-                && player.getMainHandItem().getItem().getDefaultInstance().isEmpty() && level.getBlockState(pos.above()).isAir();
+    public static boolean canSitOn(BlockState state, BlockPos pos, Level level, Player player) {
+        return !level.isClientSide && !state.getValue(BlockStateProperties.OCCUPIED) && !player.isCrouching() && !level.getBlockState(pos.above()).isSuffocating(level, pos)
+                && !player.isPassenger() && player.getMainHandItem().getItem().getDefaultInstance().isEmpty();
     }
 
-    public static boolean canSitOnLenient(BlockState state, Level level, BlockPos pos, Player player) {
-        return !level.isClientSide && !state.getValue(BlockStateProperties.OCCUPIED) && !player.isCrouching()
-                && player.getMainHandItem().getItem().getDefaultInstance().isEmpty() && level.getBlockState(pos.above()).isSolid();
-    }
+    public static void createSeat(double yPos, BlockState state, Level level, BlockPos pos, Player player, BlockHitResult hitResult) {
+        SeatEntity seatEntity = UDEntities.SEAT.get().create(level);
+        seatEntity.setPosRaw(pos.getX() + 0.5D, pos.getY() + yPos, pos.getZ() + 0.5D);
+        level.addFreshEntity(seatEntity);
+        level.setBlockAndUpdate(pos, state.setValue(BlockStateProperties.OCCUPIED, true));
 
-    public static void spawnWaterParticles(int count, Level level, BlockPos blockPos, Direction direction) {
-        Vec3 spawnPos = new Vec3(blockPos.getX() + 0.5, blockPos.getY() + 1.0, blockPos.getZ() + 0.5).add(new Vec3(0, 0, -0.5));
-        Vec3 velocity = new Vec3(direction.getStepX(), direction.getStepY(), direction.getStepZ()).normalize().scale(0.1);
-
-        if (level instanceof ServerLevel serverWorld) {
-            serverWorld.sendParticles(ParticleTypes.DRIPPING_WATER, spawnPos.x, spawnPos.y, spawnPos.z, count, 0.0, 0.0, 0.0, velocity.x);
+        for (Animal living : level.getEntitiesOfClass(Animal.class, player.getBoundingBox().inflate(7.0D))) {
+            if (living.isLeashed() && living.getLeashHolder() == player) {
+                living.dropLeash(true, true);
+                living.startRiding(seatEntity, true);
+                return;
+            }
         }
+        player.startRiding(seatEntity);
     }
 
-    public static void faucetFillBottle(Level level, BlockPos pos, Player player, InteractionHand hand) {
+    public static void createPlayerOnlySeat(double yPos, BlockState state, Level level, BlockPos pos, Player player, BlockHitResult hitResult) {
+        SeatEntity seatEntity = UDEntities.SEAT.get().create(level);
+        seatEntity.setPosRaw(pos.getX() + 0.5D, pos.getY() + yPos, pos.getZ() + 0.5D);
+        level.addFreshEntity(seatEntity);
+        level.setBlockAndUpdate(pos, state.setValue(BlockStateProperties.OCCUPIED, true));
+        player.startRiding(seatEntity);
+    }
+
+    public static void fillWaterBottle(Level level, BlockPos pos, Player player, InteractionHand hand) {
         ItemStack stackHand = player.getItemInHand(hand);
-        Item item = stackHand.getItem();
-        //player.setItemInHand(hand, ItemUtils.createFilledResult(stackHand, player, PotionUtils.setPotion(new ItemStack(Items.POTION), Potions.WATER)));
-        //player.incrementStat(UDStats.USE_FAUCET);
-        player.awardStat(Stats.ITEM_USED.get(item));
+        turnBottleIntoItem(stackHand, player, PotionContents.createItemStack(Items.POTION, Potions.WATER), hand);
         level.playSound(null, pos, SoundEvents.BOTTLE_FILL, SoundSource.BLOCKS, 1.0F, 1.0F);
         level.gameEvent(null, GameEvent.FLUID_PICKUP, pos);
+    }
+
+    public static ItemStack turnBottleIntoItem(ItemStack bottleStack, Player player, ItemStack filledBottleStack, InteractionHand hand) {
+        player.awardStat(Stats.ITEM_USED.get(player.getItemInHand(hand).getItem()));
+        return ItemUtils.createFilledResult(bottleStack, player, filledBottleStack);
     }
 }

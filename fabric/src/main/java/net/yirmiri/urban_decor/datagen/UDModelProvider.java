@@ -40,10 +40,6 @@ public class UDModelProvider extends FabricModelProvider {
 
         generator.family(UDBlocks.STAINLESS_STEEL_BLOCK.get());
 
-        for (DyeColor colors : DyeColor.values()) {
-            generator.family(UDBlocks.getDyedTowelBlocks(colors.getId()).get());
-        }
-
         BlockModelGenerators.BlockFamilyProvider porcelain = generator.family(UDBlocks.PORCELAIN_BLOCK.get());
         porcelain.stairs(UDBlocks.PORCELAIN_STAIRS.get());
         porcelain.slab(UDBlocks.PORCELAIN_SLAB.get());
@@ -67,6 +63,14 @@ public class UDModelProvider extends FabricModelProvider {
         generator.createTrivialCube(UDBlocks.POLYPROPYLENE_BLOCK.get());
 
         generator.createSimpleFlatItemModel(UDBlocks.STAINLESS_STEEL_LADDER.get());
+
+        generator.createMultiface(UDBlocks.PLASTIC_LIGHTS.get());
+
+        //DYED
+        for (DyeColor colors : DyeColor.values()) {
+            generator.family(UDBlocks.getDyedTowelBlocks(colors.getId()).get());
+            generator.createMultiface(UDBlocks.getDyedPlasticLights(colors.getId()).get());
+        }
     }
 
     @Override
@@ -80,7 +84,7 @@ public class UDModelProvider extends FabricModelProvider {
         generator.generateFlatItem(UDItems.DARK_PORCELAIN.get(), ModelTemplates.FLAT_ITEM);
         generator.generateFlatItem(UDItems.TOOLBOX.get(), ModelTemplates.FLAT_ITEM);
         generator.generateFlatItem(UDBlocks.STOVE.get().asItem(), ModelTemplates.FLAT_ITEM);
-        generator.generateFlatItem(UDItems.STEEL_PIPE.get(), ModelTemplates.FLAT_ITEM);
+        generator.generateFlatItem(UDItems.STEEL_PIPE.get(), ModelTemplates.FLAT_HANDHELD_ITEM);
         generator.generateFlatItem(UDBlocks.BATHTUB.get().asItem(), ModelTemplates.FLAT_ITEM);
         generator.generateFlatItem(UDBlocks.DARK_BATHTUB.get().asItem(), ModelTemplates.FLAT_ITEM);
         generator.generateFlatItem(UDBlocks.FAUCET.get().asItem(), ModelTemplates.FLAT_ITEM);
@@ -144,6 +148,7 @@ public class UDModelProvider extends FabricModelProvider {
         generator.generateFlatItem(UDBlocks.CRIMSON_BOX.get().asItem(), ModelTemplates.FLAT_ITEM);
         generator.generateFlatItem(UDBlocks.WARPED_BOX.get().asItem(), ModelTemplates.FLAT_ITEM);
         generator.generateFlatItem(UDBlocks.PLASTIC_DESK_TABLE.get().asItem(), ModelTemplates.FLAT_ITEM);
+        generator.generateFlatItem(UDBlocks.STAINLESS_STEEL_CHAIR.get().asItem(), ModelTemplates.FLAT_ITEM);
 
         for (DyeColor colors : DyeColor.values()) {
             generator.generateFlatItem(UDBlocks.getDyedTowels(colors.getId()).get().asItem(), ModelTemplates.FLAT_ITEM);
@@ -155,31 +160,4 @@ public class UDModelProvider extends FabricModelProvider {
             generator.generateFlatItem(UDItems.getWrappedWraps(colors.getId()).get(), ModelTemplates.FLAT_ITEM);
         }
     }
-
-//    private void registerSteelBars(BlockStateModelGenerator generator) {
-//        Identifier identifier = ModelIds.getBlockSubModelId(UDBlocks.STAINLESS_STEEL_BARS.get(), "_post_ends");
-//        Identifier identifier2 = ModelIds.getBlockSubModelId(UDBlocks.STAINLESS_STEEL_BARS.get(), "_post");
-//        Identifier identifier3 = ModelIds.getBlockSubModelId(UDBlocks.STAINLESS_STEEL_BARS.get(), "_cap");
-//        Identifier identifier4 = ModelIds.getBlockSubModelId(UDBlocks.STAINLESS_STEEL_BARS.get(), "_cap_alt");
-//        Identifier identifier5 = ModelIds.getBlockSubModelId(UDBlocks.STAINLESS_STEEL_BARS.get(), "_side");
-//        Identifier identifier6 = ModelIds.getBlockSubModelId(UDBlocks.STAINLESS_STEEL_BARS.get(), "_side_alt");
-//        generator.blockStateCollector.accept(MultipartBlockStateSupplier.create(UDBlocks.STAINLESS_STEEL_BARS.get())
-//                .with(BlockStateVariant.create().put(VariantSettings.MODEL, identifier))
-//                .with(When.create().set(Properties.NORTH, false).set(Properties.EAST, false).set(Properties.SOUTH, false).set(Properties.WEST, false),
-//                        BlockStateVariant.create().put(VariantSettings.MODEL, identifier2))
-//                .with(When.create().set(Properties.NORTH, true).set(Properties.EAST, false).set(Properties.SOUTH, false).set(Properties.WEST, false),
-//                        BlockStateVariant.create().put(VariantSettings.MODEL, identifier3))
-//                .with(When.create().set(Properties.NORTH, false).set(Properties.EAST, true).set(Properties.SOUTH, false).set(Properties.WEST, false),
-//                        BlockStateVariant.create().put(VariantSettings.MODEL, identifier3).put(VariantSettings.Y, VariantSettings.Rotation.R90))
-//                .with(When.create().set(Properties.NORTH, false).set(Properties.EAST, false).set(Properties.SOUTH, true).set(Properties.WEST, false),
-//                        BlockStateVariant.create().put(VariantSettings.MODEL, identifier4))
-//                .with(When.create().set(Properties.NORTH, false).set(Properties.EAST, false).set(Properties.SOUTH, false).set(Properties.WEST, true),
-//                        BlockStateVariant.create().put(VariantSettings.MODEL, identifier4).put(VariantSettings.Y, VariantSettings.Rotation.R90))
-//                .with(When.create().set(Properties.NORTH, true), BlockStateVariant.create().put(VariantSettings.MODEL, identifier5))
-//                .with(When.create().set(Properties.EAST, true), BlockStateVariant.create().put(VariantSettings.MODEL, identifier5).put(VariantSettings.Y,
-//                        VariantSettings.Rotation.R90)).with(When.create().set(Properties.SOUTH, true), BlockStateVariant.create()
-//                        .put(VariantSettings.MODEL, identifier6)).with(When.create().set(Properties.WEST, true), BlockStateVariant.create()
-//                        .put(VariantSettings.MODEL, identifier6).put(VariantSettings.Y, VariantSettings.Rotation.R90)).get());
-//        generator.registerItemModel(UDBlocks.STAINLESS_STEEL_BARS.get());
-//    }
 }

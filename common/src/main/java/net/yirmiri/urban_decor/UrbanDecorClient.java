@@ -19,6 +19,7 @@ public class UrbanDecorClient {
             Services.loadClient().registerBlockRenderType(UDBlocks.getDyedTowelBarTowels(colors.getId()).get(), RenderType.cutout());
             Services.loadClient().registerBlockRenderType(UDBlocks.getDyedPictureBlocks(colors.getId()).get(), RenderType.cutout());
             Services.loadClient().registerBlockRenderType(UDBlocks.getDyedWallPictureBlocks(colors.getId()).get(), RenderType.cutout());
+            Services.loadClient().registerBlockRenderType(UDBlocks.getDyedPlasticLights(colors.getId()).get(), RenderType.cutout());
         }
 
         //CUTOUT
@@ -45,6 +46,8 @@ public class UrbanDecorClient {
         Services.loadClient().registerBlockRenderType(UDBlocks.CRIMSON_GRANDFATHER_CLOCK.get(), RenderType.cutout());
         Services.loadClient().registerBlockRenderType(UDBlocks.WARPED_GRANDFATHER_CLOCK.get(), RenderType.cutout());
         Services.loadClient().registerBlockRenderType(UDBlocks.PLASTIC_DESK_TABLE.get(), RenderType.cutout());
+        Services.loadClient().registerBlockRenderType(UDBlocks.STAINLESS_STEEL_CHAIR.get(), RenderType.cutout());
+        Services.loadClient().registerBlockRenderType(UDBlocks.PLASTIC_LIGHTS.get(), RenderType.cutout());
 
         //CUTOUT MIPPED
         Services.loadClient().registerBlockRenderType(UDBlocks.RADIATOR.get(), RenderType.cutoutMipped());
@@ -54,6 +57,7 @@ public class UrbanDecorClient {
         Services.loadClient().registerBlockRenderType(UDBlocks.AIR_CONDITIONER.get(), RenderType.cutoutMipped());
         Services.loadClient().registerBlockRenderType(UDBlocks.DESK_FAN.get(), RenderType.cutoutMipped());
         Services.loadClient().registerBlockRenderType(UDBlocks.STAINLESS_STEEL_BARS.get(), RenderType.cutoutMipped());
+        Services.loadClient().registerBlockRenderType(UDBlocks.STAINLESS_STEEL_FENCE.get(), RenderType.cutoutMipped());
         Services.loadClient().registerBlockRenderType(UDBlocks.OAK_PIANO.get(), RenderType.cutoutMipped());
         Services.loadClient().registerBlockRenderType(UDBlocks.SPRUCE_PIANO.get(), RenderType.cutoutMipped());
         Services.loadClient().registerBlockRenderType(UDBlocks.BIRCH_PIANO.get(), RenderType.cutoutMipped());

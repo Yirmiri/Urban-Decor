@@ -6,6 +6,7 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.ItemInteractionResult;
+import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.BlockGetter;
@@ -49,7 +50,8 @@ public class PlasticDeskTableBlock extends AbstractDecorBlock {
                 .setValue(VARIANT, 0)
                 .setValue(WATERLOGGED, false)
                 .setValue(FACING, Direction.NORTH)
-                .setValue(OCCUPIED, false));
+                .setValue(OCCUPIED, false)
+        );
     }
 
     @Override
@@ -83,27 +85,15 @@ public class PlasticDeskTableBlock extends AbstractDecorBlock {
 
     @Override
     public InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos, Player player, BlockHitResult hitResult) {
-        if (UDUtils.canSitOn(state, level, pos, player)) {
-            SeatEntity seatEntity = UDEntities.SEAT.get().create(level);
-            seatEntity.setPosRaw(pos.getX() + 0.5D, pos.getY() + 0.9D, pos.getZ() + 0.5D);
-            level.addFreshEntity(seatEntity);
-            level.setBlockAndUpdate(pos, state.setValue(OCCUPIED, true));
-            player.startRiding(seatEntity);
+        if (UDUtils.canSitOn(state, pos, level, player)) {
+            UDUtils.createPlayerOnlySeat(0.9D, state, level, pos, player, hitResult);
             return InteractionResult.SUCCESS;
         }
-        return InteractionResult.CONSUME;
+        return InteractionResult.PASS;
     }
 
     @Override
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
         builder.add(FACING, WATERLOGGED, VARIANT, OCCUPIED, WRAP_TYPE);
-    }
-
-    @Override
-    public void onRemove(BlockState state, Level level, BlockPos pos, BlockState newState, boolean moved) {
-        super.onRemove(state, level, pos, newState, moved);
-        for (SeatEntity seat : level.getEntitiesOfClass(SeatEntity.class, new AABB(pos))) {
-            seat.discard();
-        }
     }
 }

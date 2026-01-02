@@ -2,13 +2,23 @@ package net.yirmiri.urban_decor.datagen;
 
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootTableProvider;
+import net.minecraft.core.Direction;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.DoublePlantBlock;
+import net.minecraft.world.level.block.MultifaceBlock;
 import net.minecraft.world.level.block.state.properties.BedPart;
 import net.minecraft.world.level.block.state.properties.DoubleBlockHalf;
+import net.minecraft.world.level.storage.loot.LootPool;
 import net.minecraft.world.level.storage.loot.LootTable;
+import net.minecraft.world.level.storage.loot.entries.LootItem;
+import net.minecraft.world.level.storage.loot.entries.LootPoolEntryContainer;
+import net.minecraft.world.level.storage.loot.entries.LootPoolSingletonContainer;
+import net.minecraft.world.level.storage.loot.functions.SetItemCountFunction;
+import net.minecraft.world.level.storage.loot.predicates.LootItemBlockStatePropertyCondition;
+import net.minecraft.world.level.storage.loot.predicates.LootItemCondition;
+import net.minecraft.world.level.storage.loot.providers.number.ConstantValue;
 import net.yirmiri.urban_decor.common.block.FloorLampBlock;
 import net.yirmiri.urban_decor.common.block.abstracts.AbstractLongBlock;
 import net.yirmiri.urban_decor.common.util.WrapColor;
@@ -67,12 +77,10 @@ public class UDLootTableProvider extends FabricBlockLootTableProvider {
         dropSelf(UDBlocks.DARK_WASHING_MACHINE.get());
         dropSelf(UDBlocks.DARK_DRYER.get());
         dropSelf(UDBlocks.DARK_SINK.get());
-        addDyedTowelsDrops();
         dropSelf(UDBlocks.TOWEL_BAR.get());
         dropSelf(UDBlocks.SHOWER.get());
         add(UDBlocks.BATHTUB.get(), longBlockDrops(UDBlocks.BATHTUB.get()));
         add(UDBlocks.DARK_BATHTUB.get(), longBlockDrops(UDBlocks.DARK_BATHTUB.get()));
-        addDyedTowelBlockDrops();
         dropSelf(UDBlocks.RIGID_GLASS.get());
         dropSelf(UDBlocks.PORCELAIN_BLOCK.get());
         dropSelf(UDBlocks.PORCELAIN_STAIRS.get());
@@ -80,7 +88,6 @@ public class UDLootTableProvider extends FabricBlockLootTableProvider {
         dropSelf(UDBlocks.DARK_PORCELAIN_BLOCK.get());
         dropSelf(UDBlocks.DARK_PORCELAIN_STAIRS.get());
         add(UDBlocks.DARK_PORCELAIN_SLAB.get(), createSlabItemTable(UDBlocks.DARK_PORCELAIN_SLAB.get()));
-        addDyedPictureFrameDrops();
         dropSelf(UDBlocks.PICTURE_FRAME.get());
         dropSelf(UDBlocks.CUPBOARD.get());
         dropSelf(UDBlocks.DARK_CUPBOARD.get());
@@ -88,7 +95,6 @@ public class UDLootTableProvider extends FabricBlockLootTableProvider {
         dropSelf(UDBlocks.TOILET_PAPER.get());
         dropOther(UDBlocks.SATELLITE_DISH.get(), UDItems.SATELLITE_DISH.get());
         dropOther(UDBlocks.WALL_SATELLITE_DISH.get(), UDItems.SATELLITE_DISH.get());
-        addDyedWallPictureFrameDrops();
         dropSelf(UDBlocks.PORCELAIN_BRICKS.get());
         dropSelf(UDBlocks.PORCELAIN_BRICK_STAIRS.get());
         add(UDBlocks.PORCELAIN_BRICK_SLAB.get(), createSlabItemTable(UDBlocks.PORCELAIN_BRICK_SLAB.get()));
@@ -100,7 +106,7 @@ public class UDLootTableProvider extends FabricBlockLootTableProvider {
         dropSelf(UDBlocks.STAINLESS_STEEL_LANTERN.get());
         dropSelf(UDBlocks.STAINLESS_STEEL_SOUL_LANTERN.get());
         dropSelf(UDBlocks.STAINLESS_STEEL_BARS.get());
-        addTowelBarTowelDrops();
+        dropSelf(UDBlocks.STAINLESS_STEEL_FENCE.get());
         add(UDBlocks.FLOOR_LAMP.get(), floorLampDrops(UDBlocks.FLOOR_LAMP.get()));
         dropSelf(UDBlocks.WALL_PICTURE_FRAME.get());
         add(UDBlocks.OAK_PIANO.get(), longBlockDrops(UDBlocks.OAK_PIANO.get()));
@@ -116,7 +122,6 @@ public class UDLootTableProvider extends FabricBlockLootTableProvider {
         add(UDBlocks.WARPED_PIANO.get(), longBlockDrops(UDBlocks.WARPED_PIANO.get()));
         dropSelf(UDBlocks.DISHWASHER.get());
         dropSelf(UDBlocks.DARK_DISHWASHER.get());
-        addWrappedPolyanthousDrops();
         dropSelf(UDBlocks.PLASTIC_CHAIR.get());
         dropSelf(UDBlocks.OAK_CALENDAR.get());
         dropSelf(UDBlocks.SPRUCE_CALENDAR.get());
@@ -154,50 +159,39 @@ public class UDLootTableProvider extends FabricBlockLootTableProvider {
         dropSelf(UDBlocks.CRIMSON_BOX.get());
         dropSelf(UDBlocks.WARPED_BOX.get());
         dropSelf(UDBlocks.PLASTIC_DESK_TABLE.get());
+        dropSelf(UDBlocks.STAINLESS_STEEL_CHAIR.get());
+        add(UDBlocks.PLASTIC_LIGHTS.get(), this::createCoolerMultifaceDrops);
+
+        addDyedDrops();
+        addWrappedDrops();
     }
 
     public LootTable.Builder floorLampDrops(Block block) {
         return this.createSinglePropConditionTable(block, FloorLampBlock.HALF, DoubleBlockHalf.LOWER);
     }
 
-    private void addWrappedPolyanthousDrops() {
+    private void addWrappedDrops() {
         for (WrapColor colors : WrapColor.values()) {
             add(UDBlocks.getWrappedPolyanthous(colors.getId()).get(), (b) -> createSinglePropConditionTable(b, DoublePlantBlock.HALF, DoubleBlockHalf.LOWER));
         }
     }
 
-    private void addDyedTowelBlockDrops() {
+    private void addDyedDrops() {
         for (DyeColor colors : DyeColor.values()) {
             dropSelf(UDBlocks.getDyedTowelBlocks(colors.getId()).get());
-        }
-    }
-
-    private void addDyedTowelsDrops() {
-        for (DyeColor colors : DyeColor.values()) {
             dropSelf(UDBlocks.getDyedTowels(colors.getId()).get());
-        }
-    }
-
-    private void addTowelBarTowelDrops() {
-        for (DyeColor colors : DyeColor.values()) {
             dropOther(UDBlocks.getDyedTowelBarTowels(colors.getId()).get(), UDBlocks.getDyedTowels(colors.getId()).get());
-            dropSelf(UDBlocks.TOWEL_BAR.get());
-        }
-    }
-
-    private void addDyedPictureFrameDrops() {
-        for (DyeColor colors : DyeColor.values()) {
             dropOther(UDBlocks.getDyedPictureBlocks(colors.getId()).get(), UDItems.getDyedPictureFrames(colors.getId()).get());
-        }
-    }
-
-    private void addDyedWallPictureFrameDrops() {
-        for (DyeColor colors : DyeColor.values()) {
             dropOther(UDBlocks.getDyedWallPictureBlocks(colors.getId()).get(), UDItems.getDyedPictureFrames(colors.getId()).get());
+            add(UDBlocks.getDyedPlasticLights(colors.getId()).get(), this::createCoolerMultifaceDrops);
         }
     }
 
     public LootTable.Builder longBlockDrops(Block block) {
         return this.createSinglePropConditionTable(block, AbstractLongBlock.PART, BedPart.HEAD);
+    }
+
+    public LootTable.Builder createCoolerMultifaceDrops(Block block) {
+        return LootTable.lootTable().withPool(LootPool.lootPool().add((LootPoolEntryContainer.Builder) this.applyExplosionDecay(block, ((LootPoolSingletonContainer.Builder)((LootPoolSingletonContainer.Builder) LootItem.lootTableItem(block)).apply(Direction.values(), (direction) -> SetItemCountFunction.setCount(ConstantValue.exactly(1.0F), true).when(LootItemBlockStatePropertyCondition.hasBlockStateProperties(block).setProperties(net.minecraft.advancements.critereon.StatePropertiesPredicate.Builder.properties().hasProperty(MultifaceBlock.getFaceProperty((Direction) direction), true))))).apply(SetItemCountFunction.setCount(ConstantValue.exactly(-1.0F), true)))));
     }
 }

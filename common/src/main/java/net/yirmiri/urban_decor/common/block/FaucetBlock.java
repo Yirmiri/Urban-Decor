@@ -2,12 +2,20 @@ package net.yirmiri.urban_decor.common.block;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.network.chat.Component;
+import net.minecraft.sounds.SoundEvents;
+import net.minecraft.sounds.SoundSource;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.InteractionHand;
+import net.minecraft.world.InteractionResult;
+import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.ItemInteractionResult;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
+import net.minecraft.world.item.alchemy.PotionContents;
+import net.minecraft.world.item.alchemy.Potions;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
@@ -15,6 +23,7 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
+import net.minecraft.world.level.gameevent.GameEvent;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.shapes.BooleanOp;
 import net.minecraft.world.phys.shapes.CollisionContext;
@@ -23,6 +32,7 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 import net.yirmiri.urban_decor.common.block.abstracts.AbstractDecorBlock;
 import net.yirmiri.urban_decor.common.util.UDUtils;
 import net.yirmiri.urban_decor.core.init.UDTags;
+import net.yirmiri.urban_decor.core.registry.UDSounds;
 
 public class FaucetBlock extends AbstractDecorBlock {
     public static final BooleanProperty OUTDOOR = BooleanProperty.create("outdoor");
@@ -51,14 +61,42 @@ public class FaucetBlock extends AbstractDecorBlock {
             player.displayClientMessage(Component.translatable("toolbox.faucet.variant_" + state.getValue(OUTDOOR)), true);
             return ItemInteractionResult.SUCCESS;
         }
+
+        if (state.getValue(ON) && stackHand.is(Items.GLASS_BOTTLE)) {
+            UDUtils.fillWaterBottle(level, pos, player, hand);
+            UDUtils.turnBottleIntoItem(stackHand, player, PotionContents.createItemStack(Items.POTION, Potions.WATER), hand);
+            return ItemInteractionResult.SUCCESS;
+        }
         return ItemInteractionResult.PASS_TO_DEFAULT_BLOCK_INTERACTION;
     }
 
     @Override
-    public void animateTick(BlockState state, Level world, BlockPos pos, RandomSource random) {
-        Direction direction = state.getValue(BlockStateProperties.HORIZONTAL_FACING);
+    public InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos, Player player, BlockHitResult hitResult) {
+        if (!player.isCrouching() && level.isClientSide && player.getMainHandItem().is(ItemStack.EMPTY.getItem())) {
+            state.setValue(ON, !state.getValue(ON));
+            level.playSound(player, pos, UDSounds.FAUCET_TURN.get(), SoundSource.BLOCKS, 0.8F, 1.0F);
+            return InteractionResult.SUCCESS;
+        }
+        return InteractionResult.PASS;
+    }
+
+    @Override
+    public void animateTick(BlockState state, Level level, BlockPos pos, RandomSource random) {
         if (state.getValue(ON)) {
-            UDUtils.spawnWaterParticles(1, world, pos, direction);
+            double spread = 1.0 / 16.0;
+            for (Direction dir : Direction.Plane.HORIZONTAL) {
+                double offsetX = dir.getStepX() * spread * random.nextDouble();
+                double offsetZ = dir.getStepZ() * spread * random.nextDouble();
+                double velocityX = dir.getStepX() * 0.02;
+                double velocityY = -0.05;
+                double velocityZ = dir.getStepZ() * 0.02;
+
+                level.addParticle(ParticleTypes.FALLING_WATER,
+                        pos.getX() + 0.4375 + offsetX,
+                        pos.getY() + 0.34375,
+                        pos.getZ() + 0.625 + offsetZ,
+                        velocityX, velocityY, velocityZ);
+            }
         }
     }
 

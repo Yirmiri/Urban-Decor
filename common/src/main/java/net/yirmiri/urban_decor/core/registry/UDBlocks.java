@@ -55,16 +55,17 @@ public class UDBlocks {
     public static final Supplier<Block> POLISHED_CHROMITE_STAIRS = register("polished_chromite_stairs", () -> new PublicStairBlock(POLISHED_CHROMITE.get().defaultBlockState(), UDProperties.BlockP.POLISHED_CHROMITE), true);
     public static final Supplier<Block> POLISHED_CHROMITE_SLAB = register("polished_chromite_slab", () -> new SlabBlock(UDProperties.BlockP.POLISHED_CHROMITE), true);
 
-    public static final Supplier<Block> RIGID_GLASS = register("rigid_glass", () -> new RigidGlassBlock(UDProperties.BlockP.RIGID_GLASS), true);
-    public static final Supplier<Block> STEEL_PIPE = register("steel_pipe", () -> new SteelPipeBlock(UDProperties.BlockP.STEEL_PIPE), false);
-
+    //STAINLESS STEEL
     public static final Supplier<Block> STAINLESS_STEEL_BLOCK = register("stainless_steel_block", () -> new Block(UDProperties.BlockP.STAINLESS_STEEL), true);
     public static final Supplier<Block> STAINLESS_STEEL_BARS = register("stainless_steel_bars", () -> new PublicIronBarsBlock(UDProperties.BlockP.STEEL_BARS), true);
+    public static final Supplier<Block> STAINLESS_STEEL_FENCE = register("stainless_steel_fence", () -> new PublicIronBarsBlock(UDProperties.BlockP.STEEL_FENCE), true);
     public static final Supplier<Block> STAINLESS_STEEL_LANTERN = register("stainless_steel_lantern", () -> new StainlessSteelLanternBlock(UDProperties.BlockP.STEEL_LANTERN), true);
     public static final Supplier<Block> STAINLESS_STEEL_SOUL_LANTERN = register("stainless_steel_soul_lantern", () -> new StainlessSteelLanternBlock(UDProperties.BlockP.STEEL_SOUL_LANTERN), true);
     public static final Supplier<Block> STAINLESS_STEEL_DOOR = register("stainless_steel_door", () -> new PublicDoorBlock(BlockSetType.STONE, UDProperties.BlockP.STEEL_DOOR), true);
     public static final Supplier<Block> STAINLESS_STEEL_TRAPDOOR = register("stainless_steel_trapdoor", () -> new PublicTrapdoorBlock(BlockSetType.STONE, UDProperties.BlockP.STEEL_TRAPDOOR), true);
     public static final Supplier<Block> STAINLESS_STEEL_LADDER = register("stainless_steel_ladder", () -> new PublicLadderBlock(UDProperties.BlockP.STEEL_LADDER), true);
+    public static final Supplier<Block> RIGID_GLASS = register("rigid_glass", () -> new RigidGlassBlock(UDProperties.BlockP.RIGID_GLASS), true);
+    public static final Supplier<Block> STEEL_PIPE = register("steel_pipe", () -> new SteelPipeBlock(UDProperties.BlockP.STEEL_PIPE), false);
 
     //DECOR
     public static final Supplier<Block> TRASH_CAN = register("trash_can", () -> new TrashCanBlock(UDProperties.BlockP.TRASH_CAN), true);
@@ -161,6 +162,7 @@ public class UDBlocks {
     public static final Supplier<Block> SHOWER = register("shower", () -> new ShowerBlock(UDProperties.BlockP.SHOWER), true);
     public static final Supplier<Block> SATELLITE_DISH = register("satellite_dish", () -> new SatelliteDishBlock(UDProperties.BlockP.SATELLITE_DISH), false);
     public static final Supplier<Block> WALL_SATELLITE_DISH = register("wall_satellite_dish", () -> new SatelliteDishBlock(UDProperties.BlockP.SATELLITE_DISH), false);
+    public static final Supplier<Block> STAINLESS_STEEL_CHAIR = register("stainless_steel_chair", () -> new StainlessSteelChairBlock(UDProperties.BlockP.STAINLESS_STEEL_CHAIR), true);
 
     //WRAPPED
     public static final HashMap<WrapColor, Supplier<Block>> WRAPPED_POLYANTHOUS = new HashMap<>();
@@ -172,15 +174,22 @@ public class UDBlocks {
         }
     }
 
+    public static Supplier<Block> getWrappedPolyanthous(int colors){
+        return WRAPPED_POLYANTHOUS.get(WrapColor.byId(colors));
+    }
+
     //DYED BLOCKS
     public static final HashMap<DyeColor, Supplier<Block>> DYED_TOWELS = new HashMap<>();
     public static final HashMap<DyeColor, Supplier<Block>> DYED_TOWEL_BARS = new HashMap<>();
     public static final HashMap<DyeColor, Supplier<Block>> DYED_TOWEL_BLOCKS = new HashMap<>();
     public static final HashMap<DyeColor, Supplier<Block>> DYED_PICTURE_FRAMES = new HashMap<>();
     public static final HashMap<DyeColor, Supplier<Block>> DYED_WALL_PICTURE_FRAMES = new HashMap<>();
+    public static final HashMap<DyeColor, Supplier<Block>> DYED_PLASTIC_LIGHTS = new HashMap<>();
 
+    //UNDYED VARIANTS
     public static final Supplier<Block> PICTURE_FRAME = register("picture_frame", () -> new PictureFrameBlock(UDProperties.BlockP.PICTURE_FRAME), false);
     public static final Supplier<Block> WALL_PICTURE_FRAME = register("wall_picture_frame", () -> new PictureFrameWallBlock(UDProperties.BlockP.PICTURE_FRAME), false);
+    public static final Supplier<Block> PLASTIC_LIGHTS = register("plastic_lights", () -> new PlasticLightsBlock(UDProperties.BlockP.PLASTIC_LIGHTS), true);
 
     static {
         for (DyeColor colors : DyeColor.values()) {
@@ -198,11 +207,15 @@ public class UDBlocks {
 
             DYED_WALL_PICTURE_FRAMES.put(colors, register(colors + "_wall_picture_frame", () -> new PictureFrameWallBlock(
                     UDProperties.BlockP.PICTURE_FRAME.mapColor(colors)), false));
-        }
-    }
 
-    public static Supplier<Block> getWrappedPolyanthous(int colors){
-        return WRAPPED_POLYANTHOUS.get(WrapColor.byId(colors));
+            if (colors != DyeColor.BLACK) {
+                DYED_PLASTIC_LIGHTS.put(colors, register(colors + "_plastic_lights", () -> new PlasticLightsBlock(
+                        UDProperties.BlockP.PLASTIC_LIGHTS.mapColor(colors)), true));
+            } else {
+                DYED_PLASTIC_LIGHTS.put(colors, register(colors + "_plastic_lights", () -> new PlasticLightsBlock(
+                        UDProperties.BlockP.DARK_PLASTIC_LIGHTS.mapColor(colors)), true));
+            }
+        }
     }
 
     public static Supplier<Block> getDyedTowels(int colors){
@@ -223,6 +236,10 @@ public class UDBlocks {
 
     public static Supplier<Block> getDyedWallPictureBlocks(int colors){
         return DYED_WALL_PICTURE_FRAMES.get(DyeColor.byId(colors));
+    }
+
+    public static Supplier<Block> getDyedPlasticLights(int colors){
+        return DYED_PLASTIC_LIGHTS.get(DyeColor.byId(colors));
     }
 
     public static Supplier<Block> register(String id, Supplier<Block> supplier, boolean hasItem) {

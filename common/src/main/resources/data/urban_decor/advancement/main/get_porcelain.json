@@ -23,7 +23,7 @@
     "frame": "task",
     "hidden": false,
     "icon": {
-      "item": "urban_decor:porcelain"
+      "id": "urban_decor:porcelain"
     },
     "show_toast": true,
     "title": {
