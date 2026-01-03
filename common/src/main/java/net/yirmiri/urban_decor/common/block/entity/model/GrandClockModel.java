@@ -66,11 +66,9 @@ public class GrandClockModel<T extends Entity> extends EntityModel<T> {
 
     @Override
     public void setupAnim(Entity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
-        //  float time = ageInTicks % 24000.0F;
-        float time = (float) Math.floor(ageInTicks / 20.0F) * 20.0F;
+        float time = (float) (Math.floor(ageInTicks / 20.0F) * 20.0F) + (ageInTicks % 20 == 0 ? 2 : 0);
 
         this.hour_hand.zRot = (((time / 1000.0F) + 6.0F) % 12.0F / 12.0F) * ((float) Math.PI * 2F);
-        //this.minute_hand.zRot = ((time % 1000.0F) / 1000.0F) * ((float) Math.PI * 2F);
         this.minute_hand.zRot = ((time % 1000.0F) / 1000.0F) * ((float) Math.PI * 2F);
     }
 
