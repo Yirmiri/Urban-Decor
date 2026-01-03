@@ -1,6 +1,6 @@
 package net.yirmiri.urban_decor.core.registry;
 
-import net.azurune.runiclib.core.platform.Services;
+import net.azurune.runiclib.core.platform.RLServices;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.yirmiri.urban_decor.UrbanDecor;
 import net.yirmiri.urban_decor.common.block.entity.*;
@@ -8,13 +8,13 @@ import net.yirmiri.urban_decor.common.block.entity.*;
 import java.util.function.Supplier;
 
 public class UDBlockEntities {
-    public static final Supplier<BlockEntityType<ToasterBlockEntity>> TOASTER = Services.REGISTRY.registerBlockEntityType(
-            UrbanDecor.MOD_ID, "toaster", () -> Services.REGISTRY.createBlockEntity(ToasterBlockEntity::new,
+    public static final Supplier<BlockEntityType<ToasterBlockEntity>> TOASTER = RLServices.REGISTRY.registerBlockEntityType(
+            UrbanDecor.MOD_ID, "toaster", () -> RLServices.REGISTRY.createBlockEntity(ToasterBlockEntity::new,
                     UDBlocks.TOASTER.get()
             ));
 
-    public static final Supplier<BlockEntityType<StorageDecorBlockEntity>> STORAGE_APPLIANCE = Services.REGISTRY.registerBlockEntityType(
-            UrbanDecor.MOD_ID, "storage_appliance", () -> Services.REGISTRY.createBlockEntity(StorageDecorBlockEntity::new,
+    public static final Supplier<BlockEntityType<StorageDecorBlockEntity>> STORAGE_APPLIANCE = RLServices.REGISTRY.registerBlockEntityType(
+            UrbanDecor.MOD_ID, "storage_appliance", () -> RLServices.REGISTRY.createBlockEntity(StorageDecorBlockEntity::new,
                     UDBlocks.CUPBOARD.get(), UDBlocks.DARK_CUPBOARD.get(), UDBlocks.FRIDGE.get(), UDBlocks.DARK_FRIDGE.get(), UDBlocks.FILING_CABINET.get(),
                     UDBlocks.FREEZER.get(), UDBlocks.DARK_FREEZER.get(), UDBlocks.WASHING_MACHINE.get(), UDBlocks.DARK_WASHING_MACHINE.get(),
                     UDBlocks.DRYER.get(), UDBlocks.DARK_DRYER.get(), UDBlocks.TOOLBOX.get(), UDBlocks.DISHWASHER.get(), UDBlocks.DARK_DISHWASHER.get(),
@@ -23,28 +23,28 @@ public class UDBlockEntities {
                     UDBlocks.BAMBOO_BOX.get(), UDBlocks.CRIMSON_BOX.get(), UDBlocks.WARPED_BOX.get()
             ));
 
-    public static final Supplier<BlockEntityType<FurnaceDecorBlockEntity>> FURNACE_DECOR = Services.REGISTRY.registerBlockEntityType(
-            UrbanDecor.MOD_ID, "furnace_decor", () -> Services.REGISTRY.createBlockEntity(FurnaceDecorBlockEntity::new,
+    public static final Supplier<BlockEntityType<FurnaceDecorBlockEntity>> FURNACE_DECOR = RLServices.REGISTRY.registerBlockEntityType(
+            UrbanDecor.MOD_ID, "furnace_decor", () -> RLServices.REGISTRY.createBlockEntity(FurnaceDecorBlockEntity::new,
                     UDBlocks.MICROWAVE.get(), UDBlocks.WALL_MICROWAVE.get()
             ));
 
-    public static final Supplier<BlockEntityType<SmokerDecorBlockEntity>> SMOKER_DECOR = Services.REGISTRY.registerBlockEntityType(
-            UrbanDecor.MOD_ID, "smoker_decor", () -> Services.REGISTRY.createBlockEntity(SmokerDecorBlockEntity::new,
+    public static final Supplier<BlockEntityType<SmokerDecorBlockEntity>> SMOKER_DECOR = RLServices.REGISTRY.registerBlockEntityType(
+            UrbanDecor.MOD_ID, "smoker_decor", () -> RLServices.REGISTRY.createBlockEntity(SmokerDecorBlockEntity::new,
                     UDBlocks.OVEN.get(), UDBlocks.DARK_OVEN.get()
             ));
 
-    public static final Supplier<BlockEntityType<DestroyStorageApplianceBlockEntity>> DESTROY_STORAGE_APPLIANCE = Services.REGISTRY.registerBlockEntityType(
-            UrbanDecor.MOD_ID, "destroy_storage_appliance", () -> Services.REGISTRY.createBlockEntity(DestroyStorageApplianceBlockEntity::new,
+    public static final Supplier<BlockEntityType<DestroyStorageApplianceBlockEntity>> DESTROY_STORAGE_APPLIANCE = RLServices.REGISTRY.registerBlockEntityType(
+            UrbanDecor.MOD_ID, "destroy_storage_appliance", () -> RLServices.REGISTRY.createBlockEntity(DestroyStorageApplianceBlockEntity::new,
                     UDBlocks.TRASH_CAN.get()
             ));
 
-    public static final Supplier<BlockEntityType<WallClockBlockEntity>> WALL_CLOCK = Services.REGISTRY.registerBlockEntityType(
-            UrbanDecor.MOD_ID, "wall_clock", () -> Services.REGISTRY.createBlockEntity(WallClockBlockEntity::new,
+    public static final Supplier<BlockEntityType<WallClockBlockEntity>> WALL_CLOCK = RLServices.REGISTRY.registerBlockEntityType(
+            UrbanDecor.MOD_ID, "wall_clock", () -> RLServices.REGISTRY.createBlockEntity(WallClockBlockEntity::new,
                     UDBlocks.WALL_CLOCK.get()
             ));
 
-    public static final Supplier<BlockEntityType<GrandBlockEntity>> GRAND_CLOCK = Services.REGISTRY.registerBlockEntityType(
-            UrbanDecor.MOD_ID, "grand_clock", () -> Services.REGISTRY.createBlockEntity(GrandBlockEntity::new,
+    public static final Supplier<BlockEntityType<GrandBlockEntity>> GRAND_CLOCK = RLServices.REGISTRY.registerBlockEntityType(
+            UrbanDecor.MOD_ID, "grand_clock", () -> RLServices.REGISTRY.createBlockEntity(GrandBlockEntity::new,
                     UDBlocks.OAK_GRANDFATHER_CLOCK.get(), UDBlocks.SPRUCE_GRANDFATHER_CLOCK.get(),
                     UDBlocks.BIRCH_GRANDFATHER_CLOCK.get(), UDBlocks.JUNGLE_GRANDFATHER_CLOCK.get(),
                     UDBlocks.ACACIA_GRANDFATHER_CLOCK.get(), UDBlocks.DARK_OAK_GRANDFATHER_CLOCK.get(),
@@ -53,8 +53,8 @@ public class UDBlockEntities {
                     UDBlocks.BAMBOO_GRANDFATHER_CLOCK.get()
             ));
 
-    public static final Supplier<BlockEntityType<StainlessSteelChairBlockEntity>> STAINLESS_STEEL_CHAIR = Services.REGISTRY.registerBlockEntityType(
-            UrbanDecor.MOD_ID, "stainless_steel_chair", () -> Services.REGISTRY.createBlockEntity(StainlessSteelChairBlockEntity::new,
+    public static final Supplier<BlockEntityType<StainlessSteelChairBlockEntity>> STAINLESS_STEEL_CHAIR = RLServices.REGISTRY.registerBlockEntityType(
+            UrbanDecor.MOD_ID, "stainless_steel_chair", () -> RLServices.REGISTRY.createBlockEntity(StainlessSteelChairBlockEntity::new,
                     UDBlocks.STAINLESS_STEEL_CHAIR.get()
             ));
 

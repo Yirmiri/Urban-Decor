@@ -1,6 +1,6 @@
 package net.yirmiri.urban_decor.core.registry;
 
-import net.azurune.runiclib.core.platform.Services;
+import net.azurune.runiclib.core.platform.RLServices;
 import net.minecraft.core.Direction;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.DyeColor;
@@ -60,7 +60,7 @@ public class UDItems {
     }
 
     public static Supplier<Item> register(String id, Supplier<Item> supplier) {
-        return Services.REGISTRY.registerItem(UrbanDecor.MOD_ID, id, supplier);
+        return RLServices.REGISTRY.registerItem(UrbanDecor.MOD_ID, id, supplier);
     }
 
     public static void loadItems() {

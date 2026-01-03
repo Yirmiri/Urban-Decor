@@ -1,6 +1,6 @@
 package net.yirmiri.urban_decor.core.registry;
 
-import net.azurune.runiclib.core.platform.Services;
+import net.azurune.runiclib.core.platform.RLServices;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.DyeColor;
@@ -11,7 +11,7 @@ import net.yirmiri.urban_decor.common.util.WrapColor;
 import java.util.function.Supplier;
 
 public class UDCreativeTabs {
-    public static final Supplier<CreativeModeTab> URBAN_DECOR = Services.REGISTRY.registerCreativeModeTab(
+    public static final Supplier<CreativeModeTab> URBAN_DECOR = RLServices.REGISTRY.registerCreativeModeTab(
             UrbanDecor.MOD_ID, "urban_decor", () -> CreativeModeTab.builder(CreativeModeTab.Row.TOP, 0)
                     .title(Component.translatable("itemgroup.urban_decor"))
                     .icon(() -> new ItemStack(UDItems.TOOLBOX.get()))
