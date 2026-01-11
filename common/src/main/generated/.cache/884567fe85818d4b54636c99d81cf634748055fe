@@ -1,14 +1,15 @@
-// 1.21.1	2025-12-31T09:01:48.7540785	Urban Decor/Tags for minecraft:block
-ad5e3715061f48e3521b3843f3bcec39bc9154be data\urban_decor\tags\block\mineable_with_axe_and_pickaxe.json
-da654d67e78b8f46055aa829cbeebdd2ab95f594 data\urban_decor\tags\block\toilets.json
-772b50cda2f50c6df51365f467cb24c926766add data\minecraft\tags\block\climbable.json
-76adecef9f85206ae9ed2751459ecf8ecf28f4a1 data\minecraft\tags\block\wool.json
-bfdd93f59fb20311dc1633d396a6efdd8b1479d2 data\minecraft\tags\block\campfires.json
-5c1cb523386eb8a923dfc01d87487d45780a790d data\urban_decor\tags\block\heavy_storage_sound.json
-b28812dffd948ffebbd922898ebc313ef78f85d8 data\minecraft\tags\block\mineable\axe.json
-1b84b531e67038f7d67b870aa4280d156c7fbd2b data\urban_decor\tags\block\smooth_storage_sound.json
-578655c4c03fa3fa7cf23b09532575cbebb73212 data\minecraft\tags\block\tall_flowers.json
+// 1.21.1	2026-01-10T23:59:07.833036	Urban Decor/Tags for minecraft:block
 80ecaef9f0c9221f26609e3871fdd7969b40b38f data\urban_decor\tags\block\polyanthous.json
-6b465a9dbaa6d4fddc29717c3056f9c4107afe10 data\urban_decor\tags\block\seats.json
+da654d67e78b8f46055aa829cbeebdd2ab95f594 data\urban_decor\tags\block\toilets.json
+441ad640900f789330b73d47b065a3352247e7d7 data\minecraft\tags\block\mineable\pickaxe.json
+1b84b531e67038f7d67b870aa4280d156c7fbd2b data\urban_decor\tags\block\smooth_storage_sound.json
 3870d329e4399147c29473fbe1d1229db7ea2f91 data\minecraft\tags\block\walls.json
-395589c10893d586a7a42b5b5126d872ad4a0f3c data\minecraft\tags\block\mineable\pickaxe.json
+578655c4c03fa3fa7cf23b09532575cbebb73212 data\minecraft\tags\block\tall_flowers.json
+5c1cb523386eb8a923dfc01d87487d45780a790d data\urban_decor\tags\block\heavy_storage_sound.json
+6b465a9dbaa6d4fddc29717c3056f9c4107afe10 data\urban_decor\tags\block\seats.json
+ad5e3715061f48e3521b3843f3bcec39bc9154be data\urban_decor\tags\block\mineable_with_axe_and_pickaxe.json
+b28812dffd948ffebbd922898ebc313ef78f85d8 data\minecraft\tags\block\mineable\axe.json
+76adecef9f85206ae9ed2751459ecf8ecf28f4a1 data\minecraft\tags\block\wool.json
+772b50cda2f50c6df51365f467cb24c926766add data\minecraft\tags\block\climbable.json
+bfdd93f59fb20311dc1633d396a6efdd8b1479d2 data\minecraft\tags\block\campfires.json
+f30b7fba88903732dcec59bc3e552aa6826d9945 data\minecraft\tags\block\inside_step_sound_blocks.json

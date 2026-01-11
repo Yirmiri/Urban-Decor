@@ -1,10 +1,13 @@
 package net.yirmiri.urban_decor.datagen;
 
+import net.azurune.runiclib.RunicLib;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.world.item.DyeColor;
+import net.minecraft.world.level.block.Block;
+import net.yirmiri.urban_decor.UrbanDecor;
 import net.yirmiri.urban_decor.common.util.WrapColor;
 import net.yirmiri.urban_decor.core.init.UDTags;
 import net.yirmiri.urban_decor.core.registry.UDBlocks;
@@ -227,5 +230,21 @@ public class UDBlockTagProvider extends FabricTagProvider.BlockTagProvider {
         for (DyeColor colors : DyeColor.values()) {
             getOrCreateTagBuilder(BlockTags.WOOL).add(UDBlocks.getDyedTowelBlocks(colors.getId()).get());
         }
+
+        addDDTags(arg);
+    }
+
+    private void addDDTags(HolderLookup.Provider arg) {
+        FabricTagProvider<Block>.FabricTagBuilder fabricTagBuilder = getOrCreateTagBuilder(BlockTags.MINEABLE_WITH_PICKAXE)
+                .addOptional(RunicLib.customid(UrbanDecor.MOD_ID, "towel_bar_coral_towel"))
+                .addOptional(RunicLib.customid(UrbanDecor.MOD_ID, "towel_bar_umber_towel"))
+                .addOptional(RunicLib.customid(UrbanDecor.MOD_ID, "towel_bar_canary_towel"))
+                .addOptional(RunicLib.customid(UrbanDecor.MOD_ID, "towel_bar_wasabi_towel"))
+                .addOptional(RunicLib.customid(UrbanDecor.MOD_ID, "towel_bar_sacramento_towel"))
+                .addOptional(RunicLib.customid(UrbanDecor.MOD_ID, "towel_bar_sky_towel"))
+                .addOptional(RunicLib.customid(UrbanDecor.MOD_ID, "towel_bar_blurple_towel"))
+                .addOptional(RunicLib.customid(UrbanDecor.MOD_ID, "towel_bar_lavender_towel"))
+                .addOptional(RunicLib.customid(UrbanDecor.MOD_ID, "towel_bar_sangria_towel"))
+                .addOptional(RunicLib.customid(UrbanDecor.MOD_ID, "towel_bar_rose_towel"));
     }
 }

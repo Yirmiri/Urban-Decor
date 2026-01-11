@@ -91,6 +91,46 @@
     "urban_decor:towel_bar_brown_towel",
     "urban_decor:towel_bar_green_towel",
     "urban_decor:towel_bar_red_towel",
-    "urban_decor:towel_bar_black_towel"
+    "urban_decor:towel_bar_black_towel",
+    {
+      "id": "urban_decor:towel_bar_coral_towel",
+      "required": false
+    },
+    {
+      "id": "urban_decor:towel_bar_umber_towel",
+      "required": false
+    },
+    {
+      "id": "urban_decor:towel_bar_canary_towel",
+      "required": false
+    },
+    {
+      "id": "urban_decor:towel_bar_wasabi_towel",
+      "required": false
+    },
+    {
+      "id": "urban_decor:towel_bar_sacramento_towel",
+      "required": false
+    },
+    {
+      "id": "urban_decor:towel_bar_sky_towel",
+      "required": false
+    },
+    {
+      "id": "urban_decor:towel_bar_blurple_towel",
+      "required": false
+    },
+    {
+      "id": "urban_decor:towel_bar_lavender_towel",
+      "required": false
+    },
+    {
+      "id": "urban_decor:towel_bar_sangria_towel",
+      "required": false
+    },
+    {
+      "id": "urban_decor:towel_bar_rose_towel",
+      "required": false
+    }
   ]
 }

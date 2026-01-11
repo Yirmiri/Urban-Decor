@@ -10,6 +10,8 @@ import net.yirmiri.urban_decor.core.registry.UDEntities;
 import net.yirmiri.urban_decor.core.registry.UDItems;
 import org.apache.commons.lang3.StringUtils;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.concurrent.CompletableFuture;
 
 public class UDLangProvider extends FabricLanguageProvider {
@@ -416,18 +418,50 @@ public class UDLangProvider extends FabricLanguageProvider {
             String wrapString = StringUtils.capitalize(StringUtils.replace(StringUtils.replace(StringUtils.replace(colors.getName(),
                     "_", " "), "gray", "Gray"), "blue", "Blue"));
 
-            build.add(YT_ID + "block." + MOD_ID + UDBlocks.getWrappedPolyanthous(colors.getId()) + ".desc", "A vibrant, delicate flower that is essential in the creation of polypropylene");
-            build.add(YT_ID + "item." + MOD_ID + UDItems.getWrappedWraps(colors.getId()) + ".desc", "A" + " " + colors.getName() + " " + " wrap that can be applied to various applianced");
+            build.add(YT_ID + UDBlocks.getWrappedPolyanthous(colors.getId()).get().getDescriptionId() + ".desc", "A vibrant, delicate flower that is essential in the creation of polypropylene");
+            build.add(YT_ID + UDItems.getWrappedWraps(colors.getId()).get().getDescriptionId() + ".desc", "A" + " " + colors.getName() + " " + " wrap that can be applied to various applianced");
         }
 
         for (DyeColor colors : DyeColor.values()) {
             String dyeString = StringUtils.capitalize(StringUtils.replace(StringUtils.replace(StringUtils.replace(colors.getName(),
                     "_", " "), "gray", "Gray"), "blue", "Blue"));
 
-            build.add(YT_ID + "block." + MOD_ID + UDBlocks.getDyedTowelBlocks(colors.getId()) + ".desc", "A soft block of compressed towels with a pattern");
-            build.add(YT_ID + "block." + MOD_ID + UDBlocks.getDyedTowels(colors.getId()) + ".desc", "A place to dry off or clean yourself, can be hung on towel bars");
-            build.add(YT_ID + "block." + MOD_ID + UDBlocks.getDyedPictureBlocks(colors.getId()) + ".desc", "A small picture dyed " + dyeString + ", used to cozy up a home!");
-            build.add(YT_ID + "block." + MOD_ID + UDBlocks.getDyedPlasticLights(colors.getId()) + ".desc", "A " + dyeString + ", colored light to set the mood");
+            build.add(YT_ID + UDBlocks.getDyedTowelBlocks(colors.getId()).get().getDescriptionId() + ".desc", "A soft block of compressed towels with a pattern");
+            build.add(YT_ID + UDBlocks.getDyedTowels(colors.getId()).get().getDescriptionId() + ".desc", "A place to dry off or clean yourself, can be hung on towel bars");
+            build.add(YT_ID + UDBlocks.getDyedPictureBlocks(colors.getId()).get().getDescriptionId() + ".desc", "A small picture dyed " + dyeString + ", used to cozy up a home!");
+            build.add(YT_ID + UDBlocks.getDyedPlasticLights(colors.getId()).get().getDescriptionId() + ".desc", "A " + dyeString + ", colored light to set the mood");
+        }
+
+        generateDDyeTranslations(provider, build);
+    }
+
+    private void generateDDyeTranslations(HolderLookup.Provider provider, TranslationBuilder build) {
+        List<String> DYES = List.of(
+                "coral",
+                "umber",
+                "canary",
+                "wasabi",
+                "sacramento",
+                "sky",
+                "blurple",
+                "lavender",
+                "sangria",
+                "rose"
+        );
+
+        for (String val : DYES) {
+            String nameCap = StringUtils.capitalize(val);
+
+            build.add("block." + MOD_ID + val + "_towel", nameCap + " Towel");
+            build.add("block." + MOD_ID + "towel_bar_" + val + "_towel", nameCap + " Towel Bar");
+            build.add("block." + MOD_ID + val + "_towel_block", nameCap + " Towel Block");
+            build.add("block." + MOD_ID + val + "_picture_frame", nameCap + " Picture Frame");
+            build.add("block." + MOD_ID + val + "_plastic_lights", nameCap + " Plastic Lights");
+
+            build.add(YT_ID + "block." + MOD_ID + val + "_towel_block.desc", "A soft block of compressed towels with a pattern");
+            build.add(YT_ID + "block." + MOD_ID + val + "_towel.desc", "A place to dry off or clean yourself, can be hung on towel bars");
+            build.add(YT_ID + "block." + MOD_ID + val + "_picture_frame.desc", "A small picture dyed " + nameCap + ", used to cozy up a home!");
+            build.add(YT_ID + "block." + MOD_ID + val + "_plastic_lights.desc", "A " + nameCap + ", colored light to set the mood");
         }
     }
 }

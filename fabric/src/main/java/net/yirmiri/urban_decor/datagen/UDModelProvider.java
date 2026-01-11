@@ -1,14 +1,22 @@
 package net.yirmiri.urban_decor.datagen;
 
+import net.azurune.runiclib.RunicLib;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
 import net.minecraft.data.models.BlockModelGenerators;
 import net.minecraft.data.models.ItemModelGenerators;
+import net.minecraft.data.models.model.ModelLocationUtils;
 import net.minecraft.data.models.model.ModelTemplates;
+import net.minecraft.data.models.model.TextureMapping;
+import net.minecraft.data.models.model.TexturedModel;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.DyeColor;
+import net.yirmiri.urban_decor.UrbanDecor;
 import net.yirmiri.urban_decor.common.util.WrapColor;
 import net.yirmiri.urban_decor.core.registry.UDBlocks;
 import net.yirmiri.urban_decor.core.registry.UDItems;
+
+import java.util.List;
 
 public class UDModelProvider extends FabricModelProvider {
     public UDModelProvider(FabricDataOutput output) {
@@ -71,6 +79,8 @@ public class UDModelProvider extends FabricModelProvider {
             generator.family(UDBlocks.getDyedTowelBlocks(colors.getId()).get());
             generator.createMultiface(UDBlocks.getDyedPlasticLights(colors.getId()).get());
         }
+
+        generateDDBlocks(generator);
     }
 
     @Override
@@ -158,6 +168,47 @@ public class UDModelProvider extends FabricModelProvider {
         for (WrapColor colors : WrapColor.values()) {
             generator.generateFlatItem(UDBlocks.getWrappedPolyanthous(colors.getId()).get().asItem(), ModelTemplates.FLAT_ITEM);
             generator.generateFlatItem(UDItems.getWrappedWraps(colors.getId()).get(), ModelTemplates.FLAT_ITEM);
+        }
+
+        generateDDItems(generator);
+    }
+
+    private void generateDDBlocks(BlockModelGenerators generator) {
+
+    }
+
+    private void generateDDItems(ItemModelGenerators generator) {
+        List<ResourceLocation> TOWELS = List.of(
+                RunicLib.customid(UrbanDecor.MOD_ID, "item/coral_towel"),
+                RunicLib.customid(UrbanDecor.MOD_ID, "item/umber_towel"),
+                RunicLib.customid(UrbanDecor.MOD_ID, "item/canary_towel"),
+                RunicLib.customid(UrbanDecor.MOD_ID, "item/wasabi_towel"),
+                RunicLib.customid(UrbanDecor.MOD_ID, "item/sacramento_towel"),
+                RunicLib.customid(UrbanDecor.MOD_ID, "item/sky_towel"),
+                RunicLib.customid(UrbanDecor.MOD_ID, "item/blurple_towel"),
+                RunicLib.customid(UrbanDecor.MOD_ID, "item/lavender_towel"),
+                RunicLib.customid(UrbanDecor.MOD_ID, "item/sangria_towel"),
+                RunicLib.customid(UrbanDecor.MOD_ID, "item/rose_towel")
+        );
+        List<ResourceLocation> FRAMES = List.of(
+                RunicLib.customid(UrbanDecor.MOD_ID, "item/coral_picture_frame"),
+                RunicLib.customid(UrbanDecor.MOD_ID, "item/umber_picture_frame"),
+                RunicLib.customid(UrbanDecor.MOD_ID, "item/canary_picture_frame"),
+                RunicLib.customid(UrbanDecor.MOD_ID, "item/wasabi_picture_frame"),
+                RunicLib.customid(UrbanDecor.MOD_ID, "item/sacramento_picture_frame"),
+                RunicLib.customid(UrbanDecor.MOD_ID, "item/sky_picture_frame"),
+                RunicLib.customid(UrbanDecor.MOD_ID, "item/blurple_picture_frame"),
+                RunicLib.customid(UrbanDecor.MOD_ID, "item/lavender_picture_frame"),
+                RunicLib.customid(UrbanDecor.MOD_ID, "item/sangria_picture_frame"),
+                RunicLib.customid(UrbanDecor.MOD_ID, "item/rose_picture_frame")
+        );
+
+        for (ResourceLocation loc : TOWELS) {
+            ModelTemplates.FLAT_ITEM.create(loc, TextureMapping.layer0(loc), generator.output);
+        }
+
+        for (ResourceLocation loc : FRAMES) {
+            ModelTemplates.FLAT_ITEM.create(loc, TextureMapping.layer0(loc), generator.output);
         }
     }
 }
