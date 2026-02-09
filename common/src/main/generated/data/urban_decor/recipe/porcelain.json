@@ -1,17 +1,19 @@
 {
-  "type": "minecraft:crafting_shaped",
+  "type": "minecraft:crafting_shapeless",
   "category": "misc",
-  "key": {
-    "#": {
+  "ingredients": [
+    {
       "item": "minecraft:clay_ball"
     },
-    "@": {
+    {
+      "item": "minecraft:clay_ball"
+    },
+    {
+      "item": "minecraft:clay_ball"
+    },
+    {
       "item": "minecraft:flint"
     }
-  },
-  "pattern": [
-    "@#",
-    "##"
   ],
   "result": {
     "count": 8,

@@ -32,17 +32,13 @@ public class UDRecipeProvider extends FabricRecipeProvider {
 
     @Override
     public void buildRecipes(RecipeOutput exporter) {
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, UDItems.PORCELAIN.get(), 8)
-                .define('#', Items.CLAY_BALL).define('@', Items.FLINT)
-                .pattern("@#")
-                .pattern("##")
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, UDItems.PORCELAIN.get(), 8)
+                .requires(Items.CLAY_BALL).requires(Items.CLAY_BALL).requires(Items.CLAY_BALL).requires(Items.FLINT)
                 .unlockedBy(getHasName(Items.CLAY_BALL), has(Items.CLAY_BALL))
                 .save(exporter, RunicLib.customid(UrbanDecor.MOD_ID, getSimpleRecipeName(UDItems.PORCELAIN.get())));
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, UDItems.STAINLESS_STEEL_INGOT.get(), 2)
-                .define('#', Items.COAL).define('@', Items.IRON_INGOT).define('$', UDBlocks.CHROMITE.get())
-                .pattern("#$")
-                .pattern("@$")
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, UDItems.STAINLESS_STEEL_INGOT.get(), 2)
+                .requires(Items.COAL).requires(Items.IRON_INGOT).requires(UDBlocks.CHROMITE.get()).requires(UDBlocks.CHROMITE.get())
                 .unlockedBy(getHasName(UDBlocks.CHROMITE.get()), has(UDBlocks.CHROMITE.get()))
                 .save(exporter, RunicLib.customid(UrbanDecor.MOD_ID, getSimpleRecipeName(UDItems.STAINLESS_STEEL_INGOT.get()) + "_from_chromite"));
 
@@ -131,10 +127,8 @@ public class UDRecipeProvider extends FabricRecipeProvider {
                 .unlockedBy(getHasName(UDBlocks.CHROMITE.get()), has(UDBlocks.CHROMITE.get()))
                 .save(exporter, RunicLib.customid(UrbanDecor.MOD_ID, getSimpleRecipeName(UDItems.DARK_PORCELAIN.get())));
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, UDItems.PORCELAIN.get(), 8)
-                .define('#', Items.CLAY_BALL).define('@', Items.QUARTZ)
-                .pattern("@#")
-                .pattern("#@")
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, UDItems.PORCELAIN.get(), 8)
+                .requires(Items.CLAY_BALL).requires(Items.QUARTZ).requires(Items.CLAY_BALL).requires(Items.QUARTZ)
                 .unlockedBy(getHasName(Items.QUARTZ), has(Items.QUARTZ))
                 .save(exporter, RunicLib.customid(UrbanDecor.MOD_ID, getSimpleRecipeName(UDItems.PORCELAIN.get()) + "_from_quartz"));
 

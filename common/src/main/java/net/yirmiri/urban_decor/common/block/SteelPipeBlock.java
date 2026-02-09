@@ -52,7 +52,7 @@ public class SteelPipeBlock extends Block {
     }
 
     @Override
-    protected boolean canBeReplaced(BlockState state, BlockPlaceContext ctx) {
-        return state.is(this) && !state.getValue(AXIS_TO_PROPERTY.get(ctx.getClickedFace().getAxis()));
+    protected boolean canBeReplaced(BlockState state, BlockPlaceContext context) {
+        return !context.isSecondaryUseActive() && context.getItemInHand().is(this.asItem()) && !state.getValue(AXIS_TO_PROPERTY.get(context.getClickedFace().getAxis()));
     }
 }
