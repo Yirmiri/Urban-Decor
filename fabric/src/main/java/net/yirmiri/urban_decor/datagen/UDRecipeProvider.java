@@ -324,7 +324,7 @@ public class UDRecipeProvider extends FabricRecipeProvider {
                 .save(exporter, RunicLib.customid(UrbanDecor.MOD_ID, getSimpleRecipeName(UDBlocks.TURBINE.get())));
 
         ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, UDBlocks.AIR_CONDITIONER.get(), 1)
-                .define('@', UDItems.STAINLESS_STEEL_INGOT.get()).define('#', UDItems.STEEL_PIPE.get()).define('^', Items.WIND_CHARGE)
+                .define('@', UDItems.STAINLESS_STEEL_INGOT.get()).define('#', UDItems.STEEL_PIPE.get()).define('^', Items.BREEZE_ROD)
                 .pattern("@ @")
                 .pattern("###")
                 .pattern("@^@")
@@ -332,7 +332,7 @@ public class UDRecipeProvider extends FabricRecipeProvider {
                 .unlockedBy(getHasName(UDItems.STEEL_PIPE.get()), has(UDItems.STEEL_PIPE.get()))
                 .save(exporter, RunicLib.customid(UrbanDecor.MOD_ID, getSimpleRecipeName(UDBlocks.AIR_CONDITIONER.get())));
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, UDBlocks.RADIATOR.get(), 1)
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, UDBlocks.RADIATOR.get(), 8)
                 .define('@', UDItems.STAINLESS_STEEL_INGOT.get()).define('#', UDItems.STEEL_PIPE.get()).define('^', Items.BLAZE_ROD)
                 .pattern(" # ")
                 .pattern("###")
