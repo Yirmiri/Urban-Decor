@@ -17,7 +17,6 @@ import net.minecraft.world.level.storage.loot.entries.LootPoolEntryContainer;
 import net.minecraft.world.level.storage.loot.entries.LootPoolSingletonContainer;
 import net.minecraft.world.level.storage.loot.functions.SetItemCountFunction;
 import net.minecraft.world.level.storage.loot.predicates.LootItemBlockStatePropertyCondition;
-import net.minecraft.world.level.storage.loot.predicates.LootItemCondition;
 import net.minecraft.world.level.storage.loot.providers.number.ConstantValue;
 import net.yirmiri.urban_decor.common.block.FloorLampBlock;
 import net.yirmiri.urban_decor.common.block.abstracts.AbstractLongBlock;
@@ -107,7 +106,7 @@ public class UDLootTableProvider extends FabricBlockLootTableProvider {
         dropSelf(UDBlocks.STAINLESS_STEEL_SOUL_LANTERN.get());
         dropSelf(UDBlocks.STAINLESS_STEEL_BARS.get());
         dropSelf(UDBlocks.STAINLESS_STEEL_FENCE.get());
-        add(UDBlocks.FLOOR_LAMP.get(), floorLampDrops(UDBlocks.FLOOR_LAMP.get()));
+        add(UDBlocks.FLOOR_LAMP.get(), tallDrops(UDBlocks.FLOOR_LAMP.get()));
         dropSelf(UDBlocks.WALL_PICTURE_FRAME.get());
         add(UDBlocks.OAK_PIANO.get(), longBlockDrops(UDBlocks.OAK_PIANO.get()));
         add(UDBlocks.SPRUCE_PIANO.get(), longBlockDrops(UDBlocks.SPRUCE_PIANO.get()));
@@ -161,12 +160,15 @@ public class UDLootTableProvider extends FabricBlockLootTableProvider {
         dropSelf(UDBlocks.PLASTIC_DESK_TABLE.get());
         dropSelf(UDBlocks.STAINLESS_STEEL_CHAIR.get());
         add(UDBlocks.PLASTIC_LIGHTS.get(), this::createCoolerMultifaceDrops);
+        dropSelf(UDBlocks.CASH_REGISTER.get());
+        dropSelf(UDBlocks.DARK_CASH_REGISTER.get());
+        add(UDBlocks.VENDING_MACHINE.get(), tallDrops(UDBlocks.VENDING_MACHINE.get()));
 
         addDyedDrops();
         addWrappedDrops();
     }
 
-    public LootTable.Builder floorLampDrops(Block block) {
+    public LootTable.Builder tallDrops(Block block) {
         return this.createSinglePropConditionTable(block, FloorLampBlock.HALF, DoubleBlockHalf.LOWER);
     }
 

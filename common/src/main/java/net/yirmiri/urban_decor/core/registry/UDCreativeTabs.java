@@ -105,6 +105,9 @@ public class UDCreativeTabs {
                         entry.accept(UDBlocks.TRASH_CAN.get());
                         entry.accept(UDBlocks.DESK_FAN.get());
                         entry.accept(UDBlocks.FLOOR_LAMP.get());
+                        entry.accept(UDBlocks.VENDING_MACHINE.get());
+                        entry.accept(UDBlocks.CASH_REGISTER.get());
+                        entry.accept(UDBlocks.DARK_CASH_REGISTER.get());
 
                         entry.accept(UDBlocks.PLASTIC_CHAIR.get());
                         entry.accept(UDBlocks.STAINLESS_STEEL_CHAIR.get());
@@ -234,22 +237,22 @@ public class UDCreativeTabs {
                         entry.accept(UDItems.getDyedPictureFrames(DyeColor.PINK.getId()).get());
 
                         entry.accept(UDBlocks.PLASTIC_LIGHTS.get());
-//                        entry.accept(UDBlocks.getDyedPlasticLights(DyeColor.WHITE.getId()).get());
-//                        entry.accept(UDBlocks.getDyedPlasticLights(DyeColor.LIGHT_GRAY.getId()).get());
-//                        entry.accept(UDBlocks.getDyedPlasticLights(DyeColor.GRAY.getId()).get());
-//                        entry.accept(UDBlocks.getDyedPlasticLights(DyeColor.BLACK.getId()).get());
-//                        entry.accept(UDBlocks.getDyedPlasticLights(DyeColor.BROWN.getId()).get());
-//                        entry.accept(UDBlocks.getDyedPlasticLights(DyeColor.RED.getId()).get());
-//                        entry.accept(UDBlocks.getDyedPlasticLights(DyeColor.ORANGE.getId()).get());
-//                        entry.accept(UDBlocks.getDyedPlasticLights(DyeColor.YELLOW.getId()).get());
-//                        entry.accept(UDBlocks.getDyedPlasticLights(DyeColor.LIME.getId()).get());
-//                        entry.accept(UDBlocks.getDyedPlasticLights(DyeColor.GREEN.getId()).get());
-//                        entry.accept(UDBlocks.getDyedPlasticLights(DyeColor.CYAN.getId()).get());
-//                        entry.accept(UDBlocks.getDyedPlasticLights(DyeColor.LIGHT_BLUE.getId()).get());
-//                        entry.accept(UDBlocks.getDyedPlasticLights(DyeColor.BLUE.getId()).get());
-//                        entry.accept(UDBlocks.getDyedPlasticLights(DyeColor.PURPLE.getId()).get());
-//                        entry.accept(UDBlocks.getDyedPlasticLights(DyeColor.MAGENTA.getId()).get());
-//                        entry.accept(UDBlocks.getDyedPlasticLights(DyeColor.PINK.getId()).get());
+                        entry.accept(UDBlocks.getDyedPlasticLights(DyeColor.WHITE.getId()).get());
+                        entry.accept(UDBlocks.getDyedPlasticLights(DyeColor.LIGHT_GRAY.getId()).get());
+                        entry.accept(UDBlocks.getDyedPlasticLights(DyeColor.GRAY.getId()).get());
+                        entry.accept(UDBlocks.getDyedPlasticLights(DyeColor.BLACK.getId()).get());
+                        entry.accept(UDBlocks.getDyedPlasticLights(DyeColor.BROWN.getId()).get());
+                        entry.accept(UDBlocks.getDyedPlasticLights(DyeColor.RED.getId()).get());
+                        entry.accept(UDBlocks.getDyedPlasticLights(DyeColor.ORANGE.getId()).get());
+                        entry.accept(UDBlocks.getDyedPlasticLights(DyeColor.YELLOW.getId()).get());
+                        entry.accept(UDBlocks.getDyedPlasticLights(DyeColor.LIME.getId()).get());
+                        entry.accept(UDBlocks.getDyedPlasticLights(DyeColor.GREEN.getId()).get());
+                        entry.accept(UDBlocks.getDyedPlasticLights(DyeColor.CYAN.getId()).get());
+                        entry.accept(UDBlocks.getDyedPlasticLights(DyeColor.LIGHT_BLUE.getId()).get());
+                        entry.accept(UDBlocks.getDyedPlasticLights(DyeColor.BLUE.getId()).get());
+                        entry.accept(UDBlocks.getDyedPlasticLights(DyeColor.PURPLE.getId()).get());
+                        entry.accept(UDBlocks.getDyedPlasticLights(DyeColor.MAGENTA.getId()).get());
+                        entry.accept(UDBlocks.getDyedPlasticLights(DyeColor.PINK.getId()).get());
             }).build());
 
     public static void loadItemGroups() {

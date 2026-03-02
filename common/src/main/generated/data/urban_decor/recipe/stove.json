@@ -2,15 +2,12 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "#": {
-      "item": "minecraft:magma_block"
-    },
     "@": {
       "item": "urban_decor:stainless_steel_ingot"
     }
   },
   "pattern": [
-    "@#@"
+    "@@@"
   ],
   "result": {
     "count": 1,

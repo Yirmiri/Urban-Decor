@@ -1,0 +1,282 @@
+{
+  "variants": {
+    "facing=north,open=false,wrap_type=none": {
+      "model": "urban_decor:block/dark_cash_register",
+      "uvlock": false
+    },
+    "facing=south,open=false,wrap_type=none": {
+      "model": "urban_decor:block/dark_cash_register",
+      "y": 180,
+      "uvlock": false
+    },
+    "facing=west,open=false,wrap_type=none": {
+      "model": "urban_decor:block/dark_cash_register",
+      "y": 270,
+      "uvlock": false
+    },
+    "facing=east,open=false,wrap_type=none": {
+      "model": "urban_decor:block/dark_cash_register",
+      "y": 90,
+      "uvlock": false
+    },
+    "facing=north,open=true,wrap_type=none": {
+      "model": "urban_decor:block/dark_cash_register_open",
+      "uvlock": false
+    },
+    "facing=south,open=true,wrap_type=none": {
+      "model": "urban_decor:block/dark_cash_register_open",
+      "y": 180,
+      "uvlock": false
+    },
+    "facing=west,open=true,wrap_type=none": {
+      "model": "urban_decor:block/dark_cash_register_open",
+      "y": 270,
+      "uvlock": false
+    },
+    "facing=east,open=true,wrap_type=none": {
+      "model": "urban_decor:block/dark_cash_register_open",
+      "y": 90,
+      "uvlock": false
+    },
+
+    
+    "facing=north,open=false,wrap_type=cherry": {
+      "model": "urban_decor:block/cherry_wrapped_dark_cash_register",
+      "uvlock": false
+    },
+    "facing=south,open=false,wrap_type=cherry": {
+      "model": "urban_decor:block/cherry_wrapped_dark_cash_register",
+      "y": 180,
+      "uvlock": false
+    },
+    "facing=west,open=false,wrap_type=cherry": {
+      "model": "urban_decor:block/cherry_wrapped_dark_cash_register",
+      "y": 270,
+      "uvlock": false
+    },
+    "facing=east,open=false,wrap_type=cherry": {
+      "model": "urban_decor:block/cherry_wrapped_dark_cash_register",
+      "y": 90,
+      "uvlock": false
+    },
+    "facing=north,open=true,wrap_type=cherry": {
+      "model": "urban_decor:block/cherry_wrapped_dark_cash_register_open",
+      "uvlock": false
+    },
+    "facing=south,open=true,wrap_type=cherry": {
+      "model": "urban_decor:block/cherry_wrapped_dark_cash_register_open",
+      "y": 180,
+      "uvlock": false
+    },
+    "facing=west,open=true,wrap_type=cherry": {
+      "model": "urban_decor:block/cherry_wrapped_dark_cash_register_open",
+      "y": 270,
+      "uvlock": false
+    },
+    "facing=east,open=true,wrap_type=cherry": {
+      "model": "urban_decor:block/cherry_wrapped_dark_cash_register_open",
+      "y": 90,
+      "uvlock": false
+    },
+
+
+    "facing=north,open=false,wrap_type=daffodil": {
+      "model": "urban_decor:block/daffodil_wrapped_dark_cash_register",
+      "uvlock": false
+    },
+    "facing=south,open=false,wrap_type=daffodil": {
+      "model": "urban_decor:block/daffodil_wrapped_dark_cash_register",
+      "y": 180,
+      "uvlock": false
+    },
+    "facing=west,open=false,wrap_type=daffodil": {
+      "model": "urban_decor:block/daffodil_wrapped_dark_cash_register",
+      "y": 270,
+      "uvlock": false
+    },
+    "facing=east,open=false,wrap_type=daffodil": {
+      "model": "urban_decor:block/daffodil_wrapped_dark_cash_register",
+      "y": 90,
+      "uvlock": false
+    },
+    "facing=north,open=true,wrap_type=daffodil": {
+      "model": "urban_decor:block/daffodil_wrapped_dark_cash_register_open",
+      "uvlock": false
+    },
+    "facing=south,open=true,wrap_type=daffodil": {
+      "model": "urban_decor:block/daffodil_wrapped_dark_cash_register_open",
+      "y": 180,
+      "uvlock": false
+    },
+    "facing=west,open=true,wrap_type=daffodil": {
+      "model": "urban_decor:block/daffodil_wrapped_dark_cash_register_open",
+      "y": 270,
+      "uvlock": false
+    },
+    "facing=east,open=true,wrap_type=daffodil": {
+      "model": "urban_decor:block/daffodil_wrapped_dark_cash_register_open",
+      "y": 90,
+      "uvlock": false
+    },
+
+
+    "facing=north,open=false,wrap_type=spring": {
+      "model": "urban_decor:block/spring_wrapped_dark_cash_register",
+      "uvlock": false
+    },
+    "facing=south,open=false,wrap_type=spring": {
+      "model": "urban_decor:block/spring_wrapped_dark_cash_register",
+      "y": 180,
+      "uvlock": false
+    },
+    "facing=west,open=false,wrap_type=spring": {
+      "model": "urban_decor:block/spring_wrapped_dark_cash_register",
+      "y": 270,
+      "uvlock": false
+    },
+    "facing=east,open=false,wrap_type=spring": {
+      "model": "urban_decor:block/spring_wrapped_dark_cash_register",
+      "y": 90,
+      "uvlock": false
+    },
+    "facing=north,open=true,wrap_type=spring": {
+      "model": "urban_decor:block/spring_wrapped_dark_cash_register_open",
+      "uvlock": false
+    },
+    "facing=south,open=true,wrap_type=spring": {
+      "model": "urban_decor:block/spring_wrapped_dark_cash_register_open",
+      "y": 180,
+      "uvlock": false
+    },
+    "facing=west,open=true,wrap_type=spring": {
+      "model": "urban_decor:block/spring_wrapped_dark_cash_register_open",
+      "y": 270,
+      "uvlock": false
+    },
+    "facing=east,open=true,wrap_type=spring": {
+      "model": "urban_decor:block/spring_wrapped_dark_cash_register_open",
+      "y": 90,
+      "uvlock": false
+    },
+
+
+    "facing=north,open=false,wrap_type=mint": {
+      "model": "urban_decor:block/mint_wrapped_dark_cash_register",
+      "uvlock": false
+    },
+    "facing=south,open=false,wrap_type=mint": {
+      "model": "urban_decor:block/mint_wrapped_dark_cash_register",
+      "y": 180,
+      "uvlock": false
+    },
+    "facing=west,open=false,wrap_type=mint": {
+      "model": "urban_decor:block/mint_wrapped_dark_cash_register",
+      "y": 270,
+      "uvlock": false
+    },
+    "facing=east,open=false,wrap_type=mint": {
+      "model": "urban_decor:block/mint_wrapped_dark_cash_register",
+      "y": 90,
+      "uvlock": false
+    },
+    "facing=north,open=true,wrap_type=mint": {
+      "model": "urban_decor:block/mint_wrapped_dark_cash_register_open",
+      "uvlock": false
+    },
+    "facing=south,open=true,wrap_type=mint": {
+      "model": "urban_decor:block/mint_wrapped_dark_cash_register_open",
+      "y": 180,
+      "uvlock": false
+    },
+    "facing=west,open=true,wrap_type=mint": {
+      "model": "urban_decor:block/mint_wrapped_dark_cash_register_open",
+      "y": 270,
+      "uvlock": false
+    },
+    "facing=east,open=true,wrap_type=mint": {
+      "model": "urban_decor:block/mint_wrapped_dark_cash_register_open",
+      "y": 90,
+      "uvlock": false
+    },
+
+
+    "facing=north,open=false,wrap_type=azure": {
+      "model": "urban_decor:block/azure_wrapped_dark_cash_register",
+      "uvlock": false
+    },
+    "facing=south,open=false,wrap_type=azure": {
+      "model": "urban_decor:block/azure_wrapped_dark_cash_register",
+      "y": 180,
+      "uvlock": false
+    },
+    "facing=west,open=false,wrap_type=azure": {
+      "model": "urban_decor:block/azure_wrapped_dark_cash_register",
+      "y": 270,
+      "uvlock": false
+    },
+    "facing=east,open=false,wrap_type=azure": {
+      "model": "urban_decor:block/azure_wrapped_dark_cash_register",
+      "y": 90,
+      "uvlock": false
+    },
+    "facing=north,open=true,wrap_type=azure": {
+      "model": "urban_decor:block/azure_wrapped_dark_cash_register_open",
+      "uvlock": false
+    },
+    "facing=south,open=true,wrap_type=azure": {
+      "model": "urban_decor:block/azure_wrapped_dark_cash_register_open",
+      "y": 180,
+      "uvlock": false
+    },
+    "facing=west,open=true,wrap_type=azure": {
+      "model": "urban_decor:block/azure_wrapped_dark_cash_register_open",
+      "y": 270,
+      "uvlock": false
+    },
+    "facing=east,open=true,wrap_type=azure": {
+      "model": "urban_decor:block/azure_wrapped_dark_cash_register_open",
+      "y": 90,
+      "uvlock": false
+    },
+
+
+    "facing=north,open=false,wrap_type=ruby": {
+      "model": "urban_decor:block/ruby_wrapped_dark_cash_register",
+      "uvlock": false
+    },
+    "facing=south,open=false,wrap_type=ruby": {
+      "model": "urban_decor:block/ruby_wrapped_dark_cash_register",
+      "y": 180,
+      "uvlock": false
+    },
+    "facing=west,open=false,wrap_type=ruby": {
+      "model": "urban_decor:block/ruby_wrapped_dark_cash_register",
+      "y": 270,
+      "uvlock": false
+    },
+    "facing=east,open=false,wrap_type=ruby": {
+      "model": "urban_decor:block/ruby_wrapped_dark_cash_register",
+      "y": 90,
+      "uvlock": false
+    },
+    "facing=north,open=true,wrap_type=ruby": {
+      "model": "urban_decor:block/ruby_wrapped_dark_cash_register_open",
+      "uvlock": false
+    },
+    "facing=south,open=true,wrap_type=ruby": {
+      "model": "urban_decor:block/ruby_wrapped_dark_cash_register_open",
+      "y": 180,
+      "uvlock": false
+    },
+    "facing=west,open=true,wrap_type=ruby": {
+      "model": "urban_decor:block/ruby_wrapped_dark_cash_register_open",
+      "y": 270,
+      "uvlock": false
+    },
+    "facing=east,open=true,wrap_type=ruby": {
+      "model": "urban_decor:block/ruby_wrapped_dark_cash_register_open",
+      "y": 90,
+      "uvlock": false
+    }
+  }
+}

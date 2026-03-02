@@ -4,18 +4,15 @@
   "key": {
     "#": {
       "item": "urban_decor:stainless_steel_ingot"
-    },
-    "@": {
-      "item": "minecraft:chest"
     }
   },
   "pattern": [
     "###",
-    "#@#",
+    "# #",
     "###"
   ],
   "result": {
-    "count": 1,
+    "count": 4,
     "id": "urban_decor:filing_cabinet"
   }
 }

@@ -3,16 +3,16 @@
   "category": "misc",
   "key": {
     "#": {
-      "item": "minecraft:clock"
+      "item": "minecraft:redstone"
     },
     "@": {
       "item": "urban_decor:polypropylene"
     }
   },
   "pattern": [
-    "@@@",
+    " @ ",
     "@#@",
-    "@@@"
+    " @ "
   ],
   "result": {
     "count": 1,

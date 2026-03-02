@@ -4,18 +4,15 @@
   "key": {
     "#": {
       "item": "urban_decor:dark_porcelain"
-    },
-    "@": {
-      "item": "minecraft:chest"
     }
   },
   "pattern": [
     "###",
-    "#@#",
+    "# #",
     "###"
   ],
   "result": {
-    "count": 1,
+    "count": 6,
     "id": "urban_decor:dark_cupboard"
   }
 }

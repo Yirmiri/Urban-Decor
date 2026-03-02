@@ -6,13 +6,13 @@
       "item": "urban_decor:stainless_steel_nugget"
     },
     "#": {
-      "item": "urban_decor:stainless_steel_ingot"
+      "item": "urban_decor:steel_pipe"
     },
     "%": {
       "tag": "minecraft:wool"
     },
     "@": {
-      "item": "minecraft:glowstone"
+      "item": "minecraft:glowstone_dust"
     }
   },
   "pattern": [
@@ -21,7 +21,7 @@
     "!#!"
   ],
   "result": {
-    "count": 1,
+    "count": 3,
     "id": "urban_decor:floor_lamp"
   }
 }

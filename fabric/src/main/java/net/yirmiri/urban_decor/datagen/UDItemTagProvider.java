@@ -1,5 +1,6 @@
 package net.yirmiri.urban_decor.datagen;
 
+import net.azurune.runiclib.RunicLib;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
 import net.minecraft.core.HolderLookup;
@@ -60,6 +61,8 @@ public class UDItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(UDBlocks.CRIMSON_BOX.get().asItem())
                 .add(UDBlocks.WARPED_BOX.get().asItem())
                 .add(UDBlocks.PLASTIC_DESK_TABLE.get().asItem())
+                .add(UDBlocks.CASH_REGISTER.get().asItem())
+                .add(UDBlocks.DARK_CASH_REGISTER.get().asItem())
         ;
 
         for (WrapColor colors : WrapColor.values()) {
@@ -84,7 +87,10 @@ public class UDItemTagProvider extends FabricTagProvider.ItemTagProvider {
         ;
 
         for (DyeColor colors : DyeColor.values()) {
-            getOrCreateTagBuilder(UDTags.ItemT.TOWELS).add(UDBlocks.getDyedTowels(colors.getId()).get().asItem());
+            getOrCreateTagBuilder(UDTags.ItemT.TOWELS)
+                    .add(UDBlocks.getDyedTowels(colors.getId()).get().asItem())
+                    .addOptional(RunicLib.customid("excessive_building", "mallet"))
+            ;
         }
     }
 }

@@ -72,6 +72,7 @@ public class UrbanDecorClient {
         RLServices.loadClient().registerBlockRenderType(UDBlocks.FLOOR_LAMP.get(), RenderType.cutoutMipped());
         RLServices.loadClient().registerBlockRenderType(UDBlocks.DISHWASHER.get(), RenderType.cutoutMipped());
         RLServices.loadClient().registerBlockRenderType(UDBlocks.DARK_DISHWASHER.get(), RenderType.cutoutMipped());
+        RLServices.loadClient().registerBlockRenderType(UDBlocks.VENDING_MACHINE.get(), RenderType.cutoutMipped());
 
         //TRANSLUCENT
         RLServices.loadClient().registerBlockRenderType(UDBlocks.OVEN.get(), RenderType.translucent());

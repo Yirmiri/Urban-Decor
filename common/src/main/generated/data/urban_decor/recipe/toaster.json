@@ -3,10 +3,7 @@
   "category": "misc",
   "key": {
     "!": {
-      "item": "minecraft:redstone"
-    },
-    "#": {
-      "item": "minecraft:magma_block"
+      "tag": "minecraft:coals"
     },
     "%": {
       "item": "urban_decor:stainless_steel_nugget"
@@ -17,7 +14,7 @@
   },
   "pattern": [
     "%!%",
-    "@#@"
+    "%@%"
   ],
   "result": {
     "count": 1,

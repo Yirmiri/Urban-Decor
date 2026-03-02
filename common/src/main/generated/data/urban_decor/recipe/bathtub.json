@@ -4,15 +4,11 @@
   "key": {
     "#": {
       "item": "urban_decor:porcelain"
-    },
-    "@": {
-      "item": "urban_decor:porcelain_block"
     }
   },
   "pattern": [
     "# #",
-    "# #",
-    "@@@"
+    "###"
   ],
   "result": {
     "count": 1,

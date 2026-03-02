@@ -149,6 +149,9 @@ public class UDModelProvider extends FabricModelProvider {
         generator.generateFlatItem(UDBlocks.WARPED_BOX.get().asItem(), ModelTemplates.FLAT_ITEM);
         generator.generateFlatItem(UDBlocks.PLASTIC_DESK_TABLE.get().asItem(), ModelTemplates.FLAT_ITEM);
         generator.generateFlatItem(UDBlocks.STAINLESS_STEEL_CHAIR.get().asItem(), ModelTemplates.FLAT_ITEM);
+        generator.generateFlatItem(UDBlocks.CASH_REGISTER.get().asItem(), ModelTemplates.FLAT_ITEM);
+        generator.generateFlatItem(UDBlocks.DARK_CASH_REGISTER.get().asItem(), ModelTemplates.FLAT_ITEM);
+        generator.generateFlatItem(UDBlocks.VENDING_MACHINE.get().asItem(), ModelTemplates.FLAT_ITEM);
 
         for (DyeColor colors : DyeColor.values()) {
             generator.generateFlatItem(UDBlocks.getDyedTowels(colors.getId()).get().asItem(), ModelTemplates.FLAT_ITEM);

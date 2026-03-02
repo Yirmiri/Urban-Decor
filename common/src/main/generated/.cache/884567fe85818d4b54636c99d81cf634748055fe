@@ -1,4 +1,4 @@
-// 1.21.1	2026-02-09T04:00:32.5653671	Urban Decor/Tags for minecraft:block
+// 1.21.1	2026-03-02T07:14:43.275618	Urban Decor/Tags for minecraft:block
 ad5e3715061f48e3521b3843f3bcec39bc9154be data\urban_decor\tags\block\mineable_with_axe_and_pickaxe.json
 da654d67e78b8f46055aa829cbeebdd2ab95f594 data\urban_decor\tags\block\toilets.json
 772b50cda2f50c6df51365f467cb24c926766add data\minecraft\tags\block\climbable.json
@@ -12,4 +12,4 @@ b28812dffd948ffebbd922898ebc313ef78f85d8 data\minecraft\tags\block\mineable\axe.
 f30b7fba88903732dcec59bc3e552aa6826d9945 data\minecraft\tags\block\inside_step_sound_blocks.json
 6b465a9dbaa6d4fddc29717c3056f9c4107afe10 data\urban_decor\tags\block\seats.json
 3870d329e4399147c29473fbe1d1229db7ea2f91 data\minecraft\tags\block\walls.json
-395589c10893d586a7a42b5b5126d872ad4a0f3c data\minecraft\tags\block\mineable\pickaxe.json
+feae49f29547a303c13fabdc7f9df2ec060891a2 data\minecraft\tags\block\mineable\pickaxe.json

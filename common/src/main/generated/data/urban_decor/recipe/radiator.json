@@ -6,19 +6,15 @@
       "item": "urban_decor:steel_pipe"
     },
     "@": {
-      "item": "urban_decor:stainless_steel_ingot"
-    },
-    "^": {
-      "item": "minecraft:blaze_rod"
+      "item": "minecraft:redstone"
     }
   },
   "pattern": [
-    " # ",
-    "###",
-    "@^@"
+    "#@#",
+    "#@#"
   ],
   "result": {
-    "count": 1,
+    "count": 4,
     "id": "urban_decor:radiator"
   }
 }

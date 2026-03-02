@@ -3,19 +3,16 @@
   "category": "building",
   "key": {
     "#": {
-      "item": "urban_decor:stainless_steel_ingot"
-    },
-    "@": {
       "item": "urban_decor:stainless_steel_nugget"
     }
   },
   "pattern": [
-    "@",
     "#",
-    "@"
+    "#",
+    "#"
   ],
   "result": {
-    "count": 8,
+    "count": 6,
     "id": "urban_decor:steel_pipe"
   }
 }

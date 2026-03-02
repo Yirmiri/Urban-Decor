@@ -3,6 +3,7 @@ package net.yirmiri.urban_decor.common.block.entity;
 import net.minecraft.core.BlockPos;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
+import net.minecraft.tags.BlockTags;
 import net.minecraft.world.level.GameRules;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;
@@ -20,7 +21,9 @@ public class GrandBlockEntity extends BlockEntity {
     }
 
     public static void tick(Level level, BlockPos pos, BlockState state, GrandBlockEntity blockEntity) {
-        if (!level.isClientSide && level.getGameRules().getBoolean(GameRules.RULE_DAYLIGHT) && level.getBlockState(pos).getValue(GrandClockBlock.HALF) == DoubleBlockHalf.UPPER) {
+        if (!level.isClientSide && level.getGameRules().getBoolean(GameRules.RULE_DAYLIGHT)
+                && level.getBlockState(pos).getValue(GrandClockBlock.HALF) == DoubleBlockHalf.UPPER) {
+
             long time = level.getDayTime();
 
             if (time % 40L == 0) {
@@ -31,20 +34,23 @@ public class GrandBlockEntity extends BlockEntity {
 
             long dayTime = time % 24000L;
 
-            if (blockEntity.lastChimeTime != dayTime) {
-                if (dayTime == 6000L) {
-                    level.playSound(null, pos, UDSounds.GRAND_CLOCK_CHIME_DAY.get(), SoundSource.BLOCKS, 0.5F, 1.0F);
-                    blockEntity.lastChimeTime = dayTime;
-                }
+            if (!level.getBlockState(pos.below().below()).is(BlockTags.DAMPENS_VIBRATIONS)) {
+                if (blockEntity.lastChimeTime != dayTime) {
 
-                if (dayTime == 18000L) {
-                    level.playSound(null, pos, UDSounds.GRAND_CLOCK_CHIME_NIGHT.get(), SoundSource.BLOCKS, 0.5F, 1.0F);
-                    blockEntity.lastChimeTime = dayTime;
-                }
+                    if (dayTime == 6000L) {
+                        level.playSound(null, pos, UDSounds.GRAND_CLOCK_CHIME_DAY.get(), SoundSource.BLOCKS, 2.0F, 1.0F);
+                        blockEntity.lastChimeTime = dayTime;
+                    }
 
-                if (dayTime == 21000L && level.random.nextInt(66) == 0) {
-                    level.playSound(null, pos, UDSounds.GRAND_CLOCK_CHIME_3AM.get(), SoundSource.BLOCKS, 0.5F, 1.0F);
-                    blockEntity.lastChimeTime = dayTime;
+                    if (dayTime == 18000L) {
+                        level.playSound(null, pos, UDSounds.GRAND_CLOCK_CHIME_NIGHT.get(), SoundSource.BLOCKS, 2.0F, 1.0F);
+                        blockEntity.lastChimeTime = dayTime;
+                    }
+
+                    if (dayTime == 21000L && level.random.nextInt(66) == 0) {
+                        level.playSound(null, pos, UDSounds.GRAND_CLOCK_CHIME_3AM.get(), SoundSource.BLOCKS, 2.0F, 1.0F);
+                        blockEntity.lastChimeTime = dayTime;
+                    }
                 }
             }
         }

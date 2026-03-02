@@ -33,11 +33,11 @@ public class UDRecipeProvider extends FabricRecipeProvider {
     @Override
     public void buildRecipes(RecipeOutput exporter) {
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, UDItems.PORCELAIN.get(), 8)
-                .requires(Items.CLAY_BALL).requires(Items.CLAY_BALL).requires(Items.CLAY_BALL).requires(Items.FLINT)
+                .requires(Items.CLAY_BALL).requires(Items.SAND).requires(Items.SAND).requires(Items.CLAY_BALL)
                 .unlockedBy(getHasName(Items.CLAY_BALL), has(Items.CLAY_BALL))
                 .save(exporter, RunicLib.customid(UrbanDecor.MOD_ID, getSimpleRecipeName(UDItems.PORCELAIN.get())));
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, UDItems.STAINLESS_STEEL_INGOT.get(), 2)
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, UDItems.STAINLESS_STEEL_INGOT.get(), 4)
                 .requires(Items.COAL).requires(Items.IRON_INGOT).requires(UDBlocks.CHROMITE.get()).requires(UDBlocks.CHROMITE.get())
                 .unlockedBy(getHasName(UDBlocks.CHROMITE.get()), has(UDBlocks.CHROMITE.get()))
                 .save(exporter, RunicLib.customid(UrbanDecor.MOD_ID, getSimpleRecipeName(UDItems.STAINLESS_STEEL_INGOT.get()) + "_from_chromite"));
@@ -79,14 +79,6 @@ public class UDRecipeProvider extends FabricRecipeProvider {
         stonecutterResultFromBase(exporter, RecipeCategory.BUILDING_BLOCKS, UDBlocks.POLISHED_CHROMITE_STAIRS.get(), UDBlocks.POLISHED_CHROMITE.get(), 1);
         stonecutterResultFromBase(exporter, RecipeCategory.BUILDING_BLOCKS, UDBlocks.POLISHED_CHROMITE_SLAB.get(), UDBlocks.POLISHED_CHROMITE.get(), 2);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, UDBlocks.CHECKERED_PORCELAIN_TILES.get(), 1)
-                .define('#', UDItems.PORCELAIN.get()).define('@', UDItems.DARK_PORCELAIN.get())
-                .pattern("@#")
-                .pattern("#@")
-                .unlockedBy(getHasName(UDItems.PORCELAIN.get()), has(UDItems.PORCELAIN.get()))
-                .unlockedBy(getHasName(UDItems.DARK_PORCELAIN.get()), has(UDItems.DARK_PORCELAIN.get()))
-                .save(exporter, RunicLib.customid(UrbanDecor.MOD_ID, getSimpleRecipeName(UDBlocks.CHECKERED_PORCELAIN_TILES.get())));
-
         ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, UDBlocks.CHECKERED_PORCELAIN_TILES.get(), 4)
                 .define('#', UDBlocks.PORCELAIN_TILES.get()).define('@', UDBlocks.DARK_PORCELAIN_TILES.get())
                 .pattern("@#")
@@ -110,24 +102,23 @@ public class UDRecipeProvider extends FabricRecipeProvider {
 
         nineBlockStorageRecipes(exporter, RecipeCategory.MISC, UDItems.STAINLESS_STEEL_INGOT.get(), RecipeCategory.BUILDING_BLOCKS, UDBlocks.STAINLESS_STEEL_BLOCK.get());
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, UDItems.STEEL_PIPE.get(), 8)
-                .define('#', UDItems.STAINLESS_STEEL_INGOT.get()).define('@', UDItems.STAINLESS_STEEL_NUGGET.get())
-                .pattern("@")
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, UDItems.STEEL_PIPE.get(), 6)
+                .define('#', UDItems.STAINLESS_STEEL_NUGGET.get())
                 .pattern("#")
-                .pattern("@")
-                .unlockedBy(getHasName(UDItems.STAINLESS_STEEL_INGOT.get()), has(UDItems.STAINLESS_STEEL_INGOT.get()))
+                .pattern("#")
+                .pattern("#")
+                .unlockedBy(getHasName(UDItems.STAINLESS_STEEL_NUGGET.get()), has(UDItems.STAINLESS_STEEL_NUGGET.get()))
                 .save(exporter, RunicLib.customid(UrbanDecor.MOD_ID, getSimpleRecipeName(UDItems.STEEL_PIPE.get())));
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, UDItems.DARK_PORCELAIN.get(), 8)
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, UDItems.DARK_PORCELAIN.get(), 4)
                 .define('#', UDItems.PORCELAIN.get()).define('@', UDBlocks.CHROMITE.get())
-                .pattern("###")
-                .pattern("#@#")
-                .pattern("###")
+                .pattern("#@")
+                .pattern("@#")
                 .unlockedBy(getHasName(UDItems.PORCELAIN.get()), has(UDItems.PORCELAIN.get()))
                 .unlockedBy(getHasName(UDBlocks.CHROMITE.get()), has(UDBlocks.CHROMITE.get()))
                 .save(exporter, RunicLib.customid(UrbanDecor.MOD_ID, getSimpleRecipeName(UDItems.DARK_PORCELAIN.get())));
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, UDItems.PORCELAIN.get(), 8)
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, UDItems.PORCELAIN.get(), 12)
                 .requires(Items.CLAY_BALL).requires(Items.QUARTZ).requires(Items.CLAY_BALL).requires(Items.QUARTZ)
                 .unlockedBy(getHasName(Items.QUARTZ), has(Items.QUARTZ))
                 .save(exporter, RunicLib.customid(UrbanDecor.MOD_ID, getSimpleRecipeName(UDItems.PORCELAIN.get()) + "_from_quartz"));
@@ -197,9 +188,10 @@ public class UDRecipeProvider extends FabricRecipeProvider {
                 .save(exporter, RunicLib.customid(UrbanDecor.MOD_ID, getSimpleRecipeName(UDBlocks.DARK_WASHING_MACHINE.get())));
 
         ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, UDBlocks.DRYER.get(), 1)
-                .define('#', UDItems.PORCELAIN.get()).define('@', UDItems.STEEL_PIPE.get()).define('%', UDItems.STAINLESS_STEEL_INGOT.get())
+                .define('#', UDItems.PORCELAIN.get()).define('@', UDItems.STEEL_PIPE.get())
+                .define('%', UDItems.STAINLESS_STEEL_INGOT.get()).define('R', Items.GLASS)
                 .pattern("###")
-                .pattern("% #")
+                .pattern("%R#")
                 .pattern("#@#")
                 .unlockedBy(getHasName(UDItems.PORCELAIN.get()), has(UDItems.PORCELAIN.get()))
                 .unlockedBy(getHasName(UDItems.STAINLESS_STEEL_INGOT.get()), has(UDItems.STAINLESS_STEEL_INGOT.get()))
@@ -207,9 +199,10 @@ public class UDRecipeProvider extends FabricRecipeProvider {
                 .save(exporter, RunicLib.customid(UrbanDecor.MOD_ID, getSimpleRecipeName(UDBlocks.DRYER.get())));
 
         ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, UDBlocks.DARK_DRYER.get(), 1)
-                .define('#', UDItems.DARK_PORCELAIN.get()).define('@', UDItems.STEEL_PIPE.get()).define('%', UDItems.STAINLESS_STEEL_INGOT.get())
+                .define('#', UDItems.DARK_PORCELAIN.get()).define('@', UDItems.STEEL_PIPE.get())
+                .define('%', UDItems.STAINLESS_STEEL_INGOT.get()).define('R', Items.GLASS)
                 .pattern("###")
-                .pattern("% #")
+                .pattern("%R#")
                 .pattern("#@#")
                 .unlockedBy(getHasName(UDItems.DARK_PORCELAIN.get()), has(UDItems.DARK_PORCELAIN.get()))
                 .unlockedBy(getHasName(UDItems.STAINLESS_STEEL_INGOT.get()), has(UDItems.STAINLESS_STEEL_INGOT.get()))
@@ -217,25 +210,25 @@ public class UDRecipeProvider extends FabricRecipeProvider {
                 .save(exporter, RunicLib.customid(UrbanDecor.MOD_ID, getSimpleRecipeName(UDBlocks.DARK_DRYER.get())));
 
         ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, UDBlocks.OVEN.get(), 1)
-                .define('#', UDItems.PORCELAIN.get()).define('@', UDItems.STAINLESS_STEEL_INGOT.get()).define('%', Items.REDSTONE).define('&', Items.SMOKER)
+                .define('#', UDItems.PORCELAIN.get()).define('@', UDItems.STAINLESS_STEEL_INGOT.get()).define('%', ItemTags.COALS)
                 .pattern("@@@")
-                .pattern("#&#")
+                .pattern("# #")
                 .pattern("#%#")
                 .unlockedBy(getHasName(UDItems.PORCELAIN.get()), has(UDItems.PORCELAIN.get()))
                 .unlockedBy(getHasName(UDItems.STAINLESS_STEEL_INGOT.get()), has(UDItems.STAINLESS_STEEL_INGOT.get()))
                 .save(exporter, RunicLib.customid(UrbanDecor.MOD_ID, getSimpleRecipeName(UDBlocks.OVEN.get())));
 
         ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, UDBlocks.DARK_OVEN.get(), 1)
-                .define('#', UDItems.DARK_PORCELAIN.get()).define('@', UDItems.STAINLESS_STEEL_INGOT.get()).define('%', Items.REDSTONE).define('&', Items.SMOKER)
+                .define('#', UDItems.DARK_PORCELAIN.get()).define('@', UDItems.STAINLESS_STEEL_INGOT.get()).define('%', ItemTags.COALS)
                 .pattern("@@@")
-                .pattern("#&#")
+                .pattern("# #")
                 .pattern("#%#")
                 .unlockedBy(getHasName(UDItems.DARK_PORCELAIN.get()), has(UDItems.DARK_PORCELAIN.get()))
                 .unlockedBy(getHasName(UDItems.STAINLESS_STEEL_INGOT.get()), has(UDItems.STAINLESS_STEEL_INGOT.get()))
                 .save(exporter, RunicLib.customid(UrbanDecor.MOD_ID, getSimpleRecipeName(UDBlocks.DARK_OVEN.get())));
 
         ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, UDBlocks.FRIDGE.get(), 1)
-                .define('#', UDItems.PORCELAIN.get()).define('@', UDItems.STAINLESS_STEEL_INGOT.get()).define('%', Items.PACKED_ICE)
+                .define('#', UDItems.PORCELAIN.get()).define('@', UDItems.STAINLESS_STEEL_INGOT.get()).define('%', UDBlocks.STEEL_PIPE.get())
                 .pattern("@@@")
                 .pattern("# #")
                 .pattern("#%#")
@@ -244,7 +237,7 @@ public class UDRecipeProvider extends FabricRecipeProvider {
                 .save(exporter, RunicLib.customid(UrbanDecor.MOD_ID, getSimpleRecipeName(UDBlocks.FRIDGE.get())));
 
         ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, UDBlocks.DARK_FRIDGE.get(), 1)
-                .define('#', UDItems.DARK_PORCELAIN.get()).define('@', UDItems.STAINLESS_STEEL_INGOT.get()).define('%', Items.PACKED_ICE)
+                .define('#', UDItems.DARK_PORCELAIN.get()).define('@', UDItems.STAINLESS_STEEL_INGOT.get()).define('%', UDBlocks.STEEL_PIPE.get())
                 .pattern("@@@")
                 .pattern("# #")
                 .pattern("#%#")
@@ -253,7 +246,7 @@ public class UDRecipeProvider extends FabricRecipeProvider {
                 .save(exporter, RunicLib.customid(UrbanDecor.MOD_ID, getSimpleRecipeName(UDBlocks.DARK_FRIDGE.get())));
 
         ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, UDBlocks.FREEZER.get(), 1)
-                .define('#', UDItems.PORCELAIN.get()).define('@', UDItems.STAINLESS_STEEL_INGOT.get()).define('%', Items.PACKED_ICE)
+                .define('#', UDItems.PORCELAIN.get()).define('@', UDItems.STAINLESS_STEEL_INGOT.get()).define('%', UDBlocks.STEEL_PIPE.get())
                 .pattern("##@")
                 .pattern("%%@")
                 .pattern("##@")
@@ -262,7 +255,7 @@ public class UDRecipeProvider extends FabricRecipeProvider {
                 .save(exporter, RunicLib.customid(UrbanDecor.MOD_ID, getSimpleRecipeName(UDBlocks.FREEZER.get())));
 
         ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, UDBlocks.DARK_FREEZER.get(), 1)
-                .define('#', UDItems.DARK_PORCELAIN.get()).define('@', UDItems.STAINLESS_STEEL_INGOT.get()).define('%', Items.PACKED_ICE)
+                .define('#', UDItems.DARK_PORCELAIN.get()).define('@', UDItems.STAINLESS_STEEL_INGOT.get()).define('%', UDBlocks.STEEL_PIPE.get())
                 .pattern("##@")
                 .pattern("%%@")
                 .pattern("##@")
@@ -271,35 +264,33 @@ public class UDRecipeProvider extends FabricRecipeProvider {
                 .save(exporter, RunicLib.customid(UrbanDecor.MOD_ID, getSimpleRecipeName(UDBlocks.DARK_FREEZER.get())));
 
         ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, UDItems.TOOLBOX.get(), 1)
-                .define('@', UDItems.STAINLESS_STEEL_INGOT.get())
-                .pattern("@@@")
-                .pattern("@ @")
-                .pattern("@@@")
+                .define('@', UDItems.STAINLESS_STEEL_INGOT.get()).define('!', UDItems.STAINLESS_STEEL_NUGGET.get())
+                .pattern("@!@")
                 .unlockedBy(getHasName(UDItems.STAINLESS_STEEL_INGOT.get()), has(UDItems.STAINLESS_STEEL_INGOT.get()))
                 .save(exporter, RunicLib.customid(UrbanDecor.MOD_ID, getSimpleRecipeName(UDItems.TOOLBOX.get())));
 
         ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, UDBlocks.STOVE.get(), 1)
-                .define('@', UDItems.STAINLESS_STEEL_INGOT.get()).define('#', Items.MAGMA_BLOCK)
-                .pattern("@#@")
+                .define('@', UDItems.STAINLESS_STEEL_INGOT.get())
+                .pattern("@@@")
                 .unlockedBy(getHasName(UDItems.STAINLESS_STEEL_INGOT.get()), has(UDItems.STAINLESS_STEEL_INGOT.get()))
                 .save(exporter, RunicLib.customid(UrbanDecor.MOD_ID, getSimpleRecipeName(UDBlocks.STOVE.get())));
 
         ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, UDBlocks.TOASTER.get(), 1)
-                .define('@', UDItems.STAINLESS_STEEL_INGOT.get()).define('#', Items.MAGMA_BLOCK).define('!', Items.REDSTONE).define('%', UDItems.STAINLESS_STEEL_NUGGET.get())
+                .define('@', UDItems.STAINLESS_STEEL_INGOT.get()).define('!', ItemTags.COALS).define('%', UDItems.STAINLESS_STEEL_NUGGET.get())
                 .pattern("%!%")
-                .pattern("@#@")
+                .pattern("%@%")
                 .unlockedBy(getHasName(UDItems.STAINLESS_STEEL_INGOT.get()), has(UDItems.STAINLESS_STEEL_INGOT.get()))
                 .save(exporter, RunicLib.customid(UrbanDecor.MOD_ID, getSimpleRecipeName(UDBlocks.TOASTER.get())));
 
         ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, UDItems.MICROWAVE.get(), 1)
-                .define('@', UDItems.STAINLESS_STEEL_INGOT.get()).define('!', Items.REDSTONE)
-                .pattern("@!@")
+                .define('@', UDItems.STAINLESS_STEEL_INGOT.get()).define('!', UDItems.STAINLESS_STEEL_NUGGET.get())
+                .pattern("@@@")
                 .pattern("! !")
-                .pattern("@!@")
+                .pattern("@@@")
                 .unlockedBy(getHasName(UDItems.STAINLESS_STEEL_INGOT.get()), has(UDItems.STAINLESS_STEEL_INGOT.get()))
                 .save(exporter, RunicLib.customid(UrbanDecor.MOD_ID, getSimpleRecipeName(UDItems.MICROWAVE.get())));
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, UDBlocks.TRASH_CAN.get(), 1)
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, UDBlocks.TRASH_CAN.get(), 2)
                 .define('@', UDItems.STAINLESS_STEEL_INGOT.get()).define('#', UDItems.STAINLESS_STEEL_NUGGET.get())
                 .pattern("# #")
                 .pattern("# #")
@@ -307,7 +298,7 @@ public class UDRecipeProvider extends FabricRecipeProvider {
                 .unlockedBy(getHasName(UDItems.STAINLESS_STEEL_INGOT.get()), has(UDItems.STAINLESS_STEEL_INGOT.get()))
                 .save(exporter, RunicLib.customid(UrbanDecor.MOD_ID, getSimpleRecipeName(UDBlocks.TRASH_CAN.get())));
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, UDBlocks.DESK_FAN.get(), 1)
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, UDBlocks.DESK_FAN.get(), 3)
                 .define('@', UDItems.STAINLESS_STEEL_INGOT.get()).define('!', Items.REDSTONE).define('#', UDItems.STAINLESS_STEEL_NUGGET.get())
                 .pattern("#!#")
                 .pattern(" # ")
@@ -315,7 +306,7 @@ public class UDRecipeProvider extends FabricRecipeProvider {
                 .unlockedBy(getHasName(UDItems.STAINLESS_STEEL_INGOT.get()), has(UDItems.STAINLESS_STEEL_INGOT.get()))
                 .save(exporter, RunicLib.customid(UrbanDecor.MOD_ID, getSimpleRecipeName(UDBlocks.DESK_FAN.get())));
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, UDBlocks.TURBINE.get(), 1)
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, UDBlocks.TURBINE.get(), 4)
                 .define('@', UDItems.STAINLESS_STEEL_INGOT.get()).define('!', Items.REDSTONE).define('#', UDItems.STAINLESS_STEEL_NUGGET.get())
                 .pattern("#@#")
                 .pattern(" # ")
@@ -324,19 +315,17 @@ public class UDRecipeProvider extends FabricRecipeProvider {
                 .save(exporter, RunicLib.customid(UrbanDecor.MOD_ID, getSimpleRecipeName(UDBlocks.TURBINE.get())));
 
         ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, UDBlocks.AIR_CONDITIONER.get(), 1)
-                .define('@', UDItems.STAINLESS_STEEL_INGOT.get()).define('#', UDItems.STEEL_PIPE.get()).define('^', Items.BREEZE_ROD)
-                .pattern("@ @")
+                .define('@', UDItems.STAINLESS_STEEL_INGOT.get()).define('#', UDItems.STEEL_PIPE.get()).define('^', Items.REDSTONE)
                 .pattern("###")
                 .pattern("@^@")
                 .unlockedBy(getHasName(UDItems.STAINLESS_STEEL_INGOT.get()), has(UDItems.STAINLESS_STEEL_INGOT.get()))
                 .unlockedBy(getHasName(UDItems.STEEL_PIPE.get()), has(UDItems.STEEL_PIPE.get()))
                 .save(exporter, RunicLib.customid(UrbanDecor.MOD_ID, getSimpleRecipeName(UDBlocks.AIR_CONDITIONER.get())));
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, UDBlocks.RADIATOR.get(), 8)
-                .define('@', UDItems.STAINLESS_STEEL_INGOT.get()).define('#', UDItems.STEEL_PIPE.get()).define('^', Items.BLAZE_ROD)
-                .pattern(" # ")
-                .pattern("###")
-                .pattern("@^@")
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, UDBlocks.RADIATOR.get(), 4)
+                .define('#', UDItems.STEEL_PIPE.get()).define('@', Items.REDSTONE)
+                .pattern("#@#")
+                .pattern("#@#")
                 .unlockedBy(getHasName(UDItems.STAINLESS_STEEL_INGOT.get()), has(UDItems.STAINLESS_STEEL_INGOT.get()))
                 .unlockedBy(getHasName(UDItems.STEEL_PIPE.get()), has(UDItems.STEEL_PIPE.get()))
                 .save(exporter, RunicLib.customid(UrbanDecor.MOD_ID, getSimpleRecipeName(UDBlocks.RADIATOR.get())));
@@ -348,103 +337,103 @@ public class UDRecipeProvider extends FabricRecipeProvider {
                 .unlockedBy(getHasName(UDItems.STEEL_PIPE.get()), has(UDItems.STEEL_PIPE.get()))
                 .save(exporter, RunicLib.customid(UrbanDecor.MOD_ID, getSimpleRecipeName(UDBlocks.SHOWER.get())));
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, UDBlocks.TOWEL_BAR.get(), 1)
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, UDBlocks.TOWEL_BAR.get(), 3)
                 .define('@', UDItems.STAINLESS_STEEL_NUGGET.get()).define('#', UDItems.STEEL_PIPE.get())
                 .pattern("@#@")
                 .unlockedBy(getHasName(UDItems.STAINLESS_STEEL_INGOT.get()), has(UDItems.STAINLESS_STEEL_INGOT.get()))
                 .save(exporter, RunicLib.customid(UrbanDecor.MOD_ID, getSimpleRecipeName(UDBlocks.TOWEL_BAR.get())));
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, UDBlocks.getDyedTowels(DyeColor.WHITE.getId()).get(), 2)
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, UDBlocks.getDyedTowels(DyeColor.WHITE.getId()).get(), 4)
                 .define('@', Blocks.WHITE_CARPET)
                 .pattern("@@")
                 .unlockedBy(getHasName(Blocks.WHITE_CARPET), has(Blocks.WHITE_CARPET))
                 .save(exporter, RunicLib.customid(UrbanDecor.MOD_ID, getSimpleRecipeName(UDBlocks.getDyedTowels(DyeColor.WHITE.getId()).get())));
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, UDBlocks.getDyedTowels(DyeColor.LIGHT_GRAY.getId()).get(), 2)
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, UDBlocks.getDyedTowels(DyeColor.LIGHT_GRAY.getId()).get(), 4)
                 .define('@', Blocks.LIGHT_GRAY_CARPET)
                 .pattern("@@")
                 .unlockedBy(getHasName(Blocks.LIGHT_GRAY_CARPET), has(Blocks.LIGHT_GRAY_CARPET))
                 .save(exporter, RunicLib.customid(UrbanDecor.MOD_ID, getSimpleRecipeName(UDBlocks.getDyedTowels(DyeColor.LIGHT_GRAY.getId()).get())));
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, UDBlocks.getDyedTowels(DyeColor.GRAY.getId()).get(), 2)
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, UDBlocks.getDyedTowels(DyeColor.GRAY.getId()).get(), 4)
                 .define('@', Blocks.GRAY_CARPET)
                 .pattern("@@")
                 .unlockedBy(getHasName(Blocks.GRAY_CARPET), has(Blocks.GRAY_CARPET))
                 .save(exporter, RunicLib.customid(UrbanDecor.MOD_ID, getSimpleRecipeName(UDBlocks.getDyedTowels(DyeColor.GRAY.getId()).get())));
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, UDBlocks.getDyedTowels(DyeColor.BLACK.getId()).get(), 2)
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, UDBlocks.getDyedTowels(DyeColor.BLACK.getId()).get(), 4)
                 .define('@', Blocks.BLACK_CARPET)
                 .pattern("@@")
                 .unlockedBy(getHasName(Blocks.BLACK_CARPET), has(Blocks.BLACK_CARPET))
                 .save(exporter, RunicLib.customid(UrbanDecor.MOD_ID, getSimpleRecipeName(UDBlocks.getDyedTowels(DyeColor.BLACK.getId()).get())));
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, UDBlocks.getDyedTowels(DyeColor.RED.getId()).get(), 2)
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, UDBlocks.getDyedTowels(DyeColor.RED.getId()).get(), 4)
                 .define('@', Blocks.RED_CARPET)
                 .pattern("@@")
                 .unlockedBy(getHasName(Blocks.RED_CARPET), has(Blocks.RED_CARPET))
                 .save(exporter, RunicLib.customid(UrbanDecor.MOD_ID, getSimpleRecipeName(UDBlocks.getDyedTowels(DyeColor.RED.getId()).get())));
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, UDBlocks.getDyedTowels(DyeColor.ORANGE.getId()).get(), 2)
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, UDBlocks.getDyedTowels(DyeColor.ORANGE.getId()).get(), 4)
                 .define('@', Blocks.ORANGE_CARPET)
                 .pattern("@@")
                 .unlockedBy(getHasName(Blocks.ORANGE_CARPET), has(Blocks.ORANGE_CARPET))
                 .save(exporter, RunicLib.customid(UrbanDecor.MOD_ID, getSimpleRecipeName(UDBlocks.getDyedTowels(DyeColor.ORANGE.getId()).get())));
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, UDBlocks.getDyedTowels(DyeColor.YELLOW.getId()).get(), 2)
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, UDBlocks.getDyedTowels(DyeColor.YELLOW.getId()).get(), 4)
                 .define('@', Blocks.YELLOW_CARPET)
                 .pattern("@@")
                 .unlockedBy(getHasName(Blocks.YELLOW_CARPET), has(Blocks.YELLOW_CARPET))
                 .save(exporter, RunicLib.customid(UrbanDecor.MOD_ID, getSimpleRecipeName(UDBlocks.getDyedTowels(DyeColor.YELLOW.getId()).get())));
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, UDBlocks.getDyedTowels(DyeColor.LIME.getId()).get(), 2)
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, UDBlocks.getDyedTowels(DyeColor.LIME.getId()).get(), 4)
                 .define('@', Blocks.LIME_CARPET)
                 .pattern("@@")
                 .unlockedBy(getHasName(Blocks.LIME_CARPET), has(Blocks.LIME_CARPET))
                 .save(exporter, RunicLib.customid(UrbanDecor.MOD_ID, getSimpleRecipeName(UDBlocks.getDyedTowels(DyeColor.LIME.getId()).get())));
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, UDBlocks.getDyedTowels(DyeColor.GREEN.getId()).get(), 2)
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, UDBlocks.getDyedTowels(DyeColor.GREEN.getId()).get(), 4)
                 .define('@', Blocks.GREEN_CARPET)
                 .pattern("@@")
                 .unlockedBy(getHasName(Blocks.GREEN_CARPET), has(Blocks.GREEN_CARPET))
                 .save(exporter, RunicLib.customid(UrbanDecor.MOD_ID, getSimpleRecipeName(UDBlocks.getDyedTowels(DyeColor.GREEN.getId()).get())));
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, UDBlocks.getDyedTowels(DyeColor.CYAN.getId()).get(), 2)
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, UDBlocks.getDyedTowels(DyeColor.CYAN.getId()).get(), 4)
                 .define('@', Blocks.CYAN_CARPET)
                 .pattern("@@")
                 .unlockedBy(getHasName(Blocks.CYAN_CARPET), has(Blocks.CYAN_CARPET))
                 .save(exporter, RunicLib.customid(UrbanDecor.MOD_ID, getSimpleRecipeName(UDBlocks.getDyedTowels(DyeColor.CYAN.getId()).get())));
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, UDBlocks.getDyedTowels(DyeColor.LIGHT_BLUE.getId()).get(), 2)
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, UDBlocks.getDyedTowels(DyeColor.LIGHT_BLUE.getId()).get(), 4)
                 .define('@', Blocks.LIGHT_BLUE_CARPET)
                 .pattern("@@")
                 .unlockedBy(getHasName(Blocks.LIGHT_BLUE_CARPET), has(Blocks.LIGHT_BLUE_CARPET))
                 .save(exporter, RunicLib.customid(UrbanDecor.MOD_ID, getSimpleRecipeName(UDBlocks.getDyedTowels(DyeColor.LIGHT_BLUE.getId()).get())));
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, UDBlocks.getDyedTowels(DyeColor.BLUE.getId()).get(), 2)
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, UDBlocks.getDyedTowels(DyeColor.BLUE.getId()).get(), 4)
                 .define('@', Blocks.BLUE_CARPET)
                 .pattern("@@")
                 .unlockedBy(getHasName(Blocks.BLUE_CARPET), has(Blocks.BLUE_CARPET))
                 .save(exporter, RunicLib.customid(UrbanDecor.MOD_ID, getSimpleRecipeName(UDBlocks.getDyedTowels(DyeColor.BLUE.getId()).get())));
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, UDBlocks.getDyedTowels(DyeColor.PURPLE.getId()).get(), 2)
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, UDBlocks.getDyedTowels(DyeColor.PURPLE.getId()).get(), 4)
                 .define('@', Blocks.PURPLE_CARPET)
                 .pattern("@@")
                 .unlockedBy(getHasName(Blocks.PURPLE_CARPET), has(Blocks.PURPLE_CARPET))
                 .save(exporter, RunicLib.customid(UrbanDecor.MOD_ID, getSimpleRecipeName(UDBlocks.getDyedTowels(DyeColor.PURPLE.getId()).get())));
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, UDBlocks.getDyedTowels(DyeColor.MAGENTA.getId()).get(), 2)
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, UDBlocks.getDyedTowels(DyeColor.MAGENTA.getId()).get(), 4)
                 .define('@', Blocks.MAGENTA_CARPET)
                 .pattern("@@")
                 .unlockedBy(getHasName(Blocks.MAGENTA_CARPET), has(Blocks.MAGENTA_CARPET))
                 .save(exporter, RunicLib.customid(UrbanDecor.MOD_ID, getSimpleRecipeName(UDBlocks.getDyedTowels(DyeColor.MAGENTA.getId()).get())));
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, UDBlocks.getDyedTowels(DyeColor.PINK.getId()).get(), 2)
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, UDBlocks.getDyedTowels(DyeColor.PINK.getId()).get(), 4)
                 .define('@', Blocks.PINK_CARPET)
                 .pattern("@@")
                 .unlockedBy(getHasName(Blocks.PINK_CARPET), has(Blocks.PINK_CARPET))
                 .save(exporter, RunicLib.customid(UrbanDecor.MOD_ID, getSimpleRecipeName(UDBlocks.getDyedTowels(DyeColor.PINK.getId()).get())));
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, UDBlocks.getDyedTowels(DyeColor.BROWN.getId()).get(), 2)
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, UDBlocks.getDyedTowels(DyeColor.BROWN.getId()).get(), 4)
                 .define('@', Blocks.BROWN_CARPET)
                 .pattern("@@")
                 .unlockedBy(getHasName(Blocks.BROWN_CARPET), has(Blocks.BROWN_CARPET))
@@ -562,9 +551,8 @@ public class UDRecipeProvider extends FabricRecipeProvider {
                 .unlockedBy(getHasName(UDBlocks.getDyedTowels(DyeColor.BROWN.getId()).get()), has(UDBlocks.getDyedTowels(DyeColor.BROWN.getId()).get()))
                 .save(exporter, RunicLib.customid(UrbanDecor.MOD_ID, getSimpleRecipeName(UDBlocks.getDyedTowelBlocks(DyeColor.BROWN.getId()).get())));
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, UDBlocks.RIGID_GLASS.get(), 3)
-                .define('#', UDItems.STAINLESS_STEEL_NUGGET.get()).define('@', Items.GLASS_PANE)
-                .pattern("#@#")
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, UDBlocks.RIGID_GLASS.get(), 8)
+                .define('#', UDItems.STAINLESS_STEEL_NUGGET.get()).define('@', Items.GLASS)
                 .pattern("#@#")
                 .pattern("#@#")
                 .unlockedBy(getHasName(UDItems.STAINLESS_STEEL_NUGGET.get()), has(UDItems.STAINLESS_STEEL_NUGGET.get()))
@@ -584,32 +572,32 @@ public class UDRecipeProvider extends FabricRecipeProvider {
                 .unlockedBy(getHasName(UDItems.PICTURE_FRAME.get()), has(UDItems.PICTURE_FRAME.get()))
                 .save(exporter, RunicLib.customid(UrbanDecor.MOD_ID, getSimpleRecipeName(UDItems.PICTURE_FRAME.get())));
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, UDBlocks.CUPBOARD.get(), 1)
-                .define('#', UDItems.PORCELAIN.get()).define('@', Blocks.CHEST)
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, UDBlocks.CUPBOARD.get(), 6)
+                .define('#', UDItems.PORCELAIN.get())
                 .pattern("###")
-                .pattern("#@#")
+                .pattern("# #")
                 .pattern("###")
                 .unlockedBy(getHasName(UDItems.PORCELAIN.get()), has(UDItems.PORCELAIN.get()))
                 .save(exporter, RunicLib.customid(UrbanDecor.MOD_ID, getSimpleRecipeName(UDBlocks.CUPBOARD.get())));
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, UDBlocks.DARK_CUPBOARD.get(), 1)
-                .define('#', UDItems.DARK_PORCELAIN.get()).define('@', Blocks.CHEST)
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, UDBlocks.DARK_CUPBOARD.get(), 6)
+                .define('#', UDItems.DARK_PORCELAIN.get())
                 .pattern("###")
-                .pattern("#@#")
+                .pattern("# #")
                 .pattern("###")
                 .unlockedBy(getHasName(UDItems.DARK_PORCELAIN.get()), has(UDItems.DARK_PORCELAIN.get()))
                 .save(exporter, RunicLib.customid(UrbanDecor.MOD_ID, getSimpleRecipeName(UDBlocks.DARK_CUPBOARD.get())));
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, UDBlocks.FILING_CABINET.get(), 1)
-                .define('#', UDItems.STAINLESS_STEEL_INGOT.get()).define('@', Blocks.CHEST)
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, UDBlocks.FILING_CABINET.get(), 4)
+                .define('#', UDItems.STAINLESS_STEEL_INGOT.get())
                 .pattern("###")
-                .pattern("#@#")
+                .pattern("# #")
                 .pattern("###")
                 .unlockedBy(getHasName(UDItems.STAINLESS_STEEL_INGOT.get()), has(UDItems.STAINLESS_STEEL_INGOT.get()))
                 .save(exporter, RunicLib.customid(UrbanDecor.MOD_ID, getSimpleRecipeName(UDBlocks.FILING_CABINET.get())));
 
         ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, UDBlocks.TOILET_PAPER.get(), 1)
-                .define('#', Items.STICK).define('@', Items.PAPER)
+                .define('#', UDItems.STEEL_PIPE.get()).define('@', Items.PAPER)
                 .pattern("@@@")
                 .pattern("@#@")
                 .pattern("@@@")
@@ -625,18 +613,16 @@ public class UDRecipeProvider extends FabricRecipeProvider {
                 .save(exporter, RunicLib.customid(UrbanDecor.MOD_ID, getSimpleRecipeName(UDItems.SATELLITE_DISH.get())));
 
         ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, UDBlocks.BATHTUB.get(), 1)
-                .define('#', UDItems.PORCELAIN.get()).define('@', UDBlocks.PORCELAIN_BLOCK.get())
+                .define('#', UDItems.PORCELAIN.get())
                 .pattern("# #")
-                .pattern("# #")
-                .pattern("@@@")
+                .pattern("###")
                 .unlockedBy(getHasName(UDItems.PORCELAIN.get()), has(UDItems.PORCELAIN.get()))
                 .save(exporter, RunicLib.customid(UrbanDecor.MOD_ID, getSimpleRecipeName(UDBlocks.BATHTUB.get())));
 
         ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, UDBlocks.DARK_BATHTUB.get(), 1)
-                .define('#', UDItems.DARK_PORCELAIN.get()).define('@', UDBlocks.DARK_PORCELAIN_BLOCK.get())
+                .define('#', UDItems.DARK_PORCELAIN.get())
                 .pattern("# #")
-                .pattern("# #")
-                .pattern("@@@")
+                .pattern("###")
                 .unlockedBy(getHasName(UDItems.DARK_PORCELAIN.get()), has(UDItems.DARK_PORCELAIN.get()))
                 .save(exporter, RunicLib.customid(UrbanDecor.MOD_ID, getSimpleRecipeName(UDBlocks.DARK_BATHTUB.get())));
 
@@ -676,7 +662,7 @@ public class UDRecipeProvider extends FabricRecipeProvider {
         stonecutterResultFromBase(exporter, RecipeCategory.BUILDING_BLOCKS, UDBlocks.DARK_PORCELAIN_STAIRS.get(), UDBlocks.DARK_PORCELAIN_BLOCK.get(), 1);
         stonecutterResultFromBase(exporter, RecipeCategory.BUILDING_BLOCKS, UDBlocks.DARK_PORCELAIN_SLAB.get(), UDBlocks.DARK_PORCELAIN_BLOCK.get(), 2);
 
-        createTwoByTwoRecipe(UDBlocks.PORCELAIN_BLOCK.get(), 1,
+        createTwoByTwoRecipe(UDBlocks.PORCELAIN_BLOCK.get(), 4,
                 Ingredient.of(UDItems.PORCELAIN.get()))
                 .unlockedBy(getHasName(UDItems.PORCELAIN.get()), has(UDItems.PORCELAIN.get()))
                 .save(exporter, RunicLib.customid(UrbanDecor.MOD_ID, getSimpleRecipeName(UDBlocks.PORCELAIN_BLOCK.get())));
@@ -695,7 +681,7 @@ public class UDRecipeProvider extends FabricRecipeProvider {
         stonecutterResultFromBase(exporter, RecipeCategory.BUILDING_BLOCKS, UDBlocks.PORCELAIN_TILE_STAIRS.get(), UDBlocks.PORCELAIN_TILES.get(), 1);
         stonecutterResultFromBase(exporter, RecipeCategory.BUILDING_BLOCKS, UDBlocks.PORCELAIN_TILE_SLAB.get(), UDBlocks.PORCELAIN_TILES.get(), 2);
 
-        createTwoByTwoRecipe(UDBlocks.DARK_PORCELAIN_BLOCK.get(), 1,
+        createTwoByTwoRecipe(UDBlocks.DARK_PORCELAIN_BLOCK.get(), 4,
                 Ingredient.of(UDItems.DARK_PORCELAIN.get()))
                 .unlockedBy(getHasName(UDItems.DARK_PORCELAIN.get()), has(UDItems.DARK_PORCELAIN.get()))
                 .save(exporter, RunicLib.customid(UrbanDecor.MOD_ID, getSimpleRecipeName(UDBlocks.DARK_PORCELAIN_BLOCK.get())));
@@ -797,8 +783,8 @@ public class UDRecipeProvider extends FabricRecipeProvider {
                 .unlockedBy(getHasName(UDItems.STAINLESS_STEEL_INGOT.get()), has(UDItems.STAINLESS_STEEL_INGOT.get()))
                 .save(exporter, RunicLib.customid(UrbanDecor.MOD_ID, getSimpleRecipeName(UDBlocks.STAINLESS_STEEL_FENCE.get())));
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, UDBlocks.FLOOR_LAMP.get(), 1)
-                .define('#', UDItems.STAINLESS_STEEL_INGOT.get()).define('@', Items.GLOWSTONE)
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, UDBlocks.FLOOR_LAMP.get(), 3)
+                .define('#', UDItems.STEEL_PIPE.get()).define('@', Items.GLOWSTONE_DUST)
                 .define('!', UDItems.STAINLESS_STEEL_NUGGET.get()).define('%', ItemTags.WOOL)
                 .pattern("%@%")
                 .pattern(" # ")
@@ -909,12 +895,9 @@ public class UDRecipeProvider extends FabricRecipeProvider {
                 .unlockedBy(getHasName(UDItems.STAINLESS_STEEL_NUGGET.get()), has(UDItems.STAINLESS_STEEL_NUGGET.get()))
                 .save(exporter, RunicLib.customid(UrbanDecor.MOD_ID, getSimpleRecipeName(UDBlocks.CHROMITE.get())));
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, UDItems.POLYPROPYLENE.get(), 4)
-                .define('#', Items.COAL).define('@', Items.CLAY_BALL).define('!', UDTags.ItemT.POLYANTHOUS)
-                .pattern("##")
-                .pattern("@!")
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, UDItems.POLYPROPYLENE.get(), 4)
+                .requires(Items.COAL).requires(UDTags.ItemT.POLYANTHOUS).requires(UDTags.ItemT.POLYANTHOUS).requires(UDTags.ItemT.POLYANTHOUS)
                 .unlockedBy(getHasName(Items.COAL), has(Items.COAL))
-                .unlockedBy(getHasName(Items.CLAY_BALL), has(Items.CLAY_BALL))
                 .save(exporter, RunicLib.customid(UrbanDecor.MOD_ID, getSimpleRecipeName(UDItems.POLYPROPYLENE.get())));
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, UDBlocks.POLYPROPYLENE_BLOCK.get(), 1)
@@ -934,7 +917,7 @@ public class UDRecipeProvider extends FabricRecipeProvider {
                 .unlockedBy(getHasName(UDBlocks.getWrappedPolyanthous(WrapColor.AZURE.getId()).get()), has(UDBlocks.getWrappedPolyanthous(WrapColor.AZURE.getId()).get()))
                 .save(exporter, RunicLib.customid(UrbanDecor.MOD_ID, getSimpleRecipeName(Items.BLUE_DYE) + "_polyanthous"));
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, UDBlocks.PLASTIC_CHAIR.get(), 1)
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, UDBlocks.PLASTIC_CHAIR.get(), 4)
                 .define('#', UDItems.POLYPROPYLENE.get())
                 .pattern("  #")
                 .pattern("###")
@@ -1050,10 +1033,10 @@ public class UDRecipeProvider extends FabricRecipeProvider {
                 .save(exporter, RunicLib.customid(UrbanDecor.MOD_ID, getSimpleRecipeName(UDBlocks.WARPED_GRANDFATHER_CLOCK.get())));
 
         ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, UDBlocks.WALL_CLOCK.get(), 1)
-                .define('@', UDItems.POLYPROPYLENE.get()).define('#', Items.CLOCK)
-                .pattern("@@@")
+                .define('@', UDItems.POLYPROPYLENE.get()).define('#', Items.REDSTONE)
+                .pattern(" @ ")
                 .pattern("@#@")
-                .pattern("@@@")
+                .pattern(" @ ")
                 .unlockedBy(getHasName(UDItems.POLYPROPYLENE.get()), has(UDItems.POLYPROPYLENE.get()))
                 .save(exporter, RunicLib.customid(UrbanDecor.MOD_ID, getSimpleRecipeName(UDBlocks.WALL_CLOCK.get())));
 
@@ -1137,15 +1120,15 @@ public class UDRecipeProvider extends FabricRecipeProvider {
                         has(UDBlocks.getWrappedPolyanthous(WrapColor.RUBY.getId()).get().asItem())).group("wrap")
                 .save(exporter, RunicLib.customid(UrbanDecor.MOD_ID, getSimpleRecipeName(UDItems.getWrappedWraps(WrapColor.RUBY.getId()).get())));
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, UDBlocks.PLASTIC_DESK_TABLE.get(), 2)
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, UDBlocks.PLASTIC_DESK_TABLE.get(), 4)
                 .define('#', UDItems.POLYPROPYLENE.get()).define('@', UDItems.STAINLESS_STEEL_INGOT.get())
                 .pattern("###")
                 .pattern(" @ ")
                 .unlockedBy(getHasName(UDItems.POLYPROPYLENE.get()), has(UDItems.POLYPROPYLENE.get()))
-                .unlockedBy(getHasName(UDItems.STAINLESS_STEEL_INGOT.get()), has(UDItems.STAINLESS_STEEL_INGOT.get()))
+                .unlockedBy(getHasName(UDItems.STEEL_PIPE.get()), has(UDItems.STEEL_PIPE.get()))
                 .save(exporter, RunicLib.customid(UrbanDecor.MOD_ID, getSimpleRecipeName(UDBlocks.PLASTIC_DESK_TABLE.get())));
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, UDBlocks.STAINLESS_STEEL_CHAIR.get(), 1)
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, UDBlocks.STAINLESS_STEEL_CHAIR.get(), 4)
                 .define('#', UDItems.STAINLESS_STEEL_NUGGET.get()).define('@', UDItems.STAINLESS_STEEL_INGOT.get())
                 .pattern("  #")
                 .pattern("#@#")
@@ -1153,10 +1136,9 @@ public class UDRecipeProvider extends FabricRecipeProvider {
                 .unlockedBy(getHasName(UDItems.STAINLESS_STEEL_INGOT.get()), has(UDItems.STAINLESS_STEEL_INGOT.get()))
                 .save(exporter, RunicLib.customid(UrbanDecor.MOD_ID, getSimpleRecipeName(UDBlocks.STAINLESS_STEEL_CHAIR.get())));
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, UDBlocks.PLASTIC_LIGHTS.get(), 12)
-                .define('#', UDItems.POLYPROPYLENE.get()).define('@', Items.GLOWSTONE_DUST)
-                .pattern("# #")
-                .pattern("@#@")
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, UDBlocks.PLASTIC_LIGHTS.get(), 8)
+                .define('#', UDItems.POLYPROPYLENE.get()).define('@', Items.GLOWSTONE_DUST).define('!', Items.STRING)
+                .pattern("#!#")
                 .pattern(" @ ")
                 .unlockedBy(getHasName(UDItems.POLYPROPYLENE.get()), has(UDItems.POLYPROPYLENE.get()))
                 .save(exporter, RunicLib.customid(UrbanDecor.MOD_ID, getSimpleRecipeName(UDBlocks.PLASTIC_LIGHTS.get())));
@@ -1166,6 +1148,30 @@ public class UDRecipeProvider extends FabricRecipeProvider {
                     .unlockedBy(getHasName(UDBlocks.getDyedPlasticLights(colors.getId()).get()), has(UDBlocks.getDyedPlasticLights(colors.getId()).get()))
                     .save(exporter, RunicLib.customid(UrbanDecor.MOD_ID, getSimpleRecipeName(UDBlocks.getDyedPlasticLights(colors.getId()).get())));
         }
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, UDBlocks.CASH_REGISTER.get(), 2)
+                .define('#', UDItems.PORCELAIN.get()).define('@', UDItems.STAINLESS_STEEL_INGOT.get()).define('!', Items.REDSTONE)
+                .pattern("###")
+                .pattern("@!@")
+                .unlockedBy(getHasName(UDItems.STAINLESS_STEEL_INGOT.get()), has(UDItems.STAINLESS_STEEL_INGOT.get()))
+                .unlockedBy(getHasName(UDItems.PORCELAIN.get()), has(UDItems.PORCELAIN.get()))
+                .save(exporter, RunicLib.customid(UrbanDecor.MOD_ID, getSimpleRecipeName(UDBlocks.CASH_REGISTER.get())));
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, UDBlocks.DARK_CASH_REGISTER.get(), 2)
+                .define('#', UDItems.DARK_PORCELAIN.get()).define('@', UDItems.STAINLESS_STEEL_INGOT.get()).define('!', Items.REDSTONE)
+                .pattern("###")
+                .pattern("@!@")
+                .unlockedBy(getHasName(UDItems.STAINLESS_STEEL_INGOT.get()), has(UDItems.STAINLESS_STEEL_INGOT.get()))
+                .unlockedBy(getHasName(UDItems.DARK_PORCELAIN.get()), has(UDItems.DARK_PORCELAIN.get()))
+                .save(exporter, RunicLib.customid(UrbanDecor.MOD_ID, getSimpleRecipeName(UDBlocks.DARK_CASH_REGISTER.get())));
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, UDBlocks.VENDING_MACHINE.get(), 1)
+                .define('!', UDBlocks.RIGID_GLASS.get()).define('@', UDItems.STAINLESS_STEEL_INGOT.get()).define('#', Items.REDSTONE)
+                .pattern("@!@")
+                .pattern("@!@")
+                .pattern("@#@")
+                .unlockedBy(getHasName(UDItems.STAINLESS_STEEL_INGOT.get()), has(UDItems.STAINLESS_STEEL_INGOT.get()))
+                .save(exporter, RunicLib.customid(UrbanDecor.MOD_ID, getSimpleRecipeName(UDBlocks.VENDING_MACHINE.get())));
     }
 
     public static ShapelessRecipeBuilder createFromBasePictureFrameRecipe(ItemLike output, Item picture, DyeColor color) {
@@ -1188,7 +1194,7 @@ public class UDRecipeProvider extends FabricRecipeProvider {
     }
 
     public static ShapedRecipeBuilder createWrap(ItemLike output, Ingredient polyanthous) {
-        return ShapedRecipeBuilder.shaped(RecipeCategory.MISC, output, 3)
+        return ShapedRecipeBuilder.shaped(RecipeCategory.MISC, output, 6)
                 .define('#', polyanthous).define('@', UDItems.POLYPROPYLENE.get())
                 .pattern("@#@");
     }
@@ -1202,7 +1208,7 @@ public class UDRecipeProvider extends FabricRecipeProvider {
     }
 
     public static ShapedRecipeBuilder createBoxRecipe(ItemLike output, Ingredient planks) {
-        return ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, output, 1)
+        return ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, output, 8)
                 .define('#', planks).define('@', Items.PAPER)
                 .pattern("###")
                 .pattern("#@#")
@@ -1218,26 +1224,26 @@ public class UDRecipeProvider extends FabricRecipeProvider {
 
     public static ShapedRecipeBuilder createGrandClockRecipe(ItemLike output, Ingredient planks, Ingredient ingot) {
         return ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, output, 1)
-                .define('#', planks).define('@', ingot).define('!', Items.CLOCK)
+                .define('#', planks).define('@', ingot).define('!', Items.REDSTONE)
                 .pattern("#!#")
                 .pattern("#@#")
                 .pattern("#@#");
     }
 
     public static ShapedRecipeBuilder createPictureFrameRecipe(ItemLike output, DyeColor color) {
-        return ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, output, 1)
-                .define('#', Items.STICK).define('@', DyeItem.byColor(color))
-                .pattern("###")
+        return ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, output, 4)
+                .define('#', UDItems.POLYPROPYLENE.get()).define('@', DyeItem.byColor(color))
+                .pattern(" # ")
                 .pattern("#@#")
-                .pattern("###");
+                .pattern(" # ");
     }
 
     public static ShapedRecipeBuilder createBasePictureFrameRecipe(ItemLike output, Item item) {
-        return ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, output, 1)
-                .define('#', Items.STICK).define('@', item)
-                .pattern("###")
+        return ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, output, 4)
+                .define('#', UDItems.POLYPROPYLENE.get()).define('@', item)
+                .pattern(" # ")
                 .pattern("#@#")
-                .pattern("###");
+                .pattern(" # ");
     }
 
     public static ShapedRecipeBuilder create8DyingRecipe(ItemLike output, Item input, DyeColor color) {

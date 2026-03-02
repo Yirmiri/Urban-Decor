@@ -166,6 +166,9 @@ public class UDBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(UDBlocks.DISHWASHER.get())
                 .add(UDBlocks.DARK_DISHWASHER.get())
                 .add(UDBlocks.STAINLESS_STEEL_LADDER.get())
+                .add(UDBlocks.CASH_REGISTER.get())
+                .add(UDBlocks.DARK_CASH_REGISTER.get())
+                .add(UDBlocks.VENDING_MACHINE.get())
         ;
 
         getOrCreateTagBuilder(UDTags.BlockT.HEAVY_STORAGE_SOUND)

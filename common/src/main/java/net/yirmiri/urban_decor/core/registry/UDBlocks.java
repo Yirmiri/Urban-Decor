@@ -97,6 +97,9 @@ public class UDBlocks {
     public static final Supplier<Block> FLOOR_LAMP = register("floor_lamp", () -> new FloorLampBlock(UDProperties.BlockP.FLOOR_LAMP), true);
     public static final Supplier<Block> DISHWASHER = register("dishwasher", () -> new DishwasherBlock(UDProperties.BlockP.DISHWASHER), true);
     public static final Supplier<Block> DARK_DISHWASHER = register("dark_dishwasher", () -> new DishwasherBlock(UDProperties.BlockP.DISHWASHER), true);
+    public static final Supplier<Block> CASH_REGISTER = register("cash_register", () -> new CashRegisterBlock(UDProperties.BlockP.CASH_REGISTER), true);
+    public static final Supplier<Block> DARK_CASH_REGISTER = register("dark_cash_register", () -> new CashRegisterBlock(UDProperties.BlockP.CASH_REGISTER), true);
+    public static final Supplier<Block> VENDING_MACHINE = register("vending_machine", () -> new VendingMachineBlock(UDProperties.BlockP.VENDING), true);
 
     //PLASTIC
     public static final Supplier<Block> WALL_CLOCK = register("wall_clock", () -> new WallClockBlock(UDProperties.BlockP.WALL_CLOCK), true);

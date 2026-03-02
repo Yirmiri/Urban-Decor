@@ -6,13 +6,13 @@
       "item": "minecraft:clay_ball"
     },
     {
-      "item": "minecraft:clay_ball"
+      "item": "minecraft:sand"
+    },
+    {
+      "item": "minecraft:sand"
     },
     {
       "item": "minecraft:clay_ball"
-    },
-    {
-      "item": "minecraft:flint"
     }
   ],
   "result": {

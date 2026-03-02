@@ -18,10 +18,10 @@ public class PlasticLightsBlock extends MultifaceBlock {
 //        return face != Direction.UP && face != Direction.DOWN;
 //    }
 
-    @Override
-    protected boolean canBeReplaced(BlockState state, BlockPlaceContext useContext) {
-        return false;
-    }
+//    @Override
+//    protected boolean canBeReplaced(BlockState state, BlockPlaceContext useContext) {
+//        return false;
+//    }
 
     @Override
     protected MapCodec<? extends MultifaceBlock> codec() {

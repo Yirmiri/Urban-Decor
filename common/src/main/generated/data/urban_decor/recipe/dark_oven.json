@@ -6,10 +6,7 @@
       "item": "urban_decor:dark_porcelain"
     },
     "%": {
-      "item": "minecraft:redstone"
-    },
-    "&": {
-      "item": "minecraft:smoker"
+      "tag": "minecraft:coals"
     },
     "@": {
       "item": "urban_decor:stainless_steel_ingot"
@@ -17,7 +14,7 @@
   },
   "pattern": [
     "@@@",
-    "#&#",
+    "# #",
     "#%#"
   ],
   "result": {

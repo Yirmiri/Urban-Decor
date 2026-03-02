@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "!": {
+      "item": "minecraft:redstone"
+    },
+    "#": {
+      "item": "urban_decor:porcelain"
+    },
+    "@": {
+      "item": "urban_decor:stainless_steel_ingot"
+    }
+  },
+  "pattern": [
+    "###",
+    "@!@"
+  ],
+  "result": {
+    "count": 2,
+    "id": "urban_decor:cash_register"
+  }
+}

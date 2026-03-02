@@ -1,20 +1,19 @@
 {
-  "type": "minecraft:crafting_shaped",
+  "type": "minecraft:crafting_shapeless",
   "category": "misc",
-  "key": {
-    "!": {
-      "tag": "urban_decor:polyanthous"
-    },
-    "#": {
+  "ingredients": [
+    {
       "item": "minecraft:coal"
     },
-    "@": {
-      "item": "minecraft:clay_ball"
+    {
+      "tag": "urban_decor:polyanthous"
+    },
+    {
+      "tag": "urban_decor:polyanthous"
+    },
+    {
+      "tag": "urban_decor:polyanthous"
     }
-  },
-  "pattern": [
-    "##",
-    "@!"
   ],
   "result": {
     "count": 4,

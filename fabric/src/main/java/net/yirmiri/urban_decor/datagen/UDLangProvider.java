@@ -179,6 +179,9 @@ public class UDLangProvider extends FabricLanguageProvider {
         build.add(UDBlocks.PLASTIC_DESK_TABLE.get(), "Plastic Table");
         build.add(UDBlocks.STAINLESS_STEEL_CHAIR.get(), "Stainless Steel Chair");
         build.add(UDBlocks.PLASTIC_LIGHTS.get(), "Plastic Lights");
+        build.add(UDBlocks.CASH_REGISTER.get(), "Cash Register");
+        build.add(UDBlocks.DARK_CASH_REGISTER.get(), "Dark Cash Register");
+        build.add(UDBlocks.VENDING_MACHINE.get(), "Vending Machine");
 
         //ITEMS
         build.add(UDItems.POLYPROPYLENE.get(), "Polypropylene");
@@ -411,6 +414,9 @@ public class UDLangProvider extends FabricLanguageProvider {
         build.add(YT_ID + "block." + MOD_ID + "plastic_table.desc", "A useful decorative that is commonly used for having even more decorations");
         build.add(YT_ID + "block." + MOD_ID + "stainless_steel_chair.desc", "A chair that is great at reducing space due to it's ability to fold");
         build.add(YT_ID + "block." + MOD_ID + "plastic_lights.desc", "A light to brighten the mood!");
+        build.add(YT_ID + "block." + MOD_ID + "cash_register.desc", "A dollar a day keeps the devil away!");
+        build.add(YT_ID + "block." + MOD_ID + "dark_cash_register.desc", "A dollar a day keeps the devil away!");
+        build.add(YT_ID + "block." + MOD_ID + "vending_machine.desc", "Source of all known evil.");
 
         for (WrapColor colors : WrapColor.values()) {
             String wrapString = StringUtils.capitalize(StringUtils.replace(StringUtils.replace(StringUtils.replace(colors.getName(),

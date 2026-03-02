@@ -3,19 +3,19 @@
   "category": "misc",
   "key": {
     "#": {
-      "item": "minecraft:stick"
+      "item": "urban_decor:polypropylene"
     },
     "@": {
       "item": "minecraft:blue_dye"
     }
   },
   "pattern": [
-    "###",
+    " # ",
     "#@#",
-    "###"
+    " # "
   ],
   "result": {
-    "count": 1,
+    "count": 4,
     "id": "urban_decor:blue_picture_frame"
   }
 }

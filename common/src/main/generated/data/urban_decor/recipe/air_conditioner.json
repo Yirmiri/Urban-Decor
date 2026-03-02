@@ -9,11 +9,10 @@
       "item": "urban_decor:stainless_steel_ingot"
     },
     "^": {
-      "item": "minecraft:wind_charge"
+      "item": "minecraft:redstone"
     }
   },
   "pattern": [
-    "@ @",
     "###",
     "@^@"
   ],

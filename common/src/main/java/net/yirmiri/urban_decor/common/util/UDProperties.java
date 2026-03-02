@@ -37,6 +37,7 @@ public class UDProperties {
         public static final BlockBehaviour.Properties DARK_PLASTIC_LIGHTS = BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_WOOD).lightLevel(s -> 7).sound(SoundType.SCAFFOLDING).noCollission().instabreak();
 
         //DECOR
+        public static final BlockBehaviour.Properties VENDING = BlockBehaviour.Properties.ofFullCopy(Blocks.IRON_BLOCK).sound(SoundType.COPPER).noOcclusion();
         public static final BlockBehaviour.Properties TRASH_CAN = BlockBehaviour.Properties.ofFullCopy(Blocks.WHITE_WOOL).strength(0.3F).mapColor(MapColor.COLOR_GRAY).sound(SoundType.LANTERN);
         public static final BlockBehaviour.Properties MICROWAVE = BlockBehaviour.Properties.ofFullCopy(Blocks.WHITE_WOOL).strength(0.8F).mapColor(MapColor.COLOR_GRAY).sound(SoundType.LANTERN);
         public static final BlockBehaviour.Properties SINK = BlockBehaviour.Properties.ofFullCopy(Blocks.STONE).strength(1.0F).mapColor(MapColor.SNOW).sound(SoundType.CALCITE).requiresCorrectToolForDrops();
@@ -73,6 +74,7 @@ public class UDProperties {
         public static final BlockBehaviour.Properties CRIMSON_PLANKS = BlockBehaviour.Properties.ofFullCopy(Blocks.CRIMSON_PLANKS);
         public static final BlockBehaviour.Properties CHERRY_PLANKS = BlockBehaviour.Properties.ofFullCopy(Blocks.CHERRY_PLANKS);
         public static final BlockBehaviour.Properties BAMBOO_PLANKS = BlockBehaviour.Properties.ofFullCopy(Blocks.BAMBOO_PLANKS);
+        public static final BlockBehaviour.Properties CASH_REGISTER = BlockBehaviour.Properties.ofFullCopy(Blocks.WHITE_WOOL).strength(0.5F).mapColor(MapColor.COLOR_GRAY).sound(SoundType.LANTERN);
 
         //MISC APPLIANCES
         public static final BlockBehaviour.Properties AIR_CONDITIONER = BlockBehaviour.Properties.ofFullCopy(Blocks.STONE).strength(1.0F).mapColor(MapColor.COLOR_GRAY).sound(SoundType.LANTERN).requiresCorrectToolForDrops();

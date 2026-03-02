@@ -2,6 +2,9 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
+    "!": {
+      "item": "minecraft:string"
+    },
     "#": {
       "item": "urban_decor:polypropylene"
     },
@@ -10,12 +13,11 @@
     }
   },
   "pattern": [
-    "# #",
-    "@#@",
+    "#!#",
     " @ "
   ],
   "result": {
-    "count": 12,
+    "count": 8,
     "id": "urban_decor:plastic_lights"
   }
 }

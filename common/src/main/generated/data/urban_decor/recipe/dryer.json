@@ -10,11 +10,14 @@
     },
     "@": {
       "item": "urban_decor:steel_pipe"
+    },
+    "R": {
+      "item": "minecraft:glass"
     }
   },
   "pattern": [
     "###",
-    "% #",
+    "%R#",
     "#@#"
   ],
   "result": {

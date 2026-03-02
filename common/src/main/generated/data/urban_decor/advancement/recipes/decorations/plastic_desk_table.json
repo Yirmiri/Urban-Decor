@@ -11,11 +11,11 @@
       },
       "trigger": "minecraft:inventory_changed"
     },
-    "has_stainless_steel_ingot": {
+    "has_steel_pipe": {
       "conditions": {
         "items": [
           {
-            "items": "urban_decor:stainless_steel_ingot"
+            "items": "urban_decor:steel_pipe"
           }
         ]
       },
@@ -32,7 +32,7 @@
     [
       "has_the_recipe",
       "has_polypropylene",
-      "has_stainless_steel_ingot"
+      "has_steel_pipe"
     ]
   ],
   "rewards": {
