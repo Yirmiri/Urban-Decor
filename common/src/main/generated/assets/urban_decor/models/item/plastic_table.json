@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "urban_decor:item/plastic_desk_table"
+    "layer0": "urban_decor:item/plastic_table"
   }
 }

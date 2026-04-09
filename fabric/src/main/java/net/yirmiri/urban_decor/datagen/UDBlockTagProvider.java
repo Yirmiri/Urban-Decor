@@ -22,7 +22,7 @@ public class UDBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .addTag(UDTags.BlockT.TOILETS)
                 .add(UDBlocks.PLASTIC_CHAIR.get())
                 .add(UDBlocks.STAINLESS_STEEL_CHAIR.get())
-                .add(UDBlocks.PLASTIC_DESK_TABLE.get())
+                .add(UDBlocks.PLASTIC_TABLE.get())
         ;
         
         getOrCreateTagBuilder(UDTags.BlockT.TOILETS)
@@ -34,7 +34,7 @@ public class UDBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(UDBlocks.POLYPROPYLENE_BLOCK.get())
                 .add(UDBlocks.PLASTIC_CHAIR.get())
                 .add(UDBlocks.WALL_CLOCK.get())
-                .add(UDBlocks.PLASTIC_DESK_TABLE.get())
+                .add(UDBlocks.PLASTIC_TABLE.get())
         ;
 
         getOrCreateTagBuilder(BlockTags.MINEABLE_WITH_AXE)

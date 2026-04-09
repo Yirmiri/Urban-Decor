@@ -147,7 +147,7 @@ public class UDModelProvider extends FabricModelProvider {
         generator.generateFlatItem(UDBlocks.BAMBOO_BOX.get().asItem(), ModelTemplates.FLAT_ITEM);
         generator.generateFlatItem(UDBlocks.CRIMSON_BOX.get().asItem(), ModelTemplates.FLAT_ITEM);
         generator.generateFlatItem(UDBlocks.WARPED_BOX.get().asItem(), ModelTemplates.FLAT_ITEM);
-        generator.generateFlatItem(UDBlocks.PLASTIC_DESK_TABLE.get().asItem(), ModelTemplates.FLAT_ITEM);
+        generator.generateFlatItem(UDBlocks.PLASTIC_TABLE.get().asItem(), ModelTemplates.FLAT_ITEM);
         generator.generateFlatItem(UDBlocks.STAINLESS_STEEL_CHAIR.get().asItem(), ModelTemplates.FLAT_ITEM);
         generator.generateFlatItem(UDBlocks.CASH_REGISTER.get().asItem(), ModelTemplates.FLAT_ITEM);
         generator.generateFlatItem(UDBlocks.DARK_CASH_REGISTER.get().asItem(), ModelTemplates.FLAT_ITEM);

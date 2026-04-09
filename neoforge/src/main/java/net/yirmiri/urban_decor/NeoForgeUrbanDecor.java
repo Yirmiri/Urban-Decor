@@ -20,6 +20,7 @@ public class NeoForgeUrbanDecor {
 
     public NeoForgeUrbanDecor(IEventBus eventBus) {
         UrbanDecor.init();
+        UDRegistryAliases.load();
 
         eventBus.addListener(this::clientSetup);
         eventBus.addListener(this::registerEntityRenderer);

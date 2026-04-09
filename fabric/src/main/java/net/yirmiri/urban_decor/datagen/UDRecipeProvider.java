@@ -14,7 +14,6 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.ItemLike;
-import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.yirmiri.urban_decor.UrbanDecor;
@@ -1120,13 +1119,13 @@ public class UDRecipeProvider extends FabricRecipeProvider {
                         has(UDBlocks.getWrappedPolyanthous(WrapColor.RUBY.getId()).get().asItem())).group("wrap")
                 .save(exporter, RunicLib.customid(UrbanDecor.MOD_ID, getSimpleRecipeName(UDItems.getWrappedWraps(WrapColor.RUBY.getId()).get())));
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, UDBlocks.PLASTIC_DESK_TABLE.get(), 4)
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, UDBlocks.PLASTIC_TABLE.get(), 4)
                 .define('#', UDItems.POLYPROPYLENE.get()).define('@', UDItems.STAINLESS_STEEL_INGOT.get())
                 .pattern("###")
                 .pattern(" @ ")
                 .unlockedBy(getHasName(UDItems.POLYPROPYLENE.get()), has(UDItems.POLYPROPYLENE.get()))
                 .unlockedBy(getHasName(UDItems.STEEL_PIPE.get()), has(UDItems.STEEL_PIPE.get()))
-                .save(exporter, RunicLib.customid(UrbanDecor.MOD_ID, getSimpleRecipeName(UDBlocks.PLASTIC_DESK_TABLE.get())));
+                .save(exporter, RunicLib.customid(UrbanDecor.MOD_ID, getSimpleRecipeName(UDBlocks.PLASTIC_TABLE.get())));
 
         ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, UDBlocks.STAINLESS_STEEL_CHAIR.get(), 4)
                 .define('#', UDItems.STAINLESS_STEEL_NUGGET.get()).define('@', UDItems.STAINLESS_STEEL_INGOT.get())

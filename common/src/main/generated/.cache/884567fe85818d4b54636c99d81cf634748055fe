@@ -1,5 +1,5 @@
-// 1.21.1	2026-03-02T07:14:43.275618	Urban Decor/Tags for minecraft:block
-ad5e3715061f48e3521b3843f3bcec39bc9154be data\urban_decor\tags\block\mineable_with_axe_and_pickaxe.json
+// 1.21.1	2026-04-09T10:52:45.1972878	Urban Decor/Tags for minecraft:block
+bf3b4bc67629c0bada6442f63f1a4f2690d1ef3c data\urban_decor\tags\block\mineable_with_axe_and_pickaxe.json
 da654d67e78b8f46055aa829cbeebdd2ab95f594 data\urban_decor\tags\block\toilets.json
 772b50cda2f50c6df51365f467cb24c926766add data\minecraft\tags\block\climbable.json
 76adecef9f85206ae9ed2751459ecf8ecf28f4a1 data\minecraft\tags\block\wool.json
@@ -10,6 +10,6 @@ b28812dffd948ffebbd922898ebc313ef78f85d8 data\minecraft\tags\block\mineable\axe.
 578655c4c03fa3fa7cf23b09532575cbebb73212 data\minecraft\tags\block\tall_flowers.json
 80ecaef9f0c9221f26609e3871fdd7969b40b38f data\urban_decor\tags\block\polyanthous.json
 f30b7fba88903732dcec59bc3e552aa6826d9945 data\minecraft\tags\block\inside_step_sound_blocks.json
-6b465a9dbaa6d4fddc29717c3056f9c4107afe10 data\urban_decor\tags\block\seats.json
+12425e760033f125eaf7a76ae1ab68d5fe7bc3ad data\urban_decor\tags\block\seats.json
 3870d329e4399147c29473fbe1d1229db7ea2f91 data\minecraft\tags\block\walls.json
 feae49f29547a303c13fabdc7f9df2ec060891a2 data\minecraft\tags\block\mineable\pickaxe.json

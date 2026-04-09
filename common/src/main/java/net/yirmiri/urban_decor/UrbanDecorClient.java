@@ -45,7 +45,7 @@ public class UrbanDecorClient {
         RLServices.loadClient().registerBlockRenderType(UDBlocks.BAMBOO_GRANDFATHER_CLOCK.get(), RenderType.cutout());
         RLServices.loadClient().registerBlockRenderType(UDBlocks.CRIMSON_GRANDFATHER_CLOCK.get(), RenderType.cutout());
         RLServices.loadClient().registerBlockRenderType(UDBlocks.WARPED_GRANDFATHER_CLOCK.get(), RenderType.cutout());
-        RLServices.loadClient().registerBlockRenderType(UDBlocks.PLASTIC_DESK_TABLE.get(), RenderType.cutout());
+        RLServices.loadClient().registerBlockRenderType(UDBlocks.PLASTIC_TABLE.get(), RenderType.cutout());
         RLServices.loadClient().registerBlockRenderType(UDBlocks.STAINLESS_STEEL_CHAIR.get(), RenderType.cutout());
         RLServices.loadClient().registerBlockRenderType(UDBlocks.PLASTIC_LIGHTS.get(), RenderType.cutout());
 

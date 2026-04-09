@@ -23,7 +23,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "urban_decor:plastic_desk_table"
+        "recipe": "urban_decor:plastic_table"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -37,7 +37,7 @@
   ],
   "rewards": {
     "recipes": [
-      "urban_decor:plastic_desk_table"
+      "urban_decor:plastic_table"
     ]
   }
 }

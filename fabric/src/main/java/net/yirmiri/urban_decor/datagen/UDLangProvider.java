@@ -176,7 +176,7 @@ public class UDLangProvider extends FabricLanguageProvider {
         build.add(UDBlocks.BAMBOO_BOX.get(), "Bamboo Box");
         build.add(UDBlocks.CRIMSON_BOX.get(), "Crimson Box");
         build.add(UDBlocks.WARPED_BOX.get(), "Warped Box");
-        build.add(UDBlocks.PLASTIC_DESK_TABLE.get(), "Plastic Table");
+        build.add(UDBlocks.PLASTIC_TABLE.get(), "Plastic Table");
         build.add(UDBlocks.STAINLESS_STEEL_CHAIR.get(), "Stainless Steel Chair");
         build.add(UDBlocks.PLASTIC_LIGHTS.get(), "Plastic Lights");
         build.add(UDBlocks.CASH_REGISTER.get(), "Cash Register");

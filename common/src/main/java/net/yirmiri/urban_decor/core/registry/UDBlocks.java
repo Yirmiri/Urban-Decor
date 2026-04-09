@@ -104,7 +104,7 @@ public class UDBlocks {
     //PLASTIC
     public static final Supplier<Block> WALL_CLOCK = register("wall_clock", () -> new WallClockBlock(UDProperties.BlockP.WALL_CLOCK), true);
     public static final Supplier<Block> PLASTIC_CHAIR = register("plastic_chair", () -> new PlasticChairBlock(UDProperties.BlockP.PLASTIC_CHAIR), true);
-    public static final Supplier<Block> PLASTIC_DESK_TABLE = register("plastic_desk_table", () -> new PlasticDeskTableBlock(UDProperties.BlockP.PLASTIC_TABLE), true);
+    public static final Supplier<Block> PLASTIC_TABLE = register("plastic_table", () -> new PlasticDeskTableBlock(UDProperties.BlockP.PLASTIC_TABLE), true);
 
     //WOODEN
     public static final Supplier<Block> OAK_PIANO = register("oak_piano", () -> new PianoBlock(UDProperties.BlockP.PIANO), true);

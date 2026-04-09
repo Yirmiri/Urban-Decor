@@ -111,7 +111,7 @@ public class UDCreativeTabs {
 
                         entry.accept(UDBlocks.PLASTIC_CHAIR.get());
                         entry.accept(UDBlocks.STAINLESS_STEEL_CHAIR.get());
-                        entry.accept(UDBlocks.PLASTIC_DESK_TABLE.get());
+                        entry.accept(UDBlocks.PLASTIC_TABLE.get());
 
                         entry.accept(UDBlocks.WALL_CLOCK.get());
                         entry.accept(UDBlocks.OAK_GRANDFATHER_CLOCK.get());
