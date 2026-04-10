@@ -7,7 +7,8 @@ import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
 import net.yirmiri.urban_decor.UrbanDecor;
-import net.yirmiri.urban_decor.common.block.*;
+import net.yirmiri.urban_decor.common.block.StainlessSteelLanternBlock;
+import net.yirmiri.urban_decor.common.block.appliances.*;
 import net.yirmiri.urban_decor.common.util.UDProperties;
 import net.yirmiri.urban_decor.common.util.WrapColor;
 

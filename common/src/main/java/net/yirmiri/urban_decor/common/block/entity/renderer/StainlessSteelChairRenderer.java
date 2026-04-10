@@ -11,7 +11,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.level.block.state.properties.RotationSegment;
 import net.yirmiri.urban_decor.UrbanDecor;
-import net.yirmiri.urban_decor.common.block.StainlessSteelChairBlock;
+import net.yirmiri.urban_decor.common.block.appliances.StainlessSteelChairBlock;
 import net.yirmiri.urban_decor.common.block.entity.StainlessSteelChairBlockEntity;
 import net.yirmiri.urban_decor.common.block.entity.model.StainlessSteelChairModel;
 

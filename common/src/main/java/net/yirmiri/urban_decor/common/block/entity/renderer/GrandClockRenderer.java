@@ -12,7 +12,7 @@ import net.minecraft.world.entity.Entity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.DoubleBlockHalf;
 import net.yirmiri.urban_decor.UrbanDecor;
-import net.yirmiri.urban_decor.common.block.GrandClockBlock;
+import net.yirmiri.urban_decor.common.block.appliances.GrandClockBlock;
 import net.yirmiri.urban_decor.common.block.entity.GrandBlockEntity;
 import net.yirmiri.urban_decor.common.block.entity.model.GrandClockModel;
 

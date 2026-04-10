@@ -1,7 +1,6 @@
 package net.yirmiri.urban_decor.common.block.entity;
 
 import net.minecraft.core.BlockPos;
-import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.world.level.GameRules;
@@ -9,7 +8,7 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.DoubleBlockHalf;
-import net.yirmiri.urban_decor.common.block.GrandClockBlock;
+import net.yirmiri.urban_decor.common.block.appliances.GrandClockBlock;
 import net.yirmiri.urban_decor.core.registry.UDBlockEntities;
 import net.yirmiri.urban_decor.core.registry.UDSounds;
 

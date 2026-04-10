@@ -18,7 +18,7 @@ import net.minecraft.world.level.storage.loot.entries.LootPoolSingletonContainer
 import net.minecraft.world.level.storage.loot.functions.SetItemCountFunction;
 import net.minecraft.world.level.storage.loot.predicates.LootItemBlockStatePropertyCondition;
 import net.minecraft.world.level.storage.loot.providers.number.ConstantValue;
-import net.yirmiri.urban_decor.common.block.FloorLampBlock;
+import net.yirmiri.urban_decor.common.block.appliances.FloorLampBlock;
 import net.yirmiri.urban_decor.common.block.abstracts.AbstractLongBlock;
 import net.yirmiri.urban_decor.common.util.WrapColor;
 import net.yirmiri.urban_decor.core.registry.UDBlocks;

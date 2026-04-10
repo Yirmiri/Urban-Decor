@@ -10,7 +10,7 @@ import net.minecraft.client.renderer.blockentity.BlockEntityRendererProvider;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.Entity;
 import net.yirmiri.urban_decor.UrbanDecor;
-import net.yirmiri.urban_decor.common.block.WallClockBlock;
+import net.yirmiri.urban_decor.common.block.appliances.WallClockBlock;
 import net.yirmiri.urban_decor.common.block.entity.WallClockBlockEntity;
 import net.yirmiri.urban_decor.common.block.entity.model.WallClockModel;
 
