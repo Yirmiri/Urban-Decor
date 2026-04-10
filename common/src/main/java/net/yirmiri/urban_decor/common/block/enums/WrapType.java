@@ -2,7 +2,6 @@ package net.yirmiri.urban_decor.common.block.enums;
 
 import net.minecraft.util.ByIdMap;
 import net.minecraft.util.StringRepresentable;
-import net.minecraft.world.level.material.MapColor;
 
 import java.util.function.IntFunction;
 

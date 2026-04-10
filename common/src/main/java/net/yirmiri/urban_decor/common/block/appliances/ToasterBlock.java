@@ -39,7 +39,6 @@ import net.yirmiri.urban_decor.common.block.entity.ToasterBlockEntity;
 import net.yirmiri.urban_decor.common.util.UDUtils;
 import net.yirmiri.urban_decor.core.init.UDDamageTypes;
 import net.yirmiri.urban_decor.core.registry.UDBlockEntities;
-import net.yirmiri.urban_decor.core.registry.UDSounds;
 
 import java.util.Optional;
 

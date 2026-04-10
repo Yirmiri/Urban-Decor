@@ -5,7 +5,6 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
-import net.minecraft.world.level.Level;
 import net.yirmiri.urban_decor.UrbanDecor;
 import net.yirmiri.urban_decor.core.init.UDTags;
 import org.spongepowered.asm.mixin.Mixin;
