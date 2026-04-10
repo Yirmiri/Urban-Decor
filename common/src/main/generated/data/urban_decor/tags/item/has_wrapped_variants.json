@@ -23,6 +23,16 @@
     "urban_decor:dryer",
     "urban_decor:dark_dryer",
     "urban_decor:freezer",
-    "urban_decor:dark_freezer"
+    "urban_decor:dark_freezer",
+    "urban_decor:bathtub",
+    "urban_decor:dark_bathtub",
+    "urban_decor:oven",
+    "urban_decor:dark_oven",
+    "urban_decor:sink",
+    "urban_decor:dark_sink",
+    "urban_decor:toilet",
+    "urban_decor:dark_toilet",
+    "urban_decor:washing_machine",
+    "urban_decor:dark_washing_machine"
   ]
 }

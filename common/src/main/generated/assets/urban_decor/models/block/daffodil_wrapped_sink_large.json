@@ -1,0 +1,7 @@
+{
+  "parent": "urban_decor:block/sink_large",
+  "textures": {
+    "0": "urban_decor:block/daffodil_wrapped_sink",
+    "particle": "urban_decor:block/daffodil_wrapped_porcelain_block"
+  }
+}

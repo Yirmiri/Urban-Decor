@@ -87,6 +87,11 @@ public class UDModelProvider extends FabricModelProvider {
             generateFreezers(generator, colors);
             generateDishwashers(generator, colors);
             generateDryers(generator, colors);
+            generateCupboards(generator, colors);
+            generateOvens(generator, colors);
+            generateWashingMachines(generator, colors);
+            generateSinks(generator, colors);
+            generateToilets(generator, colors);
         }
     }
 
@@ -179,6 +184,307 @@ public class UDModelProvider extends FabricModelProvider {
             generator.generateFlatItem(UDBlocks.getWrappedPolyanthous(colors.getId()).get().asItem(), ModelTemplates.FLAT_ITEM);
             generator.generateFlatItem(UDItems.getWrappedWraps(colors.getId()).get(), ModelTemplates.FLAT_ITEM);
         }
+    }
+
+    //WRAPPED
+    private void generateToilets(BlockModelGenerators generator, WrapColor colors) {
+        createParentedModel(generator, RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_toilet"),
+                RunicLib.customid(UrbanDecor.MOD_ID, "block/toilet"), Map.of(
+                        "0", RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_toilet"),
+                        "particle", RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_porcelain_block")
+                ));
+
+        createParentedModel(generator, RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_toilet_alt"),
+                RunicLib.customid(UrbanDecor.MOD_ID, "block/toilet_alt"), Map.of(
+                        "0", RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_toilet"),
+                        "particle", RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_porcelain_block")
+                ));
+
+        createParentedModel(generator, RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_toilet_open"),
+                RunicLib.customid(UrbanDecor.MOD_ID, "block/toilet_open"), Map.of(
+                        "0", RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_toilet"),
+                        "particle", RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_porcelain_block")
+                ));
+
+        createParentedModel(generator, RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_toilet_alt_open"),
+                RunicLib.customid(UrbanDecor.MOD_ID, "block/toilet_alt_open"), Map.of(
+                        "0", RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_toilet"),
+                        "particle", RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_porcelain_block")
+                ));
+
+        createParentedModel(generator, RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_dark_toilet"),
+                RunicLib.customid(UrbanDecor.MOD_ID, "block/dark_toilet"), Map.of(
+                        "0", RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_dark_toilet"),
+                        "particle", RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_porcelain_block")
+                ));
+
+        createParentedModel(generator, RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_dark_toilet_alt"),
+                RunicLib.customid(UrbanDecor.MOD_ID, "block/dark_toilet_alt"), Map.of(
+                        "0", RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_dark_toilet"),
+                        "particle", RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_porcelain_block")
+                ));
+
+        createParentedModel(generator, RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_dark_toilet_open"),
+                RunicLib.customid(UrbanDecor.MOD_ID, "block/dark_toilet_open"), Map.of(
+                        "0", RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_dark_toilet"),
+                        "particle", RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_porcelain_block")
+                ));
+
+        createParentedModel(generator, RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_dark_toilet_alt_open"),
+                RunicLib.customid(UrbanDecor.MOD_ID, "block/dark_toilet_alt_open"), Map.of(
+                        "0", RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_dark_toilet"),
+                        "particle", RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_porcelain_block")
+                ));
+    }
+
+    private void generateSinks(BlockModelGenerators generator, WrapColor colors) {
+        createParentedModel(generator, RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_sink"),
+                RunicLib.customid(UrbanDecor.MOD_ID, "block/sink"), Map.of(
+                        "0", RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_sink"),
+                        "particle", RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_porcelain_block")
+                ));
+        createParentedModel(generator, RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_sink_bare"),
+                RunicLib.customid(UrbanDecor.MOD_ID, "block/sink_bare"), Map.of(
+                        "0", RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_sink"),
+                        "particle", RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_porcelain_block")
+                ));
+        createParentedModel(generator, RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_sink_cupboard"),
+                RunicLib.customid(UrbanDecor.MOD_ID, "block/sink_cupboard"), Map.of(
+                        "0", RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_sink"),
+                        "particle", RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_porcelain_block")
+                ));
+        createParentedModel(generator, RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_sink_fullsize"),
+                RunicLib.customid(UrbanDecor.MOD_ID, "block/sink_fullsize"), Map.of(
+                        "0", RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_sink"),
+                        "particle", RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_porcelain_block")
+                ));
+        createParentedModel(generator, RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_sink_large"),
+                RunicLib.customid(UrbanDecor.MOD_ID, "block/sink_large"), Map.of(
+                        "0", RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_sink"),
+                        "particle", RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_porcelain_block")
+                ));
+        createParentedModel(generator, RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_dark_sink"),
+                RunicLib.customid(UrbanDecor.MOD_ID, "block/dark_sink"), Map.of(
+                        "0", RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_dark_sink"),
+                        "particle", RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_porcelain_block")
+                ));
+        createParentedModel(generator, RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_dark_sink_bare"),
+                RunicLib.customid(UrbanDecor.MOD_ID, "block/dark_sink_bare"), Map.of(
+                        "0", RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_dark_sink"),
+                        "particle", RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_porcelain_block")
+                ));
+        createParentedModel(generator, RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_dark_sink_cupboard"),
+                RunicLib.customid(UrbanDecor.MOD_ID, "block/dark_sink_cupboard"), Map.of(
+                        "0", RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_dark_sink"),
+                        "particle", RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_porcelain_block")
+                ));
+        createParentedModel(generator, RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_dark_sink_fullsize"),
+                RunicLib.customid(UrbanDecor.MOD_ID, "block/dark_sink_fullsize"), Map.of(
+                        "0", RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_dark_sink"),
+                        "particle", RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_porcelain_block")
+                ));
+        createParentedModel(generator, RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_dark_sink_large"),
+                RunicLib.customid(UrbanDecor.MOD_ID, "block/dark_sink_large"), Map.of(
+                        "0", RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_dark_sink"),
+                        "particle", RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_porcelain_block")
+                ));
+    }
+
+    private void generateWashingMachines(BlockModelGenerators generator, WrapColor colors) {
+        createParentedModel(generator, RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_washing_machine"),
+                RunicLib.customid(UrbanDecor.MOD_ID, "block/washing_machine"), Map.of(
+                        "0", RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_washing_machine"),
+                        "particle", RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_porcelain_block")
+                ));
+
+        createParentedModel(generator, RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_washing_machine_opaque"),
+                RunicLib.customid(UrbanDecor.MOD_ID, "block/washing_machine_opaque"), Map.of(
+                        "0", RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_washing_machine"),
+                        "particle", RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_porcelain_block")
+                ));
+
+        createParentedModel(generator, RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_washing_machine_open"),
+                RunicLib.customid(UrbanDecor.MOD_ID, "block/washing_machine_open"), Map.of(
+                        "0", RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_washing_machine"),
+                        "particle", RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_porcelain_block")
+                ));
+
+        createParentedModel(generator, RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_washing_machine_opaque_open"),
+                RunicLib.customid(UrbanDecor.MOD_ID, "block/washing_machine_opaque_open"), Map.of(
+                        "0", RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_washing_machine"),
+                        "particle", RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_porcelain_block")
+                ));
+
+        createParentedModel(generator, RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_dark_washing_machine"),
+                RunicLib.customid(UrbanDecor.MOD_ID, "block/dark_washing_machine"), Map.of(
+                        "0", RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_dark_washing_machine"),
+                        "particle", RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_porcelain_block")
+                ));
+
+        createParentedModel(generator, RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_dark_washing_machine_opaque"),
+                RunicLib.customid(UrbanDecor.MOD_ID, "block/dark_washing_machine_opaque"), Map.of(
+                        "0", RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_dark_washing_machine"),
+                        "particle", RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_porcelain_block")
+                ));
+
+        createParentedModel(generator, RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_dark_washing_machine_open"),
+                RunicLib.customid(UrbanDecor.MOD_ID, "block/dark_washing_machine_open"), Map.of(
+                        "0", RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_dark_washing_machine"),
+                        "particle", RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_porcelain_block")
+                ));
+
+        createParentedModel(generator, RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_dark_washing_machine_opaque_open"),
+                RunicLib.customid(UrbanDecor.MOD_ID, "block/dark_washing_machine_opaque_open"), Map.of(
+                        "0", RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_dark_washing_machine"),
+                        "particle", RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_porcelain_block")
+                ));
+    }
+
+    private void generateOvens(BlockModelGenerators generator, WrapColor colors) {
+        createParentedModel(generator, RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_oven"),
+                RunicLib.customid(UrbanDecor.MOD_ID, "block/oven"), Map.of(
+                        "0", RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_oven"),
+                        "particle", RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_porcelain_block")
+                ));
+
+        createParentedModel(generator, RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_oven_opaque"),
+                RunicLib.customid(UrbanDecor.MOD_ID, "block/oven_opaque"), Map.of(
+                        "0", RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_oven"),
+                        "particle", RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_porcelain_block")
+                ));
+
+        createParentedModel(generator, RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_oven_open"),
+                RunicLib.customid(UrbanDecor.MOD_ID, "block/oven_open"), Map.of(
+                        "0", RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_oven"),
+                        "particle", RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_porcelain_block")
+                ));
+
+        createParentedModel(generator, RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_oven_opaque_open"),
+                RunicLib.customid(UrbanDecor.MOD_ID, "block/oven_opaque_open"), Map.of(
+                        "0", RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_oven"),
+                        "particle", RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_porcelain_block")
+                ));
+
+        createParentedModel(generator, RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_dark_oven"),
+                RunicLib.customid(UrbanDecor.MOD_ID, "block/dark_oven"), Map.of(
+                        "0", RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_dark_oven"),
+                        "particle", RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_porcelain_block")
+                ));
+
+        createParentedModel(generator, RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_dark_oven_opaque"),
+                RunicLib.customid(UrbanDecor.MOD_ID, "block/dark_oven_opaque"), Map.of(
+                        "0", RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_dark_oven"),
+                        "particle", RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_porcelain_block")
+                ));
+
+        createParentedModel(generator, RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_dark_oven_open"),
+                RunicLib.customid(UrbanDecor.MOD_ID, "block/dark_oven_open"), Map.of(
+                        "0", RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_dark_oven"),
+                        "particle", RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_porcelain_block")
+                ));
+
+        createParentedModel(generator, RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_dark_oven_opaque_open"),
+                RunicLib.customid(UrbanDecor.MOD_ID, "block/dark_oven_opaque_open"), Map.of(
+                        "0", RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_dark_oven"),
+                        "particle", RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_porcelain_block")
+                ));
+        createParentedModel(generator, RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_oven_on"),
+                RunicLib.customid(UrbanDecor.MOD_ID, "block/oven_on"), Map.of(
+                        "0", RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_oven_on"),
+                        "particle", RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_porcelain_block")
+                ));
+
+        createParentedModel(generator, RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_oven_opaque_on"),
+                RunicLib.customid(UrbanDecor.MOD_ID, "block/oven_opaque_on"), Map.of(
+                        "0", RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_oven_on"),
+                        "particle", RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_porcelain_block")
+                ));
+
+        createParentedModel(generator, RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_oven_open_on"),
+                RunicLib.customid(UrbanDecor.MOD_ID, "block/oven_open_on"), Map.of(
+                        "0", RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_oven_on"),
+                        "particle", RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_porcelain_block")
+                ));
+
+        createParentedModel(generator, RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_oven_opaque_open_on"),
+                RunicLib.customid(UrbanDecor.MOD_ID, "block/oven_opaque_open_on"), Map.of(
+                        "0", RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_oven_on"),
+                        "particle", RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_porcelain_block")
+                ));
+
+        createParentedModel(generator, RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_dark_oven_on"),
+                RunicLib.customid(UrbanDecor.MOD_ID, "block/dark_oven_on"), Map.of(
+                        "0", RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_dark_oven_on"),
+                        "particle", RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_porcelain_block")
+                ));
+
+        createParentedModel(generator, RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_dark_oven_opaque_on"),
+                RunicLib.customid(UrbanDecor.MOD_ID, "block/dark_oven_opaque_on"), Map.of(
+                        "0", RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_dark_oven_on"),
+                        "particle", RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_porcelain_block")
+                ));
+
+        createParentedModel(generator, RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_dark_oven_open_on"),
+                RunicLib.customid(UrbanDecor.MOD_ID, "block/dark_oven_open_on"), Map.of(
+                        "0", RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_dark_oven_on"),
+                        "particle", RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_porcelain_block")
+                ));
+
+        createParentedModel(generator, RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_dark_oven_opaque_open_on"),
+                RunicLib.customid(UrbanDecor.MOD_ID, "block/dark_oven_opaque_open_on"), Map.of(
+                        "0", RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_dark_oven_on"),
+                        "particle", RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_porcelain_block")
+                ));
+    }
+    
+    private void generateCupboards(BlockModelGenerators generator, WrapColor colors) {
+        createParentedModel(generator, RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_cupboard"),
+                RunicLib.customid(UrbanDecor.MOD_ID, "block/cupboard"), Map.of(
+                        "0", RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_cupboard"),
+                        "particle", RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_porcelain_block")
+                ));
+
+        createParentedModel(generator, RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_cupboard_slim"),
+                RunicLib.customid(UrbanDecor.MOD_ID, "block/cupboard_slim"), Map.of(
+                        "1", RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_cupboard"),
+                        "particle", RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_porcelain_block")
+                ));
+
+        createParentedModel(generator, RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_cupboard_slim_topless"),
+                RunicLib.customid(UrbanDecor.MOD_ID, "block/cupboard_slim_topless"), Map.of(
+                        "0", RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_cupboard"),
+                        "particle", RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_porcelain_block")
+                ));
+
+        createParentedModel(generator, RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_cupboard_topless"),
+                RunicLib.customid(UrbanDecor.MOD_ID, "block/cupboard_topless"), Map.of(
+                        "0", RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_cupboard"),
+                        "particle", RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_porcelain_block")
+                ));
+
+        createParentedModel(generator, RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_dark_cupboard"),
+                RunicLib.customid(UrbanDecor.MOD_ID, "block/dark_cupboard"), Map.of(
+                        "0", RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_dark_cupboard"),
+                        "particle", RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_porcelain_block")
+                ));
+
+        createParentedModel(generator, RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_dark_cupboard_slim"),
+                RunicLib.customid(UrbanDecor.MOD_ID, "block/dark_cupboard_slim"), Map.of(
+                        "1", RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_dark_cupboard"),
+                        "particle", RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_porcelain_block")
+                ));
+
+        createParentedModel(generator, RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_dark_cupboard_slim_topless"),
+                RunicLib.customid(UrbanDecor.MOD_ID, "block/dark_cupboard_slim_topless"), Map.of(
+                        "0", RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_dark_cupboard"),
+                        "particle", RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_porcelain_block")
+                ));
+
+        createParentedModel(generator, RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_dark_cupboard_topless"),
+                RunicLib.customid(UrbanDecor.MOD_ID, "block/dark_cupboard_topless"), Map.of(
+                        "0", RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_dark_cupboard"),
+                        "particle", RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_porcelain_block")
+                ));
     }
 
     private void generateDishwashers(BlockModelGenerators generator, WrapColor colors) {

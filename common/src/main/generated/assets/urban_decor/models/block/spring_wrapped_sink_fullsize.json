@@ -1,0 +1,7 @@
+{
+  "parent": "urban_decor:block/sink_fullsize",
+  "textures": {
+    "0": "urban_decor:block/spring_wrapped_sink",
+    "particle": "urban_decor:block/spring_wrapped_porcelain_block"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "parent": "urban_decor:block/dark_washing_machine",
+  "textures": {
+    "0": "urban_decor:block/spring_wrapped_dark_washing_machine",
+    "particle": "urban_decor:block/spring_wrapped_porcelain_block"
+  }
+}

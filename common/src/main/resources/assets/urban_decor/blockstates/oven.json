@@ -1,154 +1,1072 @@
 {
   "variants": {
-    "facing=north,open=true,opaque=false,lit=false": {
+    "facing=north,open=true,opaque=false,lit=false,wrap_type=none": {
       "model": "urban_decor:block/oven_open",
       "uvlock": false
     },
-    "facing=south,open=true,opaque=false,lit=false": {
+    "facing=south,open=true,opaque=false,lit=false,wrap_type=none": {
       "model": "urban_decor:block/oven_open",
       "y": 180,
       "uvlock": false
     },
-    "facing=west,open=true,opaque=false,lit=false": {
+    "facing=west,open=true,opaque=false,lit=false,wrap_type=none": {
       "model": "urban_decor:block/oven_open",
       "y": 270,
       "uvlock": false
     },
-    "facing=east,open=true,opaque=false,lit=false": {
+    "facing=east,open=true,opaque=false,lit=false,wrap_type=none": {
       "model": "urban_decor:block/oven_open",
       "y": 90,
       "uvlock": false
     },
-    "facing=north,open=false,opaque=false,lit=false": {
+    "facing=north,open=false,opaque=false,lit=false,wrap_type=none": {
       "model": "urban_decor:block/oven",
       "uvlock": false
     },
-    "facing=south,open=false,opaque=false,lit=false": {
+    "facing=south,open=false,opaque=false,lit=false,wrap_type=none": {
       "model": "urban_decor:block/oven",
       "y": 180,
       "uvlock": false
     },
-    "facing=west,open=false,opaque=false,lit=false": {
+    "facing=west,open=false,opaque=false,lit=false,wrap_type=none": {
       "model": "urban_decor:block/oven",
       "y": 270,
       "uvlock": false
     },
-    "facing=east,open=false,opaque=false,lit=false": {
+    "facing=east,open=false,opaque=false,lit=false,wrap_type=none": {
       "model": "urban_decor:block/oven",
       "y": 90,
       "uvlock": false
     },
-    "facing=north,open=true,opaque=true,lit=false": {
+    "facing=north,open=true,opaque=true,lit=false,wrap_type=none": {
       "model": "urban_decor:block/oven_opaque_open",
       "uvlock": false
     },
-    "facing=south,open=true,opaque=true,lit=false": {
+    "facing=south,open=true,opaque=true,lit=false,wrap_type=none": {
       "model": "urban_decor:block/oven_opaque_open",
       "y": 180,
       "uvlock": false
     },
-    "facing=west,open=true,opaque=true,lit=false": {
+    "facing=west,open=true,opaque=true,lit=false,wrap_type=none": {
       "model": "urban_decor:block/oven_opaque_open",
       "y": 270,
       "uvlock": false
     },
-    "facing=east,open=true,opaque=true,lit=false": {
+    "facing=east,open=true,opaque=true,lit=false,wrap_type=none": {
       "model": "urban_decor:block/oven_opaque_open",
       "y": 90,
       "uvlock": false
     },
-    "facing=north,open=false,opaque=true,lit=false": {
+    "facing=north,open=false,opaque=true,lit=false,wrap_type=none": {
       "model": "urban_decor:block/oven_opaque",
       "uvlock": false
     },
-    "facing=south,open=false,opaque=true,lit=false": {
+    "facing=south,open=false,opaque=true,lit=false,wrap_type=none": {
       "model": "urban_decor:block/oven_opaque",
       "y": 180,
       "uvlock": false
     },
-    "facing=west,open=false,opaque=true,lit=false": {
+    "facing=west,open=false,opaque=true,lit=false,wrap_type=none": {
       "model": "urban_decor:block/oven_opaque",
       "y": 270,
       "uvlock": false
     },
-    "facing=east,open=false,opaque=true,lit=false": {
+    "facing=east,open=false,opaque=true,lit=false,wrap_type=none": {
       "model": "urban_decor:block/oven_opaque",
       "y": 90,
       "uvlock": false
     },
-    "facing=north,open=true,opaque=false,lit=true": {
+    "facing=north,open=true,opaque=false,lit=true,wrap_type=none": {
       "model": "urban_decor:block/oven_open_on",
       "uvlock": false
     },
-    "facing=south,open=true,opaque=false,lit=true": {
+    "facing=south,open=true,opaque=false,lit=true,wrap_type=none": {
       "model": "urban_decor:block/oven_open_on",
       "y": 180,
       "uvlock": false
     },
-    "facing=west,open=true,opaque=false,lit=true": {
+    "facing=west,open=true,opaque=false,lit=true,wrap_type=none": {
       "model": "urban_decor:block/oven_open_on",
       "y": 270,
       "uvlock": false
     },
-    "facing=east,open=true,opaque=false,lit=true": {
+    "facing=east,open=true,opaque=false,lit=true,wrap_type=none": {
       "model": "urban_decor:block/oven_open_on",
       "y": 90,
       "uvlock": false
     },
-    "facing=north,open=false,opaque=false,lit=true": {
+    "facing=north,open=false,opaque=false,lit=true,wrap_type=none": {
       "model": "urban_decor:block/oven_on",
       "uvlock": false
     },
-    "facing=south,open=false,opaque=false,lit=true": {
+    "facing=south,open=false,opaque=false,lit=true,wrap_type=none": {
       "model": "urban_decor:block/oven_on",
       "y": 180,
       "uvlock": false
     },
-    "facing=west,open=false,opaque=false,lit=true": {
+    "facing=west,open=false,opaque=false,lit=true,wrap_type=none": {
       "model": "urban_decor:block/oven_on",
       "y": 270,
       "uvlock": false
     },
-    "facing=east,open=false,opaque=false,lit=true": {
+    "facing=east,open=false,opaque=false,lit=true,wrap_type=none": {
       "model": "urban_decor:block/oven_on",
       "y": 90,
       "uvlock": false
     },
-    "facing=north,open=true,opaque=true,lit=true": {
+    "facing=north,open=true,opaque=true,lit=true,wrap_type=none": {
       "model": "urban_decor:block/oven_opaque_open_on",
       "uvlock": false
     },
-    "facing=south,open=true,opaque=true,lit=true": {
+    "facing=south,open=true,opaque=true,lit=true,wrap_type=none": {
       "model": "urban_decor:block/oven_opaque_open_on",
       "y": 180,
       "uvlock": false
     },
-    "facing=west,open=true,opaque=true,lit=true": {
+    "facing=west,open=true,opaque=true,lit=true,wrap_type=none": {
       "model": "urban_decor:block/oven_opaque_open_on",
       "y": 270,
       "uvlock": false
     },
-    "facing=east,open=true,opaque=true,lit=true": {
+    "facing=east,open=true,opaque=true,lit=true,wrap_type=none": {
       "model": "urban_decor:block/oven_opaque_open_on",
       "y": 90,
       "uvlock": false
     },
-    "facing=north,open=false,opaque=true,lit=true": {
+    "facing=north,open=false,opaque=true,lit=true,wrap_type=none": {
       "model": "urban_decor:block/oven_opaque_on",
       "uvlock": false
     },
-    "facing=south,open=false,opaque=true,lit=true": {
+    "facing=south,open=false,opaque=true,lit=true,wrap_type=none": {
       "model": "urban_decor:block/oven_opaque_on",
       "y": 180,
       "uvlock": false
     },
-    "facing=west,open=false,opaque=true,lit=true": {
+    "facing=west,open=false,opaque=true,lit=true,wrap_type=none": {
       "model": "urban_decor:block/oven_opaque_on",
       "y": 270,
       "uvlock": false
     },
-    "facing=east,open=false,opaque=true,lit=true": {
+    "facing=east,open=false,opaque=true,lit=true,wrap_type=none": {
       "model": "urban_decor:block/oven_opaque_on",
+      "y": 90,
+      "uvlock": false
+    },
+
+    "facing=north,open=true,opaque=false,lit=false,wrap_type=cherry": {
+      "model": "urban_decor:block/cherry_wrapped_oven_open",
+      "uvlock": false
+    },
+    "facing=south,open=true,opaque=false,lit=false,wrap_type=cherry": {
+      "model": "urban_decor:block/cherry_wrapped_oven_open",
+      "y": 180,
+      "uvlock": false
+    },
+    "facing=west,open=true,opaque=false,lit=false,wrap_type=cherry": {
+      "model": "urban_decor:block/cherry_wrapped_oven_open",
+      "y": 270,
+      "uvlock": false
+    },
+    "facing=east,open=true,opaque=false,lit=false,wrap_type=cherry": {
+      "model": "urban_decor:block/cherry_wrapped_oven_open",
+      "y": 90,
+      "uvlock": false
+    },
+    "facing=north,open=false,opaque=false,lit=false,wrap_type=cherry": {
+      "model": "urban_decor:block/cherry_wrapped_oven",
+      "uvlock": false
+    },
+    "facing=south,open=false,opaque=false,lit=false,wrap_type=cherry": {
+      "model": "urban_decor:block/cherry_wrapped_oven",
+      "y": 180,
+      "uvlock": false
+    },
+    "facing=west,open=false,opaque=false,lit=false,wrap_type=cherry": {
+      "model": "urban_decor:block/cherry_wrapped_oven",
+      "y": 270,
+      "uvlock": false
+    },
+    "facing=east,open=false,opaque=false,lit=false,wrap_type=cherry": {
+      "model": "urban_decor:block/cherry_wrapped_oven",
+      "y": 90,
+      "uvlock": false
+    },
+    "facing=north,open=true,opaque=true,lit=false,wrap_type=cherry": {
+      "model": "urban_decor:block/cherry_wrapped_oven_opaque_open",
+      "uvlock": false
+    },
+    "facing=south,open=true,opaque=true,lit=false,wrap_type=cherry": {
+      "model": "urban_decor:block/cherry_wrapped_oven_opaque_open",
+      "y": 180,
+      "uvlock": false
+    },
+    "facing=west,open=true,opaque=true,lit=false,wrap_type=cherry": {
+      "model": "urban_decor:block/cherry_wrapped_oven_opaque_open",
+      "y": 270,
+      "uvlock": false
+    },
+    "facing=east,open=true,opaque=true,lit=false,wrap_type=cherry": {
+      "model": "urban_decor:block/cherry_wrapped_oven_opaque_open",
+      "y": 90,
+      "uvlock": false
+    },
+    "facing=north,open=false,opaque=true,lit=false,wrap_type=cherry": {
+      "model": "urban_decor:block/cherry_wrapped_oven_opaque",
+      "uvlock": false
+    },
+    "facing=south,open=false,opaque=true,lit=false,wrap_type=cherry": {
+      "model": "urban_decor:block/cherry_wrapped_oven_opaque",
+      "y": 180,
+      "uvlock": false
+    },
+    "facing=west,open=false,opaque=true,lit=false,wrap_type=cherry": {
+      "model": "urban_decor:block/cherry_wrapped_oven_opaque",
+      "y": 270,
+      "uvlock": false
+    },
+    "facing=east,open=false,opaque=true,lit=false,wrap_type=cherry": {
+      "model": "urban_decor:block/cherry_wrapped_oven_opaque",
+      "y": 90,
+      "uvlock": false
+    },
+    "facing=north,open=true,opaque=false,lit=true,wrap_type=cherry": {
+      "model": "urban_decor:block/cherry_wrapped_oven_open_on",
+      "uvlock": false
+    },
+    "facing=south,open=true,opaque=false,lit=true,wrap_type=cherry": {
+      "model": "urban_decor:block/cherry_wrapped_oven_open_on",
+      "y": 180,
+      "uvlock": false
+    },
+    "facing=west,open=true,opaque=false,lit=true,wrap_type=cherry": {
+      "model": "urban_decor:block/cherry_wrapped_oven_open_on",
+      "y": 270,
+      "uvlock": false
+    },
+    "facing=east,open=true,opaque=false,lit=true,wrap_type=cherry": {
+      "model": "urban_decor:block/cherry_wrapped_oven_open_on",
+      "y": 90,
+      "uvlock": false
+    },
+    "facing=north,open=false,opaque=false,lit=true,wrap_type=cherry": {
+      "model": "urban_decor:block/cherry_wrapped_oven_on",
+      "uvlock": false
+    },
+    "facing=south,open=false,opaque=false,lit=true,wrap_type=cherry": {
+      "model": "urban_decor:block/cherry_wrapped_oven_on",
+      "y": 180,
+      "uvlock": false
+    },
+    "facing=west,open=false,opaque=false,lit=true,wrap_type=cherry": {
+      "model": "urban_decor:block/cherry_wrapped_oven_on",
+      "y": 270,
+      "uvlock": false
+    },
+    "facing=east,open=false,opaque=false,lit=true,wrap_type=cherry": {
+      "model": "urban_decor:block/cherry_wrapped_oven_on",
+      "y": 90,
+      "uvlock": false
+    },
+    "facing=north,open=true,opaque=true,lit=true,wrap_type=cherry": {
+      "model": "urban_decor:block/cherry_wrapped_oven_opaque_open_on",
+      "uvlock": false
+    },
+    "facing=south,open=true,opaque=true,lit=true,wrap_type=cherry": {
+      "model": "urban_decor:block/cherry_wrapped_oven_opaque_open_on",
+      "y": 180,
+      "uvlock": false
+    },
+    "facing=west,open=true,opaque=true,lit=true,wrap_type=cherry": {
+      "model": "urban_decor:block/cherry_wrapped_oven_opaque_open_on",
+      "y": 270,
+      "uvlock": false
+    },
+    "facing=east,open=true,opaque=true,lit=true,wrap_type=cherry": {
+      "model": "urban_decor:block/cherry_wrapped_oven_opaque_open_on",
+      "y": 90,
+      "uvlock": false
+    },
+    "facing=north,open=false,opaque=true,lit=true,wrap_type=cherry": {
+      "model": "urban_decor:block/cherry_wrapped_oven_opaque_on",
+      "uvlock": false
+    },
+    "facing=south,open=false,opaque=true,lit=true,wrap_type=cherry": {
+      "model": "urban_decor:block/cherry_wrapped_oven_opaque_on",
+      "y": 180,
+      "uvlock": false
+    },
+    "facing=west,open=false,opaque=true,lit=true,wrap_type=cherry": {
+      "model": "urban_decor:block/cherry_wrapped_oven_opaque_on",
+      "y": 270,
+      "uvlock": false
+    },
+    "facing=east,open=false,opaque=true,lit=true,wrap_type=cherry": {
+      "model": "urban_decor:block/cherry_wrapped_oven_opaque_on",
+      "y": 90,
+      "uvlock": false
+    },
+
+    "facing=north,open=true,opaque=false,lit=false,wrap_type=daffodil": {
+      "model": "urban_decor:block/daffodil_wrapped_oven_open",
+      "uvlock": false
+    },
+    "facing=south,open=true,opaque=false,lit=false,wrap_type=daffodil": {
+      "model": "urban_decor:block/daffodil_wrapped_oven_open",
+      "y": 180,
+      "uvlock": false
+    },
+    "facing=west,open=true,opaque=false,lit=false,wrap_type=daffodil": {
+      "model": "urban_decor:block/daffodil_wrapped_oven_open",
+      "y": 270,
+      "uvlock": false
+    },
+    "facing=east,open=true,opaque=false,lit=false,wrap_type=daffodil": {
+      "model": "urban_decor:block/daffodil_wrapped_oven_open",
+      "y": 90,
+      "uvlock": false
+    },
+    "facing=north,open=false,opaque=false,lit=false,wrap_type=daffodil": {
+      "model": "urban_decor:block/daffodil_wrapped_oven",
+      "uvlock": false
+    },
+    "facing=south,open=false,opaque=false,lit=false,wrap_type=daffodil": {
+      "model": "urban_decor:block/daffodil_wrapped_oven",
+      "y": 180,
+      "uvlock": false
+    },
+    "facing=west,open=false,opaque=false,lit=false,wrap_type=daffodil": {
+      "model": "urban_decor:block/daffodil_wrapped_oven",
+      "y": 270,
+      "uvlock": false
+    },
+    "facing=east,open=false,opaque=false,lit=false,wrap_type=daffodil": {
+      "model": "urban_decor:block/daffodil_wrapped_oven",
+      "y": 90,
+      "uvlock": false
+    },
+    "facing=north,open=true,opaque=true,lit=false,wrap_type=daffodil": {
+      "model": "urban_decor:block/daffodil_wrapped_oven_opaque_open",
+      "uvlock": false
+    },
+    "facing=south,open=true,opaque=true,lit=false,wrap_type=daffodil": {
+      "model": "urban_decor:block/daffodil_wrapped_oven_opaque_open",
+      "y": 180,
+      "uvlock": false
+    },
+    "facing=west,open=true,opaque=true,lit=false,wrap_type=daffodil": {
+      "model": "urban_decor:block/daffodil_wrapped_oven_opaque_open",
+      "y": 270,
+      "uvlock": false
+    },
+    "facing=east,open=true,opaque=true,lit=false,wrap_type=daffodil": {
+      "model": "urban_decor:block/daffodil_wrapped_oven_opaque_open",
+      "y": 90,
+      "uvlock": false
+    },
+    "facing=north,open=false,opaque=true,lit=false,wrap_type=daffodil": {
+      "model": "urban_decor:block/daffodil_wrapped_oven_opaque",
+      "uvlock": false
+    },
+    "facing=south,open=false,opaque=true,lit=false,wrap_type=daffodil": {
+      "model": "urban_decor:block/daffodil_wrapped_oven_opaque",
+      "y": 180,
+      "uvlock": false
+    },
+    "facing=west,open=false,opaque=true,lit=false,wrap_type=daffodil": {
+      "model": "urban_decor:block/daffodil_wrapped_oven_opaque",
+      "y": 270,
+      "uvlock": false
+    },
+    "facing=east,open=false,opaque=true,lit=false,wrap_type=daffodil": {
+      "model": "urban_decor:block/daffodil_wrapped_oven_opaque",
+      "y": 90,
+      "uvlock": false
+    },
+    "facing=north,open=true,opaque=false,lit=true,wrap_type=daffodil": {
+      "model": "urban_decor:block/daffodil_wrapped_oven_open_on",
+      "uvlock": false
+    },
+    "facing=south,open=true,opaque=false,lit=true,wrap_type=daffodil": {
+      "model": "urban_decor:block/daffodil_wrapped_oven_open_on",
+      "y": 180,
+      "uvlock": false
+    },
+    "facing=west,open=true,opaque=false,lit=true,wrap_type=daffodil": {
+      "model": "urban_decor:block/daffodil_wrapped_oven_open_on",
+      "y": 270,
+      "uvlock": false
+    },
+    "facing=east,open=true,opaque=false,lit=true,wrap_type=daffodil": {
+      "model": "urban_decor:block/daffodil_wrapped_oven_open_on",
+      "y": 90,
+      "uvlock": false
+    },
+    "facing=north,open=false,opaque=false,lit=true,wrap_type=daffodil": {
+      "model": "urban_decor:block/daffodil_wrapped_oven_on",
+      "uvlock": false
+    },
+    "facing=south,open=false,opaque=false,lit=true,wrap_type=daffodil": {
+      "model": "urban_decor:block/daffodil_wrapped_oven_on",
+      "y": 180,
+      "uvlock": false
+    },
+    "facing=west,open=false,opaque=false,lit=true,wrap_type=daffodil": {
+      "model": "urban_decor:block/daffodil_wrapped_oven_on",
+      "y": 270,
+      "uvlock": false
+    },
+    "facing=east,open=false,opaque=false,lit=true,wrap_type=daffodil": {
+      "model": "urban_decor:block/daffodil_wrapped_oven_on",
+      "y": 90,
+      "uvlock": false
+    },
+    "facing=north,open=true,opaque=true,lit=true,wrap_type=daffodil": {
+      "model": "urban_decor:block/daffodil_wrapped_oven_opaque_open_on",
+      "uvlock": false
+    },
+    "facing=south,open=true,opaque=true,lit=true,wrap_type=daffodil": {
+      "model": "urban_decor:block/daffodil_wrapped_oven_opaque_open_on",
+      "y": 180,
+      "uvlock": false
+    },
+    "facing=west,open=true,opaque=true,lit=true,wrap_type=daffodil": {
+      "model": "urban_decor:block/daffodil_wrapped_oven_opaque_open_on",
+      "y": 270,
+      "uvlock": false
+    },
+    "facing=east,open=true,opaque=true,lit=true,wrap_type=daffodil": {
+      "model": "urban_decor:block/daffodil_wrapped_oven_opaque_open_on",
+      "y": 90,
+      "uvlock": false
+    },
+    "facing=north,open=false,opaque=true,lit=true,wrap_type=daffodil": {
+      "model": "urban_decor:block/daffodil_wrapped_oven_opaque_on",
+      "uvlock": false
+    },
+    "facing=south,open=false,opaque=true,lit=true,wrap_type=daffodil": {
+      "model": "urban_decor:block/daffodil_wrapped_oven_opaque_on",
+      "y": 180,
+      "uvlock": false
+    },
+    "facing=west,open=false,opaque=true,lit=true,wrap_type=daffodil": {
+      "model": "urban_decor:block/daffodil_wrapped_oven_opaque_on",
+      "y": 270,
+      "uvlock": false
+    },
+    "facing=east,open=false,opaque=true,lit=true,wrap_type=daffodil": {
+      "model": "urban_decor:block/daffodil_wrapped_oven_opaque_on",
+      "y": 90,
+      "uvlock": false
+    },
+
+    "facing=north,open=true,opaque=false,lit=false,wrap_type=spring": {
+      "model": "urban_decor:block/spring_wrapped_oven_open",
+      "uvlock": false
+    },
+    "facing=south,open=true,opaque=false,lit=false,wrap_type=spring": {
+      "model": "urban_decor:block/spring_wrapped_oven_open",
+      "y": 180,
+      "uvlock": false
+    },
+    "facing=west,open=true,opaque=false,lit=false,wrap_type=spring": {
+      "model": "urban_decor:block/spring_wrapped_oven_open",
+      "y": 270,
+      "uvlock": false
+    },
+    "facing=east,open=true,opaque=false,lit=false,wrap_type=spring": {
+      "model": "urban_decor:block/spring_wrapped_oven_open",
+      "y": 90,
+      "uvlock": false
+    },
+    "facing=north,open=false,opaque=false,lit=false,wrap_type=spring": {
+      "model": "urban_decor:block/spring_wrapped_oven",
+      "uvlock": false
+    },
+    "facing=south,open=false,opaque=false,lit=false,wrap_type=spring": {
+      "model": "urban_decor:block/spring_wrapped_oven",
+      "y": 180,
+      "uvlock": false
+    },
+    "facing=west,open=false,opaque=false,lit=false,wrap_type=spring": {
+      "model": "urban_decor:block/spring_wrapped_oven",
+      "y": 270,
+      "uvlock": false
+    },
+    "facing=east,open=false,opaque=false,lit=false,wrap_type=spring": {
+      "model": "urban_decor:block/spring_wrapped_oven",
+      "y": 90,
+      "uvlock": false
+    },
+    "facing=north,open=true,opaque=true,lit=false,wrap_type=spring": {
+      "model": "urban_decor:block/spring_wrapped_oven_opaque_open",
+      "uvlock": false
+    },
+    "facing=south,open=true,opaque=true,lit=false,wrap_type=spring": {
+      "model": "urban_decor:block/spring_wrapped_oven_opaque_open",
+      "y": 180,
+      "uvlock": false
+    },
+    "facing=west,open=true,opaque=true,lit=false,wrap_type=spring": {
+      "model": "urban_decor:block/spring_wrapped_oven_opaque_open",
+      "y": 270,
+      "uvlock": false
+    },
+    "facing=east,open=true,opaque=true,lit=false,wrap_type=spring": {
+      "model": "urban_decor:block/spring_wrapped_oven_opaque_open",
+      "y": 90,
+      "uvlock": false
+    },
+    "facing=north,open=false,opaque=true,lit=false,wrap_type=spring": {
+      "model": "urban_decor:block/spring_wrapped_oven_opaque",
+      "uvlock": false
+    },
+    "facing=south,open=false,opaque=true,lit=false,wrap_type=spring": {
+      "model": "urban_decor:block/spring_wrapped_oven_opaque",
+      "y": 180,
+      "uvlock": false
+    },
+    "facing=west,open=false,opaque=true,lit=false,wrap_type=spring": {
+      "model": "urban_decor:block/spring_wrapped_oven_opaque",
+      "y": 270,
+      "uvlock": false
+    },
+    "facing=east,open=false,opaque=true,lit=false,wrap_type=spring": {
+      "model": "urban_decor:block/spring_wrapped_oven_opaque",
+      "y": 90,
+      "uvlock": false
+    },
+    "facing=north,open=true,opaque=false,lit=true,wrap_type=spring": {
+      "model": "urban_decor:block/spring_wrapped_oven_open_on",
+      "uvlock": false
+    },
+    "facing=south,open=true,opaque=false,lit=true,wrap_type=spring": {
+      "model": "urban_decor:block/spring_wrapped_oven_open_on",
+      "y": 180,
+      "uvlock": false
+    },
+    "facing=west,open=true,opaque=false,lit=true,wrap_type=spring": {
+      "model": "urban_decor:block/spring_wrapped_oven_open_on",
+      "y": 270,
+      "uvlock": false
+    },
+    "facing=east,open=true,opaque=false,lit=true,wrap_type=spring": {
+      "model": "urban_decor:block/spring_wrapped_oven_open_on",
+      "y": 90,
+      "uvlock": false
+    },
+    "facing=north,open=false,opaque=false,lit=true,wrap_type=spring": {
+      "model": "urban_decor:block/spring_wrapped_oven_on",
+      "uvlock": false
+    },
+    "facing=south,open=false,opaque=false,lit=true,wrap_type=spring": {
+      "model": "urban_decor:block/spring_wrapped_oven_on",
+      "y": 180,
+      "uvlock": false
+    },
+    "facing=west,open=false,opaque=false,lit=true,wrap_type=spring": {
+      "model": "urban_decor:block/spring_wrapped_oven_on",
+      "y": 270,
+      "uvlock": false
+    },
+    "facing=east,open=false,opaque=false,lit=true,wrap_type=spring": {
+      "model": "urban_decor:block/spring_wrapped_oven_on",
+      "y": 90,
+      "uvlock": false
+    },
+    "facing=north,open=true,opaque=true,lit=true,wrap_type=spring": {
+      "model": "urban_decor:block/spring_wrapped_oven_opaque_open_on",
+      "uvlock": false
+    },
+    "facing=south,open=true,opaque=true,lit=true,wrap_type=spring": {
+      "model": "urban_decor:block/spring_wrapped_oven_opaque_open_on",
+      "y": 180,
+      "uvlock": false
+    },
+    "facing=west,open=true,opaque=true,lit=true,wrap_type=spring": {
+      "model": "urban_decor:block/spring_wrapped_oven_opaque_open_on",
+      "y": 270,
+      "uvlock": false
+    },
+    "facing=east,open=true,opaque=true,lit=true,wrap_type=spring": {
+      "model": "urban_decor:block/spring_wrapped_oven_opaque_open_on",
+      "y": 90,
+      "uvlock": false
+    },
+    "facing=north,open=false,opaque=true,lit=true,wrap_type=spring": {
+      "model": "urban_decor:block/spring_wrapped_oven_opaque_on",
+      "uvlock": false
+    },
+    "facing=south,open=false,opaque=true,lit=true,wrap_type=spring": {
+      "model": "urban_decor:block/spring_wrapped_oven_opaque_on",
+      "y": 180,
+      "uvlock": false
+    },
+    "facing=west,open=false,opaque=true,lit=true,wrap_type=spring": {
+      "model": "urban_decor:block/spring_wrapped_oven_opaque_on",
+      "y": 270,
+      "uvlock": false
+    },
+    "facing=east,open=false,opaque=true,lit=true,wrap_type=spring": {
+      "model": "urban_decor:block/spring_wrapped_oven_opaque_on",
+      "y": 90,
+      "uvlock": false
+    },
+
+    "facing=north,open=true,opaque=false,lit=false,wrap_type=mint": {
+      "model": "urban_decor:block/mint_wrapped_oven_open",
+      "uvlock": false
+    },
+    "facing=south,open=true,opaque=false,lit=false,wrap_type=mint": {
+      "model": "urban_decor:block/mint_wrapped_oven_open",
+      "y": 180,
+      "uvlock": false
+    },
+    "facing=west,open=true,opaque=false,lit=false,wrap_type=mint": {
+      "model": "urban_decor:block/mint_wrapped_oven_open",
+      "y": 270,
+      "uvlock": false
+    },
+    "facing=east,open=true,opaque=false,lit=false,wrap_type=mint": {
+      "model": "urban_decor:block/mint_wrapped_oven_open",
+      "y": 90,
+      "uvlock": false
+    },
+    "facing=north,open=false,opaque=false,lit=false,wrap_type=mint": {
+      "model": "urban_decor:block/mint_wrapped_oven",
+      "uvlock": false
+    },
+    "facing=south,open=false,opaque=false,lit=false,wrap_type=mint": {
+      "model": "urban_decor:block/mint_wrapped_oven",
+      "y": 180,
+      "uvlock": false
+    },
+    "facing=west,open=false,opaque=false,lit=false,wrap_type=mint": {
+      "model": "urban_decor:block/mint_wrapped_oven",
+      "y": 270,
+      "uvlock": false
+    },
+    "facing=east,open=false,opaque=false,lit=false,wrap_type=mint": {
+      "model": "urban_decor:block/mint_wrapped_oven",
+      "y": 90,
+      "uvlock": false
+    },
+    "facing=north,open=true,opaque=true,lit=false,wrap_type=mint": {
+      "model": "urban_decor:block/mint_wrapped_oven_opaque_open",
+      "uvlock": false
+    },
+    "facing=south,open=true,opaque=true,lit=false,wrap_type=mint": {
+      "model": "urban_decor:block/mint_wrapped_oven_opaque_open",
+      "y": 180,
+      "uvlock": false
+    },
+    "facing=west,open=true,opaque=true,lit=false,wrap_type=mint": {
+      "model": "urban_decor:block/mint_wrapped_oven_opaque_open",
+      "y": 270,
+      "uvlock": false
+    },
+    "facing=east,open=true,opaque=true,lit=false,wrap_type=mint": {
+      "model": "urban_decor:block/mint_wrapped_oven_opaque_open",
+      "y": 90,
+      "uvlock": false
+    },
+    "facing=north,open=false,opaque=true,lit=false,wrap_type=mint": {
+      "model": "urban_decor:block/mint_wrapped_oven_opaque",
+      "uvlock": false
+    },
+    "facing=south,open=false,opaque=true,lit=false,wrap_type=mint": {
+      "model": "urban_decor:block/mint_wrapped_oven_opaque",
+      "y": 180,
+      "uvlock": false
+    },
+    "facing=west,open=false,opaque=true,lit=false,wrap_type=mint": {
+      "model": "urban_decor:block/mint_wrapped_oven_opaque",
+      "y": 270,
+      "uvlock": false
+    },
+    "facing=east,open=false,opaque=true,lit=false,wrap_type=mint": {
+      "model": "urban_decor:block/mint_wrapped_oven_opaque",
+      "y": 90,
+      "uvlock": false
+    },
+    "facing=north,open=true,opaque=false,lit=true,wrap_type=mint": {
+      "model": "urban_decor:block/mint_wrapped_oven_open_on",
+      "uvlock": false
+    },
+    "facing=south,open=true,opaque=false,lit=true,wrap_type=mint": {
+      "model": "urban_decor:block/mint_wrapped_oven_open_on",
+      "y": 180,
+      "uvlock": false
+    },
+    "facing=west,open=true,opaque=false,lit=true,wrap_type=mint": {
+      "model": "urban_decor:block/mint_wrapped_oven_open_on",
+      "y": 270,
+      "uvlock": false
+    },
+    "facing=east,open=true,opaque=false,lit=true,wrap_type=mint": {
+      "model": "urban_decor:block/mint_wrapped_oven_open_on",
+      "y": 90,
+      "uvlock": false
+    },
+    "facing=north,open=false,opaque=false,lit=true,wrap_type=mint": {
+      "model": "urban_decor:block/mint_wrapped_oven_on",
+      "uvlock": false
+    },
+    "facing=south,open=false,opaque=false,lit=true,wrap_type=mint": {
+      "model": "urban_decor:block/mint_wrapped_oven_on",
+      "y": 180,
+      "uvlock": false
+    },
+    "facing=west,open=false,opaque=false,lit=true,wrap_type=mint": {
+      "model": "urban_decor:block/mint_wrapped_oven_on",
+      "y": 270,
+      "uvlock": false
+    },
+    "facing=east,open=false,opaque=false,lit=true,wrap_type=mint": {
+      "model": "urban_decor:block/mint_wrapped_oven_on",
+      "y": 90,
+      "uvlock": false
+    },
+    "facing=north,open=true,opaque=true,lit=true,wrap_type=mint": {
+      "model": "urban_decor:block/mint_wrapped_oven_opaque_open_on",
+      "uvlock": false
+    },
+    "facing=south,open=true,opaque=true,lit=true,wrap_type=mint": {
+      "model": "urban_decor:block/mint_wrapped_oven_opaque_open_on",
+      "y": 180,
+      "uvlock": false
+    },
+    "facing=west,open=true,opaque=true,lit=true,wrap_type=mint": {
+      "model": "urban_decor:block/mint_wrapped_oven_opaque_open_on",
+      "y": 270,
+      "uvlock": false
+    },
+    "facing=east,open=true,opaque=true,lit=true,wrap_type=mint": {
+      "model": "urban_decor:block/mint_wrapped_oven_opaque_open_on",
+      "y": 90,
+      "uvlock": false
+    },
+    "facing=north,open=false,opaque=true,lit=true,wrap_type=mint": {
+      "model": "urban_decor:block/mint_wrapped_oven_opaque_on",
+      "uvlock": false
+    },
+    "facing=south,open=false,opaque=true,lit=true,wrap_type=mint": {
+      "model": "urban_decor:block/mint_wrapped_oven_opaque_on",
+      "y": 180,
+      "uvlock": false
+    },
+    "facing=west,open=false,opaque=true,lit=true,wrap_type=mint": {
+      "model": "urban_decor:block/mint_wrapped_oven_opaque_on",
+      "y": 270,
+      "uvlock": false
+    },
+    "facing=east,open=false,opaque=true,lit=true,wrap_type=mint": {
+      "model": "urban_decor:block/mint_wrapped_oven_opaque_on",
+      "y": 90,
+      "uvlock": false
+    },
+
+    "facing=north,open=true,opaque=false,lit=false,wrap_type=azure": {
+      "model": "urban_decor:block/azure_wrapped_oven_open",
+      "uvlock": false
+    },
+    "facing=south,open=true,opaque=false,lit=false,wrap_type=azure": {
+      "model": "urban_decor:block/azure_wrapped_oven_open",
+      "y": 180,
+      "uvlock": false
+    },
+    "facing=west,open=true,opaque=false,lit=false,wrap_type=azure": {
+      "model": "urban_decor:block/azure_wrapped_oven_open",
+      "y": 270,
+      "uvlock": false
+    },
+    "facing=east,open=true,opaque=false,lit=false,wrap_type=azure": {
+      "model": "urban_decor:block/azure_wrapped_oven_open",
+      "y": 90,
+      "uvlock": false
+    },
+    "facing=north,open=false,opaque=false,lit=false,wrap_type=azure": {
+      "model": "urban_decor:block/azure_wrapped_oven",
+      "uvlock": false
+    },
+    "facing=south,open=false,opaque=false,lit=false,wrap_type=azure": {
+      "model": "urban_decor:block/azure_wrapped_oven",
+      "y": 180,
+      "uvlock": false
+    },
+    "facing=west,open=false,opaque=false,lit=false,wrap_type=azure": {
+      "model": "urban_decor:block/azure_wrapped_oven",
+      "y": 270,
+      "uvlock": false
+    },
+    "facing=east,open=false,opaque=false,lit=false,wrap_type=azure": {
+      "model": "urban_decor:block/azure_wrapped_oven",
+      "y": 90,
+      "uvlock": false
+    },
+    "facing=north,open=true,opaque=true,lit=false,wrap_type=azure": {
+      "model": "urban_decor:block/azure_wrapped_oven_opaque_open",
+      "uvlock": false
+    },
+    "facing=south,open=true,opaque=true,lit=false,wrap_type=azure": {
+      "model": "urban_decor:block/azure_wrapped_oven_opaque_open",
+      "y": 180,
+      "uvlock": false
+    },
+    "facing=west,open=true,opaque=true,lit=false,wrap_type=azure": {
+      "model": "urban_decor:block/azure_wrapped_oven_opaque_open",
+      "y": 270,
+      "uvlock": false
+    },
+    "facing=east,open=true,opaque=true,lit=false,wrap_type=azure": {
+      "model": "urban_decor:block/azure_wrapped_oven_opaque_open",
+      "y": 90,
+      "uvlock": false
+    },
+    "facing=north,open=false,opaque=true,lit=false,wrap_type=azure": {
+      "model": "urban_decor:block/azure_wrapped_oven_opaque",
+      "uvlock": false
+    },
+    "facing=south,open=false,opaque=true,lit=false,wrap_type=azure": {
+      "model": "urban_decor:block/azure_wrapped_oven_opaque",
+      "y": 180,
+      "uvlock": false
+    },
+    "facing=west,open=false,opaque=true,lit=false,wrap_type=azure": {
+      "model": "urban_decor:block/azure_wrapped_oven_opaque",
+      "y": 270,
+      "uvlock": false
+    },
+    "facing=east,open=false,opaque=true,lit=false,wrap_type=azure": {
+      "model": "urban_decor:block/azure_wrapped_oven_opaque",
+      "y": 90,
+      "uvlock": false
+    },
+    "facing=north,open=true,opaque=false,lit=true,wrap_type=azure": {
+      "model": "urban_decor:block/azure_wrapped_oven_open_on",
+      "uvlock": false
+    },
+    "facing=south,open=true,opaque=false,lit=true,wrap_type=azure": {
+      "model": "urban_decor:block/azure_wrapped_oven_open_on",
+      "y": 180,
+      "uvlock": false
+    },
+    "facing=west,open=true,opaque=false,lit=true,wrap_type=azure": {
+      "model": "urban_decor:block/azure_wrapped_oven_open_on",
+      "y": 270,
+      "uvlock": false
+    },
+    "facing=east,open=true,opaque=false,lit=true,wrap_type=azure": {
+      "model": "urban_decor:block/azure_wrapped_oven_open_on",
+      "y": 90,
+      "uvlock": false
+    },
+    "facing=north,open=false,opaque=false,lit=true,wrap_type=azure": {
+      "model": "urban_decor:block/azure_wrapped_oven_on",
+      "uvlock": false
+    },
+    "facing=south,open=false,opaque=false,lit=true,wrap_type=azure": {
+      "model": "urban_decor:block/azure_wrapped_oven_on",
+      "y": 180,
+      "uvlock": false
+    },
+    "facing=west,open=false,opaque=false,lit=true,wrap_type=azure": {
+      "model": "urban_decor:block/azure_wrapped_oven_on",
+      "y": 270,
+      "uvlock": false
+    },
+    "facing=east,open=false,opaque=false,lit=true,wrap_type=azure": {
+      "model": "urban_decor:block/azure_wrapped_oven_on",
+      "y": 90,
+      "uvlock": false
+    },
+    "facing=north,open=true,opaque=true,lit=true,wrap_type=azure": {
+      "model": "urban_decor:block/azure_wrapped_oven_opaque_open_on",
+      "uvlock": false
+    },
+    "facing=south,open=true,opaque=true,lit=true,wrap_type=azure": {
+      "model": "urban_decor:block/azure_wrapped_oven_opaque_open_on",
+      "y": 180,
+      "uvlock": false
+    },
+    "facing=west,open=true,opaque=true,lit=true,wrap_type=azure": {
+      "model": "urban_decor:block/azure_wrapped_oven_opaque_open_on",
+      "y": 270,
+      "uvlock": false
+    },
+    "facing=east,open=true,opaque=true,lit=true,wrap_type=azure": {
+      "model": "urban_decor:block/azure_wrapped_oven_opaque_open_on",
+      "y": 90,
+      "uvlock": false
+    },
+    "facing=north,open=false,opaque=true,lit=true,wrap_type=azure": {
+      "model": "urban_decor:block/azure_wrapped_oven_opaque_on",
+      "uvlock": false
+    },
+    "facing=south,open=false,opaque=true,lit=true,wrap_type=azure": {
+      "model": "urban_decor:block/azure_wrapped_oven_opaque_on",
+      "y": 180,
+      "uvlock": false
+    },
+    "facing=west,open=false,opaque=true,lit=true,wrap_type=azure": {
+      "model": "urban_decor:block/azure_wrapped_oven_opaque_on",
+      "y": 270,
+      "uvlock": false
+    },
+    "facing=east,open=false,opaque=true,lit=true,wrap_type=azure": {
+      "model": "urban_decor:block/azure_wrapped_oven_opaque_on",
+      "y": 90,
+      "uvlock": false
+    },
+
+    "facing=north,open=true,opaque=false,lit=false,wrap_type=ruby": {
+      "model": "urban_decor:block/ruby_wrapped_oven_open",
+      "uvlock": false
+    },
+    "facing=south,open=true,opaque=false,lit=false,wrap_type=ruby": {
+      "model": "urban_decor:block/ruby_wrapped_oven_open",
+      "y": 180,
+      "uvlock": false
+    },
+    "facing=west,open=true,opaque=false,lit=false,wrap_type=ruby": {
+      "model": "urban_decor:block/ruby_wrapped_oven_open",
+      "y": 270,
+      "uvlock": false
+    },
+    "facing=east,open=true,opaque=false,lit=false,wrap_type=ruby": {
+      "model": "urban_decor:block/ruby_wrapped_oven_open",
+      "y": 90,
+      "uvlock": false
+    },
+    "facing=north,open=false,opaque=false,lit=false,wrap_type=ruby": {
+      "model": "urban_decor:block/ruby_wrapped_oven",
+      "uvlock": false
+    },
+    "facing=south,open=false,opaque=false,lit=false,wrap_type=ruby": {
+      "model": "urban_decor:block/ruby_wrapped_oven",
+      "y": 180,
+      "uvlock": false
+    },
+    "facing=west,open=false,opaque=false,lit=false,wrap_type=ruby": {
+      "model": "urban_decor:block/ruby_wrapped_oven",
+      "y": 270,
+      "uvlock": false
+    },
+    "facing=east,open=false,opaque=false,lit=false,wrap_type=ruby": {
+      "model": "urban_decor:block/ruby_wrapped_oven",
+      "y": 90,
+      "uvlock": false
+    },
+    "facing=north,open=true,opaque=true,lit=false,wrap_type=ruby": {
+      "model": "urban_decor:block/ruby_wrapped_oven_opaque_open",
+      "uvlock": false
+    },
+    "facing=south,open=true,opaque=true,lit=false,wrap_type=ruby": {
+      "model": "urban_decor:block/ruby_wrapped_oven_opaque_open",
+      "y": 180,
+      "uvlock": false
+    },
+    "facing=west,open=true,opaque=true,lit=false,wrap_type=ruby": {
+      "model": "urban_decor:block/ruby_wrapped_oven_opaque_open",
+      "y": 270,
+      "uvlock": false
+    },
+    "facing=east,open=true,opaque=true,lit=false,wrap_type=ruby": {
+      "model": "urban_decor:block/ruby_wrapped_oven_opaque_open",
+      "y": 90,
+      "uvlock": false
+    },
+    "facing=north,open=false,opaque=true,lit=false,wrap_type=ruby": {
+      "model": "urban_decor:block/ruby_wrapped_oven_opaque",
+      "uvlock": false
+    },
+    "facing=south,open=false,opaque=true,lit=false,wrap_type=ruby": {
+      "model": "urban_decor:block/ruby_wrapped_oven_opaque",
+      "y": 180,
+      "uvlock": false
+    },
+    "facing=west,open=false,opaque=true,lit=false,wrap_type=ruby": {
+      "model": "urban_decor:block/ruby_wrapped_oven_opaque",
+      "y": 270,
+      "uvlock": false
+    },
+    "facing=east,open=false,opaque=true,lit=false,wrap_type=ruby": {
+      "model": "urban_decor:block/ruby_wrapped_oven_opaque",
+      "y": 90,
+      "uvlock": false
+    },
+    "facing=north,open=true,opaque=false,lit=true,wrap_type=ruby": {
+      "model": "urban_decor:block/ruby_wrapped_oven_open_on",
+      "uvlock": false
+    },
+    "facing=south,open=true,opaque=false,lit=true,wrap_type=ruby": {
+      "model": "urban_decor:block/ruby_wrapped_oven_open_on",
+      "y": 180,
+      "uvlock": false
+    },
+    "facing=west,open=true,opaque=false,lit=true,wrap_type=ruby": {
+      "model": "urban_decor:block/ruby_wrapped_oven_open_on",
+      "y": 270,
+      "uvlock": false
+    },
+    "facing=east,open=true,opaque=false,lit=true,wrap_type=ruby": {
+      "model": "urban_decor:block/ruby_wrapped_oven_open_on",
+      "y": 90,
+      "uvlock": false
+    },
+    "facing=north,open=false,opaque=false,lit=true,wrap_type=ruby": {
+      "model": "urban_decor:block/ruby_wrapped_oven_on",
+      "uvlock": false
+    },
+    "facing=south,open=false,opaque=false,lit=true,wrap_type=ruby": {
+      "model": "urban_decor:block/ruby_wrapped_oven_on",
+      "y": 180,
+      "uvlock": false
+    },
+    "facing=west,open=false,opaque=false,lit=true,wrap_type=ruby": {
+      "model": "urban_decor:block/ruby_wrapped_oven_on",
+      "y": 270,
+      "uvlock": false
+    },
+    "facing=east,open=false,opaque=false,lit=true,wrap_type=ruby": {
+      "model": "urban_decor:block/ruby_wrapped_oven_on",
+      "y": 90,
+      "uvlock": false
+    },
+    "facing=north,open=true,opaque=true,lit=true,wrap_type=ruby": {
+      "model": "urban_decor:block/ruby_wrapped_oven_opaque_open_on",
+      "uvlock": false
+    },
+    "facing=south,open=true,opaque=true,lit=true,wrap_type=ruby": {
+      "model": "urban_decor:block/ruby_wrapped_oven_opaque_open_on",
+      "y": 180,
+      "uvlock": false
+    },
+    "facing=west,open=true,opaque=true,lit=true,wrap_type=ruby": {
+      "model": "urban_decor:block/ruby_wrapped_oven_opaque_open_on",
+      "y": 270,
+      "uvlock": false
+    },
+    "facing=east,open=true,opaque=true,lit=true,wrap_type=ruby": {
+      "model": "urban_decor:block/ruby_wrapped_oven_opaque_open_on",
+      "y": 90,
+      "uvlock": false
+    },
+    "facing=north,open=false,opaque=true,lit=true,wrap_type=ruby": {
+      "model": "urban_decor:block/ruby_wrapped_oven_opaque_on",
+      "uvlock": false
+    },
+    "facing=south,open=false,opaque=true,lit=true,wrap_type=ruby": {
+      "model": "urban_decor:block/ruby_wrapped_oven_opaque_on",
+      "y": 180,
+      "uvlock": false
+    },
+    "facing=west,open=false,opaque=true,lit=true,wrap_type=ruby": {
+      "model": "urban_decor:block/ruby_wrapped_oven_opaque_on",
+      "y": 270,
+      "uvlock": false
+    },
+    "facing=east,open=false,opaque=true,lit=true,wrap_type=ruby": {
+      "model": "urban_decor:block/ruby_wrapped_oven_opaque_on",
       "y": 90,
       "uvlock": false
     }

@@ -1,0 +1,7 @@
+{
+  "parent": "urban_decor:block/washing_machine_open",
+  "textures": {
+    "0": "urban_decor:block/daffodil_wrapped_washing_machine",
+    "particle": "urban_decor:block/daffodil_wrapped_porcelain_block"
+  }
+}

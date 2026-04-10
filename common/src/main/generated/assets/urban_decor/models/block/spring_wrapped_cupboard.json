@@ -1,0 +1,7 @@
+{
+  "parent": "urban_decor:block/cupboard",
+  "textures": {
+    "0": "urban_decor:block/spring_wrapped_cupboard",
+    "particle": "urban_decor:block/spring_wrapped_porcelain_block"
+  }
+}

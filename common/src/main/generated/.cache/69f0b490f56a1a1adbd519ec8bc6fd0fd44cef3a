@@ -1,4 +1,4 @@
-// 1.21.1	2026-04-10T05:24:50.4219596	Urban Decor/Block Loot Tables
+// 1.21.1	2026-04-10T06:12:12.1728716	Urban Decor/Block Loot Tables
 f79d4cac91214d92089ab9b1058d4039e4bc7bf7 data\urban_decor\loot_table\blocks\lime_plastic_lights.json
 7bfd918eb946d88af1a31f717a6267cdeceffede data\urban_decor\loot_table\blocks\brown_towel.json
 f7f1e8f99a1cf75caea5706ccc3f5bacb1e0acfb data\urban_decor\loot_table\blocks\towel_bar_lavender_towel.json
@@ -207,8 +207,8 @@ d2d289c5226572573b1355f78c2e6c0810f52389 data\urban_decor\loot_table\blocks\dark
 3c9126ce6664b827822efbba7715eea0199b1820 data\urban_decor\loot_table\blocks\orange_plastic_lights.json
 82d278ffe08d902aad1bab7c4cd13832fc1fb466 data\urban_decor\loot_table\blocks\birch_box.json
 47ab1e642ce5dec1accf5594a0cead9950ec87ab data\urban_decor\loot_table\blocks\dark_sink.json
-01c6422d15677ca78b66941fe2abe516c3a23dad data\urban_decor\loot_table\blocks\green_wall_picture_frame.json
 ec18e9f57ff0f54fb6a3a7f116361fcb866708cb data\urban_decor\loot_table\blocks\yellow_plastic_lights.json
+01c6422d15677ca78b66941fe2abe516c3a23dad data\urban_decor\loot_table\blocks\green_wall_picture_frame.json
 7211b454d9a51ef77f00f97b3925667e5ee0443d data\urban_decor\loot_table\blocks\umber_plastic_lights.json
 db52ea4b923b6ea25eabfd58542dc791eefe0140 data\urban_decor\loot_table\blocks\black_towel_block.json
 8232cfe35c311c754e5a1dbccf8d02690d12708e data\urban_decor\loot_table\blocks\black_plastic_lights.json

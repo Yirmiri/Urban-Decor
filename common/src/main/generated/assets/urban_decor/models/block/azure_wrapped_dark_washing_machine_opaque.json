@@ -1,0 +1,7 @@
+{
+  "parent": "urban_decor:block/dark_washing_machine_opaque",
+  "textures": {
+    "0": "urban_decor:block/azure_wrapped_dark_washing_machine",
+    "particle": "urban_decor:block/azure_wrapped_porcelain_block"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "parent": "urban_decor:block/dark_oven",
+  "textures": {
+    "0": "urban_decor:block/cherry_wrapped_dark_oven",
+    "particle": "urban_decor:block/cherry_wrapped_porcelain_block"
+  }
+}

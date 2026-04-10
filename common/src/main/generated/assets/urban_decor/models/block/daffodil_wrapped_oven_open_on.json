@@ -1,0 +1,7 @@
+{
+  "parent": "urban_decor:block/oven_open_on",
+  "textures": {
+    "0": "urban_decor:block/daffodil_wrapped_oven_on",
+    "particle": "urban_decor:block/daffodil_wrapped_porcelain_block"
+  }
+}

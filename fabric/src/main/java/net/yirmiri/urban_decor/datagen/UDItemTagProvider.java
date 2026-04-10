@@ -73,6 +73,16 @@ public class UDItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(UDBlocks.DARK_DRYER.get().asItem())
                 .add(UDBlocks.FREEZER.get().asItem())
                 .add(UDBlocks.DARK_FREEZER.get().asItem())
+                .add(UDBlocks.BATHTUB.get().asItem())
+                .add(UDBlocks.DARK_BATHTUB.get().asItem())
+                .add(UDBlocks.OVEN.get().asItem())
+                .add(UDBlocks.DARK_OVEN.get().asItem())
+                .add(UDBlocks.SINK.get().asItem())
+                .add(UDBlocks.DARK_SINK.get().asItem())
+                .add(UDBlocks.TOILET.get().asItem())
+                .add(UDBlocks.DARK_TOILET.get().asItem())
+                .add(UDBlocks.WASHING_MACHINE.get().asItem())
+                .add(UDBlocks.DARK_WASHING_MACHINE.get().asItem())
         ;
 
         for (WrapColor colors : WrapColor.values()) {
