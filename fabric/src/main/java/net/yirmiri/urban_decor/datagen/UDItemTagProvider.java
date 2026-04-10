@@ -45,7 +45,7 @@ public class UDItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(UDBlocks.TOILET_PAPER.get().asItem())
                 .add(UDBlocks.FLOOR_LAMP.get().asItem())
                 .add(UDBlocks.TURBINE.get().asItem())
-                .add(UDBlocks.PLASTIC_TABLE.get().asItem())
+                .add(UDBlocks.PORCELAIN_TABLE.get().asItem())
         ;
 
         getOrCreateTagBuilder(UDTags.ItemT.HAS_WRAPPED_VARIANTS)
@@ -60,7 +60,7 @@ public class UDItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(UDBlocks.BAMBOO_BOX.get().asItem())
                 .add(UDBlocks.CRIMSON_BOX.get().asItem())
                 .add(UDBlocks.WARPED_BOX.get().asItem())
-                .add(UDBlocks.PLASTIC_TABLE.get().asItem())
+                .add(UDBlocks.PORCELAIN_TABLE.get().asItem())
                 .add(UDBlocks.CASH_REGISTER.get().asItem())
                 .add(UDBlocks.DARK_CASH_REGISTER.get().asItem())
         ;

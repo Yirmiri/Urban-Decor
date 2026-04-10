@@ -111,7 +111,7 @@ public class UDCreativeTabs {
 
                         entry.accept(UDBlocks.PLASTIC_CHAIR.get());
                         entry.accept(UDBlocks.STAINLESS_STEEL_CHAIR.get());
-                        entry.accept(UDBlocks.PLASTIC_TABLE.get());
+                        entry.accept(UDBlocks.PORCELAIN_TABLE.get());
 
                         entry.accept(UDBlocks.WALL_CLOCK.get());
                         entry.accept(UDBlocks.OAK_GRANDFATHER_CLOCK.get());
@@ -190,16 +190,26 @@ public class UDCreativeTabs {
                         entry.accept(UDBlocks.getDyedTowelBlocks(DyeColor.BLACK.getId()).get());
                         entry.accept(UDBlocks.getDyedTowelBlocks(DyeColor.BROWN.getId()).get());
                         entry.accept(UDBlocks.getDyedTowelBlocks(DyeColor.RED.getId()).get());
+                        if (RLServices.PLATFORM.isModLoaded("delicate_dyes")) entry.accept(UDBlocks.getDyedTowelBlocks(DyeColor.valueOf("DD_CORAL").getId()).get());
+                        if (RLServices.PLATFORM.isModLoaded("delicate_dyes")) entry.accept(UDBlocks.getDyedTowelBlocks(DyeColor.valueOf("DD_UMBER").getId()).get());
                         entry.accept(UDBlocks.getDyedTowelBlocks(DyeColor.ORANGE.getId()).get());
                         entry.accept(UDBlocks.getDyedTowelBlocks(DyeColor.YELLOW.getId()).get());
+                        if (RLServices.PLATFORM.isModLoaded("delicate_dyes")) entry.accept(UDBlocks.getDyedTowelBlocks(DyeColor.valueOf("DD_CANARY").getId()).get());
+                        if (RLServices.PLATFORM.isModLoaded("delicate_dyes")) entry.accept(UDBlocks.getDyedTowelBlocks(DyeColor.valueOf("DD_WASABI").getId()).get());
                         entry.accept(UDBlocks.getDyedTowelBlocks(DyeColor.LIME.getId()).get());
                         entry.accept(UDBlocks.getDyedTowelBlocks(DyeColor.GREEN.getId()).get());
+                        if (RLServices.PLATFORM.isModLoaded("delicate_dyes")) entry.accept(UDBlocks.getDyedTowelBlocks(DyeColor.valueOf("DD_SACRAMENTO").getId()).get());
                         entry.accept(UDBlocks.getDyedTowelBlocks(DyeColor.CYAN.getId()).get());
+                        if (RLServices.PLATFORM.isModLoaded("delicate_dyes")) entry.accept(UDBlocks.getDyedTowelBlocks(DyeColor.valueOf("DD_SKY").getId()).get());
                         entry.accept(UDBlocks.getDyedTowelBlocks(DyeColor.LIGHT_BLUE.getId()).get());
                         entry.accept(UDBlocks.getDyedTowelBlocks(DyeColor.BLUE.getId()).get());
+                        if (RLServices.PLATFORM.isModLoaded("delicate_dyes")) entry.accept(UDBlocks.getDyedTowelBlocks(DyeColor.valueOf("DD_BLURPLE").getId()).get());
                         entry.accept(UDBlocks.getDyedTowelBlocks(DyeColor.PURPLE.getId()).get());
+                        if (RLServices.PLATFORM.isModLoaded("delicate_dyes")) entry.accept(UDBlocks.getDyedTowelBlocks(DyeColor.valueOf("DD_LAVENDER").getId()).get());
                         entry.accept(UDBlocks.getDyedTowelBlocks(DyeColor.MAGENTA.getId()).get());
+                        if (RLServices.PLATFORM.isModLoaded("delicate_dyes")) entry.accept(UDBlocks.getDyedTowelBlocks(DyeColor.valueOf("DD_SANGRIA").getId()).get());
                         entry.accept(UDBlocks.getDyedTowelBlocks(DyeColor.PINK.getId()).get());
+                        if (RLServices.PLATFORM.isModLoaded("delicate_dyes")) entry.accept(UDBlocks.getDyedTowelBlocks(DyeColor.valueOf("DD_ROSE").getId()).get());
 
                         entry.accept(UDBlocks.getDyedTowels(DyeColor.WHITE.getId()).get());
                         entry.accept(UDBlocks.getDyedTowels(DyeColor.LIGHT_GRAY.getId()).get());
@@ -207,16 +217,27 @@ public class UDCreativeTabs {
                         entry.accept(UDBlocks.getDyedTowels(DyeColor.BLACK.getId()).get());
                         entry.accept(UDBlocks.getDyedTowels(DyeColor.BROWN.getId()).get());
                         entry.accept(UDBlocks.getDyedTowels(DyeColor.RED.getId()).get());
+                        if (RLServices.PLATFORM.isModLoaded("delicate_dyes")) entry.accept(UDBlocks.getDyedTowels(DyeColor.valueOf("DD_CORAL").getId()).get());
+                        if (RLServices.PLATFORM.isModLoaded("delicate_dyes")) entry.accept(UDBlocks.getDyedTowels(DyeColor.valueOf("DD_UMBER").getId()).get());
                         entry.accept(UDBlocks.getDyedTowels(DyeColor.ORANGE.getId()).get());
                         entry.accept(UDBlocks.getDyedTowels(DyeColor.YELLOW.getId()).get());
+                        if (RLServices.PLATFORM.isModLoaded("delicate_dyes")) entry.accept(UDBlocks.getDyedTowels(DyeColor.valueOf("DD_CANARY").getId()).get());
+                        if (RLServices.PLATFORM.isModLoaded("delicate_dyes")) entry.accept(UDBlocks.getDyedTowels(DyeColor.valueOf("DD_WASABI").getId()).get());
                         entry.accept(UDBlocks.getDyedTowels(DyeColor.LIME.getId()).get());
                         entry.accept(UDBlocks.getDyedTowels(DyeColor.GREEN.getId()).get());
+                        if (RLServices.PLATFORM.isModLoaded("delicate_dyes")) entry.accept(UDBlocks.getDyedTowels(DyeColor.valueOf("DD_SACRAMENTO").getId()).get());
                         entry.accept(UDBlocks.getDyedTowels(DyeColor.CYAN.getId()).get());
+                        if (RLServices.PLATFORM.isModLoaded("delicate_dyes")) entry.accept(UDBlocks.getDyedTowels(DyeColor.valueOf("DD_SKY").getId()).get());
                         entry.accept(UDBlocks.getDyedTowels(DyeColor.LIGHT_BLUE.getId()).get());
                         entry.accept(UDBlocks.getDyedTowels(DyeColor.BLUE.getId()).get());
+                        if (RLServices.PLATFORM.isModLoaded("delicate_dyes")) entry.accept(UDBlocks.getDyedTowels(DyeColor.valueOf("DD_BLURPLE").getId()).get());
                         entry.accept(UDBlocks.getDyedTowels(DyeColor.PURPLE.getId()).get());
+                        if (RLServices.PLATFORM.isModLoaded("delicate_dyes")) entry.accept(UDBlocks.getDyedTowels(DyeColor.valueOf("DD_LAVENDER").getId()).get());
                         entry.accept(UDBlocks.getDyedTowels(DyeColor.MAGENTA.getId()).get());
+                        if (RLServices.PLATFORM.isModLoaded("delicate_dyes")) entry.accept(UDBlocks.getDyedTowels(DyeColor.valueOf("DD_SANGRIA").getId()).get());
                         entry.accept(UDBlocks.getDyedTowels(DyeColor.PINK.getId()).get());
+                        if (RLServices.PLATFORM.isModLoaded("delicate_dyes")) entry.accept(UDBlocks.getDyedTowels(DyeColor.valueOf("DD_ROSE").getId()).get());
+
 
                         entry.accept(UDItems.PICTURE_FRAME.get());
                         entry.accept(UDItems.getDyedPictureFrames(DyeColor.WHITE.getId()).get());
@@ -225,16 +246,27 @@ public class UDCreativeTabs {
                         entry.accept(UDItems.getDyedPictureFrames(DyeColor.BLACK.getId()).get());
                         entry.accept(UDItems.getDyedPictureFrames(DyeColor.BROWN.getId()).get());
                         entry.accept(UDItems.getDyedPictureFrames(DyeColor.RED.getId()).get());
+                        if (RLServices.PLATFORM.isModLoaded("delicate_dyes")) entry.accept(UDItems.getDyedPictureFrames(DyeColor.valueOf("DD_CORAL").getId()).get());
+                        if (RLServices.PLATFORM.isModLoaded("delicate_dyes")) entry.accept(UDItems.getDyedPictureFrames(DyeColor.valueOf("DD_UMBER").getId()).get());
                         entry.accept(UDItems.getDyedPictureFrames(DyeColor.ORANGE.getId()).get());
                         entry.accept(UDItems.getDyedPictureFrames(DyeColor.YELLOW.getId()).get());
+                        if (RLServices.PLATFORM.isModLoaded("delicate_dyes")) entry.accept(UDItems.getDyedPictureFrames(DyeColor.valueOf("DD_CANARY").getId()).get());
+                        if (RLServices.PLATFORM.isModLoaded("delicate_dyes")) entry.accept(UDItems.getDyedPictureFrames(DyeColor.valueOf("DD_WASABI").getId()).get());
                         entry.accept(UDItems.getDyedPictureFrames(DyeColor.LIME.getId()).get());
                         entry.accept(UDItems.getDyedPictureFrames(DyeColor.GREEN.getId()).get());
+                        if (RLServices.PLATFORM.isModLoaded("delicate_dyes")) entry.accept(UDItems.getDyedPictureFrames(DyeColor.valueOf("DD_SACRAMENTO").getId()).get());
                         entry.accept(UDItems.getDyedPictureFrames(DyeColor.CYAN.getId()).get());
+                        if (RLServices.PLATFORM.isModLoaded("delicate_dyes")) entry.accept(UDItems.getDyedPictureFrames(DyeColor.valueOf("DD_SKY").getId()).get());
                         entry.accept(UDItems.getDyedPictureFrames(DyeColor.LIGHT_BLUE.getId()).get());
                         entry.accept(UDItems.getDyedPictureFrames(DyeColor.BLUE.getId()).get());
+                        if (RLServices.PLATFORM.isModLoaded("delicate_dyes")) entry.accept(UDItems.getDyedPictureFrames(DyeColor.valueOf("DD_BLURPLE").getId()).get());
                         entry.accept(UDItems.getDyedPictureFrames(DyeColor.PURPLE.getId()).get());
+                        if (RLServices.PLATFORM.isModLoaded("delicate_dyes")) entry.accept(UDItems.getDyedPictureFrames(DyeColor.valueOf("DD_LAVENDER").getId()).get());
                         entry.accept(UDItems.getDyedPictureFrames(DyeColor.MAGENTA.getId()).get());
+                        if (RLServices.PLATFORM.isModLoaded("delicate_dyes")) entry.accept(UDItems.getDyedPictureFrames(DyeColor.valueOf("DD_SANGRIA").getId()).get());
                         entry.accept(UDItems.getDyedPictureFrames(DyeColor.PINK.getId()).get());
+                        if (RLServices.PLATFORM.isModLoaded("delicate_dyes")) entry.accept(UDItems.getDyedPictureFrames(DyeColor.valueOf("DD_ROSE").getId()).get());
+
 
                         entry.accept(UDBlocks.PLASTIC_LIGHTS.get());
                         entry.accept(UDBlocks.getDyedPlasticLights(DyeColor.WHITE.getId()).get());
@@ -243,16 +275,27 @@ public class UDCreativeTabs {
                         entry.accept(UDBlocks.getDyedPlasticLights(DyeColor.BLACK.getId()).get());
                         entry.accept(UDBlocks.getDyedPlasticLights(DyeColor.BROWN.getId()).get());
                         entry.accept(UDBlocks.getDyedPlasticLights(DyeColor.RED.getId()).get());
+                        if (RLServices.PLATFORM.isModLoaded("delicate_dyes")) entry.accept(UDBlocks.getDyedPlasticLights(DyeColor.valueOf("DD_CORAL").getId()).get());
+                        if (RLServices.PLATFORM.isModLoaded("delicate_dyes")) entry.accept(UDBlocks.getDyedPlasticLights(DyeColor.valueOf("DD_UMBER").getId()).get());
                         entry.accept(UDBlocks.getDyedPlasticLights(DyeColor.ORANGE.getId()).get());
                         entry.accept(UDBlocks.getDyedPlasticLights(DyeColor.YELLOW.getId()).get());
+                        if (RLServices.PLATFORM.isModLoaded("delicate_dyes")) entry.accept(UDBlocks.getDyedPlasticLights(DyeColor.valueOf("DD_CANARY").getId()).get());
+                        if (RLServices.PLATFORM.isModLoaded("delicate_dyes")) entry.accept(UDBlocks.getDyedPlasticLights(DyeColor.valueOf("DD_WASABI").getId()).get());
                         entry.accept(UDBlocks.getDyedPlasticLights(DyeColor.LIME.getId()).get());
                         entry.accept(UDBlocks.getDyedPlasticLights(DyeColor.GREEN.getId()).get());
+                        if (RLServices.PLATFORM.isModLoaded("delicate_dyes")) entry.accept(UDBlocks.getDyedPlasticLights(DyeColor.valueOf("DD_SACRAMENTO").getId()).get());
                         entry.accept(UDBlocks.getDyedPlasticLights(DyeColor.CYAN.getId()).get());
+                        if (RLServices.PLATFORM.isModLoaded("delicate_dyes")) entry.accept(UDBlocks.getDyedPlasticLights(DyeColor.valueOf("DD_SKY").getId()).get());
                         entry.accept(UDBlocks.getDyedPlasticLights(DyeColor.LIGHT_BLUE.getId()).get());
                         entry.accept(UDBlocks.getDyedPlasticLights(DyeColor.BLUE.getId()).get());
+                        if (RLServices.PLATFORM.isModLoaded("delicate_dyes")) entry.accept(UDBlocks.getDyedPlasticLights(DyeColor.valueOf("DD_BLURPLE").getId()).get());
                         entry.accept(UDBlocks.getDyedPlasticLights(DyeColor.PURPLE.getId()).get());
+                        if (RLServices.PLATFORM.isModLoaded("delicate_dyes")) entry.accept(UDBlocks.getDyedPlasticLights(DyeColor.valueOf("DD_LAVENDER").getId()).get());
                         entry.accept(UDBlocks.getDyedPlasticLights(DyeColor.MAGENTA.getId()).get());
+                        if (RLServices.PLATFORM.isModLoaded("delicate_dyes")) entry.accept(UDBlocks.getDyedPlasticLights(DyeColor.valueOf("DD_SANGRIA").getId()).get());
                         entry.accept(UDBlocks.getDyedPlasticLights(DyeColor.PINK.getId()).get());
+                        if (RLServices.PLATFORM.isModLoaded("delicate_dyes")) entry.accept(UDBlocks.getDyedPlasticLights(DyeColor.valueOf("DD_ROSE").getId()).get());
+
             }).build());
 
     public static void loadItemGroups() {

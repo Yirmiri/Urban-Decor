@@ -100,11 +100,9 @@ public class UDBlocks {
     public static final Supplier<Block> CASH_REGISTER = register("cash_register", () -> new CashRegisterBlock(UDProperties.BlockP.CASH_REGISTER), true);
     public static final Supplier<Block> DARK_CASH_REGISTER = register("dark_cash_register", () -> new CashRegisterBlock(UDProperties.BlockP.CASH_REGISTER), true);
     public static final Supplier<Block> VENDING_MACHINE = register("vending_machine", () -> new VendingMachineBlock(UDProperties.BlockP.VENDING), true);
-
-    //PLASTIC
+    public static final Supplier<Block> PORCELAIN_TABLE = register("porcelain_table", () -> new PorcelainTableBlock(UDProperties.BlockP.PORCELAIN_TABLE), true);
     public static final Supplier<Block> WALL_CLOCK = register("wall_clock", () -> new WallClockBlock(UDProperties.BlockP.WALL_CLOCK), true);
     public static final Supplier<Block> PLASTIC_CHAIR = register("plastic_chair", () -> new PlasticChairBlock(UDProperties.BlockP.PLASTIC_CHAIR), true);
-    public static final Supplier<Block> PLASTIC_TABLE = register("plastic_table", () -> new PlasticDeskTableBlock(UDProperties.BlockP.PLASTIC_TABLE), true);
 
     //WOODEN
     public static final Supplier<Block> OAK_PIANO = register("oak_piano", () -> new PianoBlock(UDProperties.BlockP.PIANO), true);

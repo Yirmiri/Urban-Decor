@@ -21,6 +21,9 @@ dependencies {
     modImplementation "net.fabricmc.fabric-api:fabric-api:${fabric_version}"
     //RUNICLIB
     modImplementation "curse.maven:runiclib-880879:${fabric_runiclib}"
+
+    //INTEGRATION
+    modImplementation files("fabric-delicate_dyes-1.21.1-2.0.0.jar")
 }
 
 loom {

@@ -87,7 +87,7 @@ public class UDProperties {
         public static final BlockBehaviour.Properties SATELLITE_DISH = BlockBehaviour.Properties.ofFullCopy(Blocks.WHITE_WOOL).strength(0.5F).mapColor(MapColor.COLOR_GRAY).sound(UDSoundTypes.STEEL).noCollission();
         public static final BlockBehaviour.Properties SHOWER = BlockBehaviour.Properties.ofFullCopy(Blocks.WHITE_WOOL).strength(0.3F).mapColor(MapColor.COLOR_GRAY).sound(UDSoundTypes.STEEL);
         public static final BlockBehaviour.Properties PLASTIC_CHAIR = BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_WOOD).mapColor(MapColor.STONE).sound(UDSoundTypes.PLASTIC).strength(0.8F, 0.5F);
-        public static final BlockBehaviour.Properties PLASTIC_TABLE = BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_WOOD).mapColor(MapColor.STONE).sound(UDSoundTypes.STEEL).strength(1.0F, 0.8F);
+        public static final BlockBehaviour.Properties PORCELAIN_TABLE = BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_WOOD).mapColor(MapColor.STONE).sound(UDSoundTypes.STEEL).strength(1.0F, 0.8F);
         public static final BlockBehaviour.Properties STAINLESS_STEEL_CHAIR = BlockBehaviour.Properties.ofFullCopy(Blocks.IRON_BLOCK).sound(UDSoundTypes.STEEL).strength(1.5F, 2.0F);
     }
 

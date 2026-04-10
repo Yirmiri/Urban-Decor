@@ -46,11 +46,12 @@ public class UDLangProvider extends FabricLanguageProvider {
         build.add("itemgroup.urban_decor", "Urban Decor");
         build.add("urban_decor.calendar.day", "Today is Day");
         build.add("urban_decor.calendar.year", "Year");
+        build.add("urban_decor.calendar.till_new_years", "days until New Years");
         build.add("urban_decor.clock", "It is currently");
 
         //TOOLTIPS
-        build.add("item.urban_decor.toolbox.use", "When used on blocks:");
-        build.add("item.urban_decor.toolbox.desc", "Can Change Variants of Specific Blocks");
+        build.add("item.urban_decor.toolbox.use", "Interact on Block:");
+        build.add("item.urban_decor.toolbox.desc", "Cycles Variant Type");
         build.add("tooltip.urban_decor.toolboxable", "Has toolbox variants");
         build.add("tooltip.urban_decor.wrappable", "Can be wrapped");
 
@@ -176,7 +177,7 @@ public class UDLangProvider extends FabricLanguageProvider {
         build.add(UDBlocks.BAMBOO_BOX.get(), "Bamboo Box");
         build.add(UDBlocks.CRIMSON_BOX.get(), "Crimson Box");
         build.add(UDBlocks.WARPED_BOX.get(), "Warped Box");
-        build.add(UDBlocks.PLASTIC_TABLE.get(), "Plastic Table");
+        build.add(UDBlocks.PORCELAIN_TABLE.get(), "Porcelain Table");
         build.add(UDBlocks.STAINLESS_STEEL_CHAIR.get(), "Stainless Steel Chair");
         build.add(UDBlocks.PLASTIC_LIGHTS.get(), "Plastic Lights");
         build.add(UDBlocks.CASH_REGISTER.get(), "Cash Register");
@@ -246,8 +247,8 @@ public class UDLangProvider extends FabricLanguageProvider {
         build.add("toolbox.turbine.variant_1", "Variant: Vent");
         build.add("toolbox.floor_lamp.variant_true", "Variant: Free");
         build.add("toolbox.floor_lamp.variant_false", "Variant: Shade");
-        build.add("toolbox.plastic_table.variant_0", "Variant: Quad Legged");
-        build.add("toolbox.plastic_table.variant_1", "Variant: Single Legged");
+        build.add("toolbox.porcelain_table.variant_0", "Variant: Quad Legged");
+        build.add("toolbox.porcelain_table.variant_1", "Variant: Single Legged");
 
         //DAMAGE
         build.add("death.attack.urban_decor.toaster", "%1$s likes to play with hot toasters");
@@ -411,7 +412,7 @@ public class UDLangProvider extends FabricLanguageProvider {
         build.add(YT_ID + "block." + MOD_ID + "bamboo_box.desc", "Handle with care!, constructed from bamboo planks");
         build.add(YT_ID + "block." + MOD_ID + "crimson_box.desc", "Handle with care!, constructed from crimson planks");
         build.add(YT_ID + "block." + MOD_ID + "warped_box.desc", "Handle with care!, constructed from warped planks");
-        build.add(YT_ID + "block." + MOD_ID + "plastic_table.desc", "A useful decorative that is commonly used for having even more decorations");
+        build.add(YT_ID + "block." + MOD_ID + "porcelain_table.desc", "A useful decorative that is commonly used for having even more decorations");
         build.add(YT_ID + "block." + MOD_ID + "stainless_steel_chair.desc", "A chair that is great at reducing space due to it's ability to fold");
         build.add(YT_ID + "block." + MOD_ID + "plastic_lights.desc", "A light to brighten the mood!");
         build.add(YT_ID + "block." + MOD_ID + "cash_register.desc", "A dollar a day keeps the devil away!");

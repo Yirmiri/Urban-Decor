@@ -5,7 +5,8 @@ import net.minecraft.core.registries.BuiltInRegistries;
 
 public class UDRegistryAliases {
     public static void load() {
-        blockAlias(UrbanDecor.MOD_ID, "plastic_desk_table", UrbanDecor.MOD_ID, "plastic_table");
+        blockAlias(UrbanDecor.MOD_ID, "plastic_desk_table", UrbanDecor.MOD_ID, "porcelain_table");
+        itemAlias(UrbanDecor.MOD_ID, "plastic_desk_table", UrbanDecor.MOD_ID, "porcelain_table");
     }
 
     private static void blockAlias(String originalModId, String originalId, String newModId, String newId) {

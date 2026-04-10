@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "urban_decor:polypropylene"
+    },
+    "@": {
+      "item": "delicate_dyes:canary_dye"
+    }
+  },
+  "pattern": [
+    " # ",
+    "#@#",
+    " # "
+  ],
+  "result": {
+    "count": 4,
+    "id": "urban_decor:canary_picture_frame"
+  }
+}

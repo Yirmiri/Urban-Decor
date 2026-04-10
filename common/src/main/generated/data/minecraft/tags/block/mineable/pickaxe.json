@@ -1,6 +1,7 @@
 {
   "values": [
     "#urban_decor:mineable_with_axe_and_pickaxe",
+    "urban_decor:porcelain_table",
     "urban_decor:stainless_steel_chair",
     "urban_decor:dark_porcelain_block",
     "urban_decor:dark_porcelain_stairs",
@@ -94,6 +95,16 @@
     "urban_decor:towel_bar_brown_towel",
     "urban_decor:towel_bar_green_towel",
     "urban_decor:towel_bar_red_towel",
-    "urban_decor:towel_bar_black_towel"
+    "urban_decor:towel_bar_black_towel",
+    "urban_decor:towel_bar_coral_towel",
+    "urban_decor:towel_bar_umber_towel",
+    "urban_decor:towel_bar_canary_towel",
+    "urban_decor:towel_bar_wasabi_towel",
+    "urban_decor:towel_bar_sacramento_towel",
+    "urban_decor:towel_bar_sky_towel",
+    "urban_decor:towel_bar_blurple_towel",
+    "urban_decor:towel_bar_lavender_towel",
+    "urban_decor:towel_bar_sangria_towel",
+    "urban_decor:towel_bar_rose_towel"
   ]
 }

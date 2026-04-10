@@ -79,6 +79,56 @@
     {
       "id": "excessive_building:mallet",
       "required": false
+    },
+    "urban_decor:coral_towel",
+    {
+      "id": "excessive_building:mallet",
+      "required": false
+    },
+    "urban_decor:umber_towel",
+    {
+      "id": "excessive_building:mallet",
+      "required": false
+    },
+    "urban_decor:canary_towel",
+    {
+      "id": "excessive_building:mallet",
+      "required": false
+    },
+    "urban_decor:wasabi_towel",
+    {
+      "id": "excessive_building:mallet",
+      "required": false
+    },
+    "urban_decor:sacramento_towel",
+    {
+      "id": "excessive_building:mallet",
+      "required": false
+    },
+    "urban_decor:sky_towel",
+    {
+      "id": "excessive_building:mallet",
+      "required": false
+    },
+    "urban_decor:blurple_towel",
+    {
+      "id": "excessive_building:mallet",
+      "required": false
+    },
+    "urban_decor:lavender_towel",
+    {
+      "id": "excessive_building:mallet",
+      "required": false
+    },
+    "urban_decor:sangria_towel",
+    {
+      "id": "excessive_building:mallet",
+      "required": false
+    },
+    "urban_decor:rose_towel",
+    {
+      "id": "excessive_building:mallet",
+      "required": false
     }
   ]
 }
