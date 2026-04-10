@@ -15,6 +15,14 @@
     "urban_decor:cash_register",
     "urban_decor:dark_cash_register",
     "urban_decor:fridge",
-    "urban_decor:dark_fridge"
+    "urban_decor:dark_fridge",
+    "urban_decor:cupboard",
+    "urban_decor:dark_cupboard",
+    "urban_decor:dishwasher",
+    "urban_decor:dark_dishwasher",
+    "urban_decor:dryer",
+    "urban_decor:dark_dryer",
+    "urban_decor:freezer",
+    "urban_decor:dark_freezer"
   ]
 }

@@ -36,8 +36,10 @@ import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import net.yirmiri.urban_decor.common.block.entity.ToasterBlockEntity;
+import net.yirmiri.urban_decor.common.util.UDUtils;
 import net.yirmiri.urban_decor.core.init.UDDamageTypes;
 import net.yirmiri.urban_decor.core.registry.UDBlockEntities;
+import net.yirmiri.urban_decor.core.registry.UDSounds;
 
 import java.util.Optional;
 
@@ -67,7 +69,7 @@ public class ToasterBlock extends BaseEntityBlock implements SimpleWaterloggedBl
     public ItemInteractionResult useItemOn(ItemStack stack, BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hitResult) {
         if (player.getMainHandItem().isEmpty()) {
             level.setBlockAndUpdate(pos, state.cycle(LIT));
-            level.playLocalSound(pos.getX(), pos.getY(), pos.getZ(), SoundEvents.CHERRY_WOOD_BUTTON_CLICK_ON, SoundSource.BLOCKS, 0.8F, 1.0F, false);
+            UDUtils.playSound(level, pos, state, SoundEvents.CHERRY_WOOD_BUTTON_CLICK_ON);
         } else if (level.getBlockEntity(pos) instanceof ToasterBlockEntity toasterBlockEntity) {
             ItemStack itemStack = player.getItemInHand(hand);
             Optional<RecipeHolder<CampfireCookingRecipe>> optional = toasterBlockEntity.getCookableRecipe(itemStack);

@@ -1,0 +1,7 @@
+{
+  "parent": "urban_decor:block/dark_dryer_open",
+  "textures": {
+    "0": "urban_decor:block/cherry_wrapped_dark_dryer",
+    "particle": "urban_decor:block/cherry_wrapped_porcelain_block"
+  }
+}

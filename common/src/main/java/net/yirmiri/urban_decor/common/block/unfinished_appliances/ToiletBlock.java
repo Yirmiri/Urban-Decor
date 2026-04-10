@@ -25,6 +25,7 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 import net.yirmiri.urban_decor.common.block.abstracts.AbstractDecorBlock;
 import net.yirmiri.urban_decor.common.util.UDUtils;
 import net.yirmiri.urban_decor.core.init.UDTags;
+import net.yirmiri.urban_decor.core.registry.UDSounds;
 
 import java.util.stream.Stream;
 
@@ -77,9 +78,9 @@ public class ToiletBlock extends AbstractDecorBlock {
             if (player.isShiftKeyDown()) {
                 level.setBlockAndUpdate(pos, state.cycle(OPEN));
                 if (state.getValue(OPEN)) {
-                    level.playLocalSound(pos.getX(), pos.getY(), pos.getZ(), SoundEvents.CHERRY_WOOD_DOOR_CLOSE, SoundSource.BLOCKS, 1.0F, 1.0F, false);
+                    UDUtils.playSound(level, pos, state, SoundEvents.CHERRY_WOOD_DOOR_CLOSE);
                 } else if (!state.getValue(OPEN)) {
-                    level.playLocalSound(pos.getX(), pos.getY(), pos.getZ(), SoundEvents.CHERRY_WOOD_DOOR_OPEN, SoundSource.BLOCKS, 1.0F, 1.0F, false);
+                    UDUtils.playSound(level, pos, state, SoundEvents.CHERRY_WOOD_DOOR_OPEN);
                 }
                 return InteractionResult.SUCCESS;
             } else if (UDUtils.canSitOn(state, pos, level, player)) {

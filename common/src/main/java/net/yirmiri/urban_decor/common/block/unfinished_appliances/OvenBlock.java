@@ -68,9 +68,9 @@ public class OvenBlock extends AbstractSmokerDecorBlock {
             if (player.isShiftKeyDown()) {
                 level.setBlockAndUpdate(pos, state.cycle(OPEN).cycle(TRUE_OPEN));
                 if (state.getValue(OPEN)) {
-                    level.playLocalSound(pos.getX(), pos.getY(), pos.getZ(), UDSounds.METALLIC_CLOSE.get(), SoundSource.BLOCKS, 1.0F, 1.0F, false);
+                    UDUtils.playSound(level, pos, state, UDSounds.METALLIC_CLOSE.get());
                 } else if (!state.getValue(OPEN)) {
-                    level.playLocalSound(pos.getX(), pos.getY(), pos.getZ(), UDSounds.METALLIC_OPEN.get(), SoundSource.BLOCKS, 1.0F, 1.0F, false);
+                    UDUtils.playSound(level, pos, state, UDSounds.METALLIC_OPEN.get());
                 }
                 return InteractionResult.SUCCESS;
             }

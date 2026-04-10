@@ -1,0 +1,7 @@
+{
+  "parent": "urban_decor:block/dark_dryer_opaque",
+  "textures": {
+    "0": "urban_decor:block/daffodil_wrapped_dark_dryer",
+    "particle": "urban_decor:block/daffodil_wrapped_porcelain_block"
+  }
+}

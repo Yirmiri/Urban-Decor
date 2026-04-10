@@ -1,0 +1,7 @@
+{
+  "parent": "urban_decor:block/dryer",
+  "textures": {
+    "1": "urban_decor:block/spring_wrapped_dryer",
+    "particle": "urban_decor:block/spring_wrapped_porcelain_block"
+  }
+}

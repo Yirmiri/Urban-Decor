@@ -1,0 +1,7 @@
+{
+  "parent": "urban_decor:block/freezer",
+  "textures": {
+    "0": "urban_decor:block/ruby_wrapped_freezer",
+    "particle": "urban_decor:block/ruby_wrapped_porcelain_block"
+  }
+}

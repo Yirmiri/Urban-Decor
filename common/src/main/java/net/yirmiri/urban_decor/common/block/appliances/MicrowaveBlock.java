@@ -15,6 +15,7 @@ import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import net.yirmiri.urban_decor.common.block.abstracts.AbstractFurnaceDecorBlock;
+import net.yirmiri.urban_decor.common.util.UDUtils;
 import net.yirmiri.urban_decor.core.init.UDTags;
 import net.yirmiri.urban_decor.core.registry.UDSounds;
 
@@ -50,9 +51,9 @@ public class MicrowaveBlock extends AbstractFurnaceDecorBlock {
             if (player.isShiftKeyDown()) {
                 level.setBlockAndUpdate(pos, state.cycle(OPEN).cycle(TRUE_OPEN));
                 if (state.getValue(OPEN)) {
-                    level.playLocalSound(pos.getX(), pos.getY(), pos.getZ(), UDSounds.METALLIC_CLOSE.get(), SoundSource.BLOCKS, 1.0F, 1.0F, false);
+                    UDUtils.playSound(level, pos, state, UDSounds.METALLIC_CLOSE.get());
                 } else if (!state.getValue(OPEN)) {
-                    level.playLocalSound(pos.getX(), pos.getY(), pos.getZ(), UDSounds.METALLIC_OPEN.get(), SoundSource.BLOCKS, 1.0F, 1.0F, false);
+                    UDUtils.playSound(level, pos, state, UDSounds.METALLIC_OPEN.get());
                 }
                 return InteractionResult.SUCCESS;
             }

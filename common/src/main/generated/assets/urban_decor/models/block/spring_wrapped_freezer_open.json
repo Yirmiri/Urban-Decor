@@ -1,0 +1,7 @@
+{
+  "parent": "urban_decor:block/freezer_open",
+  "textures": {
+    "0": "urban_decor:block/spring_wrapped_freezer",
+    "particle": "urban_decor:block/spring_wrapped_porcelain_block"
+  }
+}

@@ -1,6 +1,8 @@
 package net.yirmiri.urban_decor.common.util;
 
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.Vec3i;
+import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.stats.Stats;
@@ -17,11 +19,19 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.gameevent.GameEvent;
 import net.minecraft.world.phys.BlockHitResult;
+import net.yirmiri.urban_decor.common.block.abstracts.AbstractStorageDecorBlock;
 import net.yirmiri.urban_decor.common.entity.SeatEntity;
 import net.yirmiri.urban_decor.core.registry.UDEntities;
 import net.yirmiri.urban_decor.core.registry.UDSounds;
 
 public class UDUtils {
+    public static void playSound(Level world, BlockPos pos, BlockState state, SoundEvent soundEvent) {
+        Vec3i vec3i = (state.getValue(AbstractStorageDecorBlock.FACING)).getNormal();
+        double d = (double)pos.getX() + 0.5 + (double)vec3i.getX() / 2.0;
+        double e = (double)pos.getY() + 0.5 + (double)vec3i.getY() / 2.0;
+        double f = (double)pos.getZ() + 0.5 + (double)vec3i.getZ() / 2.0;
+        world.playSound(null, d, e, f, soundEvent, SoundSource.BLOCKS, 0.5F, world.random.nextFloat() * 0.1F + 0.9F);
+    }
 
     public static void toolboxUsed(Level level, BlockPos pos) {
         level.playLocalSound(pos.getX(), pos.getY(), pos.getZ(), SoundEvents.GRINDSTONE_USE, SoundSource.BLOCKS, 0.5F, 1.0F, false);

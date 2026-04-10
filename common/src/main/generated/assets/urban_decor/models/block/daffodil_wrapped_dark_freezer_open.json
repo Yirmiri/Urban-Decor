@@ -1,0 +1,7 @@
+{
+  "parent": "urban_decor:block/dark_freezer_open",
+  "textures": {
+    "0": "urban_decor:block/daffodil_wrapped_dark_freezer",
+    "particle": "urban_decor:block/daffodil_wrapped_porcelain_block"
+  }
+}
