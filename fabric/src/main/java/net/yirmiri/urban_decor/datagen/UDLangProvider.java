@@ -47,6 +47,7 @@ public class UDLangProvider extends FabricLanguageProvider {
         build.add("urban_decor.calendar.day", "Today is Day");
         build.add("urban_decor.calendar.year", "Year");
         build.add("urban_decor.calendar.till_new_years", "days until New Years");
+        build.add("urban_decor.calendar.new_years", "Happy New Years!");
         build.add("urban_decor.clock", "It is currently");
 
         //TOOLTIPS

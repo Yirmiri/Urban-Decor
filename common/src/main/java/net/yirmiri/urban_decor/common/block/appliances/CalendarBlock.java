@@ -1,5 +1,6 @@
 package net.yirmiri.urban_decor.common.block.appliances;
 
+import net.minecraft.ChatFormatting;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.network.chat.Component;
@@ -52,11 +53,39 @@ public class CalendarBlock extends AbstractDecorBlock {
     public InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos, Player player, BlockHitResult hitResult) {
         int currentDay = (int) (level.getDayTime() / 24000L);
         int currentYear = currentDay / 365;
+        int dayOfYear = currentDay % 365;
+        int daysUntilNewYears = 365 - dayOfYear;
 
-        if (!player.isCrouching() && level.isClientSide && player.getMainHandItem().is(ItemStack.EMPTY.getItem())) {
+        if (level.isClientSide && player.getMainHandItem().is(ItemStack.EMPTY.getItem())) return InteractionResult.PASS;
+
+        if (!player.isCrouching()) {
             player.displayClientMessage(Component.translatable("urban_decor.calendar.day").append(" ").append(String.valueOf(currentDay))
                     .append(" (").append(Component.translatable("urban_decor.calendar.year")).append(" ").append(String.valueOf(currentYear))
                     .append(")"), true);
+            return InteractionResult.SUCCESS;
+        } else if (player.isCrouching()) {
+            if (daysUntilNewYears != 365 || currentYear == 0) {
+                player.displayClientMessage(Component.literal(String.valueOf(daysUntilNewYears)).append(" ")
+                        .append(Component.translatable("urban_decor.calendar.till_new_years"))
+                        .append(" (").append(Component.translatable("urban_decor.calendar.year")).append(" ").append(String.valueOf(currentYear))
+                        .append(")"), true);
+            } else {
+                int firstColor = 0xc3123e;
+                int secondColor = 0x6c2ecf;
+
+                player.displayClientMessage(Component.translatable("urban_decor.calendar.new_years").withColor(
+                                ((int) ((((secondColor >> 16) & 0xFF) + (((firstColor >> 16) & 0xFF) - ((secondColor >> 16) & 0xFF)) *
+                                        (0.5f * (1 + Math.sin((System.currentTimeMillis() % 5000L) / 5000F * Math.PI * 2)))))
+                                ) << 16 |
+                                        ((int) ((((secondColor >> 8) & 0xFF) + (((firstColor >> 8) & 0xFF) - ((secondColor >> 8) & 0xFF)) *
+                                                (0.5f * (1 + Math.sin((System.currentTimeMillis() % 5000L) / 5000F * Math.PI * 2)))))
+                                        ) << 8 |
+                                        ((int) (((secondColor & 0xFF) + ((firstColor & 0xFF) - (secondColor & 0xFF)) *
+                                                (0.5f * (1 + Math.sin((System.currentTimeMillis() % 5000L) / 5000F * Math.PI * 2))))))
+                        )
+                        .append(" (").append(Component.translatable("urban_decor.calendar.year")).append(" ").append(String.valueOf(currentYear))
+                        .append(")"), true);
+            }
             return InteractionResult.SUCCESS;
         }
         return InteractionResult.PASS;

@@ -1,4 +1,4 @@
-h{
+{
   "variants": {
     "facing=north": {
       "model": "urban_decor:block/towel_bar_canary_towel",
