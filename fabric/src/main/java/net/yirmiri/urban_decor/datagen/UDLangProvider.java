@@ -266,7 +266,7 @@ public class UDLangProvider extends FabricLanguageProvider {
         build.add("subtitles.item.wrap.use", "Wrapping wraps");
         build.add("subtitles.block.grand_clock.tick", "Grandfather Clock ticks");
         build.add("subtitles.block.grand_clock.chime_day", "Grandfather Clock chimes");
-        build.add("subtitles.block.grand_clock.chime_might", "Grandfather Clock tolls");
+        build.add("subtitles.block.grand_clock.chime_night", "Grandfather Clock tolls");
         build.add("subtitles.block.grand_clock.chime_3am", "Grandfather Clock eerily tolls");
 
         //ADVANCEMENTS

@@ -63,6 +63,8 @@ public class UDItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(UDBlocks.PORCELAIN_TABLE.get().asItem())
                 .add(UDBlocks.CASH_REGISTER.get().asItem())
                 .add(UDBlocks.DARK_CASH_REGISTER.get().asItem())
+                .add(UDBlocks.FRIDGE.get().asItem())
+                .add(UDBlocks.DARK_FRIDGE.get().asItem())
         ;
 
         for (WrapColor colors : WrapColor.values()) {

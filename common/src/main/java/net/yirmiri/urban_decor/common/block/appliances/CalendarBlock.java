@@ -1,6 +1,5 @@
 package net.yirmiri.urban_decor.common.block.appliances;
 
-import net.minecraft.ChatFormatting;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.network.chat.Component;

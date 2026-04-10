@@ -1,14 +1,23 @@
 package net.yirmiri.urban_decor.datagen;
 
+import net.azurune.runiclib.RunicLib;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
 import net.minecraft.data.models.BlockModelGenerators;
 import net.minecraft.data.models.ItemModelGenerators;
+import net.minecraft.data.models.model.ModelTemplate;
 import net.minecraft.data.models.model.ModelTemplates;
+import net.minecraft.data.models.model.TextureMapping;
+import net.minecraft.data.models.model.TextureSlot;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.DyeColor;
+import net.minecraft.world.level.block.Block;
+import net.yirmiri.urban_decor.UrbanDecor;
 import net.yirmiri.urban_decor.common.util.WrapColor;
 import net.yirmiri.urban_decor.core.registry.UDBlocks;
 import net.yirmiri.urban_decor.core.registry.UDItems;
+
+import java.util.*;
 
 public class UDModelProvider extends FabricModelProvider {
     public UDModelProvider(FabricDataOutput output) {
@@ -70,6 +79,11 @@ public class UDModelProvider extends FabricModelProvider {
         for (DyeColor colors : DyeColor.values()) {
             generator.family(UDBlocks.getDyedTowelBlocks(colors.getId()).get());
             generator.createMultiface(UDBlocks.getDyedPlasticLights(colors.getId()).get());
+        }
+
+        //WRAPPED
+        for (WrapColor colors : WrapColor.values()) {
+            generateFridges(generator, colors);
         }
     }
 
@@ -162,5 +176,73 @@ public class UDModelProvider extends FabricModelProvider {
             generator.generateFlatItem(UDBlocks.getWrappedPolyanthous(colors.getId()).get().asItem(), ModelTemplates.FLAT_ITEM);
             generator.generateFlatItem(UDItems.getWrappedWraps(colors.getId()).get(), ModelTemplates.FLAT_ITEM);
         }
+    }
+
+    private void generateFridges(BlockModelGenerators generator, WrapColor colors) {
+        createParentedModel(generator, RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_fridge"),
+                RunicLib.customid(UrbanDecor.MOD_ID, "block/fridge"), Map.of(
+                        "0", RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_fridge"),
+                        "particle", RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_porcelain_block")
+                ));
+
+        createParentedModel(generator, RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_fridge_flipped"),
+                RunicLib.customid(UrbanDecor.MOD_ID, "block/fridge_flipped"), Map.of(
+                        "0", RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_fridge"),
+                        "particle", RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_porcelain_block")
+                ));
+
+        createParentedModel(generator, RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_fridge_open"),
+                RunicLib.customid(UrbanDecor.MOD_ID, "block/fridge_open"), Map.of(
+                        "0", RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_fridge"),
+                        "particle", RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_porcelain_block")
+                ));
+
+        createParentedModel(generator, RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_fridge_flipped_open"),
+                RunicLib.customid(UrbanDecor.MOD_ID, "block/fridge_flipped_open"), Map.of(
+                        "0", RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_fridge"),
+                        "particle", RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_porcelain_block")
+                ));
+
+        createParentedModel(generator, RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_dark_fridge"),
+                RunicLib.customid(UrbanDecor.MOD_ID, "block/dark_fridge"), Map.of(
+                        "0", RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_dark_fridge"),
+                        "particle", RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_porcelain_block")
+                ));
+
+        createParentedModel(generator, RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_dark_fridge_flipped"),
+                RunicLib.customid(UrbanDecor.MOD_ID, "block/dark_fridge_flipped"), Map.of(
+                        "0", RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_dark_fridge"),
+                        "particle", RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_porcelain_block")
+                ));
+
+        createParentedModel(generator, RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_dark_fridge_open"),
+                RunicLib.customid(UrbanDecor.MOD_ID, "block/dark_fridge_open"), Map.of(
+                        "0", RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_dark_fridge"),
+                        "particle", RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_porcelain_block")
+                ));
+
+        createParentedModel(generator, RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_dark_fridge_flipped_open"),
+                RunicLib.customid(UrbanDecor.MOD_ID, "block/dark_fridge_flipped_open"), Map.of(
+                        "0", RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_dark_fridge"),
+                        "particle", RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_porcelain_block")
+                ));
+    }
+
+    private void createParentedModel(BlockModelGenerators generator, ResourceLocation modelName, ResourceLocation parent, Map<String, ResourceLocation> textureMap) {
+        Map<String, TextureSlot> keyMap = new HashMap<>();
+        List<TextureSlot> keys = new ArrayList<>();
+
+        for (String key : textureMap.keySet()) {
+            TextureSlot slot = key.equals("particle") ? TextureSlot.PARTICLE : TextureSlot.create(key);
+            keyMap.put(key, slot);
+            keys.add(slot);
+        }
+
+        TextureMapping textures = new TextureMapping();
+        for (Map.Entry<String, ResourceLocation> entry : textureMap.entrySet()) {
+            textures.put(keyMap.get(entry.getKey()), entry.getValue());
+        }
+
+        new ModelTemplate(Optional.of(parent), Optional.empty(), keys.toArray(new TextureSlot[0])).create(modelName, textures, generator.modelOutput);
     }
 }

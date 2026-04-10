@@ -1,0 +1,7 @@
+{
+  "parent": "urban_decor:block/dark_fridge_open",
+  "textures": {
+    "0": "urban_decor:block/azure_wrapped_dark_fridge",
+    "particle": "urban_decor:block/azure_wrapped_porcelain_block"
+  }
+}

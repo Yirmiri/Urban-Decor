@@ -20,23 +20,31 @@ import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
+import net.minecraft.world.level.block.state.properties.EnumProperty;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import net.yirmiri.urban_decor.common.block.abstracts.AbstractStorageDecorBlock;
 import net.yirmiri.urban_decor.common.block.entity.StorageDecorBlockEntity;
+import net.yirmiri.urban_decor.common.block.enums.WrapType;
 import net.yirmiri.urban_decor.common.util.UDUtils;
+import net.yirmiri.urban_decor.common.util.WrapColor;
 import net.yirmiri.urban_decor.core.init.UDTags;
+import net.yirmiri.urban_decor.core.registry.UDItems;
 import net.yirmiri.urban_decor.core.registry.UDSounds;
 
 public class FridgeBlock extends AbstractStorageDecorBlock {
+    public static final EnumProperty<WrapType> WRAP_TYPE = EnumProperty.create("wrap_type", WrapType.class);
     public static final BooleanProperty FLIPPED = BooleanProperty.create("flipped");
 
     private static final VoxelShape SHAPE = Block.box(1, 0, 1, 15, 16, 15);
 
     public FridgeBlock(Properties settings) {
         super(settings);
-        registerDefaultState(defaultBlockState().setValue(FLIPPED, false));
+        registerDefaultState(defaultBlockState()
+                .setValue(WRAP_TYPE, WrapType.NONE)
+                .setValue(FLIPPED, false)
+        );
     }
 
     @Override
@@ -48,6 +56,15 @@ public class FridgeBlock extends AbstractStorageDecorBlock {
     @Override
     public ItemInteractionResult useItemOn(ItemStack stack, BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hitResult) {
         ItemStack stackHand = player.getItemInHand(hand);
+        if (state.getValue(WRAP_TYPE) == WrapType.NONE && stackHand.is(UDTags.ItemT.WRAPS)) {
+            for (WrapColor color : WrapColor.values()) {
+                if (stackHand.is(UDItems.getWrappedWraps(color.getId()).get())) {
+                    level.setBlockAndUpdate(pos, state.setValue(WRAP_TYPE, WrapType.valueOf(color.name())));
+                    UDUtils.wrapUsed(level, pos);
+                    return ItemInteractionResult.SUCCESS;
+                }
+            }
+        }
         if (stackHand.is(UDTags.ItemT.TOOLBOXES)) {
             level.setBlockAndUpdate(pos, state.cycle(FLIPPED));
             UDUtils.toolboxUsed(level, pos);
@@ -92,7 +109,7 @@ public class FridgeBlock extends AbstractStorageDecorBlock {
 
     @Override
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
-        builder.add(FACING, WATERLOGGED, OPEN, FLIPPED, TRUE_OPEN);
+        builder.add(WRAP_TYPE, FACING, WATERLOGGED, OPEN, FLIPPED, TRUE_OPEN);
     }
 
     public BlockEntity newBlockEntity(BlockPos pos, BlockState state) {

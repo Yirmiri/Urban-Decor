@@ -1,4 +1,4 @@
-package net.yirmiri.urban_decor.common.block.appliances;
+package net.yirmiri.urban_decor.common.block.unfinished_appliances;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
@@ -29,27 +29,21 @@ import net.yirmiri.urban_decor.common.util.UDUtils;
 import net.yirmiri.urban_decor.core.init.UDTags;
 import net.yirmiri.urban_decor.core.registry.UDSounds;
 
-public class WashingMachineBlock extends AbstractStorageDecorBlock {
+public class DryerBlock extends AbstractStorageDecorBlock {
     public static final BooleanProperty OPAQUE = BooleanProperty.create("opaque");
 
-    private static final VoxelShape SHAPE_NORTH = Shapes.join(Block.box(1, 0, 1, 15, 12, 15), Block.box(1, 12, 13, 15, 16, 15), BooleanOp.OR);
-    private static final VoxelShape SHAPE_EAST = Shapes.join(Block.box(1, 0, 1, 15, 12, 15), Block.box(1, 12, 1, 3, 16, 15), BooleanOp.OR);
-    private static final VoxelShape SHAPE_WEST = Shapes.join(Block.box(1, 0, 1, 15, 12, 15), Block.box(13, 12, 1, 15, 16, 15), BooleanOp.OR);
-    private static final VoxelShape SHAPE_SOUTH = Shapes.join(Block.box(1, 0, 1, 15, 12, 15), Block.box(1, 12, 1, 15, 16, 3), BooleanOp.OR);
+    private static final VoxelShape SHAPE = Shapes.join(Block.box(1, 0, 1, 15, 13, 15),
+            Block.box(1, 13, 1, 15, 16, 15), BooleanOp.OR);
 
-    public WashingMachineBlock(Properties settings) {
+    public DryerBlock(Properties settings) {
         super(settings);
-        this.registerDefaultState(this.stateDefinition.any().setValue(OPAQUE, false).setValue(OPEN, false).setValue(TRUE_OPEN, false));
+        registerDefaultState(defaultBlockState().setValue(OPAQUE, false));
     }
 
     @Override
     public VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext ctx) {
-        return switch (state.getValue(FACING)) {
-            case SOUTH -> SHAPE_SOUTH;
-            case WEST -> SHAPE_WEST;
-            case EAST -> SHAPE_EAST;
-            default -> SHAPE_NORTH;
-        };
+        state.getValue(FACING);
+        return SHAPE;
     }
 
     @Override

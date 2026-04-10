@@ -13,6 +13,8 @@
     "urban_decor:warped_box",
     "urban_decor:porcelain_table",
     "urban_decor:cash_register",
-    "urban_decor:dark_cash_register"
+    "urban_decor:dark_cash_register",
+    "urban_decor:fridge",
+    "urban_decor:dark_fridge"
   ]
 }
