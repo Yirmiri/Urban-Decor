@@ -1,9 +1,12 @@
-package net.yirmiri.urban_decor.common.block.unfinished_appliances;
+package net.yirmiri.urban_decor.common.block.appliances;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
+import net.minecraft.world.ItemInteractionResult;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
@@ -12,17 +15,23 @@ import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BedPart;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
+import net.minecraft.world.level.block.state.properties.EnumProperty;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.shapes.BooleanOp;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import net.yirmiri.urban_decor.common.block.abstracts.AbstractLongBlock;
+import net.yirmiri.urban_decor.common.block.enums.WrapType;
 import net.yirmiri.urban_decor.common.util.UDUtils;
+import net.yirmiri.urban_decor.common.util.WrapColor;
+import net.yirmiri.urban_decor.core.init.UDTags;
+import net.yirmiri.urban_decor.core.registry.UDItems;
 
 import java.util.stream.Stream;
 
 public class BathtubBlock extends AbstractLongBlock {
+    public static final EnumProperty<WrapType> WRAP_TYPE = EnumProperty.create("wrap_type", WrapType.class);
     public static final BooleanProperty OCCUPIED = BlockStateProperties.OCCUPIED;
 
     private static final VoxelShape BACK_NORTH = Stream.of(Block.box(0, 0, 0, 16, 3, 16), Block.box(0, 3, 0, 2, 16, 16), Block.box(14, 3, 0, 16, 16, 16), Block.box(2, 3, 14, 14, 16, 16)).reduce((v1, v2) -> Shapes.join(v1, v2, BooleanOp.OR)).get();
@@ -42,12 +51,70 @@ public class BathtubBlock extends AbstractLongBlock {
                 .setValue(WATERLOGGED, false)
                 .setValue(PART, BedPart.FOOT)
                 .setValue(OCCUPIED, false)
+                .setValue(WRAP_TYPE, WrapType.NONE)
         );
+    }
+
+    private BlockPos getOtherPartPos(BlockState state, BlockPos pos) {
+        Direction facing = state.getValue(FACING);
+        return state.getValue(PART) == BedPart.HEAD
+                ? pos.relative(facing.getOpposite())
+                : pos.relative(facing);
+    }
+
+    private void setOccupied(Level level, BlockPos pos, BlockState state, boolean occupied) {
+        level.setBlock(pos, state.setValue(OCCUPIED, occupied), 3);
+
+        BlockPos otherPos = getOtherPartPos(state, pos);
+        BlockState otherState = level.getBlockState(otherPos);
+
+        if (otherState.getBlock() instanceof BathtubBlock) {
+            level.setBlock(otherPos, otherState.setValue(OCCUPIED, occupied), 3);
+        }
+    }
+
+    @Override
+    public ItemInteractionResult useItemOn(ItemStack stack, BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hitResult) {
+        ItemStack stackHand = player.getItemInHand(hand);
+
+        if (state.getValue(PART) == BedPart.HEAD) {
+            pos = pos.relative(state.getValue(FACING).getOpposite());
+            state = level.getBlockState(pos);
+        }
+
+        if (state.getValue(WRAP_TYPE) == WrapType.NONE && stackHand.is(UDTags.ItemT.WRAPS)) {
+            for (WrapColor color : WrapColor.values()) {
+                if (stackHand.is(UDItems.getWrappedWraps(color.getId()).get())) {
+
+                    BlockState newState = state.setValue(WRAP_TYPE, WrapType.valueOf(color.name()));
+                    level.setBlockAndUpdate(pos, newState);
+
+                    BlockPos otherPos = getOtherPartPos(newState, pos);
+                    BlockState otherState = level.getBlockState(otherPos);
+
+                    if (otherState.getBlock() instanceof BathtubBlock) {
+                        level.setBlockAndUpdate(otherPos,
+                                otherState.setValue(WRAP_TYPE, newState.getValue(WRAP_TYPE)));
+                    }
+
+                    UDUtils.wrapUsed(level, pos);
+                    return ItemInteractionResult.SUCCESS;
+                }
+            }
+        }
+        return ItemInteractionResult.PASS_TO_DEFAULT_BLOCK_INTERACTION;
     }
 
     @Override
     public InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos, Player player, BlockHitResult hitResult) {
+
+        if (state.getValue(PART) == BedPart.HEAD) {
+            pos = pos.relative(state.getValue(FACING).getOpposite());
+            state = level.getBlockState(pos);
+        }
+
         if (UDUtils.canSitOn(state, pos, level, player)) {
+            setOccupied(level, pos, state, true);
             UDUtils.createSeat(0.1D, state, level, pos, player, hitResult);
             return InteractionResult.SUCCESS;
         }
@@ -66,14 +133,14 @@ public class BathtubBlock extends AbstractLongBlock {
             };
         else return switch (state.getValue(FACING)) {
             case SOUTH -> BACK_SOUTH;
-                case WEST -> BACK_WEST;
-                case EAST -> BACK_EAST;
+            case WEST -> BACK_WEST;
+            case EAST -> BACK_EAST;
             default -> BACK_NORTH;
         };
     }
 
     @Override
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
-        builder.add(FACING, WATERLOGGED, PART, OCCUPIED);
+        builder.add(FACING, WATERLOGGED, PART, OCCUPIED, WRAP_TYPE);
     }
 }

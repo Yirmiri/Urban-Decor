@@ -92,6 +92,7 @@ public class UDModelProvider extends FabricModelProvider {
             generateWashingMachines(generator, colors);
             generateSinks(generator, colors);
             generateToilets(generator, colors);
+            generateBathtubs(generator, colors);
         }
     }
 
@@ -187,6 +188,32 @@ public class UDModelProvider extends FabricModelProvider {
     }
 
     //WRAPPED
+    private void generateBathtubs(BlockModelGenerators generator, WrapColor colors) {
+        createParentedModel(generator, RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_bathtub_back"),
+                RunicLib.customid(UrbanDecor.MOD_ID, "block/bathtub_back"), Map.of(
+                        "0", RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_bathtub"),
+                        "particle", RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_porcelain_block")
+                ));
+
+        createParentedModel(generator, RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_bathtub_front"),
+                RunicLib.customid(UrbanDecor.MOD_ID, "block/bathtub_front"), Map.of(
+                        "0", RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_bathtub"),
+                        "particle", RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_porcelain_block")
+                ));
+
+        createParentedModel(generator, RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_dark_bathtub_back"),
+                RunicLib.customid(UrbanDecor.MOD_ID, "block/dark_bathtub_back"), Map.of(
+                        "0", RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_dark_bathtub"),
+                        "particle", RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_porcelain_block")
+                ));
+
+        createParentedModel(generator, RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_dark_bathtub_front"),
+                RunicLib.customid(UrbanDecor.MOD_ID, "block/dark_bathtub_front"), Map.of(
+                        "0", RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_dark_bathtub"),
+                        "particle", RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_porcelain_block")
+                ));
+    }
+    
     private void generateToilets(BlockModelGenerators generator, WrapColor colors) {
         createParentedModel(generator, RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_toilet"),
                 RunicLib.customid(UrbanDecor.MOD_ID, "block/toilet"), Map.of(

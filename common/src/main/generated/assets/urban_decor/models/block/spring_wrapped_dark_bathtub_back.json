@@ -1,0 +1,7 @@
+{
+  "parent": "urban_decor:block/dark_bathtub_back",
+  "textures": {
+    "0": "urban_decor:block/spring_wrapped_dark_bathtub",
+    "particle": "urban_decor:block/spring_wrapped_porcelain_block"
+  }
+}

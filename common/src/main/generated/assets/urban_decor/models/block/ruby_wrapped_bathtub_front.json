@@ -1,0 +1,7 @@
+{
+  "parent": "urban_decor:block/bathtub_front",
+  "textures": {
+    "0": "urban_decor:block/ruby_wrapped_bathtub",
+    "particle": "urban_decor:block/ruby_wrapped_porcelain_block"
+  }
+}

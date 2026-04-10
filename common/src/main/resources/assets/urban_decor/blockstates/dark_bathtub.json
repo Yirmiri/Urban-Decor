@@ -1,40 +1,274 @@
 {
   "variants": {
-    "facing=north,part=head": {
+    "facing=north,part=head,wrap_type=none": {
       "model": "urban_decor:block/dark_bathtub_front",
       "uvlock": false
     },
-    "facing=south,part=head": {
+    "facing=south,part=head,wrap_type=none": {
       "model": "urban_decor:block/dark_bathtub_front",
       "y": 180,
       "uvlock": false
     },
-    "facing=west,part=head": {
+    "facing=west,part=head,wrap_type=none": {
       "model": "urban_decor:block/dark_bathtub_front",
       "y": 270,
       "uvlock": false
     },
-    "facing=east,part=head": {
+    "facing=east,part=head,wrap_type=none": {
       "model": "urban_decor:block/dark_bathtub_front",
       "y": 90,
       "uvlock": false
     },
-    "facing=north,part=foot": {
+    "facing=north,part=foot,wrap_type=none": {
       "model": "urban_decor:block/dark_bathtub_back",
       "uvlock": false
     },
-    "facing=south,part=foot": {
+    "facing=south,part=foot,wrap_type=none": {
       "model": "urban_decor:block/dark_bathtub_back",
       "y": 180,
       "uvlock": false
     },
-    "facing=west,part=foot": {
+    "facing=west,part=foot,wrap_type=none": {
       "model": "urban_decor:block/dark_bathtub_back",
       "y": 270,
       "uvlock": false
     },
-    "facing=east,part=foot": {
+    "facing=east,part=foot,wrap_type=none": {
       "model": "urban_decor:block/dark_bathtub_back",
+      "y": 90,
+      "uvlock": false
+    },
+
+    "facing=north,part=head,wrap_type=cherry": {
+      "model": "urban_decor:block/cherry_wrapped_dark_bathtub_front",
+      "uvlock": false
+    },
+    "facing=south,part=head,wrap_type=cherry": {
+      "model": "urban_decor:block/cherry_wrapped_dark_bathtub_front",
+      "y": 180,
+      "uvlock": false
+    },
+    "facing=west,part=head,wrap_type=cherry": {
+      "model": "urban_decor:block/cherry_wrapped_dark_bathtub_front",
+      "y": 270,
+      "uvlock": false
+    },
+    "facing=east,part=head,wrap_type=cherry": {
+      "model": "urban_decor:block/cherry_wrapped_dark_bathtub_front",
+      "y": 90,
+      "uvlock": false
+    },
+    "facing=north,part=foot,wrap_type=cherry": {
+      "model": "urban_decor:block/cherry_wrapped_dark_bathtub_back",
+      "uvlock": false
+    },
+    "facing=south,part=foot,wrap_type=cherry": {
+      "model": "urban_decor:block/cherry_wrapped_dark_bathtub_back",
+      "y": 180,
+      "uvlock": false
+    },
+    "facing=west,part=foot,wrap_type=cherry": {
+      "model": "urban_decor:block/cherry_wrapped_dark_bathtub_back",
+      "y": 270,
+      "uvlock": false
+    },
+    "facing=east,part=foot,wrap_type=cherry": {
+      "model": "urban_decor:block/cherry_wrapped_dark_bathtub_back",
+      "y": 90,
+      "uvlock": false
+    },
+
+    "facing=north,part=head,wrap_type=daffodil": {
+      "model": "urban_decor:block/daffodil_wrapped_dark_bathtub_front",
+      "uvlock": false
+    },
+    "facing=south,part=head,wrap_type=daffodil": {
+      "model": "urban_decor:block/daffodil_wrapped_dark_bathtub_front",
+      "y": 180,
+      "uvlock": false
+    },
+    "facing=west,part=head,wrap_type=daffodil": {
+      "model": "urban_decor:block/daffodil_wrapped_dark_bathtub_front",
+      "y": 270,
+      "uvlock": false
+    },
+    "facing=east,part=head,wrap_type=daffodil": {
+      "model": "urban_decor:block/daffodil_wrapped_dark_bathtub_front",
+      "y": 90,
+      "uvlock": false
+    },
+    "facing=north,part=foot,wrap_type=daffodil": {
+      "model": "urban_decor:block/daffodil_wrapped_dark_bathtub_back",
+      "uvlock": false
+    },
+    "facing=south,part=foot,wrap_type=daffodil": {
+      "model": "urban_decor:block/daffodil_wrapped_dark_bathtub_back",
+      "y": 180,
+      "uvlock": false
+    },
+    "facing=west,part=foot,wrap_type=daffodil": {
+      "model": "urban_decor:block/daffodil_wrapped_dark_bathtub_back",
+      "y": 270,
+      "uvlock": false
+    },
+    "facing=east,part=foot,wrap_type=daffodil": {
+      "model": "urban_decor:block/daffodil_wrapped_dark_bathtub_back",
+      "y": 90,
+      "uvlock": false
+    },
+
+    "facing=north,part=head,wrap_type=spring": {
+      "model": "urban_decor:block/spring_wrapped_dark_bathtub_front",
+      "uvlock": false
+    },
+    "facing=south,part=head,wrap_type=spring": {
+      "model": "urban_decor:block/spring_wrapped_dark_bathtub_front",
+      "y": 180,
+      "uvlock": false
+    },
+    "facing=west,part=head,wrap_type=spring": {
+      "model": "urban_decor:block/spring_wrapped_dark_bathtub_front",
+      "y": 270,
+      "uvlock": false
+    },
+    "facing=east,part=head,wrap_type=spring": {
+      "model": "urban_decor:block/spring_wrapped_dark_bathtub_front",
+      "y": 90,
+      "uvlock": false
+    },
+    "facing=north,part=foot,wrap_type=spring": {
+      "model": "urban_decor:block/spring_wrapped_dark_bathtub_back",
+      "uvlock": false
+    },
+    "facing=south,part=foot,wrap_type=spring": {
+      "model": "urban_decor:block/spring_wrapped_dark_bathtub_back",
+      "y": 180,
+      "uvlock": false
+    },
+    "facing=west,part=foot,wrap_type=spring": {
+      "model": "urban_decor:block/spring_wrapped_dark_bathtub_back",
+      "y": 270,
+      "uvlock": false
+    },
+    "facing=east,part=foot,wrap_type=spring": {
+      "model": "urban_decor:block/spring_wrapped_dark_bathtub_back",
+      "y": 90,
+      "uvlock": false
+    },
+
+    "facing=north,part=head,wrap_type=mint": {
+      "model": "urban_decor:block/mint_wrapped_dark_bathtub_front",
+      "uvlock": false
+    },
+    "facing=south,part=head,wrap_type=mint": {
+      "model": "urban_decor:block/mint_wrapped_dark_bathtub_front",
+      "y": 180,
+      "uvlock": false
+    },
+    "facing=west,part=head,wrap_type=mint": {
+      "model": "urban_decor:block/mint_wrapped_dark_bathtub_front",
+      "y": 270,
+      "uvlock": false
+    },
+    "facing=east,part=head,wrap_type=mint": {
+      "model": "urban_decor:block/mint_wrapped_dark_bathtub_front",
+      "y": 90,
+      "uvlock": false
+    },
+    "facing=north,part=foot,wrap_type=mint": {
+      "model": "urban_decor:block/mint_wrapped_dark_bathtub_back",
+      "uvlock": false
+    },
+    "facing=south,part=foot,wrap_type=mint": {
+      "model": "urban_decor:block/mint_wrapped_dark_bathtub_back",
+      "y": 180,
+      "uvlock": false
+    },
+    "facing=west,part=foot,wrap_type=mint": {
+      "model": "urban_decor:block/mint_wrapped_dark_bathtub_back",
+      "y": 270,
+      "uvlock": false
+    },
+    "facing=east,part=foot,wrap_type=mint": {
+      "model": "urban_decor:block/mint_wrapped_dark_bathtub_back",
+      "y": 90,
+      "uvlock": false
+    },
+
+    "facing=north,part=head,wrap_type=azure": {
+      "model": "urban_decor:block/azure_wrapped_dark_bathtub_front",
+      "uvlock": false
+    },
+    "facing=south,part=head,wrap_type=azure": {
+      "model": "urban_decor:block/azure_wrapped_dark_bathtub_front",
+      "y": 180,
+      "uvlock": false
+    },
+    "facing=west,part=head,wrap_type=azure": {
+      "model": "urban_decor:block/azure_wrapped_dark_bathtub_front",
+      "y": 270,
+      "uvlock": false
+    },
+    "facing=east,part=head,wrap_type=azure": {
+      "model": "urban_decor:block/azure_wrapped_dark_bathtub_front",
+      "y": 90,
+      "uvlock": false
+    },
+    "facing=north,part=foot,wrap_type=azure": {
+      "model": "urban_decor:block/azure_wrapped_dark_bathtub_back",
+      "uvlock": false
+    },
+    "facing=south,part=foot,wrap_type=azure": {
+      "model": "urban_decor:block/azure_wrapped_dark_bathtub_back",
+      "y": 180,
+      "uvlock": false
+    },
+    "facing=west,part=foot,wrap_type=azure": {
+      "model": "urban_decor:block/azure_wrapped_dark_bathtub_back",
+      "y": 270,
+      "uvlock": false
+    },
+    "facing=east,part=foot,wrap_type=azure": {
+      "model": "urban_decor:block/azure_wrapped_dark_bathtub_back",
+      "y": 90,
+      "uvlock": false
+    },
+
+    "facing=north,part=head,wrap_type=ruby": {
+      "model": "urban_decor:block/ruby_wrapped_dark_bathtub_front",
+      "uvlock": false
+    },
+    "facing=south,part=head,wrap_type=ruby": {
+      "model": "urban_decor:block/ruby_wrapped_dark_bathtub_front",
+      "y": 180,
+      "uvlock": false
+    },
+    "facing=west,part=head,wrap_type=ruby": {
+      "model": "urban_decor:block/ruby_wrapped_dark_bathtub_front",
+      "y": 270,
+      "uvlock": false
+    },
+    "facing=east,part=head,wrap_type=ruby": {
+      "model": "urban_decor:block/ruby_wrapped_dark_bathtub_front",
+      "y": 90,
+      "uvlock": false
+    },
+    "facing=north,part=foot,wrap_type=ruby": {
+      "model": "urban_decor:block/ruby_wrapped_dark_bathtub_back",
+      "uvlock": false
+    },
+    "facing=south,part=foot,wrap_type=ruby": {
+      "model": "urban_decor:block/ruby_wrapped_dark_bathtub_back",
+      "y": 180,
+      "uvlock": false
+    },
+    "facing=west,part=foot,wrap_type=ruby": {
+      "model": "urban_decor:block/ruby_wrapped_dark_bathtub_back",
+      "y": 270,
+      "uvlock": false
+    },
+    "facing=east,part=foot,wrap_type=ruby": {
+      "model": "urban_decor:block/ruby_wrapped_dark_bathtub_back",
       "y": 90,
       "uvlock": false
     }
