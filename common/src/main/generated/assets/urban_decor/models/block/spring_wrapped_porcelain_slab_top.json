@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab_top",
+  "textures": {
+    "bottom": "urban_decor:block/spring_wrapped_porcelain_block",
+    "side": "urban_decor:block/spring_wrapped_porcelain_block",
+    "top": "urban_decor:block/spring_wrapped_porcelain_block"
+  }
+}

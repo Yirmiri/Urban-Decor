@@ -176,6 +176,18 @@ public class UDLootTableProvider extends FabricBlockLootTableProvider {
         for (WrapColor colors : WrapColor.values()) {
             add(UDBlocks.getWrappedPolyanthous(colors.getId()).get(), (b) -> createSinglePropConditionTable(b, DoublePlantBlock.HALF, DoubleBlockHalf.LOWER));
             dropSelf(UDBlocks.getWrappedMattresses(colors.getId()).get());
+
+            dropSelf(UDBlocks.getWrappedPorcelainBlocks(colors.getId()).get());
+            dropSelf(UDBlocks.getWrappedPorcelainStairs(colors.getId()).get());
+            add(UDBlocks.getWrappedPorcelainSlabs(colors.getId()).get(), createSlabItemTable(UDBlocks.getWrappedPorcelainSlabs(colors.getId()).get()));
+
+            dropSelf(UDBlocks.getWrappedPorcelainBricks(colors.getId()).get());
+            dropSelf(UDBlocks.getWrappedPorcelainBrickStairs(colors.getId()).get());
+            add(UDBlocks.getWrappedPorcelainBrickSlabs(colors.getId()).get(), createSlabItemTable(UDBlocks.getWrappedPorcelainBrickSlabs(colors.getId()).get()));
+
+            dropSelf(UDBlocks.getWrappedPorcelainTiles(colors.getId()).get());
+            dropSelf(UDBlocks.getWrappedPorcelainTileStairs(colors.getId()).get());
+            add(UDBlocks.getWrappedPorcelainTileSlabs(colors.getId()).get(), createSlabItemTable(UDBlocks.getWrappedPorcelainTileSlabs(colors.getId()).get()));
         }
     }
 

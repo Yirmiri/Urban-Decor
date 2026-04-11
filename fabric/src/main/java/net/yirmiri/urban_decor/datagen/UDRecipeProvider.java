@@ -1217,6 +1217,8 @@ public class UDRecipeProvider extends FabricRecipeProvider {
                 .pattern("@@@")
                 .unlockedBy(getHasName(UDBlocks.MATTRESS.get()), has(UDBlocks.MATTRESS.get()))
                 .save(exporter, RunicLib.customid(UrbanDecor.MOD_ID, getSimpleRecipeName(UDBlocks.BOOTH.get())));
+
+        //todo wrapped porcelain
     }
 
     public static ShapelessRecipeBuilder createFromBasePictureFrameRecipe(ItemLike output, Item picture, DyeColor color) {
@@ -1229,6 +1231,14 @@ public class UDRecipeProvider extends FabricRecipeProvider {
                 .define('#', input)
                 .pattern("##")
                 .pattern("##");
+    }
+
+    public static ShapedRecipeBuilder createWrappedBlock(ItemLike output, Ingredient input, Ingredient wrap) {
+        return ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, output, 8)
+                .define('#', input).define('@', wrap)
+                .pattern("###")
+                .pattern("#@#")
+                .pattern("###");
     }
 
     public static ShapedRecipeBuilder createWrappedMattress(ItemLike output, Ingredient input) {

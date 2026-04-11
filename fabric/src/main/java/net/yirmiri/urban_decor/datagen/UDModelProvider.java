@@ -83,6 +83,17 @@ public class UDModelProvider extends FabricModelProvider {
         //WRAPPED
         for (WrapColor colors : WrapColor.values()) {
             generator.createTrivialCube(UDBlocks.getWrappedMattresses(colors.getId()).get());
+            BlockModelGenerators.BlockFamilyProvider wrappedPorcelain = generator.family(UDBlocks.getWrappedPorcelainBlocks(colors.getId()).get());
+            wrappedPorcelain.stairs(UDBlocks.getWrappedPorcelainStairs(colors.getId()).get());
+            wrappedPorcelain.slab(UDBlocks.getWrappedPorcelainSlabs(colors.getId()).get());
+
+            BlockModelGenerators.BlockFamilyProvider wrappedPorcelainBricks = generator.family(UDBlocks.getWrappedPorcelainBricks(colors.getId()).get());
+            wrappedPorcelainBricks.stairs(UDBlocks.getWrappedPorcelainBrickStairs(colors.getId()).get());
+            wrappedPorcelainBricks.slab(UDBlocks.getWrappedPorcelainBrickSlabs(colors.getId()).get());
+
+            BlockModelGenerators.BlockFamilyProvider wrappedPorcelainTiles = generator.family(UDBlocks.getWrappedPorcelainTiles(colors.getId()).get());
+            wrappedPorcelainTiles.stairs(UDBlocks.getWrappedPorcelainTileStairs(colors.getId()).get());
+            wrappedPorcelainTiles.slab(UDBlocks.getWrappedPorcelainTileSlabs(colors.getId()).get());
 
             generateFridges(generator, colors);
             generateFreezers(generator, colors);

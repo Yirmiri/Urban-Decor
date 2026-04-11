@@ -192,6 +192,66 @@ public class UDCreativeTabs {
                         entry.accept(UDBlocks.getWrappedMattresses(WrapColor.AZURE.getId()).get());
                         entry.accept(UDBlocks.getWrappedMattresses(WrapColor.RUBY.getId()).get());
 
+                        entry.accept(UDBlocks.getWrappedPorcelainBlocks(WrapColor.CHERRY.getId()).get());
+                        entry.accept(UDBlocks.getWrappedPorcelainStairs(WrapColor.CHERRY.getId()).get());
+                        entry.accept(UDBlocks.getWrappedPorcelainSlabs(WrapColor.CHERRY.getId()).get());
+                        entry.accept(UDBlocks.getWrappedPorcelainBricks(WrapColor.CHERRY.getId()).get());
+                        entry.accept(UDBlocks.getWrappedPorcelainBrickStairs(WrapColor.CHERRY.getId()).get());
+                        entry.accept(UDBlocks.getWrappedPorcelainBrickSlabs(WrapColor.CHERRY.getId()).get());
+                        entry.accept(UDBlocks.getWrappedPorcelainTiles(WrapColor.CHERRY.getId()).get());
+                        entry.accept(UDBlocks.getWrappedPorcelainTileStairs(WrapColor.CHERRY.getId()).get());
+                        entry.accept(UDBlocks.getWrappedPorcelainTileSlabs(WrapColor.CHERRY.getId()).get());
+
+                        entry.accept(UDBlocks.getWrappedPorcelainBlocks(WrapColor.DAFFODIL.getId()).get());
+                        entry.accept(UDBlocks.getWrappedPorcelainStairs(WrapColor.DAFFODIL.getId()).get());
+                        entry.accept(UDBlocks.getWrappedPorcelainSlabs(WrapColor.DAFFODIL.getId()).get());
+                        entry.accept(UDBlocks.getWrappedPorcelainBricks(WrapColor.DAFFODIL.getId()).get());
+                        entry.accept(UDBlocks.getWrappedPorcelainBrickStairs(WrapColor.DAFFODIL.getId()).get());
+                        entry.accept(UDBlocks.getWrappedPorcelainBrickSlabs(WrapColor.DAFFODIL.getId()).get());
+                        entry.accept(UDBlocks.getWrappedPorcelainTiles(WrapColor.DAFFODIL.getId()).get());
+                        entry.accept(UDBlocks.getWrappedPorcelainTileStairs(WrapColor.DAFFODIL.getId()).get());
+                        entry.accept(UDBlocks.getWrappedPorcelainTileSlabs(WrapColor.DAFFODIL.getId()).get());
+
+                        entry.accept(UDBlocks.getWrappedPorcelainBlocks(WrapColor.SPRING.getId()).get());
+                        entry.accept(UDBlocks.getWrappedPorcelainStairs(WrapColor.SPRING.getId()).get());
+                        entry.accept(UDBlocks.getWrappedPorcelainSlabs(WrapColor.SPRING.getId()).get());
+                        entry.accept(UDBlocks.getWrappedPorcelainBricks(WrapColor.SPRING.getId()).get());
+                        entry.accept(UDBlocks.getWrappedPorcelainBrickStairs(WrapColor.SPRING.getId()).get());
+                        entry.accept(UDBlocks.getWrappedPorcelainBrickSlabs(WrapColor.SPRING.getId()).get());
+                        entry.accept(UDBlocks.getWrappedPorcelainTiles(WrapColor.SPRING.getId()).get());
+                        entry.accept(UDBlocks.getWrappedPorcelainTileStairs(WrapColor.SPRING.getId()).get());
+                        entry.accept(UDBlocks.getWrappedPorcelainTileSlabs(WrapColor.SPRING.getId()).get());
+
+                        entry.accept(UDBlocks.getWrappedPorcelainBlocks(WrapColor.MINT.getId()).get());
+                        entry.accept(UDBlocks.getWrappedPorcelainStairs(WrapColor.MINT.getId()).get());
+                        entry.accept(UDBlocks.getWrappedPorcelainSlabs(WrapColor.MINT.getId()).get());
+                        entry.accept(UDBlocks.getWrappedPorcelainBricks(WrapColor.MINT.getId()).get());
+                        entry.accept(UDBlocks.getWrappedPorcelainBrickStairs(WrapColor.MINT.getId()).get());
+                        entry.accept(UDBlocks.getWrappedPorcelainBrickSlabs(WrapColor.MINT.getId()).get());
+                        entry.accept(UDBlocks.getWrappedPorcelainTiles(WrapColor.MINT.getId()).get());
+                        entry.accept(UDBlocks.getWrappedPorcelainTileStairs(WrapColor.MINT.getId()).get());
+                        entry.accept(UDBlocks.getWrappedPorcelainTileSlabs(WrapColor.MINT.getId()).get());
+
+                        entry.accept(UDBlocks.getWrappedPorcelainBlocks(WrapColor.AZURE.getId()).get());
+                        entry.accept(UDBlocks.getWrappedPorcelainStairs(WrapColor.AZURE.getId()).get());
+                        entry.accept(UDBlocks.getWrappedPorcelainSlabs(WrapColor.AZURE.getId()).get());
+                        entry.accept(UDBlocks.getWrappedPorcelainBricks(WrapColor.AZURE.getId()).get());
+                        entry.accept(UDBlocks.getWrappedPorcelainBrickStairs(WrapColor.AZURE.getId()).get());
+                        entry.accept(UDBlocks.getWrappedPorcelainBrickSlabs(WrapColor.AZURE.getId()).get());
+                        entry.accept(UDBlocks.getWrappedPorcelainTiles(WrapColor.AZURE.getId()).get());
+                        entry.accept(UDBlocks.getWrappedPorcelainTileStairs(WrapColor.AZURE.getId()).get());
+                        entry.accept(UDBlocks.getWrappedPorcelainTileSlabs(WrapColor.AZURE.getId()).get());
+
+                        entry.accept(UDBlocks.getWrappedPorcelainBlocks(WrapColor.RUBY.getId()).get());
+                        entry.accept(UDBlocks.getWrappedPorcelainStairs(WrapColor.RUBY.getId()).get());
+                        entry.accept(UDBlocks.getWrappedPorcelainSlabs(WrapColor.RUBY.getId()).get());
+                        entry.accept(UDBlocks.getWrappedPorcelainBricks(WrapColor.RUBY.getId()).get());
+                        entry.accept(UDBlocks.getWrappedPorcelainBrickStairs(WrapColor.RUBY.getId()).get());
+                        entry.accept(UDBlocks.getWrappedPorcelainBrickSlabs(WrapColor.RUBY.getId()).get());
+                        entry.accept(UDBlocks.getWrappedPorcelainTiles(WrapColor.RUBY.getId()).get());
+                        entry.accept(UDBlocks.getWrappedPorcelainTileStairs(WrapColor.RUBY.getId()).get());
+                        entry.accept(UDBlocks.getWrappedPorcelainTileSlabs(WrapColor.RUBY.getId()).get());
+
                         //DYED
                         entry.accept(UDBlocks.TOWEL_BAR.get());
                         entry.accept(UDBlocks.getDyedTowelBlocks(DyeColor.WHITE.getId()).get());

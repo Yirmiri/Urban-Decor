@@ -41,6 +41,18 @@ public class UDLangProvider extends FabricLanguageProvider {
             build.add(UDBlocks.getWrappedPolyanthous(colors.getId()).get(), wrapString + " Polyanthous");
             build.add(UDItems.getWrappedWraps(colors.getId()).get(), wrapString + " Wrap");
             build.add(UDBlocks.getWrappedMattresses(colors.getId()).get(), wrapString + " Mattress");
+
+            build.add(UDBlocks.getWrappedPorcelainBlocks(colors.getId()).get(), wrapString + " Porcelain Block");
+            build.add(UDBlocks.getWrappedPorcelainStairs(colors.getId()).get(), wrapString + " Porcelain Stairs");
+            build.add(UDBlocks.getWrappedPorcelainSlabs(colors.getId()).get(), wrapString + " Porcelain Slab");
+
+            build.add(UDBlocks.getWrappedPorcelainBricks(colors.getId()).get(), wrapString + " Porcelain Bricks");
+            build.add(UDBlocks.getWrappedPorcelainBrickStairs(colors.getId()).get(), wrapString + " Porcelain Brick Stairs");
+            build.add(UDBlocks.getWrappedPorcelainBrickSlabs(colors.getId()).get(), wrapString + " Porcelain Brick Slab");
+
+            build.add(UDBlocks.getWrappedPorcelainTiles(colors.getId()).get(), wrapString + " Porcelain Tiles");
+            build.add(UDBlocks.getWrappedPorcelainTileStairs(colors.getId()).get(), wrapString + " Porcelain Tile Stairs");
+            build.add(UDBlocks.getWrappedPorcelainTileSlabs(colors.getId()).get(), wrapString + " Porcelain Tile Slab");
         }
 
         //MISC
@@ -444,6 +456,7 @@ public class UDLangProvider extends FabricLanguageProvider {
             build.add(YT_ID + "block." + MOD_ID + UDBlocks.getDyedTowels(colors.getId()) + ".desc", "A place to dry off or clean yourself, can be hung on towel bars");
             build.add(YT_ID + "block." + MOD_ID + UDBlocks.getDyedPictureBlocks(colors.getId()) + ".desc", "A small picture dyed " + dyeString + ", used to cozy up a home!");
             build.add(YT_ID + "block." + MOD_ID + UDBlocks.getDyedPlasticLights(colors.getId()) + ".desc", "A " + dyeString + ", colored light to set the mood");
+        //todo wrapped porcelain blocks im lazy
         }
     }
 }

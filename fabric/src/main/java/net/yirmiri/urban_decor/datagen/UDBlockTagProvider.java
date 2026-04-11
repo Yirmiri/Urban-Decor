@@ -202,7 +202,23 @@ public class UDBlockTagProvider extends FabricTagProvider.BlockTagProvider {
         ;
 
         for (DyeColor colors : DyeColor.values()) {
-            getOrCreateTagBuilder(BlockTags.MINEABLE_WITH_PICKAXE).add(UDBlocks.getDyedTowelBarTowels(colors.getId()).get());
+            getOrCreateTagBuilder(BlockTags.MINEABLE_WITH_PICKAXE)
+                    .add(UDBlocks.getDyedTowelBarTowels(colors.getId()).get()
+                    );
+        }
+
+        for (WrapColor colors : WrapColor.values()) {
+            getOrCreateTagBuilder(BlockTags.MINEABLE_WITH_PICKAXE)
+                    .add(UDBlocks.getWrappedPorcelainBlocks(colors.getId()).get())
+                    .add(UDBlocks.getWrappedPorcelainStairs(colors.getId()).get())
+                    .add(UDBlocks.getWrappedPorcelainSlabs(colors.getId()).get())
+                    .add(UDBlocks.getWrappedPorcelainBricks(colors.getId()).get())
+                    .add(UDBlocks.getWrappedPorcelainBrickStairs(colors.getId()).get())
+                    .add(UDBlocks.getWrappedPorcelainBrickSlabs(colors.getId()).get())
+                    .add(UDBlocks.getWrappedPorcelainTiles(colors.getId()).get())
+                    .add(UDBlocks.getWrappedPorcelainTileStairs(colors.getId()).get())
+                    .add(UDBlocks.getWrappedPorcelainTileSlabs(colors.getId()).get())
+            ;
         }
 
         for (WrapColor colors : WrapColor.values()) {
