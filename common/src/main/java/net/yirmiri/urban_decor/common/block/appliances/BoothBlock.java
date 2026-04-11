@@ -51,12 +51,13 @@ public class BoothBlock extends StairBlock {
 
     @Override
     public VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext ctx) {
-        return switch (state.getValue(FACING)) {
-            case SOUTH -> SHAPE_SOUTH;
-            case WEST -> SHAPE_WEST;
-            case EAST -> SHAPE_EAST;
-            default -> SHAPE_NORTH;
-        };
+        //        return switch (state.getValue(FACING)) {
+        //            case SOUTH -> SHAPE_SOUTH;
+        //            case WEST -> SHAPE_WEST;
+        //            case EAST -> SHAPE_EAST;
+        //            default -> SHAPE_NORTH;
+        //        };
+        return Block.box(4, 0, 4, 12, 8, 12);
     }
 
     @Override
@@ -76,7 +77,11 @@ public class BoothBlock extends StairBlock {
 
     @Override
     public InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos, Player player, BlockHitResult hitResult) {
-        if (UDUtils.canSitOn(state, pos, level, player) && state.getValue(HALF) == Half.BOTTOM) {
+        if (UDUtils.canSitOn(state, pos, level, player)) {
+            if (state.getValue(HALF) == Half.TOP) {
+                UDUtils.createSeat(0.01D, state, level, pos, player, hitResult, 180);
+                return InteractionResult.SUCCESS;
+            }
             UDUtils.createSeat(0.4D, state, level, pos, player, hitResult);
             return InteractionResult.SUCCESS;
         }

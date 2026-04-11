@@ -1,10 +1,17 @@
 package net.yirmiri.urban_decor;
 
+import com.mojang.blaze3d.vertex.PoseStack;
+import com.mojang.math.Axis;
+import net.minecraft.client.Minecraft;
+import net.minecraft.world.effect.MobEffects;
+import net.minecraft.world.entity.LivingEntity;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 import net.neoforged.neoforge.client.event.EntityRenderersEvent;
+import net.neoforged.neoforge.client.event.RenderLivingEvent;
+import net.neoforged.neoforge.client.event.ViewportEvent;
 import net.yirmiri.urban_decor.common.block.entity.model.GrandClockModel;
 import net.yirmiri.urban_decor.common.block.entity.model.StainlessSteelChairModel;
 import net.yirmiri.urban_decor.common.block.entity.renderer.GrandClockRenderer;

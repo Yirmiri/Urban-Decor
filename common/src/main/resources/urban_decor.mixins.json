@@ -9,7 +9,9 @@
     "ItemMixin"
   ],
   "client": [
-    "SplashManagerMixin"
+    "SplashManagerMixin",
+    "client.GameRendererMixin",
+    "client.LivingEntityRendererMixin"
   ],
   "injectors": {
     "defaultRequire": 1

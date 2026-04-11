@@ -42,13 +42,31 @@ public class UDUtils {
     }
 
     public static boolean canSitOn(BlockState state, BlockPos pos, Level level, Player player) {
-        return !level.isClientSide && !state.getValue(BlockStateProperties.OCCUPIED) && !player.isCrouching() && !level.getBlockState(pos.above()).isSuffocating(level, pos)
+        return !level.isClientSide && !state.getValue(BlockStateProperties.OCCUPIED) && !player.isCrouching()
+                && !level.getBlockState(pos.above()).isSuffocating(level, pos)
                 && !player.isPassenger() && player.getMainHandItem().getItem().getDefaultInstance().isEmpty();
     }
 
     public static void createSeat(double yPos, BlockState state, Level level, BlockPos pos, Player player, BlockHitResult hitResult) {
         SeatEntity seatEntity = UDEntities.SEAT.get().create(level);
         seatEntity.setPosRaw(pos.getX() + 0.5D, pos.getY() + yPos, pos.getZ() + 0.5D);
+        level.addFreshEntity(seatEntity);
+        level.setBlockAndUpdate(pos, state.setValue(BlockStateProperties.OCCUPIED, true));
+
+        for (Animal living : level.getEntitiesOfClass(Animal.class, player.getBoundingBox().inflate(7.0D))) {
+            if (living.isLeashed() && living.getLeashHolder() == player) {
+                living.dropLeash(true, true);
+                living.startRiding(seatEntity, true);
+                return;
+            }
+        }
+        player.startRiding(seatEntity);
+    }
+
+    public static void createSeat(double yPos, BlockState state, Level level, BlockPos pos, Player player, BlockHitResult hitResult, float rotation) {
+        SeatEntity seatEntity = UDEntities.SEAT.get().create(level);
+        seatEntity.setPosRaw(pos.getX() + 0.5D, pos.getY() + yPos, pos.getZ() + 0.5D);
+        seatEntity.setRotation(rotation);
         level.addFreshEntity(seatEntity);
         level.setBlockAndUpdate(pos, state.setValue(BlockStateProperties.OCCUPIED, true));
 

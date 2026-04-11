@@ -8,19 +8,10 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.Vec3;
-import net.minecraft.world.phys.shapes.CollisionContext;
-import net.minecraft.world.phys.shapes.VoxelShape;
 
 public class MattressBlock extends Block {
-    private static final VoxelShape SHAPE_FULLSIZE = Block.box(4, 0, 4, 12, 8, 12);
-
     public MattressBlock(Properties properties) {
         super(properties);
-    }
-
-    @Override
-    public VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext ctx) {
-        return SHAPE_FULLSIZE;
     }
 
     @Override

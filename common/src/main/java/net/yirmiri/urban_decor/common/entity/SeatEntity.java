@@ -3,6 +3,8 @@ package net.yirmiri.urban_decor.common.entity;
 import com.google.common.collect.Lists;
 import net.minecraft.core.BlockPos;
 import net.minecraft.nbt.CompoundTag;
+import net.minecraft.network.syncher.EntityDataAccessor;
+import net.minecraft.network.syncher.EntityDataSerializers;
 import net.minecraft.network.syncher.SynchedEntityData;
 import net.minecraft.util.Mth;
 import net.minecraft.world.InteractionHand;
@@ -21,9 +23,34 @@ import net.yirmiri.urban_decor.core.init.UDTags;
 import java.util.List;
 
 public class SeatEntity extends Entity {
-    public SeatEntity(EntityType<?> type, Level world) {
-        super(type, world);
+    private static final EntityDataAccessor<Float> ROTATION = SynchedEntityData.defineId(SeatEntity.class, EntityDataSerializers.FLOAT);
+
+    public SeatEntity(EntityType<?> type, Level level) {
+        super(type, level);
         setInvulnerable(true);
+    }
+
+    @Override
+    public void addAdditionalSaveData(CompoundTag compound) {
+        compound.putFloat("Rotation", getRotation());
+    }
+
+    @Override
+    public void readAdditionalSaveData(CompoundTag compound) {
+        setRotation(compound.getFloat("Rotation"));
+    }
+
+    @Override
+    protected void defineSynchedData(SynchedEntityData.Builder builder) {
+        builder.define(ROTATION, 0.0F);
+    }
+
+    public float getRotation() {
+        return this.entityData.get(ROTATION);
+    }
+
+    public void setRotation(float rotation) {
+        this.entityData.set(ROTATION, rotation);
     }
 
     @Override
@@ -90,7 +117,6 @@ public class SeatEntity extends Entity {
         return super.getDismountLocationForPassenger(livingEntity);
     }
 
-
     @Override
     public void tick() {
         super.tick();
@@ -99,20 +125,5 @@ public class SeatEntity extends Entity {
                 remove(RemovalReason.DISCARDED);
             }
         }
-    }
-
-    @Override
-    protected void defineSynchedData(SynchedEntityData.Builder builder) {
-
-    }
-
-    @Override
-    protected void readAdditionalSaveData(CompoundTag nbt) {
-
-    }
-
-    @Override
-    protected void addAdditionalSaveData(CompoundTag nbt) {
-
     }
 }
