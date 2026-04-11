@@ -1,0 +1,7 @@
+{
+  "parent": "urban_decor:block/booth_outer",
+  "textures": {
+    "0": "urban_decor:block/azure_wrapped_booth",
+    "particle": "urban_decor:block/azure_wrapped_mattress"
+  }
+}

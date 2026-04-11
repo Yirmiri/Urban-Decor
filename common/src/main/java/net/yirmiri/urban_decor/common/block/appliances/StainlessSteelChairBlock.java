@@ -36,7 +36,8 @@ public class StainlessSteelChairBlock extends Block implements SimpleWaterlogged
         this.registerDefaultState(this.stateDefinition.any()
                 .setValue(ROTATION, 0)
                 .setValue(WATERLOGGED, false)
-                .setValue(OCCUPIED, false));
+                .setValue(OCCUPIED, false)
+        );
     }
 
     @Override

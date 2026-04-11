@@ -7,7 +7,10 @@ import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
 import net.yirmiri.urban_decor.UrbanDecor;
+import net.yirmiri.urban_decor.common.block.MattressBlock;
+import net.yirmiri.urban_decor.common.block.RigidGlassBlock;
 import net.yirmiri.urban_decor.common.block.StainlessSteelLanternBlock;
+import net.yirmiri.urban_decor.common.block.SteelPipeBlock;
 import net.yirmiri.urban_decor.common.block.appliances.*;
 import net.yirmiri.urban_decor.common.block.appliances.BathtubBlock;
 import net.yirmiri.urban_decor.common.util.UDProperties;
@@ -56,6 +59,22 @@ public class UDBlocks {
     public static final Supplier<Block> POLISHED_CHROMITE = register("polished_chromite", () -> new Block(UDProperties.BlockP.POLISHED_CHROMITE), true);
     public static final Supplier<Block> POLISHED_CHROMITE_STAIRS = register("polished_chromite_stairs", () -> new PublicStairBlock(POLISHED_CHROMITE.get().defaultBlockState(), UDProperties.BlockP.POLISHED_CHROMITE), true);
     public static final Supplier<Block> POLISHED_CHROMITE_SLAB = register("polished_chromite_slab", () -> new SlabBlock(UDProperties.BlockP.POLISHED_CHROMITE), true);
+
+    public static final Supplier<Block> MATTRESS = register("mattress", () -> new MattressBlock(UDProperties.BlockP.MATTRESS), true);
+    public static final Supplier<Block> BOOTH = register("booth", () -> new BoothBlock(MATTRESS.get().defaultBlockState(), UDProperties.BlockP.BOOTH), true);
+
+    public static final HashMap<WrapColor, Supplier<Block>> WRAPPED_MATTRESSES = new HashMap<>();
+
+    static {
+        for (WrapColor colors : WrapColor.values()) {
+            WRAPPED_MATTRESSES.put(colors, register(colors + "_wrapped_mattress", () -> new MattressBlock(
+                    UDProperties.BlockP.MATTRESS.mapColor(colors.getMapColor())), true));
+        }
+    }
+
+    public static Supplier<Block> getWrappedMattresses(int colors){
+        return WRAPPED_MATTRESSES.get(WrapColor.byId(colors));
+    }
 
     //STAINLESS STEEL
     public static final Supplier<Block> STAINLESS_STEEL_BLOCK = register("stainless_steel_block", () -> new Block(UDProperties.BlockP.STAINLESS_STEEL), true);

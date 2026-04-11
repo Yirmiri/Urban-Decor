@@ -1,0 +1,7 @@
+{
+  "parent": "urban_decor:block/dark_cupboard_fullsize",
+  "textures": {
+    "0": "urban_decor:block/ruby_wrapped_dark_cupboard",
+    "particle": "urban_decor:block/ruby_wrapped_porcelain_block"
+  }
+}

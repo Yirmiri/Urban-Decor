@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_cherry_wrap": {
+      "conditions": {
+        "items": [
+          {
+            "items": "urban_decor:cherry_wrap"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "urban_decor:cherry_wrapped_mattress"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_cherry_wrap"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "urban_decor:cherry_wrapped_mattress"
+    ]
+  }
+}

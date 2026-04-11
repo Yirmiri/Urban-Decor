@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "wrapped_mattress",
+  "key": {
+    "#": {
+      "item": "urban_decor:mattress"
+    },
+    "@": {
+      "item": "urban_decor:ruby_wrap"
+    }
+  },
+  "pattern": [
+    "###",
+    "#@#",
+    "###"
+  ],
+  "result": {
+    "count": 8,
+    "id": "urban_decor:ruby_wrapped_mattress"
+  }
+}

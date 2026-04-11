@@ -76,6 +76,44 @@
       "y": 90,
       "uvlock": false
     },
+    "facing=north,variant=4,wrap_type=none": {
+      "model": "urban_decor:block/cupboard_fullsize",
+      "uvlock": false
+    },
+    "facing=south,variant=4,wrap_type=none": {
+      "model": "urban_decor:block/cupboard_fullsize",
+      "y": 180,
+      "uvlock": false
+    },
+    "facing=west,variant=4,wrap_type=none": {
+      "model": "urban_decor:block/cupboard_fullsize",
+      "y": 270,
+      "uvlock": false
+    },
+    "facing=east,variant=4,wrap_type=none": {
+      "model": "urban_decor:block/cupboard_fullsize",
+      "y": 90,
+      "uvlock": false
+    },
+    "facing=north,variant=5,wrap_type=none": {
+      "model": "urban_decor:block/cupboard_fullsize_topless",
+      "uvlock": false
+    },
+    "facing=south,variant=5,wrap_type=none": {
+      "model": "urban_decor:block/cupboard_fullsize_topless",
+      "y": 180,
+      "uvlock": false
+    },
+    "facing=west,variant=5,wrap_type=none": {
+      "model": "urban_decor:block/cupboard_fullsize_topless",
+      "y": 270,
+      "uvlock": false
+    },
+    "facing=east,variant=5,wrap_type=none": {
+      "model": "urban_decor:block/cupboard_fullsize_topless",
+      "y": 90,
+      "uvlock": false
+    },
 
     "facing=north,variant=1,wrap_type=cherry": {
       "model": "urban_decor:block/cherry_wrapped_cupboard_topless",
@@ -153,7 +191,44 @@
       "y": 90,
       "uvlock": false
     },
-
+    "facing=north,variant=4,wrap_type=cherry": {
+      "model": "urban_decor:block/cherry_wrapped_cupboard_fullsize",
+      "uvlock": false
+    },
+    "facing=south,variant=4,wrap_type=cherry": {
+      "model": "urban_decor:block/cherry_wrapped_cupboard_fullsize",
+      "y": 180,
+      "uvlock": false
+    },
+    "facing=west,variant=4,wrap_type=cherry": {
+      "model": "urban_decor:block/cherry_wrapped_cupboard_fullsize",
+      "y": 270,
+      "uvlock": false
+    },
+    "facing=east,variant=4,wrap_type=cherry": {
+      "model": "urban_decor:block/cherry_wrapped_cupboard_fullsize",
+      "y": 90,
+      "uvlock": false
+    },
+    "facing=north,variant=5,wrap_type=cherry": {
+      "model": "urban_decor:block/cherry_wrapped_cupboard_fullsize_topless",
+      "uvlock": false
+    },
+    "facing=south,variant=5,wrap_type=cherry": {
+      "model": "urban_decor:block/cherry_wrapped_cupboard_fullsize_topless",
+      "y": 180,
+      "uvlock": false
+    },
+    "facing=west,variant=5,wrap_type=cherry": {
+      "model": "urban_decor:block/cherry_wrapped_cupboard_fullsize_topless",
+      "y": 270,
+      "uvlock": false
+    },
+    "facing=east,variant=5,wrap_type=cherry": {
+      "model": "urban_decor:block/cherry_wrapped_cupboard_fullsize_topless",
+      "y": 90,
+      "uvlock": false
+    },
 
     "facing=north,variant=1,wrap_type=daffodil": {
       "model": "urban_decor:block/daffodil_wrapped_cupboard_topless",
@@ -231,7 +306,44 @@
       "y": 90,
       "uvlock": false
     },
-
+    "facing=north,variant=4,wrap_type=daffodil": {
+      "model": "urban_decor:block/daffodil_wrapped_cupboard_fullsize",
+      "uvlock": false
+    },
+    "facing=south,variant=4,wrap_type=daffodil": {
+      "model": "urban_decor:block/daffodil_wrapped_cupboard_fullsize",
+      "y": 180,
+      "uvlock": false
+    },
+    "facing=west,variant=4,wrap_type=daffodil": {
+      "model": "urban_decor:block/daffodil_wrapped_cupboard_fullsize",
+      "y": 270,
+      "uvlock": false
+    },
+    "facing=east,variant=4,wrap_type=daffodil": {
+      "model": "urban_decor:block/daffodil_wrapped_cupboard_fullsize",
+      "y": 90,
+      "uvlock": false
+    },
+    "facing=north,variant=5,wrap_type=daffodil": {
+      "model": "urban_decor:block/daffodil_wrapped_cupboard_fullsize_topless",
+      "uvlock": false
+    },
+    "facing=south,variant=5,wrap_type=daffodil": {
+      "model": "urban_decor:block/daffodil_wrapped_cupboard_fullsize_topless",
+      "y": 180,
+      "uvlock": false
+    },
+    "facing=west,variant=5,wrap_type=daffodil": {
+      "model": "urban_decor:block/daffodil_wrapped_cupboard_fullsize_topless",
+      "y": 270,
+      "uvlock": false
+    },
+    "facing=east,variant=5,wrap_type=daffodil": {
+      "model": "urban_decor:block/daffodil_wrapped_cupboard_fullsize_topless",
+      "y": 90,
+      "uvlock": false
+    },
 
     "facing=north,variant=1,wrap_type=spring": {
       "model": "urban_decor:block/spring_wrapped_cupboard_topless",
@@ -309,7 +421,44 @@
       "y": 90,
       "uvlock": false
     },
-
+    "facing=north,variant=4,wrap_type=spring": {
+      "model": "urban_decor:block/spring_wrapped_cupboard_fullsize",
+      "uvlock": false
+    },
+    "facing=south,variant=4,wrap_type=spring": {
+      "model": "urban_decor:block/spring_wrapped_cupboard_fullsize",
+      "y": 180,
+      "uvlock": false
+    },
+    "facing=west,variant=4,wrap_type=spring": {
+      "model": "urban_decor:block/spring_wrapped_cupboard_fullsize",
+      "y": 270,
+      "uvlock": false
+    },
+    "facing=east,variant=4,wrap_type=spring": {
+      "model": "urban_decor:block/spring_wrapped_cupboard_fullsize",
+      "y": 90,
+      "uvlock": false
+    },
+    "facing=north,variant=5,wrap_type=spring": {
+      "model": "urban_decor:block/spring_wrapped_cupboard_fullsize_topless",
+      "uvlock": false
+    },
+    "facing=south,variant=5,wrap_type=spring": {
+      "model": "urban_decor:block/spring_wrapped_cupboard_fullsize_topless",
+      "y": 180,
+      "uvlock": false
+    },
+    "facing=west,variant=5,wrap_type=spring": {
+      "model": "urban_decor:block/spring_wrapped_cupboard_fullsize_topless",
+      "y": 270,
+      "uvlock": false
+    },
+    "facing=east,variant=5,wrap_type=spring": {
+      "model": "urban_decor:block/spring_wrapped_cupboard_fullsize_topless",
+      "y": 90,
+      "uvlock": false
+    },
 
     "facing=north,variant=1,wrap_type=mint": {
       "model": "urban_decor:block/mint_wrapped_cupboard_topless",
@@ -387,7 +536,44 @@
       "y": 90,
       "uvlock": false
     },
-
+    "facing=north,variant=4,wrap_type=mint": {
+      "model": "urban_decor:block/mint_wrapped_cupboard_fullsize",
+      "uvlock": false
+    },
+    "facing=south,variant=4,wrap_type=mint": {
+      "model": "urban_decor:block/mint_wrapped_cupboard_fullsize",
+      "y": 180,
+      "uvlock": false
+    },
+    "facing=west,variant=4,wrap_type=mint": {
+      "model": "urban_decor:block/mint_wrapped_cupboard_fullsize",
+      "y": 270,
+      "uvlock": false
+    },
+    "facing=east,variant=4,wrap_type=mint": {
+      "model": "urban_decor:block/mint_wrapped_cupboard_fullsize",
+      "y": 90,
+      "uvlock": false
+    },
+    "facing=north,variant=5,wrap_type=mint": {
+      "model": "urban_decor:block/mint_wrapped_cupboard_fullsize_topless",
+      "uvlock": false
+    },
+    "facing=south,variant=5,wrap_type=mint": {
+      "model": "urban_decor:block/mint_wrapped_cupboard_fullsize_topless",
+      "y": 180,
+      "uvlock": false
+    },
+    "facing=west,variant=5,wrap_type=mint": {
+      "model": "urban_decor:block/mint_wrapped_cupboard_fullsize_topless",
+      "y": 270,
+      "uvlock": false
+    },
+    "facing=east,variant=5,wrap_type=mint": {
+      "model": "urban_decor:block/mint_wrapped_cupboard_fullsize_topless",
+      "y": 90,
+      "uvlock": false
+    },
 
     "facing=north,variant=1,wrap_type=azure": {
       "model": "urban_decor:block/azure_wrapped_cupboard_topless",
@@ -465,7 +651,44 @@
       "y": 90,
       "uvlock": false
     },
-
+    "facing=north,variant=4,wrap_type=azure": {
+      "model": "urban_decor:block/azure_wrapped_cupboard_fullsize",
+      "uvlock": false
+    },
+    "facing=south,variant=4,wrap_type=azure": {
+      "model": "urban_decor:block/azure_wrapped_cupboard_fullsize",
+      "y": 180,
+      "uvlock": false
+    },
+    "facing=west,variant=4,wrap_type=azure": {
+      "model": "urban_decor:block/azure_wrapped_cupboard_fullsize",
+      "y": 270,
+      "uvlock": false
+    },
+    "facing=east,variant=4,wrap_type=azure": {
+      "model": "urban_decor:block/azure_wrapped_cupboard_fullsize",
+      "y": 90,
+      "uvlock": false
+    },
+    "facing=north,variant=5,wrap_type=azure": {
+      "model": "urban_decor:block/azure_wrapped_cupboard_fullsize_topless",
+      "uvlock": false
+    },
+    "facing=south,variant=5,wrap_type=azure": {
+      "model": "urban_decor:block/azure_wrapped_cupboard_fullsize_topless",
+      "y": 180,
+      "uvlock": false
+    },
+    "facing=west,variant=5,wrap_type=azure": {
+      "model": "urban_decor:block/azure_wrapped_cupboard_fullsize_topless",
+      "y": 270,
+      "uvlock": false
+    },
+    "facing=east,variant=5,wrap_type=azure": {
+      "model": "urban_decor:block/azure_wrapped_cupboard_fullsize_topless",
+      "y": 90,
+      "uvlock": false
+    },
 
     "facing=north,variant=1,wrap_type=ruby": {
       "model": "urban_decor:block/ruby_wrapped_cupboard_topless",
@@ -540,6 +763,44 @@
     },
     "facing=east,variant=3,wrap_type=ruby": {
       "model": "urban_decor:block/ruby_wrapped_cupboard_slim_topless",
+      "y": 90,
+      "uvlock": false
+    },
+    "facing=north,variant=4,wrap_type=ruby": {
+      "model": "urban_decor:block/ruby_wrapped_cupboard_fullsize",
+      "uvlock": false
+    },
+    "facing=south,variant=4,wrap_type=ruby": {
+      "model": "urban_decor:block/ruby_wrapped_cupboard_fullsize",
+      "y": 180,
+      "uvlock": false
+    },
+    "facing=west,variant=4,wrap_type=ruby": {
+      "model": "urban_decor:block/ruby_wrapped_cupboard_fullsize",
+      "y": 270,
+      "uvlock": false
+    },
+    "facing=east,variant=4,wrap_type=ruby": {
+      "model": "urban_decor:block/ruby_wrapped_cupboard_fullsize",
+      "y": 90,
+      "uvlock": false
+    },
+    "facing=north,variant=5,wrap_type=ruby": {
+      "model": "urban_decor:block/ruby_wrapped_cupboard_fullsize_topless",
+      "uvlock": false
+    },
+    "facing=south,variant=5,wrap_type=ruby": {
+      "model": "urban_decor:block/ruby_wrapped_cupboard_fullsize_topless",
+      "y": 180,
+      "uvlock": false
+    },
+    "facing=west,variant=5,wrap_type=ruby": {
+      "model": "urban_decor:block/ruby_wrapped_cupboard_fullsize_topless",
+      "y": 270,
+      "uvlock": false
+    },
+    "facing=east,variant=5,wrap_type=ruby": {
+      "model": "urban_decor:block/ruby_wrapped_cupboard_fullsize_topless",
       "y": 90,
       "uvlock": false
     }

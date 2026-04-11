@@ -46,9 +46,11 @@ public class UDItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(UDBlocks.FLOOR_LAMP.get().asItem())
                 .add(UDBlocks.TURBINE.get().asItem())
                 .add(UDBlocks.PORCELAIN_TABLE.get().asItem())
+                .add(UDBlocks.BOOTH.get().asItem())
         ;
 
         getOrCreateTagBuilder(UDTags.ItemT.HAS_WRAPPED_VARIANTS)
+                .add(UDBlocks.BOOTH.get().asItem())
                 .add(UDBlocks.OAK_BOX.get().asItem())
                 .add(UDBlocks.SPRUCE_BOX.get().asItem())
                 .add(UDBlocks.BIRCH_BOX.get().asItem())

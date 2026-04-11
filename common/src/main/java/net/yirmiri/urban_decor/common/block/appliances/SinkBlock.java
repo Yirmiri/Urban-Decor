@@ -58,7 +58,13 @@ public class SinkBlock extends AbstractDecorBlock {
     private static final VoxelShape SHAPE_EAST_CUPBOARD = Stream.of(Block.box(0, 10, 0, 12, 14, 16), Block.box(0, 14, 0, 4, 16, 16), Block.box(13, 14, 0, 16, 16, 16), Block.box(4, 14, 0, 13, 16, 3), Block.box(4, 14, 13, 13, 16, 16), Block.box(0, 2, 0, 12, 10, 16), Block.box(0, 0, 0, 12, 2, 16), Block.box(12, 12, 2, 14, 14, 14)).reduce((v1, v2) -> Shapes.join(v1, v2, BooleanOp.OR)).get();
     private static final VoxelShape SHAPE_WEST_CUPBOARD = Stream.of(Block.box(4, 10, 0, 16, 14, 16), Block.box(12, 14, 0, 16, 16, 16), Block.box(0, 14, 0, 3, 16, 16), Block.box(3, 14, 13, 12, 16, 16), Block.box(3, 14, 0, 12, 16, 3), Block.box(4, 2, 0, 16, 10, 16), Block.box(4, 0, 0, 16, 2, 16), Block.box(2, 12, 2, 4, 14, 14)).reduce((v1, v2) -> Shapes.join(v1, v2, BooleanOp.OR)).get();
 
-    private static final VoxelShape SHAPE_FULLSIZE = Block.box(0, 0, 0, 16, 16, 16);
+    private static final VoxelShape SHAPE_FULLSIZE = Stream.of(
+            Block.box(3, 14, 13, 13, 16, 16),
+            Block.box(0, 14, 0, 3, 16, 16),
+            Block.box(3, 14, 0, 13, 16, 3),
+            Block.box(13, 14, 0, 16, 16, 16),
+            Block.box(0, 0, 0, 16, 14, 16)
+    ).reduce((v1, v2) -> Shapes.join(v1, v2, BooleanOp.OR)).get();
 
     public SinkBlock(Properties settings) {
         super(settings);

@@ -70,10 +70,9 @@ public class UDModelProvider extends FabricModelProvider {
         //registerSteelBars(generator);
 
         generator.createTrivialCube(UDBlocks.POLYPROPYLENE_BLOCK.get());
-
         generator.createSimpleFlatItemModel(UDBlocks.STAINLESS_STEEL_LADDER.get());
-
         generator.createMultiface(UDBlocks.PLASTIC_LIGHTS.get());
+        generator.createTrivialCube(UDBlocks.MATTRESS.get());
 
         //DYED
         for (DyeColor colors : DyeColor.values()) {
@@ -83,6 +82,8 @@ public class UDModelProvider extends FabricModelProvider {
 
         //WRAPPED
         for (WrapColor colors : WrapColor.values()) {
+            generator.createTrivialCube(UDBlocks.getWrappedMattresses(colors.getId()).get());
+
             generateFridges(generator, colors);
             generateFreezers(generator, colors);
             generateDishwashers(generator, colors);
@@ -93,6 +94,7 @@ public class UDModelProvider extends FabricModelProvider {
             generateSinks(generator, colors);
             generateToilets(generator, colors);
             generateBathtubs(generator, colors);
+            generateBooths(generator, colors);
         }
     }
 
@@ -107,7 +109,7 @@ public class UDModelProvider extends FabricModelProvider {
         generator.generateFlatItem(UDItems.DARK_PORCELAIN.get(), ModelTemplates.FLAT_ITEM);
         generator.generateFlatItem(UDItems.TOOLBOX.get(), ModelTemplates.FLAT_ITEM);
         generator.generateFlatItem(UDBlocks.STOVE.get().asItem(), ModelTemplates.FLAT_ITEM);
-        generator.generateFlatItem(UDItems.STEEL_PIPE.get(), ModelTemplates.FLAT_HANDHELD_ITEM);
+        generator.generateFlatItem(UDItems.STEEL_PIPE.get(), ModelTemplates.FLAT_ITEM);
         generator.generateFlatItem(UDBlocks.BATHTUB.get().asItem(), ModelTemplates.FLAT_ITEM);
         generator.generateFlatItem(UDBlocks.DARK_BATHTUB.get().asItem(), ModelTemplates.FLAT_ITEM);
         generator.generateFlatItem(UDBlocks.FAUCET.get().asItem(), ModelTemplates.FLAT_ITEM);
@@ -175,6 +177,7 @@ public class UDModelProvider extends FabricModelProvider {
         generator.generateFlatItem(UDBlocks.CASH_REGISTER.get().asItem(), ModelTemplates.FLAT_ITEM);
         generator.generateFlatItem(UDBlocks.DARK_CASH_REGISTER.get().asItem(), ModelTemplates.FLAT_ITEM);
         generator.generateFlatItem(UDBlocks.VENDING_MACHINE.get().asItem(), ModelTemplates.FLAT_ITEM);
+        generator.generateFlatItem(UDBlocks.BOOTH.get().asItem(), ModelTemplates.FLAT_ITEM);
 
         for (DyeColor colors : DyeColor.values()) {
             generator.generateFlatItem(UDBlocks.getDyedTowels(colors.getId()).get().asItem(), ModelTemplates.FLAT_ITEM);
@@ -188,6 +191,29 @@ public class UDModelProvider extends FabricModelProvider {
     }
 
     //WRAPPED
+    private void generateBooths(BlockModelGenerators generator, WrapColor colors) {
+        createParentedModel(generator, RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_booth"),
+                RunicLib.customid(UrbanDecor.MOD_ID, "block/booth"), Map.of(
+                        "0", RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_booth"),
+                        "particle", RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_mattress")
+                ));
+        createParentedModel(generator, RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_booth_inner"),
+                RunicLib.customid(UrbanDecor.MOD_ID, "block/booth_inner"), Map.of(
+                        "0", RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_booth"),
+                        "particle", RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_mattress")
+                ));
+        createParentedModel(generator, RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_booth_outer"),
+                RunicLib.customid(UrbanDecor.MOD_ID, "block/booth_outer"), Map.of(
+                        "0", RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_booth"),
+                        "particle", RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_mattress")
+                ));
+        createParentedModel(generator, RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_booth_armrests"),
+                RunicLib.customid(UrbanDecor.MOD_ID, "block/booth_armrests"), Map.of(
+                        "0", RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_booth"),
+                        "particle", RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_mattress")
+                ));
+    }
+
     private void generateBathtubs(BlockModelGenerators generator, WrapColor colors) {
         createParentedModel(generator, RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_bathtub_back"),
                 RunicLib.customid(UrbanDecor.MOD_ID, "block/bathtub_back"), Map.of(
@@ -509,6 +535,30 @@ public class UDModelProvider extends FabricModelProvider {
 
         createParentedModel(generator, RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_dark_cupboard_topless"),
                 RunicLib.customid(UrbanDecor.MOD_ID, "block/dark_cupboard_topless"), Map.of(
+                        "0", RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_dark_cupboard"),
+                        "particle", RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_porcelain_block")
+                ));
+
+        createParentedModel(generator, RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_cupboard_fullsize"),
+                RunicLib.customid(UrbanDecor.MOD_ID, "block/cupboard_fullsize"), Map.of(
+                        "0", RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_cupboard"),
+                        "particle", RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_porcelain_block")
+                ));
+
+        createParentedModel(generator, RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_cupboard_fullsize_topless"),
+                RunicLib.customid(UrbanDecor.MOD_ID, "block/cupboard_fullsize_topless"), Map.of(
+                        "0", RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_cupboard"),
+                        "particle", RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_porcelain_block")
+                ));
+
+        createParentedModel(generator, RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_dark_cupboard_fullsize"),
+                RunicLib.customid(UrbanDecor.MOD_ID, "block/dark_cupboard_fullsize"), Map.of(
+                        "0", RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_dark_cupboard"),
+                        "particle", RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_porcelain_block")
+                ));
+
+        createParentedModel(generator, RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_dark_cupboard_fullsize_topless"),
+                RunicLib.customid(UrbanDecor.MOD_ID, "block/dark_cupboard_fullsize_topless"), Map.of(
                         "0", RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_dark_cupboard"),
                         "particle", RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_porcelain_block")
                 ));

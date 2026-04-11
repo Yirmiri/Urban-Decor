@@ -1,5 +1,5 @@
 {
-  "parent": "minecraft:item/handheld",
+  "parent": "minecraft:item/generated",
   "textures": {
     "layer0": "urban_decor:item/steel_pipe"
   }

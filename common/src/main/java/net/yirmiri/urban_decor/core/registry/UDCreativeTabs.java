@@ -113,6 +113,8 @@ public class UDCreativeTabs {
                         entry.accept(UDBlocks.STAINLESS_STEEL_CHAIR.get());
                         entry.accept(UDBlocks.PORCELAIN_TABLE.get());
 
+                        entry.accept(UDBlocks.BOOTH.get());
+
                         entry.accept(UDBlocks.WALL_CLOCK.get());
                         entry.accept(UDBlocks.OAK_GRANDFATHER_CLOCK.get());
                         entry.accept(UDBlocks.SPRUCE_GRANDFATHER_CLOCK.get());
@@ -181,6 +183,14 @@ public class UDCreativeTabs {
                         entry.accept(UDBlocks.getWrappedPolyanthous(WrapColor.MINT.getId()).get());
                         entry.accept(UDBlocks.getWrappedPolyanthous(WrapColor.AZURE.getId()).get());
                         entry.accept(UDBlocks.getWrappedPolyanthous(WrapColor.RUBY.getId()).get());
+
+                        entry.accept(UDBlocks.MATTRESS.get());
+                        entry.accept(UDBlocks.getWrappedMattresses(WrapColor.CHERRY.getId()).get());
+                        entry.accept(UDBlocks.getWrappedMattresses(WrapColor.DAFFODIL.getId()).get());
+                        entry.accept(UDBlocks.getWrappedMattresses(WrapColor.SPRING.getId()).get());
+                        entry.accept(UDBlocks.getWrappedMattresses(WrapColor.MINT.getId()).get());
+                        entry.accept(UDBlocks.getWrappedMattresses(WrapColor.AZURE.getId()).get());
+                        entry.accept(UDBlocks.getWrappedMattresses(WrapColor.RUBY.getId()).get());
 
                         //DYED
                         entry.accept(UDBlocks.TOWEL_BAR.get());

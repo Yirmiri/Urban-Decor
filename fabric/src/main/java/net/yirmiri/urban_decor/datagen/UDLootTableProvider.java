@@ -33,7 +33,7 @@ public class UDLootTableProvider extends FabricBlockLootTableProvider {
 
     @Override
     public void generate() {
-        dropSelf(UDBlocks.POLYPROPYLENE_BLOCK.get());
+        dropSelf(UDBlocks.MATTRESS.get());
         dropSelf(UDBlocks.PORCELAIN_TILES.get());
         dropSelf(UDBlocks.PORCELAIN_TILE_STAIRS.get());
         add(UDBlocks.PORCELAIN_TILE_SLAB.get(), createSlabItemTable(UDBlocks.PORCELAIN_TILE_SLAB.get()));
@@ -175,6 +175,7 @@ public class UDLootTableProvider extends FabricBlockLootTableProvider {
     private void addWrappedDrops() {
         for (WrapColor colors : WrapColor.values()) {
             add(UDBlocks.getWrappedPolyanthous(colors.getId()).get(), (b) -> createSinglePropConditionTable(b, DoublePlantBlock.HALF, DoubleBlockHalf.LOWER));
+            dropSelf(UDBlocks.getWrappedMattresses(colors.getId()).get());
         }
     }
 

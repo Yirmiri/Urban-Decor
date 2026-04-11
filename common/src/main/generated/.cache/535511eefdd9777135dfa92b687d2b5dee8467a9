@@ -1,9 +1,9 @@
-// 1.21.1	2026-04-10T06:25:29.4857545	Urban Decor/Tags for minecraft:item
-f3232ea9cf81bd70d7b743dededff13b3d237c56 data\urban_decor\tags\item\has_wrapped_variants.json
+// 1.21.1	2026-04-10T23:18:27.0369733	Urban Decor/Tags for minecraft:item
+8e6a74f14f309e0fd6bf955023695a501aef1fe3 data\urban_decor\tags\item\has_wrapped_variants.json
 bf980f12719576500df1a4bdf186afc1b2a6a459 data\urban_decor\tags\item\towels.json
 80ecaef9f0c9221f26609e3871fdd7969b40b38f data\urban_decor\tags\item\polyanthous.json
 a5a99ecec7e1575a81fed168a312e0c4304c26dd data\urban_decor\tags\item\wraps.json
 53267af6105db6e1268b0b389da7e53cfba86989 data\urban_decor\tags\item\toolboxes.json
 578655c4c03fa3fa7cf23b09532575cbebb73212 data\minecraft\tags\item\tall_flowers.json
-fd1406179954ab063e613ef434ef9331e96e9032 data\urban_decor\tags\item\has_toolbox_variants.json
+f030990f19cf59ce555e1f94056ab5879ca880ab data\urban_decor\tags\item\has_toolbox_variants.json
 923cd50e2f1bb527a547af7a0ecfa7bf6f8a135e data\urban_decor\tags\item\porcelain.json

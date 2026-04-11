@@ -109,6 +109,7 @@ public class UDBlockTagProvider extends FabricTagProvider.BlockTagProvider {
 
         getOrCreateTagBuilder(BlockTags.MINEABLE_WITH_AXE)
                 .addTag(UDTags.BlockT.MINEABLE_WITH_AXE_AND_PICKAXE)
+                .add(UDBlocks.BOOTH.get())
 
                 .add(UDBlocks.OAK_BOX.get())
                 .add(UDBlocks.SPRUCE_BOX.get())
@@ -164,6 +165,7 @@ public class UDBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(UDBlocks.PLASTIC_CHAIR.get())
                 .add(UDBlocks.STAINLESS_STEEL_CHAIR.get())
                 .add(UDBlocks.PORCELAIN_TABLE.get())
+                .add(UDBlocks.BOOTH.get())
         ;
 
         getOrCreateTagBuilder(UDTags.BlockT.TOILETS)

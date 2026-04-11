@@ -37,7 +37,7 @@ import net.yirmiri.urban_decor.core.registry.UDItems;
 
 public class CupboardBlock extends AbstractStorageDecorBlock {
     public static final EnumProperty<WrapType> WRAP_TYPE = EnumProperty.create("wrap_type", WrapType.class);
-    public static final IntegerProperty VARIANT = IntegerProperty.create("variant", 0, 3);
+    public static final IntegerProperty VARIANT = IntegerProperty.create("variant", 0, 5);
 
     private static final VoxelShape SHAPE_NORTH = Shapes.join(Block.box(2, 0, 4, 14, 14, 16), Block.box(0, 14, 2, 16, 16, 16), BooleanOp.OR);
     private static final VoxelShape SHAPE_SOUTH = Shapes.join(Block.box(2, 0, 0, 14, 14, 12), Block.box(0, 14, 0, 16, 16, 14), BooleanOp.OR);
@@ -59,6 +59,8 @@ public class CupboardBlock extends AbstractStorageDecorBlock {
     private static final VoxelShape SHAPE_FULL_WEST_BARE = Shapes.join(Block.box(4, 0, 0, 16, 14, 16), Block.box(4, 14, 0, 16, 16, 16), BooleanOp.OR);
     private static final VoxelShape SHAPE_FULL_EAST_BARE = Shapes.join(Block.box(0, 0, 0, 12, 14, 16), Block.box(0, 14, 0, 12, 16, 16), BooleanOp.OR);
 
+    private static final VoxelShape SHAPE_FULLSIZE = Block.box(0, 0, 0, 16, 16, 16);
+
     public CupboardBlock(BlockBehaviour.Properties settings) {
         super(settings);
         registerDefaultState(defaultBlockState()
@@ -71,6 +73,11 @@ public class CupboardBlock extends AbstractStorageDecorBlock {
     public VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext ctx) {
         int variant = state.getValue(VARIANT);
         boolean fullsize = variant == 0 || variant == 1;
+
+        if (variant == 4 || variant == 5) {
+            return SHAPE_FULLSIZE;
+        }
+
         if (fullsize) {
             return switch (state.getValue(FACING)) {
                 case SOUTH -> variant == 1 ? SHAPE_FULL_SOUTH_BARE : SHAPE_FULL_SOUTH;

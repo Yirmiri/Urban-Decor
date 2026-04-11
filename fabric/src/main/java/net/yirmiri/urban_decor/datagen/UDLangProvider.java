@@ -40,6 +40,7 @@ public class UDLangProvider extends FabricLanguageProvider {
 
             build.add(UDBlocks.getWrappedPolyanthous(colors.getId()).get(), wrapString + " Polyanthous");
             build.add(UDItems.getWrappedWraps(colors.getId()).get(), wrapString + " Wrap");
+            build.add(UDBlocks.getWrappedMattresses(colors.getId()).get(), wrapString + " Mattress");
         }
 
         //MISC
@@ -93,6 +94,7 @@ public class UDLangProvider extends FabricLanguageProvider {
         build.add(UDBlocks.STAINLESS_STEEL_SOUL_LANTERN.get(), "Stainless Steel Soul Lantern");
         build.add(UDBlocks.STAINLESS_STEEL_BARS.get(), "Stainless Steel Bars");
         build.add(UDBlocks.STAINLESS_STEEL_FENCE.get(), "Stainless Steel Fence");
+        build.add(UDBlocks.MATTRESS.get(), "Mattress");
 
         //APPLIANCES
         build.add(UDBlocks.TRASH_CAN.get(), "Trash Can");
@@ -184,6 +186,7 @@ public class UDLangProvider extends FabricLanguageProvider {
         build.add(UDBlocks.CASH_REGISTER.get(), "Cash Register");
         build.add(UDBlocks.DARK_CASH_REGISTER.get(), "Dark Cash Register");
         build.add(UDBlocks.VENDING_MACHINE.get(), "Vending Machine");
+        build.add(UDBlocks.BOOTH.get(), "Booth");
 
         //ITEMS
         build.add(UDItems.POLYPROPYLENE.get(), "Polypropylene");
@@ -222,7 +225,7 @@ public class UDLangProvider extends FabricLanguageProvider {
         build.add("toolbox.shower.variant_true", "Variant: Flat");
         build.add("toolbox.shower.variant_false", "Variant: Cylindrical");
         build.add("toolbox.sink.variant_0", "Variant: Bare");
-        build.add("toolbox.sink.variant_1", "Variant: Cupboard");
+        build.add("toolbox.sink.variant_1", "Variant: Standard");
         build.add("toolbox.sink.variant_2", "Variant: Fullsize");
         build.add("toolbox.sink.variant_3", "Variant: Slim");
         build.add("toolbox.toilet.variant_true", "Variant: Tank");
@@ -233,9 +236,11 @@ public class UDLangProvider extends FabricLanguageProvider {
         build.add("toolbox.washing_machine.variant_true", "Variant: Transparent");
         build.add("toolbox.washing_machine.variant_false", "Variant: Opaque");
         build.add("toolbox.cupboard.variant_3", "Variant: Fullsize");
-        build.add("toolbox.cupboard.variant_0", "Variant: Fullsize Topless");
+        build.add("toolbox.cupboard.variant_0", "Variant: Standard Topless");
         build.add("toolbox.cupboard.variant_1", "Variant: Slim");
         build.add("toolbox.cupboard.variant_2", "Variant: Slim Topless");
+        build.add("toolbox.cupboard.variant_4", "Variant: Fullsize Topless");
+        build.add("toolbox.cupboard.variant_5", "Variant: Standard");
         build.add("toolbox.filing_cabinet.variant_true", "Variant: Fullsize");
         build.add("toolbox.filing_cabinet.variant_false", "Variant: Compact");
         build.add("toolbox.radiator.variant_true", "Variant: Vertical");
@@ -419,6 +424,8 @@ public class UDLangProvider extends FabricLanguageProvider {
         build.add(YT_ID + "block." + MOD_ID + "cash_register.desc", "A dollar a day keeps the devil away!");
         build.add(YT_ID + "block." + MOD_ID + "dark_cash_register.desc", "A dollar a day keeps the devil away!");
         build.add(YT_ID + "block." + MOD_ID + "vending_machine.desc", "Source of all known evil.");
+        build.add(YT_ID + "block." + MOD_ID + "mattress.desc", "A soft block that can bounce things when fallen on");
+        build.add(YT_ID + "block." + MOD_ID + "booth.desc", "A soft vibrant cushion that can be sat on");
 
         for (WrapColor colors : WrapColor.values()) {
             String wrapString = StringUtils.capitalize(StringUtils.replace(StringUtils.replace(StringUtils.replace(colors.getName(),
@@ -426,6 +433,7 @@ public class UDLangProvider extends FabricLanguageProvider {
 
             build.add(YT_ID + "block." + MOD_ID + UDBlocks.getWrappedPolyanthous(colors.getId()) + ".desc", "A vibrant, delicate flower that is essential in the creation of polypropylene");
             build.add(YT_ID + "item." + MOD_ID + UDItems.getWrappedWraps(colors.getId()) + ".desc", "A" + " " + colors.getName() + " " + " wrap that can be applied to various applianced");
+            build.add(YT_ID + "block." + MOD_ID + UDBlocks.getWrappedMattresses(colors.getId()) + ".desc", "A soft block that has been wrapped, bounces when fallen on");
         }
 
         for (DyeColor colors : DyeColor.values()) {

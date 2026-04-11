@@ -1171,6 +1171,52 @@ public class UDRecipeProvider extends FabricRecipeProvider {
                 .pattern("@#@")
                 .unlockedBy(getHasName(UDItems.STAINLESS_STEEL_INGOT.get()), has(UDItems.STAINLESS_STEEL_INGOT.get()))
                 .save(exporter, RunicLib.customid(UrbanDecor.MOD_ID, getSimpleRecipeName(UDBlocks.VENDING_MACHINE.get())));
+
+        polished(exporter, RecipeCategory.BUILDING_BLOCKS, UDBlocks.MATTRESS.get(), Items.WHITE_WOOL);
+
+        createWrappedMattress(UDBlocks.getWrappedMattresses(WrapColor.CHERRY.getId()).get().asItem(),
+                Ingredient.of(UDItems.getWrappedWraps(WrapColor.CHERRY.getId()).get()))
+                .unlockedBy(getHasName(UDItems.getWrappedWraps(WrapColor.CHERRY.getId()).get().asItem()),
+                        has(UDItems.getWrappedWraps(WrapColor.CHERRY.getId()).get().asItem())).group("wrapped_mattress")
+                .save(exporter, RunicLib.customid(UrbanDecor.MOD_ID, getSimpleRecipeName(UDBlocks.getWrappedMattresses(WrapColor.CHERRY.getId()).get())));
+
+        createWrappedMattress(UDBlocks.getWrappedMattresses(WrapColor.DAFFODIL.getId()).get().asItem(),
+                Ingredient.of(UDItems.getWrappedWraps(WrapColor.DAFFODIL.getId()).get()))
+                .unlockedBy(getHasName(UDItems.getWrappedWraps(WrapColor.DAFFODIL.getId()).get().asItem()),
+                        has(UDItems.getWrappedWraps(WrapColor.DAFFODIL.getId()).get().asItem())).group("wrapped_mattress")
+                .save(exporter, RunicLib.customid(UrbanDecor.MOD_ID, getSimpleRecipeName(UDBlocks.getWrappedMattresses(WrapColor.DAFFODIL.getId()).get())));
+
+        createWrappedMattress(UDBlocks.getWrappedMattresses(WrapColor.SPRING.getId()).get().asItem(),
+                Ingredient.of(UDItems.getWrappedWraps(WrapColor.SPRING.getId()).get()))
+                .unlockedBy(getHasName(UDItems.getWrappedWraps(WrapColor.SPRING.getId()).get().asItem()),
+                        has(UDItems.getWrappedWraps(WrapColor.SPRING.getId()).get().asItem())).group("wrapped_mattress")
+                .save(exporter, RunicLib.customid(UrbanDecor.MOD_ID, getSimpleRecipeName(UDBlocks.getWrappedMattresses(WrapColor.SPRING.getId()).get())));
+
+        createWrappedMattress(UDBlocks.getWrappedMattresses(WrapColor.MINT.getId()).get().asItem(),
+                Ingredient.of(UDItems.getWrappedWraps(WrapColor.MINT.getId()).get()))
+                .unlockedBy(getHasName(UDItems.getWrappedWraps(WrapColor.MINT.getId()).get().asItem()),
+                        has(UDItems.getWrappedWraps(WrapColor.MINT.getId()).get().asItem())).group("wrapped_mattress")
+                .save(exporter, RunicLib.customid(UrbanDecor.MOD_ID, getSimpleRecipeName(UDBlocks.getWrappedMattresses(WrapColor.MINT.getId()).get())));
+
+        createWrappedMattress(UDBlocks.getWrappedMattresses(WrapColor.AZURE.getId()).get().asItem(),
+                Ingredient.of(UDItems.getWrappedWraps(WrapColor.AZURE.getId()).get()))
+                .unlockedBy(getHasName(UDItems.getWrappedWraps(WrapColor.AZURE.getId()).get().asItem()),
+                        has(UDItems.getWrappedWraps(WrapColor.AZURE.getId()).get().asItem())).group("wrapped_mattress")
+                .save(exporter, RunicLib.customid(UrbanDecor.MOD_ID, getSimpleRecipeName(UDBlocks.getWrappedMattresses(WrapColor.AZURE.getId()).get())));
+
+        createWrappedMattress(UDBlocks.getWrappedMattresses(WrapColor.RUBY.getId()).get().asItem(),
+                Ingredient.of(UDItems.getWrappedWraps(WrapColor.RUBY.getId()).get()))
+                .unlockedBy(getHasName(UDItems.getWrappedWraps(WrapColor.RUBY.getId()).get().asItem()),
+                        has(UDItems.getWrappedWraps(WrapColor.RUBY.getId()).get().asItem())).group("wrapped_mattress")
+                .save(exporter, RunicLib.customid(UrbanDecor.MOD_ID, getSimpleRecipeName(UDBlocks.getWrappedMattresses(WrapColor.RUBY.getId()).get())));
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, UDBlocks.BOOTH.get(), 6)
+                .define('#', UDBlocks.MATTRESS.get()).define('@', UDItems.POLYPROPYLENE.get())
+                .pattern("  #")
+                .pattern("###")
+                .pattern("@@@")
+                .unlockedBy(getHasName(UDBlocks.MATTRESS.get()), has(UDBlocks.MATTRESS.get()))
+                .save(exporter, RunicLib.customid(UrbanDecor.MOD_ID, getSimpleRecipeName(UDBlocks.BOOTH.get())));
     }
 
     public static ShapelessRecipeBuilder createFromBasePictureFrameRecipe(ItemLike output, Item picture, DyeColor color) {
@@ -1183,6 +1229,14 @@ public class UDRecipeProvider extends FabricRecipeProvider {
                 .define('#', input)
                 .pattern("##")
                 .pattern("##");
+    }
+
+    public static ShapedRecipeBuilder createWrappedMattress(ItemLike output, Ingredient input) {
+        return ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, output, 8)
+                .define('#', UDBlocks.MATTRESS.get()).define('@', input)
+                .pattern("###")
+                .pattern("#@#")
+                .pattern("###");
     }
 
     public static ShapedRecipeBuilder createTwoByTwoRecipe(ItemLike output, int count, Ingredient input) {

@@ -1,4 +1,4 @@
-package net.yirmiri.urban_decor.common.block.appliances;
+package net.yirmiri.urban_decor.common.block;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;

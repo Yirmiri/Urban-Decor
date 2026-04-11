@@ -36,7 +36,11 @@ public class ToiletPaperBlock extends AbstractDecorBlock {
 
     public ToiletPaperBlock(Properties settings) {
         super(settings);
-        registerDefaultState(defaultBlockState().setValue(VARIANT, 0).setValue(BlockStateProperties.HORIZONTAL_FACING, Direction.NORTH).setValue(WATERLOGGED, false));
+        registerDefaultState(defaultBlockState()
+                .setValue(VARIANT, 0)
+                .setValue(BlockStateProperties.HORIZONTAL_FACING, Direction.NORTH)
+                .setValue(WATERLOGGED, false)
+        );
     }
 
     @Override

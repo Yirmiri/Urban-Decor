@@ -42,7 +42,6 @@ public class UDItems {
         return WRAPPED_WRAPS.get(WrapColor.byId(colors));
     }
 
-
     //DYED ITEMS
     public static final HashMap<DyeColor, Supplier<Item>> DYED_PICTURE_FRAMES = new HashMap<>();
 
