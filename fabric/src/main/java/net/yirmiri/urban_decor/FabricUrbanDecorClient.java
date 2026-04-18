@@ -6,8 +6,12 @@ import net.fabricmc.api.Environment;
 import net.fabricmc.fabric.api.client.rendering.v1.BlockEntityRendererRegistry;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityModelLayerRegistry;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
+import net.fabricmc.fabric.api.resource.IdentifiableResourceReloadListener;
+import net.fabricmc.fabric.api.resource.ResourceManagerHelper;
 import net.minecraft.client.gui.screens.MenuScreens;
+import net.minecraft.server.packs.PackType;
 import net.yirmiri.urban_decor.common.block.sewing_machine.SewingMachineScreen;
+import net.yirmiri.urban_decor.common.block.sewing_machine.SewingRecipeReloadListener;
 import net.yirmiri.urban_decor.common.block_entity.model.*;
 import net.yirmiri.urban_decor.common.block_entity.model.doll.*;
 import net.yirmiri.urban_decor.common.block_entity.renderer.DollRenderer;
@@ -25,6 +29,8 @@ public class FabricUrbanDecorClient implements ClientModInitializer {
     @Override
     public void onInitializeClient() {
         UrbanDecorClient.init();
+
+        ResourceManagerHelper.get(PackType.SERVER_DATA).registerReloadListener((IdentifiableResourceReloadListener) new SewingRecipeReloadListener());
 
         EntityRendererRegistry.register(UDEntities.SEAT.get(), InvisibleEntityRenderer::new);
 

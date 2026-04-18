@@ -23,3 +23,4 @@ public class UrbanDecor {
 //finish sound block
 //doll in changelog
 //booth shapes
+//booth block makes player disappear

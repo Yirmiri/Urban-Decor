@@ -3,8 +3,10 @@ package net.yirmiri.urban_decor.common.block.sewing_machine;
 import net.azurune.runiclib.RunicLib;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
+import net.minecraft.client.resources.sounds.SimpleSoundInstance;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.sounds.SoundEvents;
 import net.minecraft.util.Mth;
 import net.minecraft.world.entity.player.Inventory;
 import net.yirmiri.urban_decor.UrbanDecor;
@@ -40,11 +42,6 @@ public class SewingMachineScreen extends AbstractContainerScreen<SewingMachineMe
         renderRecipes(guiGraphics);
     }
 
-//    @Override
-//    protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
-//        guiGraphics.drawString(this.font, this.title, this.titleLabelX, this.titleLabelY - 1, 0xc1a0b8, false);
-//    }
-
     @Override
     public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTick) {
         super.render(guiGraphics, mouseX, mouseY, partialTick);
@@ -69,7 +66,7 @@ public class SewingMachineScreen extends AbstractContainerScreen<SewingMachineMe
             } else {
                 sprite = RECIPE;
             }
-            guiGraphics.blitSprite(sprite, buttonX, buttonY - 1, 16, 18);
+            guiGraphics.blitSprite(sprite, buttonX, buttonY + 1, 16, 18);
         }
     }
 
@@ -82,7 +79,7 @@ public class SewingMachineScreen extends AbstractContainerScreen<SewingMachineMe
             int itemX = x + (index % 4) * 16;
             int itemY = y + (index / 4) * 18;
 
-            guiGraphics.renderItem(menu.getRecipeResult(i), itemX, itemY);
+            guiGraphics.renderItem(menu.getRecipeResult(i), itemX, itemY + 2);
         }
     }
 
@@ -102,6 +99,7 @@ public class SewingMachineScreen extends AbstractContainerScreen<SewingMachineMe
                 if (dx >= 0 && dy >= 0 && dx < 16 && dy < 18) {
                     menu.clickMenuButton(minecraft.player, i);
                     minecraft.gameMode.handleInventoryButtonClick(menu.containerId, i);
+                    minecraft.getSoundManager().play(SimpleSoundInstance.forUI(SoundEvents.UI_BUTTON_CLICK, 1.0F));
                     return true;
                 }
             }

@@ -8,7 +8,7 @@ import net.yirmiri.urban_decor.common.block.sewing_machine.SewingMachineScreen;
 import net.yirmiri.urban_decor.core.registry.UDMenus;
 
 @EventBusSubscriber(modid = UrbanDecor.MOD_ID, bus = EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
-public class NeoForgeUrbanDecorEvents {
+public class NeoForgeUrbanDecorClient {
 
     @SubscribeEvent
     public static void onRegisterScreens(RegisterMenuScreensEvent event) {

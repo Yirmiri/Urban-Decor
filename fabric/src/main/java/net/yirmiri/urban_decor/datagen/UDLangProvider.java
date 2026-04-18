@@ -67,7 +67,7 @@ public class UDLangProvider extends FabricLanguageProvider {
         build.add("container.urban_decor.smoker", "Cooking Appliance");
         build.add("container.urban_decor.blast_furnace", "Blasting Appliance");
         build.add("container.urban_decor.trash", "§4Destroy Items");
-        build.add("container.urban_decor.sewing_machine", "Sewing Machine");
+        build.add("container.urban_decor.sewing_machine", "Sewing");
 
         //TOOLTIPS
         build.add("item.urban_decor.toolbox.use", "Interact on Block:");
