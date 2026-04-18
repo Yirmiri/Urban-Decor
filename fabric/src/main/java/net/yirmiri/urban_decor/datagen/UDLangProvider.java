@@ -277,7 +277,8 @@ public class UDLangProvider extends FabricLanguageProvider {
         build.add("toolbox.doll.variant_3", "Variant: Hanging");
         build.add("toolbox.doll.variant_4", "Variant: Laying");
         build.add("toolbox.doll.variant_5", "Variant: Crawling");
-        build.add("toolbox.doll.variant_6", "Variant: Sitting");
+        build.add("toolbox.doll.variant_6", "Variant: Bizarre");
+        build.add("toolbox.doll.variant_7", "Variant: Sitting");
 
         //DAMAGE
         build.add("death.attack.urban_decor.toaster", "%1$s likes to play with hot toasters");

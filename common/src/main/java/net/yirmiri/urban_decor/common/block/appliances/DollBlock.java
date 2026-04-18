@@ -41,7 +41,7 @@ import net.yirmiri.urban_decor.core.registry.UDComponents;
 import java.util.List;
 
 public class DollBlock extends Block implements SimpleWaterloggedBlock, EntityBlock, Equipable {
-    public static final IntegerProperty POSE = IntegerProperty.create("variant", 0, 6);
+    public static final IntegerProperty POSE = IntegerProperty.create("variant", 0, 7);
     public static final IntegerProperty ROTATION = BlockStateProperties.ROTATION_16;
     public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
 

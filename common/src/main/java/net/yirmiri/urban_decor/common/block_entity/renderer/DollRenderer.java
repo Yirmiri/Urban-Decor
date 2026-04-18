@@ -23,6 +23,7 @@ public class DollRenderer implements BlockEntityRenderer<DollBlockEntity> {
     private final DollHangingModel<Entity> modelHanging;
     private final DollLayingModel<Entity> modelLaying;
     private final DollCrawlingModel<Entity> modelCrawling;
+    private final DollBizarreModel<Entity> modelBizarre;
 
     public DollRenderer(BlockEntityRendererProvider.Context ctx) {
         this.model = new DollModel<>(ctx.bakeLayer(DollModel.LAYER_LOCATION));
@@ -32,6 +33,7 @@ public class DollRenderer implements BlockEntityRenderer<DollBlockEntity> {
         this.modelHanging = new DollHangingModel<>(ctx.bakeLayer(DollHangingModel.LAYER_LOCATION));
         this.modelLaying = new DollLayingModel<>(ctx.bakeLayer(DollLayingModel.LAYER_LOCATION));
         this.modelCrawling = new DollCrawlingModel<>(ctx.bakeLayer(DollCrawlingModel.LAYER_LOCATION));
+        this.modelBizarre = new DollBizarreModel<>(ctx.bakeLayer(DollBizarreModel.LAYER_LOCATION));
     }
 
     @Override
@@ -56,6 +58,7 @@ public class DollRenderer implements BlockEntityRenderer<DollBlockEntity> {
         if (variant == 4) modelHanging.renderToBuffer(poseStack, buffer.getBuffer(RenderType.entityTranslucent(texture)), light, overlay, 0xFFFFFFFF);
         if (variant == 5) modelLaying.renderToBuffer(poseStack, buffer.getBuffer(RenderType.entityTranslucent(texture)), light, overlay, 0xFFFFFFFF);
         if (variant == 6) modelCrawling.renderToBuffer(poseStack, buffer.getBuffer(RenderType.entityTranslucent(texture)), light, overlay, 0xFFFFFFFF);
+        if (variant == 7) modelBizarre.renderToBuffer(poseStack, buffer.getBuffer(RenderType.entityTranslucent(texture)), light, overlay, 0xFFFFFFFF);
 
         poseStack.popPose();
     }

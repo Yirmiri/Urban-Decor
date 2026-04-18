@@ -49,6 +49,7 @@ public class FabricUrbanDecorClient implements ClientModInitializer {
         EntityModelLayerRegistry.registerModelLayer(DollLeaningModel.LAYER_LOCATION, DollLeaningModel::createBodyLayer);
         EntityModelLayerRegistry.registerModelLayer(DollCrawlingModel.LAYER_LOCATION, DollCrawlingModel::createBodyLayer);
         EntityModelLayerRegistry.registerModelLayer(DollLayingModel.LAYER_LOCATION, DollLayingModel::createBodyLayer);
+        EntityModelLayerRegistry.registerModelLayer(DollBizarreModel.LAYER_LOCATION, DollBizarreModel::createBodyLayer);
 
         MenuScreens.register(UDMenus.SEWING_MACHINE.get(), SewingMachineScreen::new);
     }

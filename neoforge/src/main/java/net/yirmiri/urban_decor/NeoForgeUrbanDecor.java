@@ -63,5 +63,6 @@ public class NeoForgeUrbanDecor {
         event.registerLayerDefinition(DollLeaningModel.LAYER_LOCATION, DollLeaningModel::createBodyLayer);
         event.registerLayerDefinition(DollCrawlingModel.LAYER_LOCATION, DollCrawlingModel::createBodyLayer);
         event.registerLayerDefinition(DollLayingModel.LAYER_LOCATION, DollLayingModel::createBodyLayer);
+        event.registerLayerDefinition(DollBizarreModel.LAYER_LOCATION, DollBizarreModel::createBodyLayer);
     }
 }
