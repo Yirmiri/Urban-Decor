@@ -172,6 +172,7 @@ public class UDLootTableProvider extends FabricBlockLootTableProvider {
         add(UDBlocks.STAINLESS_STEEL_DEPOSIT.get(), builder -> createSilkTouchDispatchTable(builder, applyExplosionDecay(builder,
                 LootItem.lootTableItem(UDItems.STAINLESS_STEEL_NUGGET.get()).apply(SetItemCountFunction.setCount(UniformGenerator.between(4.0F, 8.0F))))));
         dropSelf(UDBlocks.DOLL.get());
+        dropSelf(UDBlocks.SEWING_MACHINE.get());
 
         addDyedDrops();
         addWrappedDrops();

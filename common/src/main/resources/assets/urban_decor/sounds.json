@@ -6,12 +6,20 @@
     ]
   },
 
+  "item.sew": {
+    "subtitle": "subtitles.item.sew",
+    "sounds": [
+      "urban_decor:item/sew"
+    ]
+  },
+
   "item.wrap.use": {
     "subtitle": "subtitles.item.wrap.use",
     "sounds": [
       "urban_decor:item/wrap_use1"
     ]
   },
+
   "block.appliance.open": {
     "subtitle": "subtitles.block.appliance.open",
     "sounds": [

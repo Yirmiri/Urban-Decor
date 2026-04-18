@@ -2,13 +2,17 @@ package net.yirmiri.urban_decor.common.block.appliances;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.core.Holder;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.sounds.SoundEvent;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.ItemInteractionResult;
+import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.Equipable;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
@@ -36,7 +40,7 @@ import net.yirmiri.urban_decor.core.registry.UDComponents;
 
 import java.util.List;
 
-public class DollBlock extends Block implements SimpleWaterloggedBlock, EntityBlock {
+public class DollBlock extends Block implements SimpleWaterloggedBlock, EntityBlock, Equipable {
     public static final IntegerProperty POSE = IntegerProperty.create("variant", 0, 6);
     public static final IntegerProperty ROTATION = BlockStateProperties.ROTATION_16;
     public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
@@ -140,5 +144,15 @@ public class DollBlock extends Block implements SimpleWaterloggedBlock, EntityBl
     @Override
     protected RenderShape getRenderShape(BlockState state) {
         return RenderShape.ENTITYBLOCK_ANIMATED;
+    }
+
+    @Override
+    public EquipmentSlot getEquipmentSlot() {
+        return EquipmentSlot.HEAD;
+    }
+
+    @Override
+    public Holder<SoundEvent> getEquipSound() {
+        return Equipable.super.getEquipSound();
     }
 }

@@ -191,6 +191,8 @@ public class UDModelProvider extends FabricModelProvider {
         generator.generateFlatItem(UDBlocks.DARK_CASH_REGISTER.get().asItem(), ModelTemplates.FLAT_ITEM);
         generator.generateFlatItem(UDBlocks.VENDING_MACHINE.get().asItem(), ModelTemplates.FLAT_ITEM);
         generator.generateFlatItem(UDBlocks.BOOTH.get().asItem(), ModelTemplates.FLAT_ITEM);
+        generator.generateFlatItem(UDBlocks.SEWING_MACHINE.get().asItem(), ModelTemplates.FLAT_ITEM);
+        generator.generateFlatItem(UDItems.SEWING_NEEDLE.get(), ModelTemplates.FLAT_HANDHELD_ITEM);
 
         for (DyeColor colors : DyeColor.values()) {
             generator.generateFlatItem(UDBlocks.getDyedTowels(colors.getId()).get().asItem(), ModelTemplates.FLAT_ITEM);

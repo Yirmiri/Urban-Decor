@@ -11,13 +11,15 @@ public class UrbanDecor {
     public static void init() {
         UDBlocks.loadBlocks();
         UDItems.loadItems();
+        UDComponents.load();
+        UDMenus.load();
         UDEntities.loadEntities();
         UDCreativeTabs.loadItemGroups();
         UDSounds.loadSounds();
         UDBlockEntities.loadBlockEntities();
-        UDComponents.load();
     }
 }
-//remove toolbox functionality, make decoratives work like clutter no more
+//remove toolbox functionality and replace with modern system
 //finish sound block
 //doll in changelog
+//booth shapes

@@ -116,6 +116,9 @@ public class UDCreativeTabs {
                         entry.accept(UDBlocks.STAINLESS_STEEL_CHAIR.get());
                         entry.accept(UDBlocks.PORCELAIN_TABLE.get());
 
+                        entry.accept(UDBlocks.SEWING_MACHINE.get());
+                        entry.accept(UDItems.SEWING_NEEDLE.get());
+
                         entry.accept(UDBlocks.BOOTH.get());
                         entry.accept(UDBlocks.DOLL.get());
 

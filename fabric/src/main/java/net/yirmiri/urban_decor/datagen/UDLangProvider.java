@@ -62,6 +62,12 @@ public class UDLangProvider extends FabricLanguageProvider {
         build.add("urban_decor.calendar.till_new_years", "days until New Years");
         build.add("urban_decor.calendar.new_years", "Happy New Years!");
         build.add("urban_decor.clock", "It is currently");
+        build.add("container.urban_decor.generic", "Storage Appliance");
+        build.add("container.urban_decor.furnace", "Smelting Appliance");
+        build.add("container.urban_decor.smoker", "Cooking Appliance");
+        build.add("container.urban_decor.blast_furnace", "Blasting Appliance");
+        build.add("container.urban_decor.trash", "§4Destroy Items");
+        build.add("container.urban_decor.sewing_machine", "Sewing Machine");
 
         //TOOLTIPS
         build.add("item.urban_decor.toolbox.use", "Interact on Block:");
@@ -202,6 +208,7 @@ public class UDLangProvider extends FabricLanguageProvider {
         build.add(UDBlocks.VENDING_MACHINE.get(), "Vending Machine");
         build.add(UDBlocks.BOOTH.get(), "Booth");
         build.add(UDBlocks.DOLL.get(), "Doll");
+        build.add(UDBlocks.SEWING_MACHINE.get(), "Sewing Machine");
 
         //ITEMS
         build.add(UDItems.POLYPROPYLENE.get(), "Polypropylene");
@@ -213,13 +220,7 @@ public class UDLangProvider extends FabricLanguageProvider {
         build.add(UDItems.STAINLESS_STEEL_NUGGET.get(), "Stainless Steel Nugget");
         build.add(UDItems.MICROWAVE.get(), "Microwave");
         build.add(UDItems.SATELLITE_DISH.get(), "Satellite Dish");
-
-        //CONTAINERS
-        build.add("container.urban_decor.generic", "Storage Appliance");
-        build.add("container.urban_decor.furnace", "Smelting Appliance");
-        build.add("container.urban_decor.smoker", "Cooking Appliance");
-        build.add("container.urban_decor.blast_furnace", "Blasting Appliance");
-        build.add("container.urban_decor.trash", "§4Destroy Items");
+        build.add(UDItems.SEWING_NEEDLE.get(), "Sewing Needle");
 
         //STATS
         build.add("stat.urban_decor.times_sat", "Sat on Appliances");
@@ -296,6 +297,7 @@ public class UDLangProvider extends FabricLanguageProvider {
         build.add("subtitles.block.grand_clock.chime_night", "Grandfather Clock tolls");
         build.add("subtitles.block.grand_clock.chime_3am", "Grandfather Clock eerily tolls");
         build.add("subtitles.block.speaker.fluorescent", "Speaker hums");
+        build.add("subtitles.item.sew", "Sewing");
 
         //ADVANCEMENTS
         build.add("urban_decor.advancement.root", "Urban Decor");
@@ -450,7 +452,9 @@ public class UDLangProvider extends FabricLanguageProvider {
         build.add(YT_ID + "block." + MOD_ID + "mattress.desc", "A soft block that can bounce things when fallen on");
         build.add(YT_ID + "block." + MOD_ID + "booth.desc", "A soft vibrant cushion that can be sat on");
         build.add(YT_ID + "block." + MOD_ID + "stainless_steel_deposit.desc", "Formed when chromite is dripped on with lava from raw iron blocks");
-        build.add(YT_ID + "block." + MOD_ID + "doll.desc", "A little friend to have nearby, can be sat in different poses");
+        build.add(YT_ID + "block." + MOD_ID + "doll.desc", "A little friend to have nearby, can swap textures in sewing machine");
+        build.add(YT_ID + "block." + MOD_ID + "sewing_machine.desc", "A plastic trinket used for cycling variants of dolls");
+        build.add(YT_ID + "block." + MOD_ID + "sewing_needle.desc", "Can be used alongside dolls in a sewing machine to create special dolls");
 
         for (WrapColor colors : WrapColor.values()) {
             String wrapString = StringUtils.capitalize(StringUtils.replace(StringUtils.replace(StringUtils.replace(colors.getName(),

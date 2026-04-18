@@ -1,6 +1,7 @@
 package net.yirmiri.urban_decor.common.util;
 
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.Rarity;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
@@ -90,11 +91,13 @@ public class UDProperties {
         public static final BlockBehaviour.Properties PLASTIC_CHAIR = BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_WOOD).mapColor(MapColor.STONE).sound(UDSoundTypes.PLASTIC).strength(0.8F, 0.5F);
         public static final BlockBehaviour.Properties PORCELAIN_TABLE = BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_WOOD).mapColor(MapColor.STONE).sound(UDSoundTypes.STEEL).strength(1.0F, 0.8F);
         public static final BlockBehaviour.Properties STAINLESS_STEEL_CHAIR = BlockBehaviour.Properties.ofFullCopy(Blocks.IRON_BLOCK).sound(UDSoundTypes.STEEL).strength(1.5F, 2.0F);
+        public static final BlockBehaviour.Properties PLASTIC_TRINKET = BlockBehaviour.Properties.ofFullCopy(Blocks.SMITHING_TABLE).strength(0.3F).sound(UDSoundTypes.PLASTIC);
     }
 
     public static class ItemP {
         //MISC
-        public static final Item.Properties GENERIC_ITEM = new Item.Properties();
-        public static final Item.Properties TOOLBOX = new Item.Properties().stacksTo(1);
+        public static final Item.Properties GENERIC = new Item.Properties();
+        public static final Item.Properties GENERIC_1 = new Item.Properties().stacksTo(1);
+        public static final Item.Properties GENERIC_UC_1 = new Item.Properties().stacksTo(1).rarity(Rarity.UNCOMMON);
     }
 }

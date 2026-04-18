@@ -1,4 +1,4 @@
-// 1.21.1	2026-04-17T16:42:12.9307576	Urban Decor/Recipes
+// 1.21.1	2026-04-18T07:24:40.753012	Urban Decor/Recipes
 613f113751b30543286fb9afc4c74e56a1804d5a data\urban_decor\advancement\recipes\decorations\light_blue_picture_frame.json
 b80ddaef4275516bb0ac9bad78967a9f066d9c27 data\urban_decor\recipe\spruce_piano.json
 d28939a5ac648a20ed8602d0e3cfc22599f0ac91 data\urban_decor\recipe\light_gray_towel.json
@@ -401,6 +401,7 @@ fcb89fe8d0aface7a12fa9192ba1dbc27a543b67 data\urban_decor\advancement\recipes\bu
 49ac858d6570eecf9444388b1485bf2ef863309e data\urban_decor\recipe\rose_picture_frame_from_base.json
 7e81fb27d792e7a0faac4914f4dc036516b9dbbf data\urban_decor\recipe\porcelain_tile_slab_from_porcelain_tiles_stonecutting.json
 576d1f15529b2ead8233faa4f0350918d4fccbf8 data\urban_decor\advancement\recipes\decorations\dark_cash_register.json
+719921d24720128b2553f2d8eec45b0ee6d5cee2 data\urban_decor\recipe\sewing_machine.json
 6a99b658990590baed26814a233807a7cacb1167 data\urban_decor\recipe\booth.json
 92a30c8897beddf83c9e7432cce99fb5195d173c data\urban_decor\advancement\recipes\decorations\faucet.json
 0779e0cea56afb5b687bfc467c73671a802d9fdb data\urban_decor\advancement\recipes\decorations\canary_plastic_lights.json
@@ -451,6 +452,7 @@ b4192cc890547e0a693542707ea243aa8d845ed3 data\urban_decor\recipe\polished_chromi
 b096deb9e859f5960d2e0640ebaf3db6d89072b4 data\urban_decor\recipe\cyan_towel.json
 657d4fd1f4ef3f6ba99317247b300d6e1eaaa5a8 data\urban_decor\advancement\recipes\decorations\bathtub.json
 8575dfc11eaab85ff440eac5ab0cddda812c2183 data\urban_decor\recipe\dark_porcelain_slab.json
+654255f53b68c57602a16616de7a3952d5707551 data\urban_decor\advancement\recipes\decorations\sewing_machine.json
 311f3b376627d65bdd5f54ae683972c5ca0d5692 data\urban_decor\recipe\spruce_calendar.json
 c72e55fec0c83c482ae0a0bbaddc7426051e83d6 data\urban_decor\advancement\recipes\decorations\bamboo_box.json
 442b8c6cbf3e563bcfc8ed55f27e25ff5e446f35 data\urban_decor\advancement\recipes\decorations\light_blue_towel_block.json

@@ -19,6 +19,7 @@ public class UDSounds {
 
     //ITEM
     public static final Supplier<SoundEvent> WRAP_USE = register("item.wrap.use");
+    public static final Supplier<SoundEvent> SEW = register("item.sew.use");
 
     //SPEAKER
     public static final Supplier<SoundEvent> SPEAKER_FLUORESCENT = register("block.speaker.fluorescent");

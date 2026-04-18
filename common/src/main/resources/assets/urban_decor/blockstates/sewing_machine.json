@@ -1,0 +1,23 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "urban_decor:block/sewing_machine",
+      "uvlock": false
+    },
+    "facing=south": {
+      "model": "urban_decor:block/sewing_machine",
+      "y": 180,
+      "uvlock": false
+    },
+    "facing=west": {
+      "model": "urban_decor:block/sewing_machine",
+      "y": 270,
+      "uvlock": false
+    },
+    "facing=east": {
+      "model": "urban_decor:block/sewing_machine",
+      "y": 90,
+      "uvlock": false
+    }
+  }
+}

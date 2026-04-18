@@ -1234,6 +1234,14 @@ public class UDRecipeProvider extends FabricRecipeProvider {
                 .unlockedBy(getHasName(UDItems.POLYPROPYLENE.get()), has(UDItems.POLYPROPYLENE.get()))
                 .save(exporter, RunicLib.customid(UrbanDecor.MOD_ID, getSimpleRecipeName(UDBlocks.DOLL.get())));
 
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, UDBlocks.SEWING_MACHINE.get(), 1)
+                .define('#', UDItems.POLYPROPYLENE.get()).define('@', UDItems.STAINLESS_STEEL_NUGGET.get())
+                .pattern("###")
+                .pattern("@ #")
+                .pattern("###")
+                .unlockedBy(getHasName(UDItems.POLYPROPYLENE.get()), has(UDItems.POLYPROPYLENE.get()))
+                .save(exporter, RunicLib.customid(UrbanDecor.MOD_ID, getSimpleRecipeName(UDBlocks.SEWING_MACHINE.get())));
+
         //todo wrapped block recipes
 //        createWrappedBlock(UDBlocks.getWrappedPorcelainBlocks(WrapColor.CHERRY.getId()).get().asItem(),
 //                Ingredient.of(UDBlocks.PORCELAIN_BLOCK.get()), Ingredient.of(UDItems.getWrappedWraps(WrapColor.CHERRY.getId()).get()))

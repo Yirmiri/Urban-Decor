@@ -10,6 +10,7 @@ import net.yirmiri.urban_decor.UrbanDecor;
 import net.yirmiri.urban_decor.common.block.*;
 import net.yirmiri.urban_decor.common.block.appliances.*;
 import net.yirmiri.urban_decor.common.block.appliances.BathtubBlock;
+import net.yirmiri.urban_decor.common.block.sewing_machine.SewingMachineBlock;
 import net.yirmiri.urban_decor.common.util.UDProperties;
 import net.yirmiri.urban_decor.common.util.WrapColor;
 
@@ -120,6 +121,7 @@ public class UDBlocks {
     public static final Supplier<Block> STAINLESS_STEEL_CHAIR = register("stainless_steel_chair", () -> new StainlessSteelChairBlock(UDProperties.BlockP.STAINLESS_STEEL_CHAIR), true);
     public static final Supplier<Block> SPEAKER = register("speaker", () -> new SpeakerBlock(UDProperties.BlockP.STAINLESS_STEEL), true);
     public static final Supplier<Block> TOOLBOX = register("toolbox", () -> new ToolboxBlock(UDProperties.BlockP.TOOLBOX), false);
+    public static final Supplier<Block> SEWING_MACHINE = register("sewing_machine", () -> new SewingMachineBlock(UDProperties.BlockP.PLASTIC_TRINKET), true);
     public static final Supplier<Block> DOLL = register("doll", () -> new DollBlock(UDProperties.BlockP.DOLL), true);
 
     //WOODEN

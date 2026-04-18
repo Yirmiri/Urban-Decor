@@ -5,6 +5,8 @@ import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 import net.neoforged.neoforge.client.event.EntityRenderersEvent;
+import net.neoforged.neoforge.client.event.RegisterMenuScreensEvent;
+import net.yirmiri.urban_decor.common.block.sewing_machine.SewingMachineScreen;
 import net.yirmiri.urban_decor.common.block_entity.model.*;
 import net.yirmiri.urban_decor.common.block_entity.model.doll.*;
 import net.yirmiri.urban_decor.common.block_entity.renderer.DollRenderer;
@@ -14,6 +16,7 @@ import net.yirmiri.urban_decor.common.block_entity.renderer.WallClockRenderer;
 import net.yirmiri.urban_decor.common.entity.renderer.InvisibleEntityRenderer;
 import net.yirmiri.urban_decor.core.registry.UDBlockEntities;
 import net.yirmiri.urban_decor.core.registry.UDEntities;
+import net.yirmiri.urban_decor.core.registry.UDMenus;
 
 @Mod(UrbanDecor.MOD_ID)
 public class NeoForgeUrbanDecor {
@@ -58,5 +61,10 @@ public class NeoForgeUrbanDecor {
         event.registerLayerDefinition(DollLeaningModel.LAYER_LOCATION, DollLeaningModel::createBodyLayer);
         event.registerLayerDefinition(DollCrawlingModel.LAYER_LOCATION, DollCrawlingModel::createBodyLayer);
         event.registerLayerDefinition(DollLayingModel.LAYER_LOCATION, DollLayingModel::createBodyLayer);
+    }
+
+    @SubscribeEvent
+    public static void onRegisterScreens(RegisterMenuScreensEvent event) {
+        event.register(UDMenus.SEWING_MACHINE.get(), SewingMachineScreen::new);
     }
 }
