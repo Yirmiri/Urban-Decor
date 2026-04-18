@@ -62,9 +62,4 @@ public class NeoForgeUrbanDecor {
         event.registerLayerDefinition(DollCrawlingModel.LAYER_LOCATION, DollCrawlingModel::createBodyLayer);
         event.registerLayerDefinition(DollLayingModel.LAYER_LOCATION, DollLayingModel::createBodyLayer);
     }
-
-    @SubscribeEvent
-    public static void onRegisterScreens(RegisterMenuScreensEvent event) {
-        event.register(UDMenus.SEWING_MACHINE.get(), SewingMachineScreen::new);
-    }
 }

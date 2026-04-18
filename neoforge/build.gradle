@@ -46,7 +46,8 @@ neoForge {
 
 dependencies {
     //RUNICLIB
-    implementation("curse.maven:runiclib-880879:${neoforge_runiclib}")
+    //implementation("curse.maven:runiclib-880879:${neoforge_runiclib}") <--- UNCOMMENT WHEN USING RELEASE RUNIC
+    implementation files("indev-neoforge-runiclib-1.21.1.jar")
 
     runtimeOnly "curse.maven:jei-238222:7420587"
 }

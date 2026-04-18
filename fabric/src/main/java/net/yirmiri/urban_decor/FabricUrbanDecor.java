@@ -3,10 +3,13 @@ package net.yirmiri.urban_decor;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
 import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
+import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.tags.BiomeTags;
 import net.minecraft.world.level.levelgen.GenerationStep;
+import net.yirmiri.urban_decor.common.block.sewing_machine.SewingMachineScreen;
 import net.yirmiri.urban_decor.core.init.UDFeatures;
 import net.yirmiri.urban_decor.core.init.UDTags;
+import net.yirmiri.urban_decor.core.registry.UDMenus;
 
 public class FabricUrbanDecor implements ModInitializer {
     
