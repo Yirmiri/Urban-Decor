@@ -3,7 +3,7 @@ package net.yirmiri.urban_decor.core.registry;
 import net.azurune.runiclib.core.platform.RLServices;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.yirmiri.urban_decor.UrbanDecor;
-import net.yirmiri.urban_decor.common.block.entity.*;
+import net.yirmiri.urban_decor.common.block_entity.entity.*;
 
 import java.util.function.Supplier;
 
@@ -56,6 +56,16 @@ public class UDBlockEntities {
     public static final Supplier<BlockEntityType<StainlessSteelChairBlockEntity>> STAINLESS_STEEL_CHAIR = RLServices.REGISTRY.registerBlockEntityType(
             UrbanDecor.MOD_ID, "stainless_steel_chair", () -> RLServices.REGISTRY.createBlockEntity(StainlessSteelChairBlockEntity::new,
                     UDBlocks.STAINLESS_STEEL_CHAIR.get()
+            ));
+
+    public static final Supplier<BlockEntityType<SpeakerBlockEntity>> SPEAKER = RLServices.REGISTRY.registerBlockEntityType(
+            UrbanDecor.MOD_ID, "speaker", () -> RLServices.REGISTRY.createBlockEntity(SpeakerBlockEntity::new,
+                    UDBlocks.SPEAKER.get()
+            ));
+
+    public static final Supplier<BlockEntityType<DollBlockEntity>> DOLL = RLServices.REGISTRY.registerBlockEntityType(
+            UrbanDecor.MOD_ID, "doll", () -> RLServices.REGISTRY.createBlockEntity(DollBlockEntity::new,
+                    UDBlocks.DOLL.get()
             ));
 
     public static void loadBlockEntities() {

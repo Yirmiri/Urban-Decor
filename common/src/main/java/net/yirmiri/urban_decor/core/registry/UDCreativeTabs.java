@@ -62,6 +62,8 @@ public class UDCreativeTabs {
                         entry.accept(UDBlocks.POLISHED_CHROMITE_STAIRS.get());
                         entry.accept(UDBlocks.POLISHED_CHROMITE_SLAB.get());
 
+                        entry.accept(UDBlocks.STAINLESS_STEEL_DEPOSIT.get());
+
                         entry.accept(UDBlocks.STAINLESS_STEEL_BLOCK.get());
                         entry.accept(UDBlocks.STAINLESS_STEEL_DOOR.get());
                         entry.accept(UDBlocks.STAINLESS_STEEL_TRAPDOOR.get());
@@ -74,6 +76,7 @@ public class UDCreativeTabs {
                         entry.accept(UDBlocks.RIGID_GLASS.get());
 
                         entry.accept(UDItems.TOOLBOX.get());
+                        entry.accept(UDBlocks.SPEAKER.get());
 
                         entry.accept(UDBlocks.FILING_CABINET.get());
                         entry.accept(UDBlocks.CUPBOARD.get());
@@ -114,6 +117,7 @@ public class UDCreativeTabs {
                         entry.accept(UDBlocks.PORCELAIN_TABLE.get());
 
                         entry.accept(UDBlocks.BOOTH.get());
+                        entry.accept(UDBlocks.DOLL.get());
 
                         entry.accept(UDBlocks.WALL_CLOCK.get());
                         entry.accept(UDBlocks.OAK_GRANDFATHER_CLOCK.get());

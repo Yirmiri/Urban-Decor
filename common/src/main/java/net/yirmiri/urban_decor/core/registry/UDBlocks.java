@@ -7,10 +7,7 @@ import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
 import net.yirmiri.urban_decor.UrbanDecor;
-import net.yirmiri.urban_decor.common.block.MattressBlock;
-import net.yirmiri.urban_decor.common.block.RigidGlassBlock;
-import net.yirmiri.urban_decor.common.block.StainlessSteelLanternBlock;
-import net.yirmiri.urban_decor.common.block.SteelPipeBlock;
+import net.yirmiri.urban_decor.common.block.*;
 import net.yirmiri.urban_decor.common.block.appliances.*;
 import net.yirmiri.urban_decor.common.block.appliances.BathtubBlock;
 import net.yirmiri.urban_decor.common.util.UDProperties;
@@ -72,6 +69,7 @@ public class UDBlocks {
     public static final Supplier<Block> STAINLESS_STEEL_DOOR = register("stainless_steel_door", () -> new PublicDoorBlock(BlockSetType.STONE, UDProperties.BlockP.STEEL_DOOR), true);
     public static final Supplier<Block> STAINLESS_STEEL_TRAPDOOR = register("stainless_steel_trapdoor", () -> new PublicTrapdoorBlock(BlockSetType.STONE, UDProperties.BlockP.STEEL_TRAPDOOR), true);
     public static final Supplier<Block> STAINLESS_STEEL_LADDER = register("stainless_steel_ladder", () -> new PublicLadderBlock(UDProperties.BlockP.STEEL_LADDER), true);
+    public static final Supplier<Block> STAINLESS_STEEL_DEPOSIT = register("stainless_steel_deposit", () -> new Block(UDProperties.BlockP.CHROMITE), true);
     public static final Supplier<Block> RIGID_GLASS = register("rigid_glass", () -> new RigidGlassBlock(UDProperties.BlockP.RIGID_GLASS), true);
     public static final Supplier<Block> STEEL_PIPE = register("steel_pipe", () -> new SteelPipeBlock(UDProperties.BlockP.STEEL_PIPE), false);
 
@@ -111,6 +109,18 @@ public class UDBlocks {
     public static final Supplier<Block> PORCELAIN_TABLE = register("porcelain_table", () -> new PorcelainTableBlock(UDProperties.BlockP.PORCELAIN_TABLE), true);
     public static final Supplier<Block> WALL_CLOCK = register("wall_clock", () -> new WallClockBlock(UDProperties.BlockP.WALL_CLOCK), true);
     public static final Supplier<Block> PLASTIC_CHAIR = register("plastic_chair", () -> new PlasticChairBlock(UDProperties.BlockP.PLASTIC_CHAIR), true);
+    public static final Supplier<Block> AIR_CONDITIONER = register("air_conditioner", () -> new AirConditionerBlock(UDProperties.BlockP.AIR_CONDITIONER), true);
+    public static final Supplier<Block> FAUCET = register("faucet", () -> new FaucetBlock(UDProperties.BlockP.FAUCET), true);
+    public static final Supplier<Block> RADIATOR = register("radiator", () -> new RadiatorBlock(UDProperties.BlockP.RADIATOR), true);
+    public static final Supplier<Block> TURBINE = register("turbine", () -> new TurbineBlock(UDProperties.BlockP.TURBINE), true);
+    public static final Supplier<Block> TOWEL_BAR = register("towel_bar", () -> new TowelBarBlock(UDProperties.BlockP.TOWEL_BAR), true);
+    public static final Supplier<Block> SHOWER = register("shower", () -> new ShowerBlock(UDProperties.BlockP.SHOWER), true);
+    public static final Supplier<Block> SATELLITE_DISH = register("satellite_dish", () -> new SatelliteDishBlock(UDProperties.BlockP.SATELLITE_DISH), false);
+    public static final Supplier<Block> WALL_SATELLITE_DISH = register("wall_satellite_dish", () -> new SatelliteDishBlock(UDProperties.BlockP.SATELLITE_DISH), false);
+    public static final Supplier<Block> STAINLESS_STEEL_CHAIR = register("stainless_steel_chair", () -> new StainlessSteelChairBlock(UDProperties.BlockP.STAINLESS_STEEL_CHAIR), true);
+    public static final Supplier<Block> SPEAKER = register("speaker", () -> new SpeakerBlock(UDProperties.BlockP.STAINLESS_STEEL), true);
+    public static final Supplier<Block> TOOLBOX = register("toolbox", () -> new ToolboxBlock(UDProperties.BlockP.TOOLBOX), false);
+    public static final Supplier<Block> DOLL = register("doll", () -> new DollBlock(UDProperties.BlockP.DOLL), true);
 
     //WOODEN
     public static final Supplier<Block> OAK_PIANO = register("oak_piano", () -> new PianoBlock(UDProperties.BlockP.PIANO), true);
@@ -160,18 +170,6 @@ public class UDBlocks {
     public static final Supplier<Block> BAMBOO_BOX = register("bamboo_box", () -> new BoxBlock(UDProperties.BlockP.BAMBOO_PLANKS), true);
     public static final Supplier<Block> CRIMSON_BOX = register("crimson_box", () -> new BoxBlock(UDProperties.BlockP.CRIMSON_PLANKS), true);
     public static final Supplier<Block> WARPED_BOX = register("warped_box", () -> new BoxBlock(UDProperties.BlockP.CRIMSON_PLANKS), true);
-
-    //MISC APPLIANCES
-    public static final Supplier<Block> TOOLBOX = register("toolbox", () -> new ToolboxBlock(UDProperties.BlockP.TOOLBOX), false);
-    public static final Supplier<Block> AIR_CONDITIONER = register("air_conditioner", () -> new AirConditionerBlock(UDProperties.BlockP.AIR_CONDITIONER), true);
-    public static final Supplier<Block> FAUCET = register("faucet", () -> new FaucetBlock(UDProperties.BlockP.FAUCET), true);
-    public static final Supplier<Block> RADIATOR = register("radiator", () -> new RadiatorBlock(UDProperties.BlockP.RADIATOR), true);
-    public static final Supplier<Block> TURBINE = register("turbine", () -> new TurbineBlock(UDProperties.BlockP.TURBINE), true);
-    public static final Supplier<Block> TOWEL_BAR = register("towel_bar", () -> new TowelBarBlock(UDProperties.BlockP.TOWEL_BAR), true);
-    public static final Supplier<Block> SHOWER = register("shower", () -> new ShowerBlock(UDProperties.BlockP.SHOWER), true);
-    public static final Supplier<Block> SATELLITE_DISH = register("satellite_dish", () -> new SatelliteDishBlock(UDProperties.BlockP.SATELLITE_DISH), false);
-    public static final Supplier<Block> WALL_SATELLITE_DISH = register("wall_satellite_dish", () -> new SatelliteDishBlock(UDProperties.BlockP.SATELLITE_DISH), false);
-    public static final Supplier<Block> STAINLESS_STEEL_CHAIR = register("stainless_steel_chair", () -> new StainlessSteelChairBlock(UDProperties.BlockP.STAINLESS_STEEL_CHAIR), true);
 
     //WRAPPED
     public static final HashMap<WrapColor, Supplier<Block>> WRAPPED_POLYANTHOUS = new HashMap<>();

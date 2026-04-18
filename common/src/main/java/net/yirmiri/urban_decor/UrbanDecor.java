@@ -15,30 +15,9 @@ public class UrbanDecor {
         UDCreativeTabs.loadItemGroups();
         UDSounds.loadSounds();
         UDBlockEntities.loadBlockEntities();
+        UDComponents.load();
     }
 }
-//TODO Wrapping update
-//fix toaster not cooking
-//make tags for each appliance type with their black/white/wrapped(?) included
-//Fixed some appliances not making any open/close sounds when truly opening them
-//more interactions
-//grand clock emits signal when making tong sound
-//grand clock be weird in nether
-//fix only 1 instance of grand clock sound
-//config for how many days in a year
-//config for grand clock sound
-
-//TODO MISC
-//fix satellite sound
-//wrapped blocks with state wraps should drop wrap on break
-//toaster smoke particles
-//microwave cook sound instance
-//re-sort creative
-//delicate from polyanthous: spring->wasabi mint->sacramento daffodil->canary ruby->rose
-//delicate integration
-
-//TODO Technical updates
-//datadrive wraps
-//datadrive toolbox variants
-//make sounds for each block a lot more open
-//rewrite/optimize code in the mod
+//remove toolbox functionality, make decoratives work like clutter no more
+//finish sound block
+//doll in changelog

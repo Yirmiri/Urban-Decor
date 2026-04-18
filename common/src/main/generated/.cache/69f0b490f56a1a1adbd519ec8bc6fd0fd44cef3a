@@ -1,4 +1,4 @@
-// 1.21.1	2026-04-11T10:29:43.4053231	Urban Decor/Block Loot Tables
+// 1.21.1	2026-04-17T16:42:12.9141488	Urban Decor/Block Loot Tables
 f79d4cac91214d92089ab9b1058d4039e4bc7bf7 data\urban_decor\loot_table\blocks\lime_plastic_lights.json
 7bfd918eb946d88af1a31f717a6267cdeceffede data\urban_decor\loot_table\blocks\brown_towel.json
 f7f1e8f99a1cf75caea5706ccc3f5bacb1e0acfb data\urban_decor\loot_table\blocks\towel_bar_lavender_towel.json
@@ -183,6 +183,7 @@ da6ac9be8b82ac6b2bb41819a5b9420a562d6997 data\urban_decor\loot_table\blocks\cher
 dc222791f209b5af7b27316cceb2fc2d7c38567b data\urban_decor\loot_table\blocks\mint_wrapped_porcelain_brick_slab.json
 7943fe0aaddbe44cd527bcbcf411734f86fb0580 data\urban_decor\loot_table\blocks\towel_bar_white_towel.json
 41c737166b6248b49f36f7562ff67247129c606c data\urban_decor\loot_table\blocks\cherry_piano.json
+34dc812f17a94f71f8553ff4003cd34561bc3700 data\urban_decor\loot_table\blocks\doll.json
 25a65b98cee6e142a5bb618dadbd2b430411cc48 data\urban_decor\loot_table\blocks\towel_bar_cyan_towel.json
 cd0de4e7d9012a6b1e2e65316b3b82d3d3b7b1ca data\urban_decor\loot_table\blocks\acacia_grandfather_clock.json
 8f8c2fef11b6248c5008a01d535349442960829e data\urban_decor\loot_table\blocks\towel_bar_sky_towel.json
@@ -204,6 +205,7 @@ a932ae1aafec226286db4d0931defee0dfe08e15 data\urban_decor\loot_table\blocks\tool
 cf2a570aa606417e653b8a263693b7a91fa807fb data\urban_decor\loot_table\blocks\air_conditioner.json
 9a8d5d0157e7e756bbc9c630ea40820802df1b2b data\urban_decor\loot_table\blocks\lime_towel.json
 b52b3bc3b5735adfef874735f33a0bb240f80f4a data\urban_decor\loot_table\blocks\azure_wrapped_porcelain_slab.json
+a39d92bfecf205f6f7eabe847f504933d32e38dd data\urban_decor\loot_table\blocks\stainless_steel_deposit.json
 6546d9374fcdce69824a666e27aebd626c38e1fd data\urban_decor\loot_table\blocks\blurple_towel_block.json
 5c8de7b912ef29af26ab9f4f0b8a6cad70a9180f data\urban_decor\loot_table\blocks\stainless_steel_soul_lantern.json
 0289985881abd0708d9a2f3e1c4b01abbd2085bc data\urban_decor\loot_table\blocks\polished_chromite_slab.json
@@ -218,6 +220,7 @@ b7d120890dce7c2d6b8e466e033c92c8bfc99782 data\urban_decor\loot_table\blocks\yell
 50d2f546680e886274a3bf558f9b2225d0fadac6 data\urban_decor\loot_table\blocks\lavender_wall_picture_frame.json
 98229fc8e018cd9fe305120572f90f0acb6462f1 data\urban_decor\loot_table\blocks\mint_wrapped_porcelain_block.json
 5fd4e527fea7909571a516e7afe50fbc5a43971d data\urban_decor\loot_table\blocks\azure_wrapped_mattress.json
+ae608b79d5aa157f6d47e4b98077191cc7879927 data\urban_decor\loot_table\blocks\speaker.json
 6c0608ee38c480cccfe0612a3e97caecf74b25f0 data\urban_decor\loot_table\blocks\cupboard.json
 683e8d4f13004d41dd82cdda8656c53877b1bf6c data\urban_decor\loot_table\blocks\microwave.json
 7943fe0aaddbe44cd527bcbcf411734f86fb0580 data\urban_decor\loot_table\blocks\white_towel.json

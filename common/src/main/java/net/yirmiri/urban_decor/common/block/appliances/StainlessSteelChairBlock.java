@@ -21,7 +21,7 @@ import net.minecraft.world.level.material.Fluids;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
-import net.yirmiri.urban_decor.common.block.entity.StainlessSteelChairBlockEntity;
+import net.yirmiri.urban_decor.common.block_entity.entity.StainlessSteelChairBlockEntity;
 import net.yirmiri.urban_decor.common.util.UDUtils;
 
 public class StainlessSteelChairBlock extends Block implements SimpleWaterloggedBlock, EntityBlock {

@@ -36,7 +36,7 @@ public class UDProperties {
         public static final BlockBehaviour.Properties STEEL_LADDER = BlockBehaviour.Properties.ofFullCopy(Blocks.LADDER).sound(UDSoundTypes.STEEL);
         public static final BlockBehaviour.Properties PLASTIC_LIGHTS = BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_WOOD).lightLevel(s -> 12).sound(UDSoundTypes.PLASTIC).noCollission().instabreak();
         public static final BlockBehaviour.Properties DARK_PLASTIC_LIGHTS = BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_WOOD).lightLevel(s -> 7).sound(UDSoundTypes.PLASTIC).noCollission().instabreak();
-        public static final BlockBehaviour.Properties MATTRESS = BlockBehaviour.Properties.ofFullCopy(Blocks.WHITE_WOOL).strength(1.2F).sound(SoundType.PACKED_MUD);
+        public static final BlockBehaviour.Properties MATTRESS = BlockBehaviour.Properties.ofFullCopy(Blocks.WHITE_WOOL).strength(1.2F);
 
         //DECOR
         public static final BlockBehaviour.Properties VENDING = BlockBehaviour.Properties.ofFullCopy(Blocks.IRON_BLOCK).sound(UDSoundTypes.STEEL).noOcclusion();
@@ -78,8 +78,7 @@ public class UDProperties {
         public static final BlockBehaviour.Properties BAMBOO_PLANKS = BlockBehaviour.Properties.ofFullCopy(Blocks.BAMBOO_PLANKS);
         public static final BlockBehaviour.Properties CASH_REGISTER = BlockBehaviour.Properties.ofFullCopy(Blocks.WHITE_WOOL).strength(0.5F).mapColor(MapColor.COLOR_GRAY).sound(SoundType.LANTERN);
         public static final BlockBehaviour.Properties BOOTH = BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS).sound(SoundType.PACKED_MUD);
-
-        //MISC APPLIANCES
+        public static final BlockBehaviour.Properties DOLL = BlockBehaviour.Properties.ofFullCopy(Blocks.WHITE_WOOL).strength(0.3F);
         public static final BlockBehaviour.Properties AIR_CONDITIONER = BlockBehaviour.Properties.ofFullCopy(Blocks.STONE).strength(1.0F).mapColor(MapColor.COLOR_GRAY).sound(SoundType.LANTERN).requiresCorrectToolForDrops();
         public static final BlockBehaviour.Properties TOOLBOX = BlockBehaviour.Properties.ofFullCopy(Blocks.WHITE_WOOL).strength(0.5F).mapColor(MapColor.COLOR_RED).sound(SoundType.LANTERN);
         public static final BlockBehaviour.Properties FAUCET = BlockBehaviour.Properties.ofFullCopy(Blocks.WHITE_WOOL).strength(0.3F).mapColor(MapColor.COLOR_GRAY).sound(UDSoundTypes.STEEL);

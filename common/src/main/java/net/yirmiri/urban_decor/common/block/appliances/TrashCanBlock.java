@@ -23,7 +23,7 @@ import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import net.yirmiri.urban_decor.common.block.abstracts.AbstractDestroyStorageDecorBlock;
-import net.yirmiri.urban_decor.common.block.entity.DestroyStorageApplianceBlockEntity;
+import net.yirmiri.urban_decor.common.block_entity.entity.DestroyStorageApplianceBlockEntity;
 import net.yirmiri.urban_decor.common.util.UDUtils;
 import net.yirmiri.urban_decor.core.init.UDTags;
 

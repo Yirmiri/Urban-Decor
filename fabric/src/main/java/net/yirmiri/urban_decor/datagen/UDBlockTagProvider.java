@@ -45,6 +45,7 @@ public class UDBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(UDBlocks.CHECKERED_PORCELAIN_TILE_SLAB.get())
                 .add(UDBlocks.MICROWAVE.get())
                 .add(UDBlocks.SINK.get())
+                .add(UDBlocks.STAINLESS_STEEL_DEPOSIT.get())
                 .add(UDBlocks.CHROMITE.get())
                 .add(UDBlocks.CHROMITE_STAIRS.get())
                 .add(UDBlocks.CHROMITE_SLAB.get())

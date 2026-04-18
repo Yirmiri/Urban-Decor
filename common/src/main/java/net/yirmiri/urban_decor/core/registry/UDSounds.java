@@ -20,6 +20,9 @@ public class UDSounds {
     //ITEM
     public static final Supplier<SoundEvent> WRAP_USE = register("item.wrap.use");
 
+    //SPEAKER
+    public static final Supplier<SoundEvent> SPEAKER_FLUORESCENT = register("block.speaker.fluorescent");
+
     //GRAND CLOCK
     public static final Supplier<SoundEvent> GRAND_CLOCK_TICK = register("block.grand_clock.tick");
     public static final Supplier<SoundEvent> GRAND_CLOCK_TOCK = register("block.grand_clock.tock");

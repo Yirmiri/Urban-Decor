@@ -70,6 +70,7 @@ public class UDLangProvider extends FabricLanguageProvider {
         build.add("tooltip.urban_decor.wrappable", "Can be wrapped");
 
         //BLOCKS
+        build.add(UDBlocks.STAINLESS_STEEL_DEPOSIT.get(), "Stainless Steel Deposit");
         build.add(UDBlocks.POLYPROPYLENE_BLOCK.get(), "Block of Polypropylene");
         build.add(UDBlocks.PORCELAIN_TILES.get(), "Porcelain Tiles");
         build.add(UDBlocks.PORCELAIN_TILE_STAIRS.get(), "Porcelain Tile Stairs");
@@ -107,6 +108,7 @@ public class UDLangProvider extends FabricLanguageProvider {
         build.add(UDBlocks.STAINLESS_STEEL_BARS.get(), "Stainless Steel Bars");
         build.add(UDBlocks.STAINLESS_STEEL_FENCE.get(), "Stainless Steel Fence");
         build.add(UDBlocks.MATTRESS.get(), "Mattress");
+        build.add(UDBlocks.SPEAKER.get(), "Speaker");
 
         //APPLIANCES
         build.add(UDBlocks.TRASH_CAN.get(), "Trash Can");
@@ -199,6 +201,7 @@ public class UDLangProvider extends FabricLanguageProvider {
         build.add(UDBlocks.DARK_CASH_REGISTER.get(), "Dark Cash Register");
         build.add(UDBlocks.VENDING_MACHINE.get(), "Vending Machine");
         build.add(UDBlocks.BOOTH.get(), "Booth");
+        build.add(UDBlocks.DOLL.get(), "Doll");
 
         //ITEMS
         build.add(UDItems.POLYPROPYLENE.get(), "Polypropylene");
@@ -267,6 +270,13 @@ public class UDLangProvider extends FabricLanguageProvider {
         build.add("toolbox.floor_lamp.variant_false", "Variant: Shade");
         build.add("toolbox.porcelain_table.variant_0", "Variant: Quad Legged");
         build.add("toolbox.porcelain_table.variant_1", "Variant: Single Legged");
+        build.add("toolbox.doll.variant_0", "Variant: Slouching");
+        build.add("toolbox.doll.variant_1", "Variant: Leaning");
+        build.add("toolbox.doll.variant_2", "Variant: Standing");
+        build.add("toolbox.doll.variant_3", "Variant: Hanging");
+        build.add("toolbox.doll.variant_4", "Variant: Laying");
+        build.add("toolbox.doll.variant_5", "Variant: Crawling");
+        build.add("toolbox.doll.variant_6", "Variant: Sitting");
 
         //DAMAGE
         build.add("death.attack.urban_decor.toaster", "%1$s likes to play with hot toasters");
@@ -285,6 +295,7 @@ public class UDLangProvider extends FabricLanguageProvider {
         build.add("subtitles.block.grand_clock.chime_day", "Grandfather Clock chimes");
         build.add("subtitles.block.grand_clock.chime_night", "Grandfather Clock tolls");
         build.add("subtitles.block.grand_clock.chime_3am", "Grandfather Clock eerily tolls");
+        build.add("subtitles.block.speaker.fluorescent", "Speaker hums");
 
         //ADVANCEMENTS
         build.add("urban_decor.advancement.root", "Urban Decor");
@@ -438,6 +449,8 @@ public class UDLangProvider extends FabricLanguageProvider {
         build.add(YT_ID + "block." + MOD_ID + "vending_machine.desc", "Source of all known evil.");
         build.add(YT_ID + "block." + MOD_ID + "mattress.desc", "A soft block that can bounce things when fallen on");
         build.add(YT_ID + "block." + MOD_ID + "booth.desc", "A soft vibrant cushion that can be sat on");
+        build.add(YT_ID + "block." + MOD_ID + "stainless_steel_deposit.desc", "Formed when chromite is dripped on with lava from raw iron blocks");
+        build.add(YT_ID + "block." + MOD_ID + "doll.desc", "A little friend to have nearby, can be sat in different poses");
 
         for (WrapColor colors : WrapColor.values()) {
             String wrapString = StringUtils.capitalize(StringUtils.replace(StringUtils.replace(StringUtils.replace(colors.getName(),

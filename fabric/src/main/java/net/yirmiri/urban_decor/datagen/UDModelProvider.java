@@ -74,6 +74,8 @@ public class UDModelProvider extends FabricModelProvider {
         generator.createMultiface(UDBlocks.PLASTIC_LIGHTS.get());
         generator.createTrivialCube(UDBlocks.MATTRESS.get());
 
+        generator.createTrivialCube(UDBlocks.STAINLESS_STEEL_DEPOSIT.get());
+
         //DYED
         for (DyeColor colors : DyeColor.values()) {
             generator.family(UDBlocks.getDyedTowelBlocks(colors.getId()).get());

@@ -24,7 +24,8 @@ public abstract class AbstractDecorBlock extends Block implements SimpleWaterlog
         super(settings);
         registerDefaultState(defaultBlockState()
                 .setValue(BlockStateProperties.HORIZONTAL_FACING, Direction.NORTH)
-                .setValue(WATERLOGGED, false));
+                .setValue(WATERLOGGED, false)
+        );
     }
 
     @Override

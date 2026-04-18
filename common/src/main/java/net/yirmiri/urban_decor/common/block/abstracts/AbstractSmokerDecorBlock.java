@@ -23,7 +23,7 @@ import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraft.world.level.block.state.properties.DirectionProperty;
 import net.minecraft.world.level.material.FluidState;
 import net.minecraft.world.level.material.Fluids;
-import net.yirmiri.urban_decor.common.block.entity.SmokerDecorBlockEntity;
+import net.yirmiri.urban_decor.common.block_entity.entity.SmokerDecorBlockEntity;
 import net.yirmiri.urban_decor.core.registry.UDBlockEntities;
 
 public class AbstractSmokerDecorBlock extends AbstractFurnaceBlock implements SimpleWaterloggedBlock {

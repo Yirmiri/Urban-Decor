@@ -13,7 +13,7 @@ import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
-import net.yirmiri.urban_decor.common.block.entity.StorageDecorBlockEntity;
+import net.yirmiri.urban_decor.common.block_entity.entity.StorageDecorBlockEntity;
 
 public abstract class AbstractStorageDecorBlock extends AbstractDecorBlock implements EntityBlock {
     public static final BooleanProperty OPEN = BooleanProperty.create("open");

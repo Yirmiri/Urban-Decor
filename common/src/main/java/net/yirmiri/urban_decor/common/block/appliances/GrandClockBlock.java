@@ -26,7 +26,7 @@ import net.minecraft.world.level.material.Fluids;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
-import net.yirmiri.urban_decor.common.block.entity.GrandBlockEntity;
+import net.yirmiri.urban_decor.common.block_entity.entity.GrandBlockEntity;
 
 public class GrandClockBlock extends Block implements SimpleWaterloggedBlock, EntityBlock {
     private final BlockSetType type;

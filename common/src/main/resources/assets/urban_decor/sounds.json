@@ -1,4 +1,11 @@
 {
+  "block.speaker.fluorescent": {
+    "subtitle": "subtitles.block.speaker.fluorescent",
+    "sounds": [
+      "urban_decor:speaker/fluorescent_loop"
+    ]
+  },
+
   "item.wrap.use": {
     "subtitle": "subtitles.item.wrap.use",
     "sounds": [

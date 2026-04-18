@@ -37,7 +37,7 @@ public class UDRecipeProvider extends FabricRecipeProvider {
                 .save(exporter, RunicLib.customid(UrbanDecor.MOD_ID, getSimpleRecipeName(UDItems.PORCELAIN.get())));
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, UDItems.STAINLESS_STEEL_INGOT.get(), 4)
-                .requires(Items.COAL).requires(Items.IRON_INGOT).requires(UDBlocks.CHROMITE.get()).requires(UDBlocks.CHROMITE.get())
+                .requires(ItemTags.COALS).requires(Items.IRON_INGOT).requires(UDBlocks.CHROMITE.get()).requires(UDBlocks.CHROMITE.get())
                 .unlockedBy(getHasName(UDBlocks.CHROMITE.get()), has(UDBlocks.CHROMITE.get()))
                 .save(exporter, RunicLib.customid(UrbanDecor.MOD_ID, getSimpleRecipeName(UDItems.STAINLESS_STEEL_INGOT.get()) + "_from_chromite"));
 
@@ -1218,7 +1218,40 @@ public class UDRecipeProvider extends FabricRecipeProvider {
                 .unlockedBy(getHasName(UDBlocks.MATTRESS.get()), has(UDBlocks.MATTRESS.get()))
                 .save(exporter, RunicLib.customid(UrbanDecor.MOD_ID, getSimpleRecipeName(UDBlocks.BOOTH.get())));
 
-        //todo wrapped porcelain
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, UDBlocks.SPEAKER.get(), 1)
+                .define('#', UDItems.STAINLESS_STEEL_INGOT.get()).define('@', Items.REDSTONE)
+                .pattern("###")
+                .pattern("#@#")
+                .pattern("###")
+                .unlockedBy(getHasName(UDItems.STAINLESS_STEEL_INGOT.get()), has(UDItems.STAINLESS_STEEL_INGOT.get()))
+                .save(exporter, RunicLib.customid(UrbanDecor.MOD_ID, getSimpleRecipeName(UDBlocks.SPEAKER.get())));
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, UDBlocks.DOLL.get(), 1)
+                .define('@', UDBlocks.MATTRESS.get()).define('#', Items.STRING).define('!', UDItems.POLYPROPYLENE.get())
+                .pattern("###")
+                .pattern("!@!")
+                .pattern("###")
+                .unlockedBy(getHasName(UDItems.POLYPROPYLENE.get()), has(UDItems.POLYPROPYLENE.get()))
+                .save(exporter, RunicLib.customid(UrbanDecor.MOD_ID, getSimpleRecipeName(UDBlocks.DOLL.get())));
+
+        //todo wrapped block recipes
+//        createWrappedBlock(UDBlocks.getWrappedPorcelainBlocks(WrapColor.CHERRY.getId()).get().asItem(),
+//                Ingredient.of(UDBlocks.PORCELAIN_BLOCK.get()), Ingredient.of(UDItems.getWrappedWraps(WrapColor.CHERRY.getId()).get()))
+//                .unlockedBy(getHasName(UDItems.getWrappedWraps(WrapColor.CHERRY.getId()).get().asItem()),
+//                        has(UDItems.getWrappedWraps(WrapColor.CHERRY.getId()).get().asItem())).group("wrapped_porcelain_block")
+//                .save(exporter, RunicLib.customid(UrbanDecor.MOD_ID, getSimpleRecipeName(UDBlocks.getWrappedPorcelainBlocks(WrapColor.CHERRY.getId()).get())));
+//
+//        createWrappedBlock(UDBlocks.getWrappedPorcelainBricks(WrapColor.CHERRY.getId()).get().asItem(),
+//                Ingredient.of(UDBlocks.PORCELAIN_BRICKS.get()), Ingredient.of(UDItems.getWrappedWraps(WrapColor.CHERRY.getId()).get()))
+//                .unlockedBy(getHasName(UDItems.getWrappedWraps(WrapColor.CHERRY.getId()).get().asItem()),
+//                        has(UDItems.getWrappedWraps(WrapColor.CHERRY.getId()).get().asItem())).group("wrapped_porcelain_bricks")
+//                .save(exporter, RunicLib.customid(UrbanDecor.MOD_ID, getSimpleRecipeName(UDBlocks.getWrappedPorcelainBricks(WrapColor.CHERRY.getId()).get())));
+//
+//        createWrappedBlock(UDBlocks.getWrappedPorcelainTiles(WrapColor.CHERRY.getId()).get().asItem(),
+//                Ingredient.of(UDBlocks.PORCELAIN_TILES.get()), Ingredient.of(UDItems.getWrappedWraps(WrapColor.CHERRY.getId()).get()))
+//                .unlockedBy(getHasName(UDItems.getWrappedWraps(WrapColor.CHERRY.getId()).get().asItem()),
+//                        has(UDItems.getWrappedWraps(WrapColor.CHERRY.getId()).get().asItem())).group("wrapped_porcelain_tiles")
+//                .save(exporter, RunicLib.customid(UrbanDecor.MOD_ID, getSimpleRecipeName(UDBlocks.getWrappedPorcelainTiles(WrapColor.CHERRY.getId()).get())));
     }
 
     public static ShapelessRecipeBuilder createFromBasePictureFrameRecipe(ItemLike output, Item picture, DyeColor color) {

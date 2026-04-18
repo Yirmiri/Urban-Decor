@@ -47,6 +47,8 @@ public class UDItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(UDBlocks.TURBINE.get().asItem())
                 .add(UDBlocks.PORCELAIN_TABLE.get().asItem())
                 .add(UDBlocks.BOOTH.get().asItem())
+                .add(UDBlocks.SPEAKER.get().asItem())
+                .add(UDBlocks.DOLL.get().asItem())
         ;
 
         getOrCreateTagBuilder(UDTags.ItemT.HAS_WRAPPED_VARIANTS)
@@ -106,6 +108,8 @@ public class UDItemTagProvider extends FabricTagProvider.ItemTagProvider {
 
         getOrCreateTagBuilder(UDTags.ItemT.TOOLBOXES)
                 .add(UDItems.TOOLBOX.get())
+                .addOptional(RunicLib.customid("scprotect", "screwdriver"))
+                .addOptional(RunicLib.customid("excessive_building", "mallet"))
         ;
 
         for (DyeColor colors : DyeColor.values()) {

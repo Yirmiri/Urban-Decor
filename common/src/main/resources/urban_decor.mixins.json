@@ -10,7 +10,9 @@
   ],
   "client": [
     "SplashManagerMixin",
+    "client.BlockEntityWithoutLevelRendererMixin",
     "client.GameRendererMixin",
+    "client.ItemInHandRendererMixin",
     "client.LivingEntityRendererMixin"
   ],
   "injectors": {

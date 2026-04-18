@@ -22,7 +22,7 @@ import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.EnumProperty;
 import net.minecraft.world.phys.BlockHitResult;
 import net.yirmiri.urban_decor.common.block.abstracts.AbstractStorageDecorBlock;
-import net.yirmiri.urban_decor.common.block.entity.StorageDecorBlockEntity;
+import net.yirmiri.urban_decor.common.block_entity.entity.StorageDecorBlockEntity;
 import net.yirmiri.urban_decor.common.block.enums.WrapType;
 import net.yirmiri.urban_decor.common.util.UDUtils;
 import net.yirmiri.urban_decor.common.util.WrapColor;

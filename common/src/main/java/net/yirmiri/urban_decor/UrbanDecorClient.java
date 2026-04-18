@@ -23,6 +23,7 @@ public class UrbanDecorClient {
         }
 
         //CUTOUT
+        RLServices.loadClient().registerBlockRenderType(UDBlocks.SPEAKER.get(), RenderType.cutout());
         RLServices.loadClient().registerBlockRenderType(UDBlocks.TRASH_CAN.get(), RenderType.cutout());
         RLServices.loadClient().registerBlockRenderType(UDBlocks.TOOLBOX.get(), RenderType.cutout());
         RLServices.loadClient().registerBlockRenderType(UDBlocks.STOVE.get(), RenderType.cutout());
@@ -75,6 +76,7 @@ public class UrbanDecorClient {
         RLServices.loadClient().registerBlockRenderType(UDBlocks.VENDING_MACHINE.get(), RenderType.cutoutMipped());
 
         //TRANSLUCENT
+        RLServices.loadClient().registerBlockRenderType(UDBlocks.DOLL.get(), RenderType.translucent());
         RLServices.loadClient().registerBlockRenderType(UDBlocks.OVEN.get(), RenderType.translucent());
         RLServices.loadClient().registerBlockRenderType(UDBlocks.DARK_OVEN.get(), RenderType.translucent());
         RLServices.loadClient().registerBlockRenderType(UDBlocks.DARK_WASHING_MACHINE.get(), RenderType.translucent());

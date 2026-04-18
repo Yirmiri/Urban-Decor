@@ -5,7 +5,10 @@ import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootTableProvider;
 import net.minecraft.core.Direction;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.world.item.DyeColor;
+import net.minecraft.world.item.Items;
+import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.DoublePlantBlock;
 import net.minecraft.world.level.block.MultifaceBlock;
 import net.minecraft.world.level.block.state.properties.BedPart;
@@ -15,9 +18,11 @@ import net.minecraft.world.level.storage.loot.LootTable;
 import net.minecraft.world.level.storage.loot.entries.LootItem;
 import net.minecraft.world.level.storage.loot.entries.LootPoolEntryContainer;
 import net.minecraft.world.level.storage.loot.entries.LootPoolSingletonContainer;
+import net.minecraft.world.level.storage.loot.functions.ApplyBonusCount;
 import net.minecraft.world.level.storage.loot.functions.SetItemCountFunction;
 import net.minecraft.world.level.storage.loot.predicates.LootItemBlockStatePropertyCondition;
 import net.minecraft.world.level.storage.loot.providers.number.ConstantValue;
+import net.minecraft.world.level.storage.loot.providers.number.UniformGenerator;
 import net.yirmiri.urban_decor.common.block.appliances.FloorLampBlock;
 import net.yirmiri.urban_decor.common.block.abstracts.AbstractLongBlock;
 import net.yirmiri.urban_decor.common.util.WrapColor;
@@ -163,6 +168,10 @@ public class UDLootTableProvider extends FabricBlockLootTableProvider {
         dropSelf(UDBlocks.CASH_REGISTER.get());
         dropSelf(UDBlocks.DARK_CASH_REGISTER.get());
         add(UDBlocks.VENDING_MACHINE.get(), tallDrops(UDBlocks.VENDING_MACHINE.get()));
+        dropSelf(UDBlocks.SPEAKER.get());
+        add(UDBlocks.STAINLESS_STEEL_DEPOSIT.get(), builder -> createSilkTouchDispatchTable(builder, applyExplosionDecay(builder,
+                LootItem.lootTableItem(UDItems.STAINLESS_STEEL_NUGGET.get()).apply(SetItemCountFunction.setCount(UniformGenerator.between(4.0F, 8.0F))))));
+        dropSelf(UDBlocks.DOLL.get());
 
         addDyedDrops();
         addWrappedDrops();

@@ -35,7 +35,7 @@ import net.minecraft.world.level.pathfinder.PathComputationType;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
-import net.yirmiri.urban_decor.common.block.entity.ToasterBlockEntity;
+import net.yirmiri.urban_decor.common.block_entity.entity.ToasterBlockEntity;
 import net.yirmiri.urban_decor.common.util.UDUtils;
 import net.yirmiri.urban_decor.core.init.UDDamageTypes;
 import net.yirmiri.urban_decor.core.registry.UDBlockEntities;
