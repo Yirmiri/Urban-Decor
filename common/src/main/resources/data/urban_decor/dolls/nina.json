@@ -1,3 +1,4 @@
 {
-  "resource_location": "urban_decor:textures/entity/doll/nina.png"
+  "resource_location": "urban_decor:textures/entity/doll/nina.png",
+  "requires_needle": false
 }

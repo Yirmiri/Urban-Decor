@@ -1,10 +1,7 @@
 package net.yirmiri.urban_decor.common.block.sewing_machine;
 
 import com.google.common.collect.Lists;
-import net.yirmiri.urban_decor.core.registry.UDBlocks;
-import net.yirmiri.urban_decor.core.registry.UDItems;
-import net.yirmiri.urban_decor.core.registry.UDMenus;
-import net.yirmiri.urban_decor.core.registry.UDSounds;
+import net.yirmiri.urban_decor.core.registry.*;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.Container;
 import net.minecraft.world.SimpleContainer;
@@ -110,6 +107,12 @@ public class SewingMachineMenu extends AbstractContainerMenu {
 
         if (!lastA.isEmpty() && (lastB.isEmpty() || lastB.is(UDItems.SEWING_NEEDLE.get()))) {
             for (SewingMachineRecipe recipe : SewingRecipes.RECIPES) {
+                if (!lastB.isEmpty()) {
+                    if (!recipe.requiresNeedle()) continue;
+                }
+                else {
+                    if (recipe.requiresNeedle()) continue;
+                }
                 if (recipe.matches(lastA, lastB)) {
                     availableRecipes.add(recipe);
                 }
@@ -123,7 +126,7 @@ public class SewingMachineMenu extends AbstractContainerMenu {
         if (index >= 0 && index < availableRecipes.size()) {
 
             SewingMachineRecipe recipe = availableRecipes.get(index);
-            ItemStack result = recipe.assemble();
+            ItemStack result = recipe.assemble(inputA.getItem(), inputB.getItem());
 
             resultContainer.setItem(2, result);
             resultSlot.set(result);
@@ -209,7 +212,7 @@ public class SewingMachineMenu extends AbstractContainerMenu {
     }
 
     public ItemStack getRecipeResult(int index) {
-        return availableRecipes.get(index).assemble();
+        return availableRecipes.get(index).assemble(inputA.getItem(), inputB.getItem());
     }
 
     public boolean hasInputs() {

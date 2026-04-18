@@ -1,3 +1,4 @@
 {
-  "resource_location": "urban_decor:textures/entity/doll/bb.png"
+  "resource_location": "urban_decor:textures/entity/doll/bb.png",
+  "requires_needle": false
 }

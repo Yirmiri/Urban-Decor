@@ -1,3 +1,4 @@
 {
-  "resource_location": "urban_decor:textures/entity/doll/yirmiri.png"
+  "resource_location": "urban_decor:textures/entity/doll/yirmiri.png",
+  "requires_needle": true
 }

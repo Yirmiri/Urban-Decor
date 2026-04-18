@@ -64,7 +64,7 @@ public class PorcelainTableBlock extends AbstractDecorBlock {
         if (stackHand.is(UDTags.ItemT.TOOLBOXES)) {
             level.setBlockAndUpdate(pos, state.cycle(VARIANT));
             UDUtils.toolboxUsed(level, pos);
-            player.displayClientMessage(Component.translatable("toolbox.plastic_table.variant_" + state.getValue(VARIANT)), true);
+            player.displayClientMessage(Component.translatable("toolbox.porcelain_table.variant_" + state.getValue(VARIANT)), true);
             return ItemInteractionResult.SUCCESS;
         }
         if (state.getValue(WRAP_TYPE) == WrapType.NONE && stackHand.is(UDTags.ItemT.WRAPS)) {

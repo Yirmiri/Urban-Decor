@@ -1,3 +1,4 @@
 {
-  "resource_location": "urban_decor:textures/entity/doll/rana.png"
+  "resource_location": "urban_decor:textures/entity/doll/rana.png",
+  "requires_needle": false
 }

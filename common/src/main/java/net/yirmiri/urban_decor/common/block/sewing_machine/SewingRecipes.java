@@ -29,8 +29,9 @@ public class SewingRecipes {
                     JsonObject json = JsonParser.parseReader(reader).getAsJsonObject();
 
                     ResourceLocation texture = ResourceLocation.parse(json.get("resource_location").getAsString());
+                    boolean requiresNeedle = json.has("requires_needle") && json.get("requires_needle").getAsBoolean();
 
-                    RECIPES.add(new SewingMachineRecipe(texture));
+                    RECIPES.add(new SewingMachineRecipe(texture, requiresNeedle));
                 }
             } catch (Exception exception) {
                 UrbanDecor.LOGGER.error("Failed to load sewing recipe {}", id, exception);
