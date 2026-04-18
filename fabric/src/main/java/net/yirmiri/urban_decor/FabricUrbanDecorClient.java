@@ -30,8 +30,6 @@ public class FabricUrbanDecorClient implements ClientModInitializer {
     public void onInitializeClient() {
         UrbanDecorClient.init();
 
-        ResourceManagerHelper.get(PackType.SERVER_DATA).registerReloadListener((IdentifiableResourceReloadListener) new SewingRecipeReloadListener());
-
         EntityRendererRegistry.register(UDEntities.SEAT.get(), InvisibleEntityRenderer::new);
 
         BlockEntityRendererRegistry.register(UDBlockEntities.WALL_CLOCK.get(), WallClockRenderer::new);

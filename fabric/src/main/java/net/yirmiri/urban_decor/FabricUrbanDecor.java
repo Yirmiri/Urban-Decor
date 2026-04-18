@@ -3,19 +3,26 @@ package net.yirmiri.urban_decor;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
 import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
+import net.fabricmc.fabric.api.resource.IdentifiableResourceReloadListener;
+import net.fabricmc.fabric.api.resource.ResourceManagerHelper;
 import net.minecraft.client.gui.screens.MenuScreens;
+import net.minecraft.server.packs.PackType;
 import net.minecraft.tags.BiomeTags;
 import net.minecraft.world.level.levelgen.GenerationStep;
 import net.yirmiri.urban_decor.common.block.sewing_machine.SewingMachineScreen;
+import net.yirmiri.urban_decor.common.block.sewing_machine.SewingRecipeReloadListener;
 import net.yirmiri.urban_decor.core.init.UDFeatures;
 import net.yirmiri.urban_decor.core.init.UDTags;
 import net.yirmiri.urban_decor.core.registry.UDMenus;
+import net.yirmiri.urban_decor.misc.FabricSewingRecipeReloadListener;
 
 public class FabricUrbanDecor implements ModInitializer {
     
     @Override
     public void onInitialize() {
         UrbanDecor.init();
+
+        ResourceManagerHelper.get(PackType.SERVER_DATA).registerReloadListener(new FabricSewingRecipeReloadListener());
 
         //FLOWERS
         BiomeModifications.addFeature(BiomeSelectors.tag(UDTags.BiomeT.CHERRY_POLYANTHOUS_GENERATES_IN),

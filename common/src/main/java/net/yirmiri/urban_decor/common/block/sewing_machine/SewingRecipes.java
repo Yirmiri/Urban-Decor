@@ -1,18 +1,12 @@
-package net.yirmiri.urban_decor.common.util;
+package net.yirmiri.urban_decor.common.block.sewing_machine;
 
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
-import net.azurune.runiclib.RunicLib;
 import net.minecraft.resources.FileToIdConverter;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.packs.resources.Resource;
 import net.minecraft.server.packs.resources.ResourceManager;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.crafting.Ingredient;
 import net.yirmiri.urban_decor.UrbanDecor;
-import net.yirmiri.urban_decor.common.block.sewing_machine.SewingMachineRecipe;
-import net.yirmiri.urban_decor.core.registry.UDBlocks;
-import net.yirmiri.urban_decor.core.registry.UDComponents;
 
 import java.io.InputStreamReader;
 import java.io.Reader;

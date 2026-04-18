@@ -1,9 +1,6 @@
 package net.yirmiri.urban_decor.common.block.sewing_machine;
 
 import com.google.common.collect.Lists;
-import net.minecraft.sounds.SoundEvents;
-import net.minecraft.world.level.block.Blocks;
-import net.yirmiri.urban_decor.common.util.SewingRecipes;
 import net.yirmiri.urban_decor.core.registry.UDBlocks;
 import net.yirmiri.urban_decor.core.registry.UDItems;
 import net.yirmiri.urban_decor.core.registry.UDMenus;
