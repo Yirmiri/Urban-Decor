@@ -209,6 +209,8 @@ public class UDLangProvider extends FabricLanguageProvider {
         build.add(UDBlocks.BOOTH.get(), "Booth");
         build.add(UDBlocks.DOLL.get(), "Doll");
         build.add(UDBlocks.SEWING_MACHINE.get(), "Sewing Machine");
+        build.add(UDBlocks.FOLDABLE_SIGN.get(), "Foldable Sign");
+        build.add(UDBlocks.STAPLER.get(), "Stapler");
 
         //ITEMS
         build.add(UDItems.POLYPROPYLENE.get(), "Polypropylene");
@@ -456,6 +458,8 @@ public class UDLangProvider extends FabricLanguageProvider {
         build.add(YT_ID + "block." + MOD_ID + "doll.desc", "A little friend to have nearby, can swap textures in sewing machine");
         build.add(YT_ID + "block." + MOD_ID + "sewing_machine.desc", "A plastic trinket used for cycling variants of dolls");
         build.add(YT_ID + "block." + MOD_ID + "sewing_needle.desc", "Can be used alongside dolls in a sewing machine to create special dolls");
+        build.add(YT_ID + "block." + MOD_ID + "foldable_sign.desc", "A plastic trinket that can written on");
+        build.add(YT_ID + "block." + MOD_ID + "stapler.desc", "A plastic trinket that would staple things if you had staples");
 
         for (WrapColor colors : WrapColor.values()) {
             String wrapString = StringUtils.capitalize(StringUtils.replace(StringUtils.replace(StringUtils.replace(colors.getName(),

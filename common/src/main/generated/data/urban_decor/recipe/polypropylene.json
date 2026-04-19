@@ -3,7 +3,7 @@
   "category": "misc",
   "ingredients": [
     {
-      "item": "minecraft:coal"
+      "tag": "minecraft:coals"
     },
     {
       "tag": "urban_decor:polyanthous"

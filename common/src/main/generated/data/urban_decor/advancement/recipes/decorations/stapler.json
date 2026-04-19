@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "urban_decor:polypropylene"
+        "recipe": "urban_decor:stapler"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -26,7 +26,7 @@
   ],
   "rewards": {
     "recipes": [
-      "urban_decor:polypropylene"
+      "urban_decor:stapler"
     ]
   }
 }

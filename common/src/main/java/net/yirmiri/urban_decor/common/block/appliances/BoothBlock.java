@@ -27,21 +27,11 @@ import net.yirmiri.urban_decor.common.util.WrapColor;
 import net.yirmiri.urban_decor.core.init.UDTags;
 import net.yirmiri.urban_decor.core.registry.UDItems;
 
+import java.util.stream.Stream;
+
 public class BoothBlock extends StairBlock {
     public static final EnumProperty<WrapType> WRAP_TYPE = EnumProperty.create("wrap_type", WrapType.class);
     public static final BooleanProperty OCCUPIED = BlockStateProperties.OCCUPIED;
-
-    private static final VoxelShape SHAPE_NORTH = Shapes.join(Block.box(2, 0, 4, 14, 14, 16),
-            Block.box(0, 14, 2, 16, 16, 16), BooleanOp.OR);
-
-    private static final VoxelShape SHAPE_SOUTH = Shapes.join(Block.box(2, 0, 0, 14, 14, 12),
-            Block.box(0, 14, 0, 16, 16, 14), BooleanOp.OR);
-
-    private static final VoxelShape SHAPE_WEST = Shapes.join(Block.box(4, 0, 2, 16, 14, 14),
-            Block.box(2, 14, 0, 16, 16, 16), BooleanOp.OR);
-
-    private static final VoxelShape SHAPE_EAST = Shapes.join(Block.box(0, 0, 2, 12, 14, 14),
-            Block.box(0, 14, 0, 14, 16, 16), BooleanOp.OR);
 
     public BoothBlock(BlockState blockState, Properties properties) {
         super(blockState, properties);
@@ -54,13 +44,58 @@ public class BoothBlock extends StairBlock {
 
     @Override
     public VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext ctx) {
-        //        return switch (state.getValue(FACING)) {
-        //            case SOUTH -> SHAPE_SOUTH;
-        //            case WEST -> SHAPE_WEST;
-        //            case EAST -> SHAPE_EAST;
-        //            default -> SHAPE_NORTH;
-        //        };
-        return Block.box(4, 0, 4, 12, 8, 12);
+        if (state.getValue(HALF) == Half.BOTTOM) {
+            if (state.getValue(SHAPE) == StairsShape.STRAIGHT) {
+                return switch (state.getValue(FACING)) {
+                    case SOUTH -> SHAPE_WEST;
+                    case WEST -> SHAPE_SOUTH;
+                    case EAST -> SHAPE_NORTH;
+                    default -> SHAPE_EAST;
+                };
+            }
+            else if (state.getValue(SHAPE) == StairsShape.INNER_LEFT || (state.getValue(SHAPE) == StairsShape.INNER_RIGHT)) {
+                return switch (state.getValue(FACING)) {
+                    case SOUTH -> SHAPE_WEST_INNER;
+                    case WEST -> SHAPE_SOUTH_INNER;
+                    case EAST -> SHAPE_NORTH_INNER;
+                    default -> SHAPE_EAST_INNER;
+                };
+            }
+            else if (state.getValue(SHAPE) == StairsShape.OUTER_LEFT || (state.getValue(SHAPE) == StairsShape.OUTER_RIGHT)) {
+                return switch (state.getValue(FACING)) {
+                    case SOUTH -> SHAPE_WEST_OUTER;
+                    case WEST -> SHAPE_SOUTH_OUTER;
+                    case EAST -> SHAPE_NORTH_OUTER;
+                    default -> SHAPE_EAST_OUTER;
+                };
+            }
+        } else {
+            if (state.getValue(SHAPE) == StairsShape.STRAIGHT) {
+                return switch (state.getValue(FACING)) {
+                    case SOUTH -> SHAPE_WEST_UP;
+                    case WEST -> SHAPE_SOUTH_UP;
+                    case EAST -> SHAPE_NORTH_UP;
+                    default -> SHAPE_EAST_UP;
+                };
+            }
+            else if (state.getValue(SHAPE) == StairsShape.INNER_LEFT || (state.getValue(SHAPE) == StairsShape.INNER_RIGHT)) {
+                return switch (state.getValue(FACING)) {
+                    case SOUTH -> SHAPE_WEST_INNER_UP;
+                    case WEST -> SHAPE_SOUTH_INNER_UP;
+                    case EAST -> SHAPE_NORTH_INNER_UP;
+                    default -> SHAPE_EAST_INNER_UP;
+                };
+            }
+            else if (state.getValue(SHAPE) == StairsShape.OUTER_LEFT || (state.getValue(SHAPE) == StairsShape.OUTER_RIGHT)) {
+                return switch (state.getValue(FACING)) {
+                    case SOUTH -> SHAPE_WEST_OUTER_UP;
+                    case WEST -> SHAPE_SOUTH_OUTER_UP;
+                    case EAST -> SHAPE_NORTH_OUTER_UP;
+                    default -> SHAPE_EAST_OUTER_UP;
+                };
+            }
+        }
+        return SHAPE_EAST;
     }
 
     @Override
@@ -118,4 +153,206 @@ public class BoothBlock extends StairBlock {
             entity.setDeltaMovement(vec3.x, -vec3.y * (double) 0.66F * v, vec3.z);
         }
     }
+
+    //DEFAULT
+    private static final VoxelShape SHAPE_NORTH = Stream.of(
+            Block.box(4, 0, 0, 16, 4, 16),
+            Block.box(14, 18, 0, 16, 20, 16),
+            Block.box(12, 4, 0, 16, 18, 16),
+            Block.box(2, 4, 0, 12, 8, 16)
+    ).reduce((v1, v2) -> Shapes.join(v1, v2, BooleanOp.OR)).get();
+
+    private static final VoxelShape SHAPE_SOUTH = Stream.of(
+            Block.box(0, 0, 0, 12, 4, 16),
+            Block.box(0, 18, 0, 2, 20, 16),
+            Block.box(0, 4, 0, 4, 18, 16),
+            Block.box(4, 4, 0, 14, 8, 16)
+    ).reduce((v1, v2) -> Shapes.join(v1, v2, BooleanOp.OR)).get();
+
+    private static final VoxelShape SHAPE_WEST = Stream.of(
+            Block.box(0, 0, 4, 16, 4, 16),
+            Block.box(0, 18, 14, 16, 20, 16),
+            Block.box(0, 4, 12, 16, 18, 16),
+            Block.box(0, 4, 2, 16, 8, 12)
+    ).reduce((v1, v2) -> Shapes.join(v1, v2, BooleanOp.OR)).get();
+
+    private static final VoxelShape SHAPE_EAST = Stream.of(
+            Block.box(0, 0, 0, 16, 4, 12),
+            Block.box(0, 18, 0, 16, 20, 2),
+            Block.box(0, 4, 0, 16, 18, 4),
+            Block.box(0, 4, 4, 16, 8, 14)
+    ).reduce((v1, v2) -> Shapes.join(v1, v2, BooleanOp.OR)).get();
+
+    //INNER
+    private static final VoxelShape SHAPE_NORTH_INNER = Stream.of(
+            Block.box(4, 0, 0, 16, 4, 12),
+            Block.box(14, 18, 0, 16, 20, 16),
+            Block.box(12, 4, 0, 16, 18, 12),
+            Block.box(2, 4, 0, 12, 8, 12),
+            Block.box(0, 0, 12, 16, 18, 16),
+            Block.box(0, 18, 14, 14, 20, 16),
+            Block.box(0, 0, 4, 4, 4, 12),
+            Block.box(0, 4, 2, 2, 8, 12)
+    ).reduce((v1, v2) -> Shapes.join(v1, v2, BooleanOp.OR)).get();
+    private static final VoxelShape SHAPE_SOUTH_INNER = Stream.of(
+            Block.box(0, 0, 4, 12, 4, 16),
+            Block.box(0, 18, 0, 2, 20, 16),
+            Block.box(0, 4, 4, 4, 18, 16),
+            Block.box(4, 4, 4, 14, 8, 16),
+            Block.box(0, 0, 0, 16, 18, 4),
+            Block.box(2, 18, 0, 16, 20, 2),
+            Block.box(12, 0, 4, 16, 4, 12),
+            Block.box(14, 4, 4, 16, 8, 14)
+    ).reduce((v1, v2) -> Shapes.join(v1, v2, BooleanOp.OR)).get();
+    private static final VoxelShape SHAPE_WEST_INNER = Stream.of(
+            Block.box(4, 0, 4, 16, 4, 16),
+            Block.box(0, 18, 14, 16, 20, 16),
+            Block.box(4, 4, 12, 16, 18, 16),
+            Block.box(4, 4, 2, 16, 8, 12),
+            Block.box(0, 0, 0, 4, 18, 16),
+            Block.box(0, 18, 0, 2, 20, 14),
+            Block.box(4, 0, 0, 12, 4, 4),
+            Block.box(4, 4, 0, 14, 8, 2)
+    ).reduce((v1, v2) -> Shapes.join(v1, v2, BooleanOp.OR)).get();
+    private static final VoxelShape SHAPE_EAST_INNER = Stream.of(
+            Block.box(0, 0, 0, 12, 4, 12),
+            Block.box(0, 18, 0, 16, 20, 2),
+            Block.box(0, 4, 0, 12, 18, 4),
+            Block.box(0, 4, 4, 12, 8, 14),
+            Block.box(12, 0, 0, 16, 18, 16),
+            Block.box(14, 18, 2, 16, 20, 16),
+            Block.box(4, 0, 12, 12, 4, 16),
+            Block.box(2, 4, 14, 12, 8, 16)
+    ).reduce((v1, v2) -> Shapes.join(v1, v2, BooleanOp.OR)).get();
+
+    //OUTER
+    private static final VoxelShape SHAPE_NORTH_OUTER = Stream.of(
+            Block.box(4, 0, 4, 16, 4, 16),
+            Block.box(14, 18, 14, 16, 20, 16),
+            Block.box(12, 4, 12, 16, 18, 16),
+            Block.box(2, 4, 2, 12, 8, 16),
+            Block.box(12, 4, 2, 16, 8, 12)
+    ).reduce((v1, v2) -> Shapes.join(v1, v2, BooleanOp.OR)).get();
+    private static final VoxelShape SHAPE_SOUTH_OUTER = Stream.of(
+            Block.box(0, 0, 0, 12, 4, 12),
+            Block.box(0, 18, 0, 2, 20, 2),
+            Block.box(0, 4, 0, 4, 18, 4),
+            Block.box(4, 4, 0, 14, 8, 14),
+            Block.box(0, 4, 4, 4, 8, 14)
+    ).reduce((v1, v2) -> Shapes.join(v1, v2, BooleanOp.OR)).get();
+    private static final VoxelShape SHAPE_WEST_OUTER = Stream.of(
+            Block.box(0, 0, 4, 12, 4, 16),
+            Block.box(0, 18, 14, 2, 20, 16),
+            Block.box(0, 4, 12, 4, 18, 16),
+            Block.box(0, 4, 2, 14, 8, 12),
+            Block.box(4, 4, 12, 14, 8, 16)
+    ).reduce((v1, v2) -> Shapes.join(v1, v2, BooleanOp.OR)).get();
+    private static final VoxelShape SHAPE_EAST_OUTER = Stream.of(
+            Block.box(4, 0, 0, 16, 4, 12),
+            Block.box(14, 18, 0, 16, 20, 2),
+            Block.box(12, 4, 0, 16, 18, 4),
+            Block.box(2, 4, 4, 16, 8, 14),
+            Block.box(2, 4, 0, 12, 8, 4)
+    ).reduce((v1, v2) -> Shapes.join(v1, v2, BooleanOp.OR)).get();
+
+    //UPSIDE DOWN
+    private static final VoxelShape SHAPE_NORTH_UP = Stream.of(
+            Block.box(4, 12, 0, 16, 16, 16),
+            Block.box(14, -4, 0, 16, -2, 16),
+            Block.box(12, -2, 0, 16, 12, 16),
+            Block.box(2, 8, 0, 12, 12, 16)
+    ).reduce((v1, v2) -> Shapes.join(v1, v2, BooleanOp.OR)).get();
+
+    private static final VoxelShape SHAPE_SOUTH_UP = Stream.of(
+            Block.box(0, 12, 0, 12, 16, 16),
+            Block.box(0, -4, 0, 2, -2, 16),
+            Block.box(0, -2, 0, 4, 12, 16),
+            Block.box(4, 8, 0, 14, 12, 16)
+    ).reduce((v1, v2) -> Shapes.join(v1, v2, BooleanOp.OR)).get();
+
+    private static final VoxelShape SHAPE_WEST_UP = Stream.of(
+            Block.box(0, 12, 4, 16, 16, 16),
+            Block.box(0, -4, 14, 16, -2, 16),
+            Block.box(0, -2, 12, 16, 12, 16),
+            Block.box(0, 8, 2, 16, 12, 12)
+    ).reduce((v1, v2) -> Shapes.join(v1, v2, BooleanOp.OR)).get();
+
+    private static final VoxelShape SHAPE_EAST_UP = Stream.of(
+            Block.box(0, 12, 0, 16, 16, 12),
+            Block.box(0, -4, 0, 16, -2, 2),
+            Block.box(0, -2, 0, 16, 12, 4),
+            Block.box(0, 8, 4, 16, 12, 14)
+    ).reduce((v1, v2) -> Shapes.join(v1, v2, BooleanOp.OR)).get();
+
+    //INNER UPSIDE DOWN
+    private static final VoxelShape SHAPE_NORTH_INNER_UP = Stream.of(
+            Block.box(0, 12, 0, 12, 16, 12),
+            Block.box(0, -4, 0, 2, -2, 16),
+            Block.box(0, -2, 0, 4, 12, 12),
+            Block.box(4, 8, 0, 14, 12, 12),
+            Block.box(0, -2, 12, 16, 16, 16),
+            Block.box(2, -4, 14, 16, -2, 16),
+            Block.box(12, 12, 4, 16, 16, 12),
+            Block.box(14, 8, 2, 16, 12, 12)
+    ).reduce((v1, v2) -> Shapes.join(v1, v2, BooleanOp.OR)).get();
+    private static final VoxelShape SHAPE_SOUTH_INNER_UP = Stream.of(
+            Block.box(4, 12, 4, 16, 16, 16),
+            Block.box(14, -4, 0, 16, -2, 16),
+            Block.box(12, -2, 4, 16, 12, 16),
+            Block.box(2, 8, 4, 12, 12, 16),
+            Block.box(0, -2, 0, 16, 16, 4),
+            Block.box(0, -4, 0, 14, -2, 2),
+            Block.box(0, 12, 4, 4, 16, 12),
+            Block.box(0, 8, 4, 2, 12, 14)
+    ).reduce((v1, v2) -> Shapes.join(v1, v2, BooleanOp.OR)).get();
+    private static final VoxelShape SHAPE_WEST_INNER_UP = Stream.of(
+            Block.box(4, 12, 0, 16, 16, 12),
+            Block.box(0, -4, 0, 16, -2, 2),
+            Block.box(4, -2, 0, 16, 12, 4),
+            Block.box(4, 8, 4, 16, 12, 14),
+            Block.box(0, -2, 0, 4, 16, 16),
+            Block.box(0, -4, 2, 2, -2, 16),
+            Block.box(4, 12, 12, 12, 16, 16),
+            Block.box(4, 8, 14, 14, 12, 16)
+    ).reduce((v1, v2) -> Shapes.join(v1, v2, BooleanOp.OR)).get();
+    private static final VoxelShape SHAPE_EAST_INNER_UP = Stream.of(
+            Block.box(0, 12, 4, 12, 16, 16),
+            Block.box(0, -4, 14, 16, -2, 16),
+            Block.box(0, -2, 12, 12, 12, 16),
+            Block.box(0, 8, 2, 12, 12, 12),
+            Block.box(12, -2, 0, 16, 16, 16),
+            Block.box(14, -4, 0, 16, -2, 14),
+            Block.box(4, 12, 0, 12, 16, 4),
+            Block.box(2, 8, 0, 12, 12, 2)
+    ).reduce((v1, v2) -> Shapes.join(v1, v2, BooleanOp.OR)).get();
+
+    //OUTER UPSIDE DOWN
+    private static final VoxelShape SHAPE_NORTH_OUTER_UP = Stream.of(
+            Block.box(0, 12, 4, 12, 16, 16),
+            Block.box(0, -4, 14, 2, -2, 16),
+            Block.box(0, -2, 12, 4, 12, 16),
+            Block.box(4, 8, 2, 14, 12, 16),
+            Block.box(0, 8, 2, 4, 12, 12)
+    ).reduce((v1, v2) -> Shapes.join(v1, v2, BooleanOp.OR)).get();
+    private static final VoxelShape SHAPE_SOUTH_OUTER_UP = Stream.of(
+            Block.box(4, 12, 0, 16, 16, 12),
+            Block.box(14, -4, 0, 16, -2, 2),
+            Block.box(12, -2, 0, 16, 12, 4),
+            Block.box(2, 8, 0, 12, 12, 14),
+            Block.box(12, 8, 4, 16, 12, 14)
+    ).reduce((v1, v2) -> Shapes.join(v1, v2, BooleanOp.OR)).get();
+    private static final VoxelShape SHAPE_WEST_OUTER_UP = Stream.of(
+            Block.box(0, 12, 0, 12, 16, 12),
+            Block.box(0, -4, 0, 2, -2, 2),
+            Block.box(0, -2, 0, 4, 12, 4),
+            Block.box(0, 8, 4, 14, 12, 14),
+            Block.box(4, 8, 0, 14, 12, 4)
+    ).reduce((v1, v2) -> Shapes.join(v1, v2, BooleanOp.OR)).get();
+    private static final VoxelShape SHAPE_EAST_OUTER_UP = Stream.of(
+            Block.box(4, 12, 4, 16, 16, 16),
+            Block.box(14, -4, 14, 16, -2, 16),
+            Block.box(12, -2, 12, 16, 12, 16),
+            Block.box(2, 8, 2, 16, 12, 12),
+            Block.box(2, 8, 12, 12, 12, 16)
+    ).reduce((v1, v2) -> Shapes.join(v1, v2, BooleanOp.OR)).get();
 }

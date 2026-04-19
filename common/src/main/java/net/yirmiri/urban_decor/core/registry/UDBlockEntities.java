@@ -8,6 +8,11 @@ import net.yirmiri.urban_decor.common.block_entity.entity.*;
 import java.util.function.Supplier;
 
 public class UDBlockEntities {
+    public static final Supplier<BlockEntityType<FoldableSignBlockEntity>> FOLDABLE_SIGN = RLServices.REGISTRY.registerBlockEntityType(
+            UrbanDecor.MOD_ID, "foldable_sign", () -> RLServices.REGISTRY.createBlockEntity(FoldableSignBlockEntity::new,
+                    UDBlocks.FOLDABLE_SIGN.get()
+            ));
+
     public static final Supplier<BlockEntityType<ToasterBlockEntity>> TOASTER = RLServices.REGISTRY.registerBlockEntityType(
             UrbanDecor.MOD_ID, "toaster", () -> RLServices.REGISTRY.createBlockEntity(ToasterBlockEntity::new,
                     UDBlocks.TOASTER.get()

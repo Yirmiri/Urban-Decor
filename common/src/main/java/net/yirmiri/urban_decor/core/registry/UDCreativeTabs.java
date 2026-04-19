@@ -114,13 +114,15 @@ public class UDCreativeTabs {
 
                         entry.accept(UDBlocks.PLASTIC_CHAIR.get());
                         entry.accept(UDBlocks.STAINLESS_STEEL_CHAIR.get());
+                        entry.accept(UDBlocks.BOOTH.get());
                         entry.accept(UDBlocks.PORCELAIN_TABLE.get());
 
+                        entry.accept(UDBlocks.FOLDABLE_SIGN.get());
+                        entry.accept(UDBlocks.STAPLER.get());
+
+                        entry.accept(UDBlocks.DOLL.get());
                         entry.accept(UDBlocks.SEWING_MACHINE.get());
                         entry.accept(UDItems.SEWING_NEEDLE.get());
-
-                        entry.accept(UDBlocks.BOOTH.get());
-                        entry.accept(UDBlocks.DOLL.get());
 
                         entry.accept(UDBlocks.WALL_CLOCK.get());
                         entry.accept(UDBlocks.OAK_GRANDFATHER_CLOCK.get());

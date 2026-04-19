@@ -23,6 +23,8 @@ public class UDBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(UDBlocks.PLASTIC_CHAIR.get())
                 .add(UDBlocks.WALL_CLOCK.get())
                 .add(UDBlocks.SEWING_MACHINE.get())
+                .add(UDBlocks.FOLDABLE_SIGN.get())
+                .add(UDBlocks.STAPLER.get())
         ;
 
         getOrCreateTagBuilder(BlockTags.MINEABLE_WITH_PICKAXE)

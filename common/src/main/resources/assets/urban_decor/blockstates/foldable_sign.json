@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "": {
+      "model": "urban_decor:block/foldable_sign",
+      "uvlock": false
+    }
+  }
+}

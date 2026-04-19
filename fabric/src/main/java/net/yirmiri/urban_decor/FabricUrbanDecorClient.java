@@ -14,10 +14,7 @@ import net.yirmiri.urban_decor.common.block.sewing_machine.SewingMachineScreen;
 import net.yirmiri.urban_decor.common.block.sewing_machine.SewingRecipeReloadListener;
 import net.yirmiri.urban_decor.common.block_entity.model.*;
 import net.yirmiri.urban_decor.common.block_entity.model.doll.*;
-import net.yirmiri.urban_decor.common.block_entity.renderer.DollRenderer;
-import net.yirmiri.urban_decor.common.block_entity.renderer.GrandClockRenderer;
-import net.yirmiri.urban_decor.common.block_entity.renderer.StainlessSteelChairRenderer;
-import net.yirmiri.urban_decor.common.block_entity.renderer.WallClockRenderer;
+import net.yirmiri.urban_decor.common.block_entity.renderer.*;
 import net.yirmiri.urban_decor.core.registry.UDBlockEntities;
 import net.yirmiri.urban_decor.core.registry.UDEntities;
 import net.yirmiri.urban_decor.common.entity.renderer.InvisibleEntityRenderer;
@@ -40,6 +37,9 @@ public class FabricUrbanDecorClient implements ClientModInitializer {
 
         BlockEntityRendererRegistry.register(UDBlockEntities.STAINLESS_STEEL_CHAIR.get(), StainlessSteelChairRenderer::new);
         EntityModelLayerRegistry.registerModelLayer(StainlessSteelChairModel.LAYER_LOCATION, StainlessSteelChairModel::createBodyLayer);
+
+        BlockEntityRendererRegistry.register(UDBlockEntities.FOLDABLE_SIGN.get(), FoldableSignRenderer::new);
+        EntityModelLayerRegistry.registerModelLayer(FoldableSignModel.LAYER_LOCATION, FoldableSignModel::createBodyLayer);
 
         BlockEntityRendererRegistry.register(UDBlockEntities.DOLL.get(), DollRenderer::new);
         EntityModelLayerRegistry.registerModelLayer(DollModel.LAYER_LOCATION, DollModel::createBodyLayer);

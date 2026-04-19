@@ -4,7 +4,7 @@
 	"texture_size": [64, 64],
 	"textures": {
 		"0": "urban_decor:block/booth",
-		"particle": "urban_decor:block/booth"
+		"particle": "urban_decor:block/mattress"
 	},
 	"elements": [
 		{

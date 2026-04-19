@@ -3,10 +3,7 @@ package net.yirmiri.urban_decor.datagen;
 import net.azurune.runiclib.RunicLib;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.minecraft.core.HolderLookup;
-import net.minecraft.data.recipes.RecipeCategory;
-import net.minecraft.data.recipes.RecipeOutput;
-import net.minecraft.data.recipes.ShapedRecipeBuilder;
-import net.minecraft.data.recipes.ShapelessRecipeBuilder;
+import net.minecraft.data.recipes.*;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.DyeItem;
@@ -895,8 +892,8 @@ public class UDRecipeProvider extends FabricRecipeProvider {
                 .save(exporter, RunicLib.customid(UrbanDecor.MOD_ID, getSimpleRecipeName(UDBlocks.CHROMITE.get())));
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, UDItems.POLYPROPYLENE.get(), 4)
-                .requires(Items.COAL).requires(UDTags.ItemT.POLYANTHOUS).requires(UDTags.ItemT.POLYANTHOUS).requires(UDTags.ItemT.POLYANTHOUS)
-                .unlockedBy(getHasName(Items.COAL), has(Items.COAL))
+                .requires(ItemTags.COALS).requires(UDTags.ItemT.POLYANTHOUS).requires(UDTags.ItemT.POLYANTHOUS).requires(UDTags.ItemT.POLYANTHOUS)
+                .unlockedBy(getHasName(UDItems.POLYPROPYLENE.get()), has(UDItems.POLYPROPYLENE.get()))
                 .save(exporter, RunicLib.customid(UrbanDecor.MOD_ID, getSimpleRecipeName(UDItems.POLYPROPYLENE.get())));
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, UDBlocks.POLYPROPYLENE_BLOCK.get(), 1)
@@ -1241,6 +1238,27 @@ public class UDRecipeProvider extends FabricRecipeProvider {
                 .pattern("###")
                 .unlockedBy(getHasName(UDItems.POLYPROPYLENE.get()), has(UDItems.POLYPROPYLENE.get()))
                 .save(exporter, RunicLib.customid(UrbanDecor.MOD_ID, getSimpleRecipeName(UDBlocks.SEWING_MACHINE.get())));
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, UDBlocks.FOLDABLE_SIGN.get(), 3)
+                .define('#', UDItems.POLYPROPYLENE.get())
+                .pattern("###")
+                .pattern("###")
+                .pattern("# #")
+                .unlockedBy(getHasName(UDItems.POLYPROPYLENE.get()), has(UDItems.POLYPROPYLENE.get()))
+                .save(exporter, RunicLib.customid(UrbanDecor.MOD_ID, getSimpleRecipeName(UDBlocks.FOLDABLE_SIGN.get())));
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, UDBlocks.STAPLER.get(), 1)
+                .define('#', UDItems.POLYPROPYLENE.get()).define('@', UDItems.STAINLESS_STEEL_NUGGET.get())
+                .pattern("@##")
+                .pattern("@##")
+                .unlockedBy(getHasName(UDItems.POLYPROPYLENE.get()), has(UDItems.POLYPROPYLENE.get()))
+                .save(exporter, RunicLib.customid(UrbanDecor.MOD_ID, getSimpleRecipeName(UDBlocks.STAPLER.get())));
+
+        SimpleCookingRecipeBuilder.smelting(Ingredient.of(UDBlocks.STAINLESS_STEEL_DEPOSIT.get()), RecipeCategory.MISC, UDItems.STAINLESS_STEEL_INGOT.get(),
+                0.1F, 200).unlockedBy(getHasName(UDBlocks.STAINLESS_STEEL_DEPOSIT.get()), has(UDBlocks.STAINLESS_STEEL_DEPOSIT.get())).save(exporter);
+
+        SimpleCookingRecipeBuilder.blasting(Ingredient.of(UDBlocks.STAINLESS_STEEL_DEPOSIT.get()), RecipeCategory.MISC, UDItems.STAINLESS_STEEL_INGOT.get(),
+                0.1F, 100).unlockedBy(getHasName(UDBlocks.STAINLESS_STEEL_DEPOSIT.get()), has(UDBlocks.STAINLESS_STEEL_DEPOSIT.get())).save(exporter);
 
         //todo wrapped block recipes
 //        createWrappedBlock(UDBlocks.getWrappedPorcelainBlocks(WrapColor.CHERRY.getId()).get().asItem(),

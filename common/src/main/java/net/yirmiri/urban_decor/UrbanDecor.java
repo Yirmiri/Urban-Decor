@@ -19,8 +19,5 @@ public class UrbanDecor {
         UDBlockEntities.loadBlockEntities();
     }
 }
-//remove toolbox functionality and replace with modern system
 //finish sound block
-//doll in changelog
-//booth shapes
-//booth block makes player disappear
+//foldable sign has text

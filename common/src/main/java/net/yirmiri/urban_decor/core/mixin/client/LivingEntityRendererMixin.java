@@ -18,7 +18,7 @@ public abstract class LivingEntityRendererMixin<T extends LivingEntity> {
 
     @Inject(method = "render*", at = @At("HEAD"))
     private void urbanDecor$render(T entity, float entityYaw, float partialTicks, PoseStack poseStack, MultiBufferSource buffer, int packedLight, CallbackInfo ci) {
-        if (entity.getVehicle() instanceof SeatEntity seatEntity) {
+        if (entity.getVehicle() instanceof SeatEntity seatEntity && seatEntity.getRotation() != 0) {
             poseStack.mulPose(Axis.ZP.rotationDegrees(-seatEntity.getRotation()));
             poseStack.translate(0.0D, -entity.getBbHeight(), 0.0D);
         }

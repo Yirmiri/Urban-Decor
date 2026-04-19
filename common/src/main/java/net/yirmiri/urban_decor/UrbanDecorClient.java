@@ -23,6 +23,8 @@ public class UrbanDecorClient {
         }
 
         //CUTOUT
+        RLServices.loadClient().registerBlockRenderType(UDBlocks.STAPLER.get(), RenderType.cutout());
+        RLServices.loadClient().registerBlockRenderType(UDBlocks.FOLDABLE_SIGN.get(), RenderType.cutout());
         RLServices.loadClient().registerBlockRenderType(UDBlocks.SEWING_MACHINE.get(), RenderType.cutout());
         RLServices.loadClient().registerBlockRenderType(UDBlocks.SPEAKER.get(), RenderType.cutout());
         RLServices.loadClient().registerBlockRenderType(UDBlocks.TRASH_CAN.get(), RenderType.cutout());

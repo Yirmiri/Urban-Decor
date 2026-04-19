@@ -11,10 +11,7 @@ import net.yirmiri.urban_decor.common.block.sewing_machine.SewingMachineScreen;
 import net.yirmiri.urban_decor.common.block.sewing_machine.SewingRecipeReloadListener;
 import net.yirmiri.urban_decor.common.block_entity.model.*;
 import net.yirmiri.urban_decor.common.block_entity.model.doll.*;
-import net.yirmiri.urban_decor.common.block_entity.renderer.DollRenderer;
-import net.yirmiri.urban_decor.common.block_entity.renderer.GrandClockRenderer;
-import net.yirmiri.urban_decor.common.block_entity.renderer.StainlessSteelChairRenderer;
-import net.yirmiri.urban_decor.common.block_entity.renderer.WallClockRenderer;
+import net.yirmiri.urban_decor.common.block_entity.renderer.*;
 import net.yirmiri.urban_decor.common.entity.renderer.InvisibleEntityRenderer;
 import net.yirmiri.urban_decor.core.registry.UDBlockEntities;
 import net.yirmiri.urban_decor.core.registry.UDEntities;
@@ -49,6 +46,7 @@ public class NeoForgeUrbanDecor {
         event.registerBlockEntityRenderer(UDBlockEntities.GRAND_CLOCK.get(), GrandClockRenderer::new);
         event.registerBlockEntityRenderer(UDBlockEntities.STAINLESS_STEEL_CHAIR.get(), StainlessSteelChairRenderer::new);
         event.registerBlockEntityRenderer(UDBlockEntities.DOLL.get(), DollRenderer::new);
+        event.registerBlockEntityRenderer(UDBlockEntities.FOLDABLE_SIGN.get(), FoldableSignRenderer::new);
     }
 
     @SubscribeEvent
@@ -64,5 +62,6 @@ public class NeoForgeUrbanDecor {
         event.registerLayerDefinition(DollCrawlingModel.LAYER_LOCATION, DollCrawlingModel::createBodyLayer);
         event.registerLayerDefinition(DollLayingModel.LAYER_LOCATION, DollLayingModel::createBodyLayer);
         event.registerLayerDefinition(DollBizarreModel.LAYER_LOCATION, DollBizarreModel::createBodyLayer);
+        event.registerLayerDefinition(FoldableSignModel.LAYER_LOCATION, FoldableSignModel::createBodyLayer);
     }
 }

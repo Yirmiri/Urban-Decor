@@ -1,4 +1,4 @@
-// 1.21.1	2026-04-18T17:27:49.5785662	Urban Decor/Block Loot Tables
+// 1.21.1	2026-04-19T09:46:32.3017076	Urban Decor/Block Loot Tables
 f79d4cac91214d92089ab9b1058d4039e4bc7bf7 data\urban_decor\loot_table\blocks\lime_plastic_lights.json
 7bfd918eb946d88af1a31f717a6267cdeceffede data\urban_decor\loot_table\blocks\brown_towel.json
 f7f1e8f99a1cf75caea5706ccc3f5bacb1e0acfb data\urban_decor\loot_table\blocks\towel_bar_lavender_towel.json
@@ -193,6 +193,7 @@ b006af1b4ce00f965b9bc3966e7850c750fc531f data\urban_decor\loot_table\blocks\ligh
 ee3305e7efd919079d8d08508af2665a6c0ed293 data\urban_decor\loot_table\blocks\sacramento_picture_frame.json
 8ad9dc43278bab3e74156f16a21e1bca177fc992 data\urban_decor\loot_table\blocks\ruby_wrapped_porcelain_slab.json
 633cafef1206e96b4325a8ae6d161990beb1c960 data\urban_decor\loot_table\blocks\porcelain_brick_slab.json
+03ffde95c6dd23bc7c6966506f88b2a2da101965 data\urban_decor\loot_table\blocks\stapler.json
 a83902c2e66c1c708926348219545d34b4b8d15b data\urban_decor\loot_table\blocks\daffodil_wrapped_mattress.json
 bce7b77c51a2feb996ee0fbb126e7cdb1713c021 data\urban_decor\loot_table\blocks\warped_calendar.json
 3b6b9613fea20f4167cc4b0744c3d39bab2c2a00 data\urban_decor\loot_table\blocks\dark_toilet.json
@@ -238,6 +239,7 @@ ce08b5ccbb0c28a9ebfac445b701be406e9b364c data\urban_decor\loot_table\blocks\mage
 ec791a94f81086f078cca21d509587b4691a2ede data\urban_decor\loot_table\blocks\ruby_wrapped_porcelain_brick_slab.json
 3014343cbb54d3a33a45490810d0ba023960e9d8 data\urban_decor\loot_table\blocks\azure_wrapped_porcelain_brick_slab.json
 25a65b98cee6e142a5bb618dadbd2b430411cc48 data\urban_decor\loot_table\blocks\cyan_towel.json
+87651a97428cc6636cbd0ec15e0819af3d4c8d7b data\urban_decor\loot_table\blocks\foldable_sign.json
 a5790be87b423f837274e1d1c454e491c6f91a15 data\urban_decor\loot_table\blocks\white_plastic_lights.json
 d26c8ad72e57fe3261283e78e12457d0cd368ace data\urban_decor\loot_table\blocks\towel_bar_blurple_towel.json
 ed1a706155bfe0fa34690e85876e2d28257bb4ec data\urban_decor\loot_table\blocks\porcelain_brick_stairs.json
