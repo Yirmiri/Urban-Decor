@@ -262,7 +262,6 @@ public class UDCreativeTabs {
                         entry.accept(UDBlocks.getWrappedPorcelainTileSlabs(WrapColor.RUBY.getId()).get());
 
                         //DYED
-                        entry.accept(UDBlocks.TOWEL_BAR.get());
                         entry.accept(UDBlocks.getDyedTowelBlocks(DyeColor.WHITE.getId()).get());
                         entry.accept(UDBlocks.getDyedTowelBlocks(DyeColor.LIGHT_GRAY.getId()).get());
                         entry.accept(UDBlocks.getDyedTowelBlocks(DyeColor.GRAY.getId()).get());
@@ -290,6 +289,7 @@ public class UDCreativeTabs {
                         entry.accept(UDBlocks.getDyedTowelBlocks(DyeColor.PINK.getId()).get());
                         if (RLServices.PLATFORM.isModLoaded("delicate_dyes")) entry.accept(UDBlocks.getDyedTowelBlocks(DyeColor.valueOf("DD_ROSE").getId()).get());
 
+                        entry.accept(UDBlocks.TOWEL_BAR.get());
                         entry.accept(UDBlocks.getDyedTowels(DyeColor.WHITE.getId()).get());
                         entry.accept(UDBlocks.getDyedTowels(DyeColor.LIGHT_GRAY.getId()).get());
                         entry.accept(UDBlocks.getDyedTowels(DyeColor.GRAY.getId()).get());

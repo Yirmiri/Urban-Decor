@@ -53,7 +53,23 @@ public class BoothBlock extends StairBlock {
                     default -> SHAPE_EAST;
                 };
             }
-            else if (state.getValue(SHAPE) == StairsShape.INNER_LEFT || (state.getValue(SHAPE) == StairsShape.INNER_RIGHT)) {
+            else if (state.getValue(SHAPE) == StairsShape.INNER_LEFT) {
+                return switch (state.getValue(FACING)) {
+                    case SOUTH -> SHAPE_NORTH_INNER;
+                    case WEST -> SHAPE_WEST_INNER;
+                    case EAST -> SHAPE_EAST_INNER;
+                    default -> SHAPE_SOUTH_INNER;
+                };
+            }
+            else if (state.getValue(SHAPE) == StairsShape.OUTER_LEFT) {
+                return switch (state.getValue(FACING)) {
+                    case SOUTH -> SHAPE_NORTH_OUTER;
+                    case WEST -> SHAPE_WEST_OUTER;
+                    case EAST -> SHAPE_EAST_OUTER;
+                    default -> SHAPE_SOUTH_OUTER;
+                };
+            }
+            else if (state.getValue(SHAPE) == StairsShape.INNER_RIGHT) {
                 return switch (state.getValue(FACING)) {
                     case SOUTH -> SHAPE_WEST_INNER;
                     case WEST -> SHAPE_SOUTH_INNER;
@@ -61,7 +77,7 @@ public class BoothBlock extends StairBlock {
                     default -> SHAPE_EAST_INNER;
                 };
             }
-            else if (state.getValue(SHAPE) == StairsShape.OUTER_LEFT || (state.getValue(SHAPE) == StairsShape.OUTER_RIGHT)) {
+            else if (state.getValue(SHAPE) == StairsShape.OUTER_RIGHT) {
                 return switch (state.getValue(FACING)) {
                     case SOUTH -> SHAPE_WEST_OUTER;
                     case WEST -> SHAPE_SOUTH_OUTER;
@@ -78,20 +94,36 @@ public class BoothBlock extends StairBlock {
                     default -> SHAPE_EAST_UP;
                 };
             }
-            else if (state.getValue(SHAPE) == StairsShape.INNER_LEFT || (state.getValue(SHAPE) == StairsShape.INNER_RIGHT)) {
+            else if (state.getValue(SHAPE) == StairsShape.INNER_RIGHT) {
                 return switch (state.getValue(FACING)) {
-                    case SOUTH -> SHAPE_WEST_INNER_UP;
-                    case WEST -> SHAPE_SOUTH_INNER_UP;
-                    case EAST -> SHAPE_NORTH_INNER_UP;
-                    default -> SHAPE_EAST_INNER_UP;
+                    case SOUTH -> SHAPE_NORTH_INNER_UP;
+                    case WEST -> SHAPE_WEST_INNER_UP;
+                    case EAST -> SHAPE_EAST_INNER_UP;
+                    default -> SHAPE_SOUTH_INNER_UP;
                 };
             }
-            else if (state.getValue(SHAPE) == StairsShape.OUTER_LEFT || (state.getValue(SHAPE) == StairsShape.OUTER_RIGHT)) {
+            else if (state.getValue(SHAPE) == StairsShape.OUTER_RIGHT) {
                 return switch (state.getValue(FACING)) {
-                    case SOUTH -> SHAPE_WEST_OUTER_UP;
-                    case WEST -> SHAPE_SOUTH_OUTER_UP;
-                    case EAST -> SHAPE_NORTH_OUTER_UP;
-                    default -> SHAPE_EAST_OUTER_UP;
+                    case SOUTH -> SHAPE_NORTH_OUTER_UP;
+                    case WEST -> SHAPE_WEST_OUTER_UP;
+                    case EAST -> SHAPE_EAST_OUTER_UP;
+                    default -> SHAPE_SOUTH_OUTER_UP;
+                };
+            }
+            else if (state.getValue(SHAPE) == StairsShape.INNER_LEFT) {
+                return switch (state.getValue(FACING)) {
+                    case SOUTH -> SHAPE_EAST_INNER_UP;
+                    case WEST -> SHAPE_NORTH_INNER_UP;
+                    case EAST -> SHAPE_SOUTH_INNER_UP;
+                    default -> SHAPE_WEST_INNER_UP;
+                };
+            }
+            else if (state.getValue(SHAPE) == StairsShape.OUTER_LEFT) {
+                return switch (state.getValue(FACING)) {
+                    case SOUTH -> SHAPE_EAST_OUTER_UP;
+                    case WEST -> SHAPE_NORTH_OUTER_UP;
+                    case EAST -> SHAPE_SOUTH_OUTER_UP;
+                    default -> SHAPE_WEST_OUTER_UP;
                 };
             }
         }
