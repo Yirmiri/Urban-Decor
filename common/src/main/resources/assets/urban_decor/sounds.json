@@ -6,6 +6,13 @@
     ]
   },
 
+  "block.mattress.squeak": {
+    "subtitle": "subtitles.block.mattress.squeak",
+    "sounds": [
+      "urban_decor:generic/mattress_squeak"
+    ]
+  },
+
   "item.sew": {
     "subtitle": "subtitles.item.sew",
     "sounds": [

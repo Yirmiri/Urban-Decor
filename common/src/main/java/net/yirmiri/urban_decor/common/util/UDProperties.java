@@ -78,7 +78,7 @@ public class UDProperties {
         public static final BlockBehaviour.Properties CHERRY_PLANKS = BlockBehaviour.Properties.ofFullCopy(Blocks.CHERRY_PLANKS);
         public static final BlockBehaviour.Properties BAMBOO_PLANKS = BlockBehaviour.Properties.ofFullCopy(Blocks.BAMBOO_PLANKS);
         public static final BlockBehaviour.Properties CASH_REGISTER = BlockBehaviour.Properties.ofFullCopy(Blocks.WHITE_WOOL).strength(0.5F).mapColor(MapColor.COLOR_GRAY).sound(SoundType.LANTERN);
-        public static final BlockBehaviour.Properties BOOTH = BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS).sound(SoundType.PACKED_MUD);
+        public static final BlockBehaviour.Properties BOOTH = BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS).sound(SoundType.WOOL);
         public static final BlockBehaviour.Properties DOLL = BlockBehaviour.Properties.ofFullCopy(Blocks.WHITE_WOOL).strength(0.3F);
         public static final BlockBehaviour.Properties AIR_CONDITIONER = BlockBehaviour.Properties.ofFullCopy(Blocks.STONE).strength(1.0F).mapColor(MapColor.COLOR_GRAY).sound(SoundType.LANTERN).requiresCorrectToolForDrops();
         public static final BlockBehaviour.Properties TOOLBOX = BlockBehaviour.Properties.ofFullCopy(Blocks.WHITE_WOOL).strength(0.5F).mapColor(MapColor.COLOR_RED).sound(SoundType.LANTERN);

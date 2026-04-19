@@ -16,6 +16,7 @@ public class UDSounds {
     public static final Supplier<SoundEvent> SMOOTH_CLOSE = register("block.smooth.close");
     public static final Supplier<SoundEvent> METALLIC_OPEN = register("block.metallic.open");
     public static final Supplier<SoundEvent> METALLIC_CLOSE = register("block.metallic.close");
+    public static final Supplier<SoundEvent> MATTRESS_SQUEAK = register("block.mattress.squeak");
 
     //ITEM
     public static final Supplier<SoundEvent> WRAP_USE = register("item.wrap.use");

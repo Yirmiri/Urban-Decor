@@ -301,6 +301,7 @@ public class UDLangProvider extends FabricLanguageProvider {
         build.add("subtitles.block.grand_clock.chime_3am", "Grandfather Clock eerily tolls");
         build.add("subtitles.block.speaker.fluorescent", "Speaker hums");
         build.add("subtitles.item.sew", "Sewing");
+        build.add("subtitles.block.mattress.squeak", "Mattress squeaks");
 
         //ADVANCEMENTS
         build.add("urban_decor.advancement.root", "Urban Decor");

@@ -8,6 +8,7 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.Vec3;
+import net.yirmiri.urban_decor.core.registry.UDSounds;
 
 public class MattressBlock extends Block {
     public MattressBlock(Properties properties) {
@@ -16,6 +17,11 @@ public class MattressBlock extends Block {
 
     @Override
     public void fallOn(Level level, BlockState state, BlockPos pos, Entity entity, float fallDistance) {
+        if (fallDistance >= 0.4F) {
+            float adjustedFall = fallDistance - 0.4F;
+            entity.playSound(UDSounds.MATTRESS_SQUEAK.get(), Math.min(1.0F, 0.2F + (adjustedFall * 0.3F)), 0.9F
+                    + entity.level().random.nextFloat() * 0.2F);
+        }
         super.fallOn(level, state, pos, entity, fallDistance * 0.5F);
     }
 

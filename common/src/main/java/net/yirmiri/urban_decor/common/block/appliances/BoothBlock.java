@@ -26,6 +26,7 @@ import net.yirmiri.urban_decor.common.util.UDUtils;
 import net.yirmiri.urban_decor.common.util.WrapColor;
 import net.yirmiri.urban_decor.core.init.UDTags;
 import net.yirmiri.urban_decor.core.registry.UDItems;
+import net.yirmiri.urban_decor.core.registry.UDSounds;
 
 import java.util.stream.Stream;
 
@@ -40,6 +41,67 @@ public class BoothBlock extends StairBlock {
                 .setValue(WATERLOGGED, false)
                 .setValue(OCCUPIED, false)
         );
+    }
+
+    @Override
+    public ItemInteractionResult useItemOn(ItemStack stack, BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hitResult) {
+        ItemStack stackHand = player.getItemInHand(hand);
+        if (state.getValue(WRAP_TYPE) == WrapType.NONE && stackHand.is(UDTags.ItemT.WRAPS)) {
+            for (WrapColor color : WrapColor.values()) {
+                if (stackHand.is(UDItems.getWrappedWraps(color.getId()).get())) {
+                    level.setBlockAndUpdate(pos, state.setValue(WRAP_TYPE, WrapType.valueOf(color.name())));
+                    UDUtils.wrapUsed(level, pos);
+                    return ItemInteractionResult.SUCCESS;
+                }
+            }
+        }
+        return ItemInteractionResult.PASS_TO_DEFAULT_BLOCK_INTERACTION;
+    }
+
+    @Override
+    public InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos, Player player, BlockHitResult hitResult) {
+        if (UDUtils.canSitOn(state, pos, level, player)) {
+            if (state.getValue(HALF) == Half.TOP) {
+                UDUtils.createSeat(0.01D, state, level, pos, player, hitResult, 180);
+                return InteractionResult.SUCCESS;
+            }
+            UDUtils.createSeat(0.4D, state, level, pos, player, hitResult);
+            return InteractionResult.SUCCESS;
+        }
+        return InteractionResult.PASS;
+    }
+
+    @Override
+    protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
+        super.createBlockStateDefinition(builder);
+        builder.add(WRAP_TYPE, OCCUPIED);
+    }
+
+    @Override
+    public void fallOn(Level level, BlockState state, BlockPos pos, Entity entity, float fallDistance) {
+        if (fallDistance >= 0.4F) {
+            float adjustedFall = fallDistance - 0.4F;
+            entity.playSound(UDSounds.MATTRESS_SQUEAK.get(), Math.min(1.0F, 0.2F + (adjustedFall * 0.3F)), 0.9F
+                    + entity.level().random.nextFloat() * 0.2F);
+        }
+        super.fallOn(level, state, pos, entity, fallDistance * 0.5F);
+    }
+
+    @Override
+    public void updateEntityAfterFallOn(BlockGetter level, Entity entity) {
+        if (entity.isSuppressingBounce()) {
+            super.updateEntityAfterFallOn(level, entity);
+        } else {
+            this.bounceUp(entity);
+        }
+    }
+
+    private void bounceUp(Entity entity) {
+        Vec3 vec3 = entity.getDeltaMovement();
+        if (vec3.y < (double) 0.0F) {
+            double v = entity instanceof LivingEntity ? (double) 1.0F : 0.8;
+            entity.setDeltaMovement(vec3.x, -vec3.y * (double) 0.66F * v, vec3.z);
+        }
     }
 
     @Override
@@ -128,62 +190,6 @@ public class BoothBlock extends StairBlock {
             }
         }
         return SHAPE_EAST;
-    }
-
-    @Override
-    public ItemInteractionResult useItemOn(ItemStack stack, BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hitResult) {
-        ItemStack stackHand = player.getItemInHand(hand);
-        if (state.getValue(WRAP_TYPE) == WrapType.NONE && stackHand.is(UDTags.ItemT.WRAPS)) {
-            for (WrapColor color : WrapColor.values()) {
-                if (stackHand.is(UDItems.getWrappedWraps(color.getId()).get())) {
-                    level.setBlockAndUpdate(pos, state.setValue(WRAP_TYPE, WrapType.valueOf(color.name())));
-                    UDUtils.wrapUsed(level, pos);
-                    return ItemInteractionResult.SUCCESS;
-                }
-            }
-        }
-        return ItemInteractionResult.PASS_TO_DEFAULT_BLOCK_INTERACTION;
-    }
-
-    @Override
-    public InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos, Player player, BlockHitResult hitResult) {
-        if (UDUtils.canSitOn(state, pos, level, player)) {
-            if (state.getValue(HALF) == Half.TOP) {
-                UDUtils.createSeat(0.01D, state, level, pos, player, hitResult, 180);
-                return InteractionResult.SUCCESS;
-            }
-            UDUtils.createSeat(0.4D, state, level, pos, player, hitResult);
-            return InteractionResult.SUCCESS;
-        }
-        return InteractionResult.PASS;
-    }
-
-    @Override
-    protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
-        super.createBlockStateDefinition(builder);
-        builder.add(WRAP_TYPE, OCCUPIED);
-    }
-
-    @Override
-    public void fallOn(Level level, BlockState state, BlockPos pos, Entity entity, float fallDistance) {
-        super.fallOn(level, state, pos, entity, fallDistance * 0.25F);
-    }
-
-    @Override
-    public void updateEntityAfterFallOn(BlockGetter level, Entity entity) {
-        if (entity.isSuppressingBounce()) {
-            super.updateEntityAfterFallOn(level, entity);
-        } else {
-            this.bounceUp(entity);
-        }
-    }
-
-    private void bounceUp(Entity entity) {
-        Vec3 vec3 = entity.getDeltaMovement();
-        if (vec3.y < (double) 0.0F) {
-            double v = entity instanceof LivingEntity ? (double) 1.0F : 0.8;
-            entity.setDeltaMovement(vec3.x, -vec3.y * (double) 0.66F * v, vec3.z);
-        }
     }
 
     //DEFAULT
