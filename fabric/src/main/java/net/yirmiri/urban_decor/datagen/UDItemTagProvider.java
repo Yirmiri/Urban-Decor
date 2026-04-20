@@ -52,6 +52,7 @@ public class UDItemTagProvider extends FabricTagProvider.ItemTagProvider {
         ;
 
         getOrCreateTagBuilder(UDTags.ItemT.HAS_WRAPPED_VARIANTS)
+                .add(UDBlocks.PET_BED.get().asItem())
                 .add(UDBlocks.BOOTH.get().asItem())
                 .add(UDBlocks.OAK_BOX.get().asItem())
                 .add(UDBlocks.SPRUCE_BOX.get().asItem())

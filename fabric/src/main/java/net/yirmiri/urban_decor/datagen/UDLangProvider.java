@@ -211,6 +211,7 @@ public class UDLangProvider extends FabricLanguageProvider {
         build.add(UDBlocks.SEWING_MACHINE.get(), "Sewing Machine");
         build.add(UDBlocks.FOLDABLE_SIGN.get(), "Foldable Sign");
         build.add(UDBlocks.STAPLER.get(), "Stapler");
+        build.add(UDBlocks.PET_BED.get(), "Pet Bed");
 
         //ITEMS
         build.add(UDItems.POLYPROPYLENE.get(), "Polypropylene");
@@ -302,25 +303,6 @@ public class UDLangProvider extends FabricLanguageProvider {
         build.add("subtitles.block.speaker.fluorescent", "Speaker hums");
         build.add("subtitles.item.sew", "Sewing");
         build.add("subtitles.block.mattress.squeak", "Mattress squeaks");
-
-        //ADVANCEMENTS
-        build.add("urban_decor.advancement.root", "Urban Decor");
-        build.add("urban_decor.advancement.root.desc", "Decorate your spaces with both decorative and functional appliances!");
-
-        build.add("urban_decor.advancement.get_porcelain", "Handle With Care");
-        build.add("urban_decor.advancement.get_porcelain.desc", "Obtain a piece of Porcelain, a primary component for most appliances");
-
-        build.add("urban_decor.advancement.get_stainless_steel_ingot", "Stain This!");
-        build.add("urban_decor.advancement.get_stainless_steel_ingot.desc", "Construct a Stainless Steel Ingot, a cold metal made from Chromite");
-
-        build.add("urban_decor.advancement.place_appliance", "Home Improvement");
-        build.add("urban_decor.advancement.place_appliance.desc", "Place any large appliance, a decorative block to spice a build up");
-
-        build.add("urban_decor.advancement.sit_on_toilet", "Serving My Porcelain Kingdom");
-        build.add("urban_decor.advancement.sit_on_toilet.desc", "Sit on the Porcelain Throne.");
-
-        build.add("urban_decor.advancement.use_toolbox", "HAN-D");
-        build.add("urban_decor.advancement.use_toolbox.desc", "Some appliances can be changed when interacted with a toolbox to change their variants");
 
         //YAPPING TOOLTIPS COMPAT
         build.add(YT_ID + "item." + MOD_ID + "porcelain.desc", "A mixture of clay and flint, used commonly in appliances");
@@ -461,6 +443,7 @@ public class UDLangProvider extends FabricLanguageProvider {
         build.add(YT_ID + "block." + MOD_ID + "sewing_needle.desc", "Can be used alongside dolls in a sewing machine to create special dolls");
         build.add(YT_ID + "block." + MOD_ID + "foldable_sign.desc", "A plastic trinket that can written on");
         build.add(YT_ID + "block." + MOD_ID + "stapler.desc", "A plastic trinket that would staple things if you had staples");
+        build.add(YT_ID + "block." + MOD_ID + "pet_bed.desc", "A soft bed made of mattress for pets to lay on");
 
         for (WrapColor colors : WrapColor.values()) {
             String wrapString = StringUtils.capitalize(StringUtils.replace(StringUtils.replace(StringUtils.replace(colors.getName(),

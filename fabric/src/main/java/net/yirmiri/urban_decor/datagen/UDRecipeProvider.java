@@ -1255,10 +1255,18 @@ public class UDRecipeProvider extends FabricRecipeProvider {
                 .save(exporter, RunicLib.customid(UrbanDecor.MOD_ID, getSimpleRecipeName(UDBlocks.STAPLER.get())));
 
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(UDBlocks.STAINLESS_STEEL_DEPOSIT.get()), RecipeCategory.MISC, UDItems.STAINLESS_STEEL_INGOT.get(),
-                0.1F, 200).unlockedBy(getHasName(UDBlocks.STAINLESS_STEEL_DEPOSIT.get()), has(UDBlocks.STAINLESS_STEEL_DEPOSIT.get())).save(exporter);
+                0.1F, 200).unlockedBy(getHasName(UDBlocks.STAINLESS_STEEL_DEPOSIT.get()), has(UDBlocks.STAINLESS_STEEL_DEPOSIT.get()))
+                .save(exporter, RunicLib.customid(UrbanDecor.MOD_ID, getSimpleRecipeName(UDItems.STAINLESS_STEEL_INGOT.get()) + "_from_deposit"));
 
         SimpleCookingRecipeBuilder.blasting(Ingredient.of(UDBlocks.STAINLESS_STEEL_DEPOSIT.get()), RecipeCategory.MISC, UDItems.STAINLESS_STEEL_INGOT.get(),
-                0.1F, 100).unlockedBy(getHasName(UDBlocks.STAINLESS_STEEL_DEPOSIT.get()), has(UDBlocks.STAINLESS_STEEL_DEPOSIT.get())).save(exporter);
+                0.1F, 100).unlockedBy(getHasName(UDBlocks.STAINLESS_STEEL_DEPOSIT.get()), has(UDBlocks.STAINLESS_STEEL_DEPOSIT.get()))
+                .save(exporter, RunicLib.customid(UrbanDecor.MOD_ID, getSimpleRecipeName(UDItems.STAINLESS_STEEL_INGOT.get()) + "_from_deposit_blasting"));
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, UDBlocks.PET_BED.get(), 1)
+                .define('#', UDBlocks.MATTRESS.get())
+                .pattern("###")
+                .unlockedBy(getHasName(UDBlocks.MATTRESS.get()), has(UDBlocks.MATTRESS.get()))
+                .save(exporter, RunicLib.customid(UrbanDecor.MOD_ID, getSimpleRecipeName(UDBlocks.PET_BED.get())));
 
         //todo wrapped block recipes
 //        createWrappedBlock(UDBlocks.getWrappedPorcelainBlocks(WrapColor.CHERRY.getId()).get().asItem(),

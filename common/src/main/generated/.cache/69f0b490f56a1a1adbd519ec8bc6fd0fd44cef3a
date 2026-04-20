@@ -1,4 +1,4 @@
-// 1.21.1	2026-04-19T09:46:32.3017076	Urban Decor/Block Loot Tables
+// 1.21.1	2026-04-20T09:31:41.2241438	Urban Decor/Block Loot Tables
 f79d4cac91214d92089ab9b1058d4039e4bc7bf7 data\urban_decor\loot_table\blocks\lime_plastic_lights.json
 7bfd918eb946d88af1a31f717a6267cdeceffede data\urban_decor\loot_table\blocks\brown_towel.json
 f7f1e8f99a1cf75caea5706ccc3f5bacb1e0acfb data\urban_decor\loot_table\blocks\towel_bar_lavender_towel.json
@@ -141,6 +141,7 @@ ae5dfdba5eb0f163ce8bbc7245c208c143597378 data\urban_decor\loot_table\blocks\cana
 e6e06fbf6418687126cae25b0294e3b927aae386 data\urban_decor\loot_table\blocks\dark_oak_piano.json
 2a6ad0b03db0935c56ae0348f5ace17a4083496a data\urban_decor\loot_table\blocks\plastic_chair.json
 683e8d4f13004d41dd82cdda8656c53877b1bf6c data\urban_decor\loot_table\blocks\wall_microwave.json
+26edca63459c70d1128adf081c9a728d719310ca data\urban_decor\loot_table\blocks\pet_bed.json
 ffc13f81aea333d7bc9390967ffc0b2f46e86481 data\urban_decor\loot_table\blocks\turbine.json
 b5bc81473932fc08d869f7b493e32318ca013716 data\urban_decor\loot_table\blocks\sacramento_towel_block.json
 f7f1e8f99a1cf75caea5706ccc3f5bacb1e0acfb data\urban_decor\loot_table\blocks\lavender_towel.json
@@ -258,8 +259,8 @@ d2d289c5226572573b1355f78c2e6c0810f52389 data\urban_decor\loot_table\blocks\dark
 82d278ffe08d902aad1bab7c4cd13832fc1fb466 data\urban_decor\loot_table\blocks\birch_box.json
 3b8a7ec377511a02ddfbfbec2f75c570a81fc587 data\urban_decor\loot_table\blocks\spring_wrapped_porcelain_tile_stairs.json
 47ab1e642ce5dec1accf5594a0cead9950ec87ab data\urban_decor\loot_table\blocks\dark_sink.json
-01c6422d15677ca78b66941fe2abe516c3a23dad data\urban_decor\loot_table\blocks\green_wall_picture_frame.json
 ec18e9f57ff0f54fb6a3a7f116361fcb866708cb data\urban_decor\loot_table\blocks\yellow_plastic_lights.json
+01c6422d15677ca78b66941fe2abe516c3a23dad data\urban_decor\loot_table\blocks\green_wall_picture_frame.json
 1b0b53c243cbdb56dd4ba103711e639e68f810be data\urban_decor\loot_table\blocks\daffodil_wrapped_porcelain_tile_stairs.json
 7211b454d9a51ef77f00f97b3925667e5ee0443d data\urban_decor\loot_table\blocks\umber_plastic_lights.json
 b7c103c9495d8e243c9e638cebcd573f9c42f04e data\urban_decor\loot_table\blocks\spring_wrapped_porcelain_tiles.json

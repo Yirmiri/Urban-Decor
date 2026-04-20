@@ -92,6 +92,7 @@ public class UDProperties {
         public static final BlockBehaviour.Properties PORCELAIN_TABLE = BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_WOOD).mapColor(MapColor.STONE).sound(UDSoundTypes.STEEL).strength(1.0F, 0.8F);
         public static final BlockBehaviour.Properties STAINLESS_STEEL_CHAIR = BlockBehaviour.Properties.ofFullCopy(Blocks.IRON_BLOCK).sound(UDSoundTypes.STEEL).strength(1.5F, 2.0F);
         public static final BlockBehaviour.Properties PLASTIC_TRINKET = BlockBehaviour.Properties.ofFullCopy(Blocks.SMITHING_TABLE).strength(0.3F).sound(UDSoundTypes.PLASTIC);
+        public static final BlockBehaviour.Properties FOLDABLE_SIGN = BlockBehaviour.Properties.ofFullCopy(Blocks.SMITHING_TABLE).noCollission().strength(0.3F).sound(UDSoundTypes.PLASTIC);
     }
 
     public static class ItemP {

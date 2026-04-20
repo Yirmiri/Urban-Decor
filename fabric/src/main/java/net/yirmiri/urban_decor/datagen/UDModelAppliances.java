@@ -8,6 +8,14 @@ import net.yirmiri.urban_decor.common.util.WrapColor;
 import java.util.Map;
 
 public class UDModelAppliances {
+    public static void generatePetBeds(BlockModelGenerators generator, WrapColor colors) {
+        UDModelProvider.createParentedModel(generator, RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_pet_bed"),
+                RunicLib.customid(UrbanDecor.MOD_ID, "block/pet_bed"), Map.of(
+                        "0", RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_pet_bed"),
+                        "particle", RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_mattress")
+                ));
+    }
+
     public static void generateBooths(BlockModelGenerators generator, WrapColor colors) {
         UDModelProvider.createParentedModel(generator, RunicLib.customid(UrbanDecor.MOD_ID, "block/" + colors.getName() + "_wrapped_booth"),
                 RunicLib.customid(UrbanDecor.MOD_ID, "block/booth"), Map.of(

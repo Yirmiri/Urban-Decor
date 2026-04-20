@@ -38,6 +38,7 @@ public class UDLootTableProvider extends FabricBlockLootTableProvider {
 
     @Override
     public void generate() {
+        dropSelf(UDBlocks.PET_BED.get());
         dropSelf(UDBlocks.STAPLER.get());
         dropSelf(UDBlocks.FOLDABLE_SIGN.get());
         dropSelf(UDBlocks.MATTRESS.get());

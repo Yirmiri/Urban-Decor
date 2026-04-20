@@ -1,0 +1,148 @@
+{
+  "variants": {
+    "facing=north,wrap_type=none": {
+      "model": "urban_decor:block/pet_bed",
+      "uvlock": false
+    },
+    "facing=south,wrap_type=none": {
+      "model": "urban_decor:block/pet_bed",
+      "y": 180,
+      "uvlock": false
+    },
+    "facing=west,wrap_type=none": {
+      "model": "urban_decor:block/pet_bed",
+      "y": 270,
+      "uvlock": false
+    },
+    "facing=east,wrap_type=none": {
+      "model": "urban_decor:block/pet_bed",
+      "y": 90,
+      "uvlock": false
+    },
+
+    
+    "facing=north,wrap_type=cherry": {
+      "model": "urban_decor:block/cherry_wrapped_pet_bed",
+      "uvlock": false
+    },
+    "facing=south,wrap_type=cherry": {
+      "model": "urban_decor:block/cherry_wrapped_pet_bed",
+      "y": 180,
+      "uvlock": false
+    },
+    "facing=west,wrap_type=cherry": {
+      "model": "urban_decor:block/cherry_wrapped_pet_bed",
+      "y": 270,
+      "uvlock": false
+    },
+    "facing=east,wrap_type=cherry": {
+      "model": "urban_decor:block/cherry_wrapped_pet_bed",
+      "y": 90,
+      "uvlock": false
+    },
+
+
+    "facing=north,wrap_type=daffodil": {
+      "model": "urban_decor:block/daffodil_wrapped_pet_bed",
+      "uvlock": false
+    },
+    "facing=south,wrap_type=daffodil": {
+      "model": "urban_decor:block/daffodil_wrapped_pet_bed",
+      "y": 180,
+      "uvlock": false
+    },
+    "facing=west,wrap_type=daffodil": {
+      "model": "urban_decor:block/daffodil_wrapped_pet_bed",
+      "y": 270,
+      "uvlock": false
+    },
+    "facing=east,wrap_type=daffodil": {
+      "model": "urban_decor:block/daffodil_wrapped_pet_bed",
+      "y": 90,
+      "uvlock": false
+    },
+
+
+    "facing=north,wrap_type=spring": {
+      "model": "urban_decor:block/spring_wrapped_pet_bed",
+      "uvlock": false
+    },
+    "facing=south,wrap_type=spring": {
+      "model": "urban_decor:block/spring_wrapped_pet_bed",
+      "y": 180,
+      "uvlock": false
+    },
+    "facing=west,wrap_type=spring": {
+      "model": "urban_decor:block/spring_wrapped_pet_bed",
+      "y": 270,
+      "uvlock": false
+    },
+    "facing=east,wrap_type=spring": {
+      "model": "urban_decor:block/spring_wrapped_pet_bed",
+      "y": 90,
+      "uvlock": false
+    },
+
+
+    "facing=north,wrap_type=mint": {
+      "model": "urban_decor:block/mint_wrapped_pet_bed",
+      "uvlock": false
+    },
+    "facing=south,wrap_type=mint": {
+      "model": "urban_decor:block/mint_wrapped_pet_bed",
+      "y": 180,
+      "uvlock": false
+    },
+    "facing=west,wrap_type=mint": {
+      "model": "urban_decor:block/mint_wrapped_pet_bed",
+      "y": 270,
+      "uvlock": false
+    },
+    "facing=east,wrap_type=mint": {
+      "model": "urban_decor:block/mint_wrapped_pet_bed",
+      "y": 90,
+      "uvlock": false
+    },
+
+    "facing=north,wrap_type=azure": {
+      "model": "urban_decor:block/azure_wrapped_pet_bed",
+      "uvlock": false
+    },
+    "facing=south,wrap_type=azure": {
+      "model": "urban_decor:block/azure_wrapped_pet_bed",
+      "y": 180,
+      "uvlock": false
+    },
+    "facing=west,wrap_type=azure": {
+      "model": "urban_decor:block/azure_wrapped_pet_bed",
+      "y": 270,
+      "uvlock": false
+    },
+    "facing=east,wrap_type=azure": {
+      "model": "urban_decor:block/azure_wrapped_pet_bed",
+      "y": 90,
+      "uvlock": false
+    },
+
+
+    "facing=north,wrap_type=ruby": {
+      "model": "urban_decor:block/ruby_wrapped_pet_bed",
+      "uvlock": false
+    },
+    "facing=south,wrap_type=ruby": {
+      "model": "urban_decor:block/ruby_wrapped_pet_bed",
+      "y": 180,
+      "uvlock": false
+    },
+    "facing=west,wrap_type=ruby": {
+      "model": "urban_decor:block/ruby_wrapped_pet_bed",
+      "y": 270,
+      "uvlock": false
+    },
+    "facing=east,wrap_type=ruby": {
+      "model": "urban_decor:block/ruby_wrapped_pet_bed",
+      "y": 90,
+      "uvlock": false
+    }
+  }
+}

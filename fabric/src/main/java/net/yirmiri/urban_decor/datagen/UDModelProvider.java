@@ -108,6 +108,7 @@ public class UDModelProvider extends FabricModelProvider {
             UDModelAppliances.generateToilets(generator, colors);
             UDModelAppliances.generateBathtubs(generator, colors);
             UDModelAppliances.generateBooths(generator, colors);
+            UDModelAppliances.generatePetBeds(generator, colors);
         }
     }
 

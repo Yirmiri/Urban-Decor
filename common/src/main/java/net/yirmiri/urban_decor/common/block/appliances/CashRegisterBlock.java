@@ -47,7 +47,8 @@ public class CashRegisterBlock extends AbstractDecorBlock {
                 .setValue(BlockStateProperties.HORIZONTAL_FACING, Direction.NORTH)
                 .setValue(WATERLOGGED, false)
                 .setValue(OPEN, false)
-                .setValue(TRUE_OPEN, false));
+                .setValue(TRUE_OPEN, false)
+        );
     }
 
     @Override

@@ -123,8 +123,9 @@ public class UDBlocks {
     public static final Supplier<Block> TOOLBOX = register("toolbox", () -> new ToolboxBlock(UDProperties.BlockP.TOOLBOX), false);
     public static final Supplier<Block> SEWING_MACHINE = register("sewing_machine", () -> new SewingMachineBlock(UDProperties.BlockP.PLASTIC_TRINKET), true);
     public static final Supplier<Block> DOLL = register("doll", () -> new DollBlock(UDProperties.BlockP.DOLL), true);
-    public static final Supplier<Block> FOLDABLE_SIGN = register("foldable_sign", () -> new FoldableSignBlock(UDProperties.BlockP.PLASTIC_TRINKET), true);
+    public static final Supplier<Block> FOLDABLE_SIGN = register("foldable_sign", () -> new FoldableSignBlock(UDProperties.BlockP.FOLDABLE_SIGN), true);
     public static final Supplier<Block> STAPLER = register("stapler", () -> new StaplerBlock(UDProperties.BlockP.PLASTIC_TRINKET), true);
+    public static final Supplier<Block> PET_BED = register("pet_bed", () -> new PetBedBlock(UDProperties.BlockP.MATTRESS), true);
 
     //WOODEN
     public static final Supplier<Block> OAK_PIANO = register("oak_piano", () -> new PianoBlock(UDProperties.BlockP.PIANO), true);

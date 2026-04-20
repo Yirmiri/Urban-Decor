@@ -112,13 +112,15 @@ public class UDCreativeTabs {
                         entry.accept(UDBlocks.CASH_REGISTER.get());
                         entry.accept(UDBlocks.DARK_CASH_REGISTER.get());
 
+                        entry.accept(UDBlocks.FOLDABLE_SIGN.get());
+                        entry.accept(UDBlocks.STAPLER.get());
+
                         entry.accept(UDBlocks.PLASTIC_CHAIR.get());
                         entry.accept(UDBlocks.STAINLESS_STEEL_CHAIR.get());
                         entry.accept(UDBlocks.BOOTH.get());
                         entry.accept(UDBlocks.PORCELAIN_TABLE.get());
 
-                        entry.accept(UDBlocks.FOLDABLE_SIGN.get());
-                        entry.accept(UDBlocks.STAPLER.get());
+                        entry.accept(UDBlocks.PET_BED.get());
 
                         entry.accept(UDBlocks.DOLL.get());
                         entry.accept(UDBlocks.SEWING_MACHINE.get());

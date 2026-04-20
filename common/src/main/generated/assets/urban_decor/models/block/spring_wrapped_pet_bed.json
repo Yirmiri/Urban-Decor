@@ -1,0 +1,7 @@
+{
+  "parent": "urban_decor:block/pet_bed",
+  "textures": {
+    "0": "urban_decor:block/spring_wrapped_pet_bed",
+    "particle": "urban_decor:block/spring_wrapped_mattress"
+  }
+}

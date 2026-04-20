@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_mattress": {
+      "conditions": {
+        "items": [
+          {
+            "items": "urban_decor:mattress"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "urban_decor:pet_bed"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_mattress"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "urban_decor:pet_bed"
+    ]
+  }
+}
