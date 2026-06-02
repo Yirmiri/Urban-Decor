@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "wrapped_porcelain_block",
+  "key": {
+    "#": {
+      "item": "urban_decor:porcelain_block"
+    },
+    "@": {
+      "item": "urban_decor:spring_wrap"
+    }
+  },
+  "pattern": [
+    "###",
+    "#@#",
+    "###"
+  ],
+  "result": {
+    "count": 8,
+    "id": "urban_decor:spring_wrapped_porcelain_block"
+  }
+}

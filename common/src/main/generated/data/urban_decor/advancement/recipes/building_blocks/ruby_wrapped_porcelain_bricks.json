@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_ruby_wrap": {
+      "conditions": {
+        "items": [
+          {
+            "items": "urban_decor:ruby_wrap"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "urban_decor:ruby_wrapped_porcelain_bricks"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_ruby_wrap"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "urban_decor:ruby_wrapped_porcelain_bricks"
+    ]
+  }
+}

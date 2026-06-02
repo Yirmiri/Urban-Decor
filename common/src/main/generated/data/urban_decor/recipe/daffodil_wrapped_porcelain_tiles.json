@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "wrapped_porcelain_tiles",
+  "key": {
+    "#": {
+      "item": "urban_decor:porcelain_tiles"
+    },
+    "@": {
+      "item": "urban_decor:daffodil_wrap"
+    }
+  },
+  "pattern": [
+    "###",
+    "#@#",
+    "###"
+  ],
+  "result": {
+    "count": 8,
+    "id": "urban_decor:daffodil_wrapped_porcelain_tiles"
+  }
+}

@@ -76,7 +76,6 @@ public class UDCreativeTabs {
                         entry.accept(UDBlocks.RIGID_GLASS.get());
 
                         entry.accept(UDItems.TOOLBOX.get());
-                        entry.accept(UDBlocks.SPEAKER.get());
 
                         entry.accept(UDBlocks.FILING_CABINET.get());
                         entry.accept(UDBlocks.CUPBOARD.get());

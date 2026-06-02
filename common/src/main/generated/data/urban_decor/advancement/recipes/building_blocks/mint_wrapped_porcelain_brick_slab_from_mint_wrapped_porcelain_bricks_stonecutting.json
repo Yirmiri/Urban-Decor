@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_stainless_steel_ingot": {
+    "has_mint_wrapped_porcelain_bricks": {
       "conditions": {
         "items": [
           {
-            "items": "urban_decor:stainless_steel_ingot"
+            "items": "urban_decor:mint_wrapped_porcelain_bricks"
           }
         ]
       },
@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "urban_decor:speaker"
+        "recipe": "minecraft:mint_wrapped_porcelain_brick_slab_from_mint_wrapped_porcelain_bricks_stonecutting"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -21,12 +21,12 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_stainless_steel_ingot"
+      "has_mint_wrapped_porcelain_bricks"
     ]
   ],
   "rewards": {
     "recipes": [
-      "urban_decor:speaker"
+      "minecraft:mint_wrapped_porcelain_brick_slab_from_mint_wrapped_porcelain_bricks_stonecutting"
     ]
   }
 }

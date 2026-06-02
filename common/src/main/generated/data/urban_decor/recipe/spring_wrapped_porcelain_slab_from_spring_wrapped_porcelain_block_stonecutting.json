@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "urban_decor:spring_wrapped_porcelain_block"
+  },
+  "result": {
+    "count": 2,
+    "id": "urban_decor:spring_wrapped_porcelain_slab"
+  }
+}

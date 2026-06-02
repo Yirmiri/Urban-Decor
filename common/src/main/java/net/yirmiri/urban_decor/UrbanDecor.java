@@ -19,5 +19,3 @@ public class UrbanDecor {
         UDBlockEntities.loadBlockEntities();
     }
 }
-//finish sound block
-//foldable sign has text

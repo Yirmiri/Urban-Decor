@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "wrapped_porcelain_bricks",
+  "key": {
+    "#": {
+      "item": "urban_decor:porcelain_bricks"
+    },
+    "@": {
+      "item": "urban_decor:azure_wrap"
+    }
+  },
+  "pattern": [
+    "###",
+    "#@#",
+    "###"
+  ],
+  "result": {
+    "count": 8,
+    "id": "urban_decor:azure_wrapped_porcelain_bricks"
+  }
+}

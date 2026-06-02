@@ -19,6 +19,7 @@ import net.yirmiri.urban_decor.core.init.UDTags;
 import net.yirmiri.urban_decor.core.registry.UDBlocks;
 import net.yirmiri.urban_decor.core.registry.UDItems;
 
+import java.util.List;
 import java.util.concurrent.CompletableFuture;
 
 public class UDRecipeProvider extends FabricRecipeProvider {
@@ -1080,9 +1081,9 @@ public class UDRecipeProvider extends FabricRecipeProvider {
                 .unlockedBy(getHasName(Items.WARPED_PLANKS), has(Items.WARPED_PLANKS))
                 .save(exporter, RunicLib.customid(UrbanDecor.MOD_ID, getSimpleRecipeName(UDBlocks.WARPED_BOX.get())));
 
-        createWrap(UDItems.getWrappedWraps(WrapColor.CHERRY.getId()).get(), 
+        createWrap(UDItems.getWrappedWraps(WrapColor.CHERRY.getId()).get(),
                 Ingredient.of(UDBlocks.getWrappedPolyanthous(WrapColor.CHERRY.getId()).get().asItem()))
-                .unlockedBy(getHasName(UDBlocks.getWrappedPolyanthous(WrapColor.CHERRY.getId()).get().asItem()), 
+                .unlockedBy(getHasName(UDBlocks.getWrappedPolyanthous(WrapColor.CHERRY.getId()).get().asItem()),
                         has(UDBlocks.getWrappedPolyanthous(WrapColor.CHERRY.getId()).get().asItem())).group("wrap")
                 .save(exporter, RunicLib.customid(UrbanDecor.MOD_ID, getSimpleRecipeName(UDItems.getWrappedWraps(WrapColor.CHERRY.getId()).get())));
 
@@ -1215,14 +1216,6 @@ public class UDRecipeProvider extends FabricRecipeProvider {
                 .unlockedBy(getHasName(UDBlocks.MATTRESS.get()), has(UDBlocks.MATTRESS.get()))
                 .save(exporter, RunicLib.customid(UrbanDecor.MOD_ID, getSimpleRecipeName(UDBlocks.BOOTH.get())));
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, UDBlocks.SPEAKER.get(), 1)
-                .define('#', UDItems.STAINLESS_STEEL_INGOT.get()).define('@', Items.REDSTONE)
-                .pattern("###")
-                .pattern("#@#")
-                .pattern("###")
-                .unlockedBy(getHasName(UDItems.STAINLESS_STEEL_INGOT.get()), has(UDItems.STAINLESS_STEEL_INGOT.get()))
-                .save(exporter, RunicLib.customid(UrbanDecor.MOD_ID, getSimpleRecipeName(UDBlocks.SPEAKER.get())));
-
         ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, UDBlocks.DOLL.get(), 1)
                 .define('@', UDBlocks.MATTRESS.get()).define('#', Items.STRING).define('!', UDItems.POLYPROPYLENE.get())
                 .pattern("###")
@@ -1255,11 +1248,11 @@ public class UDRecipeProvider extends FabricRecipeProvider {
                 .save(exporter, RunicLib.customid(UrbanDecor.MOD_ID, getSimpleRecipeName(UDBlocks.STAPLER.get())));
 
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(UDBlocks.STAINLESS_STEEL_DEPOSIT.get()), RecipeCategory.MISC, UDItems.STAINLESS_STEEL_INGOT.get(),
-                0.1F, 200).unlockedBy(getHasName(UDBlocks.STAINLESS_STEEL_DEPOSIT.get()), has(UDBlocks.STAINLESS_STEEL_DEPOSIT.get()))
+                        0.1F, 200).unlockedBy(getHasName(UDBlocks.STAINLESS_STEEL_DEPOSIT.get()), has(UDBlocks.STAINLESS_STEEL_DEPOSIT.get()))
                 .save(exporter, RunicLib.customid(UrbanDecor.MOD_ID, getSimpleRecipeName(UDItems.STAINLESS_STEEL_INGOT.get()) + "_from_deposit"));
 
         SimpleCookingRecipeBuilder.blasting(Ingredient.of(UDBlocks.STAINLESS_STEEL_DEPOSIT.get()), RecipeCategory.MISC, UDItems.STAINLESS_STEEL_INGOT.get(),
-                0.1F, 100).unlockedBy(getHasName(UDBlocks.STAINLESS_STEEL_DEPOSIT.get()), has(UDBlocks.STAINLESS_STEEL_DEPOSIT.get()))
+                        0.1F, 100).unlockedBy(getHasName(UDBlocks.STAINLESS_STEEL_DEPOSIT.get()), has(UDBlocks.STAINLESS_STEEL_DEPOSIT.get()))
                 .save(exporter, RunicLib.customid(UrbanDecor.MOD_ID, getSimpleRecipeName(UDItems.STAINLESS_STEEL_INGOT.get()) + "_from_deposit_blasting"));
 
         ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, UDBlocks.PET_BED.get(), 1)
@@ -1268,24 +1261,187 @@ public class UDRecipeProvider extends FabricRecipeProvider {
                 .unlockedBy(getHasName(UDBlocks.MATTRESS.get()), has(UDBlocks.MATTRESS.get()))
                 .save(exporter, RunicLib.customid(UrbanDecor.MOD_ID, getSimpleRecipeName(UDBlocks.PET_BED.get())));
 
-        //todo wrapped block recipes
-//        createWrappedBlock(UDBlocks.getWrappedPorcelainBlocks(WrapColor.CHERRY.getId()).get().asItem(),
-//                Ingredient.of(UDBlocks.PORCELAIN_BLOCK.get()), Ingredient.of(UDItems.getWrappedWraps(WrapColor.CHERRY.getId()).get()))
-//                .unlockedBy(getHasName(UDItems.getWrappedWraps(WrapColor.CHERRY.getId()).get().asItem()),
-//                        has(UDItems.getWrappedWraps(WrapColor.CHERRY.getId()).get().asItem())).group("wrapped_porcelain_block")
-//                .save(exporter, RunicLib.customid(UrbanDecor.MOD_ID, getSimpleRecipeName(UDBlocks.getWrappedPorcelainBlocks(WrapColor.CHERRY.getId()).get())));
-//
-//        createWrappedBlock(UDBlocks.getWrappedPorcelainBricks(WrapColor.CHERRY.getId()).get().asItem(),
-//                Ingredient.of(UDBlocks.PORCELAIN_BRICKS.get()), Ingredient.of(UDItems.getWrappedWraps(WrapColor.CHERRY.getId()).get()))
-//                .unlockedBy(getHasName(UDItems.getWrappedWraps(WrapColor.CHERRY.getId()).get().asItem()),
-//                        has(UDItems.getWrappedWraps(WrapColor.CHERRY.getId()).get().asItem())).group("wrapped_porcelain_bricks")
-//                .save(exporter, RunicLib.customid(UrbanDecor.MOD_ID, getSimpleRecipeName(UDBlocks.getWrappedPorcelainBricks(WrapColor.CHERRY.getId()).get())));
-//
-//        createWrappedBlock(UDBlocks.getWrappedPorcelainTiles(WrapColor.CHERRY.getId()).get().asItem(),
-//                Ingredient.of(UDBlocks.PORCELAIN_TILES.get()), Ingredient.of(UDItems.getWrappedWraps(WrapColor.CHERRY.getId()).get()))
-//                .unlockedBy(getHasName(UDItems.getWrappedWraps(WrapColor.CHERRY.getId()).get().asItem()),
-//                        has(UDItems.getWrappedWraps(WrapColor.CHERRY.getId()).get().asItem())).group("wrapped_porcelain_tiles")
-//                .save(exporter, RunicLib.customid(UrbanDecor.MOD_ID, getSimpleRecipeName(UDBlocks.getWrappedPorcelainTiles(WrapColor.CHERRY.getId()).get())));
+        createWrappedBlock(UDBlocks.getWrappedPorcelainBlocks(WrapColor.CHERRY.getId()).get().asItem(),
+                Ingredient.of(UDBlocks.PORCELAIN_BLOCK.get()), Ingredient.of(UDItems.getWrappedWraps(WrapColor.CHERRY.getId()).get()))
+                .unlockedBy(getHasName(UDItems.getWrappedWraps(WrapColor.CHERRY.getId()).get().asItem()),
+                        has(UDItems.getWrappedWraps(WrapColor.CHERRY.getId()).get().asItem())).group("wrapped_porcelain_block")
+                .save(exporter, RunicLib.customid(UrbanDecor.MOD_ID, getSimpleRecipeName(UDBlocks.getWrappedPorcelainBlocks(WrapColor.CHERRY.getId()).get())));
+
+        createWrappedBlock(UDBlocks.getWrappedPorcelainBricks(WrapColor.CHERRY.getId()).get().asItem(),
+                Ingredient.of(UDBlocks.PORCELAIN_BRICKS.get()), Ingredient.of(UDItems.getWrappedWraps(WrapColor.CHERRY.getId()).get()))
+                .unlockedBy(getHasName(UDItems.getWrappedWraps(WrapColor.CHERRY.getId()).get().asItem()),
+                        has(UDItems.getWrappedWraps(WrapColor.CHERRY.getId()).get().asItem())).group("wrapped_porcelain_bricks")
+                .save(exporter, RunicLib.customid(UrbanDecor.MOD_ID, getSimpleRecipeName(UDBlocks.getWrappedPorcelainBricks(WrapColor.CHERRY.getId()).get())));
+
+        createWrappedBlock(UDBlocks.getWrappedPorcelainTiles(WrapColor.CHERRY.getId()).get().asItem(),
+                Ingredient.of(UDBlocks.PORCELAIN_TILES.get()), Ingredient.of(UDItems.getWrappedWraps(WrapColor.CHERRY.getId()).get()))
+                .unlockedBy(getHasName(UDItems.getWrappedWraps(WrapColor.CHERRY.getId()).get().asItem()),
+                        has(UDItems.getWrappedWraps(WrapColor.CHERRY.getId()).get().asItem())).group("wrapped_porcelain_tiles")
+                .save(exporter, RunicLib.customid(UrbanDecor.MOD_ID, getSimpleRecipeName(UDBlocks.getWrappedPorcelainTiles(WrapColor.CHERRY.getId()).get())));
+
+        createWrappedBlock(UDBlocks.getWrappedPorcelainBlocks(WrapColor.DAFFODIL.getId()).get().asItem(),
+                Ingredient.of(UDBlocks.PORCELAIN_BLOCK.get()), Ingredient.of(UDItems.getWrappedWraps(WrapColor.DAFFODIL.getId()).get()))
+                .unlockedBy(getHasName(UDItems.getWrappedWraps(WrapColor.DAFFODIL.getId()).get().asItem()),
+                        has(UDItems.getWrappedWraps(WrapColor.DAFFODIL.getId()).get().asItem())).group("wrapped_porcelain_block")
+                .save(exporter, RunicLib.customid(UrbanDecor.MOD_ID, getSimpleRecipeName(UDBlocks.getWrappedPorcelainBlocks(WrapColor.DAFFODIL.getId()).get())));
+
+        createWrappedBlock(UDBlocks.getWrappedPorcelainBricks(WrapColor.DAFFODIL.getId()).get().asItem(),
+                Ingredient.of(UDBlocks.PORCELAIN_BRICKS.get()), Ingredient.of(UDItems.getWrappedWraps(WrapColor.DAFFODIL.getId()).get()))
+                .unlockedBy(getHasName(UDItems.getWrappedWraps(WrapColor.DAFFODIL.getId()).get().asItem()),
+                        has(UDItems.getWrappedWraps(WrapColor.DAFFODIL.getId()).get().asItem())).group("wrapped_porcelain_bricks")
+                .save(exporter, RunicLib.customid(UrbanDecor.MOD_ID, getSimpleRecipeName(UDBlocks.getWrappedPorcelainBricks(WrapColor.DAFFODIL.getId()).get())));
+
+        createWrappedBlock(UDBlocks.getWrappedPorcelainTiles(WrapColor.DAFFODIL.getId()).get().asItem(),
+                Ingredient.of(UDBlocks.PORCELAIN_TILES.get()), Ingredient.of(UDItems.getWrappedWraps(WrapColor.DAFFODIL.getId()).get()))
+                .unlockedBy(getHasName(UDItems.getWrappedWraps(WrapColor.DAFFODIL.getId()).get().asItem()),
+                        has(UDItems.getWrappedWraps(WrapColor.DAFFODIL.getId()).get().asItem())).group("wrapped_porcelain_tiles")
+                .save(exporter, RunicLib.customid(UrbanDecor.MOD_ID, getSimpleRecipeName(UDBlocks.getWrappedPorcelainTiles(WrapColor.DAFFODIL.getId()).get())));
+
+        createWrappedBlock(UDBlocks.getWrappedPorcelainBlocks(WrapColor.SPRING.getId()).get().asItem(),
+                Ingredient.of(UDBlocks.PORCELAIN_BLOCK.get()), Ingredient.of(UDItems.getWrappedWraps(WrapColor.SPRING.getId()).get()))
+                .unlockedBy(getHasName(UDItems.getWrappedWraps(WrapColor.SPRING.getId()).get().asItem()),
+                        has(UDItems.getWrappedWraps(WrapColor.SPRING.getId()).get().asItem())).group("wrapped_porcelain_block")
+                .save(exporter, RunicLib.customid(UrbanDecor.MOD_ID, getSimpleRecipeName(UDBlocks.getWrappedPorcelainBlocks(WrapColor.SPRING.getId()).get())));
+
+        createWrappedBlock(UDBlocks.getWrappedPorcelainBricks(WrapColor.SPRING.getId()).get().asItem(),
+                Ingredient.of(UDBlocks.PORCELAIN_BRICKS.get()), Ingredient.of(UDItems.getWrappedWraps(WrapColor.SPRING.getId()).get()))
+                .unlockedBy(getHasName(UDItems.getWrappedWraps(WrapColor.SPRING.getId()).get().asItem()),
+                        has(UDItems.getWrappedWraps(WrapColor.SPRING.getId()).get().asItem())).group("wrapped_porcelain_bricks")
+                .save(exporter, RunicLib.customid(UrbanDecor.MOD_ID, getSimpleRecipeName(UDBlocks.getWrappedPorcelainBricks(WrapColor.SPRING.getId()).get())));
+
+        createWrappedBlock(UDBlocks.getWrappedPorcelainTiles(WrapColor.SPRING.getId()).get().asItem(),
+                Ingredient.of(UDBlocks.PORCELAIN_TILES.get()), Ingredient.of(UDItems.getWrappedWraps(WrapColor.SPRING.getId()).get()))
+                .unlockedBy(getHasName(UDItems.getWrappedWraps(WrapColor.SPRING.getId()).get().asItem()),
+                        has(UDItems.getWrappedWraps(WrapColor.SPRING.getId()).get().asItem())).group("wrapped_porcelain_tiles")
+                .save(exporter, RunicLib.customid(UrbanDecor.MOD_ID, getSimpleRecipeName(UDBlocks.getWrappedPorcelainTiles(WrapColor.SPRING.getId()).get())));
+
+        createWrappedBlock(UDBlocks.getWrappedPorcelainBlocks(WrapColor.MINT.getId()).get().asItem(),
+                Ingredient.of(UDBlocks.PORCELAIN_BLOCK.get()), Ingredient.of(UDItems.getWrappedWraps(WrapColor.MINT.getId()).get()))
+                .unlockedBy(getHasName(UDItems.getWrappedWraps(WrapColor.MINT.getId()).get().asItem()),
+                        has(UDItems.getWrappedWraps(WrapColor.MINT.getId()).get().asItem())).group("wrapped_porcelain_block")
+                .save(exporter, RunicLib.customid(UrbanDecor.MOD_ID, getSimpleRecipeName(UDBlocks.getWrappedPorcelainBlocks(WrapColor.MINT.getId()).get())));
+
+        createWrappedBlock(UDBlocks.getWrappedPorcelainBricks(WrapColor.MINT.getId()).get().asItem(),
+                Ingredient.of(UDBlocks.PORCELAIN_BRICKS.get()), Ingredient.of(UDItems.getWrappedWraps(WrapColor.MINT.getId()).get()))
+                .unlockedBy(getHasName(UDItems.getWrappedWraps(WrapColor.MINT.getId()).get().asItem()),
+                        has(UDItems.getWrappedWraps(WrapColor.MINT.getId()).get().asItem())).group("wrapped_porcelain_bricks")
+                .save(exporter, RunicLib.customid(UrbanDecor.MOD_ID, getSimpleRecipeName(UDBlocks.getWrappedPorcelainBricks(WrapColor.MINT.getId()).get())));
+
+        createWrappedBlock(UDBlocks.getWrappedPorcelainTiles(WrapColor.MINT.getId()).get().asItem(),
+                Ingredient.of(UDBlocks.PORCELAIN_TILES.get()), Ingredient.of(UDItems.getWrappedWraps(WrapColor.MINT.getId()).get()))
+                .unlockedBy(getHasName(UDItems.getWrappedWraps(WrapColor.MINT.getId()).get().asItem()),
+                        has(UDItems.getWrappedWraps(WrapColor.MINT.getId()).get().asItem())).group("wrapped_porcelain_tiles")
+                .save(exporter, RunicLib.customid(UrbanDecor.MOD_ID, getSimpleRecipeName(UDBlocks.getWrappedPorcelainTiles(WrapColor.MINT.getId()).get())));
+
+        createWrappedBlock(UDBlocks.getWrappedPorcelainBlocks(WrapColor.AZURE.getId()).get().asItem(),
+                Ingredient.of(UDBlocks.PORCELAIN_BLOCK.get()), Ingredient.of(UDItems.getWrappedWraps(WrapColor.AZURE.getId()).get()))
+                .unlockedBy(getHasName(UDItems.getWrappedWraps(WrapColor.AZURE.getId()).get().asItem()),
+                        has(UDItems.getWrappedWraps(WrapColor.AZURE.getId()).get().asItem())).group("wrapped_porcelain_block")
+                .save(exporter, RunicLib.customid(UrbanDecor.MOD_ID, getSimpleRecipeName(UDBlocks.getWrappedPorcelainBlocks(WrapColor.AZURE.getId()).get())));
+
+        createWrappedBlock(UDBlocks.getWrappedPorcelainBricks(WrapColor.AZURE.getId()).get().asItem(),
+                Ingredient.of(UDBlocks.PORCELAIN_BRICKS.get()), Ingredient.of(UDItems.getWrappedWraps(WrapColor.AZURE.getId()).get()))
+                .unlockedBy(getHasName(UDItems.getWrappedWraps(WrapColor.AZURE.getId()).get().asItem()),
+                        has(UDItems.getWrappedWraps(WrapColor.AZURE.getId()).get().asItem())).group("wrapped_porcelain_bricks")
+                .save(exporter, RunicLib.customid(UrbanDecor.MOD_ID, getSimpleRecipeName(UDBlocks.getWrappedPorcelainBricks(WrapColor.AZURE.getId()).get())));
+
+        createWrappedBlock(UDBlocks.getWrappedPorcelainTiles(WrapColor.AZURE.getId()).get().asItem(),
+                Ingredient.of(UDBlocks.PORCELAIN_TILES.get()), Ingredient.of(UDItems.getWrappedWraps(WrapColor.AZURE.getId()).get()))
+                .unlockedBy(getHasName(UDItems.getWrappedWraps(WrapColor.AZURE.getId()).get().asItem()),
+                        has(UDItems.getWrappedWraps(WrapColor.AZURE.getId()).get().asItem())).group("wrapped_porcelain_tiles")
+                .save(exporter, RunicLib.customid(UrbanDecor.MOD_ID, getSimpleRecipeName(UDBlocks.getWrappedPorcelainTiles(WrapColor.AZURE.getId()).get())));
+
+        createWrappedBlock(UDBlocks.getWrappedPorcelainBlocks(WrapColor.RUBY.getId()).get().asItem(),
+                Ingredient.of(UDBlocks.PORCELAIN_BLOCK.get()), Ingredient.of(UDItems.getWrappedWraps(WrapColor.RUBY.getId()).get()))
+                .unlockedBy(getHasName(UDItems.getWrappedWraps(WrapColor.RUBY.getId()).get().asItem()),
+                        has(UDItems.getWrappedWraps(WrapColor.RUBY.getId()).get().asItem())).group("wrapped_porcelain_block")
+                .save(exporter, RunicLib.customid(UrbanDecor.MOD_ID, getSimpleRecipeName(UDBlocks.getWrappedPorcelainBlocks(WrapColor.RUBY.getId()).get())));
+
+        createWrappedBlock(UDBlocks.getWrappedPorcelainBricks(WrapColor.RUBY.getId()).get().asItem(),
+                Ingredient.of(UDBlocks.PORCELAIN_BRICKS.get()), Ingredient.of(UDItems.getWrappedWraps(WrapColor.RUBY.getId()).get()))
+                .unlockedBy(getHasName(UDItems.getWrappedWraps(WrapColor.RUBY.getId()).get().asItem()),
+                        has(UDItems.getWrappedWraps(WrapColor.RUBY.getId()).get().asItem())).group("wrapped_porcelain_bricks")
+                .save(exporter, RunicLib.customid(UrbanDecor.MOD_ID, getSimpleRecipeName(UDBlocks.getWrappedPorcelainBricks(WrapColor.RUBY.getId()).get())));
+
+        createWrappedBlock(UDBlocks.getWrappedPorcelainTiles(WrapColor.RUBY.getId()).get().asItem(),
+                Ingredient.of(UDBlocks.PORCELAIN_TILES.get()), Ingredient.of(UDItems.getWrappedWraps(WrapColor.RUBY.getId()).get()))
+                .unlockedBy(getHasName(UDItems.getWrappedWraps(WrapColor.RUBY.getId()).get().asItem()),
+                        has(UDItems.getWrappedWraps(WrapColor.RUBY.getId()).get().asItem())).group("wrapped_porcelain_tiles")
+                .save(exporter, RunicLib.customid(UrbanDecor.MOD_ID, getSimpleRecipeName(UDBlocks.getWrappedPorcelainTiles(WrapColor.RUBY.getId()).get())));
+
+        for (WrapColor color : List.of(WrapColor.CHERRY, WrapColor.DAFFODIL, WrapColor.SPRING, WrapColor.MINT, WrapColor.AZURE, WrapColor.RUBY)) {
+            //BASE
+            stairBuilder(UDBlocks.getWrappedPorcelainStairs(color.getId()).get(),
+                    Ingredient.of(UDBlocks.getWrappedPorcelainBlocks(color.getId()).get()))
+                    .unlockedBy(getHasName(UDBlocks.getWrappedPorcelainBlocks(color.getId()).get()),
+                            has(UDBlocks.getWrappedPorcelainBlocks(color.getId()).get()))
+                    .save(exporter, RunicLib.customid(UrbanDecor.MOD_ID,
+                            getSimpleRecipeName(UDBlocks.getWrappedPorcelainStairs(color.getId()).get())));
+
+            slabBuilder(RecipeCategory.BUILDING_BLOCKS,
+                    UDBlocks.getWrappedPorcelainSlabs(color.getId()).get(),
+                    Ingredient.of(UDBlocks.getWrappedPorcelainBlocks(color.getId()).get()))
+                    .unlockedBy(getHasName(UDBlocks.getWrappedPorcelainBlocks(color.getId()).get()),
+                            has(UDBlocks.getWrappedPorcelainBlocks(color.getId()).get()))
+                    .save(exporter, RunicLib.customid(UrbanDecor.MOD_ID,
+                            getSimpleRecipeName(UDBlocks.getWrappedPorcelainSlabs(color.getId()).get())));
+
+            stonecutterResultFromBase(exporter, RecipeCategory.BUILDING_BLOCKS,
+                    UDBlocks.getWrappedPorcelainStairs(color.getId()).get(),
+                    UDBlocks.getWrappedPorcelainBlocks(color.getId()).get(), 1);
+
+            stonecutterResultFromBase(exporter, RecipeCategory.BUILDING_BLOCKS,
+                    UDBlocks.getWrappedPorcelainSlabs(color.getId()).get(),
+                    UDBlocks.getWrappedPorcelainBlocks(color.getId()).get(), 2);
+
+            //TILE
+            stairBuilder(UDBlocks.getWrappedPorcelainTileStairs(color.getId()).get(),
+                    Ingredient.of(UDBlocks.getWrappedPorcelainTiles(color.getId()).get()))
+                    .unlockedBy(getHasName(UDBlocks.getWrappedPorcelainTiles(color.getId()).get()),
+                            has(UDBlocks.getWrappedPorcelainTiles(color.getId()).get()))
+                    .save(exporter, RunicLib.customid(UrbanDecor.MOD_ID,
+                            getSimpleRecipeName(UDBlocks.getWrappedPorcelainTileStairs(color.getId()).get())));
+
+            slabBuilder(RecipeCategory.BUILDING_BLOCKS,
+                    UDBlocks.getWrappedPorcelainTileSlabs(color.getId()).get(),
+                    Ingredient.of(UDBlocks.getWrappedPorcelainTiles(color.getId()).get()))
+                    .unlockedBy(getHasName(UDBlocks.getWrappedPorcelainTiles(color.getId()).get()),
+                            has(UDBlocks.getWrappedPorcelainTiles(color.getId()).get()))
+                    .save(exporter, RunicLib.customid(UrbanDecor.MOD_ID,
+                            getSimpleRecipeName(UDBlocks.getWrappedPorcelainTileSlabs(color.getId()).get())));
+
+            stonecutterResultFromBase(exporter, RecipeCategory.BUILDING_BLOCKS,
+                    UDBlocks.getWrappedPorcelainTileStairs(color.getId()).get(),
+                    UDBlocks.getWrappedPorcelainTiles(color.getId()).get(), 1);
+
+            stonecutterResultFromBase(exporter, RecipeCategory.BUILDING_BLOCKS,
+                    UDBlocks.getWrappedPorcelainTileSlabs(color.getId()).get(),
+                    UDBlocks.getWrappedPorcelainTiles(color.getId()).get(), 2);
+
+            //BRICK
+            stairBuilder(UDBlocks.getWrappedPorcelainBrickStairs(color.getId()).get(),
+                    Ingredient.of(UDBlocks.getWrappedPorcelainBricks(color.getId()).get()))
+                    .unlockedBy(getHasName(UDBlocks.getWrappedPorcelainBricks(color.getId()).get()),
+                            has(UDBlocks.getWrappedPorcelainBricks(color.getId()).get()))
+                    .save(exporter, RunicLib.customid(UrbanDecor.MOD_ID,
+                            getSimpleRecipeName(UDBlocks.getWrappedPorcelainBrickStairs(color.getId()).get())));
+
+            slabBuilder(RecipeCategory.BUILDING_BLOCKS,
+                    UDBlocks.getWrappedPorcelainBrickSlabs(color.getId()).get(),
+                    Ingredient.of(UDBlocks.getWrappedPorcelainBricks(color.getId()).get()))
+                    .unlockedBy(getHasName(UDBlocks.getWrappedPorcelainBricks(color.getId()).get()),
+                            has(UDBlocks.getWrappedPorcelainBricks(color.getId()).get()))
+                    .save(exporter, RunicLib.customid(UrbanDecor.MOD_ID,
+                            getSimpleRecipeName(UDBlocks.getWrappedPorcelainBrickSlabs(color.getId()).get())));
+
+            stonecutterResultFromBase(exporter, RecipeCategory.BUILDING_BLOCKS,
+                    UDBlocks.getWrappedPorcelainBrickStairs(color.getId()).get(),
+                    UDBlocks.getWrappedPorcelainBricks(color.getId()).get(), 1);
+
+            stonecutterResultFromBase(exporter, RecipeCategory.BUILDING_BLOCKS,
+                    UDBlocks.getWrappedPorcelainBrickSlabs(color.getId()).get(),
+                    UDBlocks.getWrappedPorcelainBricks(color.getId()).get(), 2);
+        }
     }
 
     public static ShapelessRecipeBuilder createFromBasePictureFrameRecipe(ItemLike output, Item picture, DyeColor color) {
