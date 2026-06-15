@@ -1,10 +1,11 @@
 package net.yirmiri.urban_decor.datagen;
 
+import net.azurune.runiclib.RunicLib;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.tags.BlockTags;
-import net.minecraft.world.item.DyeColor;
+import net.yirmiri.urban_decor.UrbanDecor;
 import net.yirmiri.urban_decor.common.util.WrapColor;
 import net.yirmiri.urban_decor.core.init.UDTags;
 import net.yirmiri.urban_decor.core.registry.UDBlocks;
@@ -205,11 +206,35 @@ public class UDBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(UDBlocks.STAINLESS_STEEL_LADDER.get())
         ;
 
-        for (DyeColor colors : DyeColor.values()) {
             getOrCreateTagBuilder(BlockTags.MINEABLE_WITH_PICKAXE)
-                    .add(UDBlocks.getDyedTowelBarTowels(colors.getId()).get()
-                    );
-        }
+                    .addOptional(RunicLib.customid(UrbanDecor.MOD_ID, "towel_bar_red_towel"))
+                    .addOptional(RunicLib.customid(UrbanDecor.MOD_ID, "towel_bar_orange_towel"))
+                    .addOptional(RunicLib.customid(UrbanDecor.MOD_ID, "towel_bar_yellow_towel"))
+                    .addOptional(RunicLib.customid(UrbanDecor.MOD_ID, "towel_bar_lime_towel"))
+                    .addOptional(RunicLib.customid(UrbanDecor.MOD_ID, "towel_bar_green_towel"))
+                    .addOptional(RunicLib.customid(UrbanDecor.MOD_ID, "towel_bar_cyan_towel"))
+                    .addOptional(RunicLib.customid(UrbanDecor.MOD_ID, "towel_bar_light_blue_towel"))
+                    .addOptional(RunicLib.customid(UrbanDecor.MOD_ID, "towel_bar_blue_towel"))
+                    .addOptional(RunicLib.customid(UrbanDecor.MOD_ID, "towel_bar_purple_towel"))
+                    .addOptional(RunicLib.customid(UrbanDecor.MOD_ID, "towel_bar_magenta_towel"))
+                    .addOptional(RunicLib.customid(UrbanDecor.MOD_ID, "towel_bar_pink_towel"))
+                    .addOptional(RunicLib.customid(UrbanDecor.MOD_ID, "towel_bar_black_towel"))
+                    .addOptional(RunicLib.customid(UrbanDecor.MOD_ID, "towel_bar_brown_towel"))
+                    .addOptional(RunicLib.customid(UrbanDecor.MOD_ID, "towel_bar_white_towel"))
+                    .addOptional(RunicLib.customid(UrbanDecor.MOD_ID, "towel_bar_gray_towel"))
+                    .addOptional(RunicLib.customid(UrbanDecor.MOD_ID, "towel_bar_light_gray_towel"))
+
+                    .addOptional(RunicLib.customid(UrbanDecor.MOD_ID, "towel_bar_coral_towel"))
+                    .addOptional(RunicLib.customid(UrbanDecor.MOD_ID, "towel_bar_umber_towel"))
+                    .addOptional(RunicLib.customid(UrbanDecor.MOD_ID, "towel_bar_canary_towel"))
+                    .addOptional(RunicLib.customid(UrbanDecor.MOD_ID, "towel_bar_wasabi_towel"))
+                    .addOptional(RunicLib.customid(UrbanDecor.MOD_ID, "towel_bar_sacramento_towel"))
+                    .addOptional(RunicLib.customid(UrbanDecor.MOD_ID, "towel_bar_sky_towel"))
+                    .addOptional(RunicLib.customid(UrbanDecor.MOD_ID, "towel_bar_blurple_towel"))
+                    .addOptional(RunicLib.customid(UrbanDecor.MOD_ID, "towel_bar_lavender_towel"))
+                    .addOptional(RunicLib.customid(UrbanDecor.MOD_ID, "towel_bar_sangria_towel"))
+                    .addOptional(RunicLib.customid(UrbanDecor.MOD_ID, "towel_bar_rose_towel"))
+                    ;
 
         for (WrapColor colors : WrapColor.values()) {
             getOrCreateTagBuilder(BlockTags.MINEABLE_WITH_PICKAXE)
@@ -245,12 +270,34 @@ public class UDBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(UDBlocks.PLASTIC_LIGHTS.get())
         ;
 
-        for (DyeColor colors : DyeColor.values()) {
-            getOrCreateTagBuilder(BlockTags.INSIDE_STEP_SOUND_BLOCKS).add(UDBlocks.getDyedPlasticLights(colors.getId()).get());
-        }
+            getOrCreateTagBuilder(BlockTags.WOOL)
+                    .addOptional(RunicLib.customid(UrbanDecor.MOD_ID, "red_towel_block"))
+                    .addOptional(RunicLib.customid(UrbanDecor.MOD_ID, "orange_towel_block"))
+                    .addOptional(RunicLib.customid(UrbanDecor.MOD_ID, "yellow_towel_block"))
+                    .addOptional(RunicLib.customid(UrbanDecor.MOD_ID, "lime_towel_block"))
+                    .addOptional(RunicLib.customid(UrbanDecor.MOD_ID, "green_towel_block"))
+                    .addOptional(RunicLib.customid(UrbanDecor.MOD_ID, "cyan_towel_block"))
+                    .addOptional(RunicLib.customid(UrbanDecor.MOD_ID, "light_blue_towel_block"))
+                    .addOptional(RunicLib.customid(UrbanDecor.MOD_ID, "blue_towel_block"))
+                    .addOptional(RunicLib.customid(UrbanDecor.MOD_ID, "purple_towel_block"))
+                    .addOptional(RunicLib.customid(UrbanDecor.MOD_ID, "magenta_towel_block"))
+                    .addOptional(RunicLib.customid(UrbanDecor.MOD_ID, "pink_towel_block"))
+                    .addOptional(RunicLib.customid(UrbanDecor.MOD_ID, "black_towel_block"))
+                    .addOptional(RunicLib.customid(UrbanDecor.MOD_ID, "brown_towel_block"))
+                    .addOptional(RunicLib.customid(UrbanDecor.MOD_ID, "white_towel_block"))
+                    .addOptional(RunicLib.customid(UrbanDecor.MOD_ID, "gray_towel_block"))
+                    .addOptional(RunicLib.customid(UrbanDecor.MOD_ID, "light_gray_towel_block"))
 
-        for (DyeColor colors : DyeColor.values()) {
-            getOrCreateTagBuilder(BlockTags.WOOL).add(UDBlocks.getDyedTowelBlocks(colors.getId()).get());
-        }
+                    .addOptional(RunicLib.customid(UrbanDecor.MOD_ID, "coral_towel_block"))
+                    .addOptional(RunicLib.customid(UrbanDecor.MOD_ID, "umber_towel_block"))
+                    .addOptional(RunicLib.customid(UrbanDecor.MOD_ID, "canary_towel_block"))
+                    .addOptional(RunicLib.customid(UrbanDecor.MOD_ID, "wasabi_towel_block"))
+                    .addOptional(RunicLib.customid(UrbanDecor.MOD_ID, "sacramento_towel_block"))
+                    .addOptional(RunicLib.customid(UrbanDecor.MOD_ID, "sky_towel_block"))
+                    .addOptional(RunicLib.customid(UrbanDecor.MOD_ID, "blurple_towel_block"))
+                    .addOptional(RunicLib.customid(UrbanDecor.MOD_ID, "lavender_towel_block"))
+                    .addOptional(RunicLib.customid(UrbanDecor.MOD_ID, "sangria_towel_block"))
+                    .addOptional(RunicLib.customid(UrbanDecor.MOD_ID, "rose_towel_block"))
+            ;
     }
 }

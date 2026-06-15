@@ -1,30 +1,108 @@
 {
   "values": [
-    "urban_decor:white_towel_block",
-    "urban_decor:orange_towel_block",
-    "urban_decor:magenta_towel_block",
-    "urban_decor:light_blue_towel_block",
-    "urban_decor:yellow_towel_block",
-    "urban_decor:lime_towel_block",
-    "urban_decor:pink_towel_block",
-    "urban_decor:gray_towel_block",
-    "urban_decor:light_gray_towel_block",
-    "urban_decor:cyan_towel_block",
-    "urban_decor:purple_towel_block",
-    "urban_decor:blue_towel_block",
-    "urban_decor:brown_towel_block",
-    "urban_decor:green_towel_block",
-    "urban_decor:red_towel_block",
-    "urban_decor:black_towel_block",
-    "urban_decor:coral_towel_block",
-    "urban_decor:umber_towel_block",
-    "urban_decor:canary_towel_block",
-    "urban_decor:wasabi_towel_block",
-    "urban_decor:sacramento_towel_block",
-    "urban_decor:sky_towel_block",
-    "urban_decor:blurple_towel_block",
-    "urban_decor:lavender_towel_block",
-    "urban_decor:sangria_towel_block",
-    "urban_decor:rose_towel_block"
+    {
+      "id": "urban_decor:red_towel_block",
+      "required": false
+    },
+    {
+      "id": "urban_decor:orange_towel_block",
+      "required": false
+    },
+    {
+      "id": "urban_decor:yellow_towel_block",
+      "required": false
+    },
+    {
+      "id": "urban_decor:lime_towel_block",
+      "required": false
+    },
+    {
+      "id": "urban_decor:green_towel_block",
+      "required": false
+    },
+    {
+      "id": "urban_decor:cyan_towel_block",
+      "required": false
+    },
+    {
+      "id": "urban_decor:light_blue_towel_block",
+      "required": false
+    },
+    {
+      "id": "urban_decor:blue_towel_block",
+      "required": false
+    },
+    {
+      "id": "urban_decor:purple_towel_block",
+      "required": false
+    },
+    {
+      "id": "urban_decor:magenta_towel_block",
+      "required": false
+    },
+    {
+      "id": "urban_decor:pink_towel_block",
+      "required": false
+    },
+    {
+      "id": "urban_decor:black_towel_block",
+      "required": false
+    },
+    {
+      "id": "urban_decor:brown_towel_block",
+      "required": false
+    },
+    {
+      "id": "urban_decor:white_towel_block",
+      "required": false
+    },
+    {
+      "id": "urban_decor:gray_towel_block",
+      "required": false
+    },
+    {
+      "id": "urban_decor:light_gray_towel_block",
+      "required": false
+    },
+    {
+      "id": "urban_decor:coral_towel_block",
+      "required": false
+    },
+    {
+      "id": "urban_decor:umber_towel_block",
+      "required": false
+    },
+    {
+      "id": "urban_decor:canary_towel_block",
+      "required": false
+    },
+    {
+      "id": "urban_decor:wasabi_towel_block",
+      "required": false
+    },
+    {
+      "id": "urban_decor:sacramento_towel_block",
+      "required": false
+    },
+    {
+      "id": "urban_decor:sky_towel_block",
+      "required": false
+    },
+    {
+      "id": "urban_decor:blurple_towel_block",
+      "required": false
+    },
+    {
+      "id": "urban_decor:lavender_towel_block",
+      "required": false
+    },
+    {
+      "id": "urban_decor:sangria_towel_block",
+      "required": false
+    },
+    {
+      "id": "urban_decor:rose_towel_block",
+      "required": false
+    }
   ]
 }

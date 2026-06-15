@@ -1,133 +1,107 @@
 {
   "values": [
-    "urban_decor:white_towel",
     {
-      "id": "excessive_building:mallet",
+      "id": "urban_decor:red_towel",
       "required": false
     },
-    "urban_decor:orange_towel",
     {
-      "id": "excessive_building:mallet",
+      "id": "urban_decor:orange_towel",
       "required": false
     },
-    "urban_decor:magenta_towel",
     {
-      "id": "excessive_building:mallet",
+      "id": "urban_decor:yellow_towel",
       "required": false
     },
-    "urban_decor:light_blue_towel",
     {
-      "id": "excessive_building:mallet",
+      "id": "urban_decor:lime_towel",
       "required": false
     },
-    "urban_decor:yellow_towel",
     {
-      "id": "excessive_building:mallet",
+      "id": "urban_decor:green_towel",
       "required": false
     },
-    "urban_decor:lime_towel",
     {
-      "id": "excessive_building:mallet",
+      "id": "urban_decor:cyan_towel",
       "required": false
     },
-    "urban_decor:pink_towel",
     {
-      "id": "excessive_building:mallet",
+      "id": "urban_decor:light_blue_towel",
       "required": false
     },
-    "urban_decor:gray_towel",
     {
-      "id": "excessive_building:mallet",
+      "id": "urban_decor:blue_towel",
       "required": false
     },
-    "urban_decor:light_gray_towel",
     {
-      "id": "excessive_building:mallet",
+      "id": "urban_decor:purple_towel",
       "required": false
     },
-    "urban_decor:cyan_towel",
     {
-      "id": "excessive_building:mallet",
+      "id": "urban_decor:magenta_towel",
       "required": false
     },
-    "urban_decor:purple_towel",
     {
-      "id": "excessive_building:mallet",
+      "id": "urban_decor:pink_towel",
       "required": false
     },
-    "urban_decor:blue_towel",
     {
-      "id": "excessive_building:mallet",
+      "id": "urban_decor:black_towel",
       "required": false
     },
-    "urban_decor:brown_towel",
     {
-      "id": "excessive_building:mallet",
+      "id": "urban_decor:brown_towel",
       "required": false
     },
-    "urban_decor:green_towel",
     {
-      "id": "excessive_building:mallet",
+      "id": "urban_decor:white_towel",
       "required": false
     },
-    "urban_decor:red_towel",
     {
-      "id": "excessive_building:mallet",
+      "id": "urban_decor:gray_towel",
       "required": false
     },
-    "urban_decor:black_towel",
     {
-      "id": "excessive_building:mallet",
+      "id": "urban_decor:light_gray_towel",
       "required": false
     },
-    "urban_decor:coral_towel",
     {
-      "id": "excessive_building:mallet",
+      "id": "urban_decor:coral_towel",
       "required": false
     },
-    "urban_decor:umber_towel",
     {
-      "id": "excessive_building:mallet",
+      "id": "urban_decor:umber_towel",
       "required": false
     },
-    "urban_decor:canary_towel",
     {
-      "id": "excessive_building:mallet",
+      "id": "urban_decor:canary_towel",
       "required": false
     },
-    "urban_decor:wasabi_towel",
     {
-      "id": "excessive_building:mallet",
+      "id": "urban_decor:wasabi_towel",
       "required": false
     },
-    "urban_decor:sacramento_towel",
     {
-      "id": "excessive_building:mallet",
+      "id": "urban_decor:sacramento_towel",
       "required": false
     },
-    "urban_decor:sky_towel",
     {
-      "id": "excessive_building:mallet",
+      "id": "urban_decor:sky_towel",
       "required": false
     },
-    "urban_decor:blurple_towel",
     {
-      "id": "excessive_building:mallet",
+      "id": "urban_decor:blurple_towel",
       "required": false
     },
-    "urban_decor:lavender_towel",
     {
-      "id": "excessive_building:mallet",
+      "id": "urban_decor:lavender_towel",
       "required": false
     },
-    "urban_decor:sangria_towel",
     {
-      "id": "excessive_building:mallet",
+      "id": "urban_decor:sangria_towel",
       "required": false
     },
-    "urban_decor:rose_towel",
     {
-      "id": "excessive_building:mallet",
+      "id": "urban_decor:rose_towel",
       "required": false
     }
   ]
